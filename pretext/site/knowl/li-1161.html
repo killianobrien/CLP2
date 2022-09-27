@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:56+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="listitem"><h6 class="heading"><span class="type">Item</span></h6>Now that we have our coefficients, we can re-write our integral in a friendlier form.<div class="displaymath">
+\begin{align*}
+&amp;\int_1^2 \frac{3x^3+15x^2+35x+10}{x^4+5x+10x^2} \dee{x}\\
+&amp;\hskip0.5in=\int_1^2 \left(\frac{3}{x}+\frac{1}{x^2}-\frac{1}{x^2+5x+10} \right) \dee{x}\\
+&amp;\hskip0.5in=\left[3\log|x|-\frac{1}{x}\right]_1^2-\int_1^2\frac{1}{x^2+5x+10}  \dee{x}\\
+&amp;\hskip0.5in=3\log 2+\frac{1}{2}-\int_1^2\frac{1}{x^2+5x+10}  \dee{x}
+\end{align*}
+</div>The remaining integral is the reciprocal of a quadratic polynomial, much like \(\dfrac{1}{1+x^2}\text{,}\) whose antiderivative is arctangent. We complete the square and use the substitution \(u=\left(\frac{2x+5}{\sqrt{15}}\right)\text{,}\) \(\dee{u}=\frac{2}{\sqrt{15}} \dee{x}\text{.}\)<div class="displaymath">
+\begin{align*}
+\int_1^2 \frac{1}{x^2+5x+10} \dee{x}&amp;=\int_1^2 \frac{1}{\left(x+\frac{5}{2}\right)^2+\frac{15}{4}} \dee{x}\\
+&amp;=\frac{4}{15}\int_1^2 \frac{1}{\left(\frac{2x+5}{\sqrt{15}}\right)^2+1} \dee{x}\\
+&amp;=\frac{2}{\sqrt{15}}\int_{7/\sqrt{15}}^{9/\sqrt{15}} \frac{1}{u^2+1} \dee{u}\\
+&amp;=\frac{2}{\sqrt{15}}\Big[\arctan u\Big]_{7/\sqrt{15}}^{9/\sqrt{15}}\\
+&amp;=\frac{2}{\sqrt{15}}\left(\!\arctan\left(\frac{9}{\sqrt{15}}\right)
+\!-\!\arctan\left(\frac{7}{\sqrt{15}}\!\right)\right)
+\end{align*}
+</div>So, all together,<div class="displaymath">
+\begin{align*}
+&amp;\int_1^2 \frac{3x^3+15x^2+35x+10}{x^4+5x^3+10x^2} \dee{x}\\
+&amp;\hskip0.5in=3\log 2 + \frac{1}{2}-\frac{2}{\sqrt{15}}\bigg(\arctan\left(\frac{9}{\sqrt{15}}\right)\\
+&amp;\hskip1.5in-\arctan\left(\frac{7}{\sqrt{15}}\right)\bigg)
+\end{align*}
+</div></article><span class="incontext"><a href="exercises-10.html#li-1161">in-context</a></span>
+</body>
+</html>

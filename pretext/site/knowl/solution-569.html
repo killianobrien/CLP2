@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:22:13+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">3.2.2.13.1</span>
+</h6>
+<p>Using arithmetic of series, Theorem <a knowl="./knowl/thm_SRseriesarith.html" title="Theorem 3.2.9: Arithmetic of series">3.2.9</a>, we see</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{n=1}^\infty\left( a_n+b_n+c_{n+1}\right) = A+B+\sum_{n=1}^\infty c_{n+1}
+\end{equation*}
+</div>
+<p>The question remaining is what do to with the last series. If we write out the terms, we see the difference between \(\displaystyle\sum_{n=1}^\infty c_n\) and \(\displaystyle\sum_{n=1}^\infty c_{n+1}\) is simply that the latter is missing \(c_1\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+\sum_{n=1}^\infty c_{n+1}&amp;=c_2+c_3+c_4+c_5+\cdots\\
+&amp;=\textcolor{red}{-c_1+c_1}+c_2+c_3+c_4+c_5+\cdots\\
+&amp;=\textcolor{red}{-c_1}+\sum_{n=1}^\infty c_{n}\\
+\end{align*}
+<p class="intertext">So,</p>
+\begin{align*}
+\sum_{n=1}^\infty\left( a_n+b_n+c_{n+1}\right)&amp;=A+B+C-\textcolor{red}{c_1}
+\end{align*}
+</div>
+</div>
+<span class="incontext"><a href="exercises-19.html#solution-569">in-context</a></span>
+</body>
+</html>

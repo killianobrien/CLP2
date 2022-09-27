@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:23:35+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Write \(f(x)=\log(1+x)\text{.}\) We saw in Example <a knowl="./knowl/eg_integralRemainder.html" title="Example 3.6.12">3.6.12</a> that</p>
+<div class="displaymath">
+\begin{equation*}
+f^{(n+1)}(x) = \frac{(-1)^n n!}{(1+x)^{n+1}}
+\end{equation*}
+</div>
+<p>So, in this example, the Cauchy form is</p>
+<div class="displaymath">
+\begin{equation*}
+E_n(0,x)=(-1)^n\frac{(x-c)^nx}{(1+c)^{n+1}}
+\end{equation*}
+</div>
+<p>for some \(x\lt c\lt 0\text{.}\) When \(-1\lt x\lt c \lt 0\text{,}\)</p>
+<ul class="disc">
+<li>\(c\) and \(x\) are negative and \(1+x\text{,}\) \(1+c\) and \(c-x\) are (strictly) positive so that<div class="displaymath">
+\begin{align*}
+c(1+x)\lt 0
+&amp;\implies c \lt -cx
+\implies c-x \lt -x-xc=|x|(1+c)\\
+&amp;\implies \left|\frac{x-c}{1+c}\right|
+=\frac{c-x}{1+c}\lt |x|
+\end{align*}
+</div>so that \(\left|\frac{x-c}{1+c}\right|^n \lt |x|^n\) and</li>
+<li>the distance from \(-1\) to \(c\text{,}\) namely \(c-(-1)=1+c\) is greater than the distance from \(-1\) to \(x\text{,}\) namely \(x-(-1)=1+x\text{,}\) so that \(\frac{1}{1+c}\lt\frac{1}{1+x}\text{.}\)</li>
+</ul>
+<p>So, for \(-1\lt x\lt c\lt 0\text{,}\)</p>
+<div class="displaymath">
+\begin{gather*}
+|E_n(0,x)|=\left|\frac{x-c}{1+c}\right|^n\frac{|x|}{1+c}
+\lt \frac{|x|^{n+1}}{1+c}
+\lt \frac{|x|^{n+1}}{1+x}
+\end{gather*}
+</div>
+<p>goes to zero as \(n\rightarrow\infty\text{.}\)</p>
+<span class="incontext"><a href="subsubsection-17.html#p-5607">in-context</a></span>
+</body>
+</html>

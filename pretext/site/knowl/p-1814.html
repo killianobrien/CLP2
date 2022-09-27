@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:42+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>In this section we discuss substitutions that simplify integrals containing  square roots of the form</p>
+<div class="displaymath">
+\begin{align*}
+\sqrt{a^2-x^2} &amp;&amp; \sqrt{a^2+x^2} &amp;&amp; \sqrt{x^2-a^2}.
+\end{align*}
+</div>
+<p>When the integrand contains one of these square roots, then we can use trigonometric substitutions to eliminate them. That is, we substitute</p>
+<div class="displaymath">
+\begin{align*}
+x&amp;=a\sin u&amp;\text{or}&amp;&amp;
+x&amp;=a\tan u&amp;\text{or}&amp;&amp;
+x&amp;=a\sec u
+\end{align*}
+</div>
+<p>and then use trigonometric identities</p>
+<div class="displaymath">
+\begin{gather*}
+\sin^2\theta + \cos^2\theta =1 \quad\text{and}\quad 1+\tan^2\theta= \sec^2\theta
+\end{gather*}
+</div>
+<p>to simplify the result.  To be more precise, we can</p>
+<ul class="disc">
+<li>eliminate \(\sqrt{a^2-x^2}\) from an integrand by substituting \(x=a\sin u\) to give<div class="displaymath">
+\begin{gather*}
+\sqrt{a^2-x^2}=\sqrt{a^2-a^2\sin^2 u}
+=\sqrt{a^2\cos^2 u}=|a\cos u|
+\end{gather*}
+</div>
+</li>
+<li>eliminate \(\sqrt{a^2+x^2}\) from an integrand by substituting \(x=a\tan u\) to give<div class="displaymath">
+\begin{gather*}
+\sqrt{a^2+x^2}=\sqrt{a^2+a^2\tan^2 u}
+=\sqrt{a^2\sec^2 u}=|a\sec u|
+\end{gather*}
+</div>
+</li>
+<li>eliminate \(\sqrt{x^2-a^2}\) from an integrand by substituting \(x=a\sec u\) to give<div class="displaymath">
+\begin{gather*}
+\sqrt{x^2-a^2}=\sqrt{a^2\sec^2u-a^2}
+=\sqrt{a^2\tan^2 u}=|a\tan u|
+\end{gather*}
+</div>Be very careful with signs and absolute values when using this substitution. See Example <a knowl="./knowl/eg_sec_sub.html" title="Example 1.9.6: \(\int \frac{x^2}{\sqrt{x^2-1}} \dee{x}\)">1.9.6</a>.</li>
+</ul>
+<span class="incontext"><a href="subsection-18.html#p-1814">in-context</a></span>
+</body>
+</html>

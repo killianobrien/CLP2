@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:22+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="example-like"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.3.5</span> <span class="title">\(\diff{}{x}\int_0^{x^2} e^{-t^2}\dee{t}\)</span>
+</h6>
+<p>Consider the integral \(\int_0^{x^2} e^{-t^2}\dee{t}\text{.}\) We would like to  compute its derivative with respect to \(x\) using part 1 of the fundamental  theorem of calculus.</p>
+<p>The fundamental theorem tells us how to compute the derivative of  functions of the form \(\int_a^x f(t)\dee{t}\) but the integral at hand is  <em class="emphasis">not</em> of the specified form because the upper limit we have is \(x^2\text{,}\) rather than  \(x\text{,}\) — so more care is required. Thankfully we can deal with this obstacle with only a  little extra work. The trick is to define an auxiliary function by simply  changing the upper limit to \(x\text{.}\) That is, define</p>
+<div class="displaymath">
+\begin{align*}
+E(x) &amp;= \int_0^x e^{-t^2}\dee{t}\\
+\end{align*}
+<p class="intertext">Then the integral we want to work with is</p>
+\begin{align*}
+E(x^2) &amp;= \int_0^{x^2} e^{-t^2}\dee{t}
+\end{align*}
+</div>
+<p>The derivative \(E'(x)\) can be found via part 1 of the fundamental theorem of  calculus (as we did in Example <a knowl="./knowl/eg_INTftocA.html" title="Example 1.3.4: \(\diff{}{x}\int_0^x e^{-t^2}\dee{t}\)">1.3.4</a>) and is \(E'(x)=  e^{-x^2}\text{.}\) We can then use this fact with the chain rule to compute the  derivative we need:</p>
+<div class="displaymath">
+\begin{align*}
+\diff{}{x} \int_0^{x^2} e^{-t^2}\dee{t}  &amp;= \diff{}{x}E(x^2) &amp;\text{use the chain rule}\\
+&amp;= 2x E'(x^2)\\
+&amp;= 2x e^{-x^4}
+\end{align*}
+</div></article><span class="incontext"><a href="subsection-10.html#eg_INTftocB">in-context</a></span>
+</body>
+</html>

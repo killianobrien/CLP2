@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:20:55+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>When we rotate \(f(x)\) about the \(x\)-axis, we form a solid whose radius at \(x\) is \(|f(x)|\text{.}\) So, its circular cross-sections have area \(\pi|f(x)|^2 = \pi f^2(x)\text{.}\) If we slice this solid into circular disks of thickness \(\dee{x}\text{,}\) then the disks have volume \(\pi f^2(x)\,\dee{x}\text{.}\) Therefore, the volume of the entire solid is \(\displaystyle\int_a^b \pi f^2(x)\,\dee{x}\text{.}\) All we need to do now is get this into a form where we can replace the integral with the root mean square, \(R\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+V&amp;=\int_a^b \pi f^2(x)\,\dee{x} = \pi\frac{b-a}{b-a}\int_a^b f^2(x)\,\dee{x}\\
+&amp;=\pi(b-a)\left(\sqrt{\frac{1}{b-a}\int_a^b f^2(x)\,\dee{x}}\right)^2\\
+&amp;=\pi(b-a)R^2
+\end{align*}
+</div>
+<p>Remark: the volume of a cylinder with length \(b-a\) and radius \(r\) is \(\pi(b-a)r^2\text{.}\) So, the root mean square of \(f(x)\) gave us the radius of a cylinder with the same volume as the solid formed by rotating \(f(x)\text{.}\) Recall the average of \(f(x)\) gave us the height of a rectangle with the same area as \(f(x)\text{.}\) Compare this to the geometric interpretations of averages in Questions <a knowl="./knowl/prob_s2_2_avgvalue.html" title="Exercise 2.2.2.1">1</a> and <a knowl="./knowl/prob_s2_2_avgarea.html" title="Exercise 2.2.2.15">15</a>.</p>
+<span class="incontext"><a href="exercises-15.html#p-3596">in-context</a></span>
+</body>
+</html>

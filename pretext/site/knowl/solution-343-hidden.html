@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:20:13+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>There are two “sources of impropriety:” the two bounds. So, we break our integral into two pieces.</p>
+<div class="displaymath">
+\begin{align*}
+\int_{-\infty}^\infty \sin x \dee{x}&amp;=\int_{-\infty}^0 \sin x \dee{x}+\int_{0}^\infty \sin x \dee{x}\\
+&amp;=\lim_{a \to \infty }\left[\int_{-a}^0 \sin x \dee{x}\right]+
+\lim_{b \to \infty }\left[\int_{0}^b \sin x \dee{x}\right]\\
+&amp;=\lim_{a \to \infty }\left[-\cos 0 + \cos(- a)
+\right]+
+\lim_{b \to \infty }\left[-\cos b + \cos 0
+\right]\\
+&amp;=\text{DNE}
+\end{align*}
+</div>
+<p>Since the limits don't exist, the integral diverges. (It happens that both limits don't exist; even if only one failed to exist, the integral would diverge.)</p>
+<p>Remark: it's very tempting to think that this integral should converge, because as an odd function the area to the right of the \(x\)-axis “cancels out” the area to the left when the limits of integration are symmetric. One justification for not using this intuition is given in Example <a knowl="./knowl/eg_IMPp4.html" title="Example 1.12.11: \(\int_{-1}^1\frac{\dee{x}}{x}\)">1.12.11</a> in the text. Here's another: In Question <a knowl="./knowl/prob_s1_11_cosine.html" title="Exercise 1.12.4.10">1.12.4.10</a> we saw that \(\int_{-\infty}^\infty \cos x \dee{x}\) diverges. Since \(\sin x = \cos (x-\pi/2)\text{,}\) the area bounded by sine and the area bounded by cosine over an infinite region seem to be the same--only shifted by \(\pi/2\text{.}\) So if \(\int_{-\infty}^\infty \sin x \dee{x}=0\text{,}\) then we ought to also have \(\int_{-\infty}^\infty \cos x \dee{x}=0\text{,}\) but we saw in Question <a knowl="./knowl/prob_s1_11_cosine.html" title="Exercise 1.12.4.10">1.12.4.10</a> this is not the case.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-320.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</div></body>
+</html>

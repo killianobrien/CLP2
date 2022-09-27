@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:18+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>The sum \(\ds \) inside definition <a knowl="./knowl/def_INTintegral.html" title="Definition 1.1.9">1.1.9</a></p>
+<div class="displaymath">
+\begin{gather*}
+\sum_{i=1}^n f(x_{i,n}^*)\,\frac{b-a}{n}
+\end{gather*}
+</div>
+<p>is called a Riemann sum. It is also often written as</p>
+<div class="displaymath">
+\begin{gather*}
+\sum_{i=1}^n f(x_i^*)\,\De x
+\end{gather*}
+</div>
+<p>where \(\De x = \frac{b-a}{n}\text{.}\)</p>
+<ul class="disc">
+<li>If we choose each \(x_{i,n}^* = x_{i-1}=a+(i-1)\frac{b-a}{n}\) to be the  left hand end point of the \(i^{\rm th}\) interval, \([x_{i-1},x_i]\text{,}\)  we get the approximation<div class="displaymath">
+\begin{gather*}
+\sum_{i=1}^n f\left(a+(i-1)\frac{b-a}{n}\right)\,\frac{b-a}{n}
+\end{gather*}
+</div>which is called the “left Riemann sum approximation to \(\int_a^b f(x)\dee{x}\) with \(n\) subintervals”. This is the approximation used  in  Example <a knowl="./knowl/eg_INTexparea.html" title="Example 1.1.1: Computing an area with vertical strips">1.1.1</a>.</li>
+<li>In the same way, if we choose \(x_{i,n}^* = x_{i}=a+i\frac{b-a}{n}\) we  obtain the approximation<div class="displaymath">
+\begin{gather*}
+\sum_{i=1}^n f\left(a+i\frac{b-a}{n}\right)\,\frac{b-a}{n}
+\end{gather*}
+</div>which is called the “right Riemann sum approximation to \(\int_a^b f(x)\dee{x}\) with \(n\) subintervals”. The word “right” signifies  that, on each  subinterval \([x_{i-1},x_i]\) we approximate \(f\) by its value at the right-hand  end-point,  \(x_i=a+i\frac{b-a}{n}\text{,}\) of the subinterval.</li>
+<li>A third commonly used approximation is<div class="displaymath">
+\begin{gather*}
+\sum_{i=1}^n f\left(a+(i-\frac12)\frac{b-a}{n}\right)\,\frac{b-a}{n}
+\end{gather*}
+</div>which is called the “midpoint Riemann sum approximation to \(\int_a^b f(x)\dee{x}\) with \(n\) subintervals”. The word “midpoint” signifies that, on each subinterval \([x_{i-1},x_i]\) we approximate \(f\) by its value at the midpoint, \(\frac{x_{i-1}+x_i}{2} =a+(i-\frac{1}{2})\frac{b-a}{n}\text{,}\) of the subinterval.</li>
+</ul>
+<span class="incontext"><a href="sec_defInt.html#p-103">in-context</a></span>
+</body>
+</html>

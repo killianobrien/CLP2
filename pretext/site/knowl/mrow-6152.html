@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:24:20+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="displaymath">
+\begin{align*}
+x &amp;= \frac{\alpha}{10^k}
++ \frac{\beta}{10^{k+p}}
++ \frac{\beta}{10^{k+2p}}
++ \frac{\beta}{10^{k+3p}}
++ \cdots\\
+&amp;= \frac{\alpha}{10^k}  + \frac{\beta}{10^{k+p}} \sum_{j=0}^\infty 10^{-p}\\
+\end{align*}
+<p class="intertext">This sum is just a geometric series (see Lemma <a knowl="./knowl/lem_geomsum.html" title="Lemma 3.2.5: Geometric series">3.2.5</a>) and we can evaluate it</p>
+\begin{align*}
+&amp;= \frac{\alpha}{10^k}  + \frac{\beta}{10^{k+p}} \cdot \frac{1}{1-10^{-p}}
+= \frac{\alpha}{10^k}  + \frac{\beta}{10^k} \cdot \frac{1}{10^p-1}\\
+&amp;= \frac{1}{10^k} \left( \alpha + \frac{\beta}{10^p-1} \right) =\frac{\alpha(10^p-1)+\beta}{10^k(10^p-1)}
+\end{align*}
+</div>
+<span class="incontext"><a href="subsection-63.html#mjx-eqn-mrow-6152">in-context</a></span>
+</body>
+</html>

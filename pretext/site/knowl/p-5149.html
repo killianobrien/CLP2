@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:22:53+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>(c) We'll use the integal test. The \(k^{\rm th}\) term in the series is \(a_k=\frac{1}{k(\log k) (\log\log k)}=f(k)\) with \(f(x)=\frac{1}{x(\log x) (\log\log x)}\text{,}\) which is continuous, positive and decreasing for \(x\ge 3\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+\int_3^\infty f(x)\ \dee{x}
+&amp;= \int_3^\infty \frac{\dee{x}}{x(\log x) (\log\log x)}
+=\lim_{R\rightarrow\infty} \int_3^R \frac{\dee{x}}{x(\log x) (\log\log x)}\\
+&amp;=\lim_{R\rightarrow\infty} \int_{\log 3}^{\log R} \frac{\dee{y}}{y\log y}
+\qquad\text{with }y=\log x,\ \dee{y}=\frac{\dee{x}}{x}\\
+&amp;= \lim_{R\rightarrow\infty}\int_{\log \log 3}^{\log \log R} \frac{\dee{t}}{t}
+\qquad\text{with }t=\log y,\ \dee{t}=\frac{\dee{y}}{y}\\
+&amp;=\lim_{R \to \infty}\Big[\log t\Big]_{\log \log 3}^{\log\log R}=\infty
+\end{align*}
+</div>
+<p>Since the integral is divergent, the series is divergent as well by the integral test.</p>
+<span class="incontext"><a href="exercises-20.html#p-5149">in-context</a></span>
+</body>
+</html>

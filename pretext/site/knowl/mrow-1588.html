@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:38+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="displaymath">
+\begin{align*}
+\int \tan^7x\dee{x}
+&amp;= \int \big[\tan^5x \sec^2x - \tan^3x \sec^2x + \tan x \sec^2x\big] \dee{x}\\
+&amp;\hskip2in- \int \tan x \dee{x}\\
+\end{align*}
+<p class="intertext">Now factor out the common \(\sec^2x\) term and integrate \(\tan x\) via Example <a knowl="./knowl/eg_TRGINTg.html" title="Example 1.8.11: \(\int \tan x\dee{x}\)">1.8.11</a></p>
+\begin{align*}
+&amp;= \int \big[ \tan^5x - \tan^3x +\tan x\big]\sec x\dee{x} - \log|\sec x| +C\\
+&amp;= \int \big[ u^5 - u^3 + u \big]\dee{u} - \log|\sec x| +C\\
+&amp;= \frac{u^6}{6} - \frac{u^4}{4} + \frac{u^2}{2} - \log|\sec x| +C\\
+&amp;= \frac{1}{6}\tan^6x - \frac{1}{4}\tan^4x +\frac{1}{2}\tan^2x - \log|\sec x| +
+C
+\end{align*}
+</div>
+<span class="incontext"><a href="sec_tansec.html#mjx-eqn-mrow-1588">in-context</a></span>
+</body>
+</html>

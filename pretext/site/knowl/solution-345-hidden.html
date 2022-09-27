@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:20:14+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>Our domain of integration is finite, so the only potential “sources of impropriety” are infinite discontinuities in the integrand. To find these, we factor.</p>
+<div class="displaymath">
+\begin{align*}
+\int_0^{10} \frac{x-1}{x^2-11x+10}  \dee{x}&amp;=
+\int_0^{10} \frac{x-1}{(x-1)(x-10)}  \dee{x}\\
+\end{align*}
+<p class="intertext">A removable discontinuity doesn't affect the integral.</p>
+\begin{align*}
+&amp;=\int_0^{10} \frac{1}{x-10}  \dee{x}\\
+\end{align*}
+<p class="intertext">Use the substitution \(u=x-10\text{,}\) \(\dee{u}=\dee{x}\text{.}\) When \(x=0\text{,}\) \(u=-10\text{,}\) and when \(x=10\text{,}\) \(u=0\text{.}\)</p>
+\begin{align*}
+&amp;=\int_{-10}^0 \frac{1}{u} \dee{u}
+\end{align*}
+</div>
+<p>This is a \(p\)-integral with \(p=1\text{.}\) From Example <a knowl="./knowl/eg_IMPp2.html" title="Example 1.12.9: \(\int_0^1\frac{\dee{x}}{x^p}\) with \(p \gt 0\)">1.12.9</a> and Theorem <a knowl="./knowl/thm_IMPfiniteSHift.html" title="Theorem 1.12.20">1.12.20</a>, we know it diverges.</p>
+</div></body>
+</html>

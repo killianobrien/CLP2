@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:14:43+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Basic properties of the definite integral</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_2_ic.html"><span class="title">CLP-2 Integral Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="exercises-1.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chap_integral.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_evenodd.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="exercises-1.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chap_integral.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_evenodd.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_integral.html" data-scroll="chap_integral"><span class="codenumber">1</span> <span class="title">Integration</span></a></h2>
+<ul>
+<li><a href="sec_intdef.html" data-scroll="sec_intdef">Definition of the Integral</a></li>
+<li><a href="sec_def_int.html" data-scroll="sec_def_int" class="active">Basic properties of the definite integral</a></li>
+<li><a href="sec_fundamental.html" data-scroll="sec_fundamental">The Fundamental Theorem of Calculus</a></li>
+<li><a href="sec_subs.html" data-scroll="sec_subs">Substitution</a></li>
+<li><a href="sec_area.html" data-scroll="sec_area">Area between curves</a></li>
+<li><a href="sec_int_volumes.html" data-scroll="sec_int_volumes">Volumes</a></li>
+<li><a href="sec_intbyparts.html" data-scroll="sec_intbyparts">Integration by parts</a></li>
+<li><a href="sec_trigint.html" data-scroll="sec_trigint">Trigonometric Integrals</a></li>
+<li><a href="sec_trigsub.html" data-scroll="sec_trigsub">Trigonometric Substitution</a></li>
+<li><a href="sec_parfrac.html" data-scroll="sec_parfrac">Partial Fractions</a></li>
+<li><a href="sec_numeric_int.html" data-scroll="sec_numeric_int">Numerical Integration</a></li>
+<li><a href="sec_improp_int.html" data-scroll="sec_improp_int">Improper Integrals</a></li>
+<li><a href="section-13.html" data-scroll="section-13">More Integration Examples</a></li>
+</ul>
+<h2 class="link"><a href="chap_int_app.html" data-scroll="chap_int_app"><span class="codenumber">2</span> <span class="title">Applications of Integration</span></a></h2>
+<ul>
+<li><a href="sec_work.html" data-scroll="sec_work">Work</a></li>
+<li><a href="sec_avg.html" data-scroll="sec_avg">Averages</a></li>
+<li><a href="sec_com.html" data-scroll="sec_com">Centre of Mass and Torque</a></li>
+<li><a href="sec_sep_de.html" data-scroll="sec_sep_de">Separable Differential Equations</a></li>
+</ul>
+<h2 class="link"><a href="chap_seq_ser.html" data-scroll="chap_seq_ser"><span class="codenumber">3</span> <span class="title">Sequence and series</span></a></h2>
+<ul>
+<li><a href="section-18.html" data-scroll="section-18">Sequences</a></li>
+<li><a href="section-19.html" data-scroll="section-19">Series</a></li>
+<li><a href="section-20.html" data-scroll="section-20">Convergence Tests</a></li>
+<li><a href="section-21.html" data-scroll="section-21">Absolute and Conditional Convergence</a></li>
+<li><a href="section-22.html" data-scroll="section-22">Power Series</a></li>
+<li><a href="section-23.html" data-scroll="section-23">Taylor Series</a></li>
+<li><a href="sec_RatIrr.html" data-scroll="sec_RatIrr">Optional — Rational and irrational numbers</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="section-26.html" data-scroll="section-26">Pythagoras</a></li>
+<li><a href="section-27.html" data-scroll="section-27">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="section-30.html" data-scroll="section-30">Trigonometry — Special Triangles</a></li>
+<li><a href="section-31.html" data-scroll="section-31">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trigonometric Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">Highschool Material You Should be Able to Derive</a></li>
+<li><a href="section-39.html" data-scroll="section-39">Cartesian Coordinates</a></li>
+<li><a href="ap_roots.html" data-scroll="ap_roots">Roots of Polynomials</a></li>
+</ul>
+<h2 class="link"><a href="ap_complex.html" data-scroll="ap_complex"><span class="codenumber">B</span> <span class="title">Complex Numbers and Exponentials</span></a></h2>
+<ul>
+<li><a href="sec_complex_defn.html" data-scroll="sec_complex_defn">Definition and Basic Operations</a></li>
+<li><a href="sec_complex_exp.html" data-scroll="sec_complex_exp">The Complex Exponential</a></li>
+</ul>
+<h2 class="link"><a href="app_Richardson_Romberg.html" data-scroll="app_Richardson_Romberg"><span class="codenumber">C</span> <span class="title">More About Numerical Integration</span></a></h2>
+<ul>
+<li><a href="ap_Richardson.html" data-scroll="ap_Richardson">Richardson Extrapolation</a></li>
+<li><a href="ap_Romberg.html" data-scroll="ap_Romberg">Romberg Integration</a></li>
+<li><a href="ap_adaptive.html" data-scroll="ap_adaptive">Adaptive Quadrature</a></li>
+</ul>
+<h2 class="link"><a href="app_ODE_numerical.html" data-scroll="app_ODE_numerical"><span class="codenumber">D</span> <span class="title">Numerical Solution of ODE's</span></a></h2>
+<ul>
+<li><a href="ap_derivation.html" data-scroll="ap_derivation">Simple ODE Solvers — Derivation</a></li>
+<li><a href="ap_error_behaviour.html" data-scroll="ap_error_behaviour">Simple ODE Solvers —  Error Behaviour</a></li>
+<li><a href="ap_variable.html" data-scroll="ap_variable">Variable Step Size Methods</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">E</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">F</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">G</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp2-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="section" id="sec_def_int"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">Basic properties of the definite integral</span>
+</h2>
+<a href="sec_def_int.html" class="permalink">¶</a><section class="introduction" id="introduction-12"><p id="p-433">When we studied limits and derivatives, we developed methods for taking limits  or derivatives of “complicated functions” like \(f(x)=x^2 + \sin(x)\) by  understanding how limits and derivatives interact with basic arithmetic  operations like addition and subtraction. This allowed us to reduce the problem  into one of of computing derivatives of simpler functions like \(x^2\) and  \(\sin(x)\text{.}\) Along the way we established  simple rules such as</p>
+<div class="displaymath">
+\begin{gather*}
+\lim_{x\to a}(f(x)+g(x)) = \lim_{x\to a}f(x) + \lim_{x\to a} g(x)
+\quad\text{and}\quad
+\diff{}{x}(f(x)+g(x)) = \diff{f}{x} + \diff{g}{x}
+\end{gather*}
+</div>
+<p>Some of these rules have very natural analogues for integrals and we discuss  them below. Unfortunately the analogous rules for integrals of products of  functions or integrals of compositions of functions are more complicated than  those for limits or derivatives. We discuss those rules at length in subsequent  sections. For now let us consider some of the simpler rules of the arithmetic  of  integrals.</p>
+<article class="theorem-like" id="thm_Intarith"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.2.1</span> <span class="title">Arithmetic of Integration</span>
+</h6>
+<p id="p-434">Let \(a,b\) and \(A,B,C\) be real numbers. Let the functions \(f(x)\) and \(g(x)\) be integrable on an interval that contains \(a\) and \(b\text{.}\) Then</p>
+<div class="displaymath">
+\begin{align*}
+\text{(a)}&amp;&amp; \int_a^b \left( f(x) + g(x) \right)\dee{x} &amp;= \int_a^b f(x)\dee{x} + \int_a^b g(x)\dee{x}\\
+\text{(b)}&amp;&amp; \int_a^b\left(f(x)-g(x)\right)\dee{x}  &amp;= \int_a^b f(x)\dee{x} - \int_a^b g(x)\dee{x}\\
+\text{(c)}&amp;&amp; \int_a^b C f(x) \dee{x} &amp;= C\cdot \int_a^b f(x)\dee{x}\\
+\end{align*}
+<p class="intertext">Combining these three rules we have</p>
+\begin{align*}
+\text{(d)}&amp;&amp; \int_a^b \left( Af(x) + Bg(x) \right)\dee{x} &amp;= A\int_a^b f(x)\dee{x} + B\int_a^b g(x)\dee{x}\\
+\end{align*}
+<p class="intertext">That is, integrals depend linearly on the integrand.</p>
+\begin{align*}
+\text{(e)}&amp;&amp; \int_a^b \dee{x} = \int_a^b 1 \cdot \dee{x} &amp;= b-a
+\end{align*}
+</div></article><p id="p-435">It is not too hard to prove this result from the definition of the definite  integral.  Additionally we only really need to prove (d) and (e) since</p>
+<ul class="disc">
+<li id="li-270">(a) follows from (d) by setting \(A=B=1\text{,}\)</li>
+<li id="li-271">(b) follows from (d) by setting \(A=1, B=-1\text{,}\) and</li>
+<li id="li-272">(c) follows from (d) by setting \(A=C, B=0\text{.}\)</li>
+</ul>
+<article class="hiddenproof" id="proof-3"><a knowl="" class="id-ref" refid="hk-proof-3"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-3" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-436">As noted above, it suffices for us to prove (d) and (e). Since (e) is easier,  we  will  start with that. It is also a good warm-up for (d).</p>
+<ul class="disc">
+<li id="li-273">The definite integral in (e), \(\int_a^b 1 \dee{x}\text{,}\) can be interpreted  geometrically as the area of the rectangle with height 1 running from \(x=a\) to  \(x=b\text{;}\) this area is clearly \(b-a\text{.}\) We can also prove this formula from the definition of  the  integral  (Definition <a knowl="./knowl/def_INTintegral.html" title="Definition 1.1.9">1.1.9</a>):<div class="displaymath">
+\begin{align*}
+\int_a^b\dee{x}
+&amp;=\lim_{n\rightarrow\infty}\sum_{i=1}^n f(x_{i,n}^*)\,\frac{b-a}{n}
+&amp;\text{by definition}\\
+&amp;=\lim_{n\rightarrow\infty}\sum_{i=1}^n 1\,\frac{b-a}{n}
+&amp;\text{since $f(x)=1$}\\
+&amp;=\lim_{n\rightarrow\infty}(b-a) \sum_{i=1}^n \frac{1}{n}
+&amp;\text{since $a,b$ are constants}\\
+&amp;=\lim_{n\rightarrow\infty}(b-a)\\
+&amp;=b-a
+\end{align*}
+</div>as required.</li>
+<li id="li-274">To prove (d) let us start by defining \(h(x) = Af(x)+Bg(x)\) and then we  need to  express the integral of \(h(x)\) in terms of those of \(f(x)\) and \(g(x)\text{.}\) We use  Definition <a knowl="./knowl/def_INTintegral.html" title="Definition 1.1.9">1.1.9</a> and some algebraic manipulations <a knowl="" class="id-ref" refid="hk-fn-24" id="fn-24"><sup> 1 </sup></a><span id="hk-fn-24" class="hidden-content tex2jax_ignore"><span class="footnote">Now  is a good  time to look back at Theorem <a knowl="./knowl/thm_INTsummationArith.html" title="Theorem 1.1.5: Arithmetic of Summation Notation">1.1.5</a>.</span></span> to arrive at the  result.<div class="displaymath">
+\begin{align*}
+\int_a^bh(x) \dee{x}
+&amp;= \sum_{i=1}^n h(x_{i,n}^*)\cdot\frac{b-a}{n}\\
+&amp;\hskip0.5in\text{by Definition }\knowl{./knowl/def_INTintegral.html}{\text{1.1.9}}\\
+&amp;= \sum_{i=1}^n \left(Af(x_{i,n}^*)+Bg(x_{i,n}^*) \right)\cdot \frac{b-a}{n}\\
+&amp;= \sum_{i=1}^n \left(Af(x_{i,n}^*)\cdot \frac{b-a}{n} + Bg(x_{i,n}^*)\cdot
+\frac{b-a}{n} \right)\\
+&amp;= \left(\sum_{i=1}^n Af(x_{i,n}^*)\cdot \frac{b-a}{n}\right)
++ \left(\sum_{i=1}^n Bg(x_{i,n}^*)\cdot \frac{b-a}{n}\right)\\
+&amp;\hskip0.5in\text{by Theorem }\knowl{./knowl/thm_INTsummationArith.html}{\text{1.1.5}}\text{(b)}\\
+&amp;= A\left(\sum_{i=1}^n f(x_{i,n}^*)\cdot \frac{b-a}{n}\right)
++ B\left(\sum_{i=1}^n g(x_{i,n}^*)\cdot \frac{b-a}{n}\right)\\
+&amp;\hskip0.5in\text{by Theorem }\knowl{./knowl/thm_INTsummationArith.html}{\text{1.1.5}}\text{(a)}\\
+&amp;= A \int_a^b f(x) \dee{x} + B \int_a^b g(x) \dee{x}\\
+&amp;\hskip0.5in\text{by Definition }\knowl{./knowl/def_INTintegral.html}{\text{1.1.9}}
+\end{align*}
+</div>as required.</li>
+</ul></article></div>
+<p id="p-437">Using this Theorem we can integrate sums, differences and constant multiples of  functions  we know how to integrate. For example:</p>
+<article class="example-like" id="example-10"><a knowl="" class="id-ref" refid="hk-example-10"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.2.2</span> <span class="title">The integral of a sum</span>
+</h6></a></article><div id="hk-example-10" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-438">In Example <a knowl="./knowl/eg_INTexparea.html" title="Example 1.1.1: Computing an area with vertical strips">1.1.1</a> we saw that \(\int_0^1 e^x\dee{x}=e-1\text{.}\) So</p>
+<div class="displaymath">
+\begin{align*}
+\int_0^1\big(e^x+7\big)\dee{x} &amp;= \int_0^1 e^x\dee{x} + 7\int_0^1 1 \dee{x}\\
+&amp; \text{by Theorem }\knowl{./knowl/thm_Intarith.html}{\text{1.2.1}}\text{(d) with $A=1,f(x)=e^x,B=7,g(x)=1$}\\
+&amp;=(e-1)+7\times (1-0)\\
+&amp;\text{by Example }\knowl{./knowl/eg_INTexparea.html}{\text{1.1.1}}\text{ and  Theorem }\knowl{./knowl/thm_Intarith.html}{\text{1.2.1}}\text{(e)}\\
+&amp;=e+6
+\end{align*}
+</div></article></div>
+<p id="p-439">When we gave the formal definition of \(\int_a^b f(x) \dee{x}\) in  Definition <a knowl="./knowl/def_INTintegral.html" title="Definition 1.1.9">1.1.9</a> we explained that the integral could be  interpreted as the signed area between the curve \(y=f(x)\) and the \(x\)-axis on  the interval \([a,b]\text{.}\) In order for this interpretation to make sense we  required  that \(a \lt b\text{,}\) and though we remarked that the integral makes sense when \(a \gt b\) we  did not explain any further. Thankfully there is an easy way to express the  integral \(\int_a^b f(x)\dee{x}\) in terms of \(\int_b^a f(x)\dee{x}\) — making  it  always possible to write an integral so the lower limit of integration  is less than the upper limit of integration. Theorem <a knowl="./knowl/thm_Intdomain.html" title="Theorem 1.2.3: Arithmetic for the Domain of Integration">1.2.3</a>,  below,  tell us that, for example, \(\int_7^3 e^x\dee{x} = - \int_3^7 e^x\dee{x}\text{.}\) The same theorem also provides us with two other simple manipulations of the limits of  integration.</p>
+<article class="theorem-like" id="thm_Intdomain"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.2.3</span> <span class="title">Arithmetic for the Domain of Integration</span>
+</h6>
+<p id="p-440">Let \(a,b,c\)  be real numbers. Let the function \(f(x)\)  be integrable on an interval that contains \(a\text{,}\) \(b\) and \(c\text{.}\) Then</p>
+<div class="displaymath">
+\begin{align*}
+\text{(a)}&amp;&amp; \int_a^a f(x)\dee{x}&amp;= 0\\
+\text{(b)}&amp;&amp; \int_b^a f(x)\dee{x}&amp;= -\int_a^b f(x)\dee{x}\\
+\text{(c)}&amp;&amp; \int_a^b f(x)\dee{x}&amp;= \int_a^c f(x)\dee{x} + \int_c^b f(x)\dee{x}
+\end{align*}
+</div></article><p id="p-441">The proof of this statement is not too difficult.</p>
+<article class="hiddenproof" id="proof-4"><a knowl="" class="id-ref" refid="hk-proof-4"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-4" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-442">Let us prove the statements in order.</p>
+<ul class="disc">
+<li id="li-275">Consider the definition of the definite integral<div class="displaymath">
+\begin{align*}
+\int_a^b f(x) \dee{x} &amp;= \lim_{n \to \infty} \sum_{i=1}^n  f(x_{i,n}^*)\cdot\frac{b-a}{n}
+\end{align*}
+</div>If we now substitute \(b=a\) in this expression we have<div class="displaymath">
+\begin{align*}
+\int_a^a f(x) \dee{x}  &amp;= \lim_{n \to \infty} \sum_{i=1}^n  f(x_{i,n}^*)\cdot\underbrace{\frac{a-a}{n}}_{=0}\\
+&amp;= \lim_{n \to \infty} \sum_{i=1}^n \underbrace{f(x_{i,n}^*)\cdot 0}_{=0}\\
+&amp;= \lim_{n \to \infty} 0\\
+&amp;= 0
+\end{align*}
+</div>as required.</li>
+<li id="li-276">
+<p id="p-443">Consider now the definite integral \(\int_a^b f(x) \dee{x}\text{.}\) We will sneak  up on the proof by first examining Riemann sum approximations to both this and  \(\int_b^a f(x)\dee{x}\text{.}\) The midpoint Riemann sum approximation to \(\int_a^b  f(x)\dee{x}\) with \(4\) subintervals (so that each subinterval has width  \(\frac{b-a}{4}\)) is</p>
+<div class="displaymath">
+\begin{align*}
+&amp;\left\{f\big(a+\tfrac{1}{2}\tfrac{b-a}{4}\big)
++f\big(a+\tfrac{3}{2}\tfrac{b-a}{4}\big)
++f\big(a+\tfrac{5}{2}\tfrac{b-a}{4}\big)
++ f\big(a+\tfrac{7}{2}\tfrac{b-a}{4}\big)
+\right\}\cdot\tfrac{b-a}{4}\\
+&amp;=\left\{f\big(\tfrac{7}{8}a+\tfrac{1}{8}b\big)
++f\big(\tfrac{5}{8}a+\tfrac{3}{8}b\big)
++f\big(\tfrac{3}{8}a+\tfrac{5}{8}b\big)
++f\big(\tfrac{1}{8}a+\tfrac{7}{8}b\big)\right\}\cdot\tfrac{b-a}{4}
+\end{align*}
+</div>
+<p>Now we do the same for \(\int_b^a f(x)\dee{x}\) with \(4\) subintervals. Note that \(b\)  is now the lower limit on the integral and \(a\) is now the upper limit on the  integral. This is likely to cause confusion when we write out the Riemann sum, so we'll temporarily rename \(b\) to \(A\) and \(a\) to \(B\text{.}\) The midpoint Riemann sum  approximation to \(\int_A^B f(x)\dee{x}\) with \(4\) subintervals is</p>
+<div class="displaymath">
+\begin{align*}
+&amp;\Big\{f\big(A+\tfrac{1}{2}\tfrac{B-A}{4}\big)
++f\big(A+\tfrac{3}{2}\tfrac{B-A}{4}\big)
++f\big(A+\tfrac{5}{2}\tfrac{B-A}{4}\big)\\
+&amp;\hskip2.5in +f\big(A+\tfrac{7}{2}\tfrac{B-A}{4}\big)\Big\}\cdot \tfrac{B-A}{4}\\
+&amp;=\Big\{f\big(\tfrac{7}{8}A+\tfrac{1}{8}B\big)
++f\big(\tfrac{5}{8}A+\tfrac{3}{8}B\big)
++f\big(\tfrac{3}{8}A+\tfrac{5}{8}B\big)\\
+&amp;\hskip2.5in+f\big(\tfrac{1}{8}A+\tfrac{7}{8}B\big)\Big\}\cdot \tfrac{B-A}{4}\\
+\end{align*}
+<p class="intertext">Now recalling that \(A=b\) and \(B=a\text{,}\) we have that the midpoint  Riemann sum approximation to \(\int_b^a f(x)\dee{x}\) with  \(4\) subintervals is</p>
+\begin{align*}
+&amp;\left\{f\big(\tfrac{7}{8}b+\tfrac{1}{8}a\big)
++f\big(\tfrac{5}{8}b+\tfrac{3}{8}a\big)
++f\big(\tfrac{3}{8}b+\tfrac{5}{8}a\big)
++f\big(\tfrac{1}{8}b+\tfrac{7}{8}a\big)\right\}\cdot \tfrac{a-b}{4}
+\end{align*}
+</div>
+<p>Thus we see that the Riemann sums for the two integrals are nearly identical  — the only difference being the factor of \(\frac{b-a}{4}\) versus  \(\frac{a-b}{4}\text{.}\) Hence the two Riemann sums are negatives of each other.</p>
+<p id="p-444">The same computation with \(n\) subintervals shows that the midpoint Riemann sum  approximations to \(\int_b^a f(x)\dee{x}\) and \(\int_a^b f(x)\dee{x}\) with \(n\)  subintervals are negatives of each other. Taking the limit \(n\rightarrow\infty\)  gives \(\int_b^a f(x)\dee{x}= -\int_a^b f(x)\dee{x}\text{.}\)</p>
+</li>
+<li id="li-277">
+<p id="p-445">Finally consider (c) — we will not give a formal proof of this, but  instead will interpret it geometrically. Indeed one can also interpret (a)  geometrically. In both cases these become statements about areas:</p>
+<div class="displaymath">
+\begin{gather*}
+\int_a^a f(x)\dee{x}=0\qquad\text{and}\qquad
+\int_a^b f(x)\dee{x}= \int_a^c f(x)\dee{x} + \int_c^b f(x)\dee{x}
+\end{gather*}
+</div>
+<p>are</p>
+<div class="displaymath">
+\begin{gather*}
+\text{Area}\big\{\ (x,y)\ \big|\ a\le x\le a,\ 0\le y\le f(x)\ \big\}=0
+\end{gather*}
+</div>
+<p>and</p>
+<div class="displaymath">
+\begin{align*}
+&amp;\text{Area}\big\{\ (x,y)\ \big|\ a\le x\le b,\ 0\le y\le f(x)\ \big\}\\
+&amp;\hskip0.25in=\text{Area}\big\{\ (x,y)\ \big|\ a\le x\le c,\ 0\le y\le f(x)\ \big\}\\
+&amp;\hskip0.5in
++\text{Area}\big\{\ (x,y)\ \big|\ c\le x\le b,\ 0\le y\le f(x)\ \big\}
+\end{align*}
+</div>
+<p>respectively. Both of these geometric statements are intuitively obvious. See the figures below.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:4.25%;margin-right:4.25%;">
+<div class="sbspanel" style="width:36.0655737704918%;justify-content:center;"><img src="text/figs/areaAA.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:54.6448087431694%;justify-content:center;"><img src="text/figs/areaABC.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<p id="p-446">Note that we have assumed that \(a\leq c \leq b\) and that \(f(x)\geq 0\text{.}\) One can  remove  these restrictions and also make the proof more formal, but it becomes quite  tedious and   less intuitive.</p>
+</li>
+</ul></article></div>
+<article class="remark-like" id="remark-1"><h6 class="heading">
+<span class="type">Remark</span> <span class="codenumber">1.2.4</span>
+</h6>
+<p id="p-447">For notational simplicity, let's assume that \(a\le c\le b\) and \(f(x)\ge 0\) for all \(a\le x\le b\text{.}\)  The geometric interpretations of the identities</p>
+<div class="displaymath">
+\begin{gather*}
+\int_a^a f(x)\dee{x}=0\quad\text{and}\quad
+\int_a^b f(x)\dee{x}= \int_a^c f(x)\dee{x} + \int_c^b f(x)\dee{x}
+\end{gather*}
+</div>
+<p>are</p>
+<div class="displaymath">
+\begin{gather*}
+\text{Area}\big\{\ (x,y)\ \big|\ a\le x\le a,\ 0\le y\le f(x)\ \big\}=0
+\end{gather*}
+</div>
+<p>and</p>
+<div class="displaymath">
+\begin{align*}
+&amp;\text{Area}\big\{\ (x,y)\ \big|\ a\le x\le b,\ 0\le y\le f(x)\ \big\}\\
+&amp;\hskip0.25in=\text{Area}\big\{\ (x,y)\ \big|\ a\le x\le c,\ 0\le y\le f(x)\ \big\}\\
+&amp;\hskip0.5in
++\text{Area}\big\{\ (x,y)\ \big|\ c\le x\le b,\ 0\le y\le f(x)\ \big\}
+\end{align*}
+</div>
+<p>respectively. Both of these geometric statements are intuitively obvious. See the figures below. We won't give a formal proof.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:2.75%;margin-right:2.75%;">
+<div class="sbspanel" style="width:30.6878306878307%;justify-content:center;"><img src="text/figs/areaAA.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:63.4920634920635%;justify-content:center;"><img src="text/figs/areaABC.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<p id="p-448">So we concentrate on the formula \(\int_b^a f(x)\dee{x}= -\int_a^b f(x)\dee{x}\text{.}\) The midpoint Riemann sum approximation to \(\int_a^b f(x)\dee{x}\) with \(4\) subintervals (so that each subinterval has width \(\frac{b-a}{4}\)) is</p>
+<div class="displaymath">
+\begin{align}
+&amp;\Big\{f\big(a+\tfrac{1}{2}\tfrac{b-a}{4}\big)
++f\big(a+\tfrac{3}{2}\tfrac{b-a}{4}\big)
++f\big(a+\tfrac{5}{2}\tfrac{b-a}{4}\big)
++f\big(a+\tfrac{7}{2}\tfrac{b-a}{4}\big)\big\}\ \tfrac{b-a}{4}\notag\\
+&amp;=\Big\{f\big(\tfrac{7}{8}a+\tfrac{1}{8}b\big)
++f\big(\tfrac{5}{8}a+\tfrac{3}{8}b\Big)
++f\big(\tfrac{3}{8}a+\tfrac{5}{8}b\Big)
++f\big(\tfrac{1}{8}a+\tfrac{7}{8}b\big)\Big\}\ \tfrac{b-a}{4}\label{eq_INTflipL}\tag{\(\star\)}
+\end{align}
+</div>
+<p>We're now going to write out the midpoint Riemann sum approximation to  \(\int_b^a f(x)\dee{x}\) with \(4\) subintervals. Note that \(b\) is now the lower limit on the integral and \(a\) is now the upper limit on the integral. This is likely to cause confusion when we write out the Riemann sum, so we'll temporarily rename \(b\) to \(A\) and \(a\) to \(B\text{.}\) The midpoint Riemann sum approximation to \(\int_A^B f(x)\dee{x}\) with  \(4\) subintervals is</p>
+<div class="displaymath">
+\begin{align*}
+&amp;\Big\{f\big(A+\tfrac{1}{2}\tfrac{B-A}{4}\big)
++f\big(A+\tfrac{3}{2}\tfrac{B-A}{4}\big)
++f\big(A+\tfrac{5}{2}\tfrac{B-A}{4}\big)
++f\big(A+\tfrac{7}{2}\tfrac{B-A}{4}\big)\Big\}\ \tfrac{B-A}{4}\\
+&amp;=\Big\{f\big(\tfrac{7}{8}A+\tfrac{1}{8}B\big)
++f\big(\tfrac{5}{8}A+\tfrac{3}{8}B\big)
++f\big(\tfrac{3}{8}A+\tfrac{5}{8}B\big)
++f\big(\tfrac{1}{8}A+\tfrac{7}{8}B\big)\Big\}\ \tfrac{B-A}{4}
+\end{align*}
+</div>
+<p>Now recalling that \(A=b\) and \(B=a\text{,}\) we have that the midpoint Riemann  sum approximation to \(\int_b^a f(x)\dee{x}\) with  \(4\) subintervals is</p>
+<div class="displaymath">
+\begin{gather}
+\Big\{f\big(\frac{7}{8}b+\frac{1}{8}a\big)
++f\big(\tfrac{5}{8}b+\tfrac{3}{8}a\big)
++f\big(\tfrac{3}{8}b+\tfrac{5}{8}a\big)
++f\big(\tfrac{1}{8}b+\tfrac{7}{8}a\big)\Big\}\ \tfrac{a-b}{4}\label{eq_INTflipR}\tag{\(\star\star\)}
+\end{gather}
+</div>
+<p>The curly brackets in <a knowl="./knowl/eq_INTflipL.html" title="Equation">(\(\star\))</a> and <a knowl="./knowl/eq_INTflipR.html" title="Equation">(\(\star\star\))</a> are equal to each other — the terms are just in the reverse order. The factors multiplying the curly brackets in <a knowl="./knowl/eq_INTflipL.html" title="Equation">(\(\star\))</a> and  <a knowl="./knowl/eq_INTflipR.html" title="Equation">(\(\star\star\))</a>, namely \(\frac{b-a}{4}\) and \(\frac{a-b}{4}\text{,}\) are negatives of each other, so  <a knowl="./knowl/eq_INTflipR.html" title="Equation">(\(\star\star\))</a>\(=-\)<a knowl="./knowl/eq_INTflipL.html" title="Equation">(\(\star\))</a>. The same computation with \(n\) subintervals shows that the midpoint Riemann sum approximations to  \(\int_b^a f(x)\dee{x}\) and \(\int_a^b f(x)\dee{x}\) with \(n\) subintervals are negatives of each other. Taking the limit \(n\rightarrow\infty\) gives \(\int_b^a f(x)\dee{x}= -\int_a^b f(x)\dee{x}\text{.}\)</p></article><article class="example-like" id="eg_INTPROPxa"><a knowl="" class="id-ref" refid="hk-eg_INTPROPxa"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.2.5</span> <span class="title">Revisiting Example 1.1.14</span>
+</h6></a></article><div id="hk-eg_INTPROPxa" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-449">Back in Example <a knowl="./knowl/eg_INTtriangle.html" title="Example 1.1.14: Another simple integral">1.1.14</a> we saw that when \(b \gt 0\) \(\int_0^b x\dee{x} =\frac{b^2}{2}\text{.}\) We'll now verify that  \(\int_0^b x\dee{x} =\frac{b^2}{2}\) is still true when \(b=0\) and also when \(b \lt 0\text{.}\)</p>
+<ul class="disc">
+<li id="li-278">First consider \(b=0\text{.}\) Then the statement \(\int_0^b x\dee{x} =\frac{b^2}{2}\) becomes<div class="displaymath">
+\begin{gather*}
+\int_0^0 x\dee{x} =0
+\end{gather*}
+</div>This is an immediate consequence of Theorem <a knowl="./knowl/thm_Intdomain.html" title="Theorem 1.2.3: Arithmetic for the Domain of Integration">1.2.3</a>(a).</li>
+<li id="li-279">Now consider \(b \lt 0\text{.}\) Let us write \(B=-b\text{,}\) so that \(B \gt 0\text{.}\) In  Example <a knowl="./knowl/eg_INTtriangle.html" title="Example 1.1.14: Another simple integral">1.1.14</a> we saw that<div class="displaymath">
+\begin{gather*}
+\int_{-B}^0 x\dee{x} =-\frac{B^2}{2}.
+\end{gather*}
+</div>So we have<div class="displaymath">
+\begin{align*}
+\int_0^b x\dee{x}
+&amp;=\int^{-B}_0 x\dee{x} =- \int_{-B}^0 x\dee{x} &amp; \text{by Theorem }\knowl{./knowl/thm_Intdomain.html}{\text{1.2.3}}\text{(b)}\\
+&amp; =-\left(-\frac{B^2}{2}\right) &amp; \text{by Example }\knowl{./knowl/eg_INTtriangle.html}{\text{1.1.14}}\\
+&amp; =\frac{B^2}{2} = \frac{b^2}{2}
+\end{align*}
+</div>
+</li>
+</ul>
+<p>We have now shown that</p>
+<div class="displaymath">
+\begin{align*}
+\int_0^b x\dee{x} &amp;=\frac{b^2}{2} &amp;\text{ for all real numbers $b$}
+\end{align*}
+</div></article></div>
+<article class="example-like" id="eg_INTPROPx"><a knowl="" class="id-ref" refid="hk-eg_INTPROPx"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.2.6</span> <span class="title">\(\int_a^b x\dee{x}\)</span>
+</h6></a></article><div id="hk-eg_INTPROPx" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-450">Applying Theorem <a knowl="./knowl/thm_Intdomain.html" title="Theorem 1.2.3: Arithmetic for the Domain of Integration">1.2.3</a> yet again, we have, for all real numbers \(a\) and \(b\text{,}\)</p>
+<div class="displaymath">
+\begin{align*}
+\int_a^b x\dee{x} &amp;=  \int_a^0 x\dee{x} + \int_0^b x\dee{x} &amp;
+\text{by Theorem }\knowl{./knowl/thm_Intdomain.html}{\text{1.2.3}}(c)\text{ with $c=0$}\\
+&amp;=  \int_0^b x\dee{x} - \int_0^a x\dee{x} &amp;
+\text{by Theorem }\knowl{./knowl/thm_Intdomain.html}{\text{1.2.3}}\text{(b)}\\
+&amp;=\frac{b^2-a^2}{2} &amp;
+\text{by Example }\knowl{./knowl/eg_INTPROPxa.html}{\text{1.2.5}}\text{, twice}
+\end{align*}
+</div>
+<p>We can also understand this result geometrically.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/triangles_adr.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<ul id="p-451" class="disc">
+<li id="li-280">(left) When \(0 \lt a \lt b\text{,}\) the integral represents the area in green which  is the difference of two right-angle triangles — the larger with area \(b^2/2\)  and the smaller with area \(a^2/2\text{.}\)</li>
+<li id="li-281">(centre) When \(a \lt 0 \lt b\text{,}\) the integral represents the signed area of the two  displayed triangles. The one above the axis has area \(b^2/2\) while the one  below has area \(-a^2/2\) (since it is below the axis).</li>
+<li id="li-282">(right) When \(a \lt b \lt 0\text{,}\) the integral represents the signed area in purple  of the difference between the two triangles — the larger with area \(-a^2/2\)  and the smaller with area \(-b^2/2\text{.}\)</li>
+</ul></article></div>
+<p id="p-452">Theorem <a knowl="./knowl/thm_Intdomain.html" title="Theorem 1.2.3: Arithmetic for the Domain of Integration">1.2.3</a>(c) shows us how we can split an integral over a  larger interval into one over two (or more) smaller intervals. This is  particularly useful for dealing with piece-wise functions, like \(|x|\text{.}\)</p>
+<article class="example-like" id="eg_INTPROPabs"><a knowl="" class="id-ref" refid="hk-eg_INTPROPabs"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.2.7</span> <span class="title">Integrals involving \(|x|\)</span>
+</h6></a></article><div id="hk-eg_INTPROPabs" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-453">Using Theorem <a knowl="./knowl/thm_Intdomain.html" title="Theorem 1.2.3: Arithmetic for the Domain of Integration">1.2.3</a>, we can readily evaluate integrals involving  \(|x|\text{.}\) First, recall that</p>
+<div class="displaymath">
+\begin{align*}
+|x|=\begin{cases}
+x &amp; \text{if $x\ge 0$} \\
+-x &amp; \text{if $x \lt  0$}
+\end{cases}
+\end{align*}
+</div>
+<p>Now consider (for example) \(\int_{-2}^3 |x| \dee{x}\text{.}\) Since the integrand  changes at \(x=0\text{,}\) it makes sense to split the interval of integration at that  point:</p>
+<div class="displaymath">
+\begin{align*}
+\int_{-2}^3 |x| \dee{x}
+&amp;= \int_{-2}^0 |x| \dee{x} + \int_0^3 |x| \dee{x}
+&amp;\text{by Theorem }\knowl{./knowl/thm_Intdomain.html}{\text{1.2.3}}\\
+&amp;= \int_{-2}^0 (-x) \dee{x} + \int_0^3 x \dee{x}
+&amp;\text{by definition of $|x|$}\\
+&amp;= -\int_{-2}^0 x\dee{x} + \int_0^3 x \dee{x}
+&amp;\text{by Theorem }\knowl{./knowl/thm_Intarith.html}{\text{1.2.1}}\text{(c)}\\
+&amp;= - (-2^2/2) + (3^2/2) = (4+9)/2\\
+&amp;= 13/2
+\end{align*}
+</div>
+<p>We can go further still — given a function \(f(x)\) we can rewrite  the integral of \(f(|x|)\) in terms of the integral of \(f(x)\) and \(f(-x)\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+\int_{-1}^1 f\big(|x|\big)\dee{x} &amp; = \int_{-1}^0 f\big(|x|\big)\dee{x}+ \int_0^1 f\big(|x|\big)\dee{x}\\
+&amp; = \int_{-1}^0 f(-x)\dee{x}+ \int_0^1 f(x)\dee{x}
+\end{align*}
+</div></article></div>
+<p id="p-454">Here is a more concrete example.</p>
+<article class="example-like" id="example-14"><a knowl="" class="id-ref" refid="hk-example-14"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.2.8</span> <span class="title">Revisiting Example 1.1.15</span>
+</h6></a></article><div id="hk-example-14" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-455">Let us compute \(\int_{-1}^1 \big(1-|x|\big)\dee{x}\) again. In  Example <a knowl="./knowl/eg_INTtriangleB.html" title="Example 1.1.15: Evaluating \(\int_{-1}^1 \left(1-|x|\right)\dee{x}\)">1.1.15</a> we evaluated this integral by interpreting it as  the area of a triangle. This time we are going to use <em class="emphasis">only</em> the  properties given in Theorems <a knowl="./knowl/thm_Intarith.html" title="Theorem 1.2.1: Arithmetic of Integration">1.2.1</a> and <a knowl="./knowl/thm_Intdomain.html" title="Theorem 1.2.3: Arithmetic for the Domain of Integration">1.2.3</a> and the  facts that</p>
+<div class="displaymath">
+\begin{align*}
+\int_a^b \dee{x} &amp;= b-a &amp;\text{and}&amp;&amp;
+\int_a^b x\dee{x}=\frac{b^2-a^2}{2}
+\end{align*}
+</div>
+<p>That \(\int_a^b\dee{x} = b-a\) is part (e) of Theorem <a knowl="./knowl/thm_Intarith.html" title="Theorem 1.2.1: Arithmetic of Integration">1.2.1</a>. We saw that \(\int_a^b x\dee{x}=\frac{b^2-a^2}{2}\) in Example <a knowl="./knowl/eg_INTPROPx.html" title="Example 1.2.6: \(\int_a^b x\dee{x}\)">1.2.6</a>.</p>
+<p id="p-456">First we are going to get rid of the absolute value signs by splitting the  interval over which we integrate. Recalling that \(|x|=x\) whenever \(x\ge 0\) and  \(|x|=-x\) whenever \(x\le 0\text{,}\) we split the interval by  Theorem <a knowl="./knowl/thm_Intdomain.html" title="Theorem 1.2.3: Arithmetic for the Domain of Integration">1.2.3</a>(c),</p>
+<div class="displaymath">
+\begin{align*}
+\int_{-1}^1 \big(1-|x|\big)\dee{x} &amp;=\int_{-1}^0 \big(1-|x|\big)\dee{x} + \int_0^1 \big(1-|x|\big)\dee{x}\\
+&amp;=\int_{-1}^0 \big(1-(-x)\big)\dee{x} + \int_0^1 \big(1-x\big)\dee{x}\\
+&amp;=\int_{-1}^0 \big(1+x\big)\dee{x} + \int_0^1 \big(1-x\big)\dee{x}
+\end{align*}
+</div>
+<p>Now we apply parts (a) and (b) of Theorem <a knowl="./knowl/thm_Intarith.html" title="Theorem 1.2.1: Arithmetic of Integration">1.2.1</a>, and then</p>
+<div class="displaymath">
+\begin{align*}
+\int_{-1}^1 \big[1-|x|\big]\dee{x}
+&amp;=\int_{-1}^0 1\dee{x} + \int_{-1}^0 x\dee{x} + \int_0^1 1\dee{x}  - \int_0^1 x\dee{x}\\
+&amp;=[0-(-1)]+\frac{0^2-(-1)^2}{2}+[1-0]-\frac{1^2-0^2}{2}\\
+&amp;=1
+\end{align*}
+</div></article></div></section><nav class="summary-links"><ul>
+<li><a href="sec_evenodd.html"><span class="codenumber">1.2.1</span> <span class="title">More properties of integration: even and odd functions</span></a></li>
+<li><a href="subsection-9.html"><span class="codenumber">1.2.2</span> <span class="title">Optional — More properties of integration: inequalities for integrals</span></a></li>
+<li><a href="exercises-2.html"><span class="codenumber">1.2.3</span> <span class="title">Exercises</span></a></li>
+</ul></nav></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

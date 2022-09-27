@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:23:33+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="example-like"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.6.12</span>
+</h6>
+<p>In Theorem <a knowl="./knowl/thm_SRimportantTaylorSeries.html" title="Theorem 3.6.7">3.6.7</a> we stated that</p>
+<div class="displaymath">
+\begin{equation*}
+\log(1+x) = \sum_{n=0}^\infty (-1)^n\frac{x^{n+1}}{n+1}
+= x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\cdots 
+\tag{S1}
+\end{equation*}
+</div>
+<p>for all \(-1\lt x\le 1\text{.}\) But, so far, we have not justified this statement. We do so now, using (both parts of) Theorem <a knowl="./knowl/thm_TaylorRemainderA.html" title="Theorem 3.6.11: Commonly used formulae for the Taylor remainder">3.6.11</a>. We start by setting \(f(x)=\log(1+x)\) and finding the Taylor polynomials \(T_n(0,x)\text{,}\) and the corresponding errors \(E_n(0,x)\text{,}\) for \(f(x)\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+f(x) &amp;= \log(1+x) &amp; f(0) &amp;= \log 1 = 0 \\
+f'(x) &amp;= \frac{1}{1+x} &amp; f'(0) &amp;= 1 \\
+f''(x) &amp;= \frac{-1}{(1+x)^2} &amp; f''(0) &amp;= -1 
+\\\
+f'''(x) &amp;= \frac{2}{(1+x)^3} &amp; f'''(1) &amp;= 2 \\
+f^{(4)}(x) &amp;= \frac{-2\times 3}{(1+x)^4} &amp; f^{(4)}(0) &amp;= -3! 
+\\\
+f^{(5)}(x) &amp;= \frac{2\times 3\times 4}{(1+x)^5} &amp; f^{(5)}(0) &amp;= 4! 
+\\\
+&amp;\ \ \ \vdots &amp;  &amp;\ \ \ \vdots \\
+f^{(n)}(x)&amp;=\frac{(-1)^{n+1}(n-1)!}{(1+x)^n} &amp; f^{(n)}(0) &amp;= (-1)^{n+1}(n-1)!
+\end{align*}
+</div>
+<p>So the Taylor polynomial of degree \(n\) for the function \(f(x)=\log(1+x)\text{,}\) expanded about \(a=0\text{,}\) is</p>
+<div class="displaymath">
+\begin{align*}
+T_n(0,x) &amp;=f(0)+f'(0)\,x+\cdots+\tfrac{1}{n!}f^{(n)}(0)\, x^n \\
+&amp;= x - \frac{1}{2}x^2 + \frac{1}{3}x^3 - \frac{1}{4}x^4 + \frac{1}{5}x^5 
++\cdots + \frac{(-1)^{n+1}}{n}x^n
+\end{align*}
+</div>
+<p>Theorem <a knowl="./knowl/thm_TaylorRemainderA.html" title="Theorem 3.6.11: Commonly used formulae for the Taylor remainder">3.6.11</a> gives us two formulae for the error \(E_n(0,x) = f(x) - T_n(0,x)\) made when we approximate \(f(x)\) by \(T_n(0,x)\text{.}\) Part (a) of the theorem gives</p>
+<div class="displaymath">
+\begin{equation*}
+E_n(0,x) = \int_0^x \frac{1}{n!}f^{(n+1)}(t)\, (x-t)^n\,\dee{t}
+= (-1)^n \int_0^x \frac{(x-t)^n}{(1+t)^{n+1}}\,\dee{t}
+\tag{Ea}
+\end{equation*}
+</div>
+<p>and part (b) gives</p>
+<div class="displaymath">
+\begin{equation*}
+E_n(0,x)=\frac{1}{(n+1)!}\,f^{(n+1)}(c)\, x^{n+1}  
+= (-1)^n\,\frac{1}{n+1}\,\frac{x^{n+1}}{(1+c)^{n+1}}
+\tag{Eb}
+\end{equation*}
+</div>
+<p>for some (unknown) \(c\) between \(0\) and \(x\text{.}\) The statement (S1), that we wish to prove, is equivalent to the statement</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{n\rightarrow\infty} E_n(0,x)=0 \qquad\text{for all }-1\lt x\le 1 
+\tag{S2}
+\end{equation*}
+</div>
+<p>and we will now show that (S2) is true.</p>
+<dl class="description-list">
+<dt>The case \(x=0\text{:}\)</dt>
+<dd><p>This case is trivial, since, when \(x=0\text{,}\) \(E_n(0,x)=0\) for all \(n\text{.}\)</p></dd>
+<dt>The case \(0\lt x\le 1\text{:}\)</dt>
+<dd>
+<p>This case is relatively easy to deal with using (Eb). In this case \(0\lt x\le 1\text{,}\) so that the \(c\) of (Eb) must be positive and</p>
+<div class="displaymath">
+\begin{align*}
+\left|E_n(0,x)\right| 
+&amp;= \frac{1}{n+1}\frac{x^{n+1}}{(1+c)^{n+1}}\\
+&amp;\le \frac{1}{n+1}\frac{1^{n+1}}{(1+0)^{n+1}}\\
+&amp;=\frac{1}{n+1}
+\end{align*}
+</div>
+<p>converges to zero as \(n\rightarrow\infty\text{.}\)</p>
+</dd>
+<dt>The case \(-1\lt x\lt 0\text{:}\)</dt>
+<dd>
+<p>When \(-1\lt x\lt 0\) is close to \(-1\text{,}\) (Eb) is not sufficient to show that (S2) is true. To see this, let's consider the example \(x=-0.8\text{.}\) All we know about the \(c\) of (Eb) is that it has to be between \(0\) and \(-0.8\text{.}\) For example, (Eb) certainly allows \(c\) to be \(-0.6\) and then</p>
+<div class="displaymath">
+\begin{align*}
+&amp;\left|(-1)^n\frac{1}{n+1}\frac{x^{n+1}}{(1+c)^{n+1}}
+\right|_{\genfrac{}{}{0pt}{}{x=-0.8}{c=-0.6}}\\
+&amp;\hskip0.25in=\frac{1}{n+1}\frac{0.8^{n+1}}{(1-0.6)^{n+1}}\\
+&amp;\hskip0.25in=\frac{1}{n+1}2^{n+1}
+\end{align*}
+</div>
+<p>goes to \(+\infty\) as \(n\rightarrow\infty\text{.}\)</p>
+<p>Note that, while this does tell us that (Eb) is not sufficient to prove (S2), when \(x\) is close to \(-1\text{,}\) it does not also tell us that \(\lim\limits_{n\rightarrow\infty}|E_n(0,-0.8)|=+\infty\) (which would imply that (S2) is false)  — \(c\) could equally well be \(-0.2\) and then</p>
+<div class="displaymath">
+\begin{align*}
+&amp;\left|(-1)^n\frac{1}{n+1}\frac{x^{n+1}}{(1+c)^{n+1}}
+\right|_{\genfrac{}{}{0pt}{}{x=-0.8}{c=-0.2}}\\
+&amp;\hskip0.25in=\frac{1}{n+1}\frac{0.8^{n+1}}{(1-0.2)^{n+1}}\\
+&amp;\hskip0.25in=\frac{1}{n+1}
+\end{align*}
+</div>
+<p>goes to \(0\) as \(n\rightarrow\infty\text{.}\)</p>
+<p>We'll now use (Ea) (which has the advantage of not containing any unknown free parameter \(c\)) to verify (S2) when \(-1\lt x\lt 0\text{.}\) Rewrite the right hand side of (Ea)</p>
+<div class="displaymath">
+\begin{align*}
+&amp; (-1)^n \int_0^x \frac{(x-t)^n}{(1+t)^{n+1}}\,\dee{t}
+=-\int_x^0 \frac{(t-x)^n}{(1+t)^{n+1}}\,\dee{t} \\
+&amp;=-\int_0^{-x}\frac{s^n}{(1+x+s)^{n+1}}\,\dee{s}
+\  s=t-x,\,\dee{s}=\dee{t} 
+\end{align*}
+</div>
+<p>The exact evaluation of this integral is very messy and not very illuminating. Instead, we bound it. Note that, for \(1+x\gt 0\text{,}\)</p>
+<div class="displaymath">
+\begin{align*}
+\diff{}{s}\left(\frac{s}{1+x+s}\right) 
+&amp;= \diff{}{s}\left(\frac{1+x+s-(1+x)}{1+x+s} \right)\\
+&amp;= \diff{}{s}\left(1- \frac{1+x}{1+x+s}\right) \\
+&amp;=\frac{1+x}{(1+x+s)^2}
+\gt 0
+\end{align*}
+</div>
+<p>so that \(\frac{s}{1+x+s}\) increases as \(s\) increases. Consequently, the biggest value that \(\frac{s}{1+x+s}\) takes on the domain of integration  \(0\le s\le -x=|x|\) is</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{s}{1+x+s}\bigg|_{s=-x} = -x = |x|
+\end{equation*}
+</div>
+<p>and the integrand</p>
+<div class="displaymath">
+\begin{align*}
+0\le \frac{s^n}{[1+x+s]^{n+1}} 
+&amp;=\left(\frac{s}{1+x+s}\right)^n\frac{1}{1+x+s}\\
+&amp;\le \frac{|x|^n}{1+x+s}
+\end{align*}
+</div>
+<p>Consequently,</p>
+<div class="displaymath">
+\begin{align*}
+\left|E_n(0,x)\right| 
+&amp;= \left|(-1)^n \int_0^x \frac{(x-t)^n}{(1+t)^{n+1}}\,\dee{t}\right|\\
+&amp;=\int_0^{-x}\frac{s^n}{[1+x+s]^{n+1}}\,\dee{s} \\
+&amp;\le |x|^n \int_0^{-x}\frac{1}{1+x+s}\,\dee{s}\\
+&amp;=|x|^n\Big[\log(1+x+s)\Big]_{s=0}^{s=-x} \\
+&amp;= |x|^n [-\log(1+x)]
+\end{align*}
+</div>
+<p>converges to zero as \(n\rightarrow\infty\) for each fixed \(-1\lt x\lt 0\text{.}\)</p>
+</dd>
+</dl>
+<p>So we have verified (S2), as desired.</p></article><span class="incontext"><a href="subsubsection-17.html#eg_integralRemainder">in-context</a></span>
+</body>
+</html>

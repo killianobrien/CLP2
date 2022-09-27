@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:20:19+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Now we evaluate our integral.</p>
+<div class="displaymath">
+\begin{align*}
+\int\sqrt{3-5x^2}\dee{x}&amp;=\int\sqrt{3-5\left( \sqrt{\frac{3}{5}}\sin\theta\right)^2}\sqrt{\frac{3}{5}}\cos\theta d \theta\\
+&amp;=\int
+\sqrt{3-3\sin^2\theta}\sqrt{3/5}\cos\theta
+\dee{\theta}\\
+&amp;=\int
+\sqrt{3\cos^2\theta}\sqrt{3/5}\cos\theta
+\dee{\theta}\\
+&amp;=\int
+\sqrt{3}\cos\theta\sqrt{3/5}\cos\theta
+\dee{\theta}\\
+&amp;=\frac{3}{\sqrt{5}}\int
+\cos^2\theta
+\dee{\theta}\\
+&amp;=\frac{3}{\sqrt{5}}\int
+\frac{1+\cos 2\theta}{2}
+\dee{\theta}\\
+&amp;=\frac{3}{2\sqrt{5}}\int
+(1+\cos2\theta)
+\dee{\theta}\\
+&amp;=
+\frac{3}{2\sqrt{5}}\left[
+\theta+\frac{1}{2}\sin(2\theta)
+\right]+C\\
+&amp;=\frac{3}{2\sqrt{5}}\left[
+\theta + \sin\theta\cos\theta
+\right]+C
+\end{align*}
+</div>
+<p>From our substitution \(x=\sqrt{3/5}\sin\theta\text{,}\) we glean \(\sin\theta = x\sqrt{5/3}\text{,}\) and \(\theta = \arcsin \left(x\sqrt{5/3} \right)\text{.}\) To figure out \(\cos\theta\text{,}\) we draw a right triangle. Let \(\theta\) be one angle, and since \(\sin\theta = \dfrac{x\sqrt{5}}{\sqrt{3}}\text{,}\) we let the hypotenuse be \(\sqrt{3}\) and the side opposite \(\theta\) be \(x\sqrt{5}\text{.}\) By Pythagoras, the missing side (adjacent to \(\theta\)) has length \(\sqrt{3-5x^2}\text{.}\)</p>
+<span class="incontext"><a href="exercises-13.html#p-2910">in-context</a></span>
+</body>
+</html>

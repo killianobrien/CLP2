@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:20+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">1.1.8.45.1</span>
+</h6>
+<p>First, we note \(y=\sqrt{1-x^2}\) is the upper half of a circle of radius 1, centred at the origin. We're taking the area under the curve from 0 to \(a\text{,}\) so the area in question is as shown in the picture below.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-72.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p>In order to use geometry to find this area, we break it up into two pieces: a sector of a circle, and a triangle, shown below.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-73.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<ul class="disc">
+<li>
+<p>Area of sector: The sector is a portion of a circle with radius 1, with inner angle \(\theta\text{.}\) So, its area is \(\frac{\theta}{2\pi}\left(\mbox{area of circle}\right) = \frac{\theta}{2\pi}\left(\pi\right) = \frac{\theta}{2}\text{.}\)</p>
+<p>Our job now is to find \(\theta\) in terms of \(a\text{.}\) Note \(\frac{\pi}{2}-\theta\) is the inner angle of the red triangle, which lies in the unit circle. So, \(\cos\left(\frac{\pi}{2}-\theta\right)=a\text{.}\) Then \(\frac{\pi}{2}-\theta= \arccos(a)\text{,}\) and so \(\theta = \frac{\pi}{2} - \arccos(a)\text{.}\)</p>
+<p>Then the area of the sector is \(\frac{\pi}{4} - \frac{1}{2}\arccos(a)\) square units.</p>
+</li>
+<li><p>Area of triangle: The triangle has base \(a\text{.}\) Its height is the \(y\)-value of the function when \(x=a\text{,}\) so its height is \(\sqrt{1-a^2}\text{.}\) Then the area of the triangle is \(\frac{1}{2}a\sqrt{1-a^2}\text{.}\)</p></li>
+</ul>
+<p>We conclude \(\displaystyle\int_0^a \sqrt{1-x^2}\dee{x} = \frac{\pi}{4} -\frac{1}{2} \arccos(a) + \frac{1}{2}a\sqrt{1-a^2}\text{.}\)</p>
+</div>
+<span class="incontext"><a href="exercises-1.html#solution-45">in-context</a></span>
+</body>
+</html>

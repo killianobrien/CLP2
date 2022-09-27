@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:15:51+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Exercises</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_2_ic.html"><span class="title">CLP-2 Integral Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="subsection-33.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sec_com.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_sep_de.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="subsection-33.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sec_com.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_sep_de.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_integral.html" data-scroll="chap_integral"><span class="codenumber">1</span> <span class="title">Integration</span></a></h2>
+<ul>
+<li><a href="sec_intdef.html" data-scroll="sec_intdef">Definition of the Integral</a></li>
+<li><a href="sec_def_int.html" data-scroll="sec_def_int">Basic properties of the definite integral</a></li>
+<li><a href="sec_fundamental.html" data-scroll="sec_fundamental">The Fundamental Theorem of Calculus</a></li>
+<li><a href="sec_subs.html" data-scroll="sec_subs">Substitution</a></li>
+<li><a href="sec_area.html" data-scroll="sec_area">Area between curves</a></li>
+<li><a href="sec_int_volumes.html" data-scroll="sec_int_volumes">Volumes</a></li>
+<li><a href="sec_intbyparts.html" data-scroll="sec_intbyparts">Integration by parts</a></li>
+<li><a href="sec_trigint.html" data-scroll="sec_trigint">Trigonometric Integrals</a></li>
+<li><a href="sec_trigsub.html" data-scroll="sec_trigsub">Trigonometric Substitution</a></li>
+<li><a href="sec_parfrac.html" data-scroll="sec_parfrac">Partial Fractions</a></li>
+<li><a href="sec_numeric_int.html" data-scroll="sec_numeric_int">Numerical Integration</a></li>
+<li><a href="sec_improp_int.html" data-scroll="sec_improp_int">Improper Integrals</a></li>
+<li><a href="section-13.html" data-scroll="section-13">More Integration Examples</a></li>
+</ul>
+<h2 class="link"><a href="chap_int_app.html" data-scroll="chap_int_app"><span class="codenumber">2</span> <span class="title">Applications of Integration</span></a></h2>
+<ul>
+<li><a href="sec_work.html" data-scroll="sec_work">Work</a></li>
+<li><a href="sec_avg.html" data-scroll="sec_avg">Averages</a></li>
+<li><a href="sec_com.html" data-scroll="sec_com">Centre of Mass and Torque</a></li>
+<li><a href="sec_sep_de.html" data-scroll="sec_sep_de">Separable Differential Equations</a></li>
+</ul>
+<h2 class="link"><a href="chap_seq_ser.html" data-scroll="chap_seq_ser"><span class="codenumber">3</span> <span class="title">Sequence and series</span></a></h2>
+<ul>
+<li><a href="section-18.html" data-scroll="section-18">Sequences</a></li>
+<li><a href="section-19.html" data-scroll="section-19">Series</a></li>
+<li><a href="section-20.html" data-scroll="section-20">Convergence Tests</a></li>
+<li><a href="section-21.html" data-scroll="section-21">Absolute and Conditional Convergence</a></li>
+<li><a href="section-22.html" data-scroll="section-22">Power Series</a></li>
+<li><a href="section-23.html" data-scroll="section-23">Taylor Series</a></li>
+<li><a href="sec_RatIrr.html" data-scroll="sec_RatIrr">Optional — Rational and irrational numbers</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="section-26.html" data-scroll="section-26">Pythagoras</a></li>
+<li><a href="section-27.html" data-scroll="section-27">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="section-30.html" data-scroll="section-30">Trigonometry — Special Triangles</a></li>
+<li><a href="section-31.html" data-scroll="section-31">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trigonometric Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">Highschool Material You Should be Able to Derive</a></li>
+<li><a href="section-39.html" data-scroll="section-39">Cartesian Coordinates</a></li>
+<li><a href="ap_roots.html" data-scroll="ap_roots">Roots of Polynomials</a></li>
+</ul>
+<h2 class="link"><a href="ap_complex.html" data-scroll="ap_complex"><span class="codenumber">B</span> <span class="title">Complex Numbers and Exponentials</span></a></h2>
+<ul>
+<li><a href="sec_complex_defn.html" data-scroll="sec_complex_defn">Definition and Basic Operations</a></li>
+<li><a href="sec_complex_exp.html" data-scroll="sec_complex_exp">The Complex Exponential</a></li>
+</ul>
+<h2 class="link"><a href="app_Richardson_Romberg.html" data-scroll="app_Richardson_Romberg"><span class="codenumber">C</span> <span class="title">More About Numerical Integration</span></a></h2>
+<ul>
+<li><a href="ap_Richardson.html" data-scroll="ap_Richardson">Richardson Extrapolation</a></li>
+<li><a href="ap_Romberg.html" data-scroll="ap_Romberg">Romberg Integration</a></li>
+<li><a href="ap_adaptive.html" data-scroll="ap_adaptive">Adaptive Quadrature</a></li>
+</ul>
+<h2 class="link"><a href="app_ODE_numerical.html" data-scroll="app_ODE_numerical"><span class="codenumber">D</span> <span class="title">Numerical Solution of ODE's</span></a></h2>
+<ul>
+<li><a href="ap_derivation.html" data-scroll="ap_derivation">Simple ODE Solvers — Derivation</a></li>
+<li><a href="ap_error_behaviour.html" data-scroll="ap_error_behaviour">Simple ODE Solvers —  Error Behaviour</a></li>
+<li><a href="ap_variable.html" data-scroll="ap_variable">Variable Step Size Methods</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">E</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">F</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">G</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp2-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="exercises" id="exercises-16"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.3.3</span> <span class="title">Exercises</span>
+</h3>
+<div class="exercisegroup" id="exercisegroup-46">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 1</alert></p></span></h6>
+<div class="introduction" id="introduction-94"></div>
+<div class="introduction" id="introduction-95"><p id="p-3722">In Questions <a knowl="./knowl/prob_s2_3_rod.html" title="Exercise 2.3.3.8">8</a> through <a knowl="./knowl/prob_s2_3_ybar.html" title="Exercise 2.3.3.10">10</a>, you will derive the formulas for the centre of mass of a rod of variable density, and the centroid of a two-dimensional region using vertical slices (Equations <a knowl="./knowl/eq_TRQvariabledensityrod.html" title="Equation 2.3.4: Centre of mass (continuous mass)">2.3.4</a> and <a knowl="./knowl/eq_TRQcentroid.html" title="Equation 2.3.5: Centroid of object with constant density">2.3.5</a> in the text). Knowing the equations by heart will allow you to answer many questions in this section; understanding where they came from will you allow to generalize their ideas to answer even more questions.</p></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like boxed" id="exercise-458"><h6 class="heading">
+<span class="codenumber">1</span> </h6>
+<p id="p-3681">Using symmetry, find the centroid of the finite region between the curves \(y=(x-1)^2\) and \(y=-x^2+2x+1\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:17%;margin-right:17%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-385.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><article class="exercise-like" id="exercise-459"><h6 class="heading">
+<span class="codenumber">2</span> </h6>
+<p id="p-3687">Using symmetry, find the centroid of the region inside the unit circle, and outside a rectangle centred at the origin with width 1 and height 0.5.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-388.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><article class="exercise-like boxed" id="exercise-460"><h6 class="heading">
+<span class="codenumber">3</span> </h6>
+<p id="p-3692">A long, straight, thin rod has a number of weights attached along it. True or false: if it balances at  position \(x\text{,}\) then the mass to the right of \(x\) is the same as the mass to the left of \(x\text{.}\)</p></article><article class="exercise-like" id="exercise-461"><h6 class="heading">
+<span class="codenumber">4</span> </h6>
+<p id="p-3696">A straight rod with negligible mass has the following weights attached to it:</p>
+<ul class="disc">
+<li id="li-1713">A weight of mass 1 kg, 1m from the left end,</li>
+<li id="li-1714">a weight of mass 2 kg, 3m from the left end,</li>
+<li id="li-1715">a weight of mass 2 kg, 4m from the left end, and</li>
+<li id="li-1716">a weight of mass 1 kg, 6m from the left end.</li>
+</ul>
+<p id="p-3697">Where is the centre of mass of the weighted rod?</p></article><article class="exercise-like" id="exercise-462"><h6 class="heading">
+<span class="codenumber">5</span> </h6>
+<p id="p-3701">For each picture below, determine whether the centre of mass is to the left of, to the right of, or along the line  \(x=a\text{,}\) or whether there is not enough information to tell. The shading of a region indicates density: darker shading corresponds to a denser area.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:1.666666666666667%;margin-right:1.666666666666667%;">
+<div class="sbspanel" style="width:31.0344827586207%;justify-content:flex-start;"><img src="images/image-389.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:31.0344827586207%;justify-content:flex-start;"><img src="images/image-390.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:31.0344827586207%;justify-content:flex-start;"><img src="images/image-391.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><img src="images/image-392.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><img src="images/image-393.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div></article><article class="exercise-like" id="prob_s2_3tank1"><h6 class="heading">
+<span class="codenumber">6</span> </h6>
+<p id="p-3711">Tank \(A\) is spherical, of radius 1 metre, and filled completely with water. The bottom of tank \(A\) is three metres above the ground, where Tank \(B\) sits. Tank \(B\) is tall and rectangular, with base dimensions 2 metres by 1 metre, and empty. Calculate the work done by gravity to drain all the water from Tank \(A\) to Tank \(B\) by modelling the situation as a point mass, of the same mass as the water, being moved from the height of the centre of mass of \(A\) to the height of the centre of mass of the water after it has been moved to \(B\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-396.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-3712">You may use \(1000\) kg/m\(^3\) for the density of water, and \(g=9.8\) m/sec\(^2\) for the acceleration due to gravity.</p></article><article class="exercise-like" id="exercise-464"><h6 class="heading">
+<span class="codenumber">7</span> </h6>
+<p id="p-3716">Let \(S\) be the region bounded above by \(y=\frac{1}{x}\) and and below by the \(x\)-axis, \(1 \le x \le 3\text{.}\) Let \(R\) be a rod with density \(\rho(x)=\frac{1}{x}\) at position \(x\text{,}\) \(1 \le x \le 3\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-1723">What is the area of a thin slice of \(S\) at position \(x\) with width \(\dee{x}\text{?}\)</li>
+<li id="li-1724">What is the mass of a small piece of \(R\) at position \(x\) with length \(\dee{x}\text{?}\)</li>
+<li id="li-1725">What is the total area of \(S\text{?}\)</li>
+<li id="li-1726">What is the total mass of \(R\text{?}\)</li>
+<li id="li-1727">What is the \(x\)-coordinate of the centroid of \(S\text{?}\)</li>
+<li id="li-1728">What is the centre of mass of \(R\text{?}\)</li>
+</ol></article><article class="exercise-like boxed" id="prob_s2_3_rod"><h6 class="heading">
+<span class="codenumber">8</span> </h6>
+<p id="p-3723">Suppose  \(R\) is a straight, thin rod with density \(\rho(x)\) at a position \(x\text{.}\) Let the left endpoint of \(R\) lie at \(x=a\text{,}\) and the right endpoint lie at \(x=b\text{.}\)</p>
+<ol id="p-3724" class="lower-alpha">
+<li id="li-1735">
+<p id="p-3725">To approximate the centre of mass of \(R\text{,}\) imagine chopping it into \(n\) pieces of equal length, and approximating the mass of each piece using the density at its midpoint.  Give your approximation for the centre of mass in sigma notation.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-397.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+<li id="prob_s2_3_rodb">Take the limit as \(n\) goes to infinity of your approximation in part (a), and express the result using a definite integral.</li>
+</ol></article><article class="exercise-like" id="prob_s2_3_xbar"><h6 class="heading">
+<span class="codenumber">9</span> </h6>
+<p id="p-3736">Suppose  \(S\) is a two-dimensional object and at (horizontal) position \(x\)  its height is \(T(x)-B(x)\text{.}\) Its leftmost point is at position \(x=a\text{,}\) and its rightmost point is at position \(x=b\text{.}\)</p>
+<p id="p-3737">To approximate the \(x\)-coordinate of the centroid of \(S\text{,}\) we imagine it as a straight, thin rod \(R\text{,}\) where the mass of \(R\) from \(a \le x \le b\) is equal to the area of \(S\) from \(a \leq x \leq b\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-1739">
+<p id="p-3738">If \(S\) is the sheet shown below, sketch \(R\) as a rod with the same horizontal length, shaded darker when \(R\) is denser, and lighter when \(R\) is less dense.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:17%;margin-right:17%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-399.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+<li id="li-1740">If we cut \(S\) into strips of very small width \(\dee{x}\text{,}\) what is the  area of the strip at position \(x\text{?}\)</li>
+<li id="li-1741">Using your answer from (b), what is the  density \(\rho(x)\) of \(R\) at position \(x\text{?}\)</li>
+<li id="li-1742">Using your result from Question <a knowl="./knowl/prob_s2_3_rod.html" title="Exercise 2.3.3.8">8</a>(<a knowl="./knowl/prob_s2_3_rodb.html" title="Item 2.3.3.8.b">b</a>), give the \(x\)-coordinate of the centroid of \(S\text{.}\) Your answer will be in terms of \(a\text{,}\) \(b\text{,}\) \(T(X)\text{,}\) and \(B(x)\text{.}\)</li>
+</ol></article><article class="exercise-like" id="prob_s2_3_ybar"><h6 class="heading">
+<span class="codenumber">10</span> </h6>
+<p id="p-3749">Suppose  \(S\) is flat sheet with uniform density, and at (horizontal) position \(x\) its height is \(T(x)-B(x)\text{.}\) Its leftmost point is at position \(x=a\text{,}\) and its rightmost point is at position \(x=b\text{.}\)</p>
+<p id="p-3750">To approximate the \(y\)-coordinate of the centroid of \(S\text{,}\) we imagine it as a straight, thin, vertical rod \(R\text{.}\) We slice \(S\) into thin, vertical strips, and model these as weights on \(R\) with:</p>
+<ul class="disc">
+<li id="li-1747">position \(y\) on \(R\text{,}\) where \(y\) is the centre of mass of the strip, and</li>
+<li id="li-1748">mass in \(R\) equal to the area of the strip in \(S\text{.}\)</li>
+</ul>
+<ol class="lower-alpha">
+<li id="li-1749">
+<p id="p-3751">If \(S\) is the sheet shown below, slice it into a number of vertical pieces of equal length, approximated by rectangles. For each rectangle, mark its centre of mass. Sketch \(R\) as a rod with the same vertical height, with weights corresponding to the slices you made of \(S\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:17%;margin-right:17%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-402.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+<li id="li-1750">Imagine a thin strip of \(S\) at position \(x\text{,}\) with thickness \(\dee{x}\text{.}\) What is the area of the strip? What is the \(y\)-value of its centre of mass?</li>
+<li id="li-1751">Recall the centre of mass of a rod with \(n\) weights of mass \(M_i\) at position \(y_i\) is given by<div class="displaymath">
+\begin{equation*}
+\frac{\sum\limits_{i=1}^n (M_i\times y_i) }{\sum\limits_{i=1}^n M_i}
+\end{equation*}
+</div>Considering the limit of this formula as \(n\) goes to infinity, give the \(y\)-coordinate of the centre of mass of \(S\text{.}\)</li>
+</ol></article><article class="exercise-like" id="exercise-468"><h6 class="heading">
+<span class="codenumber">11</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-3771">Express the \(x\)-coordinate of the centroid of the triangle with vertices \((-1,-{3})\text{,}\) \((-1,{3})\text{,}\) and \((0,0)\) in terms of a definite integral. <em class="alert">Do not evaluate the integral.</em></p></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-47">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 2</alert></p></span></h6>
+<div class="introduction" id="introduction-96"></div>
+<div class="introduction" id="introduction-97"><p id="p-3776">Use Equations <a knowl="./knowl/eq_TRQvariabledensityrod.html" title="Equation 2.3.4: Centre of mass (continuous mass)">2.3.4</a> and <a knowl="./knowl/eq_TRQcentroid.html" title="Equation 2.3.5: Centroid of object with constant density">2.3.5</a> to find centroids and centres of mass in  Questions <a knowl="./knowl/prob_s2_3_stage2a.html" title="Exercise 2.3.3.12">12</a> through <a knowl="./knowl/prob_s2_3_stage2b.html" title="Exercise 2.3.3.23">23</a>.</p></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like" id="prob_s2_3_stage2a"><h6 class="heading">
+<span class="codenumber">12</span> </h6>
+<p id="p-3777">A long, thin rod extends from \(x=0\) to \(x=7\) metres, and its density at position \(x\) is given by \(\rho(x) = x\) kg/m. Where is the centre of mass of the rod?</p></article><article class="exercise-like boxed" id="exercise-470"><h6 class="heading">
+<span class="codenumber">13</span> </h6>
+<p id="p-3781">A long, thin rod extends from \(x=-3\) to \(x=10\) metres, and its density at position \(x\) is given by \(\rho(x) = \frac{1}{1+x^2}\) kg/m. Where is the centre of mass of the rod?</p></article><article class="exercise-like" id="exercise-471"><h6 class="heading">
+<span class="codenumber">14</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-3785">Find the \(y\)-coordinate of the centroid of the region bounded by the curves \(y=1\text{,}\) \(y=-e^x\text{,}\) \(x=0\) and \(x=1\text{.}\) You may use the fact that the area of this region equals \(e\text{.}\)</p></article><article class="exercise-like" id="exercise-472"><h6 class="heading">
+<span class="codenumber">15</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-3790">Consider the region bounded by \(y=\frac{1}{\sqrt{16-x^2}}\text{,}\) \(y=0\text{,}\) \(x=0\) and \(x=2\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-1758">Sketch this region.</li>
+<li id="li-1759">Find the \(y\)-coordinate of the centroid of this region.</li>
+</ol></article><article class="exercise-like" id="exercise-473"><h6 class="heading">
+<span class="codenumber">16</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-3801">Find the centroid of the finite region bounded by \(y = \sin(x)\text{,}\) \(y = \cos(x)\text{,}\) \(x = 0\text{,}\) and \(x = \pi/4\text{.}\)</p></article><article class="exercise-like boxed" id="exercise-474"><h6 class="heading">
+<span class="codenumber">17</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-3805">Let \(A\) denote the area of the plane region bounded by \(x=0\text{,}\) \(x=1\text{,}\) \(y=0\) and \(y=\dfrac{k}{\sqrt{1+x^2}}\text{,}\) where \(k\) is a positive constant.</p>
+<ol class="lower-alpha">
+<li id="li-1771">Find the coordinates of the centroid of this region in terms of \(k\) and \(A\text{.}\)</li>
+<li id="li-1772">For what value of \(k\) is the centroid on the line \(y=x\text{?}\)</li>
+</ol></article><article class="exercise-like boxed" id="exercise-475"><h6 class="heading">
+<span class="codenumber">18</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-3813">The region \(R\) is the portion of the plane which is above the curve \(y=x^2-3x\) and below the curve \(y=x-x^2\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-1773">Sketch the region \(R\)</li>
+<li id="li-1774">Find the area of \(R\text{.}\)</li>
+<li id="li-1775">Find the \(x\) coordinate of the centroid of \(R\text{.}\)</li>
+</ol></article><article class="exercise-like" id="exercise-476"><h6 class="heading">
+<span class="codenumber">19</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-3824">Let \(R\) be the region where \(0\le x\le 1\) and \(0\le y\le\frac{1}{1+x^2}\text{.}\) Find the \(x\)-coordinate of the centroid of \(R\text{.}\)</p></article><article class="exercise-like" id="exercise-477"><h6 class="heading">
+<span class="codenumber">20</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-3828">Find the centroid of the region below, which consists of a semicircle of radius \(3\) on top of a rectangle of width \(6\) and height \(2\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="problems/figs/OE13A_5.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><article class="exercise-like boxed" id="exercise-478"><h6 class="heading">
+<span class="codenumber">21</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-3835">Let \(D\) be the region below the graph of the curve \(y=\sqrt{9-4x^2}\) and above the \(x\)-axis.</p>
+<ol class="lower-alpha">
+<li id="li-1776">Using an appropriate integral, find the <em class="emphasis">area</em> of the region \(D\text{;}\) simplify your answer completely.</li>
+<li id="li-1777">Find the <em class="emphasis">centre of mass</em> of the region \(D\text{;}\) simplify your answer completely. (Assume it has constant density \(\rho\text{.}\))</li>
+</ol></article><article class="exercise-like" id="exercise-479"><h6 class="heading">
+<span class="codenumber">22</span> </h6>
+<p id="p-3843">The finite region \(S\) is bounded by the lines \(y=\arcsin x\text{,}\) \(y=\arcsin(2-x)\text{,}\) and \(y=-\frac{\pi}{2}\text{.}\) Find the centroid of \(S\text{.}\)</p></article><article class="exercise-like" id="prob_s2_3_stage2b"><h6 class="heading">
+<span class="codenumber">23</span> </h6>
+<p id="p-3850">Calculate the centroid of the figure bounded by the curves \(y=e^x\text{,}\) \(y=3(x-1)\text{,}\) \(y=0\text{,}\) \(x=0\text{,}\) and \(x=2\text{.}\)</p></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-48">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 3</alert></p></span></h6>
+<div class="introduction" id="introduction-98"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like boxed" id="exercise-481"><h6 class="heading">
+<span class="codenumber">24</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-3858">Find the <em class="emphasis">\(y\)-coordinate</em> of the centre of mass of the (infinite) region lying to the right of the line \(x=1\text{,}\) above the \(x\)-axis, and below the graph of \(y=8/x^3\text{.}\)</p></article><article class="exercise-like" id="exercise-482"><h6 class="heading">
+<span class="codenumber">25</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-3864">Let \(A\) be the region to the right of the \(y\)-axis that is bounded by the graphs of \(y=x^2\) and \(y = 6-x\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-1778">Find the centroid of \(A\text{,}\) assuming it has constant density \(\rho=1\text{.}\) The area of \(A\) is \(\dfrac{22}{3}\) (you don't have to show this).</li>
+<li id="li-1779">Write down an expression, using horizontal slices (disks), for the volume obtained when the region \(A\) is rotated around the \(y\)-axis. Do not evaluate any integrals; simply write down an expression for the volume.</li>
+</ol></article><article class="exercise-like" id="exercise-483"><h6 class="heading">
+<span class="codenumber">26</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-3873">(a) Find the \(y\)-coordinate of the centroid of the region bounded by \(y = e^x\text{,}\) \(x = 0\text{,}\) \(x = 1\text{,}\) and \(y = -1\text{.}\)</p>
+<p id="p-3874">(b) Calculate the volume of the solid generated by rotating the region from part (a) about the line \(y = -1\text{.}\)</p></article><article class="exercise-like boxed" id="exercise-484"><h6 class="heading">
+<span class="codenumber">27</span> </h6>
+<p id="p-3882">Suppose a rectangle has width 4 m, height 3 m, and its density \(x\) metres from its left edge is \(x^2\) kg/m\(^2\text{.}\) Find the centre of mass of the rectangle.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-429.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><article class="exercise-like" id="exercise-485"><h6 class="heading">
+<span class="codenumber">28</span> </h6>
+<p id="p-3889">Suppose a circle of radius 3 m has density \((2+y)\) kg/m\(^2\) at any point \(y\) metres above its bottom. Find the centre of mass of the circle.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:33.5%;margin-right:33.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-430.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><article class="exercise-like boxed" id="prob_s2_3_cone"><h6 class="heading">
+<span class="codenumber">29</span> </h6>
+<p id="p-3902">A right circular cone of uniform density has base radius \(r\) m and height \(h\) m. We want to find its centre of mass. By symmetry, we know that the centre of mass will occur somewhere along the straight vertical line through the tip of the cone and the centre of its base. The only question is the <em class="emphasis">height</em> of the centre of mass.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:17%;margin-right:17%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-432.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-3903">We will model the cone as a rod \(R\) with height \(h\text{,}\) such that the mass of the section of the rod from position \(a\) to position \(b\) is the same as the volume of the cone from height \(a\) to height \(b\text{.}\) (You can imagine that the cone is an umbrella, and we've closed it up to look like a cane. <a knowl="" class="id-ref" refid="hk-fn-130" id="fn-130"><sup> 2 </sup></a><span id="hk-fn-130" class="hidden-content tex2jax_ignore"><span class="footnote">This analogy isn't exact: if the cone were an umbrella, closing it would move the outside fabric vertically. A more accurate, but less familiar, image might be vacuum-wrapping an umbrella, watching it shrivel towards the middle but not move vertically.</span></span> )</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-433.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<ol id="p-3904" class="lower-alpha">
+<li id="li-1792">Using this model, calculate how high above the base of the cone its centre of mass is.</li>
+<li id="li-1793">If we cut off the top \(h-k\) metres of the cone (leaving an object of height \(k\)), how high above the base is the new centre of mass?</li>
+</ol></article><article class="exercise-like" id="prob_s2_3_cone2"><h6 class="heading">
+<span class="codenumber">30</span> </h6>
+<p id="p-3913">An hourglass is shaped like two identical truncated cones attached together. Their base radius is 5 cm, the height of the entire hourglass is 18 cm, and the radius at the thinnest point is \(.5\) cm. The hourglass contains sand that fills up the bottom 6 cm when it's settled, with mass \(600\) grams and uniform density. We want to know the work done flipping the hourglass smoothly, so the sand settles into a truncated, inverted-cone shape before it starts to fall down.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-435.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-3914">Using the methods of Section 2.1 to calculate the work done would be quite tedious. Instead, we will model the sand as a point of mass \(0.6\) kg, being lifted from the centre of mass of its original position to the centre of mass of its upturned position. Using the results of Question <a knowl="./knowl/prob_s2_3_cone.html" title="Exercise 2.3.3.29">29</a>, how much work was done on the sand?</p>
+<p id="p-3915">To simplify your calculation, you may assume that the height of the upturned sand (that is, the distance from the skinniest part of the hourglass to the top of the sand) is 8.8 cm. (Actually, it's \(\sqrt[3]{937}-1\approx 8.7854\) cm.) So, the top 0.2 cm of the hourglass is empty.</p></article><article class="exercise-like boxed" id="exercise-488"><h6 class="heading">
+<span class="codenumber">31</span> </h6>
+<p id="p-3926">Tank \(A\) is in the shape of half a sphere of radius 1 metre, with its flat face resting on the ground, and is completely filled with water. Tank \(B\) is empty and rectangular, with a square base of side length 1 m and a height of 3 m.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-438.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<ol id="p-3927" class="lower-alpha">
+<li id="li-1796">To pump the water from Tank \(A\) to Tank \(B\text{,}\) we need to pump all the water from Tank \(A\) to a height of 3 m. How much work is done to pump all the water from Tank \(A\) to a height of 3 m? You may model the water as a point mass, originally situated at the centre of mass of the full Tank \(A\text{.}\)</li>
+<li id="li-1797">Suppose we could move the water from Tank \(A\) directly to its final position in Tank \(B\) without going over the top of Tank \(B\text{.}\) (For example, maybe tank \(A\) is elastic, and Tank \(B\) is just Tank \(A\) after being smooshed into a different form.) How much work is done pumping the water? (That is, how much work is done moving a point mass from the centre of mass of Tank \(A\) to the centre of mass of Tank \(B\text{?}\))</li>
+<li id="li-1798">What percentage of work from part (a) was “wasted” by pumping the water over the top of Tank \(B\text{,}\) instead of moving it directly to its final position?</li>
+</ol>
+<p>You may assume that the only work done is against the acceleration due to gravity, \(g=9.8\) m/sec\(^2\text{,}\) and that the density of water is 1000 kg/m\(^3\text{.}\)</p>
+<p id="p-3928">Remark: the answer from (b) is what you might think of as the <em class="emphasis">net</em> work involved in pumping the water from Tank \(A\) to Tank \(B\text{.}\) When work gets “wasted,”  the pump does some work pumping water up, then gravity does equal and opposite work bringing the water back down.</p></article><article class="exercise-like" id="exercise-489"><h6 class="heading">
+<span class="codenumber">32</span> </h6>
+<p id="p-3953">Let \(R\) be the region bounded above by \(y=2x\sin (x^2)\) and below by the \(x\)-axis, \(0 \le x \le \sqrt{\frac{\pi}{2}}\text{.}\) Give an approximation of the \(x\)-value of the centroid of \(R\) with error no more than \(\frac{1}{100}\text{.}\)</p>
+<p id="p-3954">You may assume without proof that \(\left|\ddiff{4}{}{x}\left\{2x^2\sin(x^2)\right\} \right| \leq 415\) over the interval \(\left[0,\sqrt{\frac{\pi}{2}}\right]\text{.}\)</p></article>
+</div>
+</div></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

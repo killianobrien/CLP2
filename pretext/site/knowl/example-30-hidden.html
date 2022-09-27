@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:25+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="example-like"><p>Evaluate the integral</p>
+<div class="displaymath">
+\begin{gather*}
+\int 3x^2 \cos(x^3) \dee{x}
+\end{gather*}
+</div>
+<p><em class="alert">Solution:</em> Again we are going to use the substitution rule and helpfully our integrand is a  product of two factors</p>
+<div class="displaymath">
+\begin{gather*}
+\underbrace{3x^2}_\text{first factor} \cdot  \underbrace{\cos(x^3)}_\text{second factor}
+\end{gather*}
+</div>
+<p>The second factor, \(\cos\big(x^3\big)\) is a function, namely \(\cos\text{,}\) with a complicated  argument, namely \(x^3\text{.}\) So we try \(u(x)= x^3\text{.}\) Then \(u'(x) = 3x^2\text{,}\) which is the other  factor in the integrand. So the integral becomes</p>
+<div class="displaymath">
+\begin{align*}
+\int 3x^2 \cos(x^3) \dee{x} &amp;= \int u'(x) \cos\big(u(x)\big) \dee{x} &amp;\text{just swap order of factors}\\
+&amp;= \int \cos\big(u(x)\big) u'(x) \dee{x} &amp; \text{by the substitution rule}\\
+&amp;= \int \cos(u) \dee{u}\bigg|_{u=x^3}\\
+&amp;= \left( \sin(u) + C\right)\bigg|_{u=x^3}  &amp; \text{using Theorem }\knowl{./knowl/thm_imp_indef_int.html}{\text{1.3.17}})\\
+&amp;= \sin(x^3)+C
+\end{align*}
+</div></article></body>
+</html>

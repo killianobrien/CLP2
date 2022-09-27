@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:23:35+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="example-like"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.6.14</span> <span class="title">Example 3.6.12, continued</span>
+</h6>
+<p>In Example <a knowl="./knowl/eg_integralRemainder.html" title="Example 3.6.12">3.6.12</a> we verified that</p>
+<div class="displaymath">
+\begin{equation*}
+\log(1+x) = \sum_{n=0}^\infty (-1)^n\frac{x^{n+1}}{n+1}
+= x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\cdots
+\tag{S1}
+\end{equation*}
+</div>
+<p>for all \(-1\lt x\le 1\text{.}\) There we used the Lagrange form,</p>
+<div class="displaymath">
+\begin{equation*}
+E_n(a,x)=\frac{1}{(n+1)!}\,f^{(n+1)}(c)\, (x-a)^{n+1}
+\end{equation*}
+</div>
+<p>for the Taylor remainder to verify (S1) when \(0\le x\le 1\text{,}\) but we also saw that it is not possible to use the Lagrange form to verify (S1) when \(x\) is close to \(-1\text{.}\) We instead used the integral form</p>
+<div class="displaymath">
+\begin{equation*}
+E_n(a,x) = \int_a^x \frac{1}{n!}f^{(n+1)}(t)\, (x-t)^n\,\dee{t}
+\end{equation*}
+</div>
+<p>We will now use the Cauchy form (part (b) of Theorem <a knowl="./knowl/thm_TaylorRemainderB.html" title="Theorem 3.6.13: More formulae for the Taylor remainder">3.6.13</a>)</p>
+<div class="displaymath">
+\begin{equation*}
+E_n(a,x)=\frac{1}{n!}f^{(n+1)}(c)\, (x-c)^n(x-a)
+\end{equation*}
+</div>
+<p>to verify</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{n\rightarrow\infty} E_n(0,x)=0
+\tag{S2}
+\end{equation*}
+</div>
+<p>when \(-1\lt x\lt 0\text{.}\) We have already noted that (S2) is equivalent to (S1).</p>
+<p>Write \(f(x)=\log(1+x)\text{.}\) We saw in Example <a knowl="./knowl/eg_integralRemainder.html" title="Example 3.6.12">3.6.12</a> that</p>
+<div class="displaymath">
+\begin{equation*}
+f^{(n+1)}(x) = \frac{(-1)^n n!}{(1+x)^{n+1}}
+\end{equation*}
+</div>
+<p>So, in this example, the Cauchy form is</p>
+<div class="displaymath">
+\begin{equation*}
+E_n(0,x)=(-1)^n\frac{(x-c)^nx}{(1+c)^{n+1}}
+\end{equation*}
+</div>
+<p>for some \(x\lt c\lt 0\text{.}\) When \(-1\lt x\lt c \lt 0\text{,}\)</p>
+<ul class="disc">
+<li>\(c\) and \(x\) are negative and \(1+x\text{,}\) \(1+c\) and \(c-x\) are (strictly) positive so that<div class="displaymath">
+\begin{align*}
+c(1+x)\lt 0
+&amp;\implies c \lt -cx
+\implies c-x \lt -x-xc=|x|(1+c)\\
+&amp;\implies \left|\frac{x-c}{1+c}\right|
+=\frac{c-x}{1+c}\lt |x|
+\end{align*}
+</div>so that \(\left|\frac{x-c}{1+c}\right|^n \lt |x|^n\) and</li>
+<li>the distance from \(-1\) to \(c\text{,}\) namely \(c-(-1)=1+c\) is greater than the distance from \(-1\) to \(x\text{,}\) namely \(x-(-1)=1+x\text{,}\) so that \(\frac{1}{1+c}\lt\frac{1}{1+x}\text{.}\)</li>
+</ul>
+<p>So, for \(-1\lt x\lt c\lt 0\text{,}\)</p>
+<div class="displaymath">
+\begin{gather*}
+|E_n(0,x)|=\left|\frac{x-c}{1+c}\right|^n\frac{|x|}{1+c}
+\lt \frac{|x|^{n+1}}{1+c}
+\lt \frac{|x|^{n+1}}{1+x}
+\end{gather*}
+</div>
+<p>goes to zero as \(n\rightarrow\infty\text{.}\)</p></article><span class="incontext"><a href="subsubsection-17.html#eg_cauchyRemainder">in-context</a></span>
+</body>
+</html>

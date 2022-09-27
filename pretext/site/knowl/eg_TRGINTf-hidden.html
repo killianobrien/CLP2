@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:38+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="example-like"><p><em class="alert">Solution:</em></p>
+<ul class="disc">
+<li>Start by factoring off one copy of \(\sec x\tan x\) and combine it with \(\dee{x}\) to form \(\sec x\tan x\dee{x}\text{,}\) which will be \(\dee{u}\text{.}\)</li>
+<li>Now substitute \(u=\sec x\text{,}\)  \(\dee{u}=\sec x\tan x\dee{x}\) and \(\tan^2x = \sec^2 x-1=u^2-1\text{.}\)</li>
+<li>This gives<div class="displaymath">
+\begin{align*}
+\int \tan^3x \sec^4 x\dee{x}
+&amp;= \int \underbrace{\tan^2 x}_{u^2-1}\
+\underbrace{\sec^3 x}_{u^3}\
+\underbrace{\sec x\tan x\dee{x}}_{\dee{u}}\\
+&amp;= \int \big[u^2-1]u^3\dee{u}\\
+&amp;=\frac{u^6}{6}-\frac{u^4}{4}+C\\
+&amp;=\frac{1}{6}\sec^6 x-\frac{1}{4}\sec^4 x + C
+\end{align*}
+</div>
+</li>
+</ul></article></body>
+</html>

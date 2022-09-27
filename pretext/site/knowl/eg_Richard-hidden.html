@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:24:39+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="example-like"><p>Applying the trapezoidal rule (<a knowl="./knowl/eq_TRPrule.html" title="Equation 1.11.6: The trapezoidal rule">1.11.6</a>) to the integral \(\cA=\int_0^1\frac{4}{1+x^2}\dee{x}\) with step sizes \(\frac{1}{8}\) and \(\frac{1}{16}\) (i.e. with \(n=8\) and \(n=16\)) gives, with \(h=\frac{1}{8}\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+A(h)=3.1389884945\qquad
+A(h/2)=3.1409416120
+\end{equation*}
+</div>
+<p>So (E4b), with \(k=2\text{,}\) gives us the “new improved” approximation</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{2^2\times 3.1409416120 -3.1389884945}{2^2-1}=3.1415926512
+\end{equation*}
+</div>
+<p>We saw in Example <a knowl="./knowl/eg_MidpointB.html" title="Example 1.11.3: \(\int_0^1 \frac{4}{1+x^2}\,\dee{x}\)">1.11.3</a> that \(\int_0^1\frac{4}{1+x^2}\dee{x}=\pi\text{,}\) so this new approximation really is “improved”:</p>
+<ul class="disc">
+<li>\(A(1/8)\) agrees with \(\pi\) to two decimal places,</li>
+<li>\(A(1/16)\)  agrees with \(\pi\) to three decimal places and</li>
+<li>the new approximation  agrees with \(\pi\) to eight decimal places.</li>
+</ul>
+<p>Beware that (E3b), namely \(\cA=A(h/2)+K\big(\tfrac{h}{2}\big)^k\text{,}\) is saying that \(K\big(\frac{h}{2}\big)^k\) is (approximately) the error in \(A(h/2)\text{,}\) <em class="emphasis">not</em> the error in \(\cA\text{.}\) You cannot get an “even more improved” approximation by using (E4a) to compute \(K\) and then adding \(K\big(\frac{h}{2}\big)^k\) to the “new improved” \(\cA\) of (E4b) —  doing so just gives \(\cA+K\big(\tfrac{h}{2}\big)^k\text{,}\) not a more accurate \(\cA\text{.}\)</p></article></body>
+</html>

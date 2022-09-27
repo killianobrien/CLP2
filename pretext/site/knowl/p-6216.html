@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:24:44+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>The Runge-Kutta<a knowl="./knowl/fn-258-hidden.html" title="Footnote D.1.6"><sup> 6 </sup></a> algorithm is similar to the Euler and improved Euler methods in that it also uses, in the notation of the last subsection,</p>
+<div class="displaymath">
+\begin{equation*}
+y_{n+1}=y_n+{\rm\ approximate\ value\ for \ }
+\int_{t_n}^{t_{n+1}}f\big(t,\varphi(t)\big)\ \dee{t}
+\end{equation*}
+</div>
+<p>But rather than approximating \(\int_{t_n}^{t_{n+1}}f\big(t,\varphi(t)\big)\ \dee{t}\) by the area of a rectangle, as does Euler, or by the area of a trapezoid, as does improved Euler, it approximates by the area under a parabola. That is, it uses Simpson's rule. According to Simpson's rule (which is derived in Section <a href="sec_Simpson.html" class="xref" title="Subsection 1.11.3: Simpson's Rule">1.11.3</a>)</p>
+<div class="displaymath">
+\begin{align*}
+&amp;\int_{t_n}^{t_n+h}f\big(t,\varphi(t)\big)\ \dee{t}\\
+&amp;\hskip0.5in\approx \tfrac{h}{6}\Big[f\big(t_n,\varphi(t_n)\big)
++4f\big(t_n+\tfrac{h}{2},\varphi(t_n+\tfrac{h}{2})\big)
++f\big(t_n+h,\varphi(t_n+h)\big)\Big]
+\end{align*}
+</div>
+<p>Analogously to what happened in our development of the improved Euler method, we don't know \(\varphi(t_n)\text{,}\) \(\varphi(t_n+\tfrac{h}{2})\) or \(\varphi(t_n+h)\text{.}\) So we have to approximate them as well. The Runge-Kutta algorithm, incorporating all these approximations, is<a knowl="./knowl/fn-259-hidden.html" title="Footnote D.1.7"><sup> 7 </sup></a></p>
+<span class="incontext"><a href="ap_runge_kutta.html#p-6216">in-context</a></span>
+</body>
+</html>

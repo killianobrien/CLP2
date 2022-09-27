@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:36+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="displaymath">
+\begin{align*}
+\int x^2\arctan x \dee{x}&amp;=\underbrace{x^2}_{u}\underbrace{\left(x\arctan x - \frac{1}{2}\log(1+x^2)\right)}_v \\
+&amp;\hskip0.25in
+- \int \underbrace{\left(x\arctan x - \frac{1}{2}\log(1+x^2)\right)}_v\cdot \underbrace{2x\dee{x}}_{\dee{u}}\\
+&amp;=x^3\arctan x - \frac{x^2}{2}\log(1+x^2)- 2\int x^2\arctan x \dee{x} \\
+&amp;\hskip0.25in+ \int x\log(1+x^2)\dee{x}\\
+\end{align*}
+<p class="intertext">Adding \(\quad 2\displaystyle\int x^2\arctan x \dee{x} \quad \) to both sides:</p>
+\begin{align*}
+3\int x^2\arctan x \dee{x}&amp;=x^3\arctan x - \frac{x^2}{2}\log(1+x^2) \\
+&amp;\hskip0.5in+ \int x\log(1+x^2)\dee{x}\\
+\int x^2\arctan x \dee{x}&amp;=\frac{x^3}{3}\arctan x - \frac{x^2}{6}\log(1+x^2) \\
+&amp;\hskip0.5in+ \frac{1}{3}\int x\log(1+x^2)\dee{x}\\
+\end{align*}
+<p class="intertext">Using the substitution \(s=1+x^2\text{,}\) \(\dee{s}=2x\dee{x}\text{:}\)</p>
+\begin{align*}
+&amp;=\frac{x^3}{3}\arctan x - \frac{x^2}{6}\log(1+x^2) + \frac{1}{6}\int\log s\dee{s}\\
+\end{align*}
+<p class="intertext">Using the antiderivative of logarithm found in  Example <a knowl="./knowl/eg_PRTSlnx.html" title="Example 1.7.8: \(\int \log x\dee{x}\)">1.7.8</a>,</p>
+\begin{align*}
+&amp;=\frac{x^3}{3}\arctan x - \frac{x^2}{6}\log(1+x^2) + \frac{1}{6}\left(s\log s - s\right)+C\\
+&amp;=\frac{x^3}{3}\arctan x - \frac{x^2}{6}\log(1+x^2) + \frac{1}{6}\big((1+x^2)\log (1+x^2) \\
+&amp;\hskip3in- (1+x^2)\big)+C\\
+&amp;=\frac{x^3}{3}\arctan x + \left[-\frac{x^2}{6}+\frac{1+x^2}{6}\right]\log(1+x^2)-\frac{1}{6}(1+x^2)+C\\
+&amp;=\frac{x^3}{3}\arctan x +\frac{1}{6}\log(1+x^2)-\frac{1}{6}(1+x^2)+C
+\end{align*}
+</div>
+<span class="incontext"><a href="exercises-7.html#mjx-eqn-mrow-1415">in-context</a></span>
+</body>
+</html>

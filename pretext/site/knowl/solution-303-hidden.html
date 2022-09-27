@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:20:01+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>Let's start by differentiating.</p>
+<div class="displaymath">
+\begin{align*}
+f(x)&amp;=x\sin x +2\cos x\\
+f'(x)&amp;=x\cos x + \sin x - 2\sin x =x\cos x - \sin x\\
+f''(x)&amp;=-x\sin x + \cos x -\cos x = -x\sin x
+\end{align*}
+</div>
+<p>For any value of \(x\text{,}\) \(|\sin x| \leq 1\text{.}\) When \(-3 \leq x \leq 2\text{,}\) then \(|x| \leq 3\text{.}\) So, it is true (and not unreasonably sloppy) that</p>
+<div class="displaymath">
+\begin{equation*}
+f''(x) \leq 3
+\end{equation*}
+</div>
+<p>whenever \(x\) is in the interval \([-3,2]\text{.}\) So, we can take \(M=3\text{.}\)</p>
+<p>Note that \(|f''(x)|\) is actually <em class="emphasis">smaller</em> than 3 whenever \(x\) is in the interval \([-3,2]\text{,}\) because when \(x=-3\text{,}\) \(\sin x \neq 1\text{.}\) In fact, since 3 is pretty close to \(\pi\text{,}\) \(\sin 3\) is pretty small. (The actual maximum value of \(|f''(x)|\) when \(-3\leq x\leq 2\) is about 1.8.) However, we find  parameters like \(M\) for the purpose of computing error bounds. There is often not much to be gained from taking the time to find the actual maximum of a function, so we content ourselves with reasonable upper bounds. Question <a knowl="./knowl/prob_s1_11_exactM.html" title="Exercise 1.11.6.31">31</a> has a further investigation of “sloppy” bounds like this.</p>
+</div></body>
+</html>

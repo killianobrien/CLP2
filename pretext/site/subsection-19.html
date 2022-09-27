@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:15:11+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Partial fraction decomposition examples</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_2_ic.html"><span class="title">CLP-2 Integral Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_parfrac.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sec_parfrac.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="subsection-20.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_parfrac.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sec_parfrac.html" title="Up">Up</a><a class="next-button button toolbar-item" href="subsection-20.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_integral.html" data-scroll="chap_integral"><span class="codenumber">1</span> <span class="title">Integration</span></a></h2>
+<ul>
+<li><a href="sec_intdef.html" data-scroll="sec_intdef">Definition of the Integral</a></li>
+<li><a href="sec_def_int.html" data-scroll="sec_def_int">Basic properties of the definite integral</a></li>
+<li><a href="sec_fundamental.html" data-scroll="sec_fundamental">The Fundamental Theorem of Calculus</a></li>
+<li><a href="sec_subs.html" data-scroll="sec_subs">Substitution</a></li>
+<li><a href="sec_area.html" data-scroll="sec_area">Area between curves</a></li>
+<li><a href="sec_int_volumes.html" data-scroll="sec_int_volumes">Volumes</a></li>
+<li><a href="sec_intbyparts.html" data-scroll="sec_intbyparts">Integration by parts</a></li>
+<li><a href="sec_trigint.html" data-scroll="sec_trigint">Trigonometric Integrals</a></li>
+<li><a href="sec_trigsub.html" data-scroll="sec_trigsub">Trigonometric Substitution</a></li>
+<li><a href="sec_parfrac.html" data-scroll="sec_parfrac">Partial Fractions</a></li>
+<li><a href="sec_numeric_int.html" data-scroll="sec_numeric_int">Numerical Integration</a></li>
+<li><a href="sec_improp_int.html" data-scroll="sec_improp_int">Improper Integrals</a></li>
+<li><a href="section-13.html" data-scroll="section-13">More Integration Examples</a></li>
+</ul>
+<h2 class="link"><a href="chap_int_app.html" data-scroll="chap_int_app"><span class="codenumber">2</span> <span class="title">Applications of Integration</span></a></h2>
+<ul>
+<li><a href="sec_work.html" data-scroll="sec_work">Work</a></li>
+<li><a href="sec_avg.html" data-scroll="sec_avg">Averages</a></li>
+<li><a href="sec_com.html" data-scroll="sec_com">Centre of Mass and Torque</a></li>
+<li><a href="sec_sep_de.html" data-scroll="sec_sep_de">Separable Differential Equations</a></li>
+</ul>
+<h2 class="link"><a href="chap_seq_ser.html" data-scroll="chap_seq_ser"><span class="codenumber">3</span> <span class="title">Sequence and series</span></a></h2>
+<ul>
+<li><a href="section-18.html" data-scroll="section-18">Sequences</a></li>
+<li><a href="section-19.html" data-scroll="section-19">Series</a></li>
+<li><a href="section-20.html" data-scroll="section-20">Convergence Tests</a></li>
+<li><a href="section-21.html" data-scroll="section-21">Absolute and Conditional Convergence</a></li>
+<li><a href="section-22.html" data-scroll="section-22">Power Series</a></li>
+<li><a href="section-23.html" data-scroll="section-23">Taylor Series</a></li>
+<li><a href="sec_RatIrr.html" data-scroll="sec_RatIrr">Optional — Rational and irrational numbers</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="section-26.html" data-scroll="section-26">Pythagoras</a></li>
+<li><a href="section-27.html" data-scroll="section-27">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="section-30.html" data-scroll="section-30">Trigonometry — Special Triangles</a></li>
+<li><a href="section-31.html" data-scroll="section-31">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trigonometric Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">Highschool Material You Should be Able to Derive</a></li>
+<li><a href="section-39.html" data-scroll="section-39">Cartesian Coordinates</a></li>
+<li><a href="ap_roots.html" data-scroll="ap_roots">Roots of Polynomials</a></li>
+</ul>
+<h2 class="link"><a href="ap_complex.html" data-scroll="ap_complex"><span class="codenumber">B</span> <span class="title">Complex Numbers and Exponentials</span></a></h2>
+<ul>
+<li><a href="sec_complex_defn.html" data-scroll="sec_complex_defn">Definition and Basic Operations</a></li>
+<li><a href="sec_complex_exp.html" data-scroll="sec_complex_exp">The Complex Exponential</a></li>
+</ul>
+<h2 class="link"><a href="app_Richardson_Romberg.html" data-scroll="app_Richardson_Romberg"><span class="codenumber">C</span> <span class="title">More About Numerical Integration</span></a></h2>
+<ul>
+<li><a href="ap_Richardson.html" data-scroll="ap_Richardson">Richardson Extrapolation</a></li>
+<li><a href="ap_Romberg.html" data-scroll="ap_Romberg">Romberg Integration</a></li>
+<li><a href="ap_adaptive.html" data-scroll="ap_adaptive">Adaptive Quadrature</a></li>
+</ul>
+<h2 class="link"><a href="app_ODE_numerical.html" data-scroll="app_ODE_numerical"><span class="codenumber">D</span> <span class="title">Numerical Solution of ODE's</span></a></h2>
+<ul>
+<li><a href="ap_derivation.html" data-scroll="ap_derivation">Simple ODE Solvers — Derivation</a></li>
+<li><a href="ap_error_behaviour.html" data-scroll="ap_error_behaviour">Simple ODE Solvers —  Error Behaviour</a></li>
+<li><a href="ap_variable.html" data-scroll="ap_variable">Variable Step Size Methods</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">E</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">F</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">G</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp2-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="subsection" id="subsection-19"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.10.1</span> <span class="title">Partial fraction decomposition examples</span>
+</h3>
+<p id="p-2054">Rather than writing up the technique — known as the partial fraction decomposition —  in full generality, we will instead illustrate it through a sequence of examples.</p>
+<article class="example-like" id="eg_PFa"><a knowl="" class="id-ref" refid="hk-eg_PFa"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.10.1</span> <span class="title">\(\int\frac{x-3}{x^2-3x+2}\dee{x}\)</span>
+</h6></a></article><div id="hk-eg_PFa" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-2055">In this example, we integrate \(\frac{N(x)}{D(x)}=\frac{x-3}{x^2-3x+2}\text{.}\)</p>
+<p id="p-2056"><em class="alert">Solution:</em></p>
+<ul class="disc">
+<li id="li-993">
+<em class="emphasis">Step 1.</em> We first check to see if a polynomial \(P(x)\) is needed. To do so,  we check to see if the degree of the numerator, \(N(x)\text{,}\) is strictly smaller than the  degree of the denominator \(D(x)\text{.}\)  In this example, the numerator, \(x-3\text{,}\) has degree one  and that is indeed strictly smaller than the degree of the denominator, \(x^2-3x+2\text{,}\) which  is two. In this case <a knowl="" class="id-ref" refid="hk-fn-69" id="fn-69"><sup> 3 </sup></a><span id="hk-fn-69" class="hidden-content tex2jax_ignore"><span class="footnote">We will soon get to an example (Example <a knowl="./knowl/eg_PFb.html" title="Example 1.10.2: \(\int\frac{3x^3-8x^2+4x-1}{x^2-3x+2}\dee{x}\)">1.10.2</a> in  fact) in which the numerator degree is at least as large as the denominator degree — in   that situation we have to extract a polynomial \(P(x)\) before we can move on to step 2.</span></span> we  do not need to extract a polynomial \(P(x)\) and we move on to step 2.</li>
+<li id="li-994">
+<em class="emphasis">Step 2.</em>  The second step is to factor the denominator<div class="displaymath">
+\begin{align*}
+x^2-3x+2&amp;=(x-1)(x-2)
+\end{align*}
+</div>In this example it is quite easy, but in future examples (and quite possibly in your  homework, quizzes and exam) you will have to work harder to factor the denominator. In  Appendix <a href="ap_roots.html" class="xref" title="Section A.16: Roots of Polynomials">A.16</a> we have written up some simple tricks for factoring polynomials. We will illustrate them in Example <a knowl="./knowl/eg_PFc.html" title="Example 1.10.3: \(\int\frac{x^4+5x^3+16x^2+26x+22}{x^3+3x^2+7x+5}\dee{x}\)">1.10.3</a> below.</li>
+<li id="li-995">
+<p id="p-2057"><em class="emphasis">Step 3.</em>  The third step is to write \(\frac{x-3}{x^2-3x+2}\) in the form</p>
+<div class="displaymath">
+\begin{gather*}
+\frac{x-3}{x^2-3x+2} =\frac{A}{x-1}+\frac{B}{x-2}
+\end{gather*}
+</div>
+<p>for some constants \(A\) and \(B\text{.}\) More generally, if the denominator consists of \(n\)  different linear factors, then we decompose the ratio as</p>
+<div class="displaymath">
+\begin{align*}
+\text{rational function} &amp;=
+\frac{A_1}{\text{linear factor 1}} +
+\frac{A_2}{\text{linear factor 2}} + \cdots +
+\frac{A_n}{\text{linear factor n}}
+\end{align*}
+</div>
+<p id="p-2058">To proceed we need to determine the values of the constants \(A,\ B\) and there are several  different methods to do so.  Here are two methods</p>
+</li>
+<li id="li-996">
+<p id="p-2059"><em class="emphasis">Step 3 — Algebra Method.</em> This approach has the benefit of being  conceptually clearer and easier, but the downside is that it is more tedious.</p>
+<p id="p-2060">To determine the values of the constants \(A,\ B\text{,}\) we put <a knowl="" class="id-ref" refid="hk-fn-70" id="fn-70"><sup> 4 </sup></a><span id="hk-fn-70" class="hidden-content tex2jax_ignore"><span class="footnote">That is, we take the decomposed form and sum it back together.</span></span> the right-hand side back over the common denominator \((x-1)(x-2)\text{.}\)</p>
+<div class="displaymath">
+\begin{gather*}
+\frac{x-3}{x^2-3x+2}
+=\frac{A}{x-1}+\frac{B}{x-2}
+=\frac{A(x-2)+B(x-1)}{(x-1)(x-2)}
+\end{gather*}
+</div>
+<p>The fraction on the far left is the same as the fraction on the far right if and only if their numerators are the same.</p>
+<div class="displaymath">
+\begin{align*}
+x-3&amp;=A(x-2)+B(x-1)\\
+\end{align*}
+<p class="intertext">Write the right hand side as a polynomial in standard  form (i.e. collect up all \(x\) terms and all constant terms)</p>
+\begin{align*}
+x-3&amp;=(A+B)x +(-2A-B)
+\end{align*}
+</div>
+<p>For these two polynomials to be the same, the coefficient of \(x\) on the left hand side and the coefficient of \(x\) on the right hand side must be the same. Similarly the coefficients of \(x^0\) (i.e. the constant terms) must match. This gives us a system of two equations.</p>
+<div class="displaymath">
+\begin{align*}
+A+B&amp;=1 &amp; -2A-B&amp;=-3
+\end{align*}
+</div>
+<p>in the two unknowns \(A,B\text{.}\) We can solve this system by</p>
+<ul class="circle">
+<li id="li-997">using the first equation, namely \(A+B=1\text{,}\) to determine \(A\)  in terms of \(B\text{:}\)<div class="displaymath">
+\begin{gather*}
+A=1-B
+\end{gather*}
+</div>
+</li>
+<li id="li-998">Substituting this into the remaining equation eliminates the \(A\) from second equation, leaving one equation in the one unknown \(B\text{,}\) which can then be solved for \(B\text{:}\)<div class="displaymath">
+\begin{align*}
+-2A-B&amp;=-3 &amp; \text{substitute $A=1-B$}\\
+-2(1-B)-B&amp;=-3 &amp; \text{clean up}\\
+-2+B &amp;=-3 &amp; \text{so $B=-1$}
+\end{align*}
+</div>
+</li>
+<li id="li-999">Once we know \(B\text{,}\) we can substitute it back into \(A=1-B\) to get \(A\text{.}\)<div class="displaymath">
+\begin{gather*}
+A=1-B=1-(-1)=2
+\end{gather*}
+</div>
+</li>
+</ul>
+<p>Hence</p>
+<div class="displaymath">
+\begin{gather*}
+\frac{x-3}{x^2-3x+2}
+=\frac{2}{x-1}-\frac{1}{x-2}
+\end{gather*}
+</div>
+</li>
+<li id="li-1000">
+<p id="p-2061"><em class="emphasis">Step 3 — Sneaky Method.</em> This takes a little more work to understand,  but it is more efficient than the algebra method.</p>
+<p id="p-2062">We wish to find \(A\) and \(B\) for which</p>
+<div class="displaymath">
+\begin{gather*}
+\frac{x-3}{(x-1)(x-2)}
+=\frac{A}{x-1}+\frac{B}{x-2}
+\end{gather*}
+</div>
+<p>Note that the denominator on the left hand side has been written in factored form.</p>
+<ul class="circle">
+<li id="li-1001">To determine \(A\text{,}\) we multiply both sides of the equation by \(A\)'s denominator, which is \(x-1\text{,}\)<div class="displaymath">
+\begin{gather*}
+\frac{x-3}{x-2}
+=A+\frac{(x-1)B}{x-2}
+\end{gather*}
+</div>and then we completely eliminate \(B\) from the equation by evaluating at \(x=1\text{.}\) This value of \(x\) is chosen to make \(x-1=0\text{.}\)<div class="displaymath">
+\begin{gather*}
+\frac{x-3}{x-2}\bigg|_{x=1}
+=A+\frac{(x-1)B}{x-2}\bigg|_{x=1}
+\implies A = \frac{1-3}{1-2} = 2
+\end{gather*}
+</div>
+</li>
+<li id="li-1002">To determine \(B\text{,}\) we multiply both sides of the equation by \(B\)'s denominator, which is \(x-2\text{,}\)<div class="displaymath">
+\begin{gather*}
+\frac{x-3}{x-1}
+=\frac{(x-2)A}{x-1} + B
+\end{gather*}
+</div>and then we completely eliminate \(A\) from the equation by evaluating at \(x=2\text{.}\) This value of \(x\) is chosen to make \(x-2=0\text{.}\)<div class="displaymath">
+\begin{gather*}
+\frac{x-3}{x-1}\bigg|_{x=2}
+=\frac{(x-2)A}{x-1}\bigg|_{x=2} +B
+\implies B = \frac{2-3}{2-1} = -1
+\end{gather*}
+</div>
+</li>
+</ul>
+<p>Hence we have (the thankfully consistent answer)</p>
+<div class="displaymath">
+\begin{gather*}
+\frac{x-3}{x^2-3x+2} =\frac{2}{x-1}-\frac{1}{x-2}
+\end{gather*}
+</div>
+<p>Notice that no matter which method we use to find the constants we can easily check our  answer by summing the terms back together:</p>
+<div class="displaymath">
+\begin{align*}
+\frac{2}{x-1}-\frac{1}{x-2}
+&amp;= \frac{2(x-2)-(x-1)}{(x-2)(x-1)}\\
+&amp; = \frac{2x-4-x+1}{x^2-3x+2}
+= \frac{x-3}{x^2-3x+2} \checkmark
+\end{align*}
+</div>
+</li>
+<li id="li-1003">
+<em class="emphasis">Step 4.</em> The final step is to integrate.<div class="displaymath">
+\begin{align*}
+\int\frac{x-3}{x^2-3x+2}\dee{x}
+&amp; =\int \frac{2}{x-1}\dee{x} +\int \frac{-1}{x-2}\dee{x}\\
+&amp; =2\log|x-1|-\log|x-2|+C
+\end{align*}
+</div>
+</li>
+</ul></article></div>
+<p id="p-2063">Perhaps the first thing that you notice is that this process takes quite a few steps <a knowl="" class="id-ref" refid="hk-fn-71" id="fn-71"><sup> 5 </sup></a><span id="hk-fn-71" class="hidden-content tex2jax_ignore"><span class="footnote">Though, in fairness, we did step 3 twice — and that is the most  tedious bit… Actually — sometimes factoring the denominator can be quite  challenging. We'll consider this issue in more detail shortly.</span></span>. However no single step  is all that complicated; it only takes practice. With that said, let's do another,  slightly more complicated, one.</p>
+<article class="example-like" id="eg_PFb"><a knowl="" class="id-ref" refid="hk-eg_PFb"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.10.2</span> <span class="title">\(\int\frac{3x^3-8x^2+4x-1}{x^2-3x+2}\dee{x}\)</span>
+</h6></a></article><div id="hk-eg_PFb" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-2064">In this example, we integrate \(\frac{N(x)}{D(x)} =\frac{3x^3-8x^2+4x-1}{x^2-3x+2}\text{.}\)</p>
+<p id="p-2065"><em class="alert">Solution:</em></p>
+<ul class="disc">
+<li id="li-1004">
+<p id="p-2066"><em class="emphasis">Step 1.</em>  We first check to see if the degree of the numerator \(N(x)\) is  strictly smaller than the degree of the denominator \(D(x)\text{.}\) In this  example, the numerator, \(3x^3-8x^2+4x-1\text{,}\) has degree three and the  denominator, \(x^2-3x+2\text{,}\) has degree two. As \(3\ge 2\text{,}\) we have to implement the first step.</p>
+<p id="p-2067">The goal of the first step is to write \(\frac{N(x)}{D(x)}\)  in the form</p>
+<div class="displaymath">
+\begin{gather*}
+\frac{N(x)}{D(x)}=P(x)+\frac{R(x)}{D(x)}
+\end{gather*}
+</div>
+<p>with \(P(x)\) being a polynomial and \(R(x)\) being a polynomial of degree strictly smaller than the degree of \(D(x)\text{.}\) The right hand side is \(\frac{P(x)D(x)+R(x)}{D(x)}\text{,}\) so we have to express the numerator in the form \(N(x)=P(x)D(x)+R(x)\text{,}\) with \(P(x)\) and \(R(x)\) being polynomials and with the degree of \(R\) being strictly smaller than the degree of \(D\text{.}\)  \(P(x)D(x)\) is a sum of expressions of the form \(ax^n D(x)\text{.}\) We want to pull as many expressions of this form as possible out of the numerator \(N(x)\text{,}\) leaving only a low degree remainder \(R(x)\text{.}\)</p>
+<p id="p-2068">We do this using long division — the same long division you learned in school, but with  the base 10 replaced by \(x\text{.}\)</p>
+<ul id="p-2069" class="circle">
+<li id="li-1005">
+<p id="p-2070">We start by observing that to get from the highest degree  term in the denominator (\(x^2\)) to the highest degree term in the numerator (\(3x^3\)), we  have to multiply it by \(3x\text{.}\) So we write,</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/longdiv2a.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-2071">In the above expression, the denominator is on the left, the numerator is on the right  and \(3x\) is written above the highest order term of the numerator. Always put lower powers of \(x\) to the right of higher powers of \(x\) — this mirrors how you do long  division with numbers; lower powers of ten sit to the right of higher powers of ten.</p>
+</li>
+<li id="li-1006">
+<p id="p-2072">Now we subtract \(3x\) times the denominator, \(x^2-3x+2\text{,}\) which is \(3x^3-9x^2+6x\text{,}\)  from the numerator.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/longdiv2b.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+<li id="li-1007">
+<p id="p-2073">This has left a remainder of \(x^2-2x-1\text{.}\) To get from the highest degree term in the denominator (\(x^2\)) to the highest degree term in the remainder (\(x^2\)), we have to multiply by \(1\text{.}\) So we write,</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/longdiv2c.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+<li id="li-1008">
+<p id="p-2074">Now we subtract \(1\) times the denominator, \(x^2-3x+2\text{,}\) which is \(x^2-3x+2\text{,}\) from the remainder.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/longdiv2d.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+<li id="li-1009">This leaves a remainder of \(x-3\text{.}\) Because the remainder has degree \(1\text{,}\)  which is smaller than the degree of the denominator (being degree 2), we  stop.</li>
+<li id="li-1010">In this example, when we subtracted \(3x(x^2-3x+2)\) and  \(1(x^2-3x+2)\) from \(3x^3-8x^2+4x-1\) we ended up with \(x-3\text{.}\) That is,<div class="displaymath">
+\begin{align*}
+&amp;3x^3-8x^2+4x-1
+\ -\ 3x(x^2-3x+2)
+\ -\ 1(x^2-3x+2)\\
+&amp;\hskip2.5in= x-3
+\end{align*}
+</div>or, collecting the two terms proportional to \((x^2-3x+2)\)<div class="displaymath">
+\begin{gather*}
+3x^3-8x^2+4x-1 \ -\ (3x+1)(x^2-3x+2)
+\ =\ x-3
+\end{gather*}
+</div>Moving the \((3x+1)(x^2-3x+2)\) to the right hand side and dividing the whole equation by \(x^2-3x+2\) gives<div class="displaymath">
+\begin{gather*}
+\frac{3x^3-8x^2+4x-1}{x^2-3x+2} \ =\ 3x+1\ +\ \frac{x-3}{x^2-3x+2}
+\end{gather*}
+</div>And we can easily check this expression just by summing the two terms on the right-hand  side.</li>
+</ul>
+<p>We have written the integrand in the form \(\frac{N(x)}{D(x)}=P(x)+\frac{R(x)}{D(x)},\) with the degree of \(R(x)\) strictly smaller than the degree of \(D(x)\text{,}\) which is what we  wanted. Observe  that \(R(x)\) is the final remainder of the long division procedure and \(P(x)\) is at the top of the long division computation. This is the end of Step 1. Oof! You should definitely practice this step.</p>
+</li>
+<li id="li-1011"><div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/longdiv2ee.svg" style="width: 100%; height: auto;" alt=""></div></div></div></li>
+<li id="li-1012">
+<em class="emphasis">Step 2.</em> The second step is to factor the denominator<div class="displaymath">
+\begin{gather*}
+x^2-3x+2=(x-1)(x-2)
+\end{gather*}
+</div>We already did this in Example <a knowl="./knowl/eg_PFa.html" title="Example 1.10.1: \(\int\frac{x-3}{x^2-3x+2}\dee{x}\)">1.10.1</a>.</li>
+<li id="li-1013">
+<em class="emphasis">Step 3.</em> The third step is to write \(\frac{x-3}{x^2-3x+2}\) in the form<div class="displaymath">
+\begin{gather*}
+\frac{x-3}{x^2-3x+2}
+=\frac{A}{x-1}+\frac{B}{x-2}
+\end{gather*}
+</div>for some constants \(A\) and \(B\text{.}\) We already did this in Example <a knowl="./knowl/eg_PFa.html" title="Example 1.10.1: \(\int\frac{x-3}{x^2-3x+2}\dee{x}\)">1.10.1</a>. We found \(A=2\) and \(B=-1\text{.}\)</li>
+<li id="li-1014">
+<em class="emphasis">Step 4.</em> The final step is to integrate.<div class="displaymath">
+\begin{align*}
+&amp;\int\frac{3x^3-8x^2+4x-1}{x^2-3x+2}\dee{x}\\
+&amp;\hskip0.5in=\int\big[3x+1\big]\dee{x}
++ \int \frac{2}{x-1}\dee{x} +\int \frac{-1}{x-2}\dee{x}\\
+&amp;\hskip0.5in=\frac{3}{2}x^2+x+ 2\log|x-1|-\log|x-2|+C
+\end{align*}
+</div>
+</li>
+</ul>
+<p>You can see that the integration step is quite quick — almost all the work is in  preparing the integrand.</p></article></div>
+<p id="p-2075">Here is a very solid example. It is quite long and the steps are involved. However please  persist. No single step is too difficult.</p>
+<article class="example-like" id="eg_PFc"><a knowl="" class="id-ref" refid="hk-eg_PFc"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.10.3</span> <span class="title">\(\int\frac{x^4+5x^3+16x^2+26x+22}{x^3+3x^2+7x+5}\dee{x}\)</span>
+</h6></a></article><div id="hk-eg_PFc" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-2076">In this example, we integrate \(\frac{N(x)}{D(x)}= \frac{x^4+5x^3+16x^2+26x+22}{x^3+3x^2+7x+5}\text{.}\)</p>
+<p id="p-2077"><em class="alert">Solution:</em></p>
+<ul class="disc">
+<li id="li-1015">
+<p id="p-2078"><em class="emphasis">Step 1.</em> Again, we start by comparing the degrees of the numerator and denominator. In this example, the numerator, \(x^4+5x^3+16x^2+26x+22\text{,}\) has degree four  and the denominator, \(x^3+3x^2+7x+5\text{,}\) has degree  three. As \(4\ge 3\text{,}\) we  must execute the first step, which is to write \(\frac{N(x)}{D(x)}\) in the  form</p>
+<div class="displaymath">
+\begin{gather*}
+\frac{N(x)}{D(x)}=P(x)+\frac{R(x)}{D(x)}
+\end{gather*}
+</div>
+<p>with \(P(x)\) being a polynomial and \(R(x)\) being a polynomial of degree strictly smaller than the degree of \(D(x)\text{.}\) This step is accomplished by long division, just as we did in Example <a knowl="./knowl/eg_PFb.html" title="Example 1.10.2: \(\int\frac{3x^3-8x^2+4x-1}{x^2-3x+2}\dee{x}\)">1.10.2</a>. We'll go through  the whole process in detail again.</p>
+<p id="p-2079">Actually — before you read on ahead, please have a go at the long division. It is  good practice.</p>
+<ul id="p-2080" class="circle">
+<li id="li-1016">
+<p id="p-2081">We start by observing that to get from the highest degree term in the denominator  (\(x^3\)) to the highest degree term in the numerator (\(x^4\)), we have to multiply by \(x\text{.}\)  So we write,</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/longdiv6a.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+<li id="li-1017">
+<p id="p-2082">Now we subtract \(x\) times the denominator \(x^3+3x^2+7x+5\text{,}\) which is \(x^4+3x^3+7x^2+5x\text{,}\) from the numerator.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/longdiv6b.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+<li id="li-1018">
+<p id="p-2083">The remainder was \(2x^3+9x^2+21x+22\text{.}\) To get from the highest degree term in the denominator (\(x^3\)) to the highest degree term in the remainder (\(2x^3\)), we have to multiply by \(2\text{.}\) So we write,</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/longdiv6c.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+<li id="li-1019">
+<p id="p-2084">Now we subtract \(2\) times the denominator \(x^3+3x^2+7x+5\text{,}\) which is \(2x^3+6x^2+14x+10\text{,}\) from the remainder.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/longdiv6.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+<li id="li-1020">This leaves a remainder of \(3x^2+7x+12\text{.}\) Because the remainder has degree \(2\text{,}\) which is smaller than the degree of the denominator, which is \(3\text{,}\) we stop.</li>
+<li id="li-1021">In this example, when we subtracted \(x(x^3+3x^2+7x+5)\) and  \(2(x^3+3x^2+7x+5)\) from \(x^4+5x^3+16x^2+26x+22\) we ended up with \(3x^2+7x+12\text{.}\) That is,<div class="displaymath">
+\begin{align*}
+&amp;x^4+5x^3+16x^2+26x+22
+\ -\ x(x^3+3x^2+7x+5)\\
+&amp;\hskip2in\ -\ 2(x^3+3x^2+7x+5)\\
+&amp;\hskip0.5in =3x^2+7x+12
+\end{align*}
+</div>or, collecting the two terms proportional to \((x^3+3x^2+7x+5)\) we get<div class="displaymath">
+\begin{align*}
+&amp;x^4+5x^3+16x^2+26x+22
+\ -\ (x+2)(x^3+3x^2+7x+5)\\
+&amp;\hskip0.5in=\ 3x^2+7x+12
+\end{align*}
+</div>Moving the \((x+2)(x^3+3x^2+7x+5)\) to the right hand side and dividing the whole equation by \(x^3+3x^2+7x+5\) gives<div class="displaymath">
+\begin{gather*}
+\frac{x^4+5x^3+16x^2+26x+22}{x^3+3x^2+7x+5}
+=x+2+\frac{3x^2+7x+12}{x^3+3x^2+7x+5}
+\end{gather*}
+</div>
+</li>
+</ul>
+<p id="p-2085">This is of the form  \(\frac{N(x)}{D(x)}=P(x)+\frac{R(x)}{D(x)},\) with the degree of \(R(x)\) strictly smaller than the degree of \(D(x)\text{,}\) which is what we wanted.  Observe, once again, that \(R(x)\) is the final remainder of the long  division procedure and \(P(x)\) is at the top of the long division computation.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/longdiv6d.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+<li id="li-1022">
+<p id="p-2086"><em class="emphasis">Step 2.</em> The second step is to factor the denominator \(D(x)=x^3+3x^2+7x+5\text{.}\) In the “real world” factorisation of polynomials is often very hard. Fortunately <a knowl="" class="id-ref" refid="hk-fn-72" id="fn-72"><sup> 6 </sup></a><span id="hk-fn-72" class="hidden-content tex2jax_ignore"><span class="footnote">One does not typically think of mathematics assignments or exams  as nice kind places… The polynomials that appear in the “real world” are not so  forgiving. Nature, red in tooth and claw — to quote Tennyson inappropriately  (especially when this author doesn't know any other words from the poem).</span></span>, this is not  the “real world” and there is a trick available to help us find this factorisation. The  reader should take some time to look at Appendix <a href="ap_roots.html" class="xref" title="Section A.16: Roots of Polynomials">A.16</a> before proceeding.</p>
+<ul class="circle">
+<li id="li-1023">The trick exploits the fact that most polynomials that appear in homework assignments and on tests have integer coefficients and some integer roots. Any integer root of a polynomial that has integer coefficients, like \(D(x)=x^3+3x^2+7x+5\text{,}\) must divide the constant term of the polynomial exactly. Why this is true is explained <a knowl="" class="id-ref" refid="hk-fn-73" id="fn-73"><sup> 7 </sup></a><span id="hk-fn-73" class="hidden-content tex2jax_ignore"><span class="footnote">Appendix <a href="ap_roots.html" class="xref" title="Section A.16: Roots of Polynomials">A.16</a> contains several simple tricks for factoring  polynomials. We recommend that you have a look at them.</span></span> in Appendix <a href="ap_roots.html" class="xref" title="Section A.16: Roots of Polynomials">A.16</a>.</li>
+<li id="li-1024">So any integer root of \(x^3+3x^2+7x+5\) must divide \(5\) exactly. Thus the only  integers which can be roots of \(D(x)\) are \(\pm 1\) and \(\pm 5\text{.}\) Of course, not all of  these give roots of the polynomial — in fact there is no guarantee that any of them  will be. We have to test each one.</li>
+<li id="li-1025">To test if \(+1\) is a root, we sub \(x=1\) into \(D(x)\text{:}\)<div class="displaymath">
+\begin{gather*}
+D(1)=1^3+3(1)^2+7(1)+5=16
+\end{gather*}
+</div>As \(D(1)\ne 0\text{,}\) \(1\) is not a root of \(D(x)\text{.}\)</li>
+<li id="li-1026">To test if \(-1\) is a root, we sub it into \(D(x)\text{:}\)<div class="displaymath">
+\begin{gather*}
+D(-1)=(-1)^3+3(-1)^2+7(-1)+5=-1+3-7+5=0
+\end{gather*}
+</div>As \(D(-1)= 0\text{,}\) \(-1\) is a root of \(D(x)\text{.}\) As \(-1\) is a root of \(D(x)\text{,}\)  \(\big(x-(-1)\big)=(x+1)\) must factor \(D(x)\) exactly. We can factor the \((x+1)\) out of \(D(x)=x^3+3x^2+7x+5\) by long division once again.</li>
+<li id="li-1027">
+<p id="p-2087">Dividing \(D(x)\) by \((x+1)\) gives:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/longdiv7.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-2088">This time, when we subtracted \(x^2(x+1)\) and \(2x(x+1)\) and \(5(x+1)\) from \(x^3+3x^2+7x+5\)  we ended up with \(0\) — as we knew would happen, because we knew that \(x+1\) divides \(x^3+3x^2+7x+5\) exactly. Hence</p>
+<div class="displaymath">
+\begin{gather*}
+x^3+3x^2+7x+5\ -\ x^2(x+1)\ -\ 2x(x+1)\ -\ 5(x+1)\ =\ 0
+\end{gather*}
+</div>
+<p>or</p>
+<div class="displaymath">
+\begin{gather*}
+x^3+3x^2+7x+5\ =\ x^2(x+1)\ +\ 2x(x+1)\ +\ 5(x+1)
+\end{gather*}
+</div>
+<p>or</p>
+<div class="displaymath">
+\begin{gather*}
+x^3+3x^2+7x+5=(x^2+2x+5)(x+1)
+\end{gather*}
+</div>
+</li>
+<li id="li-1028">It isn't quite time to stop yet; we should attempt to factor the quadratic  factor, \(x^2+2x+5\text{.}\) We can use the quadratic formula <a knowl="" class="id-ref" refid="hk-fn-74" id="fn-74"><sup> 8 </sup></a><span id="hk-fn-74" class="hidden-content tex2jax_ignore"><span class="footnote">To be precise, the quadratic equation \(ax^2+bx+c=0\) has solutions \(x = \frac{-b\pm\sqrt{b^2-4ac}}{2a}.\) The term \(b^2-4ac\) is called the discriminant and it tells us about the number of  solutions. If the discriminant is positive then there are two real solutions. When it is  zero, there is a single solution. And if it is negative, there is no real solutions (you  need complex numbers to say more than this).</span></span> to find the roots of \(x^2+2x+5\text{:}\)<div class="displaymath">
+\begin{gather*}
+\frac{-b\pm\sqrt{b^2-4ac}}{2a}=\frac{-2\pm\sqrt{4-20}}{2}
+=\frac{-2\pm\sqrt{-16}}{2}
+\end{gather*}
+</div>Since this expression contains the square root of a negative number the equation  \(x^2+2x+5=0\) has no real solutions; without the use of complex numbers, \(x^2+2x+5\) cannot  be factored.</li>
+</ul>
+<p id="p-2089">We have reached the end of step 2. At this point we have</p>
+<div class="displaymath">
+\begin{gather*}
+\frac{x^4+5x^3+16x^2+26x+22}{x^3+3x^2+7x+5}
+=x+2+\frac{3x^2+7x+12}{(x+1)(x^2+2x+5)}
+\end{gather*}
+</div>
+</li>
+<li id="li-1029">
+<p id="p-2090"><em class="emphasis">Step 3.</em> The third step is to write \(\frac{3x^2+7x+12}{(x+1)(x^2+2x+5)}\) in the form</p>
+<div class="displaymath">
+\begin{gather*}
+\frac{3x^2+7x+12}{(x+1)(x^2+2x+5)} =\frac{A}{x+1}+\frac{Bx+C}{x^2+2x+5}
+\end{gather*}
+</div>
+<p>for some constants \(A\text{,}\) \(B\) and \(C\text{.}\)</p>
+<p id="p-2091">Note that the numerator, \(Bx+C\) of the second term on the right hand side is not  just a constant. It is of degree one,  which is exactly one smaller than the degree  of the denominator, \(x^2+2x+5\text{.}\) More generally, if the denominator consists of  \(n\) different linear factors and \(m\) different quadratic factors, then we  decompose the ratio as</p>
+<div class="displaymath">
+\begin{align*}
+\text{rational function}
+&amp;= \frac{A_1}{ \text{linear factor 1} }
++\frac{A_2}{ \text{linear factor 2} } +\cdots
++\frac{A_n}{ \text{linear factor n} }\\
+&amp;\phantom{=} +
+\frac{B_1x+C_1}{ \text{quadratic factor 1} }
++\frac{B_2x+C_2}{ \text{quadratic factor 2} } +\cdots\\
+&amp;\hskip2in+\frac{B_mx+C_m}{ \text{quadratic factor m} }
+\end{align*}
+</div>
+<p id="p-2092">To determine the values of the constants \(A,\ B,\ C\text{,}\) we put the right hand side back over the common denominator \((x+1)(x^2+2x+5)\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+\frac{3x^2+7x+12}{(x+1)(x^2+2x+5)}
+&amp; =\frac{A}{x+1}+\frac{Bx+C}{x^2+2x+5}\\
+&amp; =\frac{A(x^2+2x+5)+(Bx+C)(x+1)}{(x+1)(x^2+2x+5)}
+\end{align*}
+</div>
+<p>The fraction on the far left is the same as the fraction on the far right if and only if their numerators are the same.</p>
+<div class="displaymath">
+\begin{gather*}
+3x^2+7x+12=A(x^2+2x+5)+(Bx+C)(x+1)
+\end{gather*}
+</div>
+<p>Again, as in Example <a knowl="./knowl/eg_PFa.html" title="Example 1.10.1: \(\int\frac{x-3}{x^2-3x+2}\dee{x}\)">1.10.1</a>, there are a couple of different ways to determine the values of \(A\text{,}\) \(B\) and \(C\) from this equation.</p>
+</li>
+<li id="li-1030">
+<p id="p-2093"><em class="emphasis">Step 3 — Algebra Method.</em> The conceptually clearest procedure is to write the right hand side as a polynomial in standard form (i.e. collect up all \(x^2\) terms, all \(x\) terms and all constant terms)</p>
+<div class="displaymath">
+\begin{gather*}
+3x^2+7x+12=(A+B)x^2+(2A+B+C)x+(5A+C)
+\end{gather*}
+</div>
+<p>For these two polynomials to be the same, the coefficient of \(x^2\) on the left hand side and the coefficient of \(x^2\) on the right hand side must be the same. Similarly the coefficients of \(x^1\) must match and the  coefficients of \(x^0\) must match.</p>
+<p id="p-2094">This gives us a system of three equations</p>
+<div class="displaymath">
+\begin{align*}
+A+B=3 &amp;&amp; 2A+B+C=7 &amp;&amp; 5A+C=12
+\end{align*}
+</div>
+<p>in the three unknowns \(A,B,C\text{.}\) We can solve this system by</p>
+<ul class="circle">
+<li id="li-1031">using the first equation, namely \(A+B=3\text{,}\) to determine \(A\) in terms of  \(B\text{:}\) \(\ \ A=3-B\text{.}\)</li>
+<li id="li-1032">Substituting \(A=3-B\) into the remaining two equations eliminates the \(A\)'s from these two equations, leaving two equations in the two unknowns \(B\) and \(C\text{.}\)<div class="displaymath">
+\begin{align*}
+&amp; &amp; A=3-B\qquad 2A+B+C&amp;=7\quad &amp; 5A+C&amp;=12\\
+&amp;\Rightarrow &amp; 2(3-B)+B+C&amp;=7 &amp;\!\!\!\!\!\! 5(3-B)+C&amp;=12\\
+&amp;\Rightarrow &amp; -B+C&amp;=1 &amp; -5B+C&amp;=-3
+\end{align*}
+</div>
+</li>
+<li id="li-1033">Now we can use the equation \(-B+C=1\text{,}\) to determine \(B\) in terms of \(C\text{:}\) \(B=C-1\text{.}\)</li>
+<li id="li-1034">Substituting this into the remaining equation eliminates the \(B\)'s leaving an equation in the one unknown \(C\text{,}\) which is easy to solve.<div class="displaymath">
+\begin{align*}
+&amp; &amp; B&amp;=C-1\qquad &amp; -5B+C&amp;=-3\\
+&amp;\Rightarrow\qquad &amp;  &amp;  &amp; -5(C-1)+C&amp;=-3\\
+&amp;\Rightarrow &amp;  &amp;  &amp; -4C&amp;=-8
+\end{align*}
+</div>
+</li>
+<li id="li-1035">So \(C=2\text{,}\) and then \(B=C-1=1\text{,}\) and then \(A=3-B=2\text{.}\) Hence<div class="displaymath">
+\begin{gather*}
+\frac{3x^2+7x+12}{(x+1)(x^2+2x+5)}
+=\frac{2}{x+1}+\frac{x+2}{x^2+2x+5}
+\end{gather*}
+</div>
+</li>
+</ul>
+</li>
+<li id="li-1036">
+<p id="p-2095"><em class="emphasis">Step 3 — Sneaky Method.</em> While the above method is transparent, it is rather  tedious. It is arguably better to use the second, sneakier and more efficient, procedure.  In order for</p>
+<div class="displaymath">
+\begin{gather*}
+3x^2+7x+12=A(x^2+2x+5)+(Bx+C)(x+1)
+\end{gather*}
+</div>
+<p>the equation must hold for all values of \(x\text{.}\)</p>
+<ul class="circle">
+<li id="li-1037">In particular, it must be true for \(x=-1\text{.}\) When \(x=-1\text{,}\) the factor \((x+1)\)  multiplying \(Bx+C\) is exactly zero. So \(B\) and \(C\) disappear from the equation, leaving us with an easy equation to solve for \(A\text{:}\)<div class="displaymath">
+\begin{align*}
+3x^2+7x+12\Big|_{x=-1}&amp; =\Big[A(x^2+2x+5)+(Bx+C)(x+1)\Big]_{x=-1}\\
+&amp; \Longrightarrow 8=4A\Longrightarrow A=2
+\end{align*}
+</div>
+</li>
+<li id="li-1038">Sub this value of \(A\) back in and simplify.<div class="displaymath">
+\begin{align*}
+3x^2+7x+12&amp;=2(x^2+2x+5)+(Bx+C)(x+1)\\
+x^2+3x+2&amp;=(Bx+C)(x+1)
+\end{align*}
+</div>Since \((x+1)\) is a factor on the right hand side, it must also be a factor on the left hand side.<div class="displaymath">
+\begin{gather*}
+(x+2)(x+1)=(Bx+C)(x+1)\\
+\quad\Rightarrow\quad (x+2)=(Bx+C) \quad\Rightarrow\quad  B=1,\ C=2
+\end{gather*}
+</div>
+</li>
+</ul>
+<p>So again we find that</p>
+<div class="displaymath">
+\begin{gather*}
+\frac{3x^2+7x+12}{(x+1)(x^2+2x+5)} =\frac{2}{x+1}+\frac{x+2}{x^2+2x+5} \checkmark
+\end{gather*}
+</div>
+<p id="p-2096">Thus our integrand can be written as</p>
+<div class="displaymath">
+\begin{gather*}
+\frac{x^4+5x^3+16x^2+26x+22}{x^3+3x^2+7x+5} =x+2+\frac{2}{x+1}+\frac{x+2}{x^2+2x+5}.
+\end{gather*}
+</div>
+</li>
+<li id="li-1039">
+<p id="p-2097"><em class="emphasis">Step 4.</em> Now we can finally integrate! The first two pieces are easy.</p>
+<div class="displaymath">
+\begin{gather*}
+\int (x+2)\dee{x} = \half x^2+2x
+\qquad
+\int \frac{2}{x+1}\dee{x} = 2\log|x+1|
+\end{gather*}
+</div>
+<p>(We're leaving the arbitrary constant to the end of the computation.)</p>
+<p id="p-2098">The final piece is a little harder. The idea is to complete the square <a knowl="" class="id-ref" refid="hk-fn-75" id="fn-75"><sup> 9 </sup></a><span id="hk-fn-75" class="hidden-content tex2jax_ignore"><span class="footnote">This same idea arose in Section <a href="sec_trigsub.html" class="xref" title="Section 1.9: Trigonometric Substitution">1.9</a>. Given a quadratic written as \(Q(x)= ax^2+bx+c\) rewrite it as \(Q(x) = a(x+d)^2+e\text{.}\) We can determine \(d\) and \(e\) by expanding and comparing coefficients of \(x\text{:}\) \(ax^2+bx+c = a(x^2+2dx+d^2)+e = ax^2 + 2dax + (e+ad^2)
+\text{.}\) Hence \(d=b/2a\) and \(e=c-ad^2\text{.}\)</span></span> in the denominator</p>
+<div class="displaymath">
+\begin{gather*}
+\frac{x+2}{x^2+2x+5}= \frac{x+2}{(x+1)^2+4}
+\end{gather*}
+</div>
+<p>and then make a change of variables to make the fraction look like \(\frac{ay+b}{y^2+1}\text{.}\) In this case</p>
+<div class="displaymath">
+\begin{gather*}
+\frac{x+2}{(x+1)^2+4}=\frac{1}{4}\frac{x+2}{(\frac{x+1}{2})^2+1}
+\end{gather*}
+</div>
+<p>so we make the change of variables \(y=\frac{x+1}{2},\dee{y}=\frac{\dee{x}}{2},\ x=2y-1,\dee{x}=2\,\dee{y}\)</p>
+<div class="displaymath">
+\begin{align*}
+\int \frac{x+2}{(x+1)^2+4}\dee{x}
+&amp;=\frac{1}{4}\int \frac{x+2}{{(\frac{x+1}{2})}^2+1}\dee{x}\\
+&amp;=\frac{1}{4}\int \frac{(2y-1)+2}{y^2+1}\,2\,\dee{y}
+\ =\ \frac{1}{2}\int \frac{2y+1}{y^2+1}\,\dee{y}\\
+&amp;=\int \frac{y}{y^2+1}\,\dee{y} + \frac{1}{2}\int \frac{1}{y^2+1}\,\dee{y}
+\end{align*}
+</div>
+<p>Both integrals are easily evaluated, using the substitution \(u=y^2+1\text{,}\) \(\dee{u}=2y\,\dee{y}\) for the first.</p>
+<div class="displaymath">
+\begin{align*}
+\int \frac{y}{y^2+1}\,\dee{y}
+&amp;\ =\ \int \frac{1}{u}\frac{\dee{u}}{2}
+\ =\ \frac{1}{2}\log|u|=\frac{1}{2}\log(y^2+1)\\
+&amp; =\ \frac{1}{2}\log\Big[\Big(\frac{x+1}{2}\Big)^2+1\Big]\\
+\frac{1}{2}\int \frac{1}{y^2+1}\,\dee{y}
+&amp;\ =\ \frac{1}{2}\arctan y
+\ =\ \frac{1}{2}\arctan\Big(\frac{x+1}{2}\Big)
+\end{align*}
+</div>
+<p>That's finally it. Putting all of the pieces together</p>
+<div class="displaymath">
+\begin{gather*}
+\int\frac{x^4\!+\!5x^3\!+\!16x^2\!+\!26x+22}{x^3+3x^2+7x+5}\dee{x}
+=\frac{1}{2} x^2\!+2x+2\log|x+1|\\
++\frac{1}{2}\log\Big[\Big(\frac{x\!+\!1}{2}\Big)^2+1\Big]
++\frac{1}{2}\arctan\Big(\frac{x\!+\!1}{2}\Big)+C
+\end{gather*}
+</div>
+</li>
+</ul></article></div>
+<p id="p-2099">The best thing after working through a few a nice long examples is to do another nice  long example — it is excellent practice <a knowl="" class="id-ref" refid="hk-fn-76" id="fn-76"><sup> 10 </sup></a><span id="hk-fn-76" class="hidden-content tex2jax_ignore"><span class="footnote">At the risk of quoting Nietzsche,  “That which does not kill us makes us stronger.” Though this author always preferred  the logically equivalent contrapositive — “That which does not make us stronger will  kill us.” However no one is likely to be injured by practicing partial fractions or  looking up quotes on Wikipedia. Its also a good excuse to remind yourself of what a  contrapositive is — though we will likely look at them again when we get to  sequences and series.</span></span>. We recommend that the reader attempt the problem before reading  through our solution.</p>
+<article class="example-like" id="eg_PFdd"><a knowl="" class="id-ref" refid="hk-eg_PFdd"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.10.4</span> <span class="title">\(\int\frac{4x^3+23x^2+45x+27}{x^3+5x^2+8x+4}\dee{x}\)</span>
+</h6></a></article><div id="hk-eg_PFdd" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-2100">In this example, we integrate \(\frac{N(x)}{D(x)}= \frac{4x^3+23x^2+45x+27}{x^3+5x^2+8x+4}\text{.}\)</p>
+<ul id="p-2101" class="disc">
+<li id="li-1040">
+<p id="p-2102"><em class="emphasis">Step 1.</em> The degree of the numerator \(N(x)\) is equal to the degree of the denominator \(D(x)\text{,}\) so the first step  to write \(\frac{N(x)}{D(x)}\) in the form</p>
+<div class="displaymath">
+\begin{gather*}
+\frac{N(x)}{D(x)}=P(x)+\frac{R(x)}{D(x)}
+\end{gather*}
+</div>
+<p>with \(P(x)\) being a polynomial (which should be of degree \(0\text{,}\) i.e. just a constant) and \(R(x)\) being a polynomial of degree strictly smaller than the degree of \(D(x)\text{.}\) By long division</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/longdiv8a.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-2103">so</p>
+<div class="displaymath">
+\begin{gather*}
+\frac{4x^3+23x^2+45x+27}{x^3+5x^2+8x+4} =4+\frac{3x^2+13x+11}{x^3+5x^2+8x+4}
+\end{gather*}
+</div>
+</li>
+<li id="li-1041">
+<p id="p-2104"><em class="emphasis">Step 2.</em> The second step is to factorise \(D(x)=x^3+5x^2+8x+4\text{.}\)</p>
+<ul class="circle">
+<li id="li-1042">To start, we'll try and guess an integer root.  Any integer root of \(D(x)\) must divide the constant term, \(4\text{,}\) exactly. Only \(\pm 1,\ \pm2,\ \pm4\) can be integer roots of  \(x^3+5x^2+8x+4\text{.}\)</li>
+<li id="li-1043">We test to see if \(\pm 1\) are roots.<div class="displaymath">
+\begin{align*}
+D(1)&amp;=(1)^3+5(1)^2+8(1)+4\ne 0&amp;&amp;\Rightarrow\ \text{$x=1$ is not a root}\\
+D(-1)&amp;=(-1)^3\!+\!5(-1)^2\!+\!8(-1)\!+\!4= 0\!\!\!\!&amp;&amp;\Rightarrow
+\ \text{$x=-1$ is  a root}
+\end{align*}
+</div>So \((x+1)\) must divide \(x^3+5x^2+8x+4\) exactly.</li>
+<li id="li-1044">
+<p id="p-2105">By long division</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:32.5%;margin-right:32.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/longdiv9.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-2106">so</p>
+<div class="displaymath">
+\begin{align*}
+x^3+5x^2+8x+4&amp;=(x+1)(x^2+4x+4)\\
+&amp;=(x+1)(x+2)(x+2)
+\end{align*}
+</div>
+</li>
+<li id="li-1045">Notice that we could have instead checked whether or not \(\pm 2\) are roots<div class="displaymath">
+\begin{align*}
+D(2)&amp;=(2)^3+5(2)^2+8(2)+4\ne 0&amp;&amp;\Rightarrow\ \text{$x=2$ is not a root}\\
+D(-2)&amp;=(-2)^3\!+\!5(-2)^2\!+\!8(-2)\!+\!4= 0\!\!\!\!&amp;&amp;\Rightarrow
+\ \text{$x=-2$ is  a root}
+\end{align*}
+</div>We now know that both \(-1\) and \(-2\) are roots of \(x^3 + 5x^2 + 8x + 4\) and hence both  \((x+1)\) and \((x+2)\) are factors of  \(x^3 + 5x^2 + 8x + 4\text{.}\) Because \(x^3 + 5x^2 + 8x + 4\)  is of degree three and the coefficient of \(x^3\) is \(1\text{,}\) we must have \(x^3 + 5x^2 + 8x + 4  = (x+1)(x+2)(x+a)\) for some constant \(a\text{.}\) Multiplying out the right hand side shows that  the constant term is \(2a\text{.}\) So \(2a=4\) and \(a=2\text{.}\)</li>
+</ul>
+<p>This is the end of step 2. We now know that</p>
+<div class="displaymath">
+\begin{gather*}
+\frac{4x^3+23x^2+45x+27}{x^3+5x^2+8x+4}
+\ =\ 4+\frac{3x^2+13x+11}{(x+1)(x+2)^2}
+\end{gather*}
+</div>
+</li>
+<li id="li-1046">
+<p id="p-2107"><em class="emphasis">Step 3.</em> The third step is to write \(\frac{3x^2+13x+11}{(x+1)(x+2)^2}\) in the form</p>
+<div class="displaymath">
+\begin{align*}
+\frac{3x^2+13x+11}{(x+1)(x+2)^2} &amp;= \frac{A}{x+1}+\frac{B}{x+2}+\frac{C}{(x+2)^2}
+\end{align*}
+</div>
+<p>for some constants \(A\text{,}\) \(B\) and \(C\text{.}\)</p>
+<p id="p-2108">Note that there are two terms on the right hand arising from the factor \((x+2)^2\text{.}\) One  has denominator \((x+2)\) and one has denominator \((x+2)^2\text{.}\) More generally, for each factor \((x+a)^n\) in the denominator of the rational function on the left hand side, we include</p>
+<div class="displaymath">
+\begin{gather*}
+\frac{A_1}{x+a}
++ \frac{A_2}{(x+a)^2} +\cdots
++ \frac{A_n}{(x+a)^n}
+\end{gather*}
+</div>
+<p>in the partial fraction decomposition on the right hand side <a knowl="" class="id-ref" refid="hk-fn-77" id="fn-77"><sup> 11 </sup></a><span id="hk-fn-77" class="hidden-content tex2jax_ignore"><span class="footnote">This is justified in  the (optional) subsection “Justification of the Partial Fraction Decompositions”  below.</span></span>.</p>
+<p id="p-2109">To determine the values of the constants \(A,\ B,\ C\text{,}\) we put the right hand side back  over the common denominator \((x+1)(x+2)^2\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+\frac{3x^2+13x+11}{(x+1)(x+2)^2}
+&amp;=\frac{A}{x+1}+\frac{B}{x+2}+\frac{C}{(x+2)^2}\\
+&amp;=\frac{A(x+2)^2+B(x+1)(x+2)+C(x+1)}{(x+1)(x+2)^2}
+\end{align*}
+</div>
+<p>The fraction on the far left is the same as the fraction on the far right if and only if their numerators are the same.</p>
+<div class="displaymath">
+\begin{gather*}
+3x^2+13x+11=A(x+2)^2+B(x+1)(x+2)+C(x+1)
+\end{gather*}
+</div>
+<p>As in the previous examples, there are a couple of different ways  to determine the values of \(A\text{,}\) \(B\) and \(C\) from this equation.</p>
+</li>
+<li id="li-1047">
+<p id="p-2110"><em class="emphasis">Step 3 — Algebra Method.</em> The conceptually clearest procedure is to write the right hand side as a polynomial in standard form (i.e. collect up all \(x^2\) terms, all \(x\)  terms and all constant terms)</p>
+<div class="displaymath">
+\begin{gather*}
+3x^2+13x+11=(A+B)x^2 + (4A+3B+C)x +(4A+2B+C)
+\end{gather*}
+</div>
+<p>For these two polynomials to be the same, the coefficient of \(x^2\) on the left hand side and the coefficient of \(x^2\) on the right hand side must be the same. Similarly the coefficients of \(x^1\) and the coefficients of \(x^0\) (i.e. the constant terms) must match. This gives us a system of three equations,</p>
+<div class="displaymath">
+\begin{gather*}
+A+B=3\qquad 4A+3B+C=13\qquad 4A+2B+C=11
+\end{gather*}
+</div>
+<p>in the three unknowns \(A,B,C\text{.}\) We can solve this system by</p>
+<ul class="circle">
+<li id="li-1048">using the first equation, namely \(A+B=3\text{,}\) to determine \(A\) in  terms of \(B\text{:}\) \(\ \ A=3-B\text{.}\)</li>
+<li id="li-1049">Substituting this into the remaining equations eliminates the \(A\text{,}\)  leaving two equations in the two unknown \(B,C\text{.}\)<div class="displaymath">
+\begin{gather*}
+4(3-B)+3B+C=13\qquad 4(3-B)+2B+C=11
+\end{gather*}
+</div>or<div class="displaymath">
+\begin{gather*}
+-B+C=1\qquad -2B+C=-1
+\end{gather*}
+</div>
+</li>
+<li id="li-1050">We can now solve the first of these equations, namely \(-B+C=1\text{,}\) for  \(B\) in terms of \(C\text{,}\) giving \(B=C-1\text{.}\)</li>
+<li id="li-1051">Substituting this into the last equation, namely \(-2B+C=-1\text{,}\) gives \(-2(C-1)+C=-1\) which is easily solved to give</li>
+<li id="li-1052">\(C=3\text{,}\) and then \(B=C-1=2\) and then \(A=3-B=1\text{.}\)</li>
+</ul>
+<p>Hence</p>
+<div class="displaymath">
+\begin{align*}
+\frac{4x^3+23x^2+45x+27}{x^3+5x^2+8x+4}
+&amp;= 4+ \frac{3x^2+13x+11}{(x+1)(x+2)^2}\\
+&amp; = 4+\frac{1}{x+1}+\frac{2}{x+2}+\frac{3}{(x+2)^2}
+\end{align*}
+</div>
+</li>
+<li id="li-1053">
+<p id="p-2111"><em class="emphasis">Step 3 — Sneaky Method.</em> The second, sneakier, method for finding \(A\text{,}\) \(B\) and \(C\) exploits the fact that \(3x^2 + 13x + 11 = A(x+2)^2 + B(x+1)(x+2) + C(x+1)\) must be true for all values of \(x\text{.}\) In particular, it must be true for \(x=-1\text{.}\) When \(x=-1\text{,}\) the factor \((x+1)\) multiplying \(B\) and \(C\) is exactly zero. So \(B\) and \(C\) disappear from the equation, leaving us with an easy equation to solve for \(A\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+3x^2+13x+11\Big|_{x=-1} &amp;=\Big[A(x\!+\!2)^2+B(x\!+\!1)(x\!+\!2) +C(x\!+\!1)\Big]_{x=-1}\\
+\Longrightarrow 1&amp;=A
+\end{align*}
+</div>
+<p>Sub this value of \(A\) back in and simplify.</p>
+<div class="displaymath">
+\begin{align*}
+3x^2+13x+11&amp;=(1)(x+2)^2+B(x+1)(x+2)+C(x+1)\\
+2x^2+9x+7&amp;=B(x+1)(x+2)+C(x+1)\\
+&amp;=(xB+2B+C)(x+1)
+\end{align*}
+</div>
+<p>Since \((x+1)\) is a factor on the right hand side, it must also be a factor on the left hand side.</p>
+<div class="displaymath">
+\begin{align*}
+&amp;(2x+7)(x+1)=(xB+2B+C)(x+1)\\
+&amp;\hskip2in\Rightarrow\quad (2x+7)=(xB+2B+C)
+\end{align*}
+</div>
+<p>For the coefficients of \(x\) to match, \(B\) must be \(2\text{.}\) For the constant terms to match, \(2B+C\) must be \(7\text{,}\) so \(C\) must be \(3\text{.}\) Hence we again have</p>
+<div class="displaymath">
+\begin{align*}
+\frac{4x^3+23x^2+45x+27}{x^3+5x^2+8x+4}
+&amp;= 4+ \frac{3x^2+13x+11}{(x+1)(x+2)^2}\\
+&amp; = 4+\frac{1}{x+1}+\frac{2}{x+2}+\frac{3}{(x+2)^2}
+\end{align*}
+</div>
+</li>
+<li id="li-1054">
+<p id="p-2112"><em class="emphasis">Step 4.</em>  The final step is to integrate</p>
+<div class="displaymath">
+\begin{align*}
+&amp;\int\frac{4x^3+23x^2+45x+27}{x^3+5x^2+8x+4}\dee{x}\\
+&amp;=\int 4\dee{x}+\int\frac{1}{x+1}\dee{x}+\int\frac{2}{x+2}\dee{x}+
+\int\frac{3}{(x+2)^2}\dee{x}\\
+&amp;= 4x+\log|x+1|+2\log|x+2|-\frac{3}{x+2}+C
+\end{align*}
+</div>
+</li>
+</ul></article></div>
+<p id="p-2113">The method of partial fractions is not just confined to the problem of integrating  rational functions. There are other integrals — such as \(\int\sec x\dee{x}\) and  \(\int \sec^3 x\dee{x}\) — that can be transformed (via substitutions) into integrals of  rational functions. We encountered both of these integrals in Sections <a href="sec_trigint.html" class="xref" title="Section 1.8: Trigonometric Integrals">1.8</a>  and <a href="sec_trigsub.html" class="xref" title="Section 1.9: Trigonometric Substitution">1.9</a> on trigonometric integrals and substitutions.</p>
+<article class="example-like" id="eg_PFe"><a knowl="" class="id-ref" refid="hk-eg_PFe"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.10.5</span> <span class="title">\(\int\sec x\dee{x}\)</span>
+</h6></a></article><div id="hk-eg_PFe" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-2114"><em class="alert">Solution:</em> In this example, we integrate \(\sec x\text{.}\) It is not yet clear what this integral has to do with partial fractions. To get to a partial fractions computation, we first make one of our old substitutions.</p>
+<div class="displaymath">
+\begin{align*}
+\int \sec x\dee{x}
+&amp;= \int\frac{1}{\cos x}\dee{x} &amp; \text{massage the expression a little}\\
+&amp;= \int\frac{\cos x}{\cos^2 x}\dee{x} &amp; \text{substitute $u=\sin x$, $\dee{u} = \cos
+x\dee{x}$}\\
+&amp;= -\int \frac{\dee{u}}{u^2-1} &amp; \text{and use $\cos^2x=1-\sin^2x=1-u^2$}
+\end{align*}
+</div>
+<p>So we now have to integrate \(\frac{1}{u^2-1}\text{,}\) which is a rational function of \(u\text{,}\) and so is perfect for partial fractions.</p>
+<ul id="p-2115" class="disc">
+<li id="li-1055">
+<em class="emphasis">Step 1.</em>  The degree of the numerator, \(1\text{,}\) is zero, which is strictly smaller than the degree of the denominator, \(u^2-1\text{,}\) which is two. So the first step is skipped.</li>
+<li id="li-1056">
+<em class="emphasis">Step 2.</em>  The second step is to factor the denominator:<div class="displaymath">
+\begin{gather*}
+u^2-1=(u-1)(u+1)
+\end{gather*}
+</div>
+</li>
+<li id="li-1057">
+<em class="emphasis">Step 3.</em>  The third step is to write \(\frac{1}{u^2-1}\) in the form<div class="displaymath">
+\begin{gather*}
+\frac{1}{u^2-1}
+=\frac{1}{(u-1)(u+1)}
+=\frac{A}{u-1}+\frac{B}{u+1}
+\end{gather*}
+</div>for some constants \(A\) and \(B\text{.}\)</li>
+<li id="li-1058">
+<p id="p-2116"><em class="emphasis">Step 3 — Sneaky Method.</em></p>
+<ul class="circle">
+<li id="li-1059">Multiply through by the denominator to get<div class="displaymath">
+\begin{align*}
+1 &amp;= A(u+1) + B(u-1)
+\end{align*}
+</div>This equation must be true for all \(u\text{.}\)</li>
+<li id="li-1060">If we now set \(u=1\) then we eliminate \(B\) from the equation leaving us with<div class="displaymath">
+\begin{align*}
+1 &amp;= 2A &amp;\text{ so $A=\frac12$.}
+\end{align*}
+</div>
+</li>
+<li id="li-1061">Similarly, if we set \(u=-1\) then we eliminate \(A\text{,}\) leaving<div class="displaymath">
+\begin{align*}
+1 &amp;= -2B &amp; \text{which implies $B=-\frac{1}{2}$.}
+\end{align*}
+</div>
+</li>
+</ul>
+<p>We have now found that \(A=\frac{1}{2}, B=-\frac{1}{2}\text{,}\) so</p>
+<div class="displaymath">
+\begin{gather*}
+\frac{1}{u^2-1} =\frac{1}{2}\Big[\frac{1}{u-1}-\frac{1}{u+1}\Big].
+\end{gather*}
+</div>
+</li>
+<li id="li-1062">It is always a good idea to check our work.<div class="displaymath">
+\begin{align*}
+\frac{\frac{1}{2}}{u-1}+\frac{-\frac{1}{2}}{u+1}
+&amp;=\frac{\frac{1}{2}(u+1)-\frac{1}{2}(u-1)}{(u-1)(u+1)}
+=\frac{1}{(u-1)(u+1)} \checkmark
+\end{align*}
+</div>
+</li>
+<li id="li-1063">
+<em class="emphasis">Step 4.</em>  The final step is to integrate.<div class="displaymath">
+\begin{align*}
+&amp;\int \sec x\dee{x}
+= -\int \frac{\dee{u}}{u^2-1} &amp; \text{after substitution}\\
+&amp; =-\frac{1}{2}\int \frac{\dee{u}}{u-1} +\frac{1}{2}\int \frac{\dee{u}}{u+1}
+&amp; \text{partial fractions}\\
+&amp; =-\frac{1}{2}\log|u-1|+\frac{1}{2}\log|u+1|+C\\
+&amp; =-\frac{1}{2}\log|\sin(x)-1|+\frac{1}{2}\log|\sin(x)+1|+C &amp; \text{rearrange a little}\\
+&amp; =\frac{1}{2}\log\left|\frac{1+\sin x}{1-\sin x}\right|+C
+\end{align*}
+</div>Notice that since \(-1\le\sin x\le 1\text{,}\) we are free to drop the absolute values in the last  line if we wish.</li>
+</ul></article></div>
+<p id="p-2117">Another example in the same spirit, though a touch harder. Again, we saw this problem  in Section <a href="sec_trigint.html" class="xref" title="Section 1.8: Trigonometric Integrals">1.8</a> and <a href="sec_trigsub.html" class="xref" title="Section 1.9: Trigonometric Substitution">1.9</a>.</p>
+<article class="example-like" id="eg_PFf"><a knowl="" class="id-ref" refid="hk-eg_PFf"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.10.6</span> <span class="title">\(\int \sec^3 x\dee{x}\)</span>
+</h6></a></article><div id="hk-eg_PFf" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-2118"><em class="alert">Solution:</em></p>
+<ul class="disc">
+<li id="li-1064">We'll start by converting it into the integral of a rational function using the  substitution \(u=\sin x\text{,}\) \(\dee{u}=\cos x\dee{x}\text{.}\)<div class="displaymath">
+\begin{align*}
+\int \sec^3 x\dee{x}
+&amp;=\int \frac{1}{\cos^3 x}\dee{x} &amp; \text{massage this a little}\\
+&amp;=\int \frac{\cos x}{\cos^4 x}\dee{x} &amp;\text{replace $\cos^2x=1-\sin^2x=1-u^2$}\\
+&amp;=\int \frac{\cos x\dee{x}}{{[1-\sin^2 x]}^2}\\
+&amp;=\int \frac{\dee{u}}{ [1-u^2]^2}
+\end{align*}
+</div>
+</li>
+<li id="li-1065">We could now find the partial fraction decomposition of the integrand \(\frac{1}{ {[1-u^2]}^2}\) by executing the usual four steps. But it is  easier to use<div class="displaymath">
+\begin{gather*}
+\frac{1}{u^2-1} =\frac{1}{2}\Big[\frac{1}{u-1}-\frac{1}{u+1}\Big]
+\end{gather*}
+</div>which we worked out in Example <a knowl="./knowl/eg_PFe.html" title="Example 1.10.5: \(\int\sec x\dee{x}\)">1.10.5</a> above.</li>
+<li id="li-1066">Squaring this gives<div class="displaymath">
+\begin{align*}
+\frac{1}{ {[1-u^2]}^2} &amp;= \frac{1}{4}\Big[\frac{1}{u-1}-\frac{1}{u+1}\Big]^2\\
+&amp;=\frac{1}{4}   \Big[\frac{1}{(u-1)^2}-\frac{2}{(u-1)(u+1)}+\frac{1}{(u+1)^2}\Big]\\
+&amp;=\frac{1}{4}   \Big[\frac{1}{(u-1)^2}-\frac{1}{u-1}+\frac{1}{u+1}+\frac{1}{(u+1)^2}\Big]
+\end{align*}
+</div>where we have again used  \(\frac{1}{u^2-1}=\frac{1}{2}\left[\frac{1}{u-1}-\frac{1}{u+1}\right]\) in the last step.</li>
+<li id="li-1067">It only remains to do the integrals and simplify.<div class="displaymath">
+\begin{align*}
+&amp;\int \sec^3 x\dee{x}
+= \frac{1}{4} \int  \Big[\frac{1}{(u\!-\!1)^2}-\frac{1}{u\!-\!1}+\frac{1}{u\!+\!1}+\frac{1}{(u\!+\!1)^2}\Big] \dee{u}\\
+&amp;=\frac{1}{4}\Big[-\frac{1}{u-1}-\log|u-1|+\log|u+1|-\frac{1}{u+1}\Big]+C\\
+&amp;\hskip2in\text{group carefully}\\
+&amp;= \frac{-1}{4}\Big[\frac{1}{u-1} + \frac{1}{u+1} \Big]  + \frac{1}{4} \Big[ \log|u+1| - \log|u-1| \Big] + C\\
+&amp;\hskip2in\text{sum carefully}\\
+&amp;=-\frac{1}{4}\frac{2u}{u^2-1}+\frac{1}{4}\log\Big|\frac{u+1}{u-1}\Big|+C\\
+&amp;\hskip2in\text{clean up}\\
+&amp;= \frac{1}{2}\frac{u}{1-u^2}+\frac{1}{4}\log\Big|\frac{u+1}{u-1}\Big|+C\\
+&amp;\hskip2in\text{put $u=\sin x$}\\
+&amp; =\frac{1}{2}\frac{\sin x}{\cos^2x}
++\frac{1}{4}\log\Big|\frac{\sin x+1}{\sin x-1}\Big|+C
+\end{align*}
+</div>
+</li>
+</ul></article></div></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

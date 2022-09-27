@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:20:09+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="example-like"><p><em class="alert">Solution:</em></p>
+<ul class="disc">
+<li>Again fix any \(p \gt 0\text{.}\)</li>
+<li>The domain of integration of the integral  \(\int_0^1\frac{\dee{x}}{x^p}\) is  finite, but the integrand \(\frac{1}{x^p}\) becomes unbounded as \(x\) approaches the left  end, \(0\text{,}\) of the domain of integration.</li>
+<li>So we write this integral as<div class="displaymath">
+\begin{align*}
+\int_0^1\frac{\dee{x}}{x^p} &amp;=\lim_{t\rightarrow 0+} \int_t^1\frac{\dee{x}}{x^p}
+\end{align*}
+</div>
+</li>
+<li>Again, the antiderivative changes at \(p=1\text{,}\) so we split the problem into three  cases.</li>
+<li>When \(p \gt 1\) we have<div class="displaymath">
+\begin{align*}
+\int_t^1\frac{\dee{x}}{x^p} &amp;= \frac{1}{1-p}x^{1-p}\bigg|_t^1\\
+&amp;= \frac{1-t^{1-p}}{1-p}
+\end{align*}
+</div>Since \(1-p \lt 0\) when we take the limit as \(t\to 0\) the term \(t^{1-p}\) diverges to  \(+\infty\) and we obtain<div class="displaymath">
+\begin{align*}
+\int_0^1\frac{\dee{x}}{x^p} &amp;= \lim_{t\to0^+} \frac{1-t^{1-p}}{1-p} = +\infty
+\end{align*}
+</div>
+</li>
+<li>When \(p=1\) we similarly obtain<div class="displaymath">
+\begin{align*}
+\int_0^1\frac{\dee{x}}{x}
+&amp;= \lim_{t\to0+} \int_t^1\frac{\dee{x}}{x}\\
+&amp;= \lim_{t\to0+} \big( -\log|t| \big)\\
+&amp;= +\infty
+\end{align*}
+</div>
+</li>
+<li>Finally, when \(p \lt 1\) we have<div class="displaymath">
+\begin{align*}
+\int_0^1\frac{\dee{x}}{x^p}
+&amp;= \lim_{t\to0^+}\int_t^1\frac{\dee{x}}{x^p}\\
+&amp;= \lim_{t\to0^+} \frac{1-t^{1-p}}{1-p} = \frac{1}{1-p}
+\end{align*}
+</div>since \(1-p \gt 0\text{.}\)</li>
+<li>In summary<div class="displaymath">
+\begin{align*}
+\int_0^1\frac{\dee{x}}{x^p}
+&amp;=\begin{cases}
+\frac{1}{1-p} &amp; \text{if } p \lt 1 \\
+\text{divergent} &amp; \text {if } p\ge 1
+\end{cases}
+\end{align*}
+</div>
+</li>
+</ul></article></body>
+</html>

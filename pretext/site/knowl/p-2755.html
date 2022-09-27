@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:20:12+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>The denominator is zero when \(x=1\text{,}\) but the numerator is not, so the integrand has a singularity (infinite discontinuity) at \(x=1\text{.}\) Let's replace the limit \(x=1\) with a variable that creeps toward 1.</p>
+<div class="displaymath">
+\begin{equation*}
+\int_0^1\frac{x^4}{x^5-1}\,\dee{x}
+=\lim_{t\rightarrow 1^-}\int_0^t\frac{x^4}{x^5-1}\,\dee{x}
+\end{equation*}
+</div>
+<p>To evaluate this integral we use the substitution \(u=x^5\text{,}\) \(\dee{u}=5x^4\dee{x}\text{.}\) When \(x=0\) we have \(u=0\text{,}\) and when \(x=t\) we have \(u=t^5\text{,}\) so</p>
+<div class="displaymath">
+\begin{align*}
+\int_0^1\frac{x^4}{x^5-1}\,\dee{x}&amp;=\lim_{t \to 1^-}\int_{0}^{t}\frac{x^4}{x^5-1}\,\dee{x}
+=\lim_{t \to 1^-}\int_{u=0}^{u=t^5}\frac{1}{5(u-1)}\,\dee{u}\\
+&amp;=\lim_{t \to 1^-}\left( \left[\frac{1}{5}\log|u-1|\right]_0^{t^5}\right)
+=\lim_{t \to 1^-}\frac{1}{5}\log|t^5-1|=-\infty
+\end{align*}
+</div>
+<p>The limit diverges, so the integral diverges as well.</p>
+<span class="incontext"><a href="exercises-12.html#p-2755">in-context</a></span>
+</body>
+</html>

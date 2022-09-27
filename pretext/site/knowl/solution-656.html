@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:23:08+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">3.4.3.14.1</span>
+</h6>
+<p>The error in our approximation using through term \(N\) is at most \(\frac{1}{(2(N+1))!}\text{.}\) We want \(\frac{1}{(2(N+1))!} \lt \frac{1}{1000}\text{.}\) By checking small values of \(N\text{,}\) we see that \(8!=40320 \gt 1000\text{,}\) so if \(N=3\text{,}\) then \(\frac{1}{2(N+1)!}=\frac{1}{40320} \lt \frac{1}{1000}\text{.}\) So, for our approximation, it suffices to consider the first four terms of our series.</p>
+<div class="displaymath">
+\begin{align*}
+\cos(1)&amp;\approx \sum_{N=0}^3 \frac{(-1)^n}{(2n)!} = \frac{1}{0!}-\frac{1}{2!}+\frac{1}{4!}-\frac{1}{6!}\\
+&amp;=1-\frac12+\frac{1}{24}-\frac{1}{720}\\
+&amp;=\frac{720-360+30-1}{720}=\frac{379}{720}
+\end{align*}
+</div>
+<p>When we use a calculator, we see</p>
+<div class="displaymath">
+\begin{align*}
+\frac{389}{720}&amp;=0.5402\overline{77}\\
+\cos(1)&amp;\approx  0.540302\\
+\cos(1) - \frac{389}{720}&amp;\approx 0.000024528\approx \frac{1}{40770}
+\end{align*}
+</div>
+<p>So, our error is reasonably close to our bound of \(\frac{1}{40320}\text{,}\) and far smaller than \(\frac{1}{1000}\text{.}\)</p>
+</div>
+<span class="incontext"><a href="exercises-21.html#solution-656">in-context</a></span>
+</body>
+</html>

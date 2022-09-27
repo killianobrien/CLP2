@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:40+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>We'll give two solutions.</p>
+<ul class="disc">
+<li>Solution 1: As in Question <a knowl="./knowl/p1_8_oddtanonesec.html" title="Exercise 1.8.4.14">14</a>, we have an odd power of tangent and at least one secant. So, as in strategy (2) of  Section <a href="sec_tansec.html" class="xref" title="Subsection 1.8.2: Integrating \(\int \tan^m x\sec^n x\dee{x}\)">1.8.2</a>, we can use the substitution \(u=\sec x\text{,}\) \(\dee{u}=\sec x \tan x \dee{x}\text{,}\) and \(\tan^2 x = \sec^2 x -1=u^2-1\text{.}\)<div class="displaymath">
+\begin{align*}
+\int \tan^3x\sec^2x \dee{x}&amp;=\int \tan^2 x \sec x \cdot \sec x \tan x \dee{x}\\
+&amp;=\int(u^2-1)u \dee{u} = \int \left(u^3-u\right) \dee{u}\\
+&amp;=\frac{1}{4}u^4 - \frac{1}{2}u^2+C\\
+&amp;=\frac{1}{4}\sec^4 x - \frac{1}{2}\sec^2 x +C
+\end{align*}
+</div>
+</li>
+<li>Solution 2: We have an even, strictly positve, power of \(\sec x\text{.}\) So, as in strategy (3) of Section <a href="sec_tansec.html" class="xref" title="Subsection 1.8.2: Integrating \(\int \tan^m x\sec^n x\dee{x}\)">1.8.2</a>, we can use the substitution \(u=\tan x\text{,}\) \(\dee{u}=\sec^2 x~\dee{x}\text{.}\)<div class="displaymath">
+\begin{align*}
+\int \tan^3x\sec^2x~\dee{x}\amp=\int \tan^3 x \cdot \sec^2 x ~\dee{x}\\
+\amp=\int u^3~\dee{u} \\
+\amp=\frac{1}{4}u^4 + C\\
+\amp=\frac{1}{4}\tan^4x +C
+\end{align*}
+</div>
+</li>
+</ul>
+<p>It looks like we have two different answers. But, because \(\tan^2x = \sec^2 x-1\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{4}\tan^4 = \frac{1}{4} {(\sec^2x -1)}^2
+= \frac{1}{4} \sec^4 x - \frac{1}{2}\sec^2 x + \frac{1}{4}
+\end{equation*}
+</div>
+<p>and the two answers are really the same, except that the arbitrary constant \(C\) of Solution 1 is \(\frac{1}{4}\) plus the arbitrary constant \(C\) of Solution 2.</p>
+<span class="incontext"><a href="exercises-8.html#p-1753">in-context</a></span>
+</body>
+</html>

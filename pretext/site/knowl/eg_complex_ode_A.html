@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:24:37+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="example-like"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">B.2.11</span>
+</h6>
+<p>By Theorem <a knowl="./knowl/thm_odeMain.html" title="Theorem B.2.9">B.2.9</a>(a), the general solution to the ordinary differential equation</p>
+<div class="displaymath">
+\begin{equation*}
+y''(t)+4y'(t)+5y(t)=0
+\tag{ODE}
+\end{equation*}
+</div>
+<p>is of the form \(C_1 u_1(t)+C_2 u_2(t)\) with \(u_1(t)\) and \(u_2(t)\) being two (independent) solutions to (ODE) and with \(C_1\) and \(C_2\) being arbitrary constants. The easiest way to find \(u_1(t)\) and \(u_2(t)\) is to guess them. And the easiest way to guess them is to try<a knowl="./knowl/fn-244-hidden.html" title="Footnote B.2.6"><sup> 6 </sup></a> \(y(t)=e^{rt}\text{,}\) with \(r\) being a constant to be determined. Substituting \(y(t)=e^{rt}\) into (ODE) gives</p>
+<div class="displaymath">
+\begin{gather*}
+r^2 e^{rt} +4re^{rt}+5e^{rt}=0
+\iff\big(r^2 +4r+5\big)e^{rt}=0
+\iff r^2 +4r+5=0
+\end{gather*}
+</div>
+<p>This quadratic equation for \(r\) can be solved either by using the high school formula  or by completing the square.</p>
+<div class="displaymath">
+\begin{align*}
+r^2 +4r+5=0
+&amp;\iff (r+2)^2+1=0\\
+&amp;\iff (r+2)^2=-1
+\iff r+2=\pm i \\
+&amp;\iff r=-2\pm i
+\end{align*}
+</div>
+<p>So the general solution to (ODE) is</p>
+<div class="displaymath">
+\begin{gather*}
+y(t)=C_1e^{(-2+i)t} + C_2e^{(-2-i)t}
+\end{gather*}
+</div>
+<p>This is one way to write the general solution, but there are many others. In particular there are quite a few people in the world who are (foolishly) afraid<a knowl="./knowl/fn-245-hidden.html" title="Footnote B.2.7"><sup> 7 </sup></a> of complex exponentials. We can hide them by using (<a knowl="./knowl/eqn_euler.html" title="Equation B.2.3">B.2.3</a>) and (<a knowl="./knowl/eqn_exp_sin_cos.html" title="Equation B.2.4">B.2.4</a>).</p>
+<div class="displaymath">
+\begin{align*}
+y(t)&amp;=C_1e^{(-2+i)t} + C_2e^{(-2-i)t}
+=C_1e^{-2t}e^{it} + C_2 e^{-2t}e^{-it} \\
+&amp;=C_1e^{-2t}\big(\cos t+i\sin t \big) 
++C_2 e^{-2t}\big(\cos t-i\sin t \big) \\
+&amp;=(C_1+C_2) e^{-2t} \cos t 
++(iC_1-iC_2) e^{-2t}\sin t \\
+&amp;=D_1 e^{-2t} \cos t 
++D_2 e^{-2t}\sin t 
+\end{align*}
+</div>
+<p>with \(D_1=C_1+C_2\) and \(D_2=iC_1-iC_2\) being two other arbitrary constants. Don't make the mistake of thinking that \(D_2\) must be complex because \(i\) appears in the formula \(D_2=iC_1-iC_2\) relating \(D_2\) and \(C_1,C_2\text{.}\) No one said that \(C_1\) and \(C_2\) are real numbers. In fact, in typical applications, the arbitrary constants are determined by initial conditions and often \(D_1\) and \(D_2\) turn out to be real and \(C_1\) and \(C_2\) turn out to be complex. For example, the initial conditions  \(y(0)=0\text{,}\) \(y'(0)=2\) force</p>
+<div class="displaymath">
+\begin{align*}
+0&amp;=y(0) = C_1 + C_2
+\cr
+2&amp;=y'(0) = (-2+i)C_1 + (-2-i)C_2
+\end{align*}
+</div>
+<p>The first equation gives \(C_2=-C_1\) and then the second equation gives</p>
+<div class="displaymath">
+\begin{align*}
+(-2+i)C_1 - (-2-i)C_1 = 2
+&amp;\iff 2iC_1=2
+\iff iC_1=1\\
+&amp;\iff C_1=-i,\ C_2=i
+\end{align*}
+</div>
+<p>and</p>
+<div class="displaymath">
+\begin{gather*}
+D_1=C_1+C_2=0\qquad
+D_2=iC_1-iC_2=2
+\end{gather*}
+</div></article><span class="incontext"><a href="ssec_complex_de.html#eg_complex_ode_A">in-context</a></span>
+</body>
+</html>

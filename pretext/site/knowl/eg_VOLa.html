@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:30+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="example-like"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.6.1</span> <span class="title">Cone</span>
+</h6>
+<p>Find the volume of the circular cone of height \(h\) and radius \(r\text{.}\)</p>
+<p><em class="alert">Solution:</em> Here is a sketch of the cone.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:37.5%;margin-right:37.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/cone.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p>We have called the vertical axis \(x\text{,}\) just so that we end up with a “\(\dee{x}\)” integral.</p>
+<ul class="disc">
+<li>
+<p>In what follows we will slice the cone into thin horizontal “pancakes”. In order  to approximate the volume of those slices, we need to know the radius of the cone at a  height \(x\) above its point. Consider the cross sections shown in the following figure.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/cone_adr1.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p>At full height \(h\text{,}\) the cone has radius \(r\text{.}\) If we cut the cone at height \(x\text{,}\) then by  similar triangles (see the figure on the right) the radius will be \(\frac{x}{h}\cdot r\text{.}\)</p>
+</li>
+<li>
+<p>Now think of cutting the cone into \(n\) thin horizontal “pancakes”. Each such  pancake is approximately a squat cylinder of height \(\De x=\frac{h}{n}\text{.}\) This  is very similar to how we approximated the area under a curve by \(n\) tall thin  rectangles. Just as we approximated the area under the curve by summing these rectangles,  we can approximate the volume of the cone by summing the volumes of these cylinders. Here  is a side view of the cone and one of the cylinders.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/cone_adr2.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+<li>
+<p>We follow the method we used in Example <a knowl="./knowl/eg_areabetween_riemann.html" title="Example 1.5.1: The area between \(y=4-x^2\) and \(y=x\)">1.5.1</a>, except that  our slices are now pancakes instead of rectangles.</p>
+<ul class="circle">
+<li>Pick a natural number \(n\) (that we will later send to infinity), then</li>
+<li>subdivide the cone into \(n\) thin pancakes, each of width \(\De  x=\frac{h}{n}\text{.}\)</li>
+<li>For each \(i=1,2,\cdots,n\text{,}\) pancake number \(i\) runs from  \(x=x_{i-1}=(i-1)\cdot\De x\) to \(x=x_i=i\cdot\De x\text{,}\) and we approximate its  volume by the volume of a squat cone. We pick a number \(x_i^*\) between \(x_{i-1}\) and  \(x_i\)  and approximate the pancake by a cylinder of height \(\De x\) and radius \(\frac{x_i^*}{h}r\text{.}\)</li>
+<li>Thus the volume of pancake \(i\) is  approximately \(\pi \left( \frac{x_i^*}{h}r\right)^2 \De x\) (as shown in the figure above).</li>
+</ul>
+</li>
+<li>So the Riemann sum approximation of the volume is<div class="displaymath">
+\begin{align*}
+\text{Volume} &amp;\approx \sum_{i=1}^n  \pi \left( \frac{x_i^*}{h}r\right)^2 \De x
+\end{align*}
+</div>
+</li>
+<li>By taking the limit as \(n \to \infty\) (i.e. taking the limit as the thickness of  the pancakes goes to zero), we convert the Riemann sum into a definite integral (see  Definition <a knowl="./knowl/def_INTintegral.html" title="Definition 1.1.9">1.1.9</a>) and at the same time our approximation of the volume  becomes the exact volume:<div class="displaymath">
+\begin{gather*}
+\int_0^h \pi \Big(\frac{x}{h}r\Big)^2\dee{x}
+\end{gather*}
+</div>
+</li>
+</ul>
+<p>Our life <a knowl="./knowl/fn-47-hidden.html" title="Footnote 1.6.3"><sup> 3 </sup></a> would be easier if  we could avoid all this formal work with Riemann sums every time we encounter a new  volume. So before we compute the above integral, let us redo the above calculation in a less formal manner.</p>
+<ul class="disc">
+<li>
+<p>Start again from the picture of the cone</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:37.5%;margin-right:37.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/cone.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p>and think of slicing it into thin pancakes, each of width \(\dee{x}\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:4.25%;margin-right:4.25%;">
+<div class="sbspanel" style="width:54.6448087431694%;justify-content:center;"><img src="text/figs/coneX.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:36.0655737704918%;justify-content:center;"><img src="text/figs/coneT.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+</li>
+<li>
+<p>The pancake at height \(x\) above the point of the cone (which is the fraction  \(\frac{x}{h}\) of the total height of the cone) has</p>
+<ul class="circle">
+<li>radius \(\frac{x}{h}\cdot r\) (the fraction \(\frac{x}{h}\) of the full radius, \(r\)) and so</li>
+<li>cross-sectional area \(\pi \big(\frac{x}{h}r\big)^2\text{,}\)</li>
+<li>thickness \(\dee{x}\) — we have done something a little sneaky here, see the  discussion below.</li>
+<li>volume \(\pi \big(\frac{x}{h}r\big)^2\dee{x}\)</li>
+</ul>
+<p>As \(x\) runs from \(0\) to \(h\text{,}\) the total volume is</p>
+<div class="displaymath">
+\begin{align*}
+\int_0^h \pi \Big(\frac{x}{h}r\Big)^2\dee{x}
+&amp;=\frac{\pi r^2}{h^2}\int_0^h x^2\dee{x}\\
+&amp;=\frac{\pi r^2}{h^2} \bigg[\frac{x^3}{3}\bigg]_0^h\\
+&amp;=\frac{1}{3}\pi r^2 h
+\end{align*}
+</div>
+</li>
+</ul>
+<p>In this second computation we are using a time-saving trick. As we saw in  the formal computation above, what we really need to do is pick a natural number \(n\text{,}\)  slice the cone into \(n\) pancakes each of thickness \(\De x = \frac{h}{n}\) and then  take the limit as \(n \to \infty\text{.}\) This led to the Riemann sum</p>
+<div class="displaymath">
+\begin{align*}
+\sum_{i=1}^n \pi \left( \frac{x_i^*}{h} r \right)^2 \De x &amp;&amp; \text{which becomes}
+\int_0^h \pi \left( \frac{x}{h} r \right)^2 \dee{x}
+\end{align*}
+</div>
+<p>So knowing that we will replace</p>
+<div class="displaymath">
+\begin{align*}
+\sum_{i=1}^n &amp;\longrightarrow \int_0^h\\
+x_i^* &amp;\longrightarrow x\\
+\De x &amp;\longrightarrow \dee{x}
+\end{align*}
+</div>
+<p>when we take the limit, we have just skipped the intermediate steps. While this is not  entirely rigorous, it can be made so, and does save us a lot of algebra.</p></article><span class="incontext"><a href="sec_int_volumes.html#eg_VOLa">in-context</a></span>
+</body>
+</html>

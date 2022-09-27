@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:16:11+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Series</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_2_ic.html"><span class="title">CLP-2 Integral Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-19.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="section-19.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="exercises-19.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-19.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="section-19.html" title="Up">Up</a><a class="next-button button toolbar-item" href="exercises-19.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_integral.html" data-scroll="chap_integral"><span class="codenumber">1</span> <span class="title">Integration</span></a></h2>
+<ul>
+<li><a href="sec_intdef.html" data-scroll="sec_intdef">Definition of the Integral</a></li>
+<li><a href="sec_def_int.html" data-scroll="sec_def_int">Basic properties of the definite integral</a></li>
+<li><a href="sec_fundamental.html" data-scroll="sec_fundamental">The Fundamental Theorem of Calculus</a></li>
+<li><a href="sec_subs.html" data-scroll="sec_subs">Substitution</a></li>
+<li><a href="sec_area.html" data-scroll="sec_area">Area between curves</a></li>
+<li><a href="sec_int_volumes.html" data-scroll="sec_int_volumes">Volumes</a></li>
+<li><a href="sec_intbyparts.html" data-scroll="sec_intbyparts">Integration by parts</a></li>
+<li><a href="sec_trigint.html" data-scroll="sec_trigint">Trigonometric Integrals</a></li>
+<li><a href="sec_trigsub.html" data-scroll="sec_trigsub">Trigonometric Substitution</a></li>
+<li><a href="sec_parfrac.html" data-scroll="sec_parfrac">Partial Fractions</a></li>
+<li><a href="sec_numeric_int.html" data-scroll="sec_numeric_int">Numerical Integration</a></li>
+<li><a href="sec_improp_int.html" data-scroll="sec_improp_int">Improper Integrals</a></li>
+<li><a href="section-13.html" data-scroll="section-13">More Integration Examples</a></li>
+</ul>
+<h2 class="link"><a href="chap_int_app.html" data-scroll="chap_int_app"><span class="codenumber">2</span> <span class="title">Applications of Integration</span></a></h2>
+<ul>
+<li><a href="sec_work.html" data-scroll="sec_work">Work</a></li>
+<li><a href="sec_avg.html" data-scroll="sec_avg">Averages</a></li>
+<li><a href="sec_com.html" data-scroll="sec_com">Centre of Mass and Torque</a></li>
+<li><a href="sec_sep_de.html" data-scroll="sec_sep_de">Separable Differential Equations</a></li>
+</ul>
+<h2 class="link"><a href="chap_seq_ser.html" data-scroll="chap_seq_ser"><span class="codenumber">3</span> <span class="title">Sequence and series</span></a></h2>
+<ul>
+<li><a href="section-18.html" data-scroll="section-18">Sequences</a></li>
+<li><a href="section-19.html" data-scroll="section-19">Series</a></li>
+<li><a href="section-20.html" data-scroll="section-20">Convergence Tests</a></li>
+<li><a href="section-21.html" data-scroll="section-21">Absolute and Conditional Convergence</a></li>
+<li><a href="section-22.html" data-scroll="section-22">Power Series</a></li>
+<li><a href="section-23.html" data-scroll="section-23">Taylor Series</a></li>
+<li><a href="sec_RatIrr.html" data-scroll="sec_RatIrr">Optional — Rational and irrational numbers</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="section-26.html" data-scroll="section-26">Pythagoras</a></li>
+<li><a href="section-27.html" data-scroll="section-27">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="section-30.html" data-scroll="section-30">Trigonometry — Special Triangles</a></li>
+<li><a href="section-31.html" data-scroll="section-31">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trigonometric Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">Highschool Material You Should be Able to Derive</a></li>
+<li><a href="section-39.html" data-scroll="section-39">Cartesian Coordinates</a></li>
+<li><a href="ap_roots.html" data-scroll="ap_roots">Roots of Polynomials</a></li>
+</ul>
+<h2 class="link"><a href="ap_complex.html" data-scroll="ap_complex"><span class="codenumber">B</span> <span class="title">Complex Numbers and Exponentials</span></a></h2>
+<ul>
+<li><a href="sec_complex_defn.html" data-scroll="sec_complex_defn">Definition and Basic Operations</a></li>
+<li><a href="sec_complex_exp.html" data-scroll="sec_complex_exp">The Complex Exponential</a></li>
+</ul>
+<h2 class="link"><a href="app_Richardson_Romberg.html" data-scroll="app_Richardson_Romberg"><span class="codenumber">C</span> <span class="title">More About Numerical Integration</span></a></h2>
+<ul>
+<li><a href="ap_Richardson.html" data-scroll="ap_Richardson">Richardson Extrapolation</a></li>
+<li><a href="ap_Romberg.html" data-scroll="ap_Romberg">Romberg Integration</a></li>
+<li><a href="ap_adaptive.html" data-scroll="ap_adaptive">Adaptive Quadrature</a></li>
+</ul>
+<h2 class="link"><a href="app_ODE_numerical.html" data-scroll="app_ODE_numerical"><span class="codenumber">D</span> <span class="title">Numerical Solution of ODE's</span></a></h2>
+<ul>
+<li><a href="ap_derivation.html" data-scroll="ap_derivation">Simple ODE Solvers — Derivation</a></li>
+<li><a href="ap_error_behaviour.html" data-scroll="ap_error_behaviour">Simple ODE Solvers —  Error Behaviour</a></li>
+<li><a href="ap_variable.html" data-scroll="ap_variable">Variable Step Size Methods</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">E</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">F</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">G</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp2-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="subsection" id="subsection-41"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.2.1</span> <span class="title">Series</span>
+</h3>
+<p id="p-4548">A series is a sum</p>
+<div class="displaymath">
+\begin{gather*}
+a_1+a_2+a_3+\cdots+a_n+\cdots
+\end{gather*}
+</div>
+<p>of infinitely many terms. In summation notation, it is written</p>
+<div class="displaymath">
+\begin{gather*}
+\sum_{n=1}^\infty a_n
+\end{gather*}
+</div>
+<p>You already have a lot of experience with series, though you might  not realise it. When you write a number using its decimal expansion  you are really expressing it as a series. Perhaps the simplest example  of this is the decimal expansion of \(\frac{1}{3}\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+\frac{1}{3} &amp;= 0.3333\cdots
+\end{align*}
+</div>
+<p>Recall that the expansion written in this way actually means</p>
+<div class="displaymath">
+\begin{align*}
+0.333333\cdots &amp;= \frac{3}{10}+\frac{3}{100}+\frac{3}{1000}+\frac{3}{10000}+\cdots =\sum_{n=1}^\infty\frac{3}{10^n}
+\end{align*}
+</div>
+<p>The summation index \(n\) is of course a dummy index. You can use any symbol you like (within reason) for the summation index.</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{n=1}^\infty\frac{3}{10^n}
+=\sum_{i=1}^\infty\frac{3}{10^i}
+=\sum_{j=1}^\infty\frac{3}{10^j}
+=\sum_{\ell=1}^\infty\frac{3}{10^\ell}
+\end{equation*}
+</div>
+<p>A series can be expressed using summation notation in many different ways. For example the following expressions all represent the same series:</p>
+<div class="displaymath">
+\begin{align*}
+\sum_{n=1}^\infty\frac{3}{10^n}
+&amp;= \overbrace{\frac{3}{10}}^{n=1}
++\overbrace{\frac{3}{100}}^{n=2}
++\overbrace{\frac{3}{1000}}^{n=3}+\cdots\\
+\sum_{j=2}^\infty\frac{3}{10^{j-1}}
+&amp;= \overbrace{\frac{3}{10}}^{j=2}
++\overbrace{\frac{3}{100}}^{j=3}
++\overbrace{\frac{3}{1000}}^{j=4}+\cdots\\
+\sum_{\ell=0}^\infty\frac{3}{10^{\ell+1}}
+&amp;= \overbrace{\frac{3}{10}}^{\ell=0}
++\overbrace{\frac{3}{100}}^{\ell=1}
++\overbrace{\frac{3}{1000}}^{\ell=3}+\cdots\\
+\frac{3}{10}+\sum_{n=2}^\infty\frac{3}{10^n}
+&amp;= \frac{3}{10}
++\overbrace{\frac{3}{100}}^{n=2}
++\overbrace{\frac{3}{1000}}^{n=3}+\cdots
+\end{align*}
+</div>
+<p>We can get from  the first line to the second line by substituting \(n=j-1\) —  don't forget to also change the limits of summation (so that \(n=1\) becomes  \(j-1=1\) which is rewritten as \(j=2\)).  To get from the first line to the  third line, substitute \(n=\ell+1\) everywhere, including in the limits of summation (so that \(n=1\) becomes \(\ell+1=1\)  which is rewritten as \(\ell=0\)).</p>
+<p id="p-4549">Whenever you are in doubt as to what series a summation notation expression represents, it is a good habit to write out the first few terms, just as  we did above.</p>
+<p id="p-4550">Of course, at this point, it is not clear whether the sum of infinitely  many terms adds up to a finite number or not. In order to make sense  of this we will recast the problem in terms of the convergence of  sequences (hence the discussion of the previous section). Before we  proceed more formally let us illustrate the basic idea with a few  simple examples.</p>
+<article class="example-like" id="eg_SRprelimSumA"><a knowl="" class="id-ref" refid="hk-eg_SRprelimSumA"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.2.1</span> <span class="title">\(\ds \sum_{n=1}^\infty\frac{3}{10^n}\)</span>
+</h6></a></article><div id="hk-eg_SRprelimSumA" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-4551">As we have just seen above the series \(\sum_{n=1}^\infty\frac{3}{10^n}\) is</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{n=1}^\infty\frac{3}{10^n}
+= \overbrace{\frac{3}{10}}^{n=1}
++\overbrace{\frac{3}{100}}^{n=2}
++\overbrace{\frac{3}{1000}}^{n=3}+\cdots
+\end{equation*}
+</div>
+<p>Notice that the \(n^{\mathrm th}\) term in that sum is</p>
+<div class="displaymath">
+\begin{equation*}
+3\times 10^{-n} = 0.\!\!\overbrace{00\cdots 0}^{n-1\ \mathrm{zeroes}}\!3
+\end{equation*}
+</div>
+<p>So the sum of the first \(5\text{,}\) \(10\text{,}\) \(15\) and \(20\) terms in that series are</p>
+<div class="displaymath">
+\begin{align*}
+\sum_{n=1}^5\frac{3}{10^n} &amp;= 0.33333 &amp;
+\sum_{n=1}^{10}\frac{3}{10^n} &amp;= 0.3333333333\\
+\sum_{n=1}^{15}\frac{3}{10^n} &amp;= 0.333333333333333 &amp;
+\sum_{n=1}^{20}\frac{3}{10^n} &amp;= 0.33333333333333333333
+\end{align*}
+</div>
+<p>It sure looks like that, as we add more and more terms, we get closer and closer to \(0.\dot 3=\frac{1}{3}\text{.}\) So it is very reasonable <a knowl="" class="id-ref" refid="hk-fn-152" id="fn-152"><sup> 1 </sup></a><span id="hk-fn-152" class="hidden-content tex2jax_ignore"><span class="footnote">Of course we are free to define  the series to be whatever we want. The hard part is  defining it to be something that makes sense and doesn't lead to contradictions. We'll get to a more systematic definition shortly.</span></span> to define \(\sum_{n=1}^\infty\frac{3}{10^n}\) to be \(\frac{1}{3}\text{.}\)</p></article></div>
+<article class="example-like" id="eg_SRprelimSumB"><a knowl="" class="id-ref" refid="hk-eg_SRprelimSumB"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.2.2</span> <span class="title">\(\ds \sum_{n=1}^\infty 1\) and \(\sum_{n=1}^\infty (-1)^n\)</span>
+</h6></a></article><div id="hk-eg_SRprelimSumB" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-4552">Every term in the series \(\sum_{n=1}^\infty 1\) is exactly \(1\text{.}\) So the sum of the first \(N\) terms is exactly \(N\text{.}\) As we  add more and more terms this grows unboundedly. So it is very reasonable to say that the series  \(\sum_{n=1}^\infty 1\)  diverges.</p>
+<p id="p-4553">The series</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{n=1}^\infty (-1)^n
+=\overbrace{(-1)}^{n=1}
++\overbrace{1}^{n=2}
++\overbrace{(-1)}^{n=3}
++\overbrace{1}^{n=4}
++\overbrace{(-1)}^{n=5}+\cdots
+\end{equation*}
+</div>
+<p>So the sum of the first \(N\) terms is \(0\) if \(N\) is even and \(-1\) if \(N\) is odd. As we add more and more terms from the  series, the sum alternates between \(0\) and \(-1\) for ever and ever. So the sum of all infinitely many terms does not make  any sense and it is again reasonable to say that the series  \(\sum_{n=1}^\infty(-1)^n\) diverges.</p></article></div>
+<p id="p-4554">In the above examples we have tried to understand the series by examining  the sum of the first few terms and then extrapolating as  we add in more and more terms. That is, we tried to sneak up on the  infinite sum by looking at the limit of (partial) sums of the first few terms. This approach can be made into a more formal rigorous definition.  More precisely, to define what is meant by the infinite sum  \(\sum_{n=1}^\infty a_n\text{,}\) we approximate it by the sum of its first  \(N\) terms and then take the limit as \(N\) tends to infinity.</p>
+<article class="definition-like" id="def_SRseries"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">3.2.3</span>
+</h6>
+<p id="p-4555">The \(N^{\rm th}\) partial sum of the series \(\sum_{n=1}^\infty a_n\) is the sum of its first \(N\) terms</p>
+<div class="displaymath">
+\begin{gather*}
+S_N=\sum_{n=1}^N a_n.
+\end{gather*}
+</div>
+<p>The partial sums form a sequence \(\big\{S_N\big\}_{N=1}^\infty\text{.}\)  If this sequence of partial sums converges \(S_N \to S\) as  \(N\rightarrow\infty\)  then we say that the series \(\sum_{n=1}^\infty a_n\)  converges to \(S\) and we write</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{n=1}^\infty a_n=S
+\end{equation*}
+</div>
+<p>If the sequence of partial sums diverges, we say that the series diverges.</p></article><article class="example-like" id="eg_SRgeom"><a knowl="" class="id-ref" refid="hk-eg_SRgeom"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.2.4</span> <span class="title">Geometric Series</span>
+</h6></a></article><div id="hk-eg_SRgeom" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-4556">Let \(a\) and \(r\) be any two fixed real numbers with \(a\ne 0\text{.}\) The series</p>
+<div class="displaymath">
+\begin{equation*}
+a + ar + ar^2 + \cdots + ar^n + \cdots = \sum_{n=0}^\infty ar^n
+\end{equation*}
+</div>
+<p>is called the geometric series with first term \(a\) and ratio \(r\text{.}\)</p>
+<p id="p-4557">Notice that we have chosen to start the summation index at \(n=0\text{.}\)  That's fine. The first <a knowl="" class="id-ref" refid="hk-fn-153" id="fn-153"><sup> 2 </sup></a><span id="hk-fn-153" class="hidden-content tex2jax_ignore"><span class="footnote">It is actually quite common in computer  science to think of \(0\) as the first integer. In that context, the set of natural numbers is defined to contain \(0\text{:}\) \(\mathbb{N} = \left\{0,1,2,\cdots \right\}\) while the notation \(\mathbb{Z}^+ = \left\{1,2,3,\cdots \right\}\) is used to denote the (strictly) positive integers. Remember that in  this text, as is more standard in mathematics, we  define the set of natural numbers to be the set of (strictly)  positive integers.</span></span> term is the \(n=0\) term, which is \(ar^0=a\text{.}\) The  second term is the \(n=1\) term, which is \(ar^1=ar\text{.}\) And so on.  We could have also written the series \(\sum_{n=1}^\infty ar^{n-1}\text{.}\) That's exactly the same series — the first term is  \(ar^{n-1}\big|_{n=1}=ar^{1-1}=a\text{,}\) the second term is \(ar^{n-1}\big|_{n=2}=ar^{2-1}=ar\text{,}\) and so on <a knowl="" class="id-ref" refid="hk-fn-154" id="fn-154"><sup> 3 </sup></a><span id="hk-fn-154" class="hidden-content tex2jax_ignore"><span class="footnote">This  reminds the authors of the paradox of Hilbert's hotel. The hotel  with an infinite number of rooms is completely full, but can always  accommodate one more guest. The interested reader should use their  favourite search engine to find more information on this.</span></span>. Regardless of  how we write the geometric series, \(a\) is the first term and \(r\) is the  ratio between successive terms.</p>
+<p id="p-4558">Geometric series have the extremely useful property that there is a very simple formula for their partial sums. Denote the partial sum by</p>
+<div class="displaymath">
+\begin{align*}
+S_N &amp;= \sum_{n=0}^Nar^n = a + ar + ar^2 + \cdots + ar^N.\\
+\end{align*}
+<p class="intertext">The secret to evaluating this sum is to see what happens when we multiply it by \(r\text{:}\)</p>
+\begin{align*}
+rS_N &amp;= r\big(a + ar + ar^2 + \cdots + ar^N\big)\\
+&amp; = ar + ar^2 + ar^3 + \cdots + ar^{N+1}
+\end{align*}
+</div>
+<p>Notice that this is almost the same <a knowl="" class="id-ref" refid="hk-fn-155" id="fn-155"><sup> 4 </sup></a><span id="hk-fn-155" class="hidden-content tex2jax_ignore"><span class="footnote">One can find similar properties  of other special series, that allow us, with some work,  to cancel many terms in the partial sums. We will shortly see  a good example of this. The interested reader should look up  “creative telescoping” to see how this idea might be used more generally, though it is somewhat beyond this course.</span></span> as \(S_N\text{.}\) The only differences are that the first term, \(a\text{,}\) is missing and one additional term, \(ar^{N+1}\text{,}\) has been tacked  on the end. So</p>
+<div class="displaymath">
+\begin{align*}
+S_N &amp;= a + ar + ar^2 + \cdots + ar^N\\
+r S_N &amp;= \phantom{ar +} ar + ar^2 + \cdots + ar^N + ar^{N+1}\\
+\end{align*}
+<p class="intertext">Hence taking the difference of these expressions cancels almost all the terms:</p>
+\begin{align*}
+(1-r) S_N &amp;= a - ar ^{N+1}  = a (1-r^{N+1})\\
+\end{align*}
+<p class="intertext">Provided \(r\neq 1\) we can divide both side by \(1-r\) to isolate \(S_N\text{:}\)</p>
+\begin{align*}
+S_N &amp;= a \cdot \frac{1-r^{N+1}}{1-r}.
+\end{align*}
+</div>
+<p>On the other hand, if \(r=1\text{,}\) then</p>
+<div class="displaymath">
+\begin{align*}
+S_N &amp;= \underbrace{a + a +\cdots + a}_{N+1 \text{ terms}} = a (N+1)
+\end{align*}
+</div>
+<p>So in summary:</p>
+<div class="displaymath">
+\begin{equation*}
+S_N = \begin{cases}
+a\frac{1-r^{N+1}}{1-r} &amp; \text{if $r\ne 1$} \\
+a(N+1) &amp; \text{if $r=1$}
+\end{cases}
+\end{equation*}
+</div>
+<p id="p-4559">Now that we have this expression we can determine whether or not the  series converges. If \(|r| \lt 1\text{,}\) then \(r^{N+1}\)  tends to zero as \(N\rightarrow\infty\text{,}\) so that \(S_N\)  converges to \(\frac{a}{1-r}\) as \(N\rightarrow\infty\) and</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{n=0}^\infty ar^n = \frac{a}{1-r}
+\text{provided $|r| \lt 1$}.
+\end{equation*}
+</div>
+<p>On the other hand if \(|r|\ge 1\text{,}\) \(S_N\) diverges. To understand this divergence, consider the following 4 cases:</p>
+<ul class="disc">
+<li id="li-2075">If \(r \gt 1\text{,}\) then \(r^N\) grows to \(\infty\) as \(N\rightarrow\infty\text{.}\)</li>
+<li id="li-2076">If \(r \lt -1\text{,}\) then the magnitude of \(r^N\) grows to \(\infty\text{,}\) and the sign of \(r^N\) oscillates between \(+\) and \(-\text{,}\)  as \(N\rightarrow\infty\text{.}\)</li>
+<li id="li-2077">If \(r=+1\text{,}\) then \(N+1\) grows to \(\infty\) as \(N\rightarrow\infty\text{.}\)</li>
+<li id="li-2078">If \(r=-1\text{,}\) then \(r^N\) just oscillates between \(+1\) and \(-1\) as \(N\rightarrow\infty\text{.}\)</li>
+</ul>
+<p>In each case the sequence of partial sums does not converge and so the series does not converge.</p>
+<p id="p-4560">Here are some sketches of the graphs of \(\frac{1}{1-r}\) and \(S_N\text{,}\) \(0\le N\le 5\text{,}\) for \(a=1\) and \(-1\le r\lt 1\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/geomT.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-4561">In these sketches we see that</p>
+<ul class="disc">
+<li id="li-2079">when \(0\lt r \lt 1\text{,}\) and also when \(-1\lt r\lt 0\) with \(N\) odd, we have \(S_N=\frac{1-r^{N+1}}{1-r}\lt \frac{1}{1-r}\text{.}\) On the other hand, when \(-1\lt r\lt 0\) with \(N\) even, we have \(S_N=\frac{1-r^{N+1}}{1-r}\gt \frac{1}{1-r}\text{.}\)</li>
+<li id="li-2080">When \(0\lt |r|\lt 1\text{,}\) \(S_N=\frac{1-r^{N+1}}{1-r}\) gets closer and closer to \(\frac{1}{1-r}\) as \(N\) increases.</li>
+<li id="li-2081">When \(r=-1\text{,}\) \(S_N\) just alternates between \(0\text{,}\) when \(N\) is odd, and \(1\text{,}\) when \(N\) is even.</li>
+</ul></article></div>
+<p id="p-4562">We should summarise the results in the previous example in a lemma.</p>
+<article class="theorem-like" id="lem_geomsum"><h6 class="heading">
+<span class="type">Lemma</span> <span class="codenumber">3.2.5</span> <span class="title">Geometric series</span>
+</h6>
+<p id="p-4563">Let \(a\) and \(r\) be real numbers and let \(N \geq 0\) be an integer then</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{n=0}^N ar^n = \begin{cases}
+a\dfrac{1-r^{N+1}}{1-r} &amp; \text{if $r\ne 1$} \\
+a(N+1) &amp; \text{if $r=1$}
+\end{cases}.
+\end{equation*}
+</div>
+<p>Further, if \(|r|\lt1 \) then</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{n=0}^\infty ar^n = \dfrac{a}{1-r}.
+\end{equation*}
+</div></article><p id="p-4564">Now that we know how to handle geometric series let's return to Example <a knowl="./knowl/eg_SRprelimSumA.html" title="Example 3.2.1: \(\ds \sum_{n=1}^\infty\frac{3}{10^n}\)">3.2.1</a>.</p>
+<article class="example-like" id="eg_SRgeomB"><a knowl="" class="id-ref" refid="hk-eg_SRgeomB"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.2.6</span> <span class="title">Decimal Expansions</span>
+</h6></a></article><div id="hk-eg_SRgeomB" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-4565">The decimal expansion</p>
+<div class="displaymath">
+\begin{equation*}
+0.3333\cdots
+=\frac{3}{10}+\frac{3}{100}+\frac{3}{1000}+\frac{3}{10000}+\cdots
+=\sum_{n=1}^\infty\frac{3}{10^n}
+\end{equation*}
+</div>
+<p>is a geometric series with the first term \(a=\frac{3}{10}\) and the ratio \(r=\frac{1}{10}\text{.}\) So, by Lemma <a knowl="./knowl/lem_geomsum.html" title="Lemma 3.2.5: Geometric series">3.2.5</a>,</p>
+<div class="displaymath">
+\begin{equation*}
+0.3333\cdots
+=\sum_{n=1}^\infty\frac{3}{10^n}
+=\frac{\frac{3}{10}}{1-\frac{1}{10}}
+=\frac{\frac{3}{10}}{\frac{9}{10}}
+=\frac{1}{3}
+\end{equation*}
+</div>
+<p>just as we would have expected.</p>
+<p id="p-4566">We can push this idea further. Consider the repeating decimal expansion:</p>
+<div class="displaymath">
+\begin{equation*}
+0.16161616\cdots
+=\frac{16}{100}+\frac{16}{10000}+\frac{16}{1000000}+\cdots
+\end{equation*}
+</div>
+<p>This is another geometric series with the first term \(a=\frac{16}{100}\)  and the ratio \(r=\frac{1}{100}\text{.}\) So, by Lemma <a knowl="./knowl/lem_geomsum.html" title="Lemma 3.2.5: Geometric series">3.2.5</a>,</p>
+<div class="displaymath">
+\begin{equation*}
+0.16161616\cdots
+=\sum_{n=1}^\infty\frac{16}{100^n}
+=\frac{\frac{16}{100}}{1-\frac{1}{100}}
+=\frac{\frac{16}{100}}{\frac{99}{100}}
+=\frac{16}{99}
+\end{equation*}
+</div>
+<p>again, as expected. In this way any periodic decimal expansion converges to a ratio of two integers — that is, to a rational number <a knowl="" class="id-ref" refid="hk-fn-156" id="fn-156"><sup> 5 </sup></a><span id="hk-fn-156" class="hidden-content tex2jax_ignore"><span class="footnote">We  have included a (more) formal proof of this fact in the optional §<a href="sec_RatIrr.html" class="xref" title="Section 3.7: Optional — Rational and irrational numbers">3.7</a>  at the end of this chapter. Proving that a repeating decimal expansion  gives a rational number isn't too hard. Proving the converse — that  every rational number has a repeating decimal expansion is a  little trickier, but we also do that in the same optional section.</span></span>.</p>
+<p id="p-4567">Here is another more complicated example.</p>
+<div class="displaymath">
+\begin{align*}
+0.1234343434\cdots
+&amp;=\frac{12}{100}+\frac{34}{10000}+\frac{34}{1000000}+\cdots\\
+&amp;=\frac{12}{100}+\sum_{n=2}^\infty\frac{34}{100^n}\\
+\end{align*}
+<p class="intertext">Now apply Lemma <a knowl="./knowl/lem_geomsum.html" title="Lemma 3.2.5: Geometric series">3.2.5</a> with \(a=\frac{34}{100^2}\)  and \(r=\frac{1}{100}\)</p>
+\begin{align*}
+&amp;=\frac{12}{100}+\frac{34}{10000}\frac{1}{1-\frac{1}{100}}\\
+&amp;=\frac{12}{100}+\frac{34}{10000}\frac{100}{99}\\
+&amp;=\frac{1222}{9900}
+\end{align*}
+</div></article></div>
+<p id="p-4568">Typically, it is quite difficult to write down a neat closed form  expression for the partial sums of a series.  Geometric series are very notable exceptions to this. Another  family of series for which we can write down partial sums  is called “telescoping series”. These series have the desirable  property that many of the terms in the sum cancel  each other out rendering the partial sums quite simple.</p>
+<article class="example-like" id="eg_SRtelecope"><a knowl="" class="id-ref" refid="hk-eg_SRtelecope"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.2.7</span> <span class="title">Telescoping Series</span>
+</h6></a></article><div id="hk-eg_SRtelecope" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-4569">In this example, we are going to study the series  \(\sum_{n=1}^\infty\frac{1}{n(n+1)}\text{.}\) This is a rather artificial series <a knowl="" class="id-ref" refid="hk-fn-157" id="fn-157"><sup> 6 </sup></a><span id="hk-fn-157" class="hidden-content tex2jax_ignore"><span class="footnote">Well… this sort of series does  show up when you start to look at the Maclaurin polynomial of functions like \((1-x)\log(1-x)\text{.}\) So it is not <em class="emphasis">totally</em> artificial. At any rate,  it illustrates the basic idea of telescoping very nicely, and the  idea of “creative telescoping” turns out to be extremely useful in the  study of series — though it is well beyond the scope of this course.</span></span> that has been rigged to illustrate a phenomenon called  “telescoping”. Notice that the \(n^{\rm th}\) term can be rewritten as</p>
+<div class="displaymath">
+\begin{align*}
+\frac{1}{n(n+1)}= \frac{1}{n}-\frac{1}{n+1}\\
+\end{align*}
+<p class="intertext">and so we have</p>
+\begin{align*}
+a_n &amp;= b_n - b_{n+1} &amp; \text{where } b_n &amp;= \frac{1}{n}.
+\end{align*}
+</div>
+<p>Because of this we get big cancellations when we add terms together. This allows us to get a simple formula for the partial sums of this series.</p>
+<div class="displaymath">
+\begin{align*}
+S_N&amp;= \frac{1}{1\cdot 2} + \frac{1}{2\cdot 3} + \frac{1}{3\cdot 4} +
+\cdots + \frac{1}{N\cdot (N+1)}\\
+&amp;= \Big(\frac{1}{1}-\frac{1}{2}\Big)
++ \Big(\frac{1}{2}-\frac{1}{3}\Big)
++ \Big(\frac{1}{3}-\frac{1}{4}\Big) +
+\cdots + \Big(\frac{1}{N}-\frac{1}{N+1}\Big)
+\end{align*}
+</div>
+<p>The second term of each bracket exactly cancels the first term of the following bracket. So the sum “telescopes” leaving just</p>
+<div class="displaymath">
+\begin{equation*}
+S_N  = 1-\frac{1}{N+1}
+\end{equation*}
+</div>
+<p>and we can now easily compute</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{n=1}^\infty\frac{1}{n(n+1)}
+=\lim_{N\rightarrow\infty} S_N
+=\lim_{N\rightarrow\infty}\Big( 1-\frac{1}{N+1}\Big)
+=1
+\end{equation*}
+</div></article></div>
+<p id="p-4570">More generally, if we can write</p>
+<div class="displaymath">
+\begin{align*}
+a_n &amp;= b_n - b_{n+1}\\
+\end{align*}
+<p class="intertext">for some other known sequence \(b_n\text{,}\) then the series telescopes  and we can compute partial sums using</p>
+\begin{align*}
+\sum_{n=1}^N a_n
+&amp;=
+\sum_{n=1}^N (b_n - b_{n+1})\\
+&amp;=
+\sum_{n=1}^N b_n - \sum_{n=1}^N b_{n+1}\\
+&amp;= b_1 - b_{N+1}.\\
+\end{align*}
+<p class="intertext">and hence</p>
+\begin{align*}
+\sum_{n=1}^\infty a_n
+&amp;= b_1 - \lim_{N\to\infty} b_{N+1}
+\end{align*}
+</div>
+<p>provided this limit exists.Often \(\lim\limits_{N\to\infty} b_{N+1}=0\) and then \(\sum\limits_{n=1}^\infty a_n =b_1\text{.}\) But this does not always happen. Here is an example.</p>
+<article class="example-like" id="eg_SRtelecopeB"><a knowl="" class="id-ref" refid="hk-eg_SRtelecopeB"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.2.8</span> <span class="title">A Divergent Telescoping Series</span>
+</h6></a></article><div id="hk-eg_SRtelecopeB" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-4571">In this example, we are going to study the series  \(\sum\limits_{n=1}^\infty\log\big(1+\frac{1}{n}\big)\text{.}\)  Let's start by just writing out the first few terms.</p>
+<div class="displaymath">
+\begin{alignat*}{1}
+\sum_{n=1}^\infty\log\Big(1+\frac{1}{n}\Big)
+&amp;=\overbrace{\log\Big(1+\frac{1}{1}\Big)}^{n=1}
++\overbrace{\log\Big(1+\frac{1}{2}\Big)}^{n=2}
++\overbrace{\log\Big(1+\frac{1}{3}\Big)}^{n=3}\\
+\amp\hskip1in
++\overbrace{\log\Big(1+\frac{1}{4}\Big)}^{n=4} +\cdots\\
+&amp;=\log(2)+\log\Big(\frac{3}{2}\Big) +\log\Big(\frac{4}{3}\Big)\\
+\amp\hskip1in  +\log\Big(\frac{5}{4}\Big) + \cdots
+\end{alignat*}
+</div>
+<p>This is pretty suggestive since</p>
+<div class="displaymath">
+\begin{gather*}
+\log(2)+\log\Big(\frac{3}{2}\Big) +\log\Big(\frac{4}{3}\Big)
++\log\Big(\frac{5}{4}\Big)
+=\log\Big(2\times\frac{3}{2}\times\frac{4}{3}\times \frac{5}{4}\Big)
+=\log(5)
+\end{gather*}
+</div>
+<p>So let's try using this idea to compute the partial sum \(S_N\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+S_N&amp;=\sum_{n=1}^N\log\Big(1+\frac{1}{n}\Big)\\
+&amp;=\overbrace{\log\Big(1+\frac{1}{1}\Big)}^{n=1}
++\overbrace{\log\Big(1+\frac{1}{2}\Big)}^{n=2}
++\overbrace{\log\Big(1+\frac{1}{3}\Big)}^{n=3} + \cdots\\
+\amp\hskip1in +\overbrace{\log\Big(1+\frac{1}{N-1}\Big)}^{n=N-1}
++\overbrace{\log\Big(1+\frac{1}{N}\Big)}^{n=N}\\
+&amp;=\log(2) + \log\Big(\frac{3}{2}\Big)  +\log\Big(\frac{4}{3}\Big)
++\cdots+ \log\Big(\frac{N}{N-1}\Big) + \log\Big(\frac{N+1}{N}\Big)\\
+&amp;=\log\Big(2\times\frac{3}{2}\times\frac{4}{3}\times \cdots
+\times \frac{N}{N-1}\times \frac{N+1}{N}\Big)\\
+&amp;=\log(N+1)
+\end{align*}
+</div>
+<p>Uh oh!</p>
+<div class="displaymath">
+\begin{gather*}
+\lim_{N\rightarrow\infty} S_N
+=\lim_{N\rightarrow\infty}\log(N+1)
+=+\infty
+\end{gather*}
+</div>
+<p>This telescoping series diverges! There is an important lesson here. Telescoping series <em class="emphasis">can diverge</em>. They do not always converge to \(b_1\text{.}\)</p></article></div>
+<p id="p-4572">As was the case for limits, differentiation and antidifferentiation,  we can compute more complicated series in  terms of simpler ones by understanding how series interact  with the usual operations of arithmetic. It is, perhaps,  not so surprising that there are simple rules for addition and subtraction  of series and for multiplication of a series by a constant. Unfortunately  there are no simple general rules for computing products or ratios of series.</p>
+<article class="theorem-like" id="thm_SRseriesarith"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">3.2.9</span> <span class="title">Arithmetic of series</span>
+</h6>
+<p id="p-4573">Let \(A\text{,}\) \(B\) and \(C\) be real numbers and let the two series \(\sum_{n=1}^\infty a_n\) and  \(\sum_{n=1}^\infty b_n\) converge to \(S\) and \(T\) respectively. That is, assume that</p>
+<div class="displaymath">
+\begin{align*}
+\sum_{n=1}^\infty a_n&amp;=S &amp; \sum_{n=1}^\infty b_n &amp;=T
+\end{align*}
+</div>
+<p>Then the following hold.</p>
+<ol class="lower-alpha">
+<li id="li-2082">\(\ds \sum_{n=1}^\infty \big[a_n+b_n\big] = S+T\qquad\)and  \(\qquad\ds \sum_{n=1}^\infty \big[a_n-b_n\big] = S-T\)</li>
+<li id="li-2083">\(\ds \sum_{n=1}^\infty C a_n = C S\text{.}\)</li>
+</ol></article><article class="example-like" id="eg_SRseriesarith"><a knowl="" class="id-ref" refid="hk-eg_SRseriesarith"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.2.10</span> <span class="title">\(\sum_{n=1}^\infty\Big( \frac{1}{7^n}+\frac{2}{n(n+1)}\Big)\)</span>
+</h6></a></article><div id="hk-eg_SRseriesarith" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-4574">As a simple example of how we use the arithmetic of series Theorem <a knowl="./knowl/thm_SRseriesarith.html" title="Theorem 3.2.9: Arithmetic of series">3.2.9</a>, consider</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{n=1}^\infty\Big[\frac{1}{7^n}+\frac{2}{n(n+1)}\Big]
+\end{equation*}
+</div>
+<p>We recognize that we know how to compute parts of this sum. We know that</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{n=1}^\infty\frac{1}{7^n}=\frac{\frac{1}{7}}{1-\frac{1}{7}}
+=\frac{1}{6}
+\end{equation*}
+</div>
+<p>because it is a geometric series (Example <a knowl="./knowl/eg_SRgeom.html" title="Example 3.2.4: Geometric Series">3.2.4</a> and Lemma <a knowl="./knowl/lem_geomsum.html" title="Lemma 3.2.5: Geometric series">3.2.5</a>) with first term \(a=\frac{1}{7}\) and ratio \(r=\frac{1}{7}\text{.}\) And we know that</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{n=1}^\infty\frac{1}{n(n+1)} =1
+\end{equation*}
+</div>
+<p>by Example <a knowl="./knowl/eg_SRtelecope.html" title="Example 3.2.7: Telescoping Series">3.2.7</a>. We can now use Theorem <a knowl="./knowl/thm_SRseriesarith.html" title="Theorem 3.2.9: Arithmetic of series">3.2.9</a> to build the specified “complicated” series out of these two “simple” pieces.</p>
+<div class="displaymath">
+\begin{align*}
+\sum_{n=1}^\infty\Big[\frac{1}{7^n}+\frac{2}{n(n+1)}\Big]
+&amp;=\sum_{n=1}^\infty \frac{1}{7^n}
++\sum_{n=1}^\infty\frac{2}{n(n+1)}
+&amp; \text{by Theorem }\knowl{./knowl/thm_SRseriesarith.html}{\text{3.2.9}}\text{(a)}\\
+&amp;= \sum_{n=1}^\infty\frac{1}{7^n}
++2 \sum_{n=1}^\infty \frac{1}{n(n+1)}
+&amp; \text{by Theorem }\knowl{./knowl/thm_SRseriesarith.html}{\text{3.2.9}}\text{(b)}\\
+&amp;=\frac{1}{6}+2\cdot 1 =\frac{13}{6}
+\end{align*}
+</div></article></div></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

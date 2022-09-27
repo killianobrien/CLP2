@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:24:51+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>By definition, the local truncation error for Euler is</p>
+<div class="displaymath">
+\begin{equation*}
+E_1(h)=\phi(t_n+h)-y_n-hf\big(t_n,y_n\big) 
+\end{equation*}
+</div>
+<p>while that for Euler-2step is</p>
+<div class="displaymath">
+\begin{equation*}
+E_2(h)=\phi(t_n+h)-y_n-\tfrac{h}{2}f(t_n,y_n)
+-\tfrac{h}{2}f\big(t_n+\tfrac{h}{2},y_n+\tfrac{h}{2}f(t_n,y_n)\big)
+\end{equation*}
+</div>
+<p>To understand how \(E_1(h)\) and \(E_2(h)\) behave for small \(h\) we can use Taylor expansions ((3.4.10) in the CLP-1 text) to write them as power series in \(h\text{.}\)  To be precise, we use</p>
+<div class="displaymath">
+\begin{equation*}
+g(h)=g(0)+g'(0)\,h+\half g''(0)\,h^2+O(h^3)
+\end{equation*}
+</div>
+<p>to expand both \(E_1(h)\) and \(E_2(h)\) in powers of \(h\) to order \(h^2\text{.}\) Note that, in the expression for \(E_1(h)\text{,}\)  \(t_n\) and \(y_n\) are constants — they do not vary with \(h\text{.}\) So computing derivatives of \(E_1(h)\) with respect to \(h\) is actually quite simple.</p>
+<div class="displaymath">
+\begin{alignat*}{2}
+E_1(h)&amp;=\phi(t_n+h)-y_n-hf\big(t_n,y_n\big)\qquad &amp;
+E_1(0)&amp;=\phi(t_n)-y_n=0 \\
+E'_1(h)&amp;=\phi'(t_n+h)-f\big(t_n,y_n\big) &amp;
+E'_1(0)&amp;=\phi'(t_n)-f\big(t_n,y_n\big)=0 \\
+E''_1(h)&amp;=\phi''(t_n+h) &amp;
+E''_1(0)&amp;=\phi''(t_n) 
+\end{alignat*}
+</div>
+<p>By Taylor, the local truncation error for Euler obeys</p>
+<span class="incontext"><a href="ssec_E_E2_local_trunc.html#p-6269">in-context</a></span>
+</body>
+</html>

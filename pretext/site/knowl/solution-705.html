@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:23:57+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">3.6.8.21.1</span>
+</h6>
+<p>Recall, from Theorem <a knowl="./knowl/thm_SRimportantTaylorSeries.html" title="Theorem 3.6.7">3.6.7</a>, that, for all \(-1\lt x\le 1\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\log(1+x) = \sum_{k=0}^\infty(-1)^k\frac{x^{k+1}}{k+1}
+= \sum_{n=1}^\infty(-1)^{n-1}\frac{x^n}{n}
+\end{equation*}
+</div>
+<p>(To get from the first sum to the second sum we substituted \(n=k+1\text{.}\) If you don't see why the two sums are equal, write out the first few terms of each.) So</p>
+<div class="displaymath">
+\begin{gather*}
+\sum_{n=1}^\infty\frac{(-1)^{n-1}}{n\, 2^n}
+=\Big[\sum_{n=1}^\infty(-1)^{n-1}\frac{x^n}{n}\Big]_{x=1/2}
+=\Big[\log(1+x)\Big]_{x=1/2}
+=\log(3/2)
+\end{gather*}
+</div>
+</div>
+<span class="incontext"><a href="exercises-23.html#solution-705">in-context</a></span>
+</body>
+</html>

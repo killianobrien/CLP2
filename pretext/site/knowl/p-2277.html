@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:56+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>We follow the example in the text.</p>
+<div class="displaymath">
+\begin{align*}
+\displaystyle\int \csc^3 x  \dee{x}&amp;=\int \frac{1}{\sin^3x} \dee{x}
+=\int \frac{\sin x}{\sin^4x} \dee{x}=\int \frac{\sin x}{(1-\cos^2x)^2} \dee{x}\\
+\end{align*}
+<p class="intertext">Let \(u=\cos x\text{,}\) \(\dee{u}=-\sin x \dee{x}\text{.}\)</p>
+\begin{align*}
+&amp;=\int\frac{-1}{(1-u^2)^2} \dee{u}
+\end{align*}
+</div>
+<p>In Question <a knowl="./knowl/prob_s1_10_trig1.html" title="Exercise 1.10.4.18">18</a> we saw \(\textcolor{blue}{\frac{1}{1-u^2} = \frac{1/2}{1+u}+\frac{1/2}{1-u}}\) , so</p>
+<div class="displaymath">
+\begin{align*}
+&amp;\int\frac{-1}{(1-u^2)^2} \dee{u}=-\int\left(\textcolor{blue}{\frac{1}{1-u^2}}\right)^2 \dee{u}
+=-\int\left(\textcolor{blue}{\frac{1/2}{1+u}+\frac{1/2}{1-u}}\right)^2 \dee{u}\\
+&amp;=-\frac{1}{4}\int\left(\frac{1}{(1+u)^2}+\textcolor{blue}{\frac{2}{1-u^2}}+\frac{1}{(1-u)^2}\right) \dee{u}\\
+&amp;=-\frac{1}{4}\int\left(\frac{1}{(1+u)^2}+ \textcolor{blue}{\frac{1}{1+u}+\frac{1}{1-u}}+\frac{1}{(1-u)^2}\right) \dee{u}\\
+&amp;=-\frac{1}{4}\left(-\frac{1}{1+u} + \log|1+u|-\log|1-u|+\frac{1}{1-u}\right)+C\\
+&amp;=-\frac{1}{4}\left(\frac{2u}{1-u^2} + \log\left|\frac{1+u}{1-u}\right|\right)+C\\
+&amp;=\frac{-u}{2(1-u^2)} + \frac{1}{4}\log\left|\frac{1-u}{1+u}\right|+C\\
+&amp;=\frac{-\cos x}{2\sin^2 x} + \frac{1}{4}\log\left|\frac{1-\cos x}{1+\cos x}\right|+C
+\end{align*}
+</div>
+<span class="incontext"><a href="exercises-10.html#p-2277">in-context</a></span>
+</body>
+</html>

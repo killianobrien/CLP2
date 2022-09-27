@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:20:13+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">1.12.4.9.1</span>
+</h6>
+<p>The integrand is positive everywhere. So, either the integral converges to some finite number, or it is infinite. We want to generate a guess as to which it is.</p>
+<p>When \(x\) is small, \(\sqrt{x} \gt x^2\text{,}\) so we might guess that our integral behaves like the integral of \(\frac{1}{\sqrt{x}}\) when \(x\) is near to 0. On the other hand, when \(x\) is large, \(\sqrt{x} \lt x^2\text{,}\) so we might guess that our integral behaves like the integral of \(\frac{1}{x^2}\) as \(x\) goes to infinity.  This is the hunch that drives the following work:</p>
+<div class="displaymath">
+\begin{align*}
+0\amp\le\frac{1}{x^2+\sqrt{x}}
+\le \frac{1}{\sqrt{x}}\\
+\amp\text{and the integral }\int_0^1\frac{\dee{x}}{\sqrt{x}}\text{ converges by Example }\knowl{./knowl/eg_IMPp2.html}{\text{1.12.9}}\text{, and}\\
+0\amp\le\frac{1}{x^2+\sqrt{x}}
+\le \frac{1}{x^2}\\
+\amp\text{and the integral }\int_1^\infty\frac{\dee{x}}{x^2}\text{ converges by Example }\knowl{./knowl/eg_IMPp1.html}{\text{1.12.8}}
+\end{align*}
+</div>
+<p>Note that \(\frac{1}{x^2+\sqrt{x}}\) is defined and continuous for all \(x\gt 0\text{,}\) \(\frac{1}{\sqrt{x}}\) is defined and continuous for \(x \gt 0\text{,}\) and \(\frac{1}{x^2}\) is defined and continuous for \(x \ge 1\text{.}\) So, the integral converges by the comparison test, Theorem <a knowl="./knowl/thm_IMPcomparison.html" title="Theorem 1.12.17: Comparison">1.12.17</a> in the text, together with Remark <a knowl="./knowl/rmk_singularities.html" title="Remark 1.12.16">1.12.16</a>.</p>
+</div>
+<span class="incontext"><a href="exercises-12.html#solution-341">in-context</a></span>
+</body>
+</html>

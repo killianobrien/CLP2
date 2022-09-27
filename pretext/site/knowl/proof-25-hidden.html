@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:22:35+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="hiddenproof"><p>Let \(2n\) be an even natural number. Then the \(2n^{\rm th}\) partial sum obeys</p>
+<div class="displaymath">
+\begin{align*}
+S_{2n}&amp;=\overbrace{(a_1-a_2)}^{\ge 0}
++\overbrace{(a_3-a_4)}^{\ge 0}+\cdots
++\overbrace{(a_{2n-1}-a_{2n})}^{\ge 0}\\
+&amp;\le\overbrace{(a_1-a_2)}^{\ge 0}
++\overbrace{(a_3-a_4)}^{\ge 0}+\cdots
++\overbrace{(a_{2n-1}-a_{2n})}^{\ge 0}
++\overbrace{(a_{2n+1}-a_{2n+2})}^{\ge 0}\\
+\amp=S_{2(n+1)}
+\end{align*}
+</div>
+<p>and</p>
+<div class="displaymath">
+\begin{align*}
+S_{2n}&amp;=a_1-(\overbrace{a_2-a_3}^{\ge 0})
+-(\overbrace{a_4-a_5}^{\ge 0})-\cdots
+-\overbrace{(a_{2n-2}-a_{2n-1})}^{\ge 0}
+-\overbrace{a_{2n}}^{\ge 0}\\
+&amp;\le a_1
+\end{align*}
+</div>
+<p>So the sequence \(S_2\text{,}\) \(S_4\text{,}\) \(S_6\text{,}\) \(\cdots\) of even partial sums is a bounded, increasing sequence and hence converges to some real  number \(S\text{.}\) Since \(S_{2n+1} = S_{2n} +a_{2n+1}\) and \(a_{2n+1}\) converges zero as \(n\rightarrow\infty\text{,}\) the odd partial sums \(S_{2n+1}\) also converge to \(S\text{.}\) That \(S-S_N\) is between \(0\) and (the  first dropped term) \((-1)^N a_{N+1}\) was already proved in §<a href="sec_AST.html" class="xref" title="Subsection 3.3.4: The Alternating Series Test">3.3.4</a>.</p></article></body>
+</html>

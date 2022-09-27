@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:14:39+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The Definition of the Definite Integral</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_2_ic.html"><span class="title">CLP-2 Integral Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="ssec_sum_notn.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sec_intdef.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="ssec_knownareas.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="ssec_sum_notn.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sec_intdef.html" title="Up">Up</a><a class="next-button button toolbar-item" href="ssec_knownareas.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_integral.html" data-scroll="chap_integral"><span class="codenumber">1</span> <span class="title">Integration</span></a></h2>
+<ul>
+<li><a href="sec_intdef.html" data-scroll="sec_intdef">Definition of the Integral</a></li>
+<li><a href="sec_def_int.html" data-scroll="sec_def_int">Basic properties of the definite integral</a></li>
+<li><a href="sec_fundamental.html" data-scroll="sec_fundamental">The Fundamental Theorem of Calculus</a></li>
+<li><a href="sec_subs.html" data-scroll="sec_subs">Substitution</a></li>
+<li><a href="sec_area.html" data-scroll="sec_area">Area between curves</a></li>
+<li><a href="sec_int_volumes.html" data-scroll="sec_int_volumes">Volumes</a></li>
+<li><a href="sec_intbyparts.html" data-scroll="sec_intbyparts">Integration by parts</a></li>
+<li><a href="sec_trigint.html" data-scroll="sec_trigint">Trigonometric Integrals</a></li>
+<li><a href="sec_trigsub.html" data-scroll="sec_trigsub">Trigonometric Substitution</a></li>
+<li><a href="sec_parfrac.html" data-scroll="sec_parfrac">Partial Fractions</a></li>
+<li><a href="sec_numeric_int.html" data-scroll="sec_numeric_int">Numerical Integration</a></li>
+<li><a href="sec_improp_int.html" data-scroll="sec_improp_int">Improper Integrals</a></li>
+<li><a href="section-13.html" data-scroll="section-13">More Integration Examples</a></li>
+</ul>
+<h2 class="link"><a href="chap_int_app.html" data-scroll="chap_int_app"><span class="codenumber">2</span> <span class="title">Applications of Integration</span></a></h2>
+<ul>
+<li><a href="sec_work.html" data-scroll="sec_work">Work</a></li>
+<li><a href="sec_avg.html" data-scroll="sec_avg">Averages</a></li>
+<li><a href="sec_com.html" data-scroll="sec_com">Centre of Mass and Torque</a></li>
+<li><a href="sec_sep_de.html" data-scroll="sec_sep_de">Separable Differential Equations</a></li>
+</ul>
+<h2 class="link"><a href="chap_seq_ser.html" data-scroll="chap_seq_ser"><span class="codenumber">3</span> <span class="title">Sequence and series</span></a></h2>
+<ul>
+<li><a href="section-18.html" data-scroll="section-18">Sequences</a></li>
+<li><a href="section-19.html" data-scroll="section-19">Series</a></li>
+<li><a href="section-20.html" data-scroll="section-20">Convergence Tests</a></li>
+<li><a href="section-21.html" data-scroll="section-21">Absolute and Conditional Convergence</a></li>
+<li><a href="section-22.html" data-scroll="section-22">Power Series</a></li>
+<li><a href="section-23.html" data-scroll="section-23">Taylor Series</a></li>
+<li><a href="sec_RatIrr.html" data-scroll="sec_RatIrr">Optional — Rational and irrational numbers</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="section-26.html" data-scroll="section-26">Pythagoras</a></li>
+<li><a href="section-27.html" data-scroll="section-27">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="section-30.html" data-scroll="section-30">Trigonometry — Special Triangles</a></li>
+<li><a href="section-31.html" data-scroll="section-31">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trigonometric Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">Highschool Material You Should be Able to Derive</a></li>
+<li><a href="section-39.html" data-scroll="section-39">Cartesian Coordinates</a></li>
+<li><a href="ap_roots.html" data-scroll="ap_roots">Roots of Polynomials</a></li>
+</ul>
+<h2 class="link"><a href="ap_complex.html" data-scroll="ap_complex"><span class="codenumber">B</span> <span class="title">Complex Numbers and Exponentials</span></a></h2>
+<ul>
+<li><a href="sec_complex_defn.html" data-scroll="sec_complex_defn">Definition and Basic Operations</a></li>
+<li><a href="sec_complex_exp.html" data-scroll="sec_complex_exp">The Complex Exponential</a></li>
+</ul>
+<h2 class="link"><a href="app_Richardson_Romberg.html" data-scroll="app_Richardson_Romberg"><span class="codenumber">C</span> <span class="title">More About Numerical Integration</span></a></h2>
+<ul>
+<li><a href="ap_Richardson.html" data-scroll="ap_Richardson">Richardson Extrapolation</a></li>
+<li><a href="ap_Romberg.html" data-scroll="ap_Romberg">Romberg Integration</a></li>
+<li><a href="ap_adaptive.html" data-scroll="ap_adaptive">Adaptive Quadrature</a></li>
+</ul>
+<h2 class="link"><a href="app_ODE_numerical.html" data-scroll="app_ODE_numerical"><span class="codenumber">D</span> <span class="title">Numerical Solution of ODE's</span></a></h2>
+<ul>
+<li><a href="ap_derivation.html" data-scroll="ap_derivation">Simple ODE Solvers — Derivation</a></li>
+<li><a href="ap_error_behaviour.html" data-scroll="ap_error_behaviour">Simple ODE Solvers —  Error Behaviour</a></li>
+<li><a href="ap_variable.html" data-scroll="ap_variable">Variable Step Size Methods</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">E</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">F</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">G</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp2-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="subsection" id="sec_defInt"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.4</span> <span class="title">The Definition of the Definite Integral</span>
+</h3>
+<a href="sec_defInt.html" class="permalink">¶</a><p id="p-87">In this section we give a definition of the definite integral \(\ds \int_a^b f(x)\dee{x}\)  generalising the machinery we used in Example <a knowl="./knowl/eg_INTexparea.html" title="Example 1.1.1: Computing an area with vertical strips">1.1.1</a>. But first some  terminology and a couple of remarks to better motivate the definition.</p>
+<article class="definition-like" id="definition-2"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">1.1.8</span>
+</h6>
+<p id="p-88">The symbol \(\ds \int_a^b f(x)\dee{x}\) is read “the definite integral of the function  \(f(x)\) from \(a\) to \(b\)”. The function \(f(x)\) is called the integrand of \(\int_a^b  f(x)\dee{x}\) and \(a\) and \(b\) are called <a knowl="" class="id-ref" refid="hk-fn-14" id="fn-14"><sup> 14 </sup></a><span id="hk-fn-14" class="hidden-content tex2jax_ignore"><span class="footnote">\(a\) and \(b\) are also called the bounds of integration.</span></span> the limits of integration. The interval \(a\le x \le b\) is called the interval of integration and is also called the domain of integration.</p></article><p id="p-89">Before we explain more precisely what the definite integral actually is, a few remarks  (actually — a few interpretations) are in order.</p>
+<ul class="disc">
+<li id="li-76">
+<p id="p-90">If \(f(x)\ge 0\) and \(a\le b\text{,}\) one interpretation of the symbol \(\ds \int_a^b f(x)\dee{x}\) is “the area of the region \(\big\{\ (x,y)\ \big|\ a\le x\le b,\   0\le y\le f(x)\ \big\}\)”.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:17%;margin-right:17%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/areaSqrt.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-91">In this way we can rewrite the area in Example <a knowl="./knowl/eg_INTexparea.html" title="Example 1.1.1: Computing an area with vertical strips">1.1.1</a> as the definite  integral \(\int_0^1 e^x \dee{x}\text{.}\)</p>
+</li>
+<li id="li-77">This interpretation breaks down when either \(a \gt b\) or \(f(x)\) is not always positive,  but it can be repaired by considering “signed areas”.</li>
+<li id="li-78">
+<p id="p-92">If \(a\le b\text{,}\) but \(f(x)\) is not always positive, one interpretation of \(\int_a^b  f(x)\dee{x}\) is “the signed area between \(y=f(x)\) and the \(x\)-axis for \(a\le x\le b\)”.  For “signed area” (which is also called the “net area”), areas above the \(x\)-axis  count as positive while areas below the \(x\)-axis count as negative. In the example  below,  we have the graph of the function</p>
+<div class="displaymath">
+\begin{align*}
+f(x)=\begin{cases}
+-1 &amp; \text{if }1\le x\le 2\\
+2  &amp; \text{if }2 \lt  x\le 4 \\
+0 &amp; \text{otherwise}
+\end{cases}
+\end{align*}
+</div>
+<p>The \(2\times 2\) shaded square above the \(x\)-axis has signed area \(+2\times 2=+4\text{.}\) The \(1\times 1\) shaded square below the \(x\)-axis has signed area \(-1\times 1=-1\text{.}\) So, for this \(f(x)\text{,}\)</p>
+<div class="displaymath">
+\begin{gather*}
+\int_0^5 f(x)\dee{x} = +4-1=3
+\end{gather*}
+</div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:17%;margin-right:17%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/signedArea.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+<li id="li-79">We'll come back to the case \(b \lt a\) later.</li>
+</ul>
+<p>We're now ready to define \(\int_a^b f(x)\dee{x}\text{.}\) The definition is a little involved,  but essentially mimics what we did in Example <a knowl="./knowl/eg_INTexparea.html" title="Example 1.1.1: Computing an area with vertical strips">1.1.1</a> (which is why we did  the example before the definition). The main differences are that we replace the function  \(e^x\) by a generic function \(f(x)\) and we replace the interval from \(0\) to \(1\) by the  generic interval <a knowl="" class="id-ref" refid="hk-fn-15" id="fn-15"><sup> 15 </sup></a><span id="hk-fn-15" class="hidden-content tex2jax_ignore"><span class="footnote">We'll eventually allow \(a\) and \(b\) to be any two real numbers,  not even requiring \(a \lt b\text{.}\) But it is easier to start off assuming \(a \lt b\text{,}\) and that's what  we'll do.</span></span> from \(a\) to \(b\text{.}\)</p>
+<ul class="disc">
+<li id="li-80">We start by selecting any natural number \(n\) and subdividing the interval from \(a\) to \(b\) into \(n\) equal subintervals. Each subinterval has width \(\frac{b-a}{n}\text{.}\)</li>
+<li id="li-81">Just as was the case in Example <a knowl="./knowl/eg_INTexparea.html" title="Example 1.1.1: Computing an area with vertical strips">1.1.1</a> we will eventually take the  limit as \(n\to\infty\text{,}\) which squeezes the width of each subinterval down to zero.</li>
+<li id="li-82">For each integer \(0\le i\le n\text{,}\) define \(x_i = a + i \cdot\frac{b-a}{n}\text{.}\) Note that  this means that \(x_0=a\) and \(x_n = b\text{.}\) It is worth keeping in mind that these numbers  \(x_i\) do depend on \(n\) even though our choice of notation hides this dependence.</li>
+<li id="li-83">
+<p id="p-93">Subinterval number \(i\) is \(x_{i-1} \leq x \leq  x_i\text{.}\) In particular, on the first subinterval, \(x\) runs from \(x_0=a\) to \(x_1=a+\frac{b-a}{n}\text{.}\) On the second subinterval, \(x\) runs from \(x_1\) to \(x_2=a+2\frac{b-a}{n}\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:17%;margin-right:17%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/intDecompE.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+<li id="li-84">
+<p id="p-94">On each subinterval we now pick \(x_{i,n}^*\) between \(x_{i-1}\) and \(x_i\text{.}\) We then  approximate \(f(x)\) on the \(i^\mathrm{th}\) subinterval by the constant function  \(y=f(x_{i,n}^*)\text{.}\) We include \(n\) in the subscript to remind ourselves that these numbers  depend on \(n\text{.}\)</p>
+<p id="p-95">Geometrically, we're approximating the region</p>
+<div class="displaymath">
+\begin{gather*}
+\big\{\ (x,y)\ \big|\
+\text{$x$ is between $x_{i-1}$ and $x_i$, and $y$ is between $0$ and $f(x)$} \ \big\}
+\end{gather*}
+</div>
+<p>by the rectangle</p>
+<div class="displaymath">
+\begin{gather*}
+\big\{\ (x,y)\ \big|\
+\text{$x$ is between $x_{i-1}$ and $x_i$, and $y$ is between $0$ and $f(x_{i,n}^*)$} \ \big\}
+\end{gather*}
+</div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:33.5%;margin-right:33.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/rect_approx_adr1.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-96">In Example <a knowl="./knowl/eg_INTexparea.html" title="Example 1.1.1: Computing an area with vertical strips">1.1.1</a> we chose \(x_{i,n}^* = x_{i-1}\) and so we  approximated the function \(e^x\) on each subinterval by the value it took at the leftmost  point in that subinterval.</p>
+</li>
+<li id="li-85">So, when there are \(n\) subintervals our approximation to the signed area between the curve \(y=f(x)\) and the \(x\)-axis, with \(x\) running from \(a\) to \(b\text{,}\) is<div class="displaymath">
+\begin{gather*}
+\sum_{i=1}^n f(x_{i,n}^*)\cdot \frac{b-a}{n}
+\end{gather*}
+</div>We interpret this as the signed area since the summands \(f(x_{i,n}^*)\cdot\frac{b-a}{n}\)  need not be positive.</li>
+<li id="li-86">Finally we define the definite integral by taking the limit of this sum as  \(n\rightarrow\infty\text{.}\)</li>
+</ul>
+<p>Oof! This is quite an involved process, but we can now write down the definition we need.</p>
+<article class="definition-like" id="def_INTintegral"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">1.1.9</span>
+</h6>
+<p id="p-97">Let \(a\) and \(b\) be two real numbers and let \(f(x)\) be a function that is defined for all \(x\) between \(a\) and \(b\text{.}\) Then we define</p>
+<div class="displaymath">
+\begin{gather*}
+\int_a^b f(x)\dee{x} =\lim_{n\rightarrow\infty}\sum_{i=1}^n f(x_{i,n}^*)\cdot\frac{b-a}{n}
+\end{gather*}
+</div>
+<p>when the limit exists and takes the same value for all choices of  the \(x_{i,n}^*\)'s. In this case, we say that \(f\) is integrable on the  interval from \(a\) to \(b\text{.}\)</p></article><p id="p-98">Of course, it is not immediately obvious when this limit should exist. Thankfully it is  easier for a function to be “integrable” than it is for it to be “differentiable”.</p>
+<article class="theorem-like" id="thm_integrable"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.1.10</span>
+</h6>
+<p id="p-99">Let \(f(x)\) be a function on the interval \([a,b]\text{.}\) If</p>
+<ul class="disc">
+<li id="li-87">\(f(x)\) is continuous on \([a,b]\text{,}\) or</li>
+<li id="li-88">\(f(x)\) has a finite number of jump discontinuities on \([a,b]\) (and is otherwise  continuous)</li>
+</ul>
+<p>then \(f(x)\) is integrable on \([a,b]\text{.}\)</p></article><p id="p-100">We will not justify this theorem. But a slightly weaker statement is proved in (the optional) Section <a href="ssec_careful_defn.html" class="xref" title="Subsection 1.1.7: Optional — careful definition of the integral">1.1.7</a>. Of course this does not tell us how to  actually evaluate any definite integrals — but we will get to that in time.</p>
+<p id="p-101">Some comments:</p>
+<ul class="disc">
+<li id="li-89">Note that, in Definition <a knowl="./knowl/def_INTintegral.html" title="Definition 1.1.9">1.1.9</a>, we allow \(a\) and \(b\) to be any two real numbers. We do not require that \(a \lt b\text{.}\) That is, even when \(a \gt b\text{,}\) the symbol \(\int_a^b f(x)\dee{x}\) is still defined by the formula of Definition <a knowl="./knowl/def_INTintegral.html" title="Definition 1.1.9">1.1.9</a>. We'll get an interpretation for \(\int_a^b f(x)\dee{x}\text{,}\) when \(a \gt b\text{,}\) later.</li>
+<li id="li-90">It is important to note that the definite integral \(\int_a^b f(x)\dee{x}\)  represents a number, not a function of \(x\text{.}\) The integration variable \(x\)  is another “dummy” variable, just like the summation index \(i\) in  \(\sum_{i=m}^n a_i\) (see Section <a href="ssec_sum_notn.html" class="xref" title="Subsection 1.1.3: Summation notation">1.1.3</a>). The integration variable does not  have to be called \(x\text{.}\) For example<div class="displaymath">
+\begin{gather*}
+\int_a^b f(x)\dee{x} = \int_a^b f(t)\dee{t} = \int_a^b f(u)\dee{u}
+\end{gather*}
+</div>Just as with summation variables, the integration variable \(x\) has no meaning outside of \(f(x)\dee{x}\text{.}\) For example<div class="displaymath">
+\begin{gather*}
+x\int_0^1 e^x\dee{x}\qquad\text{and}\qquad  \int_0^x e^x\dee{x}
+\end{gather*}
+</div>are both gibberish.</li>
+</ul>
+<p id="p-102">The sum inside definition <a knowl="./knowl/def_INTintegral.html" title="Definition 1.1.9">1.1.9</a> is named after Bernhard Riemann <a knowl="" class="id-ref" refid="hk-fn-16" id="fn-16"><sup> 16 </sup></a><span id="hk-fn-16" class="hidden-content tex2jax_ignore"><span class="footnote">Bernhard Riemann was a 19th century German mathematician who  made  extremely important contributions to many different areas of mathematics — far  too  many to list here. Arguably two of the most important (after Riemann sums) are  now  called Riemann surfaces and the Riemann hypothesis (he didn't name them after  himself).</span></span> who made the first rigorous definition of the definite integral and so placed  integral  calculus on rigorous footings.</p>
+<article class="definition-like" id="def_INTthreeRiemannSums"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">1.1.11</span>
+</h6>
+<p id="p-103">The sum \(\ds \) inside definition <a knowl="./knowl/def_INTintegral.html" title="Definition 1.1.9">1.1.9</a></p>
+<div class="displaymath">
+\begin{gather*}
+\sum_{i=1}^n f(x_{i,n}^*)\,\frac{b-a}{n}
+\end{gather*}
+</div>
+<p>is called a Riemann sum. It is also often written as</p>
+<div class="displaymath">
+\begin{gather*}
+\sum_{i=1}^n f(x_i^*)\,\De x
+\end{gather*}
+</div>
+<p>where \(\De x = \frac{b-a}{n}\text{.}\)</p>
+<ul class="disc">
+<li id="li-91">If we choose each \(x_{i,n}^* = x_{i-1}=a+(i-1)\frac{b-a}{n}\) to be the  left hand end point of the \(i^{\rm th}\) interval, \([x_{i-1},x_i]\text{,}\)  we get the approximation<div class="displaymath">
+\begin{gather*}
+\sum_{i=1}^n f\left(a+(i-1)\frac{b-a}{n}\right)\,\frac{b-a}{n}
+\end{gather*}
+</div>which is called the “left Riemann sum approximation to \(\int_a^b f(x)\dee{x}\) with \(n\) subintervals”. This is the approximation used  in  Example <a knowl="./knowl/eg_INTexparea.html" title="Example 1.1.1: Computing an area with vertical strips">1.1.1</a>.</li>
+<li id="li-92">In the same way, if we choose \(x_{i,n}^* = x_{i}=a+i\frac{b-a}{n}\) we  obtain the approximation<div class="displaymath">
+\begin{gather*}
+\sum_{i=1}^n f\left(a+i\frac{b-a}{n}\right)\,\frac{b-a}{n}
+\end{gather*}
+</div>which is called the “right Riemann sum approximation to \(\int_a^b f(x)\dee{x}\) with \(n\) subintervals”. The word “right” signifies  that, on each  subinterval \([x_{i-1},x_i]\) we approximate \(f\) by its value at the right-hand  end-point,  \(x_i=a+i\frac{b-a}{n}\text{,}\) of the subinterval.</li>
+<li id="li-93">A third commonly used approximation is<div class="displaymath">
+\begin{gather*}
+\sum_{i=1}^n f\left(a+(i-\frac12)\frac{b-a}{n}\right)\,\frac{b-a}{n}
+\end{gather*}
+</div>which is called the “midpoint Riemann sum approximation to \(\int_a^b f(x)\dee{x}\) with \(n\) subintervals”. The word “midpoint” signifies that, on each subinterval \([x_{i-1},x_i]\) we approximate \(f\) by its value at the midpoint, \(\frac{x_{i-1}+x_i}{2} =a+(i-\frac{1}{2})\frac{b-a}{n}\text{,}\) of the subinterval.</li>
+</ul></article><p id="p-104">In order to compute a definite integral using Riemann sums we need to be able to  compute  the limit of the sum as the number of summands goes to infinity. This approach  is not  always feasible and we will soon arrive at other means of computing definite  integrals  based on antiderivatives. However, Riemann sums also provide us with a good  means of  approximating definite integrals — if we take \(n\) to be a large, but finite,  integer,  then the corresponding Riemann sum can be a good approximation of the definite  integral.  Under certain circumstances this can be strengthened to give rigorous bounds on  the integral. Let us revisit Example <a knowl="./knowl/eg_INTexparea.html" title="Example 1.1.1: Computing an area with vertical strips">1.1.1</a>.</p>
+<article class="example-like" id="example-3"><a knowl="" class="id-ref" refid="hk-example-3"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.1.12</span> <span class="title">Upper and lower bounds on area</span>
+</h6></a></article><div id="hk-example-3" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-105">Let's say we are again interested in the integral \(\int_0^1 e^x\dee{x}\text{.}\) We can  follow  the same procedure as we used previously to construct Riemann sum  approximations. However  since the integrand \(f(x)=e^x\) is an increasing function, we can make our  approximations  into upper and lower bounds without much extra work.</p>
+<p id="p-106">More precisely, we approximate \(f(x)\) on each subinterval \(x_{i-1}\le x\le x_i\)</p>
+<ul class="disc">
+<li id="li-94">by its smallest value on the subinterval, namely \(f(x_{i-1})\text{,}\) when  we compute the left Riemann sum approximation and</li>
+<li id="li-95">by its largest value on the subinterval, namely \(f(x_i)\text{,}\) when we  compute the right Riemann sum approximation.</li>
+</ul>
+<p>This is illustrated in the two figures below. The shaded region in the left hand figure is the left Riemann sum approximation and the  shaded region in the right hand figure is the right Riemann sum approximation.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:8.5%;margin-right:8.5%;">
+<div class="sbspanel" style="width:39.7590361445783%;justify-content:center;"><img src="text/figs/earea7.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:39.7590361445783%;justify-content:center;"><img src="text/figs/earea8.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<p id="p-107">We can see that exactly because \(f(x)\) is increasing, the left Riemann sum  describes an area smaller than the definite integral while the right Riemann sum  gives an  area larger <a knowl="" class="id-ref" refid="hk-fn-17" id="fn-17"><sup> 17 </sup></a><span id="hk-fn-17" class="hidden-content tex2jax_ignore"><span class="footnote">When a function is decreasing the situation is reversed —  the  left Riemann sum is always larger than the integral while the right Riemann sum  is  smaller than the integral. For more general functions that both increase and  decrease it  is perhaps easiest to study each increasing (or decreasing) interval  separately.</span></span> than the integral.</p>
+<p id="p-108">When we approximate the integral \(\int_0^1 e^x\dee{x}\) using \(n\) subintervals, then, on interval number \(i\text{,}\)</p>
+<ul class="disc">
+<li id="li-96">\(x\) runs from \(\frac{i-1}{n}\) to \(\frac{i}{n}\) and</li>
+<li id="li-97">\(y=e^x\) runs from \(e^{\frac{(i-1)}{n}}\text{,}\) when \(x\) is at the left hand end point of the interval, to \(e^{\frac{i}{n}}\text{,}\) when \(x\) is at the right hand end point of the interval.</li>
+</ul>
+<p>Consequently, the left Riemann sum approximation to \(\int_0^1 e^x\dee{x}\) is \(\sum_{i=1}^n e^{\frac{(i-1)}{n}}\,\frac{1}{n}\) and the  right Riemann sum approximation is  \(\sum_{i=1}^n e^{\frac{i}{n}}\cdot\frac{1}{n}\text{.}\) So</p>
+<div class="displaymath">
+\begin{gather*}
+\sum_{i=1}^n e^{\frac{(i-1)}{n}}\,\frac{1}{n}
+\ \le\ \int_0^1 e^x\dee{x}\ \le\
+\sum_{i=1}^n e^{\frac{i}{n}}\cdot\frac{1}{n}
+\end{gather*}
+</div>
+<p>Thus  \(L_n=\sum_{i=1}^n e^{\frac{(i-1)}{n}}\,\frac{1}{n}\text{,}\) which for any \(n\) can be evaluated by computer, is a lower bound on the exact value of   \(\int_0^1 e^x\dee{x}\) and  \(R_n=\sum_{i=1}^n e^{\frac{i}{n}}\,\frac{1}{n}\text{,}\) which for any \(n\) can also be evaluated by computer, is an upper bound on the exact value  of  \(\int_0^1 e^x\dee{x}\text{.}\) For example, when \(n=1000\text{,}\) \(L_n= 1.7174\) and  \(R_n=1.7191\) (both to four decimal places) so that, again to four  decimal places,</p>
+<div class="displaymath">
+\begin{gather*}
+1.7174 \le \int_0^1 e^x\dee{x} \le 1.7191
+\end{gather*}
+</div>
+<p>Recall that the exact value is \(e-1 = 1.718281828\dots\text{.}\)</p></article></div></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

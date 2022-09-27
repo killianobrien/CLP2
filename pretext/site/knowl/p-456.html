@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:20+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>First we are going to get rid of the absolute value signs by splitting the  interval over which we integrate. Recalling that \(|x|=x\) whenever \(x\ge 0\) and  \(|x|=-x\) whenever \(x\le 0\text{,}\) we split the interval by  Theorem <a knowl="./knowl/thm_Intdomain.html" title="Theorem 1.2.3: Arithmetic for the Domain of Integration">1.2.3</a>(c),</p>
+<div class="displaymath">
+\begin{align*}
+\int_{-1}^1 \big(1-|x|\big)\dee{x} &amp;=\int_{-1}^0 \big(1-|x|\big)\dee{x} + \int_0^1 \big(1-|x|\big)\dee{x}\\
+&amp;=\int_{-1}^0 \big(1-(-x)\big)\dee{x} + \int_0^1 \big(1-x\big)\dee{x}\\
+&amp;=\int_{-1}^0 \big(1+x\big)\dee{x} + \int_0^1 \big(1-x\big)\dee{x}
+\end{align*}
+</div>
+<p>Now we apply parts (a) and (b) of Theorem <a knowl="./knowl/thm_Intarith.html" title="Theorem 1.2.1: Arithmetic of Integration">1.2.1</a>, and then</p>
+<div class="displaymath">
+\begin{align*}
+\int_{-1}^1 \big[1-|x|\big]\dee{x}
+&amp;=\int_{-1}^0 1\dee{x} + \int_{-1}^0 x\dee{x} + \int_0^1 1\dee{x}  - \int_0^1 x\dee{x}\\
+&amp;=[0-(-1)]+\frac{0^2-(-1)^2}{2}+[1-0]-\frac{1^2-0^2}{2}\\
+&amp;=1
+\end{align*}
+</div>
+<span class="incontext"><a href="sec_def_int.html#p-456">in-context</a></span>
+</body>
+</html>

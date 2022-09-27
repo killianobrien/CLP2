@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:15:44+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Optional — Return to the mean value theorem</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_2_ic.html"><span class="title">CLP-2 Integral Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_avg.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sec_avg.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="exercises-15.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_avg.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sec_avg.html" title="Up">Up</a><a class="next-button button toolbar-item" href="exercises-15.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_integral.html" data-scroll="chap_integral"><span class="codenumber">1</span> <span class="title">Integration</span></a></h2>
+<ul>
+<li><a href="sec_intdef.html" data-scroll="sec_intdef">Definition of the Integral</a></li>
+<li><a href="sec_def_int.html" data-scroll="sec_def_int">Basic properties of the definite integral</a></li>
+<li><a href="sec_fundamental.html" data-scroll="sec_fundamental">The Fundamental Theorem of Calculus</a></li>
+<li><a href="sec_subs.html" data-scroll="sec_subs">Substitution</a></li>
+<li><a href="sec_area.html" data-scroll="sec_area">Area between curves</a></li>
+<li><a href="sec_int_volumes.html" data-scroll="sec_int_volumes">Volumes</a></li>
+<li><a href="sec_intbyparts.html" data-scroll="sec_intbyparts">Integration by parts</a></li>
+<li><a href="sec_trigint.html" data-scroll="sec_trigint">Trigonometric Integrals</a></li>
+<li><a href="sec_trigsub.html" data-scroll="sec_trigsub">Trigonometric Substitution</a></li>
+<li><a href="sec_parfrac.html" data-scroll="sec_parfrac">Partial Fractions</a></li>
+<li><a href="sec_numeric_int.html" data-scroll="sec_numeric_int">Numerical Integration</a></li>
+<li><a href="sec_improp_int.html" data-scroll="sec_improp_int">Improper Integrals</a></li>
+<li><a href="section-13.html" data-scroll="section-13">More Integration Examples</a></li>
+</ul>
+<h2 class="link"><a href="chap_int_app.html" data-scroll="chap_int_app"><span class="codenumber">2</span> <span class="title">Applications of Integration</span></a></h2>
+<ul>
+<li><a href="sec_work.html" data-scroll="sec_work">Work</a></li>
+<li><a href="sec_avg.html" data-scroll="sec_avg">Averages</a></li>
+<li><a href="sec_com.html" data-scroll="sec_com">Centre of Mass and Torque</a></li>
+<li><a href="sec_sep_de.html" data-scroll="sec_sep_de">Separable Differential Equations</a></li>
+</ul>
+<h2 class="link"><a href="chap_seq_ser.html" data-scroll="chap_seq_ser"><span class="codenumber">3</span> <span class="title">Sequence and series</span></a></h2>
+<ul>
+<li><a href="section-18.html" data-scroll="section-18">Sequences</a></li>
+<li><a href="section-19.html" data-scroll="section-19">Series</a></li>
+<li><a href="section-20.html" data-scroll="section-20">Convergence Tests</a></li>
+<li><a href="section-21.html" data-scroll="section-21">Absolute and Conditional Convergence</a></li>
+<li><a href="section-22.html" data-scroll="section-22">Power Series</a></li>
+<li><a href="section-23.html" data-scroll="section-23">Taylor Series</a></li>
+<li><a href="sec_RatIrr.html" data-scroll="sec_RatIrr">Optional — Rational and irrational numbers</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="section-26.html" data-scroll="section-26">Pythagoras</a></li>
+<li><a href="section-27.html" data-scroll="section-27">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="section-30.html" data-scroll="section-30">Trigonometry — Special Triangles</a></li>
+<li><a href="section-31.html" data-scroll="section-31">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trigonometric Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">Highschool Material You Should be Able to Derive</a></li>
+<li><a href="section-39.html" data-scroll="section-39">Cartesian Coordinates</a></li>
+<li><a href="ap_roots.html" data-scroll="ap_roots">Roots of Polynomials</a></li>
+</ul>
+<h2 class="link"><a href="ap_complex.html" data-scroll="ap_complex"><span class="codenumber">B</span> <span class="title">Complex Numbers and Exponentials</span></a></h2>
+<ul>
+<li><a href="sec_complex_defn.html" data-scroll="sec_complex_defn">Definition and Basic Operations</a></li>
+<li><a href="sec_complex_exp.html" data-scroll="sec_complex_exp">The Complex Exponential</a></li>
+</ul>
+<h2 class="link"><a href="app_Richardson_Romberg.html" data-scroll="app_Richardson_Romberg"><span class="codenumber">C</span> <span class="title">More About Numerical Integration</span></a></h2>
+<ul>
+<li><a href="ap_Richardson.html" data-scroll="ap_Richardson">Richardson Extrapolation</a></li>
+<li><a href="ap_Romberg.html" data-scroll="ap_Romberg">Romberg Integration</a></li>
+<li><a href="ap_adaptive.html" data-scroll="ap_adaptive">Adaptive Quadrature</a></li>
+</ul>
+<h2 class="link"><a href="app_ODE_numerical.html" data-scroll="app_ODE_numerical"><span class="codenumber">D</span> <span class="title">Numerical Solution of ODE's</span></a></h2>
+<ul>
+<li><a href="ap_derivation.html" data-scroll="ap_derivation">Simple ODE Solvers — Derivation</a></li>
+<li><a href="ap_error_behaviour.html" data-scroll="ap_error_behaviour">Simple ODE Solvers —  Error Behaviour</a></li>
+<li><a href="ap_variable.html" data-scroll="ap_variable">Variable Step Size Methods</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">E</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">F</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">G</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp2-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="subsection" id="subsection-31"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2.1</span> <span class="title">Optional — Return to the mean value theorem</span>
+</h3>
+<p id="p-3441">Here is another application of the Definition <a knowl="./knowl/def_AVaverage.html" title="Definition 2.2.2">2.2.2</a> of the average value of a function on an interval. The following theorem can be  thought of as an analogue of the mean value theorem (which was covered in your  differential calculus class) but for integrals. The theorem says that a  continuous function \(f(x)\) must be exactly equal to its average value for some \(x\text{.}\) For example, if you  went for a drive along the \(x\)-axis and you were at \(x(a)\) at time \(a\) and at \(x(b)\) at  time \(b\text{,}\) then your velocity \(x'(t)\) had to be exactly your average velocity \(\frac{x(b)-x(a)}{b-a}\) at some time \(t\) between \(a\) and \(b\text{.}\) In particular, if your average velocity was greater than the speed limit, you were definitely speeding at some point during the trip. This is, of course, no great surprise<a knowl="" class="id-ref" refid="hk-fn-128" id="fn-128"><sup> 8 </sup></a><span id="hk-fn-128" class="hidden-content tex2jax_ignore"><span class="footnote">There are many unsurprising things that are true, but there are also many unsurprising things that surprisingly turn out to be false. Mathematicians like to prove things - surprising or not.</span></span>.</p>
+<article class="theorem-like" id="thm_AVmvt"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">2.2.8</span> <span class="title">Mean Value Theorem for Integrals</span>
+</h6>
+<p id="p-3442">Let \(f(x)\) be a continuous function on the interval \(a\le x\le b\text{.}\) Then there is some \(c\) obeying \(a\lt c \lt b\) such that</p>
+<div class="displaymath">
+\begin{gather*}
+\frac{1}{b-a}\int_a^b f(x)\dee{x}=f(c) \qquad\text{or}\qquad \int_a^b f(x)\dee{x} = f(c)\,(b-a)
+\end{gather*}
+</div></article><article class="hiddenproof" id="proof-16"><a knowl="" class="id-ref" refid="hk-proof-16"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-16" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-3443">We will apply the mean value theorem (Theorem 2.13.4 in the CLP-1 text) to the function</p>
+<div class="displaymath">
+\begin{equation*}
+F(x) = \int_a^x f(t)\,\dee{t}
+\end{equation*}
+</div>
+<p>By the part 1 of the fundamental theorem of calculus (Theorem <a knowl="./knowl/thm_INTfundthmofcalc.html" title="Theorem 1.3.1: Fundamental Theorem of Calculus">1.3.1</a>), \(F'(x)=f(x)\text{,}\) so the mean value theorem says that there is a \(a\lt c\lt b\) with</p>
+<div class="displaymath">
+\begin{align*}
+f(c) &amp;= F'(c) = \frac{F(b)-F(a)}{b-a}
+=\frac{1}{b-a}\left\{\int_a^b f(t)\,\dee{t}-\int_a^a f(t)\,\dee{t}\right\}\\
+&amp;=\frac{1}{b-a}\int_a^b f(x)\,\dee{x}
+\end{align*}
+</div></article></div>
+<p id="p-3444">In the next section, we will encounter an application in which we want to take the average value of a function \(f(x)\text{,}\) but in doing so we want some values of \(x\) to count more than other values of \(x\text{.}\) That is, we want to weight some \(x\)'s more than other \(x\)'s. To do so, we choose a “weight function” \(w(x)\ge 0\) with \(w(x)\) larger for more important \(x\)'s.  Then we define the weighted average of \(f\) as follows.</p>
+<article class="definition-like" id="def_Wtaverage"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.2.9</span>
+</h6>
+<p id="p-3445">Let \(f(x)\) and \(w(x)\) be integrable functions defined on the interval \(a\le x\le b\) with \(w(x)\ge 0\) for all \(a\le x\le b\) and with \(\int_a^b w(x)\,\dee{x}&gt;0\text{.}\)  The average value of \(f\) on that interval, weighted by \(w\text{,}\) is</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{\int_a^b f(x)\,w(x)\,\dee{x}}{\int_a^b w(x)\,\dee{x}}
+\end{equation*}
+</div>
+<p>We typically refer to this simply as the weighted average of \(f\text{.}\)</p></article><p id="p-3446">Here are a few remarks concerning this definition.</p>
+<ul class="disc">
+<li id="li-1621">The definition has been rigged so that, if \(f(x)=1\) for all \(x\text{,}\) then the weighted average of \(f\) is \(1\text{,}\) no matter what weight function \(w(x)\) is used.</li>
+<li id="li-1622">If the weight function \(w(x)=C\) for some constant \(C&gt;0\) then the weighted average<div class="displaymath">
+\begin{equation*}
+\frac{\int_a^b f(x)\,w(x)\,\dee{x}}{\int_a^b w(x)\,\dee{x}}
+=\frac{\int_a^b f(x)\,C\,\dee{x}}{\int_a^b C\,\dee{x}}
+=\frac{\int_a^b f(x)\,\dee{x}}{b-a}
+\end{equation*}
+</div>is just the usual average.</li>
+<li id="li-1623">For any function \(w(x)\ge 0\) and any \(a\lt b\text{,}\) we have \(\int_a^b w(x)\, \dee{x}\ge 0\text{.}\) But for the definition of weighted average to make sense, we need to be able to divide by \(\int_a^b w(x)\, \dee{x}\text{.}\) So we need \(\int_a^b w(x)\, \dee{x}\ne 0\text{.}\)</li>
+</ul>
+<p id="p-3447">The next theorem says that a continuous function \(f(x)\) must be equal to its weighted average at some point \(x\text{.}\)</p>
+<article class="theorem-like" id="thm_AVwtmvt"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">2.2.10</span> <span class="title">Mean Value Theorem for Weighted Integrals</span>
+</h6>
+<p id="p-3448">Let \(f(x)\) and \(w(x)\) be continuous functions on the interval \(a\le x\le b\text{.}\) Assume that \(w(x)\gt 0\) for all \(a\lt x\lt b\text{.}\) Then there is some \(c\) obeying \(a\lt c \lt b\) such that</p>
+<div class="displaymath">
+\begin{gather*}
+\frac{\int_a^b f(x)\,w(x)\,\dee{x}}{\int_a^b w(x)\,\dee{x}}=f(c) \qquad\text{or}\qquad
+\int_a^b f(x)\,w(x)\,\dee{x} = f(c)\int_a^b w(x)\,\dee{x}
+\end{gather*}
+</div></article><article class="hiddenproof" id="proof-17"><a knowl="" class="id-ref" refid="hk-proof-17"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-17" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-3449">We will apply the generalised mean value theorem (Theorem 3.4.38 in the CLP-1 text) to</p>
+<div class="displaymath">
+\begin{equation*}
+F(x) = \int_a^x f(t)\,w(t)\dee{t}\qquad
+G(x) = \int_a^x w(t)\dee{t}
+\end{equation*}
+</div>
+<p>By the part 1 of the fundamental theorem of calculus (Theorem <a knowl="./knowl/thm_INTfundthmofcalc.html" title="Theorem 1.3.1: Fundamental Theorem of Calculus">1.3.1</a>), \(F'(x)=f(x)w(x)\) and \(G'(x)=w(x)\text{,}\) so the generalised mean value theorem says that there is a \(a\lt c\lt b\) with</p>
+<div class="displaymath">
+\begin{align*}
+f(c) &amp;= \frac{F'(c)}{G'(c)} = \frac{F(b)-F(a)}{G(b)-G(a)}
+=\frac{\int_a^b f(t)\,w(t)\dee{t}-\int_a^a f(t)w(t)\,\dee{t}}
+{\int_a^b w(t)\dee{t}-\int_a^a w(t)\dee{t}}\\
+&amp;=\frac{\int_a^b f(t)\,w(t)\,\dee{t}}{\int_a^b w(t)\,\dee{t}}
+\end{align*}
+</div></article></div>
+<article class="example-like" id="eg_weightedAverage"><a knowl="" class="id-ref" refid="hk-eg_weightedAverage"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.2.11</span>
+</h6></a></article><div id="hk-eg_weightedAverage" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-3450">In this example, we will take a number of weighted averages of the simple function \(f(x)=x\) over the simple interval \(a=1\le x\le 2=b\text{.}\) As \(x\) increases from \(1\) to \(2\text{,}\) the function \(f(x)\) increases linearly from \(1\) to \(2\text{.}\) So it is no shock that the ordinary average of \(f\) is exactly its middle value:</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{b-a}\int_a^b f(t)\,\dee{t}
+=\frac{1}{2-1}\int_1^2 t\,\dee{t}
+=\frac{3}{2}
+\end{equation*}
+</div>
+<p>Pick any natural number \(N\ge 1\) and consider the weight function \(w_N(x)=x^N\text{.}\) Note that \(w_N(x)\) increases as \(x\) increases. So \(w_N(x)\) weights bigger \(x\)'s more than it weights smaller \(x\)'s.  In particular \(w_N\) weights the point \(x=2\) by a factor of \(2^N\) (which is greater than \(1\) and grows to infinity as \(N\) grows to infinity) more than it weights the point \(x=1\text{.}\) The weighted average of \(f\) is</p>
+<div class="displaymath">
+\begin{align*}
+\frac{\int_a^b f(t)\,w_N(t)\,\dee{t}}{\int_a^b w_N(t)\,\dee{t}}
+&amp;=\frac{\int_1^2 t^{N+1}\,\dee{t}}{\int_1^2 t^N\,\dee{t}}
+=\frac{\frac{2^{N+2}-1}{N+2}}{\frac{2^{N+1}-1}{N+1}}
+=\frac{N+1}{N+2}\ \frac{2^{N+2}-1}{2^{N+1}-1} \\
+&amp;=\begin{cases}
+\frac{2\times 7}{3\times 3}  = 1.555  &amp;\text{if }N=1 \\
+\frac{3\times 15}{4\times 7} = 1.607  &amp;\text{if }N=2 \\
+\frac{4\times 31}{5\times 15}= 1.653  &amp;\text{if }N=3 \\
+\frac{5\times 63}{6\times 31}= 1.694  &amp;\text{if }N=4 
+\\ 1.889  &amp;\text{if }N=16    
+\\ 1.992  &amp;\text{if }N=256  
+\end{cases}
+\end{align*}
+</div>
+<p>As we would expect, the \(w_N\)-weighted average is between \(1.5\) (which is the ordinary, unweighted, average) and \(2\) (which is the biggest value of \(f\) in the interval) and grows as \(N\) grows. The limit as \(N\rightarrow\infty\) of the \(w_N\)-weighted average is</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{N\rightarrow\infty}\frac{N+1}{N+2}\ \frac{2^{N+2}-1}{2^{N+1}-1} 
+&amp;=\lim_{N\rightarrow\infty}\frac{N+2-1}{N+2}\ \frac{2^{N+2}-2+1}{2^{N+1}-1} \\
+&amp;=\lim_{N\rightarrow\infty}\left[1-\frac{1}{N+2}\right]\ 
+\left[2+\frac{1}{2^{N+1}-1}\right] \\
+&amp;=2
+\end{align*}
+</div></article></div>
+<article class="example-like" id="eg_needPositive"><a knowl="" class="id-ref" refid="hk-eg_needPositive"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.2.12</span>
+</h6></a></article><div id="hk-eg_needPositive" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-3451">Here is an example which shows what can go wrong with Theorem <a knowl="./knowl/thm_AVwtmvt.html" title="Theorem 2.2.10: Mean Value Theorem for Weighted Integrals">2.2.10</a> if we allow the weight function \(w(x)\) to change sign. Let \(a=-0.99\) and \(b=1\text{.}\) Let</p>
+<div class="displaymath">
+\begin{align*}
+w(x)&amp;=\begin{cases}
+1&amp;\text{if }x\ge 0 \\
+-1&amp;\text{if }x\lt 0 
+\end{cases} \\
+f(x)&amp;=\begin{cases}
+x&amp;\text{if }x\ge 0 \\
+0&amp;\text{if }x\lt 0 
+\end{cases} 
+\end{align*}
+</div>
+<p>Then</p>
+<div class="displaymath">
+\begin{align*}
+\int_a^b f(x)\,w(x)\,\dee{x} &amp;= \int_0^1 x\,\dee{x} =\frac{1}{2} \\
+\int_a^b w(x)\,\dee{x} &amp;= \int_0^1 \dee{x} -\int_{-0.99}^0\dee{x}
+= 1 - 0.99
+= 0.01
+\end{align*}
+</div>
+<p>As \(c\) runs from \(a\) to \(b\text{,}\) \(f(c)\int_a^b w(x)\,\dee{x}=0.01 f(c)\) runs from \(0\) to \(0.01\) and, in particular, never takes a value anywhere near \(\int_a^b f(x)\,w(x)\,\dee{x}=\frac{1}{2}\text{.}\) There is no \(c\) value which works.</p></article></div></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

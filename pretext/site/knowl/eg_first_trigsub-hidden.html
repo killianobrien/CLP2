@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:42+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="example-like"><p>Compute the area of the unit circle lying in the first quadrant.</p>
+<p><em class="alert">Solution:</em> We know that the answer is \(\frac\pi4\text{,}\) but we can also compute this as an  integral — we saw this way back in Example <a knowl="./knowl/eg_quarter_circle.html" title="Example 1.1.16: Evaluating \(\int_0^1 \sqrt{1-x^2}\dee{x}\)">1.1.16</a>:</p>
+<div class="displaymath">
+\begin{align*}
+\text{area} &amp;= \int_0^1 \sqrt{1-x^2} \dee{x}
+\end{align*}
+</div>
+<ul class="disc">
+<li>To simplify the integrand we substitute \(x=\sin u\text{.}\) With this choice  \(\diff{x}{u}=\cos u\) and so \(\dee{x}=\cos u \dee{u}\text{.}\)</li>
+<li>We also need to translate the limits of integration and it is perhaps  easiest to do this by writing \(u\) as a function of \(x\) — namely \(u(x)=\arcsin  x\text{.}\) Hence \(u(0)=0\) and \(u(1)=\frac{\pi}{2}\text{.}\)</li>
+<li>Hence the integral becomes<div class="displaymath">
+\begin{align*}
+\int_0^1 \sqrt{1-x^2}\dee{x}
+&amp;= \int_0^{\frac{\pi}{2}} \sqrt{1-\sin^2u} \cdot \cos u \dee{u}\\
+&amp;= \int_0^{\frac{\pi}{2}} \sqrt{\cos^2u} \cdot \cos u \dee{u}\\
+&amp;= \int_0^{\frac{\pi}{2}} \cos^2 u \dee{u}
+\end{align*}
+</div>Notice that here we have used that the <em class="emphasis">positive</em> square root \(\sqrt{\cos^2  u} = |\cos u|=\cos u\) because  \(\cos(u)\geq 0\) for \(0 \leq u \leq  \frac\pi2\text{.}\)</li>
+<li>To go further we use the techniques of Section <a href="sec_trigint.html" class="xref" title="Section 1.8: Trigonometric Integrals">1.8</a>.<div class="displaymath">
+\begin{align*}
+\int_0^1 \sqrt{1-x^2}\dee{x}
+&amp;= \int_0^{\frac{\pi}{2}}\cos^2 u \dee{u} \qquad\qquad \text{and since $\cos^2u=\frac{1+\cos2u}{2}$}\\
+&amp;= \frac{1}{2}\int_0^{\frac{\pi}{2}} (1+\cos(2 u)) \dee{u}\\
+&amp;= \frac{1}{2} \bigg[u + \frac{1}{2}\sin(2u) \bigg]_0^{\frac{\pi}{2}}\\
+&amp;= \frac{1}{2} \left(\frac{\pi}{2}-0 + \frac{\sin\pi}{2}-\frac{\sin 0}{2} \right)\\
+&amp;= \frac{\pi}{4}\checkmark
+\end{align*}
+</div>
+</li>
+</ul></article></body>
+</html>

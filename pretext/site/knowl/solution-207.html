@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:37+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">1.7.2.23.1</span>
+</h6>
+<p>It's not obvious where to start, but in general it's nice to have the arguments of our trig functions the same. So, we use the identity \(\sin(2x)=2\sin x \cos x\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+\int e^{\cos x}\sin(2x)\dee{x}&amp;=2\int e^{\cos x}\cos x \sin x\,\dee{x}\\
+\end{align*}
+<p class="intertext">Now we can use the substitution \(w=\cos x\text{,}\) \(\dee{w}=-\sin x \dee{x}\text{.}\)</p>
+\begin{align*}
+&amp;=-2\int we^w\dee{w}\\
+\end{align*}
+<p class="intertext">From here the integral should look more familiar. We can use integration by parts with \(u=w\text{,}\) \(\dee{v} = e^w\dee{w}\text{,}\) \(\dee{u}=\dee{w}\text{,}\) and \(v=e^w\text{.}\)</p>
+\begin{align*}
+&amp;=-2\left[\underbrace{we^w}_{uv} - \int \underbrace{e^w\dee{w}}_{v\dee{u}}\right]\\
+&amp;=2e^w\left[1-w\right]+C\\
+&amp;=2e^{\cos x}[1-\cos x]+C
+\end{align*}
+</div>
+</div>
+<span class="incontext"><a href="exercises-7.html#solution-207">in-context</a></span>
+</body>
+</html>

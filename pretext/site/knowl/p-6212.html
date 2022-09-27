@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:24:43+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Recall that we have already found \(y_0,\cdots,y_n\) and are in the process of finding \(y_{n+1}\text{.}\) So we already have an  approximation for \(\varphi(t_n)\text{,}\) namely \(y_n\text{.}\) But we still need to approximate \(\varphi(t_{n+1})\text{.}\) We can do so by using one step of the original Euler method! That is</p>
+<div class="displaymath">
+\begin{equation*}
+\varphi(t_{n+1})\approx \varphi(t_n)+\varphi'(t_n)h
+\approx y_n+f(t_n,y_n)h
+\end{equation*}
+</div>
+<p>So our approximation  of \(\frac{1}{2}\big[f\big(t_n,\varphi(t_n)\big)+f\big(t_{n+1},\varphi(t_{n+1})\big)\big]\) is</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{2}\Big[f\big(t_n,y_n\big)+f\Big(t_{n+1},y_n+f(t_n,y_n)h\Big)\Big]
+\end{equation*}
+</div>
+<p>and</p>
+<div class="displaymath">
+\begin{align*}
+&amp;\text{Improved Euler's approximate value for }
+\int_{t_n}^{t_{n+1}}f\big(t,\varphi(t)\big)\ \dee{t} \text{ is }\\
+&amp;\hskip0.7in
+\frac{1}{2}\Big[f\big(t_n,y_n\big)+f\Big(t_{n+1},y_n+f(t_n,y_n)h\Big)\Big]h
+\end{align*}
+</div>
+<p>Putting everything together<a knowl="./knowl/fn-257-hidden.html" title="Footnote D.1.5"><sup> 5 </sup></a>, the  improved Euler's method algorithm is</p>
+<span class="incontext"><a href="ap_imp_euler.html#p-6212">in-context</a></span>
+</body>
+</html>

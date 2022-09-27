@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:35+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>We'll use the same ideas that led to the method of integration by parts. (You can review this in your text, or see the solution to Question <a knowl="./knowl/p1_7_difftoint.html" title="Exercise 1.7.2.1">1</a> in this section.) According to the quotient rule,</p>
+<div class="displaymath">
+\begin{align*}
+\diff{}{x}\left\{\dfrac{f(x)}{g(x)}\right\} &amp;= \frac{g(x)f'(x)-f(x)g'(x)}{g^2(x)}.\\
+\end{align*}
+<p class="intertext">Antidifferentiating both sides gives us:</p>
+\begin{align*}
+\int\diff{}{x}\left\{\dfrac{f(x)}{g(x)}\right\} \dee{x}&amp;= \int\frac{g(x)f'(x)-f(x)g'(x)}{g^2(x)}\dee{x}\\
+\dfrac{f(x)}{g(x)} +C&amp;= \int\frac{f'(x)}{g(x)}\dee{x}-\int\frac{f(x)g'(x)}{g^2(x)}\dee{x}\\
+\int\frac{f'(x)}{g(x)}\dee{x}
+&amp;= \dfrac{f(x)}{g(x)}+\int\frac{f(x)g'(x)}{g^2(x)}\dee{x}
+\end{align*}
+</div>
+<p>In the last line, the “\(+C\)” has been absorbed into the indefinite integral on the right hand side.</p>
+<p>This is exactly the integration by parts formula for the functions \(u=1/g\) and \(v=f\text{.}\)</p>
+</div></body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:20:22+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>(b)  We have a quadratic function underneath a square root. In the absence of an easier substitution, we can get rid of the square root with a trigonometric substitution. Substitute \(x=\tan y\text{,}\) \(\dee{x}=\sec^2 y\,\dee{y}\text{.}\) When \(x=0\text{,}\) \(\tan y=0\) so \(y=0\text{.}\) When \(x=1\text{,}\) \(\tan y=1\) so \(y=\frac{\pi}{4}\text{.}\) Also \(\sqrt{1+x^2}
+=\sqrt{1+\tan^2y}=\sqrt{\sec^2 y}=\sec y\text{,}\) since \(\sec y\ge 0\) for all \(0\le y\le\frac{\pi}{4}\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+\int_0^1\frac{1}{\sqrt{1+x^2}}\,\dee{x}
+&amp;=\int_0^{\pi/4} \frac{\sec^2y\,\dee{y}}{\sec y}
+=\int_0^{\pi/4} \sec y\,\dee{y}\\
+\amp=\Big[\log|\sec y+\tan y|\Big]_0^{\pi/4}\\
+&amp;=\log\left| \sec \frac{\pi}{4}  + \tan\frac{\pi}{4}\right|-\log\left| \sec 0 + \tan 0\right|\\
+&amp;=\log\left| \sqrt{2}  + 1\right|-\log\left| 1+  0\right|=\log(\sqrt{2}+1)\\
+\text{So,}\qquad\int_0^1\frac{1}{\sqrt{1+x^2}}\,\dee{x}&amp;=\log(\sqrt{2}+1)
+\end{align*}
+</div>
+<span class="incontext"><a href="exercises-13.html#p-2960">in-context</a></span>
+</body>
+</html>

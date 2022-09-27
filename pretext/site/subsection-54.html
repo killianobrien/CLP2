@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:16:45+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Definitions</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_2_ic.html"><span class="title">CLP-2 Integral Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-22.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="section-22.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="subsection-55.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-22.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="section-22.html" title="Up">Up</a><a class="next-button button toolbar-item" href="subsection-55.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_integral.html" data-scroll="chap_integral"><span class="codenumber">1</span> <span class="title">Integration</span></a></h2>
+<ul>
+<li><a href="sec_intdef.html" data-scroll="sec_intdef">Definition of the Integral</a></li>
+<li><a href="sec_def_int.html" data-scroll="sec_def_int">Basic properties of the definite integral</a></li>
+<li><a href="sec_fundamental.html" data-scroll="sec_fundamental">The Fundamental Theorem of Calculus</a></li>
+<li><a href="sec_subs.html" data-scroll="sec_subs">Substitution</a></li>
+<li><a href="sec_area.html" data-scroll="sec_area">Area between curves</a></li>
+<li><a href="sec_int_volumes.html" data-scroll="sec_int_volumes">Volumes</a></li>
+<li><a href="sec_intbyparts.html" data-scroll="sec_intbyparts">Integration by parts</a></li>
+<li><a href="sec_trigint.html" data-scroll="sec_trigint">Trigonometric Integrals</a></li>
+<li><a href="sec_trigsub.html" data-scroll="sec_trigsub">Trigonometric Substitution</a></li>
+<li><a href="sec_parfrac.html" data-scroll="sec_parfrac">Partial Fractions</a></li>
+<li><a href="sec_numeric_int.html" data-scroll="sec_numeric_int">Numerical Integration</a></li>
+<li><a href="sec_improp_int.html" data-scroll="sec_improp_int">Improper Integrals</a></li>
+<li><a href="section-13.html" data-scroll="section-13">More Integration Examples</a></li>
+</ul>
+<h2 class="link"><a href="chap_int_app.html" data-scroll="chap_int_app"><span class="codenumber">2</span> <span class="title">Applications of Integration</span></a></h2>
+<ul>
+<li><a href="sec_work.html" data-scroll="sec_work">Work</a></li>
+<li><a href="sec_avg.html" data-scroll="sec_avg">Averages</a></li>
+<li><a href="sec_com.html" data-scroll="sec_com">Centre of Mass and Torque</a></li>
+<li><a href="sec_sep_de.html" data-scroll="sec_sep_de">Separable Differential Equations</a></li>
+</ul>
+<h2 class="link"><a href="chap_seq_ser.html" data-scroll="chap_seq_ser"><span class="codenumber">3</span> <span class="title">Sequence and series</span></a></h2>
+<ul>
+<li><a href="section-18.html" data-scroll="section-18">Sequences</a></li>
+<li><a href="section-19.html" data-scroll="section-19">Series</a></li>
+<li><a href="section-20.html" data-scroll="section-20">Convergence Tests</a></li>
+<li><a href="section-21.html" data-scroll="section-21">Absolute and Conditional Convergence</a></li>
+<li><a href="section-22.html" data-scroll="section-22">Power Series</a></li>
+<li><a href="section-23.html" data-scroll="section-23">Taylor Series</a></li>
+<li><a href="sec_RatIrr.html" data-scroll="sec_RatIrr">Optional — Rational and irrational numbers</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="section-26.html" data-scroll="section-26">Pythagoras</a></li>
+<li><a href="section-27.html" data-scroll="section-27">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="section-30.html" data-scroll="section-30">Trigonometry — Special Triangles</a></li>
+<li><a href="section-31.html" data-scroll="section-31">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trigonometric Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">Highschool Material You Should be Able to Derive</a></li>
+<li><a href="section-39.html" data-scroll="section-39">Cartesian Coordinates</a></li>
+<li><a href="ap_roots.html" data-scroll="ap_roots">Roots of Polynomials</a></li>
+</ul>
+<h2 class="link"><a href="ap_complex.html" data-scroll="ap_complex"><span class="codenumber">B</span> <span class="title">Complex Numbers and Exponentials</span></a></h2>
+<ul>
+<li><a href="sec_complex_defn.html" data-scroll="sec_complex_defn">Definition and Basic Operations</a></li>
+<li><a href="sec_complex_exp.html" data-scroll="sec_complex_exp">The Complex Exponential</a></li>
+</ul>
+<h2 class="link"><a href="app_Richardson_Romberg.html" data-scroll="app_Richardson_Romberg"><span class="codenumber">C</span> <span class="title">More About Numerical Integration</span></a></h2>
+<ul>
+<li><a href="ap_Richardson.html" data-scroll="ap_Richardson">Richardson Extrapolation</a></li>
+<li><a href="ap_Romberg.html" data-scroll="ap_Romberg">Romberg Integration</a></li>
+<li><a href="ap_adaptive.html" data-scroll="ap_adaptive">Adaptive Quadrature</a></li>
+</ul>
+<h2 class="link"><a href="app_ODE_numerical.html" data-scroll="app_ODE_numerical"><span class="codenumber">D</span> <span class="title">Numerical Solution of ODE's</span></a></h2>
+<ul>
+<li><a href="ap_derivation.html" data-scroll="ap_derivation">Simple ODE Solvers — Derivation</a></li>
+<li><a href="ap_error_behaviour.html" data-scroll="ap_error_behaviour">Simple ODE Solvers —  Error Behaviour</a></li>
+<li><a href="ap_variable.html" data-scroll="ap_variable">Variable Step Size Methods</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">E</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">F</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">G</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp2-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="subsection" id="subsection-54"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.5.1</span> <span class="title">Definitions</span>
+</h3>
+<article class="definition-like" id="def_SRpowerSeries"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">3.5.1</span>
+</h6>
+<p id="p-5340">A series of the form</p>
+<div class="displaymath">
+\begin{equation*}
+A_0 +A_1(x-c) + A_2(x-c)^2 + A_3 (x-c)^3 + \cdots =\sum_{n=0}^\infty A_n(x-c)^n
+\end{equation*}
+</div>
+<p>is called a <em class="emphasis">power series in \((x-c)\)</em> or a  <em class="emphasis">power series centered on \(c\)</em>. The numbers \(A_n\) are called the coefficients of the power series.</p>
+<p id="p-5341">One often considers power series centered on \(c=0\) and then the series  reduces to</p>
+<div class="displaymath">
+\begin{equation*}
+A_0 +A_1 x + A_2 x^2 + A_3 x^3 + \cdots =\sum_{n=0}^\infty A_n x^n
+\end{equation*}
+</div></article><p id="p-5342">For example \(\sum_{n=0}^\infty \frac{x^n}{n!}\) is the power series  with \(c=0\) and \(A_n=\frac{1}{n!}\text{.}\) Typically, as in that case,  the coefficients \(A_n\) are given fixed numbers,  but the “\(x\)” is to be thought of as a variable.  Thus each power series is really a whole family of series —  a different series for each value of \(x\text{.}\)</p>
+<p id="p-5343">One possible value of \(x\) is \(x=c\) and then the series reduces <a knowl="" class="id-ref" refid="hk-fn-184" id="fn-184"><sup> 2 </sup></a><span id="hk-fn-184" class="hidden-content tex2jax_ignore"><span class="footnote"><em class="emphasis">By convention</em>, when the term \((x-c)^0\)  appears in a power series, it has value \(1\) for all values of \(x\text{,}\)  even \(x=c\text{.}\)</span></span> to</p>
+<div class="displaymath">
+\begin{align*}
+\sum_{n=0}^\infty A_n (x-c)^n\Big|_{x=c} &amp;=\sum_{n=0}^\infty A_n (c-c)^n\\
+&amp;=\underbrace{A_0}_{n=0}
++\underbrace{0}_{n=1}
++\underbrace{0}_{n=2}
++\underbrace{0}_{n=3}
++\cdots
+\end{align*}
+</div>
+<p>and so simply converges to \(A_0\text{.}\)</p>
+<p id="p-5344">We now know that a power series converges when \(x=c\text{.}\) We can now  use our convergence tests to determine for what other values  of \(x\) the series converges. Perhaps most straightforward is the  ratio test. The \(n^{\rm th}\) term in the series  \(\sum_{n=0}^\infty A_n(x-c)^n\) is \(a_n=A_n(x-c)^n\text{.}\) To apply the ratio test we need to compute the limit</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{n \to \infty}\left|\frac{a_{n+1}}{a_n}\right|
+&amp;=\lim_{n \to \infty} \left|\frac{A_{n+1}(x-c)^{n+1}}{A_n(x-c)^n}\right|\\
+&amp;=\lim_{n \to \infty} \left|\frac{A_{n+1}}{A_n}\right|\cdot |x-c|\\
+&amp;= |x-c| \cdot \lim_{n \to \infty} \left|\frac{A_{n+1}}{A_n}\right|.
+\end{align*}
+</div>
+<p>When we do so there are several possible outcomes.</p>
+<ul class="disc">
+<li id="li-2320">
+<p id="p-5345">If the limit of ratios exists and is nonzero</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{n\rightarrow\infty}\Big|\frac{A_{n+1}}{A_n}\Big| &amp;= A \neq 0,
+\end{align*}
+</div>
+<p>then the ratio test says that the series \(\sum_{n=0}^\infty A_n(x-c)^n\)</p>
+<ul class="circle">
+<li id="li-2321">converges when \(A \cdot |x-c| \lt 1\text{,}\) i.e. when \(|x-c| \lt \frac{1}{A}\text{,}\)  and</li>
+<li id="li-2322">diverges when \(A \cdot |x-c| \gt 1\text{,}\) i.e. when \(|x-c|  \gt  \frac{1}{A}\text{.}\)</li>
+</ul>
+<p>Because of this, when the limit exists, the quantity</p>
+<article class="theorem-like" id="eq_SRradConv"><h6 class="heading">
+<span class="type">Equation</span> <span class="codenumber">3.5.2</span> <span class="title">Radius of convergence</span>
+</h6>
+<div class="displaymath" id="p-5346">
+\begin{align*}
+R&amp;=\frac{1}{A}
+=\bigg[\lim_{n\rightarrow\infty}\Big|\frac{A_{n+1}}{A_n}\Big|\bigg]^{-1}
+\end{align*}
+</div></article><p id="p-5347">is called the <em class="emphasis">radius of convergence</em> of the series <a knowl="" class="id-ref" refid="hk-fn-185" id="fn-185"><sup> 3 </sup></a><span id="hk-fn-185" class="hidden-content tex2jax_ignore"><span class="footnote">The  use of the word “radius” might seem a little odd here, since we  are really describing the interval in the real line where the series  converges. However, when one starts to consider power series over complex numbers, the radius of convergence does describe a circle inside the  complex plane and so “radius” is a more natural descriptor.</span></span>.</p>
+</li>
+<li id="li-2323">If the limit of ratios exists and is zero<div class="displaymath">
+\begin{align*}
+\lim_{n\rightarrow\infty}\Big|\frac{A_{n+1}}{A_n}\Big| &amp;= 0
+\end{align*}
+</div>then \(\lim_{n\rightarrow\infty}\Big|\frac{A_{n+1}}{A_n}\Big||x-c| =0\)  for every \(x\) and the ratio test tells us that the  series  \(\sum_{n=0}^\infty A_n(x-c)^n\) converges for every number \(x\text{.}\)  In this case we say that the series has an infinite radius of convergence.</li>
+<li id="li-2324">If the limit of ratios diverges to \(+\infty\)<div class="displaymath">
+\begin{align*}
+\lim_{n\rightarrow\infty}\Big|\frac{A_{n+1}}{A_n}\Big| &amp;= +\infty
+\end{align*}
+</div>then \(\lim_{n\rightarrow\infty}\Big|\frac{A_{n+1}}{A_n}\Big||x-c| =+\infty\) for every \(x\ne c\text{.}\) The ratio test then tells us that the series   \(\sum_{n=0}^\infty A_n(x-c)^n\) diverges for every number \(x\ne c\text{.}\) As we have seen above, when \(x=c\text{,}\) the series reduces to  \(A_0+0+0+0+0+\cdots\text{,}\) which of course converges. In this case we say that the series has radius of convergence zero.</li>
+<li id="li-2325">If \(\Big|\frac{A_{n+1}}{A_n}\Big|\) does not approach a limit as \(n\rightarrow\infty\text{,}\) then we learn nothing from the ratio test and we must use other tools to understand the convergence of the series.</li>
+</ul>
+<p>All of these possibilities do happen. We give an example of each below. But first, the concept of “radius of convergence” is important enough to warrant a formal definition.</p>
+<article class="definition-like" id="def_SRradiusConvergence"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">3.5.3</span>
+</h6>
+<ol id="p-5348" class="lower-alpha">
+<li id="li-2326">Let \(0 \lt R \lt \infty\text{.}\) If \(\sum_{n=0}^\infty A_n(x-c)^n\)  converges for \(|x-c| \lt R\text{,}\)  and diverges for \(|x-c|  \gt  R\text{,}\) then we say that the series has radius of convergence \(R\text{.}\)</li>
+<li id="li-2327">If \(\sum_{n=0}^\infty A_n(x-c)^n\) converges for every number \(x\text{,}\) we say that the series has an infinite radius of convergence.</li>
+<li id="li-2328">If \(\sum_{n=0}^\infty A_n(x-c)^n\) diverges for every \(x\ne c\text{,}\) we say that the series has radius of convergence zero.</li>
+</ol></article><article class="example-like" id="eg_PWRa"><a knowl="" class="id-ref" refid="hk-eg_PWRa"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.5.4</span> <span class="title">Finite nonzero radius of convergence</span>
+</h6></a></article><div id="hk-eg_PWRa" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-5349">We already know that, if \(a\ne 0\text{,}\) the geometric series \(\sum\limits_{n=0}^\infty a x^n\) converges when \(|x| \lt 1\) and diverges when \(|x|\ge 1\text{.}\) So, in the terminology of Definition <a knowl="./knowl/def_SRradiusConvergence.html" title="Definition 3.5.3">3.5.3</a>, the geometric series has radius of convergence \(R=1\text{.}\) As a consistency check, we can also compute \(R\) using <a knowl="./knowl/eq_SRradConv.html" title="Equation 3.5.2: Radius of convergence">3.5.2</a>. The series \(\sum\limits_{n=0}^\infty a x^n\) has \(A_n=a\text{.}\) So</p>
+<div class="displaymath">
+\begin{equation*}
+R=\bigg[\lim_{n\rightarrow\infty}\Big|\frac{A_{n+1}}{A_n}\Big|\bigg]^{-1}
+=\Big[\lim_{n\rightarrow\infty}1\Big]^{-1}
+=1
+\end{equation*}
+</div>
+<p>as expected.</p></article></div>
+<article class="example-like" id="eg_PWRb"><a knowl="" class="id-ref" refid="hk-eg_PWRb"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.5.5</span> <span class="title">Radius of convergence = \(+\infty\)</span>
+</h6></a></article><div id="hk-eg_PWRb" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-5350">The series \(\sum\limits_{n=0}^\infty \frac{x^n}{n!}\) has \(A_n=\frac{1}{n!}\text{.}\) So</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{n\rightarrow\infty}\Big|\frac{A_{n+1}}{A_n}\Big|
+&amp;=\lim_{n\rightarrow\infty}\frac{\frac{1}{(n+1)!}}{\frac{1}{n!}}\\
+&amp; =\lim_{n\rightarrow\infty}\frac{n!}{(n+1)!}\\
+&amp; =\lim_{n\rightarrow\infty}\frac{1\times 2\times 3\times\cdots\times n}
+{1\times 2\times 3\times\cdots\times n\times(n+1)}\\
+&amp;=\lim_{n\rightarrow\infty}\frac{1}{n+1}\\
+&amp;=0
+\end{align*}
+</div>
+<p>and \(\sum\limits_{n=0}^\infty \frac{x^n}{n!}\) has radius of  convergence \(\infty\text{.}\) It converges for every \(x\text{.}\)</p></article></div>
+<article class="example-like" id="eg_PWRc"><a knowl="" class="id-ref" refid="hk-eg_PWRc"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.5.6</span> <span class="title">Radius of convergence = 0</span>
+</h6></a></article><div id="hk-eg_PWRc" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-5351">The series \(\sum\limits_{n=0}^\infty n! x^n\) has \(A_n=n!\text{.}\) So</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{n\rightarrow\infty}\Big|\frac{A_{n+1}}{A_n}\Big|
+&amp;=\lim_{n\rightarrow\infty}\frac{(n+1)!}{n!}
+=\lim_{n\rightarrow\infty} \frac
+{1\times 2\times 3\times 4\times\cdots\times n\times(n+1)}
+{1\times 2\times 3\times 4\times\cdots\times n}\\
+&amp;=\lim_{n\rightarrow\infty}(n+1)\\
+&amp;=+\infty
+\end{align*}
+</div>
+<p>and \(\sum\limits_{n=0}^\infty n! x^n\) has radius of convergence zero <a knowl="" class="id-ref" refid="hk-fn-186" id="fn-186"><sup> 4 </sup></a><span id="hk-fn-186" class="hidden-content tex2jax_ignore"><span class="footnote">Because of this, it might seem that  such a series is fairly pointless. However there are all sorts of  mathematical games that can be played with them without worrying  about their convergence. Such “formal” power series can still  impart useful information and the interested reader is invited  to look up “generating functions” with their preferred search engine.</span></span>. It converges only for \(x=0\text{,}\) where it takes the value \(0!=1\text{.}\)</p></article></div>
+<article class="example-like" id="eg_PWRda"><a knowl="" class="id-ref" refid="hk-eg_PWRda"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.5.7</span> <span class="title">An awkward series to test</span>
+</h6></a></article><div id="hk-eg_PWRda" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-5352">Comparing the series</p>
+<div class="displaymath">
+\begin{alignat*}{7}
+&amp;\ 1&amp;+&amp;\ 2x&amp;+&amp;x^2&amp;+&amp;2x^3&amp;+&amp;x^4&amp;+&amp;2x^5&amp;+\cdots \\\\
+\end{alignat*}
+<p class="intertext">to</p>
+\begin{alignat*}{7}
+\sum_{n=1}^\infty A_nx^n=&amp;A_0&amp;+&amp;A_1x&amp;+&amp;A_2x^2&amp;+&amp;A_3x^3&amp;+&amp;A_4x^4&amp;+&amp;A_5x^5&amp;+\cdots
+\end{alignat*}
+</div>
+<p>we see that</p>
+<div class="displaymath">
+\begin{alignat*}{7}
+A_0&amp;=1&amp;\quad
+A_1&amp;=2&amp;\quad
+A_2&amp;=1&amp;\quad
+A_3&amp;=2&amp;\quad
+A_4&amp;=1&amp;\quad
+A_5&amp;=2&amp;\quad\cdots\\
+\end{alignat*}
+<p class="intertext">so that</p>
+\begin{alignat*}{7}
+&amp; &amp;
+\frac{A_1}{A_0}&amp;=2&amp;\qquad
+\frac{A_2}{A_1}&amp;=\frac{1}{2}&amp;\qquad
+\frac{A_3}{A_2}&amp;=2&amp;\qquad
+\frac{A_4}{A_3}&amp;=\frac{1}{2}&amp;\qquad
+\frac{A_5}{A_4}&amp;=2&amp;\qquad\cdots
+\end{alignat*}
+</div>
+<p>and \(\frac{A_{n+1}}{A_n}\) does not converge as \(n\rightarrow\infty\text{.}\) Since the limit of the ratios does not exist, we cannot tell anything  from the ratio test. Nonetheless, we can still figure out for which \(x\)'s  our power series converges.</p>
+<ul class="disc">
+<li id="li-2329">Because every coefficient \(A_n\) is either 1 or 2, the  \(n^{\rm th}\) term in our series obeys<div class="displaymath">
+\begin{equation*}
+\big|A_nx^n\big|\le 2 |x|^n
+\end{equation*}
+</div>and so is smaller than the \(n^{\rm th}\) term in the geometric series  \(\sum_{n=0}^\infty 2|x|^n\text{.}\) This geometric series converges if \(|x| \lt 1\text{.}\) So, by the comparison test, our series converges for \(|x| \lt 1\) too.</li>
+<li id="li-2330">Since every \(A_n\) is at least one, the \(n^{\rm th}\) term in our  series obeys<div class="displaymath">
+\begin{equation*}
+\big|A_nx^n\big|\ge |x|^n
+\end{equation*}
+</div>If \(|x|\ge 1\text{,}\) this \(a_n=A_n x^n\) cannot converge to zero as  \(n\rightarrow\infty\text{,}\) and our series diverges by the divergence test.</li>
+</ul>
+<p>In conclusion, our series converges if and only if \(|x| \lt 1\text{,}\) and so has radius of convergence \(1\text{.}\)</p></article></div>
+<article class="example-like" id="eg_PWRd"><a knowl="" class="id-ref" refid="hk-eg_PWRd"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.5.8</span> <span class="title">A series from \(\pi\)</span>
+</h6></a></article><div id="hk-eg_PWRd" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-5353">Lets construct a series from the digits of \(\pi\text{.}\) Now to avoid dividing by zero, let us set</p>
+<div class="displaymath">
+\begin{align*}
+A_n &amp;= 1 + \text{the $n^\mathrm{th}$ digit of $\pi$}
+\end{align*}
+</div>
+<p>Since \(\pi = 3.141591\dots\)</p>
+<div class="displaymath">
+\begin{gather*}
+A_0 = 4 \quad
+A_1 = 2 \quad
+A_2 = 5 \quad
+A_3 = 2 \quad
+A_4 = 6 \quad
+A_5 = 10 \quad
+A_6 = 2 \quad
+\cdots
+\end{gather*}
+</div>
+<p>Consequently every \(A_n\) is an integer between 1 and 10 and gives us  the series</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{n=0}^\infty A_n x^n = 4 + 2x + 5x^2 + 2x^3 + 6x^4 +10 x^5 + \cdots
+\end{equation*}
+</div>
+<p>The number \(\pi\) is irrational <a knowl="" class="id-ref" refid="hk-fn-187" id="fn-187"><sup> 5 </sup></a><span id="hk-fn-187" class="hidden-content tex2jax_ignore"><span class="footnote">We give a proof of this in the  optional §<a href="sec_RatIrr.html" class="xref" title="Section 3.7: Optional — Rational and irrational numbers">3.7</a> at the end of this chapter.</span></span> and  consequently the ratio \(\frac{A_{n+1}}{A_n}\) cannot have a limit as \(n\rightarrow\infty\text{.}\) If you do not understand why  this is the case then don't worry too much about it <a knowl="" class="id-ref" refid="hk-fn-188" id="fn-188"><sup> 6 </sup></a><span id="hk-fn-188" class="hidden-content tex2jax_ignore"><span class="footnote">This is a little beyond the scope of the course. Roughly  speaking, think about what would happen if the limit of the  ratios did exist. If the limit were smaller than \(1\text{,}\)  then it would tell you that the terms of our series must be  getting smaller and smaller and smaller — which is impossible  because they are all integers between 1 and 10. Similarly if the  limit existed and were bigger than \(1\) then the terms  of the series would have to get bigger and bigger and bigger —  also impossible. Hence if the ratio exists then it  must be equal to 1 — but in that case because the terms are integers, they would have to be all equal when \(n\)  became big enough. But that means that the expansion of \(\pi\)  would be eventually periodic —  something that only rational numbers do (a proof is given in the  optional §<a href="sec_RatIrr.html" class="xref" title="Section 3.7: Optional — Rational and irrational numbers">3.7</a> at the end of this chapter).</span></span>. As in the last example, the limit of the ratios does not exist and  we cannot tell anything from the ratio test. But we can still figure  out for which \(x\)'s it converges.</p>
+<ul class="disc">
+<li id="li-2331">Because every coefficient \(A_n\) is no bigger (in magnitude) than 10, the \(n^{\rm th}\) term in our series obeys<div class="displaymath">
+\begin{equation*}
+\big|A_nx^n\big|\le 10 |x|^n
+\end{equation*}
+</div>and so is smaller than the \(n^{\rm th}\) term in the geometric series  \(\sum_{n=0}^\infty 10|x|^n\text{.}\) This geometric series converges if \(|x| \lt 1\text{.}\) So, by the comparison test, our series converges for \(|x| \lt 1\) too.</li>
+<li id="li-2332">Since every \(A_n\) is at least one, the \(n^{\rm th}\) term in our  series obeys<div class="displaymath">
+\begin{equation*}
+\big|A_nx^n\big|\ge |x|^n
+\end{equation*}
+</div>If \(|x|\ge 1\text{,}\) this \(a_n=A_n x^n\) cannot converge to zero as  \(n\rightarrow\infty\text{,}\) and our series diverges by the divergence test.</li>
+</ul>
+<p>In conclusion, our series converges if and only if \(|x| \lt 1\text{,}\) and so has radius of convergence \(1\text{.}\)</p></article></div>
+<p id="p-5354">Though we won't prove it, it is true that every power series has a  radius of convergence, whether or not the limit  \(\lim\limits_{n\rightarrow\infty}\Big|\frac{A_{n+1}}{A_n}\Big|\)  exists.</p>
+<article class="theorem-like" id="thm_SRradiusofconvergence"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">3.5.9</span>
+</h6>
+<p id="p-5355">Let \(\sum\limits_{n=0}^\infty A_n (x-c)^n\) be a power series. Then one of the following alternatives must hold.</p>
+<ol class="lower-alpha">
+<li id="li-2333">The power series converges for every number \(x\text{.}\) In this case we say that the radius of convergence is \(\infty\text{.}\)</li>
+<li id="li-2334">There is a number \(0 \lt R \lt \infty\) such that the series converges  for \(|x-c| \lt R\) and diverges for \(|x-c| \gt R\text{.}\) Then \(R\) is called the radius of convergence.</li>
+<li id="li-2335">The series converges for \(x=c\) and diverges for all \(x\ne c\text{.}\) In this case, we say that the radius of convergence is \(0\text{.}\)</li>
+</ol></article><article class="definition-like" id="def_SRintervalofconvergence"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">3.5.10</span>
+</h6>
+<p id="p-5356">Consider the power series</p>
+<div class="displaymath">
+\begin{gather*}
+\sum_{n=0}^\infty A_n (x-c)^n.
+\end{gather*}
+</div>
+<p>The set of real \(x\)-values for which it converges is called the interval of convergence of the series.</p></article><p id="p-5357">Suppose that the power series \(\sum\limits_{n=0}^\infty A_n (x-c)^n\)  has radius of  convergence \(R\text{.}\) Then from  Theorem <a knowl="./knowl/thm_SRradiusofconvergence.html" title="Theorem 3.5.9">3.5.9</a>, we have that</p>
+<ul class="disc">
+<li id="li-2336">if \(R=\infty\text{,}\) then its interval of convergence is \(-\infty \lt x \lt \infty\text{,}\) which is also denoted \((-\infty,\infty)\text{,}\)  and</li>
+<li id="li-2337">if \(R=0\text{,}\) then its interval of convergence is just the point \(x=c\text{,}\) and</li>
+<li id="li-2338">
+<p id="p-5358">if \(0 \lt R \lt \infty\text{,}\) then we know that the series converges for any \(x\)  which obeys</p>
+<div class="displaymath">
+\begin{align*}
+|x-c| \lt R\quad&amp;\text{or equivalently}\quad -R \lt x-c \lt R\\
+&amp;\text{or equivalently}\quad c-R \lt x \lt c+R
+\end{align*}
+</div>
+<p>But we do not (yet) know whether or not the series converges at the  two end points of that interval. We do know, however, that its interval  of convergence must be one of</p>
+<ul class="circle">
+<li id="li-2339">\(c-R \lt x \lt c+R\text{,}\) which is also denoted \((c-R\,,\,c+R)\text{,}\)  or</li>
+<li id="li-2340">\(c-R\le x \lt c+R\text{,}\) which is also denoted \([c-R\,,\,c+R)\text{,}\)  or</li>
+<li id="li-2341">\(c-R \lt x\le c+R\text{,}\) which is also denoted \((c-R\,,\,c+R]\text{,}\)  or</li>
+<li id="li-2342">\(c-R\le x \le c+R\text{,}\) which is also denoted \([c-R\,,\,c+R]\text{.}\)</li>
+</ul>
+</li>
+</ul>
+<p>To reiterate — while the radius convergence, \(R\) with \(0 \lt R \lt \infty\text{,}\) tells  us that the series converges for \(|x-c| \lt R\) and diverges for \(|x-c| \gt R\text{,}\)  it does not (by itself) tell us whether or not the series converges when  \(|x-c|=R\text{,}\) i.e. when \(x=c\pm R\text{.}\) The following example shows that all four possibilities can occur.</p>
+<article class="example-like" id="eg_SRintervalofconvergence"><a knowl="" class="id-ref" refid="hk-eg_SRintervalofconvergence"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.5.11</span> <span class="title">The series \(\sum_{n=1}^\infty \frac{x^n}{n^p}\)</span>
+</h6></a></article><div id="hk-eg_SRintervalofconvergence" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-5359">Let \(p\) be any real number<a knowl="" class="id-ref" refid="hk-fn-189" id="fn-189"><sup> 7 </sup></a><span id="hk-fn-189" class="hidden-content tex2jax_ignore"><span class="footnote">We avoid problems with \(0^p\) by starting the series from \(n=1\text{.}\)</span></span> and consider the series  \(\sum_{n=1}^\infty \frac{x^n}{n^p}\text{.}\) This series has \(A_n= \frac{1}{n^p}\text{.}\) Since</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{n\rightarrow\infty}\Big|\frac{A_{n+1}}{A_n}\Big|
+=\lim_{n\rightarrow\infty}\frac{n^p}{{(n+1)}^p}
+=\lim_{n\rightarrow\infty}\frac{1}{{(1+\frac{1}{n})}^p}
+=1
+\end{equation*}
+</div>
+<p>the series has radius of convergence \(1\text{.}\) So it certainly converges for \(|x| \lt 1\) and diverges for \(|x| \gt 1\text{.}\) That just leaves \(x=\pm 1\text{.}\)</p>
+<ul class="disc">
+<li id="li-2343">When \(x=1\text{,}\) the series reduces to \(\sum_{n=1}^\infty \frac{1}{n^p}\text{.}\) We know, from Example <a knowl="./knowl/eg_SRpTest.html" title="Example 3.3.6: The \(p\) test:  \(\sum\limits_{n=1}^\infty\frac{1}{n^p}\)">3.3.6</a>, that this series converges if and only if \(p \gt 1\text{.}\)</li>
+<li id="li-2344">When \(x=-1\text{,}\) the series reduces to \(\sum_{n=1}^\infty \frac{(-1)^n}{n^p}\text{.}\) By the alternating series test, Theorem <a knowl="./knowl/thm_SRalternating.html" title="Theorem 3.3.14: Alternating Series Test">3.3.14</a>, this series converges whenever \(p \gt 0\) (so that \(\frac{1}{n^p}\) tends to zero as \(n\) tends to infinity). When \(p\le 0\) (so that \(\frac{1}{n^p}\) does <em class="emphasis">not</em> tend to zero as \(n\) tends to infinity), it diverges by  the divergence test, Theorem <a knowl="./knowl/thm_SRdivergenceTest.html" title="Theorem 3.3.1: Divergence Test">3.3.1</a>.</li>
+</ul>
+<p>So</p>
+<ul class="disc">
+<li id="li-2345">The power series \(\sum_{n=1}^\infty x^n\) (i.e. \(p=0\)) has interval of convergence \(-1 \lt x \lt 1\text{.}\)</li>
+<li id="li-2346">The power series \(\sum_{n=1}^\infty \frac{x^n}{n}\) (i.e. \(p=1\)) has interval of convergence \(-1\le x \lt 1\text{.}\)</li>
+<li id="li-2347">The power series \(\sum_{n=1}^\infty \frac{(-1)^n}{n}x^n\) (i.e. \(p=1\)) has interval of convergence \(-1 \lt  x\le 1\text{.}\)</li>
+<li id="li-2348">The power series \(\sum_{n=1}^\infty \frac{x^n}{n^2}\) (i.e. \(p=2\)) has interval of convergence \(-1\le x\le 1\text{.}\)</li>
+</ul></article></div>
+<article class="example-like" id="eg_SRintervalA"><a knowl="" class="id-ref" refid="hk-eg_SRintervalA"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.5.12</span> <span class="title">Playing with intervals of convergence</span>
+</h6></a></article><div id="hk-eg_SRintervalA" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-5360">We are told that a certain power series with centre \(c=3\text{,}\) converges  at \(x=4\) and diverges at \(x=1\text{.}\) What else can we say about the  convergence or divergence of the series for other values of \(x\text{?}\)</p>
+<p id="p-5361">We are told that the series is centred at \(3\text{,}\) so its terms are all powers of \((x-3)\) and it is of the form</p>
+<div class="displaymath">
+\begin{gather*}
+\sum_{n \geq 0} A_n (x-3)^n.
+\end{gather*}
+</div>
+<p>A good way to summarise the convergence data we are given is with  a figure like the one below. Green dots mark the values of \(x\) where  the series is known to converge. (Recall that every power series  converges at its centre.)  The red dot marks the value of \(x\) where  the series is known to diverge. The bull's eye marks the centre.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/convDiv.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-5362">Can we say more about the convergence and/or divergence of the series for other values of \(x\text{?}\) Yes!</p>
+<p id="p-5363">Let us think about the radius of convergence, \(R\text{,}\) of the series. We know that it must exist and the information we have  been given allows us to bound \(R\text{.}\) Recall that</p>
+<ul class="disc">
+<li id="li-2349">the series converges at \(x\) provided that \(|x-3| \lt R\) and</li>
+<li id="li-2350">the series diverges at \(x\) if \(|x-3| \gt R\text{.}\)</li>
+</ul>
+<p>We have been told that</p>
+<ul class="disc">
+<li id="li-2351">
+<p id="p-5364">the series converges when \(x=4\text{,}\) which tells us that</p>
+<ul class="circle">
+<li id="li-2352">\(x=4\) cannot obey \(|x-3| \gt R\) so</li>
+<li id="li-2353">\(x=4\) must obey \(|x-3|\le R\text{,}\) i.e. \(|4-3|\le R\text{,}\) i.e. \(R\ge 1\)</li>
+</ul>
+</li>
+<li id="li-2354">
+<p id="p-5365">the series diverges when \(x=1\) so we also know that</p>
+<ul class="circle">
+<li id="li-2355">\(x=1\) cannot obey \(|x-3| \lt R\) so</li>
+<li id="li-2356">\(x=1\) must obey \(|x-3|\ge R\text{,}\) i.e. \(|1-3|\ge R\text{,}\) i.e. \(R\le 2\)</li>
+</ul>
+</li>
+</ul>
+<p>We still don't know \(R\) exactly. But we do know that \(1\le R\le 2\text{.}\) Consequently,</p>
+<ul class="disc">
+<li id="li-2357">since \(1\) is the smallest that \(R\) could be, the series  certainly converges at \(x\) if \(|x-3| \lt 1\text{,}\) i.e. if \(2 \lt x \lt 4\) and</li>
+<li id="li-2358">since \(2\) is the largest that \(R\) could be, the series  certainly diverges at \(x\) if \(|x-3| \gt 2\text{,}\) i.e. if \(x \gt 5\) or if \(x \lt 1\text{.}\)</li>
+</ul>
+<p>The following figure provides a resume of all of this convergence data — there is convergence at green \(x\)'s and divergence at red \(x\)'s.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:17%;margin-right:17%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/convDivB.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-5366">Notice that from the data given we cannot say anything about the  convergence or divergence of the series on the  intervals \((1,2]\) and \((4,5]\text{.}\)</p>
+<p id="p-5367">One lesson that we can derive from this example is that,</p>
+<ul class="disc">
+<li id="li-2359">if a series has centre \(c\) and converges at \(a\text{,}\)</li>
+<li id="li-2360">then it also converges at all points between \(c\) and \(a\text{,}\) as well  as at all points of distance strictly less than \(|a-c|\) from \(c\) on the other side of \(c\) from \(a\text{.}\)</li>
+</ul></article></div></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:41+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="displaymath">
+\begin{align*}
+v=\int \sin x  \cos x \dee{x}&amp;=\int u \dee{u} = \frac{1}{2}u^2+C = \frac{1}{2}\sin^2 x +C\\
+\end{align*}
+<p class="intertext">So, we take \(v = \frac{1}{2}\sin^2 x\text{.}\) Now we can apply integration by parts to our original integral.</p>
+\begin{align*}
+\int x\sin x \cos x \dee{x}&amp;=\frac{x}{2}\sin^2 x - \int \frac{1}{2}\sin^2 x \dee{x}\\
+\end{align*}
+<p class="intertext">Apply the identity \(\sin^2x = \dfrac{1-\cos(2x)}{2}\text{.}\)</p>
+\begin{align*}
+&amp;=\frac{x}{2}\sin^2 x - \frac{1}{4}\int 1-\cos(2 x) \dee{x}\\
+&amp;=\frac{x}{2}\sin^2 x - \frac{x}{4} +\frac{1}{8}\sin(2 x)+C\\
+&amp;=\frac{x}{2}\sin^2 x - \frac{x}{4} +\frac{1}{4}\sin x \cos x+C
+\end{align*}
+</div>
+<span class="incontext"><a href="exercises-8.html#mjx-eqn-mrow-1790">in-context</a></span>
+</body>
+</html>

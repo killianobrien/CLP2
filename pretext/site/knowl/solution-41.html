@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:20+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">1.1.8.41.1</span>
+</h6>
+<p>We'll use right Riemann sums with \(a=1\text{,}\) \(b=4\) and \(f(x) =2x-1\text{.}\) When there are \(n\) rectangles, \(\Delta x = \frac{b-a}{n}=\frac{3}{n}\) and \(x_i = a+i\De x=1 + 3i/n\text{.}\)  So we need to evaluate</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{n\to\infty} \sum_{i=1}^{n} f(x_i) \De x
+&amp; = \lim_{n\to\infty} \sum_{i=1}^{n} \left( 2x_i - 1\right) \De x\\
+&amp; =\lim_{n\to\infty} \sum_{i=1}^{n} \left(2+ \frac{6i}{n}-1\right)\frac{3}{n}\\
+&amp; = \lim_{n\to\infty} \frac{3}{n} \sum_{i=1}^{n} \left(\frac{6i}{n}+1\right)\\
+&amp;= \lim_{n\to\infty} \left( \frac{18}{n^2} \sum_{i=1}^{n} i
++ \frac{3}{n} \sum_{i=1}^{n} 1 \right)\\
+&amp; = \lim_{n\to\infty} \left(\frac{18\cdot n(n+1)}{n^2\cdot 2}
++ \frac{3}{n}n\right)\\
+&amp;= \lim_{n\to\infty} \left(9\left(1+\frac{1}{n}\right) + 3\right)\\
+&amp; = 9 + 3 = 12.
+\end{align*}
+</div>
+</div>
+<span class="incontext"><a href="exercises-1.html#solution-41">in-context</a></span>
+</body>
+</html>

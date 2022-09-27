@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:26+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>Using the chain rule, we see that</p>
+<div class="displaymath">
+\begin{equation*}
+\diff{}{x}\{f(g(x))\}=f'(g(x))g'(x)
+\end{equation*}
+</div>
+<p>So, \(\textcolor{red}{f(g(x))}\) is an antiderivative of \(\textcolor{red}{f'(g(x))g'(x)}\text{.}\) All antiderivatives of \(f'(g(x))g'(x)\) differ by only a constant, so:</p>
+<div class="displaymath">
+\begin{align*}
+\textcolor{red}{\int f'(g(x))g'(x)\dee{x}} - f(g(x))&amp;=\textcolor{red}{f(g(x))+C}-f(g(x))\\
+&amp;=C
+\end{align*}
+</div>
+<p>That is, our expression simplifies to some constant \(C\text{.}\)</p>
+<p>Remark: since</p>
+<div class="displaymath">
+\begin{equation*}
+\int f'(g(x))g'(x)\dee{t} - f(g(x))=C
+\end{equation*}
+</div>
+<p>we conclude</p>
+<div class="displaymath">
+\begin{equation*}
+\int f'(g(x))g'(x)\dee{t} = f(g(x))+C
+\end{equation*}
+</div>
+<p>which is precisely how we perform substitution on integrals.</p>
+</div></body>
+</html>

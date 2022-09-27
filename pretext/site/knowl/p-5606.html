@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:23:35+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>In Example <a knowl="./knowl/eg_integralRemainder.html" title="Example 3.6.12">3.6.12</a> we verified that</p>
+<div class="displaymath">
+\begin{equation*}
+\log(1+x) = \sum_{n=0}^\infty (-1)^n\frac{x^{n+1}}{n+1}
+= x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\cdots
+\tag{S1}
+\end{equation*}
+</div>
+<p>for all \(-1\lt x\le 1\text{.}\) There we used the Lagrange form,</p>
+<div class="displaymath">
+\begin{equation*}
+E_n(a,x)=\frac{1}{(n+1)!}\,f^{(n+1)}(c)\, (x-a)^{n+1}
+\end{equation*}
+</div>
+<p>for the Taylor remainder to verify (S1) when \(0\le x\le 1\text{,}\) but we also saw that it is not possible to use the Lagrange form to verify (S1) when \(x\) is close to \(-1\text{.}\) We instead used the integral form</p>
+<div class="displaymath">
+\begin{equation*}
+E_n(a,x) = \int_a^x \frac{1}{n!}f^{(n+1)}(t)\, (x-t)^n\,\dee{t}
+\end{equation*}
+</div>
+<p>We will now use the Cauchy form (part (b) of Theorem <a knowl="./knowl/thm_TaylorRemainderB.html" title="Theorem 3.6.13: More formulae for the Taylor remainder">3.6.13</a>)</p>
+<div class="displaymath">
+\begin{equation*}
+E_n(a,x)=\frac{1}{n!}f^{(n+1)}(c)\, (x-c)^n(x-a)
+\end{equation*}
+</div>
+<p>to verify</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{n\rightarrow\infty} E_n(0,x)=0
+\tag{S2}
+\end{equation*}
+</div>
+<p>when \(-1\lt x\lt 0\text{.}\) We have already noted that (S2) is equivalent to (S1).</p>
+<span class="incontext"><a href="subsubsection-17.html#p-5606">in-context</a></span>
+</body>
+</html>

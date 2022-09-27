@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:41+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution"><ul class="disc">
+<li>Solution 1: We begin with the obvious substitution, \(w=e^x\text{,}\) \(\dee{w}=e^x \dee{w}\text{.}\)<div class="displaymath">
+\begin{align*}
+\int e^x\sin(e^x)\cos(e^x) \dee{x}&amp;= \int \sin w \cos w \dee{w}\\
+\end{align*}
+<p class="intertext">Now we see another substitution, \(u=\sin w\text{,}\) \(\dee{u}=\cos w\dee{w}\text{.}\)</p>
+\begin{align*}
+&amp;=\int u\dee{u}=\frac{1}{2}u^2+C=\frac{1}{2}\sin^2 w +C\\
+&amp;=\frac{1}{2}\sin^2(e^x)+C
+\end{align*}
+</div>
+</li>
+<li>Solution 2: Notice that \(\diff{}{x}\{\sin(e^x)\} = e^x \cos(e^x)\text{.}\) This suggests to us the substitution \(u=\sin(e^x)\text{,}\) \(\dee{u} = e^x \cos(e^x)\dee{x}\text{.}\)<div class="displaymath">
+\begin{align*}
+\int e^x\sin(e^x)\cos(e^x) \dee{x}&amp;= \int u\dee{u} =\frac{1}{2}u^2+C = \frac{1}{2}\sin^2(e^x)+C
+\end{align*}
+</div>
+</li>
+</ul></div></body>
+</html>

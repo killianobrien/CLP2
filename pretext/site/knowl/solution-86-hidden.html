@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:23+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>Using the chain rule:</p>
+<div class="displaymath">
+\begin{align*}
+\diff{}{x}&amp;\left\{\sqrt{x(a+x)}-a\log\left(\sqrt{x}+\sqrt{a+x}\right)\right\}\\
+&amp;=
+\frac{x+(a+x)}{2\sqrt{x(a+x)}}-a\left(\frac{1}{\sqrt{x}+\sqrt{a+x}}\cdot\left(\frac{1}{2\sqrt{x}}+\frac{1}{2\sqrt{a+x}}\right)\right)\\
+&amp;=
+\frac{2x+a}{2\sqrt{x(a+x)}}-
+a\left(
+\frac{1}{\sqrt{x}+\sqrt{a+x}}\cdot\left(
+\frac{\sqrt{a+x}+\sqrt{x}}{2\sqrt{x(a+x)}}\right)\right)\\
+&amp;=
+\frac{2x+a}{2\sqrt{x(a+x)}}-
+a\left(\frac{1}{2\sqrt{x(a+x)}}\right)\\
+&amp;=\frac{2x}{2\sqrt{x(a+x)}} = \frac{x}{\sqrt{x(a+x)}}\\
+\end{align*}
+<p class="intertext">So,</p>
+\begin{align*}
+\int \frac{x}{\sqrt{x(a+x)}}\dee{x}&amp;=\sqrt{x(a+x)}-a\log\left(\sqrt{x}+\sqrt{a+x}\right)+C
+\end{align*}
+</div>
+<p>Remark: \(\int \frac{x}{\sqrt{x(a+x)}}\dee{x}\) can be calculated using the method of Trigonometric Substitution, which you will learn in Section <a href="sec_trigsub.html" class="xref" title="Section 1.9: Trigonometric Substitution">1.9</a>.</p>
+</div></body>
+</html>

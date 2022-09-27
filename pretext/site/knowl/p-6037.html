@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:24:22+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Consider again the polynomial</p>
+<div class="displaymath">
+\begin{align*}
+f(x) &amp;= \frac{x^n(a-bx)^n}{n!}.
+\end{align*}
+</div>
+<p>Notice that</p>
+<div class="displaymath">
+\begin{align*}
+f(0) &amp;= 0\\
+f(\pi) &amp;= f(a/b) = 0.
+\end{align*}
+</div>
+<p>Furthermore, for \(0 \leq x \leq \pi=a/b\text{,}\)  we have \(x\le\frac{a}{b}\) and \(a-bx\le a\) so that</p>
+<div class="displaymath">
+\begin{gather*}
+0 \leq x(a-bx) \leq a^2/b.
+\end{gather*}
+</div>
+<p>We could work out a more precise <a knowl="./knowl/fn-226-hidden.html" title="Footnote 3.7.3"><sup> 3 </sup></a> upper bound,  but this one is sufficient for the analysis that follows. Hence</p>
+<div class="displaymath">
+\begin{gather*}
+0 \leq f(x) \leq \left( \frac{a^2}{b} \right)^n \frac{1}{n!}
+\end{gather*}
+</div>
+<p>We also know that for \(0\leq x \leq \pi=a/b\text{,}\) \(0\leq \sin(x) \leq 1\text{.}\) Thus</p>
+<div class="displaymath">
+\begin{gather*}
+0 \leq f(x)\sin(x) \leq \left( \frac{a^2}{b} \right)^n \frac{1}{n!}
+\end{gather*}
+</div>
+<p>for all \(0 \leq x \leq 1\text{.}\) Using this inequality we bound</p>
+<div class="displaymath">
+\begin{gather*}
+0  \lt  I_n=\int_0^\pi f(x)\sin(x) \dee{x}  \lt   \left( \frac{a^2}{b} \right)^n \frac{1}{n!}.
+\end{gather*}
+</div>
+<p>We will later show that, if \(n\) is really big, then  \(\big( \frac{a^2}{b} \big)^n \frac{1}{n!} \lt 1\text{.}\) We'll first show,  starting now, that \(I_n\) is an integer.</p>
+<span class="incontext"><a href="subsection-66.html#p-6037">in-context</a></span>
+</body>
+</html>

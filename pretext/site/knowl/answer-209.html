@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:37+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Answer</span> <span class="codenumber">1.7.2.25.1</span>
+</h6>
+<p>(a) We integrate by parts with \(u=\sin^{n-1}x\) and \(\dee{v}=\sin x\,\dee{x}\text{,}\) so that \(\dee{u}=(n-1)\sin^{n-2}x\cos x\) and \(v=-\cos x\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+\int\sin^nx\,\dee{x}
+&amp;=\underbrace{-\sin^{n-1}x\ \cos x}_{uv}+\underbrace{(n-1)\int \cos^2x\ \sin^{n-2}x\  \dee{x}}_{-\int v\dee{u}}\\
+\end{align*}
+<p class="intertext">Using the identity \(\sin^2 x + \cos^2 x =1 \text{,}\)</p>
+\begin{align*}
+&amp;=-\sin^{n-1}x\ \cos x+(n-1)\int (1-\sin^2 x)\sin^{n-2}x\  \dee{x}\\
+&amp;=-\sin^{n-1}x\ \cos x+(n-1)\int\sin^{n-2}x\  \dee{x}
+-(n-1)\int\sin^{n}x\  \dee{x}
+\end{align*}
+</div>
+<p>Moving the last term on the right hand side to the left hand side gives</p>
+<div class="displaymath">
+\begin{align*}
+n\int\sin^nx\,\dee{x}
+&amp;=-\sin^{n-1}x\ \cos x+(n-1)\int\sin^{n-2}x\  \dee{x}
+\end{align*}
+</div>
+<p>Dividing across by \(n\) gives the desired reduction formula.</p>
+<p>(b) \(\dfrac{35}{256}\pi\approx0.4295\)</p>
+</div>
+<span class="incontext"><a href="exercises-7.html#answer-209">in-context</a></span>
+</body>
+</html>

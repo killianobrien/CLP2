@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:20:39+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="listitem"><h6 class="heading"><span class="type">Item</span></h6>
+<p>Solution 2: In this solution, we consider the work on the rope together with the weight, and we imagine lifting the remaining rope a tiny distance to the window.</p>
+<p>Suppose \(y\) metres of the rope have been pulled in, and \(0 \le y \le 5\) (shown on the left, below). Then the remaining rope has length \(10-y\text{,}\) and contains the weight, so the mass remaining to be pulled up is \(\underbrace{\frac{1}{10}(10-y)}_{\text{rope}} + \underbrace{\vphantom{\frac{1}{10}}5}_{\text{weight}} = 6-\frac{y}{10}\) kg. Then the force of gravity acting on the dangling rope and weight is \((9.8 \text{ m/sec}^2)((6-\frac{y}{10})\text{ kg}) =\left(58.8-0.98y\right)\) N. The work needed to lift this rope \(\dee{y}\) metres is \(\textcolor{red}{\left(58.8-0.98y\right)\dee{y} J}\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:8.5%;margin-right:8.5%;">
+<div class="sbspanel" style="width:39.7590361445783%;justify-content:flex-start;"><img src="images/image-343.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:39.7590361445783%;justify-content:flex-start;"><img src="images/image-344.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<p>Now, suppose \(y\) metres of the rope have been pulled in, and \(5  \lt  y \le 10\) (shown above, right). Then the remaining rope has length \(10-y\text{,}\) but <em class="emphasis">does not contain</em> the weight, so the mass remaining to be pulled up is \(\frac{1}{10}(10-y) = 1-\frac{y}{10}\) kg. Then the force of gravity acting on the dangling rope is \((9.8 \text{ m/sec}^2)((1-\frac{y}{10})\text{ kg}) =\left(9.8-0.98y\right)\) N. The work needed to lift this rope \(\dee{y}\) metres is \(\textcolor{blue}{\left(9.8-0.98y\right)\dee{y} J}\text{.}\)</p>
+<p>All together, the work needed to lift the rope is</p>
+<div class="displaymath">
+\begin{align*}
+W \amp= \int_0^{10} F(y) \dee{y} \\
+\amp= \textcolor{red}{\int_0^5 \left(58.8-0.98y\right)\dee{y}} + \textcolor{blue}{\int_5^{10}\left(9.8-0.98y\right)\dee{y}}\\
+&amp;=\left[58.8y - 0.49y^2\right]_0^{5} + \left[9.8 y - 0.49 y^2\right]_5^{10}\\
+&amp;=294 \text{ J}
+\end{align*}
+</div></article><span class="incontext"><a href="exercises-14.html#li-1566">in-context</a></span>
+</body>
+</html>

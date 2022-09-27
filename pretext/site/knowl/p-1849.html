@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:43+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>(c) There's not an obvious non-trig substitution for evaluating this problem, so we want a trigonometric substitution to get rid of the fractional power. (That is, we want to eliminate the square root.) The function under the power is \(25+x^2\text{,}\) which has the form (constant) \(+\) (function). This form matches the trig identity \(\tan^2 \theta + 1 = \sec^2 \theta\text{.}\) We can set \(x\) to be whatever we need it to be, but we don't have the same control over the constant, 25. So, to make the substitution work, we use a different form of the trig identity: multiplying both sides  by 25, we get</p>
+<div class="displaymath">
+\begin{align*}
+25\tan^2 \theta + 25 &amp;= 25\sec^2 \theta\\
+\end{align*}
+<p class="intertext">What we want is a substitution that gives us</p>
+\begin{align*}
+25+x^2&amp;=25\tan^2\theta+25\\
+\mbox{So,}\qquad x^2&amp;=25\tan^2\theta\\
+x &amp;= 5\tan\theta\\
+\end{align*}
+<p class="intertext">Using this substitution,</p>
+\begin{align*}
+(25+x^2)^{-5/2}&amp;=(25+25\tan^2\theta)^{-5/2}\\
+&amp;=(25\sec^2\theta)^{-5/2}\\
+&amp;=(5|\sec\theta|)^{-5}
+\end{align*}
+</div>
+<p>So, we eliminated the square root. We remark that the absolute value signs are not needed in \(|\sec\theta|\text{,}\) because, for \(-\infty\lt x\lt\infty\text{,}\) we have \(\theta=\arctan(x/5)\) between \(-\frac{\pi}{2}\) and \(\frac{\pi}{2}\text{,}\) and \(\sec(\theta)\ge 0\) for those \(\theta\)'s.</p>
+<span class="incontext"><a href="exercises-9.html#p-1849">in-context</a></span>
+</body>
+</html>

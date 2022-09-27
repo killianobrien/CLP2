@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:24:48+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Denote by \(\phi(t)\) the exact solution to \(y'=f(t,y)\) that satisfies the initial condition \(\phi(t_n)=y_n\text{.}\) If we apply one step of Euler with step size \(h\text{,}\) giving</p>
+<div class="displaymath">
+\begin{equation*}
+A_{1,n+1}=y_n+hf(t_n,y_n)
+\end{equation*}
+</div>
+<p>we know, from (<a knowl="./knowl/eqn_local_trunc_error_Euler.html" title="Equation D.2.4">D.2.4</a>), that</p>
+<div class="displaymath">
+\begin{equation*}
+A_{1,n+1}=\phi(t_n+h)+Kh^2+O(h^3)
+\end{equation*}
+</div>
+<p>The problem, of course, is that we don't know what the error is, even approximately, because we don't know what the constant \(K\) is. But we can estimate \(K\) simply by redoing the step from \(t_n\)  to \(t_n+h\) using a judiciously chosen second algorithm. There are a number of different second algorithms that will work. We call the simple algorithm that we use in this subsection Euler-2step<a knowl="./knowl/fn-270-hidden.html" title="Footnote D.3.3"><sup> 3 </sup></a>. One step of Euler-2step with step size \(h\) just consists of doing two steps of Euler with step size \(h/2\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+A_{2,n+1} = y_n+\tfrac{h}{2}f(t_n,y_n)
++\tfrac{h}{2}f\big(t_n+\tfrac{h}{2},y_n+\tfrac{h}{2}f(t_n,y_n)\big)
+\end{equation*}
+</div>
+<p>Here, the first half-step took us from \(y_n\) to \(y_{\rm mid}=y_n+\frac{h}{2}f(t_n,y_n)\) and the second half-step took us from \(y_{\rm mid}\) to \(y_{\rm mid}+\frac{h}{2}f\big(t_n+\frac{h}{2},y_{\rm mid}\big)\text{.}\) The local truncation error introduced in the first half-step is \(K(h/2)^2+O(h^3)\text{.}\) That for the second half-step is \(K(h/2)^2+O(h^3)\) with the same<a knowl="./knowl/fn-271-hidden.html" title="Footnote D.3.4"><sup> 4 </sup></a> \(K\text{,}\) though with a different \(O(h^3)\text{.}\) All together</p>
+<div class="displaymath">
+\begin{align*}
+A_{2,n+1}&amp;=\phi(t_n+h)+\big[ K\big(\tfrac{h}{2}\big)^2+O(h^3)\big]
++ \big[K\big(\tfrac{h}{2}\big)^2+O(h^3)\big] \\
+&amp;=\phi(t_n+h)+\half Kh^2+O(h^3)
+\end{align*}
+</div>
+<p>The difference is<a knowl="./knowl/fn-272-hidden.html" title="Footnote D.3.5"><sup> 5 </sup></a></p>
+<div class="displaymath">
+\begin{align*}
+A_{1,n+1}-A_{2,n+1}&amp;=\big[\phi(t_n+h)+Kh^2+O(h^3)\big]
+-\big[\phi(t_n+h)-\half Kh^2-O(h^3)\big] \\
+&amp;=\half Kh^2+O(h^3)
+\end{align*}
+</div>
+<p>So if we do one step of both Euler and Euler-2step, we can estimate</p>
+<div class="displaymath">
+\begin{equation*}
+\half Kh^2=A_{1,n+1}-A_{2,n+1}+O(h^3)
+\end{equation*}
+</div>
+<p>We now know that in the step just completed Euler-2step introduced an error of about  \(\half Kh^2\approx A_{1,n+1}-A_{2,n+1}\text{.}\) That is, the current error rate is about \(r=\frac{|A_{1,n+1}-A_{2,n+1}|}{h}\approx\half |K| h\) per unit increase of \(t\text{.}\)</p>
+<ul class="disc">
+<li>If this \(r=\frac{|A_{1,n+1}-A_{2,n+1}|}{h}&gt;\varepsilon\text{,}\) we reject<a knowl="./knowl/fn-273-hidden.html" title="Footnote D.3.6"><sup> 6 </sup></a> \(A_{2,n+1}\) and repeat the current step with a new trial step size chosen so that \(\half |K|(\text{new }h)\lt\varepsilon\text{,}\) i.e. \(\frac{r}{h}(\text{new }h)\lt\varepsilon\text{.}\) To give ourselves a small safety margin, we could use<a knowl="./knowl/fn-274-hidden.html" title="Footnote D.3.7"><sup> 7 </sup></a><div class="displaymath">
+\begin{equation*}
+\text{new }h=0.9\,\frac{\varepsilon}{r}\,h
+\end{equation*}
+</div>
+</li>
+<li>If \(r=\frac{|A_{1,n+1}-A_{2,n+1}|}{h}\lt\varepsilon\) we can accept<a knowl="./knowl/fn-275-hidden.html" title="Footnote D.3.8"><sup> 8 </sup></a>  \(A_{2,n+1}\) as an approximate  value for \(y(t_{n+1})\text{,}\) with \(t_{n+1}=t_n+h\text{,}\) and move on to the next step, starting with the new trial step size<a knowl="./knowl/fn-276-hidden.html" title="Footnote D.3.9"><sup> 9 </sup></a><div class="displaymath">
+\begin{equation*}
+\text{new } h=0.9\,\frac{\varepsilon}{r}\,h
+\end{equation*}
+</div>
+</li>
+</ul>
+<p>That is our preliminary version of the Euler/Euler-2step variable step size method. We call it the preliminary version, because we will shortly tweak it to get a much more efficient procedure.</p>
+<span class="incontext"><a href="ssec_prelim_E_E2.html#p-6254">in-context</a></span>
+</body>
+</html>

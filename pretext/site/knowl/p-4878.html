@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:22:34+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Mengoli posed the problem of evaluating the series exactly in 1644  and it was solved — not entirely rigorously — by Euler in 1734.  A rigorous proof had to wait another 7 years. Euler used some extremely  cunning observations and manipulations of the sine function to show that</p>
+<div class="displaymath">
+\begin{align*}
+\sum_{n=1}^\infty \frac{1}{n^2} &amp;= \frac{\pi^2}{6}.
+\end{align*}
+</div>
+<p>He used the Maclaurin series</p>
+<div class="displaymath">
+\begin{align*}
+\sin x &amp;= 1 - \frac{x^3}{6} + \frac{x^5}{24} - \cdots
+\end{align*}
+</div>
+<p>and a product formula for sine</p>
+<div class="displaymath">
+\begin{align}
+\begin{split}
+\sin x &amp;= x
+\cdot \left(1 -\frac{x}{\pi} \right)
+\cdot \left(1 + \frac{x}{\pi} \right)
+\cdot \left(1 -\frac{x}{2\pi} \right)
+\cdot \left(1 + \frac{x}{2\pi} \right)
+\cdot \left(1 -\frac{x}{3\pi} \right)
+\cdot \left(1 + \frac{x}{3\pi} \right)
+\cdots\\
+&amp;= x
+\cdot \left(1 -\frac{x^2}{\pi} \right)
+\cdot \left(1 - \frac{x^2}{4\pi} \right)
+\cdot \left(1 -\frac{x^2}{9\pi} \right)
+\cdots
+\end{split}\tag{\(\star\)}
+\end{align}
+</div>
+<p>Extracting the coefficient of \(x^3\) from both expansions gives the desired result. The proof of the product formula is well beyond the scope of  this course. But notice that at least the values of \(x\) which make the left hand side of <a knowl="./knowl/eqn_sinProdFormula.html" title="Equation">(\(\star\))</a> zero, namely \(x=n\pi\) with \(n\)  integer, are exactly the same as the values of \(x\) which make the  right hand side of  <a knowl="./knowl/eqn_sinProdFormula.html" title="Equation">(\(\star\))</a> zero <a knowl="./knowl/fn-177-hidden.html" title="Footnote 3.3.20"><sup> 20 </sup></a>.</p>
+<span class="incontext"><a href="sec_HarminicBasel.html#p-4878">in-context</a></span>
+</body>
+</html>

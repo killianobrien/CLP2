@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:22:46+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>Usually with factorials, we want to use the divergence test or the ratio test. Since the terms are indeed tending towards zero, we are left with the ratio test.</p>
+<div class="displaymath">
+\begin{align*}
+\amp\frac{a_{n+1}}{a_n}=\frac{\frac{(n+1)!(n+1)!}{(2n+2)!}}{\frac{n!n!}{(2n)!}}=\frac{(n+1)!(n+1)!}{n!n!}\cdot\frac{(2n)!}{(2n+2)!}\\
+&amp;=\tfrac{\textcolor{red}{(n+1)}{(n)}{(n-1)}\cdots{(1)}}{{n}{(n-1)}\cdots{(1)}}
+\cdot\tfrac{\textcolor{red}{(n+1)}{(n)}{(n-1)}\cdots{(1)}}{{n}{(n-1)}\cdots{(1)}}
+\cdot
+\tfrac{{(2n)}{(2n-1)}{(2n-2)}\cdots{(1)}}{\textcolor{red}{(2n+2)(2n+1)}{(2n)}{(2n-1)}{(2n-2)}\cdots{(1)}}\\
+&amp;=(n+1)(n+1) \cdot \frac{1}{(2n+2)(2n+1)}
+\end{align*}
+</div>
+<p>So</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{n \rightarrow \infty}\frac{a_{n+1}}{a_n}&amp;=\lim_{n \rightarrow \infty}\frac{(n+1)(n+1)}{(2n+2)(2n+1)}
+=\lim_{n \rightarrow \infty}\frac{(n+1)(n+1)}{2(n+1)(2n+1)}\\
+\amp=\lim_{n \rightarrow \infty}\frac{n+1}{4n+2}=\frac{1}{4}
+\end{align*}
+</div>
+<p>Since the limit is a number less than 1, the series converges by the ratio test.</p>
+</div></body>
+</html>

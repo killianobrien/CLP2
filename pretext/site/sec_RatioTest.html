@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:16:26+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The Ratio Test</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_2_ic.html"><span class="title">CLP-2 Integral Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_AST.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="section-20.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="subsection-47.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_AST.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="section-20.html" title="Up">Up</a><a class="next-button button toolbar-item" href="subsection-47.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_integral.html" data-scroll="chap_integral"><span class="codenumber">1</span> <span class="title">Integration</span></a></h2>
+<ul>
+<li><a href="sec_intdef.html" data-scroll="sec_intdef">Definition of the Integral</a></li>
+<li><a href="sec_def_int.html" data-scroll="sec_def_int">Basic properties of the definite integral</a></li>
+<li><a href="sec_fundamental.html" data-scroll="sec_fundamental">The Fundamental Theorem of Calculus</a></li>
+<li><a href="sec_subs.html" data-scroll="sec_subs">Substitution</a></li>
+<li><a href="sec_area.html" data-scroll="sec_area">Area between curves</a></li>
+<li><a href="sec_int_volumes.html" data-scroll="sec_int_volumes">Volumes</a></li>
+<li><a href="sec_intbyparts.html" data-scroll="sec_intbyparts">Integration by parts</a></li>
+<li><a href="sec_trigint.html" data-scroll="sec_trigint">Trigonometric Integrals</a></li>
+<li><a href="sec_trigsub.html" data-scroll="sec_trigsub">Trigonometric Substitution</a></li>
+<li><a href="sec_parfrac.html" data-scroll="sec_parfrac">Partial Fractions</a></li>
+<li><a href="sec_numeric_int.html" data-scroll="sec_numeric_int">Numerical Integration</a></li>
+<li><a href="sec_improp_int.html" data-scroll="sec_improp_int">Improper Integrals</a></li>
+<li><a href="section-13.html" data-scroll="section-13">More Integration Examples</a></li>
+</ul>
+<h2 class="link"><a href="chap_int_app.html" data-scroll="chap_int_app"><span class="codenumber">2</span> <span class="title">Applications of Integration</span></a></h2>
+<ul>
+<li><a href="sec_work.html" data-scroll="sec_work">Work</a></li>
+<li><a href="sec_avg.html" data-scroll="sec_avg">Averages</a></li>
+<li><a href="sec_com.html" data-scroll="sec_com">Centre of Mass and Torque</a></li>
+<li><a href="sec_sep_de.html" data-scroll="sec_sep_de">Separable Differential Equations</a></li>
+</ul>
+<h2 class="link"><a href="chap_seq_ser.html" data-scroll="chap_seq_ser"><span class="codenumber">3</span> <span class="title">Sequence and series</span></a></h2>
+<ul>
+<li><a href="section-18.html" data-scroll="section-18">Sequences</a></li>
+<li><a href="section-19.html" data-scroll="section-19">Series</a></li>
+<li><a href="section-20.html" data-scroll="section-20">Convergence Tests</a></li>
+<li><a href="section-21.html" data-scroll="section-21">Absolute and Conditional Convergence</a></li>
+<li><a href="section-22.html" data-scroll="section-22">Power Series</a></li>
+<li><a href="section-23.html" data-scroll="section-23">Taylor Series</a></li>
+<li><a href="sec_RatIrr.html" data-scroll="sec_RatIrr">Optional — Rational and irrational numbers</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="section-26.html" data-scroll="section-26">Pythagoras</a></li>
+<li><a href="section-27.html" data-scroll="section-27">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="section-30.html" data-scroll="section-30">Trigonometry — Special Triangles</a></li>
+<li><a href="section-31.html" data-scroll="section-31">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trigonometric Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">Highschool Material You Should be Able to Derive</a></li>
+<li><a href="section-39.html" data-scroll="section-39">Cartesian Coordinates</a></li>
+<li><a href="ap_roots.html" data-scroll="ap_roots">Roots of Polynomials</a></li>
+</ul>
+<h2 class="link"><a href="ap_complex.html" data-scroll="ap_complex"><span class="codenumber">B</span> <span class="title">Complex Numbers and Exponentials</span></a></h2>
+<ul>
+<li><a href="sec_complex_defn.html" data-scroll="sec_complex_defn">Definition and Basic Operations</a></li>
+<li><a href="sec_complex_exp.html" data-scroll="sec_complex_exp">The Complex Exponential</a></li>
+</ul>
+<h2 class="link"><a href="app_Richardson_Romberg.html" data-scroll="app_Richardson_Romberg"><span class="codenumber">C</span> <span class="title">More About Numerical Integration</span></a></h2>
+<ul>
+<li><a href="ap_Richardson.html" data-scroll="ap_Richardson">Richardson Extrapolation</a></li>
+<li><a href="ap_Romberg.html" data-scroll="ap_Romberg">Romberg Integration</a></li>
+<li><a href="ap_adaptive.html" data-scroll="ap_adaptive">Adaptive Quadrature</a></li>
+</ul>
+<h2 class="link"><a href="app_ODE_numerical.html" data-scroll="app_ODE_numerical"><span class="codenumber">D</span> <span class="title">Numerical Solution of ODE's</span></a></h2>
+<ul>
+<li><a href="ap_derivation.html" data-scroll="ap_derivation">Simple ODE Solvers — Derivation</a></li>
+<li><a href="ap_error_behaviour.html" data-scroll="ap_error_behaviour">Simple ODE Solvers —  Error Behaviour</a></li>
+<li><a href="ap_variable.html" data-scroll="ap_variable">Variable Step Size Methods</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">E</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">F</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">G</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp2-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="subsection" id="sec_RatioTest"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.3.5</span> <span class="title">The Ratio Test</span>
+</h3>
+<a href="sec_RatioTest.html" class="permalink">¶</a><p id="p-4826">The idea behind the ratio test comes from a reexamination of the  geometric series. Recall that the geometric series</p>
+<div class="displaymath">
+\begin{gather*}
+\sum_{n=0}^\infty a_n = \sum_{n=0}^\infty a r^n
+\end{gather*}
+</div>
+<p>converges when \(|r| \lt 1\) and diverges otherwise. So the convergence of  this series is completely determined by the number \(r\text{.}\) This number  is just the ratio of successive terms — that is \(r = a_{n+1}/a_n\text{.}\)</p>
+<p id="p-4827">In general the ratio of successive terms of a series,  \(\frac{a_{n+1}}{a_n}\text{,}\) is not constant, but depends on  \(n\text{.}\) However, as we have noted above, the convergence of a  series \(\sum a_n\) is determined by the behaviour of its  terms when \(n\) is large. In this way, the behaviour of this  ratio when \(n\) is small tells us nothing about the  convergence of the series, but the limit of the ratio as \(n\to\infty\) does. This is the basis of the ratio test.</p>
+<article class="theorem-like" id="thm_SRratio"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">3.3.18</span> <span class="title">Ratio Test</span>
+</h6>
+<p id="p-4828">Let \(N\) be any positive integer and assume that \(a_n\ne 0\) for all \(n\ge N\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-2186">If \(\lim\limits_{n\rightarrow\infty}\Big|\frac{a_{n+1}}{a_n}\Big| = L \lt 1\text{,}\) then \(\sum\limits_{n=1}^\infty a_n\) converges.</li>
+<li id="li-2187">If \(\lim\limits_{n\rightarrow\infty}\Big|\frac{a_{n+1}}{a_n}\Big| = L \gt 1\text{,}\) or \(\lim\limits_{n\rightarrow\infty}\Big|\frac{a_{n+1}}{a_n}\Big| = +\infty\text{,}\)  then \(\sum\limits_{n=1}^\infty a_n\) diverges.</li>
+</ol></article><article class="remark-like" id="warning-2"><h6 class="heading">
+<span class="type">Warning</span> <span class="codenumber">3.3.19</span>
+</h6>
+<p id="p-4829">Beware that the ratio test provides absolutely no conclusion about the convergence or divergence of the series \(\sum\limits_{n=1}^\infty a_n\) if \(\lim\limits_{n\rightarrow\infty}\Big|\frac{a_{n+1}}{a_n}\Big| =  1\text{.}\) See Example <a knowl="./knowl/eg_SRratioC.html" title="Example 3.3.22: \(L=1\)">3.3.22</a>, below.</p></article><article class="hiddenproof" id="proof-22"><a knowl="" class="id-ref" refid="hk-proof-22"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-22" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-4830">(a) Pick any number \(R\) obeying \(L \lt R \lt 1\text{.}\) We are assuming that  \(\Big|\frac{a_{n+1}}{a_n}\Big|\) approaches \(L\) as \(n\rightarrow\infty\text{.}\) In particular there must be some natural number \(M\) so that \(\Big|\frac{a_{n+1}}{a_n}\Big|\le R\) for all \(n\ge M\text{.}\) So  \(|a_{n+1}|\le R|a_n|\) for all \(n\ge M\text{.}\) In particular</p>
+<div class="displaymath">
+\begin{align*}
+|a_{M+1}| &amp; \ \le\  R\,|a_M|\\
+|a_{M+2}| &amp; \ \le\  R\,|a_{M+1}| &amp; \le\  R^2 \,|a_M|\\
+|a_{M+3}| &amp; \ \le\  R\,|a_{M+2}| &amp; \le\  R^3 \,|a_M|\\
+&amp;\vdots\\
+|a_{M+\ell}| &amp;\le R^\ell \,|a_M|
+\end{align*}
+</div>
+<p>for all \(\ell\ge 0\text{.}\) The series \(\sum_{\ell=0}^\infty  R^\ell \,|a_M|\) is a geometric series with ratio \(R\) smaller than one in magnitude and so converges. Consequently, by the comparison test with \(a_n\) replaced by \(A_\ell = a_{n+\ell}\) and \(c_n\) replaced by \(C_\ell= R^\ell \, |a_M|\text{,}\) the series \(\sum\limits_{\ell=1}^\infty a_{M+\ell} =\sum\limits_{n=M+1}^\infty a_n\) converges. So the series  \(\sum\limits_{n=1}^\infty a_n\) converges too.</p>
+<p id="p-4831">(b) We are assuming that  \(\Big|\frac{a_{n+1}}{a_n}\Big|\) approaches \(L \gt 1\) as \(n\rightarrow\infty\text{.}\) In particular there must be some natural number \(M \gt N\) so that \(\Big|\frac{a_{n+1}}{a_n}\Big|\ge 1\) for all \(n\ge M\text{.}\) So  \(|a_{n+1}|\ge |a_n|\) for all \(n\ge M\text{.}\) That is, \(|a_n|\) increases as \(n\) increases as long as \(n\ge M\text{.}\) So \(|a_n|\ge |a_M|\) for all \(n\ge M\) and \(a_n\) cannot converge to zero as \(n\rightarrow\infty\text{.}\) So the series diverges by the divergence test.</p></article></div>
+<article class="example-like" id="eg_SRratioA"><a knowl="" class="id-ref" refid="hk-eg_SRratioA"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.3.20</span> <span class="title">\(\sum_{n=0}^\infty a n x^{n-1}\)</span>
+</h6></a></article><div id="hk-eg_SRratioA" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-4832">Fix any two nonzero real numbers \(a\) and \(x\text{.}\) We have already seen in Example <a knowl="./knowl/eg_SRgeom.html" title="Example 3.2.4: Geometric Series">3.2.4</a> and Lemma <a knowl="./knowl/lem_geomsum.html" title="Lemma 3.2.5: Geometric series">3.2.5</a> — we have just renamed \(r\) to \(x\) — that the geometric series \(\sum_{n=0}^\infty a x^n\) converges when \(|x| \lt 1\) and diverges when \(|x|\ge 1\text{.}\) We are now going to consider a new series, constructed by differentiating <a knowl="" class="id-ref" refid="hk-fn-171" id="fn-171"><sup> 14 </sup></a><span id="hk-fn-171" class="hidden-content tex2jax_ignore"><span class="footnote">We shall see later, in Theorem <a knowl="./knowl/thm_SRpsops.html" title="Theorem 3.5.13: Operations on Power Series">3.5.13</a>, that the function  \(\sum_{n=0}^\infty a n x^{n-1}\) is indeed the derivative of the  function \(\sum_{n=0}^\infty a x^n\text{.}\) Of course, such a statement  only makes sense where these series converge — how can you differentiate  a divergent series? (This is not an allusion to a popular series of dystopian novels.) Actually, there is quite a bit of interesting and useful  mathematics involving divergent series, but it is well beyond the scope  of this course.</span></span> each term in the geometric series  \(\sum_{n=0}^\infty a x^n\text{.}\) This new series is</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{n=0}^\infty a_n\qquad\text{with}\quad a_n = a\, n\, x^{n-1}
+\end{equation*}
+</div>
+<p>Let's apply the ratio test.</p>
+<div class="displaymath">
+\begin{align*}
+\Big|\frac{a_{n+1}}{a_n}\Big|
+&amp;= \Big|\frac{a\, (n+1)\, x^n}{a\, n\, x^{n-1}}\Big|
+= \frac{n+1}{n} |x|
+= \Big(1+\frac{1}{n}\Big) |x|
+\rightarrow L=|x|\quad\text{as $n\rightarrow\infty$}
+\end{align*}
+</div>
+<p>The ratio test now tells us that the series \(\sum_{n=0}^\infty a\, n\, x^{n-1}\) converges if \(|x| \lt 1\) and diverges if \(|x| \gt 1\text{.}\) It says nothing about the cases \(x=\pm 1\text{.}\) But in both of those cases \(a_n=a\,n\,(\pm 1)^n\) does not converge to zero as \(n\rightarrow\infty\) and the series diverges by the divergence test.</p></article></div>
+<p id="p-4833">Notice that in the above example, we had to apply another convergence  test in addition to the ratio test. This will be commonplace when we  reach power series and Taylor series — the ratio test will tell us  something like</p>
+<blockquote class="blockquote" id="blockquote-19"><p id="p-4834">The series converges for \(|x| \lt R\) and diverges for \(|x| \gt R\text{.}\)</p></blockquote>
+<p id="p-4835">Of course, we will still have to to determine what happens when \(x=+R, -R\text{.}\) To determine convergence or divergence in those cases we  will need to use one of the other tests we have seen.</p>
+<article class="example-like" id="eg_SRratioB"><a knowl="" class="id-ref" refid="hk-eg_SRratioB"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.3.21</span> <span class="title">\(\sum_{n=0}^\infty \frac{a}{n+1} X^{n + 1}\)</span>
+</h6></a></article><div id="hk-eg_SRratioB" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-4836">Once again, fix any two nonzero real numbers \(a\) and \(X\text{.}\) We again start with the geometric series \(\sum_{n=0}^\infty a x^n\) but this time we construct a new series by integrating <a knowl="" class="id-ref" refid="hk-fn-172" id="fn-172"><sup> 15 </sup></a><span id="hk-fn-172" class="hidden-content tex2jax_ignore"><span class="footnote">We shall  also see later, in Theorem <a knowl="./knowl/thm_SRpsops.html" title="Theorem 3.5.13: Operations on Power Series">3.5.13</a>, that the function  \(\sum_{n=0}^\infty \frac{a}{n+1} x^{n + 1}\) is indeed an antiderivative  of the function \(\sum_{n=0}^\infty a x^n\text{.}\)</span></span> each term, \(a x^n\text{,}\) from \(x=0\) to \(x=X\) giving \(\frac{a}{n+1} X^{n + 1}\text{.}\) The resulting new series is</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{n=0}^\infty a_n\qquad\text{with }a_n = \frac{a}{n+1} X^{n + 1}
+\end{equation*}
+</div>
+<p>To apply the ratio test we need to compute</p>
+<div class="displaymath">
+\begin{align*}
+\Big|\frac{a_{n+1}}{a_n}\Big|
+&amp;= \bigg|\frac{\frac{a}{n+2} X^{n + 2}}{\frac{a}{n+1} X^{n + 1}}\bigg|
+= \frac{n+1}{n+2} |X|
+= \frac{1+\frac{1}{n}}{1+\frac{2}{n}} |X|
+\rightarrow L=|X|\quad\text{as $n\rightarrow\infty$}
+\end{align*}
+</div>
+<p>The ratio test now tells us that the series  \(\sum_{n=0}^\infty \frac{a}{n+1} X^{n + 1}\) converges if \(|X| \lt 1\) and diverges if \(|X| \gt 1\text{.}\) It says nothing about the cases \(X=\pm 1\text{.}\)</p>
+<p id="p-4837">If \(X=1\text{,}\) the series reduces to</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{n=0}^\infty \frac{a}{n+1} X^{n + 1}\bigg|_{X=1}
+=\sum_{n=0}^\infty \frac{a}{n+1}
+=a\sum_{m=1}^\infty \frac{1}{m}\qquad\text{with }m=n+1
+\end{equation*}
+</div>
+<p>which is just \(a\) times the harmonic series, which we know diverges, by Example <a knowl="./knowl/eg_SRpTest.html" title="Example 3.3.6: The \(p\) test:  \(\sum\limits_{n=1}^\infty\frac{1}{n^p}\)">3.3.6</a>.</p>
+<p id="p-4838">If \(X=-1\text{,}\) the series reduces to</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{n=0}^\infty \frac{a}{n+1} X^{n + 1}\bigg|_{X=-1} =\sum_{n=0}^\infty (-1)^{n+1}\frac{a}{n+1}
+\end{equation*}
+</div>
+<p>which converges by the alternating series test. See Example <a knowl="./knowl/eg_SRaltharmonic.html" title="Example 3.3.15: Convergence of the alternating harmonic series">3.3.15</a>.</p>
+<p id="p-4839">In conclusion, the series \(\sum_{n=0}^\infty \frac{a}{n+1} X^{n + 1}\) converges if and only if \(-1\le X \lt 1\text{.}\)</p></article></div>
+<p id="p-4840">The ratio test is often quite easy to apply, but one must always be  careful when the limit of the ratio is \(1\text{.}\) The next example  illustrates this.</p>
+<article class="example-like" id="eg_SRratioC"><a knowl="" class="id-ref" refid="hk-eg_SRratioC"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.3.22</span> <span class="title">\(L=1\)</span>
+</h6></a></article><div id="hk-eg_SRratioC" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-4841">In this example, we are going to see three different series that all have \(\lim_{n\rightarrow\infty}\Big|\frac{a_{n+1}}{a_n}\Big| = 1\text{.}\) One is going to diverge and the other two are going to converge.</p>
+<ul id="p-4842" class="disc">
+<li id="li-2188">The first series is the harmonic series<div class="displaymath">
+\begin{equation*}
+\sum_{n=1}^\infty a_n\qquad\text{with }a_n = \frac{1}{n}
+\end{equation*}
+</div>We have already seen, in Example <a knowl="./knowl/eg_SRpTest.html" title="Example 3.3.6: The \(p\) test:  \(\sum\limits_{n=1}^\infty\frac{1}{n^p}\)">3.3.6</a>, that this series diverges. It has<div class="displaymath">
+\begin{equation*}
+\Big|\frac{a_{n+1}}{a_n}\Big|
+= \bigg|\frac{\frac{1}{n+1}}{\frac{1}{n}}\bigg|
+= \frac{n}{n+1}
+= \frac{1}{1+\frac{1}{n}}
+\rightarrow L=1\quad\text{as $n\rightarrow\infty$}
+\end{equation*}
+</div>
+</li>
+<li id="li-2189">The second series is the alternating harmonic series<div class="displaymath">
+\begin{equation*}
+\sum_{n=1}^\infty a_n\qquad\text{with }a_n = (-1)^{n-1}\frac{1}{n}
+\end{equation*}
+</div>We have already seen, in Example <a knowl="./knowl/eg_SRaltharmonic.html" title="Example 3.3.15: Convergence of the alternating harmonic series">3.3.15</a>, that this series converges. But it also has<div class="displaymath">
+\begin{equation*}
+\Big|\frac{a_{n+1}}{a_n}\Big|
+= \bigg|\frac{(-1)^n\frac{1}{n+1}}{(-1)^{n-1}\frac{1}{n}}\bigg|
+= \frac{n}{n+1}
+= \frac{1}{1+\frac{1}{n}}
+\rightarrow L=1\quad\text{as $n\rightarrow\infty$}
+\end{equation*}
+</div>
+</li>
+<li id="li-2190">The third series is<div class="displaymath">
+\begin{equation*}
+\sum_{n=1}^\infty a_n\qquad\text{with }a_n = \frac{1}{n^2}
+\end{equation*}
+</div>We have already seen, in Example <a knowl="./knowl/eg_SRpTest.html" title="Example 3.3.6: The \(p\) test:  \(\sum\limits_{n=1}^\infty\frac{1}{n^p}\)">3.3.6</a> with \(p=2\text{,}\)  that this series converges. But it also has<div class="displaymath">
+\begin{equation*}
+\Big|\frac{a_{n+1}}{a_n}\Big|
+= \bigg|\frac{\frac{1}{(n+1)^2}}{\frac{1}{n^2}}\bigg|
+= \frac{n^2}{(n+1)^2}
+= \frac{1}{(1+\frac{1}{n})^2}
+\rightarrow L=1\quad\text{as $n\rightarrow\infty$}
+\end{equation*}
+</div>
+</li>
+</ul></article></div>
+<p id="p-4843">Let's do a somewhat artificial example that forces us to combine a few of the techniques we have seen.</p>
+<article class="example-like" id="eg_ratioC"><a knowl="" class="id-ref" refid="hk-eg_ratioC"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.3.23</span> <span class="title">\(\sum_{n=1}^\infty \frac{ (-3)^n \sqrt{n+1}}{2n+3}x^n\)</span>
+</h6></a></article><div id="hk-eg_ratioC" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-4844">Again, the convergence of this series will depend on \(x\text{.}\)</p>
+<ul class="disc">
+<li id="li-2191">Let us start with the ratio test — so we compute<div class="displaymath">
+\begin{align*}
+\left|\frac{a_{n+1}}{a_n}\right|
+&amp;= \left|\frac{(-3)^{n+1} \sqrt{n+2} (2n+3) x^{n+1} }{(-3)^n \sqrt{n+1} (2n+5) x^n} \right|\\
+&amp;= |-3| \cdot \frac{\sqrt{n+2}}{\sqrt{n+1}} \cdot \frac{2n+3}{2n+5} \cdot |x|\\
+\end{align*}
+<p class="intertext">So in the limit as \(n \to \infty\) we are left with</p>
+\begin{align*}
+\lim_{n\to\infty} \left|\frac{a_{n+1}}{a_n}\right|
+&amp;= 3 |x|
+\end{align*}
+</div>
+</li>
+<li id="li-2192">The ratio test then tells us that if \(3|x| \gt 1\) the series diverges, while when \(3|x| \lt 1\) the series converges.</li>
+<li id="li-2193">This leaves us with the cases \(x=+\frac{1}{3}\) and \(-\frac{1}{3}\text{.}\)</li>
+<li id="li-2194">Setting \(x=\frac{1}{3}\) gives the series<div class="displaymath">
+\begin{gather*}
+\sum_{n=1}^\infty \frac{ (-1)^n \sqrt{n+1}}{2n+3}
+\end{gather*}
+</div>The fact that the terms alternate here suggests that we use the alternating series test. That will show that this series converges provided \(\frac{\sqrt{n+1}}{2n+3}\) decreases as \(n\) increases. So we define the function<div class="displaymath">
+\begin{align*}
+f(t) &amp;= \frac{\sqrt{t+1}}{2t+3}
+\end{align*}
+</div>(which is constructed by replacing the \(n\) in \(\frac{\sqrt{n+1}}{2n+3}\) with \(t\)) and verify that \(f(t)\) is a decreasing function of \(t\text{.}\) To prove that, it suffices to show its derivative is negative when \(t\geq 1\text{:}\)<div class="displaymath">
+\begin{align*}
+f'(t) &amp;= \frac{(2t+3)\cdot \frac{1}{2} \cdot(t+1)^{-1/2} - 2\sqrt{t+1} }{(2t+3)^2}\\
+&amp;=\frac{(2t+3) - 4(t+1)  }{2 \sqrt{t+1} (2t+3)^2}\\
+&amp;= \frac{-2t-1}{2 \sqrt{t+1} (2t+3)^2}
+\end{align*}
+</div>When \(t \geq 1\) this is negative and so \(f(t)\) is a decreasing function. Thus we can apply the alternating series  test to show that the series converges when \(x=\frac{1}{3}\text{.}\)</li>
+<li id="li-2195">When \(x = -\frac{1}{3}\) the series becomes<div class="displaymath">
+\begin{gather*}
+\sum_{n=1}^\infty \frac{\sqrt{n+1}}{2n+3}.
+\end{gather*}
+</div>Notice that when \(n\) is large, the summand is approximately  \(\frac{\sqrt{n}}{2n}\) which suggests that the series will diverge  by comparison with \(\sum n^{-1/2}\text{.}\) To formalise this, we can use the limit comparison theorem:<div class="displaymath">
+\begin{align*}
+\lim_{n \to \infty} \frac{\sqrt{n+1}}{2n+3}\  \frac{1}{ n^{-1/2} }
+&amp;=
+\lim_{n \to \infty} \frac{\sqrt{n} \cdot \sqrt{1+1/n}}{n(2+3/n)} \cdot n^{1/2}\\
+&amp;=
+\lim_{n \to \infty} \frac{n \cdot \sqrt{1+1/n}}{n(2+3/n)}\\
+&amp;= \frac{1}{2}
+\end{align*}
+</div>So since this ratio has a finite limit and the series \(\sum n^{-1/2}\) diverges, we know that our series also diverges.</li>
+</ul>
+<p>So in summary the series converges when \(-\frac{1}{3}  \lt  x \leq \frac{1}{3}\) and diverges otherwise.</p></article></div></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

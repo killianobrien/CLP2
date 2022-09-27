@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:20:05+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="exercisegroup">
+<h6 class="heading">
+<span class="type">Exercise Group</span> <span class="codenumber">1.11.6.26–33</span> <span class="title"><p><alert>Exercises — Stage 3</alert></p></span>
+</h6>
+<div class="introduction"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like"><h6 class="heading">
+<span class="codenumber">26</span> <span class="title">(✳)</span>
+</h6>
+<p>A swimming pool has the shape shown in the figure below. The vertical cross--sections of the pool are semi--circular disks. The distances in feet across the pool are given in the figure at 2--foot intervals along the sixteen--foot length of the pool. Use Simpson's Rule to estimate the volume of the pool.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:17%;margin-right:17%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="problems/figs/pool.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><article class="exercise-like boxed"><h6 class="heading">
+<span class="codenumber">27</span> <span class="title">(✳)</span>
+</h6>
+<p>A piece of wire 1m long with radius 1mm is made in such a way that the density varies in its cross--section, but is radially symmetric (that is, the local density \(g(r)\) in \({\rm kg/m^3}\) depends only on the distance \(r\) in mm from the centre of the wire). Take as given that the total mass \(W\) of the wire in kg is given by</p>
+<div class="displaymath">
+\begin{gather*}
+W=2\pi 10^{-6}\int_0^1 rg(r)\,\dee{r}
+\end{gather*}
+</div>
+<p>Data from the manufacturer is given below:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="l m b1 r1 l1 t1 lines">\(r\)</td>
+<td class="l m b1 r1 l0 t1 lines">0</td>
+<td class="l m b1 r1 l0 t1 lines">1/4</td>
+<td class="l m b1 r1 l0 t1 lines">1/2</td>
+<td class="l m b1 r1 l0 t1 lines">3/4</td>
+<td class="l m b1 r1 l0 t1 lines">1</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">\(g(r)\)</td>
+<td class="l m b1 r1 l0 t0 lines">8051</td>
+<td class="l m b1 r1 l0 t0 lines">8100</td>
+<td class="l m b1 r1 l0 t0 lines">8144</td>
+<td class="l m b1 r1 l0 t0 lines">8170</td>
+<td class="l m b1 r1 l0 t0 lines">8190</td>
+</tr>
+</table></div></div></div>
+<ol class="lower-alpha">
+<li>Find the best Trapezoidal Rule approximation that you can for \(W\) based on the data in the table.</li>
+<li>Suppose that it is known that \(|g'(r)| \lt 200\) and \(|g''(r)| \lt 150\) for all values of \(r\text{.}\) Determine the maximum possible size of the error in the approximation you gave in part (a). Recall that if a function \(f(x)\) satisfies \(|f''(x)|\le M\) on \([a,b]\text{,}\) then<div class="displaymath">
+\begin{gather*}
+|I-T_n|\le\frac{M(b-a)^3}{12n^2}
+\end{gather*}
+</div>where \(I=\int_a^b f(x)\,\dee{x}\) and \(T_n\) is the Trapezoidal Rule approximation to \(I\) using \(n\) subintervals.</li>
+</ol></article><article class="exercise-like boxed"><h6 class="heading">
+<span class="codenumber">28</span> <span class="title">(✳)</span>
+</h6>
+<p>Simpson's rule can be used to approximate \(\log 2\text{,}\) since \(\displaystyle\log 2=\int_1^2\frac{1}{x}\,\dee{x}\text{.}\)</p>
+<ol class="lower-alpha">
+<li>Use Simpson's rule with 6 subintervals to approximate \(\log 2\text{.}\)</li>
+<li>
+<p>How many subintervals are required in order to guarantee that the absolute error is less than \(0.00001\text{?}\)</p>
+<p>Note that if \(E_n\) is the error using \(n\) subintervals, then \(|E_n|\le\dfrac{L(b-a)^5}{180n^4}\) where \(L\) is the maximum absolute value of the fourth derivative of the function being integrated and \(a\) and \(b\) are the end points of the interval.</p>
+</li>
+</ol></article><article class="exercise-like"><h6 class="heading">
+<span class="codenumber">29</span> <span class="title">(✳)</span>
+</h6>
+<p>Let \(I={\displaystyle\int_0^2}\cos(x^2)\dee{x}\) and let \(S_n\) be the Simpson's rule approximation to \(I\) using \(n\) subintervals.</p>
+<ol class="lower-alpha">
+<li>Estimate the maximum absolute error in using \(S_8\) to approximate \(I\text{.}\)</li>
+<li>How large should \(n\) be in order to ensure that \(|I-S_n|\le 0.0001\text{?}\)</li>
+</ol>
+<p>Note: The graph of \(f''''(x)\text{,}\) where \(f(x)=\cos(x^2)\text{,}\) is shown below. The absolute error in the Simpson's rule approximation is bounded by \(\dfrac{L(b-a)^5}{180n^4}\) when \(|f''''(x)|\le L\) on the interval \([a,b]\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="problems/figs/graphE97D_11.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><article class="exercise-like"><h6 class="heading">
+<span class="codenumber">30</span> <span class="title">(✳)</span>
+</h6>
+<p>Define a function \(f(x)\) and an integral \(I\) by</p>
+<div class="displaymath">
+\begin{gather*}
+f(x)=\int_0^{x^2}\sin(\sqrt{t})\,\dee{t},\qquad I=\int_0^1 f(t)\,\dee{t}
+\end{gather*}
+</div>
+<p>Estimate how many subdivisions are needed to calculate \(I\) to five decimal places of accuracy using the trapezoidal rule.</p>
+<p>Note that if \(E_n\) is the error using \(n\) subintervals, then \(|E_n|\le\dfrac{M(b-a)^3}{12n^2\vphantom{\frac{1}{2}}}\text{,}\) where \(M\) is the maximum absolute value of the second derivative of the function being integrated and \(a\) and \(b\) are the limits of integration.</p></article><article class="exercise-like"><h6 class="heading">
+<span class="codenumber">31</span> </h6>
+<p>Let \(f(x)\) be a function <a knowl="./knowl/fn-100-hidden.html" title="Footnote 1.11.18"><sup> 18 </sup></a> with \(f''(x) = \dfrac{x^2}{x+1}\text{.}\)</p>
+<ol class="lower-alpha">
+<li>Show that \(|f''(x)| \leq 1\) whenever \(x\) is in the interval \([0,1]\text{.}\)</li>
+<li>Find the maximum value of \(|f''(x)|\) over the interval \([0,1]\text{.}\)</li>
+<li>Assuming \(M=1\text{,}\) how many intervals should you use to approximate \(\displaystyle\int_{0}^{1}f(x) \dee{x}\) to within \(10^{-5}\text{?}\)</li>
+<li>Using the value of  \(M\) you found in (b), how many intervals should you use to approximate \(\displaystyle\int_0^1 f(x) \dee{x}\) to within \(10^{-5}\text{?}\)</li>
+</ol></article><article class="exercise-like boxed"><h6 class="heading">
+<span class="codenumber">32</span> </h6>
+<p>Approximate the function \(\log x\) with a rational function by approximating the integral \(\displaystyle\int_1^{x\vphantom{\frac{1}{2}}} \frac{1}{t} \dee{t}\) using Simpson's rule. Your rational function \(f(x)\)  should approximate \(\log x\) with an error of not more than 0.1 for any \(x\) in the interval \([1,3]\text{.}\)</p></article><article class="exercise-like"><h6 class="heading">
+<span class="codenumber">33</span> </h6>
+<p>Using an approximation of the area under the curve \(\dfrac{1}{x^2+1}\text{,}\) show that the constant \(\arctan2\) is in the interval \(\left[\dfrac{\pi}{4}+0.321,\, \dfrac{\pi}{4}+0.323\right]\text{.}\)</p>
+<p>You may assume use without proof that \(\displaystyle\ddiff{4}{}{x}\left\{\frac{1}{1+x^2}\right\} = \dfrac{24(5x^4-10x^2+1)}{(x^2+1)^5}\text{.}\) You may use a calculator, but only to add, subtract, multiply, and divide.</p></article>
+</div>
+</div>
+<span class="incontext"><a href="exercises-11.html#exercisegroup-33">in-context</a></span>
+</body>
+</html>

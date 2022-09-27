@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:24:48+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="example-like"><p>As a concrete example, suppose that our problem is</p>
+<div class="displaymath">
+\begin{equation*}
+y(0)=e^{-2},\ y'=8(1-2t)y,\ \varepsilon=0.1
+\end{equation*}
+</div>
+<p>and that we have gotten as far as</p>
+<div class="displaymath">
+\begin{equation*}
+t_n=0.33,\ y_n=0.75,\ \ \text{trial }h=0.094
+\end{equation*}
+</div>
+<p>Then, using \(E=|A_{1,n+1}-A_{2,n+1}|\) to denote the magnitude of the estimated local truncation error in \(A_{2,n+1}\) and \(r\) the corresponding error rate</p>
+<div class="displaymath">
+\begin{align*}
+f(t_n,y_n)&amp;=8(1-2\times 0.33) 0.75=2.04 \\
+A_{1,n+1}&amp;=y_n+hf(t_n,y_n)=0.75+0.094\times 2.04=0.942 \\
+y_{\rm mid}&amp;=y_n+\tfrac{h}{2}f(t_n,y_n)
+=0.75+\tfrac{0.094}{2}\times 2.04=0.846 \\
+f\big(t_n+\tfrac{h}{2},y_{\rm mid}\big)
+&amp;=8\Big[1-2\big(0.33+\tfrac{0.094}{2}\big)\Big]0.846=1.66 \\
+A_{2,n+1}&amp;=y_{\rm mid}+\tfrac{h}{2}f(t_n+\tfrac{h}{2},y_{\rm mid})
+=0.846+\tfrac{0.094}{2}1.66=0.924\\
+E&amp;=|A_{1,n+1}-A_{2,n+1}|=|0.942-0.924|=0.018\\
+r&amp;=\frac{|E|}{h}=\frac{0.018}{0.094}=0.19
+\end{align*}
+</div>
+<p>Since \(r=0.19&gt;\varepsilon=0.1\,\text{,}\) the current step size is unacceptable and we have to recompute with the new step size</p>
+<div class="displaymath">
+\begin{equation*}
+\text{new } h=0.9\frac{\varepsilon}{r}(\text{old }h)
+=0.9\ \frac{0.1}{0.19}\ 0.094
+=0.045
+\end{equation*}
+</div>
+<p>to give</p>
+<div class="displaymath">
+\begin{align*}
+f(t_n,y_n)&amp;=8(1-2\times0.33)0.75=2.04 \\
+A_{1,n+1}&amp;=y_n+hf(t_n,y_n)=0.75+0.045\times 2.04=0.842 \\
+y_{\rm mid}&amp;=y_n+\tfrac{h}{2}f(t_n,y_n)
+=0.75+\tfrac{0.045}{2}\times 2.04=0.796 \\
+f\big(t_n+\tfrac{h}{2},y_{\rm mid}\big)
+&amp;=8\Big[1-2\big(0.33+\tfrac{0.045}{2}\big)\Big]0.796=1.88 \\
+A_{2,n+1}&amp;=y_{\text{mid}}
++\tfrac{h}{2}f(t_n +\tfrac{h}{2},y_{\rm mid})
+=0.796+\tfrac{0.045}{2}1.88
+=0.838 \\
+E&amp;=A_{1.n+1}-A_{2.n+1}=0.842-0.838=0.004 \\
+r&amp;=\frac{|E|}{h}=\frac{0.004}{0.045}=0.09
+\end{align*}
+</div>
+<p>This time \(\,r=0.09\lt \varepsilon=0.1\,\text{,}\) is acceptable so we set \(t_{n+1}=0.33+0.045=0.375\) and</p>
+<div class="displaymath">
+\begin{equation*}
+y_{n+1}=A_{2,n+1}=0.838
+\end{equation*}
+</div>
+<p>The initial trial step size from \(t_{n+1}\) to \(t_{n+2}\) is</p>
+<div class="displaymath">
+\begin{equation*}
+\text{new }h = 0.9\frac{\varepsilon}{r}(\text{old }h)
+=0.9\,\frac{0.1}{0.09}\,.045=.045
+\end{equation*}
+</div>
+<p>By a fluke, it has turned out that the new \(h\) is the same as the old \(h\) (to three decimal places). If \(r\) had been significantly smaller than \(\varepsilon\text{,}\) then the new \(h\) would have been signficantly bigger than the old \(h\) - indicating that it is (relatively) easy to estimate things in this region, making a larger step size sufficient.</p></article></body>
+</html>

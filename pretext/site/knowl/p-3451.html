@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:20:47+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Here is an example which shows what can go wrong with Theorem <a knowl="./knowl/thm_AVwtmvt.html" title="Theorem 2.2.10: Mean Value Theorem for Weighted Integrals">2.2.10</a> if we allow the weight function \(w(x)\) to change sign. Let \(a=-0.99\) and \(b=1\text{.}\) Let</p>
+<div class="displaymath">
+\begin{align*}
+w(x)&amp;=\begin{cases}
+1&amp;\text{if }x\ge 0 \\
+-1&amp;\text{if }x\lt 0 
+\end{cases} \\
+f(x)&amp;=\begin{cases}
+x&amp;\text{if }x\ge 0 \\
+0&amp;\text{if }x\lt 0 
+\end{cases} 
+\end{align*}
+</div>
+<p>Then</p>
+<div class="displaymath">
+\begin{align*}
+\int_a^b f(x)\,w(x)\,\dee{x} &amp;= \int_0^1 x\,\dee{x} =\frac{1}{2} \\
+\int_a^b w(x)\,\dee{x} &amp;= \int_0^1 \dee{x} -\int_{-0.99}^0\dee{x}
+= 1 - 0.99
+= 0.01
+\end{align*}
+</div>
+<p>As \(c\) runs from \(a\) to \(b\text{,}\) \(f(c)\int_a^b w(x)\,\dee{x}=0.01 f(c)\) runs from \(0\) to \(0.01\) and, in particular, never takes a value anywhere near \(\int_a^b f(x)\,w(x)\,\dee{x}=\frac{1}{2}\text{.}\) There is no \(c\) value which works.</p>
+<span class="incontext"><a href="subsection-31.html#p-3451">in-context</a></span>
+</body>
+</html>

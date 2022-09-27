@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:20:14+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">1.12.4.15.1</span>
+</h6>
+<p>We don't want to antidifferentiate this integrand, so let's use a comparison. Note the integrand is positive when \(x \gt 0\text{.}\)</p>
+<p>For any \(x\text{,}\) \(|\sin x| \leq 1\text{,}\) so \(\dfrac{|\sin x|}{x^{3/2}+x^{1/2}} \leq \dfrac{1}{x^{3/2}+x^{1/2}} \text{.}\)</p>
+<p>Since \(x=0\) and \(x \to \infty\) both cause the integral to be improper, we need to break it into two pieces. Since both terms in the denominator give positive numbers when \(x\) is positive, \(\dfrac{1}{x^{3/2}+x^{1/2}} \leq \dfrac{1}{x^{3/2}}\) and \(\dfrac{1}{x^{3/2}+x^{1/2}} \leq \dfrac{1}{x^{1/2}}\text{.}\) That gives us two options for comparison.</p>
+<p>When \(x\) is positive and close to zero, \(x^{1/2}  \ge x^{3/2}\text{,}\) so we guess that we should compare our integrand to \(\frac{1}{x^{1/2}}\) near the limit \(x=0\text{.}\) In contrast, when \(x\) is very large, \(x^{1/2}  \le x^{3/2}\text{,}\) so we guess that we should compare our integrand to \(\frac{1}{x^{3/2}}\) as \(x\) goes to infinity.</p>
+<div class="displaymath">
+\begin{align*}
+\amp\frac{|\sin x|}{x^{3/2}+x^{1/2}}
+\le \frac{1}{x^{1/2}}\\
+\amp\hskip0.25in\text{and the integral }\int_0^1\frac{\dee{x}}{x^{1/2}}\text{ converges by the $p$-test,  Example }\knowl{./knowl/eg_IMPp2.html}{\text{1.12.9}}\\
+\amp\frac{|\sin x|}{x^{3/2}+x^{1/2}}
+\le \frac{1}{x^{3/2}}\\
+\amp\hskip0.25in\text{and the integral }\int_1^\infty\frac{\dee{x}}{x^{3/2}}\text{ converges by the $p$-test, Example }\knowl{./knowl/eg_IMPp1.html}{\text{1.12.8}}
+\end{align*}
+</div>
+<p>Now we have all the data we need to apply the comparison test, Theorem <a knowl="./knowl/thm_IMPcomparison.html" title="Theorem 1.12.17: Comparison">1.12.17</a>.</p>
+<ul class="disc">
+<li>\(\dfrac{|\sin x|}{x^{3/2}+x^{1/2}}\,, \dfrac{1}{x^{1/2}}\,,\) and \(\dfrac{1}{x^{3/2}}\) are defined and continuous for \(x \gt 0\)</li>
+<li>\(\dfrac{1}{x^{1/2}}\) and \(\dfrac{1}{x^{3/2}}\) are nonnegative for \(x \ge 0\)</li>
+<li>\(\dfrac{|\sin x|}{x^{3/2}+x^{1/2}}\le \dfrac{1}{x^{1/2}}\) for all \(x  \gt  0\) and \(\displaystyle\int_0^1\dfrac{1}{x^{1/2}} \dee{x}\) converges, so (using Remark <a knowl="./knowl/rmk_singularities.html" title="Remark 1.12.16">1.12.16</a>) <font color="blue">\(\displaystyle\int_0^{1\vphantom{\frac12}}\dfrac{|\sin x|}{x^{3/2}+x^{1/2}} \dee{x}\) converges.</font>
+</li>
+<li>\(\dfrac{|\sin x|}{x^{3/2}+x^{1/2}}\le \dfrac{1}{x^{3/2}}\) for all \(x \ge 1\) and \(\displaystyle\int_1^\infty\dfrac{1}{x^{3/2}} \dee{x}\) converges, so <font color="blue">\(\displaystyle\int_1^{\infty\vphantom{\frac12}}\dfrac{|\sin x|}{x^{3/2}+x^{1/2}} \dee{x}\) converges.</font>
+</li>
+</ul>
+<p>Therefore, our integral <font color="blue">\(\displaystyle\int_0^\infty \frac{|\sin x|}{x^{3/2}+x^{1/2}} \dee{x}\) converges.</font></p>
+</div>
+<span class="incontext"><a href="exercises-12.html#solution-347">in-context</a></span>
+</body>
+</html>

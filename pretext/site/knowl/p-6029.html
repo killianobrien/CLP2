@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:24:21+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Now we turn to the second sum. Since it is a sum of strictly positive  terms we must have</p>
+<div class="displaymath">
+\begin{align*}
+B &amp;  \gt  0
+\end{align*}
+</div>
+<p>We complete the proof by showing that \(B \lt 1\text{.}\) To do this we bound each term  from above:</p>
+<div class="displaymath">
+\begin{align*}
+\frac{b!}{n!}
+&amp;= \frac{1}{
+\underbrace{(b+1)(b+2)\cdots (n-1)n}_{n-b\ \text{factors}}
+}\\
+&amp; \leq \frac{1}{
+\underbrace{(b+1)(b+1)\cdots (b+1)(b+1)}_{n-b\ \text{factors}}
+}
+= \frac{1}{(b+1)^{n-b}}
+\end{align*}
+</div>
+<p>Indeed the inequality is strict except when \(n=b+1\text{.}\) Hence we have that</p>
+<div class="displaymath">
+\begin{align*}
+B &amp;  \lt  \sum_{n=b+1}^\infty \frac{1}{(b+1)^{n-b}}\\
+&amp; =
+\frac{1}{(b+1)} +\frac{1}{(b+1)^2} +\frac{1}{(b+1)^3} +\cdots\\
+\end{align*}
+<p class="intertext">This is just a  geometric series (see Lemma <a knowl="./knowl/lem_geomsum.html" title="Lemma 3.2.5: Geometric series">3.2.5</a>) and equals</p>
+\begin{align*}
+&amp;= \frac{1}{(b+1)}\frac{1}{1-\frac{1}{b+1}}\\
+&amp;= \frac{1}{b+1-1} = \frac{1}{b}
+\end{align*}
+</div>
+<p>And since \(b\) is a positive integer, we have shown that</p>
+<div class="displaymath">
+\begin{gather*}
+0  \lt  B   \lt  1
+\end{gather*}
+</div>
+<p>and thus \(B\) cannot be an integer.</p>
+<span class="incontext"><a href="subsection-65.html#p-6029">in-context</a></span>
+</body>
+</html>

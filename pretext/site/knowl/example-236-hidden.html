@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:24:30+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="example-like"><p>Factor \(P(x)=x^3-x^2+2\text{.}\)</p>
+<p><em class="alert">Solution:</em></p>
+<ul class="disc">
+<li>We can go hunting for integer roots of the polynomial by looking at the divisors  of the constant term. This tells us to try \(x=\pm1, \pm2\text{.}\)</li>
+<li>A quick computation shows that \(P(-1)=0\) while \(P(1),P(-2),P(2) \neq 0\text{.}\) Hence  \(x=-1\) is a root of the polynomial and so \(x+1\) must be a factor.</li>
+<li>
+<p>So we divide  \(\frac{x^3-x^2+2}{x+1}\text{.}\) The first term, \(x^2\text{,}\) in the quotient  is chosen so that when you multiply it by the  denominator,  \(x^2(x+1)=x^3+x^2\text{,}\) the leading term, \(x^3\text{,}\)  matches the leading term  in the numerator, \(x^3-x^2+2\text{,}\) exactly.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/longdiv2.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+<li>
+<p>When you subtract \(x^2(x+1)=x^3+x^2\) from the numerator \(x^3-x^2+2\) you  get the remainder \(-2x^2+2\text{.}\) Just like in public school, the \(2\) is  not normally “brought down” until it is actually needed.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/longdiv3.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+<li>
+<p>The next term, \(-2x\text{,}\) in the quotient is chosen so that when you multiply it by the  denominator, \(-2x(x+1)=-2x^2-2x\text{,}\) the leading term \(-2x^2\)  matches the leading term in the remainder exactly.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:17%;margin-right:17%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/longdiv4.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p>And so on.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:17%;margin-right:17%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/longdiv5.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+<li><p>Note that we finally end up with a remainder \(0\text{.}\) A nonzero remainder would have signalled a computational error, since we know that the  denominator \(x-(-1)\) must divide the numerator \(x^3-x^2+2\) exactly.</p></li>
+<li>We conclude that<div class="displaymath">
+\begin{gather*}
+(x+1)(x^2-2x+2)=x^3-x^2+2
+\end{gather*}
+</div>To check this, just multiply out the left hand side explicitly.</li>
+<li>Applying the high school quadratic root formula  \(\frac{-b\pm\sqrt{b^2-4ac}}{2a}\) to \(x^2-2x+2\) tells us that it has no real  roots and that we cannot factor it further <a knowl="./knowl/fn-234-hidden.html" title="Footnote A.16.8"><sup> 8 </sup></a>.</li>
+</ul></article></body>
+</html>

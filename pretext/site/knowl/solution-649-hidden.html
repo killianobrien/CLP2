@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:23:04+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>We first develop some intuition about \(\displaystyle\sum_{n=1}^\infty\left|\frac{n^2-\sin n}{n^6+n^2}\right|\text{,}\) where we take the absolute value of the summands to consider whether the series converges <em class="emphasis">absolutely</em>. For very large \(n\text{,}\) \(n^2\) dominates \(\sin n\) and \(n^6\) dominates \(n^2\) so that</p>
+<div class="displaymath">
+\begin{gather*}
+\left|\frac{n^2-\sin n}{n^6+n^2}\right|
+\approx \frac{n^2}{n^6}
+=\frac{1}{n^4}
+\end{gather*}
+</div>
+<p>The series \(\displaystyle \sum_{n=1}^{\infty} \frac{1}{n^4}\) converges by the \(p\)-test with \(p=4 \gt 1\text{.}\) We expect the given series to converge too.</p>
+<p>To verify that  our intuition is correct, we apply the limit comparison test with</p>
+<div class="displaymath">
+\begin{gather*}
+a_n= \frac{n^2-\sin n}{n^6+n^2} \quad\text{and}\quad b_n= \frac{1}{n^4}
+\end{gather*}
+</div>
+<p>which is valid since</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{n\rightarrow\infty} \frac{a_n}{b_n}
+\amp=\lim_{n\rightarrow\infty}\left|\frac{(n^2-\sin n)}{n^6+n^2}\right|\cdot\frac{n^4}{1}
+=\lim_{n\rightarrow\infty}\frac{|n^6-n^4\sin n|}{n^6+n^2}\\
+\amp=\lim_{n\rightarrow\infty}\frac{1-n^{-2}\sin n}{1+n^{-4}}
+=1
+\end{align*}
+</div>
+<p>exists and is nonzero. Since the series \(\sum\limits_{n=1}^\infty b_n\) converges, the series \(\sum\limits_{n=1}^\infty\dfrac{|n^2-\sin n|}{n^6+n^2}\) converges too. Therefore, the series \(\sum\limits_{n=1}^\infty\dfrac{n^2-\sin n}{n^6+n^2}\) converges absolutely.</p>
+</div></body>
+</html>

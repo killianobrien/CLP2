@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:23:32+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="listitem"><h6 class="heading">
+<span class="type">Item</span> <span class="codenumber">a</span>
+</h6>
+<p>We will give two proofs. The first is shorter and simpler, but uses some trickery. The second is longer, but is more straightforward. It uses a technique called mathematical induction.</p>
+<p><em class="emphasis">Proof 1:</em> We are going to use a little trickery to get a simple proof. We simply view \(x\) as being fixed and study the dependence of \(E_n(a,x)\) on \(a\text{.}\) To emphasise that that is what we are doing, we define</p>
+<div class="displaymath">
+\begin{align*}
+S(t) &amp;= f(x) - f(t) -f'(t)\,(x-t)-\tfrac{1}{2}f''(t)\,(x-t)^2\\
+&amp;\hskip2in -\cdots-\tfrac{1}{n!}f^{(n)}(t)\, (x-t)^n
+\tag{$*$}
+\end{align*}
+</div>
+<p>and observe that \(E_n(a,x) = S(a)\text{.}\)</p>
+<p>So, by the fundamental theorem of calculus (Theorem <a knowl="./knowl/thm_INTfundthmofcalc.html" title="Theorem 1.3.1: Fundamental Theorem of Calculus">1.3.1</a>), the function \(S(t)\) is determined by its derivative, \(S'(t)\text{,}\) and its value at a single point. Finding a value of \(S(t)\) for one value of \(t\) is easy. Substitute \(t=x\) into \((*)\) to yield \(S(x)=0\text{.}\) To find \(S'(t)\text{,}\) apply \(\diff{}{t}\) to both sides of \((*)\text{.}\)  Recalling that \(x\) is just a constant parameter,</p>
+<div class="displaymath">
+\begin{align*}
+S'(t)&amp;= 0 - {\color{blue}{f'(t)}} 
+- \big[{\color{red}{f''(t)(x\!-\!t)}}-{\color{blue}{f'(t)}}\big]\\
+&amp;\hskip0.5in
+-\big[\tfrac{1}{2}f^{(3)}(t)(x\!-\!t)^2-{\color{red}{f''(t)(x\!-\!t)}}\big]\\
+&amp;\hskip0.5in  -\cdots-\big[\tfrac{1}{n!}  f^{(n+1)}(t)\,(x-t)^n
+-\tfrac{1}{(n-1)!}f^{(n)}(t)\,(x-t)^{n-1} \big]\\
+&amp;=-\tfrac{1}{n!}  f^{(n+1)}(t)\,(x-t)^n
+\end{align*}
+</div>
+<p>So, by the fundamental theorem of calculus, \(S(x)=S(a)+\int_a^x S'(t)\,\dee{t}\) and</p>
+<div class="displaymath">
+\begin{align*}
+E_n(a,x) &amp;= -\big[S(x)-S(a)\big] = - \int_a^x S'(t)\,\dee{t}\\
+&amp;=\int_a^x \frac{1}{n!}f^{(n+1)}(t)\, (x-t)^n\,\dee{t}
+\end{align*}
+</div>
+<p><em class="emphasis">Proof 2:</em> The proof that we have just given was short, but also very tricky --- almost noone could create that proof without big hints. Here is another much less tricky, but also commonly used, proof.</p>
+<ul class="disc">
+<li>First consider the case \(n=0\text{.}\) When \(n=0\text{,}\)<div class="displaymath">
+\begin{equation*}
+E_0(a,x) = f(x) - T_0(a,x) = f(x) -f(a)
+\end{equation*}
+</div>The fundamental theorem of calculus gives<div class="displaymath">
+\begin{equation*}
+f(x)-f(a) = \int_a^x f'(t)\,\dee{t}
+\end{equation*}
+</div>so that<div class="displaymath">
+\begin{equation*}
+E_0(a,x) = \int_a^x f'(t)\,\dee{t}
+\end{equation*}
+</div>That is exactly the \(n=0\) case of part (a).</li>
+<li>Next fix any integer \(n\ge 0\) and suppose that we already know  that<div class="displaymath">
+\begin{equation*}
+E_n(a,x)=\int_a^x \frac{1}{n!}f^{(n+1)}(t)\, (x-t)^n\,\dee{t}
+\end{equation*}
+</div>Apply integration by parts (Theorem <a knowl="./knowl/thm_PRTSintbyparts.html" title="Theorem 1.7.2: Integration by parts">1.7.2</a>) to this integral with<div class="displaymath">
+\begin{align*}
+u(t)&amp;=f^{(n+1)}(t)\\
+\dee{v}&amp;= \frac{1}{n!}(x-t)^n\,\dee{t},\qquad 
+v(t)=- \frac{1}{(n+1)!}(x-t)^{n+1}
+\end{align*}
+</div>Since \(v(x)=0\text{,}\) integration by parts gives<div class="displaymath">
+\begin{align*}
+&amp;E_n(a,x)=u(x)v(x)-u(a)v(a)-\int_a^x v(t) u'(t)\,\dee{t} \\
+&amp;\quad=\frac{1}{(n+1)!}f^{(n+1)}(a)\, (x-a)^{n+1}\\
+&amp;\hskip0.5in
++\int_a^x \frac{1}{(n+1)!}f^{(n+2)}(t)\, (x-t)^{n+1}\,\dee{t}
+\tag{$**$}
+\end{align*}
+</div>Now, we defined<div class="displaymath">
+\begin{align*}
+E_n(a,x) &amp;= f(x) - f(a) -f'(a)\,(x-a)-\tfrac{1}{2}f''(a)\,(x-a)^2\\
+&amp;\hskip1in
+-\cdots-\tfrac{1}{n!}f^{(n)}(a)\, (x-a)^n
+\end{align*}
+</div>so<div class="displaymath">
+\begin{equation*}
+E_{n+1}(a,x) = E_n(a,x)-\tfrac{1}{(n+1)!}f^{(n+1)}(a)\, (x-a)^{n+1}
+\end{equation*}
+</div>This formula expresses \(E_{n+1}(a,x)\) in terms of \(E_n(a,x)\text{.}\) That's called a reduction formula. Combining the reduction formula with (\(**\)) gives<div class="displaymath">
+\begin{equation*}
+E_{n+1}(a,x)=\int_a^x \frac{1}{(n+1)!}f^{(n+2)}(t)\, (x-t)^{n+1}\,\dee{t}
+\end{equation*}
+</div>
+</li>
+<li>
+<p>Let's pause to summarise what we have learned in the last two bullets. Use the notation \(P(n)\) to stand for the statement “\(E_n(a,x)=\int_a^x \frac{1}{n!}f^{(n+1)}(t)\, (x-t)^n\,\dee{t}\)”. To prove part (a) of the theorem, we need to prove that the statement \(P(n)\) is true for all integers \(n\ge 0\text{.}\) In the first bullet, we showed that the statement \(P(0)\) is true. In the second bullet, we showed that if, for some integer \(n\ge 0\text{,}\) the statement \(P(n)\) is true, then the statement \(P(n+1)\) is also true. Consequently,</p>
+<ul class="circle">
+<li>\(P(0)\) is true by the first bullet and then</li>
+<li>\(P(1)\) is true by the second bullet with \(n=0\) and then</li>
+<li>\(P(2)\) is true by the second bullet with \(n=1\) and then</li>
+<li>\(P(3)\) is true by the second bullet with \(n=2\)</li>
+<li>and so on, for ever and ever.</li>
+</ul>
+<p>That tells us that \(P(n)\) is true for all integers \(n\ge 0\text{,}\) which is exactly part (a) of the theorem. This proof technique is called mathematical induction<a knowl="./knowl/fn-201-hidden.html" title="Footnote 3.6.9"><sup> 9 </sup></a>.</p>
+</li>
+</ul></article><span class="incontext"><a href="subsubsection-17.html#li-2377">in-context</a></span>
+</body>
+</html>

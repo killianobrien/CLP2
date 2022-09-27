@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:54+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>The integrand is of the form \(N(x)/D(x)\) with \(D(x)\) already factored and \(N(x)\) of lower degree. With no obvious substitution available, we look for a partial fraction decomposition.</p>
+<div class="displaymath">
+\begin{gather*}
+\frac{3x^2 -4}{(x-2)(x^2+4)} = \frac{A}{x-2} + \frac{Bx + C}{x^2+4}
+\end{gather*}
+</div>
+<p>Multiplying through by the denominator gives</p>
+<div class="displaymath">
+\begin{gather*}
+3x^2 -4 = A(x^2+4) + (Bx + C)(x-2)
+\tag{$*$}
+\end{gather*}
+</div>
+<p>Setting \(x=2\) we find:</p>
+<div class="displaymath">
+\begin{gather*}
+12 -4 = A(4 + 4) + 0 \implies 8 =8A  \implies \color{red}{A = 1}
+\end{gather*}
+</div>
+<p>Substituting \(A=1\) in \((*)\) gives</p>
+<div class="displaymath">
+\begin{align*}
+&amp; 3x^2 -4  = (x^2+4) + (x-2)(Bx + C)\\
+&amp;\implies   2x^2-8 =(x-2)(Bx + C)\\
+&amp;\implies   (x-2)(2x+4)=(x-2)(Bx + C)\\
+&amp; \implies \color{red}{ B=2, C=4}
+\end{align*}
+</div>
+<p>Thus, we have:</p>
+<div class="displaymath">
+\begin{gather*}
+\frac{3x^2 -4}{(x-2)(x^2+4)} = \frac{1}{x-2} + \frac{2x + 4}{x^2+4} = \frac{1}{x-2} + \frac{2x }{x^2+4} + \frac{4}{x^2+4 }
+\end{gather*}
+</div>
+<p>The first two of these are directly integrable:</p>
+<div class="displaymath">
+\begin{gather*}
+F(x) = \log |x-2| + \log |x^2+4| + \int \frac{4}{x^2+4}\,\dee{x}
+\end{gather*}
+</div>
+<p>(The second integral was found just by guessing an antiderivative. Alternatively, one could use the substitution \(u=x^2+4\text{,}\) \(\dee{u}=2x\,\dee{x}\text{.}\)) For the final integral, we substitute: \(x = 2y\text{,}\) \(\dee{x} = 2\dee{y}\text{,}\) and see that:</p>
+<div class="displaymath">
+\begin{gather*}
+\int \frac{4}{x^2+4}\,\dee{x}  = 2 \int \frac{1}{y^2 + 1}\,\dee{y} = 2 \arctan y + D = 2\arctan (x/2) + D
+\end{gather*}
+</div>
+<p>for any constant \(D\text{.}\) All together we have:</p>
+<div class="displaymath">
+\begin{gather*}
+F(x) = \log |x-2| + \log |x^2+4| + 2\arctan (x/2) + D
+\end{gather*}
+</div>
+</div></body>
+</html>

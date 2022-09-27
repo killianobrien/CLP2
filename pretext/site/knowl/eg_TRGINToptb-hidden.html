@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:38+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="example-like"><p><em class="alert">Solution:</em> We have already seen that</p>
+<div class="displaymath">
+\begin{align*}
+\int \sec x\dee{x}
+&amp;= \int \frac{\dee{u}}{1-u^2}\bigg|_{u=\sin x}
+\end{align*}
+</div>
+<p>The trick uses the obervations that</p>
+<ul class="disc">
+<li>\(\frac{1}{1-u^2}=\frac{1+u-u}{1-u^2}=\frac{1}{1-u}-\frac{u}{1-u^2}\)</li>
+<li>\(\frac{1}{1-u}\) has antiderivative \(-\log(1-u)\) (for \(u\lt 1\))</li>
+<li>The derivative \(\diff{}{u}(1-u^2)=-2u\) of the denominator of \(\frac{u}{1-u^2}\) is the same, up to a factor of \(-2\text{,}\) as the numerator of \(\frac{u}{1-u^2}\text{.}\) So we can easily evaluate the integral of \(\frac{u}{1-u^2}\) by substituting \(v=1-u^2\text{,}\) \(\dee{v}=-2u\,\dee{u}\text{.}\)<div class="displaymath">
+\begin{gather*}
+\int \frac{u\,\dee{u}}{1-u^2} 
+= \int \frac{\frac{\dee{v}}{-2}}{v}\bigg|_{v=1-u^2}
+=-\frac{1}{2}\log(1-u^2)+C
+\end{gather*}
+</div>
+</li>
+</ul>
+<p>Combining these observations gives</p>
+<div class="displaymath">
+\begin{align*}
+\int \sec x\dee{x}
+&amp;=\bigg[\int \frac{\dee{u}}{1-u^2}\bigg]_{u=\sin x}
+=\bigg[\int\frac{1}{1-u}\dee{u}
+-\int\frac{u}{1-u^2}\dee{u}\bigg]_{u=\sin x}\\
+&amp;=\Big[-\log(1-u)+\frac{1}{2}\log(1-u^2)+C\Big]_{u=\sin x}\\
+&amp;=-\log(1-\sin x)+\frac{1}{2}\log(1-\sin^2 x)+C\\
+&amp;=-\log(1-\sin x)+\frac{1}{2}\log(1-\sin x)+\frac{1}{2}\log(1+\sin x)+C\\
+&amp;=\frac{1}{2}\log\frac{1+\sin x}{1-\sin x}+C
+\end{align*}
+</div></article></body>
+</html>

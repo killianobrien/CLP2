@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:42+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="example-like"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.9.2</span> <span class="title">\(\int \frac{x^2}{\sqrt{1-x^2}}\dee{x}\)</span>
+</h6>
+<p><em class="alert">Solution:</em> We proceed much as we did in the previous example.</p>
+<ul class="disc">
+<li>To simplify the integrand we substitute \(x=\sin u\text{.}\) With this choice  \(\diff{x}{u}=\cos u\) and so \(\dee{x}=\cos u \dee{u}\text{.}\) Also note that \(u=\arcsin x\text{.}\)</li>
+<li>The integral becomes<div class="displaymath">
+\begin{align*}
+\int \frac{x^2}{\sqrt{1-x^2}}\dee{x}
+&amp;= \int \frac{\sin^2u}{\sqrt{1-\sin^2u}} \cdot \cos u \dee{u}\\
+&amp;= \int \frac{\sin^2u}{\sqrt{\cos^2u}} \cdot \cos u \dee{u}
+\end{align*}
+</div>
+</li>
+<li>To proceed further we need to get rid of the square-root. Since \(u=\arcsin x\) has  domain \(-1\leq x \leq 1\) and range \(-\frac\pi2 \leq u \leq \frac\pi2\text{,}\) it follows  that \(\cos u \geq 0\) (since cosine is non-negative on these inputs). Hence<div class="displaymath">
+\begin{align*}
+\sqrt{\cos^2u} &amp;= \cos u &amp; \text{when $-\frac\pi2 \leq u \leq \frac\pi2 $}
+\end{align*}
+</div>
+</li>
+<li>So our integral now becomes<div class="displaymath">
+\begin{align*}
+\int \frac{x^2}{\sqrt{1-x^2}}\dee{x}
+&amp;= \int \frac{\sin^2u}{\sqrt{\cos^2u}} \cdot \cos u \dee{u}\\
+&amp;= \int \frac{\sin^2u}{\cos u} \cdot \cos u \dee{u}\\
+&amp;= \int \sin^2u \dee{u}\\
+&amp;= \frac{1}{2} \int (1-\cos 2u) \dee{u} \qquad
+\text{by Equation }\knowl{./knowl/eq_TRGINTtrigidentityF.html}{\text{1.8.4}}\\
+&amp;= \frac{u}{2} - \frac{1}{4}\sin 2u +C\\
+&amp;= \frac{1}{2}\arcsin x - \frac{1}{4} \sin(2\arcsin x) +C
+\end{align*}
+</div>
+</li>
+<li>We can simplify this further using a double-angle identity. Recall that \(u =  \arcsin  x\) and that \(x=\sin u\text{.}\) Then<div class="displaymath">
+\begin{align*}
+\sin 2u &amp;= 2 \sin u \cos u\\
+\\
+\end{align*}
+<p class="intertext">We can replace \(\cos u\) using \(\cos^2u = 1 - \sin^2u\text{.}\) Taking a  square-root of this formula gives \(\cos u= \pm \sqrt{1-\sin^2u}\text{.}\) We need the  positive branch here since \(\cos u \geq 0\) when \(-\frac\pi2 \leq u  \leq \frac\pi2\) (which is exactly the range of \(\arcsin x\)). Continuing along:</p>
+\begin{align*}
+\sin2u
+&amp;= 2 \sin u \cdot \sqrt{1-\sin^2 u}\\
+&amp;= 2 x \sqrt{1-x^2}
+\end{align*}
+</div>Thus our solution is<div class="displaymath">
+\begin{align*}
+\int \frac{x^2}{\sqrt{1-x^2}}\dee{x}
+&amp;= \frac{1}{2}\arcsin x - \frac{1}{4} \sin(2\arcsin x) +C\\
+&amp;= \frac{1}{2}\arcsin x - \frac{1}{2} x \sqrt{1-x^2} +C
+\end{align*}
+</div>
+</li>
+</ul></article><span class="incontext"><a href="subsection-18.html#eg_trigsub2">in-context</a></span>
+</body>
+</html>

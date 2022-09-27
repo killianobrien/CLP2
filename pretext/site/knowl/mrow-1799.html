@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:42+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="displaymath">
+\begin{align*}
+\int x\sin x  \cos x \dee{x}&amp;=x\sin^2 x - \int  \sin x(x\cos x + \sin x)\dee{x}\\
+&amp;=x\sin^2 x - \int x \sin x \cos x\dee{x} - \int \sin^2 x\dee{x}\\
+\end{align*}
+<p class="intertext">Apply the identity \(\sin^2 x = \dfrac{1-\cos(2x)}{2}\) to the second integral.</p>
+\begin{align*}
+&amp;=x\sin^2 x - \int x \sin x \cos x\dee{x} - \int \dfrac{1-\cos(2x)}{2}\dee{x}\\
+&amp;=x\sin^2 x - \int x \sin x \cos x\dee{x} - \frac{x}{2} +\frac{1}{4}\sin(2x)+C\\
+\end{align*}
+<p class="intertext">So, we have the equation</p>
+\begin{align*}
+\color{red}{\int x\sin x  \cos x \dee{x}}&amp;=x\sin^2 x -\textcolor{red}{ \int x \sin x \cos x\dee{x}} \\
+&amp;\hskip1in- \frac{x}{2} + \frac{1}{4}\sin(2x)+C\\
+\color{red}{2\int x\sin x  \cos x \dee{x}} &amp;=x\sin^2 x - \frac{x}{2} + \frac{1}{4}\sin(2x)+C\\
+\int x\sin x  \cos x \dee{x}&amp;=\frac{x}{2}\sin^2 x - \frac{x}{4} + \frac{1}{8}\sin(2x)+\frac{C}{2}\\
+&amp;=\frac{x}{2}\sin^2 x - \frac{x}{4} + \frac{1}{4}\sin x\cos x+\frac{C}{2}
+\end{align*}
+</div>
+<span class="incontext"><a href="exercises-8.html#mjx-eqn-mrow-1799">in-context</a></span>
+</body>
+</html>

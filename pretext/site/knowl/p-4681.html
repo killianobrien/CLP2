@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:22:15+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>When we compute  the \(n^{\rm th}\) partial sum, i.e. the sum of of the first \(n\) terms, successive terms cancel and only the first half of the first term, \(\Big( \frac{6}{k^2} - \frac{6}{(k+1)^2} \Big)\Big|_{k=1}\text{,}\) and the second half of the \(n^{\rm th}\) term, \(\Big( \frac{6}{k^2} - \frac{6}{(k+1)^2} \Big)\Big|_{k=n}\text{,}\) survive. That is:</p>
+<div class="displaymath">
+\begin{gather*}
+s_n = \sum_{k=1}^{n} \bigg( \frac{6}{k^2} - \frac{6}{(k+1)^2} \bigg)
+= \frac6{1^2} - \frac{6}{(n+1)^2}
+\end{gather*}
+</div>
+<p>Therefore, we can see directly that the sequence of partial sums \(\{ s_n \}\) is convergent:</p>
+<div class="displaymath">
+\begin{gather*}
+\lim_{n\to\infty} s_n = \lim_{n\to\infty}  \bigg( 6- \frac{6}{(n+1)^2} \bigg) = 6
+\end{gather*}
+</div>
+<p>By Definition <a knowl="./knowl/def_SRseries.html" title="Definition 3.2.3">3.2.3</a> the series is also convergent, with limit \(6\text{.}\)</p>
+<span class="incontext"><a href="exercises-19.html#p-4681">in-context</a></span>
+</body>
+</html>

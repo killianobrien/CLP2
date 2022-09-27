@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:24:47+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>The second half of the derivation is to repeatedly apply (E4-n) with \(n=0,1,2,\cdots\text{.}\) By definition \(\phi(t_0)=y_0\) so that \(\varepsilon_0=0\text{,}\) so</p>
+<div class="displaymath">
+\begin{alignat*}{2}
+&amp;(\text{E4-0})\implies|\varepsilon_1|&amp;&amp;\le (1+Bh)|\varepsilon_0| +\tfrac{A}{2}h^2
+=\tfrac{A}{2} h^2 \\
+&amp;(\text{E4-1})\implies|\varepsilon_2|&amp;&amp;\le (1+Bh)|\varepsilon_1| +\tfrac{A}{2} h^2
+=(1+Bh)\tfrac{A}{2}h^2+\tfrac{A}{2}h^2\\
+&amp;(\text{E4-2})\implies|\varepsilon_3|&amp;&amp;\le (1+Bh)|\varepsilon_2| +\tfrac{A}{2}h^2
+=(1+Bh)^2\tfrac{A}{2}h^2+(1+Bh)\tfrac{A}{2}h^2+\tfrac{A}{2}h^2
+\end{alignat*}
+</div>
+<p>Continuing in this way</p>
+<div class="displaymath">
+\begin{equation*}
+|\varepsilon_n|\le 
+(1+Bh)^{n-1}\tfrac{A}{2}h^2+\cdots+(1+Bh)\tfrac{A}{2}h^2+\tfrac{A}{2}h^2
+=\sum_{m=0}^{n-1} (1+Bh)^m \tfrac{A}{2}h^2
+\end{equation*}
+</div>
+<p>This is the beginning of a geometric series, and we can sum it up by using \(\ \sum\limits_{m=0}^{n-1} ar^m=\frac{r^n-1}{r-1}a\ \) (which is Theorem <a knowl="./knowl/thm_INTspecialSums.html" title="Theorem 1.1.6">1.1.6</a>(a)) with \(\ a=\tfrac{A}{2}h^2\ \) and \(\ r=1+Bh\ \) gives</p>
+<div class="displaymath">
+\begin{equation*}
+|\varepsilon_n|\le \frac{(1+Bh)^n-1}{(1+Bh)-1}\frac{A}{2}h^2
+=\frac{A}{2B}\big[(1+Bh)^n-1\big]h
+\end{equation*}
+</div>
+<p>We are interested in how this behaves as \(t_n-t_0\) increases and/or \(h\) decreases. Now \(n=\frac{t_n-t_0}{h}\) so that \((1+Bh)^n=(1+Bh)^{(t_n-t_0)/h}\text{.}\) When \(h\) is small, the behaviour of \((1+Bh)^{(t_n-t_0)/h}\) is not so obvious. So we'll use a little trickery to make it easier to understand. Setting \(x=Bh\) in</p>
+<div class="displaymath">
+\begin{equation*}
+x\ge 0\implies 1+x\le 1+x+\frac{1}{2}x^2+\frac{1}{3!}x^3+\cdots = e^x
+\end{equation*}
+</div>
+<p>(the exponential series \(e^x= 1+x+\frac{1}{2}x^2+\frac{1}{3!}x^3+\cdots\) was derived in Example <a knowl="./knowl/eg_expSeries.html" title="Example 3.6.5: Exponential Series">3.6.5</a>. gives<a knowl="./knowl/fn-267-hidden.html" title="Footnote D.2.8"><sup> 8 </sup></a> \(1+Bh\le e^{Bh}\text{.}\) Hence \((1+Bh)^n\le e^{Bhn}=e^{B(t_n-t_0)}\text{,}\) since \(t_n=t_0+nh\text{,}\) and we arrive at the conclusion</p>
+<span class="incontext"><a href="ap_global_trunc_Euler.html#p-6248">in-context</a></span>
+</body>
+</html>

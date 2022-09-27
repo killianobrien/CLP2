@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:36+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">1.7.2.20.1</span>
+</h6>
+<p>This example is similar to  Example <a knowl="./knowl/eg_circularint.html" title="Example 1.7.10: \(\int e^x \sin x\dee{x}\)">1.7.10</a> in the text. The functions \(e^{x/2}\) and \(\cos(2x)\) both do not substantially alter when we differentiate or antidifferentiate them. If we use integration by parts twice, we'll end up with an expression that includes our original integral. Then we can just solve for the original integral in the equation, without actually antidifferentiating.</p>
+<p>Let's use \(u=\cos(2x)\) and \(\dee{v} = e^{x/2}\dee{x}\text{,}\) so \(\dee{u}=-2\sin(2x)\dee{x}\) and \(v=2e^{x/2}\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+\int e^{x/2}\cos(2x)\dee{x}&amp;=
+\underbrace{2e^{x/2}\cos(2x)}_{uv}-
+\int\underbrace{-4e^{x/2}\sin(2x)\dee{x}}_{v\dee{u}}\\
+&amp;=2e^{x/2}\cos(2x)+4\int e^{x/2}\sin(2x)\dee{x}\\
+\end{align*}
+<p class="intertext">Similarly to our first integration by parts, we use \(u=\sin(2x)\text{,}\) \(\dee{v}=e^{x/2}\dee{x}\text{,}\) \(\dee{u}=2\cos(2x)\dee{x}\text{,}\) and \(v=2e^{x/2}\text{.}\)</p>
+\begin{align*}
+&amp;=2e^{x/2}\cos(2x)+4\left[
+\underbrace{2e^{x/2}\sin(2x)}_{uv}
+-\int\underbrace{4e^{x/2}\cos(2x)\dee{x}}_{v\dee{u}}
+\right]
+\end{align*}
+</div>
+<p>So, we've found the equation</p>
+<div class="displaymath">
+\begin{align*}
+\color{red}{\int e^{x/2}\cos(2x)\dee{x}}&amp;=2e^{x/2}\cos(2x)+8e^{x/2}\sin(2x)\\
+&amp;\hskip0.5in-\color{red}{16\int e^{x/2}\cos(2x)\dee{x}} +C\\
+\end{align*}
+<p class="intertext">We add \(\quad 16\displaystyle\int e^{x/2}\cos(2x)\dee{x} \quad\) to both sides.</p>
+\begin{align*}
+\color{red}{17\int e^{x/2}\cos(2x)\dee{x}}&amp;=2e^{x/2}\cos(2x)+8e^{x/2}\sin(2x)+C\\
+\int e^{x/2}\cos(2x)\dee{x}&amp;=\frac{2}{17}e^{x/2}\cos(2x)+\frac{8}{17}e^{x/2}\sin(2x)+C
+\end{align*}
+</div>
+<p>Remark: remember that \(C\) is a stand-in for “we can add any real constant”. Since \(C\) can be any number in \((-\infty,\infty)\text{,}\) also \(\frac{C}{17}\) can be any number in \((-\infty,\infty)\text{.}\) So, rather than write \(\frac{C}{17}\) in the last line, we re-named \(\frac{C}{17}\) to \(C\text{.}\)</p>
+</div>
+<span class="incontext"><a href="exercises-7.html#solution-204">in-context</a></span>
+</body>
+</html>

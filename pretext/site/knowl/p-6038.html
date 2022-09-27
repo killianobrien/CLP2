@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:24:23+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>In order to show that the value of this integral is an integer we will use  integration by parts. You have already practiced using  integration by parts to integrate quantities like</p>
+<div class="displaymath">
+\begin{gather*}
+\int x^2\sin(x)\,\dee{x}
+\end{gather*}
+</div>
+<p>and this integral isn't much different. For the moment let us just  use the fact that \(f(x)\) is a polynomial of degree  \(2n\text{.}\) Using integration by parts with \(u=f(x)\text{,}\) \(\dee{v}=\sin(x)\) and \(v=-\cos(x)\) gives us</p>
+<div class="displaymath">
+\begin{align*}
+\int f(x) \sin(x) \,\dee{x}
+&amp;= -f(x)\cos(x)  + \int f'(x)\cos(x)\,\dee{x}\\
+\end{align*}
+<p class="intertext">Use integration by parts again with \(u=f'(x)\text{,}\) \(\dee{v}=\cos(x)\) and \(v=\sin(x)\text{.}\)</p>
+\begin{align*}
+&amp;= -f(x)\cos(x)  + f'(x)\sin(x) - \int f''(x)\sin(x)\,\dee{x}\\
+\end{align*}
+<p class="intertext">Use integration by parts yet again, with \(u=f''(x)\text{,}\)  \(\dee{v}=\sin(x)\) and \(v=-\cos(x)\text{.}\)</p>
+\begin{align*}
+&amp;= -f(x)\cos(x)  + f'(x)\sin(x) + f''(x)\cos(x)  - \int f'''(x)\cos(x)\,\dee{x}
+\end{align*}
+</div>
+<p>And now we can see the pattern; we get alternating signs, and then derivatives multiplied by sines and cosines:</p>
+<div class="displaymath">
+\begin{align*}
+\int f(x) \sin(x) \dee{x}
+&amp;= \cos(x)\left(-f(x)+f''(x)-f^{(4)}(x)+f^{(6)}(x) - \cdots \right)\\
+&amp;\phantom{=} + \sin(x)\left(f'(x)-f'''(x)+f^{(5)}(x)-f^{(7)}(x) + \cdots \right)
+\end{align*}
+</div>
+<p>This terminates at the \(2n^\mathrm{th}\) derivative since \(f(x)\) is a polynomial of degree \(2n\text{.}\)  We can check this  computation by differentiating the terms on the right-hand side:</p>
+<div class="displaymath">
+\begin{gather*}
+\diff{}{x}\left(
+\cos(x)\left(-f(x)+f''(x)-f^{(4)}(x)+f^{(6)}(x) - \cdots \right)
+\right)\\
+= -\sin(x)\left(-f(x)+f''(x)-f^{(4)}(x)+f^{(6)}(x) - \cdots \right)\\
++ \cos(x)\left(-f'(x)+f'''(x)-f^{(5)}(x)+f^{(7)}(x) - \cdots \right)
+\end{gather*}
+</div>
+<p>and similarly</p>
+<div class="displaymath">
+\begin{gather*}
+\diff{}{x} \left(
+\sin(x)\left(f'(x)-f'''(x)+f^{(5)}(x)-f^{(7)}(x) + \cdots \right)
+\right)\\
+= \cos(x)\left(f'(x)-f'''(x)+f^{(5)}(x)-f^{(7)}(x) + \cdots \right)\\
++ \sin(x) \left(f''(x)-f^{(4)}(x)+f^{(6)}(x) - \cdots \right)
+\end{gather*}
+</div>
+<p>When we add these two expressions together all the terms cancel except \(f(x)\sin(x)\text{,}\) as required.</p>
+<span class="incontext"><a href="subsection-66.html#p-6038">in-context</a></span>
+</body>
+</html>

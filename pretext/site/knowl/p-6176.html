@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:24:38+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>To be more concrete, suppose that we have picked some specific value of \(h\text{,}\) and have chosen \(h_1=h\) and \(h_2=\tfrac{h}{2}\text{,}\) and that we have evaluated \(A(h)\) and \(A(h/2)\text{.}\) Then the two equations are</p>
+<div class="displaymath">
+\begin{align*}
+\cA&amp;=A(h)+Kh^k \tag{E3a}\\
+\cA&amp;=A(h/2)+K\big(\tfrac{h}{2}\big)^k \tag{E3b}
+\end{align*}
+</div>
+<p>It is now easy to solve for both \(K\) and \(\cA\text{.}\) To get \(K\text{,}\) just subtract (E3b) from (E3a).</p>
+<div class="displaymath">
+\begin{align*}
+(\textrm{E3a})-(\textrm{E3b}):&amp;\quad
+0=A(h)-A(h/2) +\big(1-\tfrac{1}{2^k}\big)Kh^k\\
+\implies&amp;\quad
+K=\frac{A(h/2)-A(h)}{[1-2^{-k}]h^k}
+\tag{E4a}
+\end{align*}
+</div>
+<p>To get \(\cA\) multiply (E3b) by \(2^k\) and then subtract (E3a).</p>
+<div class="displaymath">
+\begin{align*}
+2^k(\textrm{E3b})-(\textrm{E3a}):&amp;\quad
+[2^k-1]\cA=2^kA(h/2)-A(h)\\
+\implies&amp;\quad
+\cA=\frac{2^kA(h/2)-A(h)}{2^k-1}
+\tag{E4b}
+\end{align*}
+</div>
+<p>The generation of a “new improved” approximation for \(\cA\) from two \(A(h)\)'s with different values of \(h\) is called Richardson<a knowl="./knowl/fn-247-hidden.html" title="Footnote C.1.2"><sup> 2 </sup></a> Extrapolation.  Here is a summary</p>
+<span class="incontext"><a href="ap_Richardson.html#p-6176">in-context</a></span>
+</body>
+</html>

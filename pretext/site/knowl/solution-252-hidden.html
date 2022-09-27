@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:44+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>Substitute \(x=4\tan u\text{,}\) \(\dee{x}=4 \sec^2u\,\dee{u}\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+\int\frac{1}{x^2\sqrt{x^2+16}}\,\dee{x}
+&amp;=\int \frac{1}{16\tan^2 u \sqrt{16\tan^2 u+16}}\,4\sec^2 u\,\dee{u}\\
+&amp;=\int \frac{\sec^2u}{16\tan^2u\sec u}\,\dee{u}
+=\frac{1}{16}\int \frac{\sec u}{\tan^2u}\,\dee{u}\\
+&amp;= \frac{1}{16}\int\frac{\cos u}{\sin^2 u}\,\dee{u}
+\end{align*}
+</div>
+<p>To finish off the integral, we'll substitute \(v=\sin u\text{,}\) \(\dee{v}=\cos u\,\dee{u}\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+\int\frac{1}{x^2\sqrt{x^2+16}}\,\dee{x}
+&amp;=\frac{1}{16} \int\frac{\cos u}{\sin^2 u}\,\dee{u}
+= \frac{1}{16}\int\frac{\dee{v}}{v^2}
+=-\frac{1}{16v} +C\\
+&amp;=-\frac{1}{16\sin u} +C
+=-\frac{1}{16}\dfrac{\sqrt{x^2+16}}{x}+C
+\end{align*}
+</div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:37.5%;margin-right:37.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-238.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p>To find \(\sin u\text{,}\) we draw a right triangle with angle \(u\) and \(\tan u = \frac{x}{4}\text{.}\) We label the opposite side \(x\) and the adjacent side \(4\text{,}\) and then from Pythagoras we find that the hypotenuse has length \(\sqrt{x^2+16}\text{.}\) So, \(\sin u = \dfrac{\sqrt{x^2+16}}{x}\text{.}\)</p>
+<p>As a check, we observe that the derivative of the answer</p>
+<div class="displaymath">
+\begin{align*}
+\diff{}{x}\left(-\frac{1}{16}\frac{\sqrt{x^2+16}}{x}+C\right)
+&amp;=\frac{1}{16}\frac{\sqrt{x^2+16}}{x^2}
+-\frac{1}{16}\frac{x}{x\sqrt{x^2+16}}\\
+&amp; =\frac{1}{16}\frac{(x^2+16)-x^2}{x^2\sqrt{x^2+16}}\\
+&amp;=\frac{1}{x^2\sqrt{x^2+16}}
+\end{align*}
+</div>
+<p>is exactly the integrand.</p>
+</div></body>
+</html>

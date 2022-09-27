@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:23:58+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>Let's use the ratio test:</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{n \to \infty}\left|\frac{a_{n+1}}{a_n} \right|&amp;=
+\lim_{n \to \infty}\left|\frac{\frac{2^{n+1}}{n+1}}{\frac{2^n}{n}} \right|\\
+&amp;=
+\lim_{n \to \infty}2\frac{n}{n+1}=2 \gt 1
+\end{align*}
+</div>
+<p>So, the series diverges.</p>
+<p>Remark: it's tempting to note that \(\log(1+y)=\displaystyle\sum_{n=0}^\infty (-1)^n\frac{y^{n+1}}{n+1}=-\sum_{n=1}^\infty \frac{(-y)^n}{n}\text{,}\) and try to substitute in \(y=-2\text{.}\) But, the Maclaurin series for \(\log(1+y)\) has radius of convergence \(R=1\text{,}\) so it doesn't converge at \(y=-2\text{.}\) Furthermore, \(\log(1+(-2))=\log(-1)\text{,}\) but this is undefined.</p>
+</div></body>
+</html>

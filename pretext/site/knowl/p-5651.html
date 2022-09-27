@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:23:43+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>To find the limit, or show that it does not exist, we are going to have to exhibit a cancellation between the numerator  and the denominator. To develop a strategy for evaluating this limit, let's do a “little scratch work”, starting by  taking a closer look at the denominator. By Example <a knowl="./knowl/eg_bigohlog.html" title="Example 3.6.29: Logarithms and the big O">3.6.29</a>,</p>
+<div class="displaymath">
+\begin{gather*}
+\log(1+x) = x+O(x^2)
+\end{gather*}
+</div>
+<p>This tells us that \(\log(1+x)\) looks a lot like \(x\) for very small \(x\text{.}\) So the denominator \([x+O(x^2)]^4\) looks a lot like \(x^4\) for very small \(x\text{.}\) Now, what about the numerator?</p>
+<ul class="disc">
+<li>If the numerator looks like some constant times \(x^p\) with \(p \gt 4\text{,}\)  for very small \(x\text{,}\) then the ratio will look like the constant times  \(\frac{x^p}{x^4}=x^{p-4}\) and, as \(p-4 \gt 0\text{,}\) will tend to \(0\) as \(x\)  tends to zero.</li>
+<li>If the numerator looks like some constant times \(x^p\) with \(p \lt 4\text{,}\)  for very small \(x\text{,}\) then the ratio will look like the constant times  \(\frac{x^p}{x^4}=x^{p-4}\) and will, as \(p-4 \lt 0\text{,}\) tend to infinity,  and in particular diverge, as \(x\) tends to zero.</li>
+<li>If the numerator looks like  \(Cx^4\text{,}\) for very small \(x\text{,}\) then  the ratio will look like \(\frac{Cx^4}{x^4}=C\) and will tend to \(C\) as  \(x\) tends to zero.</li>
+</ul>
+<p>The moral of the above “scratch work” is that we need to know the  behaviour of the numerator, for small \(x\text{,}\) up to order \(x^4\text{.}\) Any  contributions of order \(x^p\) with \(p \gt 4\) may be put into error  terms \(O(|x|^p)\text{.}\)</p>
+<span class="incontext"><a href="subsection-61.html#p-5651">in-context</a></span>
+</body>
+</html>

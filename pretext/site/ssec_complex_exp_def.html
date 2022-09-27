@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:17:48+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Definition and Basic Properties</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_2_ic.html"><span class="title">CLP-2 Integral Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_complex_exp.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sec_complex_exp.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="ssec_complex_sin_cos.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_complex_exp.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sec_complex_exp.html" title="Up">Up</a><a class="next-button button toolbar-item" href="ssec_complex_sin_cos.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_integral.html" data-scroll="chap_integral"><span class="codenumber">1</span> <span class="title">Integration</span></a></h2>
+<ul>
+<li><a href="sec_intdef.html" data-scroll="sec_intdef">Definition of the Integral</a></li>
+<li><a href="sec_def_int.html" data-scroll="sec_def_int">Basic properties of the definite integral</a></li>
+<li><a href="sec_fundamental.html" data-scroll="sec_fundamental">The Fundamental Theorem of Calculus</a></li>
+<li><a href="sec_subs.html" data-scroll="sec_subs">Substitution</a></li>
+<li><a href="sec_area.html" data-scroll="sec_area">Area between curves</a></li>
+<li><a href="sec_int_volumes.html" data-scroll="sec_int_volumes">Volumes</a></li>
+<li><a href="sec_intbyparts.html" data-scroll="sec_intbyparts">Integration by parts</a></li>
+<li><a href="sec_trigint.html" data-scroll="sec_trigint">Trigonometric Integrals</a></li>
+<li><a href="sec_trigsub.html" data-scroll="sec_trigsub">Trigonometric Substitution</a></li>
+<li><a href="sec_parfrac.html" data-scroll="sec_parfrac">Partial Fractions</a></li>
+<li><a href="sec_numeric_int.html" data-scroll="sec_numeric_int">Numerical Integration</a></li>
+<li><a href="sec_improp_int.html" data-scroll="sec_improp_int">Improper Integrals</a></li>
+<li><a href="section-13.html" data-scroll="section-13">More Integration Examples</a></li>
+</ul>
+<h2 class="link"><a href="chap_int_app.html" data-scroll="chap_int_app"><span class="codenumber">2</span> <span class="title">Applications of Integration</span></a></h2>
+<ul>
+<li><a href="sec_work.html" data-scroll="sec_work">Work</a></li>
+<li><a href="sec_avg.html" data-scroll="sec_avg">Averages</a></li>
+<li><a href="sec_com.html" data-scroll="sec_com">Centre of Mass and Torque</a></li>
+<li><a href="sec_sep_de.html" data-scroll="sec_sep_de">Separable Differential Equations</a></li>
+</ul>
+<h2 class="link"><a href="chap_seq_ser.html" data-scroll="chap_seq_ser"><span class="codenumber">3</span> <span class="title">Sequence and series</span></a></h2>
+<ul>
+<li><a href="section-18.html" data-scroll="section-18">Sequences</a></li>
+<li><a href="section-19.html" data-scroll="section-19">Series</a></li>
+<li><a href="section-20.html" data-scroll="section-20">Convergence Tests</a></li>
+<li><a href="section-21.html" data-scroll="section-21">Absolute and Conditional Convergence</a></li>
+<li><a href="section-22.html" data-scroll="section-22">Power Series</a></li>
+<li><a href="section-23.html" data-scroll="section-23">Taylor Series</a></li>
+<li><a href="sec_RatIrr.html" data-scroll="sec_RatIrr">Optional — Rational and irrational numbers</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="section-26.html" data-scroll="section-26">Pythagoras</a></li>
+<li><a href="section-27.html" data-scroll="section-27">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="section-30.html" data-scroll="section-30">Trigonometry — Special Triangles</a></li>
+<li><a href="section-31.html" data-scroll="section-31">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trigonometric Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">Highschool Material You Should be Able to Derive</a></li>
+<li><a href="section-39.html" data-scroll="section-39">Cartesian Coordinates</a></li>
+<li><a href="ap_roots.html" data-scroll="ap_roots">Roots of Polynomials</a></li>
+</ul>
+<h2 class="link"><a href="ap_complex.html" data-scroll="ap_complex"><span class="codenumber">B</span> <span class="title">Complex Numbers and Exponentials</span></a></h2>
+<ul>
+<li><a href="sec_complex_defn.html" data-scroll="sec_complex_defn">Definition and Basic Operations</a></li>
+<li><a href="sec_complex_exp.html" data-scroll="sec_complex_exp">The Complex Exponential</a></li>
+</ul>
+<h2 class="link"><a href="app_Richardson_Romberg.html" data-scroll="app_Richardson_Romberg"><span class="codenumber">C</span> <span class="title">More About Numerical Integration</span></a></h2>
+<ul>
+<li><a href="ap_Richardson.html" data-scroll="ap_Richardson">Richardson Extrapolation</a></li>
+<li><a href="ap_Romberg.html" data-scroll="ap_Romberg">Romberg Integration</a></li>
+<li><a href="ap_adaptive.html" data-scroll="ap_adaptive">Adaptive Quadrature</a></li>
+</ul>
+<h2 class="link"><a href="app_ODE_numerical.html" data-scroll="app_ODE_numerical"><span class="codenumber">D</span> <span class="title">Numerical Solution of ODE's</span></a></h2>
+<ul>
+<li><a href="ap_derivation.html" data-scroll="ap_derivation">Simple ODE Solvers — Derivation</a></li>
+<li><a href="ap_error_behaviour.html" data-scroll="ap_error_behaviour">Simple ODE Solvers —  Error Behaviour</a></li>
+<li><a href="ap_variable.html" data-scroll="ap_variable">Variable Step Size Methods</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">E</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">F</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">G</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp2-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="subsection" id="ssec_complex_exp_def"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">B.2.1</span> <span class="title">Definition and Basic Properties</span>
+</h3>
+<a href="ssec_complex_exp_def.html" class="permalink">¶</a><p id="p-6142">There are two equivalent standard definitions of the exponential, \(e^z\text{,}\) of the complex number \(z=x+iy\text{.}\) For the more intuitive definition, one simply replaces the real number \(x\) in the Taylor series expansion<a knowl="" class="id-ref" refid="hk-fn-239" id="fn-239"><sup> 1 </sup></a><span id="hk-fn-239" class="hidden-content tex2jax_ignore"><span class="footnote">See Theorem <a knowl="./knowl/thm_SRimportantTaylorSeries.html" title="Theorem 3.6.7">3.6.7</a>.</span></span> \(e^x=\sum_{n=0}^\infty \frac{x^n}{n!}\) with the complex number \(z\text{,}\) giving</p>
+<div class="displaymath">
+\begin{equation*}
+e^z=\sum_{n=0}^\infty \frac{z^n}{n!}
+\tag{EZ}
+\end{equation*}
+</div>
+<p>We instead highlight the more computationally useful definition.</p>
+<article class="definition-like" id="def_complex_exp"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">B.2.1</span>
+</h6>
+<p id="p-6143">For any complex number \(z=x+iy\text{,}\) with \(x\) and \(y\) real, the exponential \(\, e^z\, \text{,}\) is defined by</p>
+<div class="displaymath">
+\begin{equation*}
+e^{x+iy}\ =\ e^x\cos y+i e^x\sin y
+\end{equation*}
+</div>
+<p>In particular<a knowl="" class="id-ref" refid="hk-fn-240" id="fn-240"><sup> 2 </sup></a><span id="hk-fn-240" class="hidden-content tex2jax_ignore"><span class="footnote">The equation \(e^{iy}\ =\ \cos y+i \sin y\) is known as Euler's formula. Leonhard Euler (1707–1783) was a  Swiss mathematician and physicist who spent most of his adult life in Saint Petersberg and Berlin. He gave the name \(\pi\) to the ratio of a circle's circumference to its diameter. He also developed the constant \(e\text{.}\) His collected works fill 92 volumes.</span></span>, \(e^{iy}\ =\ \cos y+i \sin y\text{.}\)</p></article><p id="p-6144">We will not fully prove that the intuitive definition (EZ) and the computational Definition <a knowl="./knowl/def_complex_exp.html" title="Definition B.2.1">B.2.1</a> are equivalent. But we will do so in the special case that \(z=iy\text{,}\) with \(y\) real. Under (EZ),</p>
+<div class="displaymath">
+\begin{equation*}
+e^{iy} = 1 +iy +\frac{(iy)^2}{2!}+\frac{(iy)^3}{3!}+\frac{(iy)^4}{4!}
++\frac{(iy)^5}{5!}+\frac{(iy)^6}{6!}+\cdots
+\end{equation*}
+</div>
+<p>The even terms in this expansion are</p>
+<div class="displaymath">
+\begin{equation*}
+1  +\frac{(iy)^2}{2!}+\frac{(iy)^4}{4!}+\frac{(iy)^6}{6!}+\cdots
+=1  -\frac{y^2}{2!}+\frac{y^4}{4!}-\frac{y^6}{6!}+\cdots
+=\cos y
+\end{equation*}
+</div>
+<p>and the odd terms in this expansion are</p>
+<div class="displaymath">
+\begin{equation*}
+iy +\frac{(iy)^3}{3!}+\frac{(iy)^5}{5!}+\cdots
+=i\Big(y-\frac{y^3}{3!}+\frac{y^5}{5!}+\cdots\Big)
+=i\sin y
+\end{equation*}
+</div>
+<p>Adding the even and odd terms together gives us that, under (EZ),  \(e^{iy}\) is indeed equal to  \(\cos y + i\sin y\text{.}\)<a knowl="" class="id-ref" refid="hk-fn-241" id="fn-241"><sup> 3 </sup></a><span id="hk-fn-241" class="hidden-content tex2jax_ignore"><span class="footnote">It is obvious that, in the special case that \(z=x\) with \(x\) real, the definitions (EZ) and <a knowl="./knowl/def_complex_exp.html" title="Definition B.2.1">B.2.1</a> are equivalent. So to complete the proof of equivalence in the general case \(z=x+iy\text{,}\) it suffices to prove that \(e^{x+iy}=e^x e^{iy}\) under both (EZ) and Definition <a knowl="./knowl/def_complex_exp.html" title="Definition B.2.1">B.2.1</a>. For Definition <a knowl="./knowl/def_complex_exp.html" title="Definition B.2.1">B.2.1</a>, this follows from Lemma <a knowl="./knowl/lem_exp_ppties.html" title="Lemma B.2.2">B.2.2</a>, below.</span></span> As a consequence, we have</p>
+<div class="displaymath">
+\begin{equation*}
+e^{i\pi}=-1
+\end{equation*}
+</div>
+<p>which gives an amazing linking between calculus (\(e\)), geometry (\(\pi\)), algebra (\(i\)) and the basic number \(-1\text{.}\)</p>
+<p id="p-6145">In the next lemma we verify that the complex exponential obeys a couple of familiar computational properties.</p>
+<article class="theorem-like" id="lem_exp_ppties"><h6 class="heading">
+<span class="type">Lemma</span> <span class="codenumber">B.2.2</span>
+</h6>
+<ol id="p-6146" class="lower-alpha">
+<li id="li-2577">For any complex numbers \(z_1\) and \(z_2\text{,}\)<div class="displaymath">
+\begin{equation*}
+e^{z_1+z_2} = e^{z_1}e^{z_2}
+\end{equation*}
+</div>
+</li>
+<li id="li-2578">For any complex number \(c\text{,}\)<div class="displaymath">
+\begin{equation*}
+\diff{}{t}e^{ct} = c e^{ct}
+\end{equation*}
+</div>
+</li>
+</ol></article><article class="hiddenproof" id="proof-31"><a knowl="" class="id-ref" refid="hk-proof-31"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-31" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><ol id="p-6147" class="lower-alpha">
+<li id="li-2579">For any two complex numbers \(z_1=x_1+iy_1\) and \(z_2=x_2+iy_2\text{,}\) with \(x_1\text{,}\) \(y_1\text{,}\) \(x_2\text{,}\) \(y_2\) real,<div class="displaymath">
+\begin{align*}
+&amp;e^{z_1}e^{z_2}
+= e^{x_1}(\cos y_1+i \sin y_1)e^{x_2}(\cos y_2+i \sin y_2) \\
+&amp;= e^{x_1+x_2}(\cos y_1+i \sin y_1)(\cos y_2+i \sin y_2) \\
+&amp;= e^{x_1+x_2}\left\{(\cos y_1\cos y_2\!-\!\sin y_1\sin y_2)
++i (\cos y_1\sin y_2\!+\!\cos y_2\sin y_1)\right\} \\
+&amp;= e^{x_1+x_2}\left\{\cos(y_1+y_2)+i\sin(y_1+y_2)\right\}
+\end{align*}
+</div>by the trig identities of Appendix <a href="sec_trig_add.html" class="xref" title="Section A.8: Trigonometry — Add and Subtract Angles">A.8</a>. This says exactly that<div class="displaymath">
+\begin{equation*}
+e^{z_1}e^{z_2}= e^{(x_1+x_2)+i(y_1+y_2)} = e^{z_1+z_2}
+\end{equation*}
+</div>and that the familiar multiplication formula also applies to complex exponentials.</li>
+<li id="li-2580">For any real number \(t\) and any complex number \(c=\alpha+i\beta\text{,}\) with \(\alpha\text{,}\) \(\beta\) real,<div class="displaymath">
+\begin{equation*}
+e^{ct}=e^{\alpha t+i\beta t}=e^{\alpha t}[\cos( \beta t)+i\sin(\beta t)]
+\end{equation*}
+</div>so that the derivative with respect to \(t\)<div class="displaymath">
+\begin{align*}
+\diff{}{t} e^{ct}
+&amp;=\alpha e^{\alpha t}[\cos( \beta t)+i\sin(\beta t)]
++e^{\alpha t}[-\beta\sin( \beta t)+i\beta \cos(\beta t)] \\
+&amp;=(\alpha+i\beta) e^{\alpha t}[\cos( \beta t)+i\sin(\beta t)] \\
+&amp;=ce^{ct}
+\end{align*}
+</div>is also the familiar one.</li>
+</ol></article></div></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

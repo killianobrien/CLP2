@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:23:33+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p><em class="emphasis">Proof 2:</em>    We apply Theorem <a knowl="./knowl/thm_AVwtmvt.html" title="Theorem 2.2.10: Mean Value Theorem for Weighted Integrals">2.2.10</a> (the mean value theorem for weighted integrals). If \(a\lt x\text{,}\)  we use the weight function \(w(t) = \frac{1}{n!} (x-t)^n\text{,}\) which is strictly positive for all \(a\lt t\lt x\text{.}\) By part (a) this gives</p>
+<div class="displaymath">
+\begin{align*}
+E_n(a,x) &amp;=\int_a^x \frac{1}{n!}f^{(n+1)}(t)\, (x-t)^n\,\dee{t} \\
+&amp;= f^{(n+1)}(c) \int_a^x \frac{1}{n!} (x-t)^n\,\dee{t} \qquad
+\text{for some } a\lt c\lt x\\
+&amp;= f^{(n+1)}(c) \left[-\frac{1}{n!}\frac{(x-t)^{n+1}}{n+1}\right]_a^x\\
+&amp;= \frac{1}{(n+1)!}f^{(n+1)}(c)\,(x-a)^{n+1} 
+\end{align*}
+</div>
+<p>If \(x\lt a\text{,}\)  we instead use the weight function  \(w(t) = \frac{1}{n!} (t-x)^n\text{,}\) which is strictly positive for all \(x\lt t\lt a\text{.}\) This gives</p>
+<div class="displaymath">
+\begin{align*}
+E_n(a,x) &amp;=\int_a^x \frac{1}{n!}f^{(n+1)}(t)\, (x-t)^n\,\dee{t} \\
+&amp;=-(-1)^n\int^a_x \frac{1}{n!}f^{(n+1)}(t)\, (t-x)^n\,\dee{t}  \\
+&amp;=(-1)^{n+1} f^{(n+1)}(c) \int_x^a \frac{1}{n!} (t-x)^n\,\dee{t} \qquad
+\text{for some } x\lt c\lt a \\
+&amp;= (-1)^{n+1} f^{(n+1)}(c) 
+\left[\frac{1}{n!}\frac{(t-x)^{n+1}}{n+1}\right]_x^a \\
+&amp;= \frac{1}{(n+1)!}f^{(n+1)}(c)\, (-1)^{n+1} (a-x)^{n+1} \\
+&amp;= \frac{1}{(n+1)!}f^{(n+1)}(c)\,(x-a)^{n+1} 
+\end{align*}
+</div>
+<span class="incontext"><a href="subsubsection-17.html#p-5595">in-context</a></span>
+</body>
+</html>

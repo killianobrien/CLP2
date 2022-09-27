@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:24:46+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Define</p>
+<div class="displaymath">
+\begin{equation*}
+\varepsilon_n=\phi(t_n)-y_n
+\end{equation*}
+</div>
+<p>The first half of the derivation is to find a bound on \(\varepsilon_{n+1}\) in terms of \(\varepsilon_n\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+\varepsilon_{n+1}&amp;=\phi(t_{n+1})-y_{n+1} \\
+&amp;=\phi(t_{n+1})-y_n-hf(t_n,y_n) \\
+&amp;=[{\color{red}{\phi(t_n)}}-y_n]+h[{\color{blue}{f\big(t_n,\phi(t_n)\big)}}-f(t_n,y_n)]\\
+&amp;\hskip1.5in  +[\phi(t_{n+1})-{\color{red}{\phi(t_n)}}-h{\color{blue}{f\big(t_n,\phi(t_n)\big)}}]
+\tag{E3}
+\end{align*}
+</div>
+<p>where we have massaged the expression into three manageable pieces.</p>
+<ul class="disc">
+<li>The first \([\cdots]\) is exactly \(\varepsilon_n\text{.}\)</li>
+<li>The third \([\cdots]\) is exactly the local truncation error. Assuming that \(|\phi''(t)|\le A\) for all \(t\) of interest<a knowl="./knowl/fn-265-hidden.html" title="Footnote D.2.6"><sup> 6 </sup></a>, we can bound the third  \([\cdots]\) by<div class="displaymath">
+\begin{equation*}
+\big|\phi(t_{n+1})-\phi(t_n)-hf\big(t_n,\phi(t_n)\big)\big|\le \half Ah^2
+\end{equation*}
+</div>This bound follows quickly from the Taylor expansion with remainder ((3.4.32) in the CLP-1 text),<div class="displaymath">
+\begin{align*}
+\phi(t_{n+1})&amp;=\phi(t_n)+\phi'(t_n)h+\half \phi''(\tilde t)h^2 \\
+&amp;=\phi(t_n)+h\, f\big(t_n,\phi(t_n)\big)+\half \phi''(\tilde t)h^2
+\end{align*}
+</div>for some \(t_n\lt \tilde t\lt t_{n+1}\text{.}\)</li>
+<li>Finally, by the mean value theorem, the magnitude of the second \([\cdots]\) is \(h\) times<div class="displaymath">
+\begin{align*}
+|f\big(t_n,\phi(t_n)\big)-f(t_n,y_n)|
+&amp;= F_{t_n}\big(\phi(t_n)\big)- F_{t_n}(y_n)
+\quad \text{where}\quad F_{t_n}(y) = f\big(t_n,y\big)\\
+&amp;=\big|F'_{t_n}(\tilde y)\big| \,|\phi(t_n)-y_n|\\
+&amp;\hskip1.35in\text{for some }\tilde y\text{ between }y_n\text{ and }\phi(t_n) \\
+&amp;=\big|F'_{t_n}(\tilde y)\big|\,|\varepsilon_n|\\
+&amp;\le B|\varepsilon_n|
+\end{align*}
+</div>assuming that \(\big|F'_t(y)\big|
+\le B\) for all \(t\) and \(y\) of interest<a knowl="./knowl/fn-266-hidden.html" title="Footnote D.2.7"><sup> 7 </sup></a>.</li>
+</ul>
+<p>Substituting into (E3) gives</p>
+<div class="displaymath">
+\begin{equation*}
+|\varepsilon_{n+1}|
+\le |\varepsilon_n| + Bh|\varepsilon_n| +\half Ah^2
+= (1+Bh)|\varepsilon_n| +\half Ah^2
+\tag{E4-n}
+\end{equation*}
+</div>
+<p>Hence the (bound on the) magnitude of the total error, \(|\varepsilon_{n+1}|\text{,}\) consists of two parts. One part is the magnitude of the local truncation error, which is no more than \(\half Ah^2\) and which is present even if we start the step with no error at all, i.e. with \(\varepsilon_n=0\text{.}\) The other part is due to the combined error from all previous steps. This is the \(\varepsilon_n\) term. At the beginning of step number \(n+1\text{,}\) the combined error has magnitude \(|\varepsilon_n|\text{.}\) During the step, this error gets magnified by no more than a factor of \(1+Bh\text{.}\)</p>
+<span class="incontext"><a href="ap_global_trunc_Euler.html#p-6247">in-context</a></span>
+</body>
+</html>

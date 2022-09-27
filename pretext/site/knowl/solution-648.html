@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:23:04+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">3.4.3.6.1</span>
+</h6>
+<p>First, we'll develop some intuition. For very large \(n\)</p>
+<div class="displaymath">
+\begin{align*}
+\left|\frac{\sqrt{n}\cos(n)}{n^2-1}\right|
+&amp;\approx \left|\frac{\sqrt{n}\cos(n)}{n^2}\right|
+= \left|\frac{\cos(n)}{n^{3/2}}\right|
+\le \frac{1}{n^{3/2}}
+\end{align*}
+</div>
+<p>since \(\left|\cos(n)\right| \leq 1\) for all \(n\text{.}\) By the \(p\)-test, which is in Example <a knowl="./knowl/eg_SRpTest.html" title="Example 3.3.6: The \(p\) test:  \(\sum\limits_{n=1}^\infty\frac{1}{n^p}\)">3.3.6</a>, the series \(\displaystyle \sum_{n=5}^\infty \frac{1}{n^p}\) converges for all \(p \gt 1\text{.}\) So we would expect the given series to converge absolutely.</p>
+<p>Now, to confirm that our intuition is correct, we'll first try the limit comparison theorem, which is Theorem <a knowl="./knowl/thm_SRlimitComparison.html" title="Theorem 3.3.11: Limit Comparison Theorem">3.3.11</a>, with \(a_n=\left| \frac{\sqrt{n}\cos(n)}{n^2-1}\right|\) and \(b_n = \frac{1}{n^{3/2}}\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{n \to \infty}\frac{a_n}{b_n}
+&amp;=\lim_{n \to \infty} \frac{\left|\frac{\sqrt{n}\cos(n)}{n^2-1}\right| }{\frac{1}{n^{3/2}}} 
+= \lim_{n \to \infty}\frac{\sqrt{n}\cdot\sqrt{n}^3|\cos n|}{n^2-1}\\
+&amp;=\lim_{n \to \infty}\frac{n^2|\cos n|}{n^2-1} 
+= \lim_{n \to \infty}\left(\frac{1}{1-1/n^2}\right)|\cos n|\\
+&amp; = \lim_{n \to \infty}1\cdot|\cos n|
+\end{align*}
+</div>
+<p>Unfortunately, this limit doesn't exist, so this attempt to use the limit comparison theorem has failed. Fortunately, having seen that the \(\cos n\) caused the failure, it is not hard to adjust our strategy to get a successful proof of absolute convergence. First, in step 1 below, we use the comparison test to eliminate the \(\cos n\) and then, in step 2 below, we apply the limit comparison test.</p>
+<ul class="disc">
+<li>
+<p>Step 1: Since \(|\cos n|\le 1\text{,}\) we have</p>
+<div class="displaymath">
+\begin{equation*}
+\left|\frac{\sqrt{n}\cos(n)}{n^2-1}\right|
+\le \frac{\sqrt{n}}{n^2-1}
+\end{equation*}
+</div>
+<p>for all \(n\gt 1\text{.}\) So, by part (a) of the comparison test, which is Theorem <a knowl="./knowl/thm_SRcomparisonTest.html" title="Theorem 3.3.8: The Comparison Test">3.3.8</a>, if the series \(\displaystyle \sum_{n=5}^\infty \frac{\sqrt{n}}{n^2-1}\) converges, then we will have that the series \(\displaystyle \sum_{n=5}^\infty \left|\frac{\sqrt{n}\cos(n)}{n^2-1}\right|\) also converges, and hence that the series \(\displaystyle \sum_{n=5}^\infty \frac{\sqrt{n}\cos(n)}{n^2-1}\) converges absolutely.</p>
+</li>
+<li>
+<p>Step 2: Now, to prove that the series \(\displaystyle \sum_{n=5}^\infty \frac{\sqrt{n}}{n^2-1}\) converges, we apply the limit comparison test with \(a_n=\frac{\sqrt{n}}{n^2-1}\) and \(b_n = \frac{1}{n^{3/2}}\) (for \(n\ge 5\)). Since</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{n \to \infty}\frac{a_n}{b_n}
+&amp;=\lim_{n \to \infty} \frac{\frac{\sqrt{n}}{n^2-1}}{\frac{1}{n^{3/2}}} 
+= \lim_{n \to \infty}\frac{\sqrt{n}\cdot\sqrt{n}^3}{n^2-1}\\
+&amp;=\lim_{n \to \infty}\frac{n^2}{n^2-1} 
+= \lim_{n \to \infty}\frac{1}{1-1/n^2}\\
+&amp; = 1
+\end{align*}
+</div>
+<p>and since \(\displaystyle \sum_{n=5}^\infty \frac{1}{n^{3/2}}\) converges by the \(p\)-test, the limit comparison test tells us that the series \(\displaystyle\sum_{n=5}^\infty \frac{\sqrt{n}}{n^2-1}\) converges. So, by step 1, \(\displaystyle\sum_{n=5}^\infty \frac{\sqrt{n}\cos(n)}{n^2-1}\) converges absolutely.</p>
+</li>
+</ul>
+</div>
+<span class="incontext"><a href="exercises-21.html#solution-648">in-context</a></span>
+</body>
+</html>

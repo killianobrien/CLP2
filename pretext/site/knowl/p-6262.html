@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:24:49+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Let's think a bit about how our final Euler/Euler-2step method should perform.</p>
+<ul class="disc">
+<li>The step size here, as in the preliminary version, is chosen so that the local truncation error in \(A_{2,n+1}\) per unit increase of \(t\text{,}\) namely \(r=\frac{|A_{1,n+1}-A_{2,n+1}|}{h}\approx\frac{Kh^2/2}{h}=\frac{K}{2}h\text{,}\) is approximately \(\varepsilon\text{.}\) So \(h\) is roughly proportional to \(\varepsilon\text{.}\)</li>
+<li>On the other hand, (E7) shows that, in the full method, local truncation error is being added to \(y_{n+1}\) at a rate of \(\frac{O(h^3)}{h}=O(h^2)\) per unit increase in \(t\text{.}\)</li>
+<li>So one would expect that local truncation increases the error at a rate proportional to \(\varepsilon^2\) per unit increase in \(t\text{.}\)</li>
+<li>If the rate of increase of error were exactly a constant time \(\varepsilon^2\text{,}\) then the error accumulated between the initial time \(t=0\) and the final time \(t=t_f\) would be exactly a constant times \(\varepsilon^2\,t_f\text{.}\)</li>
+<li>However we have seen that, once some local truncation error has been introduced, its contribution to the global error can grow exponentially with \(t_f\text{.}\) So we would expect that, under the full Euler/Euler-2step method, \(\frac{{\rm actual\ error\ at\ }t=t_f}{\varepsilon^2 t_f}\) to be more or less independent of \(\varepsilon\text{,}\) but still growing exponentially in \(t_f\text{.}\)</li>
+</ul>
+<p>Here are the results of a numerical experiment that illustrate this. In this experiment, the above final Euler/Euler-2step method, (<a knowl="./knowl/full_E_E2.html" title="Equation D.3.2: Euler/Euler-2step Method">D.3.2</a>), is applied to the initial value problem \(\ 
+y'=t-2y,\ 
+y(0)=3
+\ \) for \(\varepsilon=\frac{1}{16},\frac{1}{32},\cdots\) (ten different values) and for \(t_f=0.2,\ 0.4,\ \cdots,\ 3.8\text{.}\) In the following plot, there is a small square for the resulting \(\frac{\text{actual error at }t=t_f}{\varepsilon^2 t_f}\) for each different pair \(\varepsilon,t_f\text{.}\)</p>
+<span class="incontext"><a href="ssec_final_E_E2.html#p-6262">in-context</a></span>
+</body>
+</html>

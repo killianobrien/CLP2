@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:24:07+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>The factor \((n+1)(n+2)\) reminds us of a derivative. Start with the geometric series.</p>
+<div class="displaymath">
+\begin{align*}
+\frac{1}{1-x}&amp;=\sum_{n=0}^\infty x^n\\
+\diff{}{x}\left\{\frac{1}{1-x} \right\}&amp;=\diff{}{x}\left\{ \sum_{n=0}^\infty x^n  \right\}\\
+\frac{1}{(1-x)^2}&amp;=\sum_{n=0}^\infty nx^{n-1}=\sum_{n=1}^\infty nx^{n-1}\\
+\diff{}{x}\left\{\frac{1}{(1-x)^2} \right\}&amp;=\diff{}{x}\left\{ \sum_{n=1}^\infty nx^{n-1}  \right\}\\
+\frac{2}{(1-x)^3}&amp;=\sum_{n=1}^\infty n(n-1)x^{n-2}=\sum_{n=2}^\infty n(n-1)x^{n-2}\\
+&amp;=\sum_{n=0}^\infty (n+2)(n+1)x^n
+\end{align*}
+</div>
+<p>Let \(x=\frac{1}{7}\text{.}\) Then \(|x| \lt 1\text{,}\) so our series converges.</p>
+<div class="displaymath">
+\begin{align*}
+\frac{2}{(1-1/7)^3}	&amp;=\sum_{n=0}^\infty (n+2)(n+1)\left(\frac{1}{7}\right)^n\\
+\frac{2}{(6/7)^3}	&amp;=\sum_{n=0}^\infty \frac{(n+2)(n+1)}{7^n}
+\end{align*}
+</div>
+</div></body>
+</html>

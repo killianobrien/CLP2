@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:38+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="example-like"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.8.19</span> <span class="title">\(\int \sec x\dee{x}\) — by trickery</span>
+</h6>
+<p><em class="alert">Solution:</em> There is a very sneaky trick to compute this integral<a knowl="./knowl/fn-61-hidden.html" title="Footnote 1.8.3"><sup> 3 </sup></a>.</p>
+<ul class="disc">
+<li>The standard trick for this integral is to multiply the integrand by \(1=\frac{\sec x+\tan x}{\sec x+\tan x}\)<div class="displaymath">
+\begin{align*}
+\sec x &amp;= \sec x\ \frac{\sec x+\tan x}{\sec x+\tan x}
+= \frac{\sec^2x + \sec x \tan x}{\sec x+\tan x}
+\end{align*}
+</div>
+</li>
+<li>Notice now that the numerator of this expression is exactly the derivative its  denominator. Hence we can substitute \(u=\sec x+\tan x\) and \(\dee{u} = (\sec x\tan x+\sec^2 x)\,\dee{x}\text{.}\)</li>
+<li>Hence<div class="displaymath">
+\begin{align*}
+\int \sec x\dee{x}
+&amp;=\int \sec x\ \frac{\sec x+\tan x}{\sec x+\tan x}\dee{x}
+=\int \frac{\sec^2 x+\sec x\tan x}{\sec x+\tan x}\dee{x}\\
+&amp;=\int \frac{1}{u}\dee{u}\\
+&amp;=\log |u|+C\\
+&amp;=\log|\sec x+\tan x|+C
+\end{align*}
+</div>
+</li>
+<li>
+<p>The above trick appears both totally unguessable and very hard to remember. Fortunately, there is a simple way<a knowl="./knowl/fn-62-hidden.html" title="Footnote 1.8.4"><sup> 4 </sup></a> to recover the trick. Here it is.</p>
+<ul class="circle">
+<li>The goal is to guess a function whose derivative is \(\sec x\text{.}\)</li>
+<li>
+<p>So get out a table of derivatives and look for functions whose derivatives at least contain \(\sec x\text{.}\) There are two:</p>
+<div class="displaymath">
+\begin{align*}
+\diff{}{x}\tan x &amp;= \sec^2 x\\
+\diff{}{x}\sec x &amp;= \tan x\,\sec x
+\end{align*}
+</div>
+</li>
+<li>
+<p>Notice that if we add these together we get</p>
+<div class="displaymath">
+\begin{align*}
+\diff{}{x}\big(\sec x+\tan x\big) &amp;=(\sec x+\tan x)\sec x &amp; \implies\\
+\frac{\diff{}{x}\big(\sec x+\tan x\big)}{\sec x+\tan x}&amp;=\sec x
+\end{align*}
+</div>
+</li>
+<li>We've done it! The right hand side is \(\sec x\) and the left hand side is the derivative of \(\log|\sec x+\tan x|\text{.}\)</li>
+</ul>
+</li>
+</ul></article><span class="incontext"><a href="sec_secantEtc.html#eg_TRGINTopta">in-context</a></span>
+</body>
+</html>

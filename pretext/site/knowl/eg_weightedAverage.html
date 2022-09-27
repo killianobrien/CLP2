@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:20:47+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="example-like"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.2.11</span>
+</h6>
+<p>In this example, we will take a number of weighted averages of the simple function \(f(x)=x\) over the simple interval \(a=1\le x\le 2=b\text{.}\) As \(x\) increases from \(1\) to \(2\text{,}\) the function \(f(x)\) increases linearly from \(1\) to \(2\text{.}\) So it is no shock that the ordinary average of \(f\) is exactly its middle value:</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{b-a}\int_a^b f(t)\,\dee{t}
+=\frac{1}{2-1}\int_1^2 t\,\dee{t}
+=\frac{3}{2}
+\end{equation*}
+</div>
+<p>Pick any natural number \(N\ge 1\) and consider the weight function \(w_N(x)=x^N\text{.}\) Note that \(w_N(x)\) increases as \(x\) increases. So \(w_N(x)\) weights bigger \(x\)'s more than it weights smaller \(x\)'s.  In particular \(w_N\) weights the point \(x=2\) by a factor of \(2^N\) (which is greater than \(1\) and grows to infinity as \(N\) grows to infinity) more than it weights the point \(x=1\text{.}\) The weighted average of \(f\) is</p>
+<div class="displaymath">
+\begin{align*}
+\frac{\int_a^b f(t)\,w_N(t)\,\dee{t}}{\int_a^b w_N(t)\,\dee{t}}
+&amp;=\frac{\int_1^2 t^{N+1}\,\dee{t}}{\int_1^2 t^N\,\dee{t}}
+=\frac{\frac{2^{N+2}-1}{N+2}}{\frac{2^{N+1}-1}{N+1}}
+=\frac{N+1}{N+2}\ \frac{2^{N+2}-1}{2^{N+1}-1} \\
+&amp;=\begin{cases}
+\frac{2\times 7}{3\times 3}  = 1.555  &amp;\text{if }N=1 \\
+\frac{3\times 15}{4\times 7} = 1.607  &amp;\text{if }N=2 \\
+\frac{4\times 31}{5\times 15}= 1.653  &amp;\text{if }N=3 \\
+\frac{5\times 63}{6\times 31}= 1.694  &amp;\text{if }N=4 
+\\ 1.889  &amp;\text{if }N=16    
+\\ 1.992  &amp;\text{if }N=256  
+\end{cases}
+\end{align*}
+</div>
+<p>As we would expect, the \(w_N\)-weighted average is between \(1.5\) (which is the ordinary, unweighted, average) and \(2\) (which is the biggest value of \(f\) in the interval) and grows as \(N\) grows. The limit as \(N\rightarrow\infty\) of the \(w_N\)-weighted average is</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{N\rightarrow\infty}\frac{N+1}{N+2}\ \frac{2^{N+2}-1}{2^{N+1}-1} 
+&amp;=\lim_{N\rightarrow\infty}\frac{N+2-1}{N+2}\ \frac{2^{N+2}-2+1}{2^{N+1}-1} \\
+&amp;=\lim_{N\rightarrow\infty}\left[1-\frac{1}{N+2}\right]\ 
+\left[2+\frac{1}{2^{N+1}-1}\right] \\
+&amp;=2
+\end{align*}
+</div></article><span class="incontext"><a href="subsection-31.html#eg_weightedAverage">in-context</a></span>
+</body>
+</html>

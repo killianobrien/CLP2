@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:24:40+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="listitem"><h6 class="heading"><span class="type">Item</span></h6>
+<em class="emphasis">Step 1.</em> We start by applying Simpson's rule, combined with Richardson extrapolation so as to get an error estimate, with the largest possible step size \(h\text{.}\) Namely, set \(h=\tfrac{b-a}{2}\) and compute<div class="displaymath">
+\begin{equation*}
+f(a)\quad
+f\big(a+\tfrac{h}{2}\big)\quad
+f(a+h)=f\big(\tfrac{a+b}{2}\big)\quad
+f\big(a+\tfrac{3h}{2}\big)\quad
+f(a+2h)=f(b)
+\end{equation*}
+</div>Then<div class="displaymath">
+\begin{equation*}
+S\big(a,b\,;h\big)
+=\tfrac{h}{3}\big\{f(a)+4 f\big(a+h\big)+f(b)\big\}
+\end{equation*}
+</div>and<div class="displaymath">
+\begin{align*}
+S\big(a,b\,;\tfrac{h}{2}\big)
+&amp;=\tfrac{h}{6}\big\{f(a)+4 f\big(a+\tfrac{h}{2}\big)
++2f\big(\tfrac{a+b}{2}\big)
++4 f\big(a+\tfrac{3h}{2}\big)
++f(b)\big\}\\
+&amp;=S\big(a,\tfrac{a+b}{2}\,;\tfrac{h}{2}\big)
++S\big(\tfrac{a+b}{2},b\,;\tfrac{h}{2}\big)
+\end{align*}
+</div>with<div class="displaymath">
+\begin{align*}
+S\big(a,\tfrac{a+b}{2}\,;\,\tfrac{h}{2}\big)
+&amp;=\tfrac{h}{6}\big\{f(a)+4 f\big(a+\tfrac{h}{2}\big)
++f\big(\tfrac{a+b}{2}\big)\big\} \\
+S\big(\tfrac{a+b}{2},b\,;\,\tfrac{h}{2}\big)
+&amp;=\tfrac{h}{6}\big\{f\big(\tfrac{a+b}{2}\big)+4 f\big(a+\tfrac{3h}{2}\big)
++f(b)\big\}
+\end{align*}
+</div>Using the Richardson extrapolation formula (E4a) with \(k=4\) gives that the error in \(S\big(a,b\,;\,\tfrac{h}{2}\big)\) is (approximately)<div class="displaymath">
+\begin{equation*}
+\big|K\big(\tfrac{h}{2}\big)^4\big|=\tfrac{1}{15}\Big|
+S\big(a,b\,;\,\tfrac{h}{2}\big)
+-S\big(a,b\,;\,h\big)\Big|
+\tag{E7}
+\end{equation*}
+</div>If this is smaller than \(\varepsilon\text{,}\) we have (approximately) the desired accuracy and stop<a knowl="./knowl/fn-252-hidden.html" title="Footnote C.3.1"><sup> 1 </sup></a>.</article><span class="incontext"><a href="ap_adaptive.html#li-2602">in-context</a></span>
+</body>
+</html>

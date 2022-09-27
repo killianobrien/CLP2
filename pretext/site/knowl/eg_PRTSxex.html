@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:33+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="example-like"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.7.1</span> <span class="title">\(\int xe^x \dee{x}\)</span>
+</h6>
+<p>Compute the integral \(\ds \int xe^x \dee{x}\text{.}\)</p>
+<p><em class="alert">Solution:</em></p>
+<ul class="disc">
+<li>We start by taking the equation above<div class="displaymath">
+\begin{align*}
+\int u(x)\,v'(x)\dee{x}
+&amp;= u(x) v(x) - \int u'(x)\,v(x) \dee{x}
+\end{align*}
+</div>
+</li>
+<li>Now set \(u(x)=x\) and \(v'(x)=e^x\text{.}\) How did we know how to make this choice? We will  explain some strategies later. For now, let us just accept this choice and keep going.</li>
+<li>In order to use the formula we need to know \(u'(x)\) and \(v(x)\text{.}\) In this case it is  quite straightforward: \(u'(x)=1\) and \(v(x)=e^x\text{.}\)</li>
+<li>Plug everything into the formula:<div class="displaymath">
+\begin{align*}
+\int x e^x \dee{x} &amp;= x e^x - \int e^x \dee{x}\\
+\end{align*}
+<p class="intertext">So our original more difficult integral has been turned into a question of  computing an easy one.</p>
+\begin{align*}
+&amp;= x e^x - e^x +C
+\end{align*}
+</div>
+</li>
+<li>We can check our answer by differentiating:<div class="displaymath">
+\begin{align*}
+\diff{}{x} \left(x e^x - e^x +C \right)
+&amp;= \underbrace{x e^x + 1 \cdot e^x}_{\text{by product rule}} - e^x + 0\\
+&amp;= x e^x &amp; \text{as required.}
+\end{align*}
+</div>
+</li>
+</ul></article><span class="incontext"><a href="subsection-14.html#eg_PRTSxex">in-context</a></span>
+</body>
+</html>

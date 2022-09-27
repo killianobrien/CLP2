@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:22:23+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>Since \(\{\mathbb{S}_M\}\) is the sequence of partial sums of \(\displaystyle\sum_{N=1}^\infty S_N\text{,}\) we can find \(\{S_N\}\) from \(\{\mathbb{S}_M\}\) as in Question <a knowl="./knowl/prob_s3_2_partsums.html" title="Exercise 3.2.2.3">3</a>:</p>
+<div class="displaymath">
+\begin{align*}
+S_N&amp;=\mathbb{S}_{N}-\mathbb{S}_{N-1}=\frac{N+1}{N} - \frac{N}{N-1}=-\frac{1}{N(N-1)}
+&amp;\text{if }N \geq 2,\\
+S_1&amp;=\mathbb{S}_1 = 2\\
+\end{align*}
+<p class="intertext">Similarly, we find \(\{a_n\}\) from \(\{S_N\}\text{.}\) Do be careful: \(S_N\) only follows the formula we found above when \(N \geq 2\text{.}\) In the next line, we use an expression containing \(S_{n-1}\text{;}\) in order for the subscript to be at least two (so the formula fits), we need \(n \geq 3\text{.}\)</p>
+\begin{align*}
+a_n&amp;=S_n-S_{n-1}=-\frac{1}{n(n-1)}-\frac{-1}{(n-1)(n-2)}\\
+&amp;=\frac{2}{n(n-1)(n-2)} &amp;\text{if }n \ge 3,\\
+a_2&amp;=S_2-S_1=-\frac{1}{2(2-1)} - 2=-\frac52,\\
+a_1&amp;=S_1=2\\
+\end{align*}
+<p class="intertext">All together,</p>
+\begin{align*}
+a_n &amp;=\begin{cases}
+\frac{2}{n(n-1)(n-2)} &amp;\text{ if }n \ge 3,\\
+-\frac52 &amp;\text{ if }n=2,\\
+2 &amp;\text{ if }n=1
+\end{cases}
+\end{align*}
+</div>
+</div></body>
+</html>

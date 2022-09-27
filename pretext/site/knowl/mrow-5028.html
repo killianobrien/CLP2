@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:22:22+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="displaymath">
+\begin{align*}
+s_N&amp;=\sum_{n=3}^N\left(\frac{\sin^2 n}{2^n}+\frac{\cos^2(n+1)}{2^{n+1}} \right)\\
+&amp;=\frac{\sin^23}{2^3} +\left( \sum_{n=4}^{N}\frac{1}{2^n} \right)+\frac{\cos^2(N+1)}{2^{N+1}}\\
+\end{align*}
+<p class="intertext">Using Definition <a knowl="./knowl/def_SRseries.html" title="Definition 3.2.3">3.2.3</a>, our series evaluates to:</p>
+\begin{align*}
+\lim_{N \to \infty}s_N
+&amp;=\lim_{N \to \infty}\left[\frac{\sin^23}{2^3} +\left( \sum_{n=4}^{N}\frac{1}{2^n} \right)+\frac{\cos^2(N+1)}{2^{N+1}}\right]\\
+&amp;=\frac{\sin^23}{8}+\left[\lim_{N \to \infty}\frac{\cos^2(N+1)}{2^{N+1}}\right] +\sum_{n=4}^\infty \frac{1}{2^n}\\
+\end{align*}
+<p class="intertext">We evaluate the limit using the squeeze theorem; the series is geometric.</p>
+\begin{align*}
+&amp;=\frac{\sin^23}{8}+0+\sum_{n=0}^\infty \frac{1}{2^{n+4}}\\
+&amp;=\frac{\sin^23}{8}+\frac{1}{2^4}\sum_{n=0}^\infty \frac{1}{2^{n}}\\
+\end{align*}
+<p class="intertext">Using Lemma <a knowl="./knowl/lem_geomsum.html" title="Lemma 3.2.5: Geometric series">3.2.5</a>,</p>
+\begin{align*}
+&amp;=\frac{\sin^23}{8}+\frac{1}{2^4} \frac{1}{1-\frac12}\\
+&amp;=\frac{\sin^23}{8}+\frac{1}{8} \approx 0.1275
+\end{align*}
+</div>
+<span class="incontext"><a href="exercises-19.html#mjx-eqn-mrow-5028">in-context</a></span>
+</body>
+</html>

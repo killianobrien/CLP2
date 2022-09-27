@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:24:22+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Every term in the sum \(A\) is an integer. To see this we simplify  the ratio of factorials as we did in the previous proof:</p>
+<div class="displaymath">
+\begin{align*}
+A &amp;=
+\sum_{n=0}^a \frac{(-1)^{n+a+1} a!}{n!}
+=
+\sum_{n=0}^a (-1)^{n+a+1} (n+1)(n+2)\cdots (a-1) a
+\end{align*}
+</div>
+<p>Let us now examine the series \(B\text{.}\) Again clean up the ratio of factorials:</p>
+<div class="displaymath">
+\begin{align*}
+B &amp;= \sum_{n=a+1}^\infty \frac{(-1)^{n+a+1} a!}{n!}
+= \sum_{n=a+1}^\infty \frac{(-1)^{n+a+1} }
+{(a+1)\cdot (a+2)\cdots (n-1) \cdot n}\\
+&amp;= \frac{(-1)^{2a+2}}{a+1}
++ \frac{(-1)^{2a+3}}{(a+1)(a+2)}
++ \frac{(-1)^{2a+4}}{(a+1)(a+2)(a+3)}
++ \cdots\\
+&amp;=
+\frac{1}{a+1} - \frac{1}{(a+1)(a+2)} + \frac{1}{(a+1)(a+2)(a+3)} - \cdots
+\end{align*}
+</div>
+<p>Hence \(B\) is an alternating series of decreasing terms and by the alternating series test  (Theorem <a knowl="./knowl/thm_SRalternating.html" title="Theorem 3.3.14: Alternating Series Test">3.3.14</a>) it converges. Further, it must converge to a number  between its first and second partial sums (see the discussion before  Theorem <a knowl="./knowl/thm_SRalternating.html" title="Theorem 3.3.14: Alternating Series Test">3.3.14</a>). Hence the right-hand side lies between</p>
+<div class="displaymath">
+\begin{align*}
+\frac{1}{a+1}
+&amp;&amp; \text{and} &amp;&amp;
+\frac{1}{a+1} - \frac{1}{(a+1)(a+2)} = \frac{1}{a+2}
+\end{align*}
+</div>
+<p>Since \(a\) is a positive integer the above tells us that \(B\) converges to a real number strictly  greater than \(0\) and strictly less than 1. Hence it cannot be an integer.</p>
+<span class="incontext"><a href="subsection-65.html#p-6033">in-context</a></span>
+</body>
+</html>

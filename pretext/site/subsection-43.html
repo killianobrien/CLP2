@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:16:17+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The Integral Test</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_2_ic.html"><span class="title">CLP-2 Integral Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="subsection-42.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="section-20.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="subsection-44.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="subsection-42.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="section-20.html" title="Up">Up</a><a class="next-button button toolbar-item" href="subsection-44.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_integral.html" data-scroll="chap_integral"><span class="codenumber">1</span> <span class="title">Integration</span></a></h2>
+<ul>
+<li><a href="sec_intdef.html" data-scroll="sec_intdef">Definition of the Integral</a></li>
+<li><a href="sec_def_int.html" data-scroll="sec_def_int">Basic properties of the definite integral</a></li>
+<li><a href="sec_fundamental.html" data-scroll="sec_fundamental">The Fundamental Theorem of Calculus</a></li>
+<li><a href="sec_subs.html" data-scroll="sec_subs">Substitution</a></li>
+<li><a href="sec_area.html" data-scroll="sec_area">Area between curves</a></li>
+<li><a href="sec_int_volumes.html" data-scroll="sec_int_volumes">Volumes</a></li>
+<li><a href="sec_intbyparts.html" data-scroll="sec_intbyparts">Integration by parts</a></li>
+<li><a href="sec_trigint.html" data-scroll="sec_trigint">Trigonometric Integrals</a></li>
+<li><a href="sec_trigsub.html" data-scroll="sec_trigsub">Trigonometric Substitution</a></li>
+<li><a href="sec_parfrac.html" data-scroll="sec_parfrac">Partial Fractions</a></li>
+<li><a href="sec_numeric_int.html" data-scroll="sec_numeric_int">Numerical Integration</a></li>
+<li><a href="sec_improp_int.html" data-scroll="sec_improp_int">Improper Integrals</a></li>
+<li><a href="section-13.html" data-scroll="section-13">More Integration Examples</a></li>
+</ul>
+<h2 class="link"><a href="chap_int_app.html" data-scroll="chap_int_app"><span class="codenumber">2</span> <span class="title">Applications of Integration</span></a></h2>
+<ul>
+<li><a href="sec_work.html" data-scroll="sec_work">Work</a></li>
+<li><a href="sec_avg.html" data-scroll="sec_avg">Averages</a></li>
+<li><a href="sec_com.html" data-scroll="sec_com">Centre of Mass and Torque</a></li>
+<li><a href="sec_sep_de.html" data-scroll="sec_sep_de">Separable Differential Equations</a></li>
+</ul>
+<h2 class="link"><a href="chap_seq_ser.html" data-scroll="chap_seq_ser"><span class="codenumber">3</span> <span class="title">Sequence and series</span></a></h2>
+<ul>
+<li><a href="section-18.html" data-scroll="section-18">Sequences</a></li>
+<li><a href="section-19.html" data-scroll="section-19">Series</a></li>
+<li><a href="section-20.html" data-scroll="section-20">Convergence Tests</a></li>
+<li><a href="section-21.html" data-scroll="section-21">Absolute and Conditional Convergence</a></li>
+<li><a href="section-22.html" data-scroll="section-22">Power Series</a></li>
+<li><a href="section-23.html" data-scroll="section-23">Taylor Series</a></li>
+<li><a href="sec_RatIrr.html" data-scroll="sec_RatIrr">Optional — Rational and irrational numbers</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="section-26.html" data-scroll="section-26">Pythagoras</a></li>
+<li><a href="section-27.html" data-scroll="section-27">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="section-30.html" data-scroll="section-30">Trigonometry — Special Triangles</a></li>
+<li><a href="section-31.html" data-scroll="section-31">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trigonometric Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">Highschool Material You Should be Able to Derive</a></li>
+<li><a href="section-39.html" data-scroll="section-39">Cartesian Coordinates</a></li>
+<li><a href="ap_roots.html" data-scroll="ap_roots">Roots of Polynomials</a></li>
+</ul>
+<h2 class="link"><a href="ap_complex.html" data-scroll="ap_complex"><span class="codenumber">B</span> <span class="title">Complex Numbers and Exponentials</span></a></h2>
+<ul>
+<li><a href="sec_complex_defn.html" data-scroll="sec_complex_defn">Definition and Basic Operations</a></li>
+<li><a href="sec_complex_exp.html" data-scroll="sec_complex_exp">The Complex Exponential</a></li>
+</ul>
+<h2 class="link"><a href="app_Richardson_Romberg.html" data-scroll="app_Richardson_Romberg"><span class="codenumber">C</span> <span class="title">More About Numerical Integration</span></a></h2>
+<ul>
+<li><a href="ap_Richardson.html" data-scroll="ap_Richardson">Richardson Extrapolation</a></li>
+<li><a href="ap_Romberg.html" data-scroll="ap_Romberg">Romberg Integration</a></li>
+<li><a href="ap_adaptive.html" data-scroll="ap_adaptive">Adaptive Quadrature</a></li>
+</ul>
+<h2 class="link"><a href="app_ODE_numerical.html" data-scroll="app_ODE_numerical"><span class="codenumber">D</span> <span class="title">Numerical Solution of ODE's</span></a></h2>
+<ul>
+<li><a href="ap_derivation.html" data-scroll="ap_derivation">Simple ODE Solvers — Derivation</a></li>
+<li><a href="ap_error_behaviour.html" data-scroll="ap_error_behaviour">Simple ODE Solvers —  Error Behaviour</a></li>
+<li><a href="ap_variable.html" data-scroll="ap_variable">Variable Step Size Methods</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">E</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">F</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">G</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp2-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="subsection" id="subsection-43"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.3.2</span> <span class="title">The Integral Test</span>
+</h3>
+<p id="p-4782">In the integral test, we think of a series \(\sum_{n=1}^\infty a_n\text{,}\) that  we cannot evaluate explicitly, as the area of a union of rectangles, with \(a_n\) representing the area of a rectangle of width one and  height \(a_n\text{.}\) Then we compare that area with the area represented  by an integral, that we can evaluate explicitly, much as we did in  Theorem <a knowl="./knowl/thm_IMPcomparison.html" title="Theorem 1.12.17: Comparison">1.12.17</a>, the comparison test for improper integrals. We'll start with a simple example,  to illustrate the idea. Then we'll move on to a formulation of the test in general.</p>
+<article class="example-like" id="eg_firstIntTest"><a knowl="" class="id-ref" refid="hk-eg_firstIntTest"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.3.4</span> <span class="title">Convergence of the harmonic series</span>
+</h6></a></article><div id="hk-eg_firstIntTest" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-4783">Visualise the terms of the harmonic series \(\sum_{n=1}^\infty\frac{1}{n}\) as a bar graph — each term is a rectangle of  height \(\frac{1}{n}\) and width \(1\text{.}\) The limit of the series is then the limiting area of this union of rectangles. Consider the sketch on the left below.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/harmonic_int.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-4784">It shows that the area of the shaded columns, \(\sum_{n=1}^4\frac{1}{n}\text{,}\) is bigger than the area under the curve \(y=\frac{1}{x}\) with  \(1\le x\le 5\text{.}\) That is</p>
+<div class="displaymath">
+\begin{align*}
+\sum_{n=1}^4 \frac{1}{n} &amp; \ge \int_1^5 \frac{1}{x}\dee{x}
+\end{align*}
+</div>
+<p>If we were to continue drawing the columns all the way out to infinity,  then we would have</p>
+<div class="displaymath">
+\begin{align*}
+\sum_{n=1}^\infty \frac{1}{n} &amp; \ge \int_1^\infty \frac{1}{x}\dee{x}
+\end{align*}
+</div>
+<p>We are able to compute this improper integral exactly:</p>
+<div class="displaymath">
+\begin{align*}
+\int_1^\infty \frac{1}{x} \dee{x} &amp;= \lim_{R \to \infty} \Big[ \log|x| \Big]_1^R = +\infty
+\end{align*}
+</div>
+<p>That is the area under the curve diverges to \(+\infty\) and so the area represented by the columns must also diverge to  \(+\infty\text{.}\)</p>
+<p id="p-4785">It should be clear that the above argument can be quite easily  generalised. For example the same argument holds  <em class="emphasis">mutatis mutandis</em> <a knowl="" class="id-ref" refid="hk-fn-162" id="fn-162"><sup> 5 </sup></a><span id="hk-fn-162" class="hidden-content tex2jax_ignore"><span class="footnote">Latin for “Once the necessary changes  are made”. This phrase still gets used a little, but  these days mathematicians tend to write something equivalent in English. Indeed, English is pretty much the <em class="emphasis">lingua franca</em> for  mathematical publishing. <em class="emphasis">Quidquid erit.</em></span></span> for the series</p>
+<div class="displaymath">
+\begin{gather*}
+\sum_{n=1}^\infty \frac{1}{n^2}
+\end{gather*}
+</div>
+<p>Indeed we see from the sketch on the right above that</p>
+<div class="displaymath">
+\begin{align*}
+\sum_{n=2}^N \frac{1}{n^2} &amp;\le \int_1^N \frac{1}{x^2}\dee{x}
+\end{align*}
+</div>
+<p>and hence</p>
+<div class="displaymath">
+\begin{gather*}
+\sum_{n=2}^\infty \frac{1}{n^2} \leq \int_1^\infty \frac{1}{x^2}\dee{x}
+\end{gather*}
+</div>
+<p>This last improper integral is easy to evaluate:</p>
+<div class="displaymath">
+\begin{align*}
+\int_1^\infty \frac{1}{x^2}\dee{x} &amp;= \lim_{R\to\infty} \left[ - \frac{1}{x} \right]_1^R\\
+&amp;= \lim_{R\to\infty} \left( \frac{1}{1} - \frac{1}{R} \right) = 1
+\end{align*}
+</div>
+<p>Thus we know that</p>
+<div class="displaymath">
+\begin{gather*}
+\sum_{n=1}^\infty \frac{1}{n^2} = 1+ \sum_{n=2}^\infty \frac{1}{n^2} \leq 2.
+\end{gather*}
+</div>
+<p>and so the series must converge.</p></article></div>
+<p id="p-4786">The above arguments are formalised in the following theorem.</p>
+<article class="theorem-like" id="thm_SRintegralTest"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">3.3.5</span> <span class="title">The Integral Test</span>
+</h6>
+<p id="p-4787">Let \(N_0\) be any natural number. If \(f(x)\) is a function which is defined  and continuous for all \(x\ge N_0\) and which obeys</p>
+<ol class="lower-roman">
+<li id="li-2114">\(f(x)\ge 0\) for all \(x\ge N_0\) and</li>
+<li id="li-2115">\(f(x)\) decreases as \(x\) increases and</li>
+<li id="li-2116">\(f(n)=a_n\) for all  \(n\ge N_0\text{.}\)</li>
+</ol>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/intTest.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-4788">Then</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{n=1}^\infty a_n\text{ converges }\iff \int_{N_0}^\infty f(x)\ \dee{x}\text{ converges}
+\end{equation*}
+</div>
+<p>Furthermore, when the series converges, the truncation error</p>
+<div class="displaymath">
+\begin{equation*}
+\bigg|\sum_{n=1}^\infty a_n-\sum_{n=1}^N a_n\bigg|\le \int_N^\infty f(x)\ \dee{x}\qquad\text{for all $N\ge N_0$}
+\end{equation*}
+</div></article><article class="hiddenproof" id="proof-18"><a knowl="" class="id-ref" refid="hk-proof-18"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-18" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-4789">Let \(I\) be any fixed integer with \(I \gt N_0\text{.}\) Then</p>
+<ul class="disc">
+<li id="li-2117">\(\sum_{n=1}^\infty a_n\) converges if and only if  \(\sum_{n=I}^\infty a_n\) converges — removing a fixed finite number of terms from a series cannot impact whether or not it converges.</li>
+<li id="li-2118">Since \(a_n\ge 0\) for all \(n\ge I \gt N_0\text{,}\) the sequence of partial sums  \(s_\ell=\sum_{n=I}^\ell a_n\) obeys \(s_{\ell+1} = s_\ell+a_{n+1} \ge s_\ell\text{.}\) That is, \(s_\ell\) increases as \(\ell\) increases.</li>
+<li id="li-2119">So \(\big\{s_\ell\big\}\) must either converge to some finite number or increase to infinity. That is, either \(\sum_{n=I}^\infty a_n\) converges to a finite number or it is \(+\infty\text{.}\)</li>
+</ul>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/intTest3.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-4790">Look at the figure above. The shaded area in the figure is  \(\sum_{n=I}^\infty a_n\) because</p>
+<ul class="disc">
+<li id="li-2120">the first shaded rectangle has height \(a_I\) and width \(1\text{,}\) and hence area \(a_I\) and</li>
+<li id="li-2121">the second shaded rectangle has height \(a_{I+1}\) and width \(1\text{,}\) and hence area \(a_{I+1}\text{,}\) and so on</li>
+</ul>
+<p>This shaded area is smaller than the area under the curve \(y=f(x)\) for  \(I-1\le x \lt \infty\text{.}\) So</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{n=I}^\infty a_n \le \int_{I-1}^\infty f(x)\ \dee{x}
+\end{equation*}
+</div>
+<p>and, if the integral is finite, the sum \(\sum_{n=I}^\infty a_n\) is  finite too. Furthermore, the desired bound on the truncation error is just  the special case of this inequality with \(I=N+1\text{:}\)</p>
+<div class="displaymath">
+\begin{gather*}
+\sum_{n=1}^\infty a_n - \sum_{n=1}^N a_n =\sum_{n=N+1}^\infty a_n \le \int_N^\infty f(x)\ \dee{x}
+\end{gather*}
+</div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/intTest4.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-4791">For the “divergence case” look at the figure above.  The (new) shaded area in the figure is again \(\sum_{n=I}^\infty a_n\)  because</p>
+<ul class="disc">
+<li id="li-2122">the first shaded rectangle has height \(a_I\) and width \(1\text{,}\) and hence area \(a_I\) and</li>
+<li id="li-2123">the second shaded rectangle has height \(a_{I+1}\) and width \(1\text{,}\) and hence area \(a_{I+1}\text{,}\) and so on</li>
+</ul>
+<p>This time the shaded area is larger than the area under the curve  \(y=f(x)\) for \(I\le x \lt \infty\text{.}\) So</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{n=I}^\infty a_n \ge \int_I^\infty f(x)\ \dee{x}
+\end{equation*}
+</div>
+<p>and, if the integral is infinite, the sum \(\sum_{n=I}^\infty a_n\) is infinite too.</p></article></div>
+<p id="p-4792">Now that we have the integral test, it is straightforward to determine  for which values of \(p\) the series <a knowl="" class="id-ref" refid="hk-fn-163" id="fn-163"><sup> 6 </sup></a><span id="hk-fn-163" class="hidden-content tex2jax_ignore"><span class="footnote">This series, viewed  as a function of \(p\text{,}\) is called the Riemann zeta function, \(\zeta(p)\text{,}\)  or the Euler-Riemann zeta function. It is extremely important because  of its connections to prime numbers (among many other things). Indeed  Euler proved that \(\zeta(p) = \sum_{n=1}^\infty \frac{1}{n^p}
+= \prod_{\text{P prime}} \left(1 - {\rm P}^{-p} \right)^{-1}
+\text{.}\) Riemann showed the connections between the zeros of this function (over  complex numbers \(p\)) and the distribution of prime numbers. Arguably the  most famous unsolved problem in mathematics, the Riemann  hypothesis, concerns the locations of zeros of this function.</span></span></p>
+<div class="displaymath">
+\begin{gather*}
+\sum_{n=1}^\infty \frac{1}{n^p}
+\end{gather*}
+</div>
+<p>converges.</p>
+<article class="example-like" id="eg_SRpTest"><a knowl="" class="id-ref" refid="hk-eg_SRpTest"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.3.6</span> <span class="title">The \(p\) test:  \(\sum\limits_{n=1}^\infty\frac{1}{n^p}\)</span>
+</h6></a></article><div id="hk-eg_SRpTest" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-4793">Let \(p \gt 0\text{.}\) We'll now use the integral test to determine whether or not the series \(\sum_{n=1}^\infty\frac{1}{n^p}\) (which is sometimes called the \(p\)-series) converges.</p>
+<ul class="disc">
+<li id="li-2124">To do so, we need a function \(f(x)\) that obeys \(f(n)=a_n=\frac{1}{n^p}\) for all \(n\)  bigger than some \(N_0\text{.}\) Certainly \(f(x)=\frac{1}{x^p}\) obeys  \(f(n)=\frac{1}{n^p}\) for all \(n\ge 1\text{.}\) So let's pick this \(f\) and try \(N_0=1\text{.}\) (We can always increase \(N_0\) later if we need to.)</li>
+<li id="li-2125">
+<p id="p-4794">This function also obeys the other two conditions of  Theorem <a knowl="./knowl/thm_SRintegralTest.html" title="Theorem 3.3.5: The Integral Test">3.3.5</a>:</p>
+<ol class="lower-roman">
+<li id="li-2126">\(f(x) \gt 0\) for all \(x\ge N_0=1\) and</li>
+<li id="li-2127">\(f(x)\) decreases as \(x\) increases because \(f'(x)=-p\frac{1}{x^{p+1}} \lt 0\) for all \(x\ge N_0=1\text{.}\)</li>
+</ol>
+</li>
+<li id="li-2128">So the integral test tells us that the series   \(\sum_{n=1}^\infty\frac{1}{n^p}\) converges if and only if the integral \(\int_1^\infty\frac{\dee{x}}{x^p}\) converges.</li>
+<li id="li-2129">We have already seen, in Example <a knowl="./knowl/eg_IMPp1.html" title="Example 1.12.8: \(\int_1^\infty\frac{\dee{x}}{x^p}\) with \(p \gt 0\)">1.12.8</a>, that  the integral \(\int_1^\infty\frac{\dee{x}}{x^p}\) converges if and only if \(p \gt 1\text{.}\)</li>
+</ul>
+<p>So we conclude that \(\sum_{n=1}^\infty\frac{1}{n^p}\) converges if and only if \(p \gt 1\text{.}\) This is sometimes called the \(p\)-test.</p>
+<ul class="disc">
+<li id="li-2130">In particular, the series \(\sum_{n=1}^\infty\frac{1}{n}\text{,}\) which is called the harmonic series, has \(p=1\) and so diverges.  As we add more and more terms of this series together, the terms we add,  namely \(\frac{1}{n}\text{,}\) get smaller and smaller and tend to zero, but they tend to zero so slowly that the full sum is still infinite.</li>
+<li id="li-2131">On the other hand, the series \(\sum_{n=1}^\infty\frac{1}{n^{1.000001}}\) has \(p = 1.000001 \gt 1\) and so converges. This time as we add more and more  terms of this series together, the terms we add, namely  \(\frac{1}{n^{1.000001}}\text{,}\) tend to zero (just) fast enough that  the full sum is finite. Mind you, for this example, the convergence takes place very slowly — you have to take a huge number of terms to get a decent approximation to the full sum. If we approximate \(\sum_{n=1}^\infty\frac{1}{n^{1.000001}}\) by the truncated series \(\sum_{n=1}^N\frac{1}{n^{1.000001}}\text{,}\) we make an error of at most<div class="displaymath">
+\begin{align*}
+\int_N^\infty \frac{\dee{x}}{x^{1.000001}}
+&amp; = \lim_{R\rightarrow\infty} \int_N^R \frac{\dee{x}}{x^{1.000001}}\\
+&amp; = \lim_{R\rightarrow\infty}- \frac{1}{0.000001}
+\Big[\frac{1}{R^{0.000001}}-\frac{1}{N^{0.000001}}\Big]\\
+&amp; =\frac{10^6}{N^{0.000001}}
+\end{align*}
+</div>This does tend to zero as \(N\rightarrow\infty\text{,}\) but really slowly.</li>
+</ul></article></div>
+<p id="p-4795">We now know that the dividing line between convergence and divergence  of \(\sum_{n=1}^\infty\frac{1}{n^p}\) occurs at \(p=1\text{.}\) We can dig  a little deeper and ask ourselves how much more quickly than  \(\frac{1}{n}\) the \(n^{\rm th}\) term  needs to shrink in order for the series to converge.  We know that for large \(x\text{,}\) the function \(\log x\) is smaller than  \(x^a\) for any positive \(a\) — you can convince yourself of this with  a quick application of L'Hôpital's rule. So it is not unreasonable  to ask whether the series</p>
+<div class="displaymath">
+\begin{gather*}
+\sum_{n=2}^\infty \frac{1}{n \log n}
+\end{gather*}
+</div>
+<p>converges. Notice that we sum from \(n=2\) because when \(n=1, n\log n=0\text{.}\)  And we don't need to stop there <a knowl="" class="id-ref" refid="hk-fn-164" id="fn-164"><sup> 7 </sup></a><span id="hk-fn-164" class="hidden-content tex2jax_ignore"><span class="footnote">We could go even further and see  what happens if we include powers of \(\log(\log(n))\) and other more  exotic slow growing functions.</span></span>. We can analyse the convergence of  this sum with any power of \(\log n\text{.}\)</p>
+<article class="example-like" id="eg_SRlnpTest"><a knowl="" class="id-ref" refid="hk-eg_SRlnpTest"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.3.7</span> <span class="title">\(\sum\limits_{n=2}^\infty\frac{1}{n(\log n)^p}\)</span>
+</h6></a></article><div id="hk-eg_SRlnpTest" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-4796">Let \(p \gt 0\text{.}\) We'll now use the integral test to determine whether or not the series \(\sum\limits_{n=2}^\infty\frac{1}{n(\log n)^p}\) converges.</p>
+<ul class="disc">
+<li id="li-2132">As in the last example, we start by choosing a function that obeys  \(f(n)=a_n=\frac{1}{n(\log n)^p}\) for all \(n\)  bigger than some \(N_0\text{.}\) Certainly \(f(x)=\frac{1}{x(\log x)^p}\) obeys  \(f(n)=\frac{1}{n(\log n)^p}\) for all \(n\ge 2\text{.}\) So let's use that \(f\) and try \(N_0=2\text{.}\)</li>
+<li id="li-2133">
+<p id="p-4797">Now let's check the other two conditions of  Theorem <a knowl="./knowl/thm_SRintegralTest.html" title="Theorem 3.3.5: The Integral Test">3.3.5</a>:</p>
+<ol class="lower-roman">
+<li id="li-2134">Both \(x\) and \(\log x\) are positive for all \(x \gt 1\text{,}\) so \(f(x) \gt 0\) for all \(x\ge N_0=2\text{.}\)</li>
+<li id="li-2135">As \(x\) increases both \(x\) and \(\log x\) increase and so \(x(\log x)^p\)  increases and \(f(x)\) decreases.</li>
+</ol>
+</li>
+<li id="li-2136">So the integral test tells us that the series   \(\sum\limits_{n=2}^\infty\frac{1}{n(\log n)^p}\) converges if and only if  the integral \(\int_2^\infty\frac{\dee{x}}{x (\log x)^p}\) converges.</li>
+<li id="li-2137">To test the convergence of the integral, we make the substitution \(u=\log x\text{,}\) \(\dee{u}=\frac{\dee{x}}{x}\text{.}\)<div class="displaymath">
+\begin{gather*}
+\int_2^R \frac{\dee{x}}{x (\log x)^p}
+=\int_{\log 2}^{\log R}\frac{\dee{u}}{u^p}
+\end{gather*}
+</div>We already know that the integral \(\int_1^\infty\frac{\dee{u}}{u^p}\text{,}\) and hence the integral \(\int_2^R \frac{\dee{x}}{x (\log x)^p}\text{,}\) converges if and  only if \(p \gt 1\text{.}\)</li>
+</ul>
+<p>So we conclude that  \(\sum\limits_{n=2}^\infty\frac{1}{n(\log n)^p}\)  converges if and only if \(p \gt 1\text{.}\)</p></article></div></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

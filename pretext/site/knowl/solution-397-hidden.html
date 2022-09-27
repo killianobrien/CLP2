@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:20:31+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>It would be nice to use integration by parts with \(u=x\text{,}\) because then we would integrate \(\int v\dee{u}\text{,}\) and \(\dee{u} = \dee{x}\text{.}\) That is, the \(x\) would go away, and we'd be left with a pure trig integral. If we use \(u=x\text{,}\) then \(\dee{v} = \frac{\sin x}{\cos^2 x}\text{.}\) We need to find \(v\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+v&amp;=\int \frac{\sin x}{\cos^2 x}\dee{x} = \int \tan x \sec x\dee{x} = \sec x\\
+\end{align*}
+<p class="intertext">Now we use integration by parts.</p>
+\begin{align*}
+\int \frac{x\sin x}{\cos^2 x}\dee{x}&amp;=x\sec x - \int \sec x \dee{x}= x\sec x - \log|\sec x + \tan x|+C
+\end{align*}
+</div>
+</div></body>
+</html>

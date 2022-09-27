@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:20+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="listitem"><h6 class="heading">
+<span class="type">Item</span> <span class="codenumber">1.1.8.46.b</span>
+</h6>
+<p>We want to give a range with length at most 0.01, and guarantee that the area under the curve \(y=f(x)\) is inside that range. In the previous part, we figured out that when we use \(n\) rectangles, the length of our range is \(\left[f(b)-f(a)\right]\cdot\frac{b-a}{n}\text{.}\) So, all we have to do is set this to be less than or equal to 0.01, and solve for \(n\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+\left[f(b)-f(a)\right]\cdot\frac{b-a}{n}&amp;\leq 0.01\\
+100\left[f(b)-f(a)\right]\cdot(b-a)&amp;\leq n
+\end{align*}
+</div>
+<p>We can choose \(n\) to be an integer that is greater than or equal to \(100\left[f(b)-f(a)\right]\cdot(b-a)\text{.}\) Using that many rectangles, we find an upper and lower bound for the area under the curve. If we choose any number between our upper and lower bound as an approximation for the area under the curve, our error is no more than 0.01.</p></article><span class="incontext"><a href="exercises-1.html#li-266">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:27+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution"><ul class="disc">
+<li>
+<em class="alert">The straightforward method:</em> We use the substitution \(\textcolor{red}{u=x^2}\text{,}\) for which \(\textcolor{blue}{\dee{u}=2x\,\dee{x}}\text{,}\) and note that \(u=4\) for both \(x=2\) and \(x=-2\text{:}\)<div class="displaymath">
+\begin{equation*}
+\int_{-2}^2 xe^{x^2}\,\dee{x}
+=\int_{-2}^2 \frac{1}{2}e^{\textcolor{red}{x^2}}\,\textcolor{blue}{2x\dee{x}} 
+= \int_4^4 \frac{1}{2}e^{\textcolor{red}{u}}\,\textcolor{blue}{\dee{u}}
+=0
+\end{equation*}
+</div>
+</li>
+<li>
+<em class="alert">The slightly sneaky method:</em> We note that \(\displaystyle\diff{}{x} \left\{e^{x^2} \right\}= 2x\, e^{x^2}\text{,}\) so that \(\dfrac{1}{2} e^{x^2}\) is a antiderivative for the integrand \(x e^{x^2}\text{.}\) So<div class="displaymath">
+\begin{gather*}
+\int_{-2}^2 xe^{x^2}\,\dee{x} = \bigg[\frac{1}{2}e^{x^2}\bigg]_{-2}^2
+=\frac{1}{2}e^4-\frac{1}{2}e^4=0
+\end{gather*}
+</div>
+</li>
+<li>
+<em class="alert">The really sneaky method</em>: The integrand \(f(x) = x e^{x^2}\) is an odd function (meaning that \(f(-x)=-f(x)\)). So by Theorem <a knowl="./knowl/thm_INTevenodd.html" title="Theorem 1.2.12: Even and Odd">1.2.12</a> every integral of the form \(\int_{-a}^a x e^{x^2}\,\dee{x}\) is zero.</li>
+</ul></div></body>
+</html>

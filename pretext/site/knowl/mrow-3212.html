@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:20:15+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="displaymath">
+\begin{align*}
+\int_0^\infty \dfrac{x}{(x^2+1)^p} \dee{x} &amp;= \lim_{t \to \infty}\int_0^t \frac{x}{(x^2+1)^p}\dee{x}\\
+&amp;=\lim_{t \to \infty}\frac{1}{2}\int_1^{t^2+1} \dfrac{1}{u^p} \dee{u}\\
+&amp;=\lim_{t \to \infty}\frac{1}{2}\int_1^{t^2+1}u^{-p} \dee{u}\\
+&amp;=\begin{cases}
+\frac12\displaystyle\lim_{t \to \infty}\left[\frac{u^{1-p}}{1-p}\right]_1^{t^2+1}&amp;\text{ if }p \neq 1\\
+\frac12\displaystyle\lim_{t \to \infty}\Big[\log|u|\Big]_1^{t^2+1}&amp;\text{ if }p=1
+\end{cases}\\
+&amp;=\begin{cases}
+\frac12\displaystyle\lim_{t \to \infty}\frac{1}{1-p}\left[(t^2+1)^{1-p}-1\right]&amp;\text{ if }p \neq 1\\
+\frac12\displaystyle\lim_{t \to \infty}\Big[\log(t^2+1)\Big]=\infty&amp;\text{ if }p=1
+\end{cases}\\
+\end{align*}
+<p class="intertext">At this point, we can see that the integral diverges when \(p=1\text{.}\) When \(p \neq 1\text{,}\) we have the limit</p>
+\begin{align*}
+\displaystyle\lim_{t \to \infty}\frac{1/2}{1-p}\left[(t^2+1)^{1-p}-1\right]&amp;=\frac{1/2}{1-p}\left[\lim_{t \to \infty} (t^2+1)^{1-p}\right] - \frac{1/2}{1-p}
+\end{align*}
+</div>
+<span class="incontext"><a href="exercises-12.html#mjx-eqn-mrow-3212">in-context</a></span>
+</body>
+</html>

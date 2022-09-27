@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:20:17+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">1.12.4.23.1</span>
+</h6>
+<p>The integrand is positive everywhere. So either the integral converges to some finite number or it is infinite. There are two potential “sources of impropriety” — a possible singularity at \(x=0\) and the fact that the domain of integration extends to \(\infty\text{.}\) So, we split up the integral.</p>
+<div class="displaymath">
+\begin{equation*}
+\int_0^\infty\frac{\sin^4 x}{x^2}\, \dee{x}
+=\int_0^1\frac{\sin^4 x}{x^2}\, \dee{x}
++ \int_1^\infty\frac{\sin^4 x}{x^2}\, \dee{x}
+\end{equation*}
+</div>
+<p>Let's consider the first integral. By l'Hôpital's rule (see the CLP-1 text),</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{x\to 0} \frac{\sin x}{x}
+=\lim_{x\to 0} \frac{\cos x}{1}
+=\cos 0
+=1
+\end{equation*}
+</div>
+<p>Consequently,</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{x\to 0} \frac{\sin^4 x}{x^2}
+=\Big(\lim_{x\to 0} \sin^2 x \Big)
+\Big(\lim_{x\to 0} \frac{\sin x}{x} \Big)
+\Big(\lim_{x\to 0} \frac{\sin x}{x} \Big)
+=0\times 1\times 1
+=0
+\end{equation*}
+</div>
+<p>and the first integral is not even improper.</p>
+<p>Now for the second integral. Since \(|\sin x|\le 1\text{,}\) we'll compare it to \(\int_1^\infty \frac{1}{x^2}\text{.}\)</p>
+<ul class="disc">
+<li>\(\frac{\sin^4 x}{x^2}\) and \(\frac{1}{x^2}\) are defined and continuous for every \(x \geq 1\)</li>
+<li>\(0 \leq \frac{\sin^4 x}{x^2} \leq \frac{1^4}{x^2} = \frac{1}{x^2}\) for every \(x \geq 1\)</li>
+<li>\(\int_1^\infty \frac{1}{x^2} \dee{x}\) converges by Example <a knowl="./knowl/eg_IMPp1.html" title="Example 1.12.8: \(\int_1^\infty\frac{\dee{x}}{x^p}\) with \(p \gt 0\)">1.12.8</a> (it's a \(p\)-type integral with \(p \gt 1\))</li>
+</ul>
+<p>By the comparison test, Theorem <a knowl="./knowl/thm_IMPcomparison.html" title="Theorem 1.12.17: Comparison">1.12.17</a>, \(\displaystyle\int_1^\infty\frac{\sin^4 x}{x^2}\, \dee{x}\) converges.</p>
+<p>Since \(\displaystyle\int_0^1\frac{\sin^4 x}{x^2}\, \dee{x}\) and \(\displaystyle\int_1^\infty\frac{\sin^4 x}{x^2}\, \dee{x}\) both converge, we conclude \(\displaystyle\int_0^\infty\frac{\sin^4 x}{x^2}\, \dee{x}\) converges as well.</p>
+</div>
+<span class="incontext"><a href="exercises-12.html#solution-355">in-context</a></span>
+</body>
+</html>

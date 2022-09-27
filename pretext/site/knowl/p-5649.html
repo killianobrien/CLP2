@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:23:42+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>We can now use this limit to evaluate</p>
+<div class="displaymath">
+\begin{gather*}
+\lim_{x\rightarrow 0}(1+x)^{a/x}.
+\end{gather*}
+</div>
+<p>Now, we could either evaluate the limit of the logarithm of this  expression, or we can carefully rewrite the expression  as \(e^\mathrm{(something)}\text{.}\) Let us do the latter.</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x\rightarrow 0}(1+x)^{a/x}
+&amp;=\lim_{x\rightarrow 0}e^{\frac{a}{x} \log(1+x) }\\
+&amp;=\lim_{x\rightarrow 0}e^{\frac{a}{x}[x+O(|x|^2)]}\\
+&amp;=\lim_{x\rightarrow 0}e^{a+O(|x|)}
+=e^a
+\end{align*}
+</div>
+<p>Here we have used that if \(F(x)=O(|x|^2)\) then \(\frac{a}{x} F(x) = O(x)\) — see Remark <a knowl="./knowl/rem_bigohppties.html" title="Remark 3.6.31">3.6.31</a>(b). We have also used that the exponential is continuous — as \(x\)  tends to zero, the exponent of \(e^{a+O(|x|)}\) tends to \(a\)  so that \(e^{a+O(|x|)}\) tends to \(e^a\) — see Remark <a knowl="./knowl/rem_bigohppties.html" title="Remark 3.6.31">3.6.31</a>(a).</p>
+<span class="incontext"><a href="subsection-61.html#p-5649">in-context</a></span>
+</body>
+</html>

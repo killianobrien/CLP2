@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:21:05+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="listitem"><h6 class="heading">
+<span class="type">Item</span> <span class="codenumber">2.3.3.10.c</span>
+</h6>
+<p>If we cut \(S\) into \(n\) strips, then the strip at position \(x_i\) has area \((T(x_i)-B(x_i))\De x\text{,}\) where \(\De x = \frac{b-a}{n}\text{,}\) and its centre of mass is at height \(\dfrac{T(x_i)+B(x_i)}{2}\text{.}\) So, our approximation of the centre of mass of the rod is:</p>
+<div class="displaymath">
+\begin{align*}
+\bar y_n &amp;=\frac{\sum\limits_{i=1}^n (M_i\times y_i) }{\sum\limits_{i=1}^n M_i}\\
+&amp;=\frac{\sum\limits_{i=1}^n \left((T(x_i)-B(x_i))\De x\right)\times\left(\dfrac{T(x_i)+B(x_i)}{2}\right)  }{\sum\limits_{i=1}^n (T(x_i)-B(x_i))\De x}\\
+&amp;=\frac{\sum\limits_{i=1}^n (T(x_i)^2-B(x_i)^2)\De x }{2\sum\limits_{i=1}^n (T(x_i)-B(x_i))\De x}\\
+\end{align*}
+<p class="intertext">We use the definition of a definite integral (Definition <a knowl="./knowl/def_INTintegral.html" title="Definition 1.1.9">1.1.9</a>) to re-write the limit of the above function.</p>
+\begin{align*}
+\bar y &amp;=\lim_{n \to \infty}\frac{\sum\limits_{i=1}^n (T(x_i)^2-B(x_i)^2)\De x }{2\sum\limits_{i=1}^n (T(x_i)-B(x_i))\De x}\\
+&amp;=\frac{\int_a^b \big(T(x)^2-B(x)^2\big)\,\dee{x}}{2\int_a^b\big( T(x)-B(x)\big)\,\dee{x}}
+\end{align*}
+</div>
+<p>Remark: the denominator is twice the area of \(S\text{.}\) This equation for the \(y\)-coordinate of the centroid is the same as the one given in Equation <a knowl="./knowl/eq_TRQcentroid.html" title="Equation 2.3.5: Centroid of object with constant density">2.3.5</a>.</p></article><span class="incontext"><a href="exercises-16.html#li-1757">in-context</a></span>
+</body>
+</html>

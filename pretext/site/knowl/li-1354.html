@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:20:10+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="listitem"><h6 class="heading"><span class="type">Item</span></h6>Now we move on to general \(n\text{,}\) using the same type of computation as we just used to evaluate \(\Gamma(2)\text{.}\) For any natural number \(n\text{,}\)<div class="displaymath">
+\begin{align*}
+\Gamma(n+1)
+&amp;= \int_0^\infty x^n e^{-x}\dee{x}\\
+&amp;=\lim_{R\rightarrow\infty} \int_0^R  x^n e^{-x}\dee{x}\\
+\end{align*}
+<p class="intertext">Again integrate by parts with \(u=x^n,\dee{v}= e^{-x}\dee{x}\text{,}\) so \(v=-e^{-x}, \dee{u}=nx^{n-1}\dee{x}\)</p>
+\begin{align*}
+&amp; = \lim_{R\rightarrow\infty}\bigg[- x^ne^{-x}\Big|_0^R +
+\int_0^R  nx^{n-1}e^{-x}\dee{x}\bigg]\\
+&amp; = \lim_{R\rightarrow\infty} n\int_0^R  x^{n-1} e^{-x}\dee{x}\\
+&amp; = n\Gamma(n)
+\end{align*}
+</div>To get to the third row, we used that  \(\lim\limits_{x\rightarrow\infty}x^n e^{-x}=0\text{.}\)</article><span class="incontext"><a href="subsection-28.html#li-1354">in-context</a></span>
+</body>
+</html>

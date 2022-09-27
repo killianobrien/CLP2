@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:15:41+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Exercises</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_2_ic.html"><span class="title">CLP-2 Integral Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="subsection-30.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sec_work.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_avg.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="subsection-30.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sec_work.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_avg.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_integral.html" data-scroll="chap_integral"><span class="codenumber">1</span> <span class="title">Integration</span></a></h2>
+<ul>
+<li><a href="sec_intdef.html" data-scroll="sec_intdef">Definition of the Integral</a></li>
+<li><a href="sec_def_int.html" data-scroll="sec_def_int">Basic properties of the definite integral</a></li>
+<li><a href="sec_fundamental.html" data-scroll="sec_fundamental">The Fundamental Theorem of Calculus</a></li>
+<li><a href="sec_subs.html" data-scroll="sec_subs">Substitution</a></li>
+<li><a href="sec_area.html" data-scroll="sec_area">Area between curves</a></li>
+<li><a href="sec_int_volumes.html" data-scroll="sec_int_volumes">Volumes</a></li>
+<li><a href="sec_intbyparts.html" data-scroll="sec_intbyparts">Integration by parts</a></li>
+<li><a href="sec_trigint.html" data-scroll="sec_trigint">Trigonometric Integrals</a></li>
+<li><a href="sec_trigsub.html" data-scroll="sec_trigsub">Trigonometric Substitution</a></li>
+<li><a href="sec_parfrac.html" data-scroll="sec_parfrac">Partial Fractions</a></li>
+<li><a href="sec_numeric_int.html" data-scroll="sec_numeric_int">Numerical Integration</a></li>
+<li><a href="sec_improp_int.html" data-scroll="sec_improp_int">Improper Integrals</a></li>
+<li><a href="section-13.html" data-scroll="section-13">More Integration Examples</a></li>
+</ul>
+<h2 class="link"><a href="chap_int_app.html" data-scroll="chap_int_app"><span class="codenumber">2</span> <span class="title">Applications of Integration</span></a></h2>
+<ul>
+<li><a href="sec_work.html" data-scroll="sec_work">Work</a></li>
+<li><a href="sec_avg.html" data-scroll="sec_avg">Averages</a></li>
+<li><a href="sec_com.html" data-scroll="sec_com">Centre of Mass and Torque</a></li>
+<li><a href="sec_sep_de.html" data-scroll="sec_sep_de">Separable Differential Equations</a></li>
+</ul>
+<h2 class="link"><a href="chap_seq_ser.html" data-scroll="chap_seq_ser"><span class="codenumber">3</span> <span class="title">Sequence and series</span></a></h2>
+<ul>
+<li><a href="section-18.html" data-scroll="section-18">Sequences</a></li>
+<li><a href="section-19.html" data-scroll="section-19">Series</a></li>
+<li><a href="section-20.html" data-scroll="section-20">Convergence Tests</a></li>
+<li><a href="section-21.html" data-scroll="section-21">Absolute and Conditional Convergence</a></li>
+<li><a href="section-22.html" data-scroll="section-22">Power Series</a></li>
+<li><a href="section-23.html" data-scroll="section-23">Taylor Series</a></li>
+<li><a href="sec_RatIrr.html" data-scroll="sec_RatIrr">Optional — Rational and irrational numbers</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="section-26.html" data-scroll="section-26">Pythagoras</a></li>
+<li><a href="section-27.html" data-scroll="section-27">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="section-30.html" data-scroll="section-30">Trigonometry — Special Triangles</a></li>
+<li><a href="section-31.html" data-scroll="section-31">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trigonometric Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">Highschool Material You Should be Able to Derive</a></li>
+<li><a href="section-39.html" data-scroll="section-39">Cartesian Coordinates</a></li>
+<li><a href="ap_roots.html" data-scroll="ap_roots">Roots of Polynomials</a></li>
+</ul>
+<h2 class="link"><a href="ap_complex.html" data-scroll="ap_complex"><span class="codenumber">B</span> <span class="title">Complex Numbers and Exponentials</span></a></h2>
+<ul>
+<li><a href="sec_complex_defn.html" data-scroll="sec_complex_defn">Definition and Basic Operations</a></li>
+<li><a href="sec_complex_exp.html" data-scroll="sec_complex_exp">The Complex Exponential</a></li>
+</ul>
+<h2 class="link"><a href="app_Richardson_Romberg.html" data-scroll="app_Richardson_Romberg"><span class="codenumber">C</span> <span class="title">More About Numerical Integration</span></a></h2>
+<ul>
+<li><a href="ap_Richardson.html" data-scroll="ap_Richardson">Richardson Extrapolation</a></li>
+<li><a href="ap_Romberg.html" data-scroll="ap_Romberg">Romberg Integration</a></li>
+<li><a href="ap_adaptive.html" data-scroll="ap_adaptive">Adaptive Quadrature</a></li>
+</ul>
+<h2 class="link"><a href="app_ODE_numerical.html" data-scroll="app_ODE_numerical"><span class="codenumber">D</span> <span class="title">Numerical Solution of ODE's</span></a></h2>
+<ul>
+<li><a href="ap_derivation.html" data-scroll="ap_derivation">Simple ODE Solvers — Derivation</a></li>
+<li><a href="ap_error_behaviour.html" data-scroll="ap_error_behaviour">Simple ODE Solvers —  Error Behaviour</a></li>
+<li><a href="ap_variable.html" data-scroll="ap_variable">Variable Step Size Methods</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">E</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">F</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">G</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp2-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="exercises" id="exercises-14"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.1.2</span> <span class="title">Exercises</span>
+</h3>
+<div class="exercisegroup" id="exercisegroup-40">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 1</alert></p></span></h6>
+<div class="introduction" id="introduction-82"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like" id="exercise-400"><h6 class="heading">
+<span class="codenumber">1</span> </h6>
+<p id="p-3187">Find the work (in joules) required to lift a 3-gram block of matter a height of 10 centimetres against the force of gravity (with \(g=9.8\) m/sec\(^2\)).</p></article><article class="exercise-like boxed" id="exercise-401"><h6 class="heading">
+<span class="codenumber">2</span> </h6>
+<p id="p-3193">A rock exerts a force of 1 N on the ground where it sits due to  gravity. Use \(g=9.8\) m/sec\(^2\text{.}\)</p>
+<p id="p-3194">What is the mass of the rock?</p>
+<p id="p-3195">How much work (in joules) does it take to lift that rock one metre in the air?</p></article><article class="exercise-like" id="prob_s2_1_integralsandunits"><h6 class="heading">
+<span class="codenumber">3</span> </h6>
+<p id="p-3202">Consider the equation</p>
+<div class="displaymath">
+\begin{equation*}
+W = \int_a^b F(x)\,\dee{x}
+\end{equation*}
+</div>
+<p id="p-3203">where \(x\) is measured in metres and \(F(x)\) is measured in kilogram-metres per second squared (newtons).</p>
+<p id="p-3204">For some large \(n\text{,}\) we might approximate</p>
+<div class="displaymath">
+\begin{equation*}
+W \approx \sum_{i=1}^n F(x_i)\Delta x 
+\end{equation*}
+</div>
+<p id="p-3205">where \(\Delta x = \frac{b-a}{n}\) and \(x_i\) is some number in the interval \([a+(i-1)\Delta x, a+i\Delta x]\text{.}\) (This is just the general form of a Riemann sum).</p>
+<ol class="lower-alpha">
+<li id="li-1537">What are the units of \(\Delta x\text{?}\)</li>
+<li id="li-1538">What are the units of \(F(x_i)\text{?}\)</li>
+<li id="li-1539">Using your answers above, what are the units of \(W\text{?}\)</li>
+</ol>
+<p>Remark: we already know the units of \(W\) from the text, but the Riemann sum illustrates <em class="emphasis">why they make sense</em> arising from this particular integral.</p></article><article class="exercise-like boxed" id="exercise-403"><h6 class="heading">
+<span class="codenumber">4</span> </h6>
+<p id="p-3214">Suppose \(f(x)\)  has units \(\dfrac{\mathrm{smoot}}{\mathrm{megaFonzie}}\text{,}\) and \(x\) is measured in barns <a knowl="" class="id-ref" refid="hk-fn-120" id="fn-120"><sup> 12 </sup></a><span id="hk-fn-120" class="hidden-content tex2jax_ignore"><span class="footnote">For this problem, it doesn't matter what the units measure, but a smoot is a silly measure of length; a megaFonzie is an apocryphal measure of coolness; and a barn is a humorous (but actually used) measure of area. For explanations (and entertainment) see <a class="url" href="https://en.wikipedia.org/wiki/List_of_humorous_units_of_measurement" target="_blank"><code class="code-inline tex2jax_ignore">https://en.wikipedia.org/wiki/List_of_humorous_units_of_measurement</code></a> and <a class="url" href="https://en.wikipedia.org/wiki/List_of_unusual_units_of_measurement" target="_blank"><code class="code-inline tex2jax_ignore">https://en.wikipedia.org/wiki/List_of_unusual_units_of_measurement</code></a> (accessed 27 July 2017).</span></span>. What are the units of the quantity \(\int_0^1 f(x)\,\dee{x}\text{?}\)</p></article><article class="exercise-like" id="exercise-404"><h6 class="heading">
+<span class="codenumber">5</span> </h6>
+<p id="p-3218">You want to weigh your luggage  before a flight. You don't have a scale or balance, but you do have a heavy-duty spring from your local engineering-supply store. You nail it to your wall, marking where the bottom hangs. You hang a one-litre bag of water (with mass one kilogram)  from the spring, and observe that the spring stretches 1 cm. Where on the wall should you mark the bottom of the spring corresponding to a hanging mass of 10kg?</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:17%;margin-right:17%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-335.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-3219">You may assume that the spring obeys Hooke's law.</p></article><article class="exercise-like boxed" id="exercise-405"><h6 class="heading">
+<span class="codenumber">6</span> </h6>
+<p id="p-3225">The work done by a force in moving an object from position \(x = 1\) to \(x = b\) is \(W(b) = -b^3+6b^2-9b+4\) for any \(b\) in \([1,3]\text{.}\) At what position \(x\) in \([1,3]\) is the force the strongest?</p></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-41">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 2</alert></p></span></h6>
+<div class="introduction" id="introduction-83"></div>
+<div class="introduction" id="introduction-84"><p id="p-3242">Questions <a knowl="./knowl/prob_s2_1_normal1.html" title="Exercise 2.1.2.9: (✳)">9</a> through <a knowl="./knowl/prob_s2_1_normal2.html" title="Exercise 2.1.2.16">16</a> offer practice on two broad types of calculations covered in the text: lifting things against gravity, and stretching springs. You may make the same physical assumptions as in the text: that is, springs follow Hooke's law, and the acceleration due to gravity is a constant \(-9.8\) metres per second squared.</p></div>
+<div class="introduction" id="introduction-85"><p id="p-3304">For Questions <a knowl="./knowl/prob_s2_1_Work_KE.html" title="Exercise 2.1.2.18">18</a> and <a knowl="./knowl/prob_s2_1_Work_KE2.html" title="Exercise 2.1.2.19">19</a>, use the principle (introduced after Definition <a knowl="./knowl/def_WKwork.html" title="Definition 2.1.1">2.1.1</a> and utilized in Example <a knowl="./knowl/eg_WKgravity.html" title="Example 2.1.5: Escape Velocity">2.1.5</a>) that the work done on a particle by a force over a distance is equal to the change in kinetic energy of that particle.</p></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like" id="exercise-406"><h6 class="heading">
+<span class="codenumber">7</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-3230">A variable force \(F(x) = \frac{a}{\sqrt{x}}\) Newtons moves an object along a straight line when it is a distance of \(x\) meters from the origin. If the work done in moving the object from \(x = 1\) meters to \(x = 16\) meters is \(18\) joules, what is the value of \(a\text{?}\) Don't worry about the units of \(a\text{.}\)</p></article><article class="exercise-like boxed" id="exercise-407"><h6 class="heading">
+<span class="codenumber">8</span> </h6>
+<p id="p-3235">A tube of air is fitted with a plunger that compresses the air as it is pushed in. If the natural length of the tube of air is \(\ell\text{,}\) when the plunger has been pushed  \(x\) metres past its natural position, the force exerted by the air is \(\frac{c}{\ell-x}\) N, where \(c\) is a positive constant (depending on the particulars of the tube of air) and \(x \lt \ell\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:33.5%;margin-right:33.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-337.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<ol id="p-3236" class="lower-alpha">
+<li id="li-1545">What are the units of \(c\text{?}\)</li>
+<li id="li-1546">How much work does it take to push the plunger from 1 metre past its natural position to 1.5 metres past its natural position? (You may assume \(\ell \gt 1.5\text{.}\))</li>
+</ol></article><article class="exercise-like" id="prob_s2_1_normal1"><h6 class="heading">
+<span class="codenumber">9</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-3243">Find the work (in joules) required to stretch a string \(10\) cm beyond equilibrium, if its spring constant is \(k=50\ \mathrm{N}/\mathrm{m}\text{.}\)</p></article><article class="exercise-like boxed" id="exercise-409"><h6 class="heading">
+<span class="codenumber">10</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-3248">A force of \(10\) N (newtons) is required to hold a spring stretched \(5\) cm beyond its natural length. How much work, in joules (J), is done in stretching the spring from its natural length to \(50\) cm beyond its natural length?</p></article><article class="exercise-like boxed" id="prob_s2_1cable"><h6 class="heading">
+<span class="codenumber">11</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-3252">A \(5\)-metre-long cable of mass \(8\) kg is used to lift a bucket off the ground. How much work is needed to raise the entire cable to height \(5\) m? Ignore the mass of the bucket and its contents.</p></article><article class="exercise-like" id="prob_s2_1_tank3"><h6 class="heading">
+<span class="codenumber">12</span> </h6>
+<p id="p-3257">A  tank 1 metre high has pentagonal cross sections of area 3 m\(^2\) and is filled with water. How much work does it take to pump out all the water?</p>
+<p id="p-3258">You may assume the density of water is 1 kg per 1000 cm\(^3\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-338.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><article class="exercise-like" id="exercise-412"><h6 class="heading">
+<span class="codenumber">13</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-3263">A sculpture, shaped like a pyramid \(3\)m high sitting on the ground, has been made by stacking smaller and smaller (very thin) iron plates on top of one another. The iron plate at height \(z\) m above ground level is a square whose side length is \((3-z)\) m. All of the iron plates started on the floor of a basement \(2\) m below ground level.</p>
+<p id="p-3264">Write down an integral that represents the work, in joules, it took to move all of the iron from its starting position to its present position. Do <em class="alert">not</em> evaluate the integral. (You can use \(9.8\) m\({}/{}\)s\({}^2\) for the acceleration due to gravity and \(8000\)  kg\({}/{}\)m\({}^3\) for the density of iron.)</p></article><article class="exercise-like" id="exercise-413"><h6 class="heading">
+<span class="codenumber">14</span> </h6>
+<p id="p-3269">Suppose a spring extends 5 cm past its natural length when one kilogram is hung from its end. How much work is done to extend the spring from 5 cm past its natural length to 7 cm past its natural length?</p></article><article class="exercise-like boxed" id="prob_s2_1firewood"><h6 class="heading">
+<span class="codenumber">15</span> </h6>
+<p id="p-3275">Ten kilograms of firewood are hoisted on a rope up a height of 4 metres to a second-floor deck. If the total work done is \(400\) joules, what is the mass of the 4 metres of rope?</p>
+<p id="p-3276">You may assume that the rope has the same density all the way along.</p></article><article class="exercise-like" id="prob_s2_1_normal2"><h6 class="heading">
+<span class="codenumber">16</span> </h6>
+<p id="p-3283">A 5 kg weight is attached to the middle of a 10-metre long rope, which dangles out a window. The rope alone has mass 1 kg. How much work does it take to pull the entire rope in through the window, together with the weight?</p></article><article class="exercise-like" id="exercise-416"><h6 class="heading">
+<span class="codenumber">17</span> </h6>
+<p id="p-3296">A box is dragged along the floor. Friction exerts a force in the opposite direction of motion from the box, and that force is equal to \(\mu \times m \times g\text{,}\) where \(\mu\) is a constant, \(m\) is the mass of the box and \(g\) is the acceleration due to gravity. You may assume \(g=9.8\) m/sec\(^2\text{.}\)</p>
+<ol id="p-3297" class="lower-alpha">
+<li id="li-1567">How much work is done dragging a box of mass 10 kg along the floor for three metres if \(\mu=0.4\text{?}\)</li>
+<li id="li-1568">Suppose the box contains a volatile substance that rapidly evaporates. You pull the box at a constant rate of 1 m/sec for three seconds, and the mass of the box at \(t\) seconds (\(0 \leq t \leq 3\)) is \((10-\sqrt{t})\) kilograms. If \(\mu=0.4\text{,}\) how much work is done pulling the box for three seconds?</li>
+</ol></article><article class="exercise-like" id="prob_s2_1_Work_KE"><h6 class="heading">
+<span class="codenumber">18</span> </h6>
+<p id="p-3305">A ball of mass 1 kg is attached to a spring, and the spring is attached to a table. The ball moves with some initial velocity, and the spring slows it down. At its farthest, the spring stretches 10 cm past its natural length. If the spring constant is 5 N/m, what was the initial velocity of the ball?</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-345.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-3306">You may assume that the ball starts moving with initial velocity \(v_0\text{,}\) and that the only force slowing it down is the spring. You may also assume that the spring started out at its natural length, it follows Hooke's law, and when it is stretched its farthest, the velocity of the ball is 0 m/sec.</p></article><article class="exercise-like boxed" id="prob_s2_1_Work_KE2"><h6 class="heading">
+<span class="codenumber">19</span> </h6>
+<p id="p-3313">A mild-mannered university professor who is definitely not a spy notices that when their car is on the ground, it is 2 cm shorter than when it is on a jack. (That is: when the car is on a jack, its struts are at their natural length; when on the ground, the weight of the car causes the struts to compress 2 cm.) The university professor calculates that if they were to jump a local neighborhood drawbridge, their car would fall to the ground with a speed of 4 m/sec. If the car can sag 20 cm before important parts scrape the ground, and the car has mass 2000 kg unoccupied (2100 kg with the professor inside), can the professor, who is certainly not involved in international intrigue, safely jump the  bridge?</p>
+<p id="p-3314">Assume the car falls vertically, the struts obey Hooke's law, and the work done by the struts is equal to the change in kinetic energy of the car + professor. Use 9.8 m/sec\(^2\) for  the acceleration due to gravity.</p></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-42">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 3</alert></p></span></h6>
+<div class="introduction" id="introduction-86"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like" id="prob_s2_1_tank2"><h6 class="heading">
+<span class="codenumber">20</span> </h6>
+<p id="p-3319">A disposable paper cup has the shape of a right circular cone with radius 5 cm and height 15 cm, and is completely filled with water. How much work is done sucking all the water out of the cone with a straw?</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:38.5%;margin-right:38.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-346.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-3320">You may assume that 1 m\(^3\) of water has mass 1000 kilograms, the acceleration due to gravity is \(-9.8\) m/sec\(^2\text{,}\) and that the water moves as high up as the very top of the cup and no higher.</p></article><article class="exercise-like boxed" id="prob_s2_1_tank1"><h6 class="heading">
+<span class="codenumber">21</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-3326">A spherical tank of radius \(3\) metres is half-full of water. It has a spout of length \(1\) metre sticking up from the top of the tank. Find the work required to pump all of the water in the tank out the spout. The density of water is \(1000\) kilograms per cubic metre. The acceleration due to gravity is \(9.8\) metres per second squared.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="problems/figs/OE14A_4.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><article class="exercise-like boxed" id="exercise-421"><h6 class="heading">
+<span class="codenumber">22</span> </h6>
+<p id="p-3332">A 5-metre cable is pulled out of a deep hole, where it was dangling straight down. The cable has density \(\rho(x) = (10-x)\) kg/m, where \(x\) is the distance from the bottom end of the rope. (So, the bottom of the cable is denser than the top.) How much work is done pulling the cable out of the hole?</p></article><article class="exercise-like" id="exercise-422"><h6 class="heading">
+<span class="codenumber">23</span> </h6>
+<p id="p-3346">A rectangular tank is fitted with a  plunger that can raise and lower the water level by decreasing and increasing the length of its base, as in the diagrams below. The tank has base width 1 m (which does not change) and contains 3 m\(^3\) of water.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:8.5%;margin-right:8.5%;">
+<div class="sbspanel" style="width:39.7590361445783%;justify-content:center;"><img src="images/image-354.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:39.7590361445783%;justify-content:center;"><img src="images/image-355.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<p id="p-3347">The force of the water acting on any tiny piece of the plunger is \(PA\text{,}\) where \(P\) is the pressure of the water, and \(\dee{A}\) is the area of the tiny piece. The pressure varies with the depth of the piece (below the surface of the water). Specifically, \(P=cD\text{,}\) where \(D\) is the depth of the tiny piece and \(c\) is a constant, in this case \(c=9800\) N/m\(^3\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-1582">If the  length of the base is 3 m, give the force of the water on the entire plunger. (You can do this with an integral: it's the sum of the force on all the tiny pieces of the plunger.)</li>
+<li id="li-1583">If the  length of the base is \(x\) m, give the force of the water on the entire plunger.</li>
+<li id="li-1584">Give the work required to move the plunger in so that the base length changes from 3 m to 1 m.</li>
+</ol></article><article class="exercise-like boxed" id="exercise-423"><h6 class="heading">
+<span class="codenumber">24</span> </h6>
+<p id="p-3362">A leaky bucket picks up 5 L of water from a well, but drips out 1 L every ten seconds. If the bucket was hauled up 5 metres at a constant speed of 1 metre every two seconds, how much work was done?</p>
+<p id="p-3363">Assume the rope and bucket have negligible mass and one litre of water has 1 kg mass, and use \(9.8\) m/sec\(^2\) for the acceleration due to gravity.</p></article><article class="exercise-like" id="exercise-424"><h6 class="heading">
+<span class="codenumber">25</span> </h6>
+<p id="p-3368">The force of gravity between two objects, one of mass \(m_1\) and another of mass \(m_2\text{,}\) is \(F = G\dfrac{m_1m_2}{r^2}\text{,}\) where \(r\) is the distance between them and \(G\) is the gravitational constant.</p>
+<p id="p-3369">How much work is required to separate the earth and the moon far enough apart that the gravitational attraction between them is negligible?</p>
+<p id="p-3370">Assume the mass of the earth is \(6 \times 10^{24}\) kg and the mass of the moon is \(7 \times 10^{22}\) kg, and that they are currently  \(400\,000\) km away from each other. Also, assume \(G = 6.7\times 10^{-11} \ \frac{\text{m}^3}{\text{kg}\cdot\text{sec}^2}\text{,}\) and  the only force acting on the earth and moon is the gravity between them.</p></article><article class="exercise-like boxed" id="exercise-425"><h6 class="heading">
+<span class="codenumber">26</span> </h6>
+<p id="p-3376">True or false: the work done pulling up a dangling cable of length \(\ell\) and mass \(m\) (with uniform density) is the same as the work done lifting up a ball of mass \(m\) a height of \(\ell/2\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;">
+<div class="sbspanel" style="width:33.3333333333333%;justify-content:center;"><img src="images/image-357.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:33.3333333333333%;justify-content:center;"><img src="images/image-358.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div></article><article class="exercise-like" id="exercise-426"><h6 class="heading">
+<span class="codenumber">27</span> </h6>
+<p id="p-3383">A tank one metre high is filled with watery mud that has settled to be denser at the bottom than at the top.</p>
+<p id="p-3384">At height \(h\) metres above the bottom of the tank, the cross-section of the tank has the shape of the finite region bounded by the two curves \(y=x^2\) and \(y=2-h-3x^2\text{.}\) At height \(h\) metres above the bottom of the tank, the density of the liquid is \(1000\sqrt{2-h}\) kilograms per cubic metre.</p>
+<p id="p-3385">How much work is done to pump all the liquid out of the tank?</p>
+<p id="p-3386">You may assume the acceleration due to gravity is \(9.8\) m/sec\(^2\text{.}\)</p></article><article class="exercise-like" id="exercise-427"><h6 class="heading">
+<span class="codenumber">28</span> </h6>
+<p id="p-3393">An hourglass is 0.2 m tall and shaped such that that \(y\) metres above or below its vertical centre it has a radius of \(y^2+0.01\) m.</p>
+<p id="p-3394">It is exactly half-full of sand, which has mass \(M=\frac{1}{7}\) kilograms.</p>
+<p id="p-3395">How much work is done on the sand by quickly flipping the hourglass over?</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:9.5%;margin-right:9.5%;">
+<div class="sbspanel" style="width:49.3827160493827%;justify-content:flex-start;"><img src="images/image-360.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:27.1604938271605%;justify-content:flex-start;"><img src="images/image-361.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<p id="p-3396">Assume that the  work done is only moving against gravity, with \(g=9.8\) m/sec\(^2\text{,}\) and the sand has uniform density. Also assume that at the instant the hourglass is flipped over, the sand has not yet begun to fall, as in the picture above.</p></article><article class="exercise-like boxed" id="exercise-428"><h6 class="heading">
+<span class="codenumber">29</span> </h6>
+<p id="p-3406">Suppose  at position \(x\) a particle experiences a force of \(F(x) = \sqrt{1-x^4}\) N. Approximate the work done moving the particle from \(x=0\) to \(x=1/2\text{,}\) accurate to within \(0.01\) J.</p></article>
+</div>
+</div></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

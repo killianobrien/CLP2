@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:22:53+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>For large \(n\text{,}\) the numerator \(n^3-4\approx n^3\) and the denominator \(2n^5-6n\approx 2n^5\text{,}\) so the \(n\)th term is approximately \(\frac{n^3}{2n^5}=\frac{1}{2n^2}\text{.}\) So we apply the limit comparison test with \(a_n=\frac{n^3-4}{2n^5-6n}\) and \(b_n=\frac{1}{n^2}\text{.}\) Since</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{n\rightarrow\infty}\frac{a_n}{b_n}
+=\lim_{n\rightarrow\infty}\frac{(n^3-4)/(2n^5-6n)}{1/n^2}
+=\lim_{n\rightarrow\infty}\frac{1-\frac{4}{n^3}}{2-\frac{6}{n^4}}
+=\frac12
+\end{equation*}
+</div>
+<p>exists and is nonzero, the given series \(\sum\limits_{n=1}^\infty a_n\) converges if and only if the series \(\sum\limits_{n=1}^\infty b_n\) converges. Since the series \(\sum\limits_{n=1}^\infty b_n
+=\sum\limits_{n=1}^\infty\frac{1}{n^2}\) is a convergent \(p\)-series (with \(p=2\)), both series converge.</p>
+</div></body>
+</html>

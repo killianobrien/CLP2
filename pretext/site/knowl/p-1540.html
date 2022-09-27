@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:35+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<div class="displaymath">
+\begin{align*}
+\int x^3 e^x \dee{x}&amp;= \underbrace{x^3}_{u}\underbrace{e^x}_{v} - \int
+\underbrace{e^x}_v \cdot\underbrace{ 3x^2 \dee{x}}_{\dee{u}}\\
+&amp;= {x^3}{e^x} -3 \int
+{e^x} \cdot x^2 \dee{x}\\
+\end{align*}
+<p class="intertext">Now, we take \(u=x^2\) and \(\dee{v}=e^x\dee{x}\text{,}\) so \(\dee{u}=2x\dee{x}\) and \(v=e^x\text{.}\) We're only using integration by parts on the actual integral--the rest of the function stays the way it is.</p>
+\begin{align*}
+&amp;=x^3e^x -3
+\left[\underbrace{x^2e^x}_{uv} - \int \underbrace{e^x}_{v} \cdot \underbrace{2x\dee{x}}_{\dee{u}}\right]\\
+&amp;=x^3e^x - 3x^2e^x + 6\int x e^x\dee{x}\\
+\end{align*}
+<p class="intertext">Continuing, we take \(u=x\) and \(\dee{v}=e^x\dee{x}\text{,}\) so \(\dee{u}=\dee{x}\) and \(v=e^x\text{.}\) This is the step where the polynomial part of the integrand finally disappears.</p>
+\begin{align*}
+&amp;=x^3e^x - 3x^2e^x +
+6\left[\underbrace{xe^x}_{uv} - \int \underbrace{ e^x}_v \underbrace{\dee{x}}_{\dee{u}}\right]\\
+&amp;=x^3e^x-3x^2e^x+6xe^x - 6e^x+C\\
+&amp;=e^x\left(x^3-3x^2+6x - 6\right)+C
+\end{align*}
+</div>
+<span class="incontext"><a href="exercises-7.html#p-1540">in-context</a></span>
+</body>
+</html>

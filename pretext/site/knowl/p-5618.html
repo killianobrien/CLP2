@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:23:37+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Back in Example <a knowl="./knowl/eg_expSeriesB.html" title="Example 3.6.8: Optional — Why  \(\sum_{n=0}^\infty \frac{1}{n!}x^n\) is \(e^x\)">3.6.8</a>, we saw that</p>
+<div class="displaymath">
+\begin{equation*}
+e^x =1+x+\tfrac{x^2}{2!}+\cdots+\tfrac{x^n}{n!}+\tfrac{1}{(n+1)!}e^c x^{n+1}
+\end{equation*}
+</div>
+<p>for some (unknown) \(c\) between \(0\) and \(x\text{.}\) This can be used to approximate the number \(e\text{,}\) with any  desired degree of accuracy. Setting \(x=1\) in this equation gives</p>
+<div class="displaymath">
+\begin{equation*}
+e=1+1+\tfrac{1}{2!}+\cdots+\tfrac{1}{n!}+\tfrac{1}{(n+1)!}e^c
+\end{equation*}
+</div>
+<p>for some \(c\) between \(0\) and \(1\text{.}\) Even though we don't know \(c\) exactly, we can bound that term quite readily. We do  know that \(e^c\) in an increasing function<a knowl="./knowl/fn-207-hidden.html" title="Footnote 3.6.15"><sup> 15 </sup></a> of \(c\text{,}\) and so \(1=e^0 \leq e^c \leq e^1=e\text{.}\)  Thus we know that</p>
+<div class="displaymath">
+\begin{gather*}
+\frac{1}{(n+1)!} \leq e - \left( 1+1+\tfrac{1}{2!}+\cdots+\tfrac{1}{n!} \right) \leq \frac{e}{(n+1)!}
+\end{gather*}
+</div>
+<p>So we have a lower bound on the error, but our upper bound involves the \(e\) — precisely the quantity we are trying to get a handle on.</p>
+<span class="incontext"><a href="subsection-57.html#p-5618">in-context</a></span>
+</body>
+</html>

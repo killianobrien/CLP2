@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:14:57+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Integration by parts</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_2_ic.html"><span class="title">CLP-2 Integral Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_intbyparts.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sec_intbyparts.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="exercises-7.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_intbyparts.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sec_intbyparts.html" title="Up">Up</a><a class="next-button button toolbar-item" href="exercises-7.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_integral.html" data-scroll="chap_integral"><span class="codenumber">1</span> <span class="title">Integration</span></a></h2>
+<ul>
+<li><a href="sec_intdef.html" data-scroll="sec_intdef">Definition of the Integral</a></li>
+<li><a href="sec_def_int.html" data-scroll="sec_def_int">Basic properties of the definite integral</a></li>
+<li><a href="sec_fundamental.html" data-scroll="sec_fundamental">The Fundamental Theorem of Calculus</a></li>
+<li><a href="sec_subs.html" data-scroll="sec_subs">Substitution</a></li>
+<li><a href="sec_area.html" data-scroll="sec_area">Area between curves</a></li>
+<li><a href="sec_int_volumes.html" data-scroll="sec_int_volumes">Volumes</a></li>
+<li><a href="sec_intbyparts.html" data-scroll="sec_intbyparts">Integration by parts</a></li>
+<li><a href="sec_trigint.html" data-scroll="sec_trigint">Trigonometric Integrals</a></li>
+<li><a href="sec_trigsub.html" data-scroll="sec_trigsub">Trigonometric Substitution</a></li>
+<li><a href="sec_parfrac.html" data-scroll="sec_parfrac">Partial Fractions</a></li>
+<li><a href="sec_numeric_int.html" data-scroll="sec_numeric_int">Numerical Integration</a></li>
+<li><a href="sec_improp_int.html" data-scroll="sec_improp_int">Improper Integrals</a></li>
+<li><a href="section-13.html" data-scroll="section-13">More Integration Examples</a></li>
+</ul>
+<h2 class="link"><a href="chap_int_app.html" data-scroll="chap_int_app"><span class="codenumber">2</span> <span class="title">Applications of Integration</span></a></h2>
+<ul>
+<li><a href="sec_work.html" data-scroll="sec_work">Work</a></li>
+<li><a href="sec_avg.html" data-scroll="sec_avg">Averages</a></li>
+<li><a href="sec_com.html" data-scroll="sec_com">Centre of Mass and Torque</a></li>
+<li><a href="sec_sep_de.html" data-scroll="sec_sep_de">Separable Differential Equations</a></li>
+</ul>
+<h2 class="link"><a href="chap_seq_ser.html" data-scroll="chap_seq_ser"><span class="codenumber">3</span> <span class="title">Sequence and series</span></a></h2>
+<ul>
+<li><a href="section-18.html" data-scroll="section-18">Sequences</a></li>
+<li><a href="section-19.html" data-scroll="section-19">Series</a></li>
+<li><a href="section-20.html" data-scroll="section-20">Convergence Tests</a></li>
+<li><a href="section-21.html" data-scroll="section-21">Absolute and Conditional Convergence</a></li>
+<li><a href="section-22.html" data-scroll="section-22">Power Series</a></li>
+<li><a href="section-23.html" data-scroll="section-23">Taylor Series</a></li>
+<li><a href="sec_RatIrr.html" data-scroll="sec_RatIrr">Optional — Rational and irrational numbers</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="section-26.html" data-scroll="section-26">Pythagoras</a></li>
+<li><a href="section-27.html" data-scroll="section-27">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="section-30.html" data-scroll="section-30">Trigonometry — Special Triangles</a></li>
+<li><a href="section-31.html" data-scroll="section-31">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trigonometric Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">Highschool Material You Should be Able to Derive</a></li>
+<li><a href="section-39.html" data-scroll="section-39">Cartesian Coordinates</a></li>
+<li><a href="ap_roots.html" data-scroll="ap_roots">Roots of Polynomials</a></li>
+</ul>
+<h2 class="link"><a href="ap_complex.html" data-scroll="ap_complex"><span class="codenumber">B</span> <span class="title">Complex Numbers and Exponentials</span></a></h2>
+<ul>
+<li><a href="sec_complex_defn.html" data-scroll="sec_complex_defn">Definition and Basic Operations</a></li>
+<li><a href="sec_complex_exp.html" data-scroll="sec_complex_exp">The Complex Exponential</a></li>
+</ul>
+<h2 class="link"><a href="app_Richardson_Romberg.html" data-scroll="app_Richardson_Romberg"><span class="codenumber">C</span> <span class="title">More About Numerical Integration</span></a></h2>
+<ul>
+<li><a href="ap_Richardson.html" data-scroll="ap_Richardson">Richardson Extrapolation</a></li>
+<li><a href="ap_Romberg.html" data-scroll="ap_Romberg">Romberg Integration</a></li>
+<li><a href="ap_adaptive.html" data-scroll="ap_adaptive">Adaptive Quadrature</a></li>
+</ul>
+<h2 class="link"><a href="app_ODE_numerical.html" data-scroll="app_ODE_numerical"><span class="codenumber">D</span> <span class="title">Numerical Solution of ODE's</span></a></h2>
+<ul>
+<li><a href="ap_derivation.html" data-scroll="ap_derivation">Simple ODE Solvers — Derivation</a></li>
+<li><a href="ap_error_behaviour.html" data-scroll="ap_error_behaviour">Simple ODE Solvers —  Error Behaviour</a></li>
+<li><a href="ap_variable.html" data-scroll="ap_variable">Variable Step Size Methods</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">E</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">F</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">G</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp2-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="subsection" id="subsection-14"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.7.1</span> <span class="title">Integration by parts</span>
+</h3>
+<p id="p-1449">The fundamental theorem of calculus tells us that it is very easy to integrate a  derivative. In particular, we know that</p>
+<div class="displaymath">
+\begin{align*}
+\int \diff{}{x}\left( F(x) \right) \dee{x} &amp;= F(x)+C
+\end{align*}
+</div>
+<p>We can exploit this in order to develop another rule for integration — in particular a  rule to help us integrate products of simpler function such as</p>
+<div class="displaymath">
+\begin{gather*}
+\int x e^x \dee{x}
+\end{gather*}
+</div>
+<p>In so doing we will arrive at a method called “integration by parts”.</p>
+<p id="p-1450">To do this we start with the product rule and integrate. Recall that the  product rule says</p>
+<div class="displaymath">
+\begin{gather*}
+\diff{}{x} u(x)v(x) = u'(x)\,v(x)+u(x)\,v'(x)
+\end{gather*}
+</div>
+<p>Integrating this gives</p>
+<div class="displaymath">
+\begin{align*}
+\int \big[u'(x)\,v(x)+u(x)\,v'(x)\big]\dee{x}
+&amp;=\big[\text{a function whose derivative is $u'v+uv'$}\big] + C\\
+&amp;=u(x)v(x) +C
+\end{align*}
+</div>
+<p>Now this, by itself, is not terribly useful. In order to apply it we need to have a  function whose integrand is a sum of products that is in exactly this form \(u'(x)v(x) +  u(x)v'(x)\text{.}\) This is far too specialised.</p>
+<p id="p-1451">However if we tease this apart a little:</p>
+<div class="displaymath">
+\begin{align*}
+\int \big[ u'(x)\,v(x) + u(x)\,v'(x) \big]\dee{x}
+&amp;=  \int u'(x)\,v(x) \,\dee{x}
++\int u(x)\,v'(x) \,\dee{x}\\
+\end{align*}
+<p class="intertext">Bring one of the integrals to the left-hand side</p>
+\begin{align*}
+u(x) v(x) - \int u'(x)\,v(x) \dee{x}
+&amp;= \int u(x)\,v'(x)\dee{x}\\
+\end{align*}
+<p class="intertext">Swap left and right sides</p>
+\begin{align*}
+\int u(x)\,v'(x)\dee{x}
+&amp;= u(x) v(x) - \int u'(x)\,v(x) \dee{x}
+\end{align*}
+</div>
+<p>In this form we take the integral of one product and express it in terms of the integral  of a different product. If we express it like that, it doesn't seem too useful. However,  if the second integral is easier, then this process helps us.</p>
+<p id="p-1452">Let us do a simple example before explaining this more generally.</p>
+<article class="example-like" id="eg_PRTSxex"><a knowl="" class="id-ref" refid="hk-eg_PRTSxex"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.7.1</span> <span class="title">\(\int xe^x \dee{x}\)</span>
+</h6></a></article><div id="hk-eg_PRTSxex" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-1453">Compute the integral \(\ds \int xe^x \dee{x}\text{.}\)</p>
+<p id="p-1454"><em class="alert">Solution:</em></p>
+<ul class="disc">
+<li id="li-743">We start by taking the equation above<div class="displaymath">
+\begin{align*}
+\int u(x)\,v'(x)\dee{x}
+&amp;= u(x) v(x) - \int u'(x)\,v(x) \dee{x}
+\end{align*}
+</div>
+</li>
+<li id="li-744">Now set \(u(x)=x\) and \(v'(x)=e^x\text{.}\) How did we know how to make this choice? We will  explain some strategies later. For now, let us just accept this choice and keep going.</li>
+<li id="li-745">In order to use the formula we need to know \(u'(x)\) and \(v(x)\text{.}\) In this case it is  quite straightforward: \(u'(x)=1\) and \(v(x)=e^x\text{.}\)</li>
+<li id="li-746">Plug everything into the formula:<div class="displaymath">
+\begin{align*}
+\int x e^x \dee{x} &amp;= x e^x - \int e^x \dee{x}\\
+\end{align*}
+<p class="intertext">So our original more difficult integral has been turned into a question of  computing an easy one.</p>
+\begin{align*}
+&amp;= x e^x - e^x +C
+\end{align*}
+</div>
+</li>
+<li id="li-747">We can check our answer by differentiating:<div class="displaymath">
+\begin{align*}
+\diff{}{x} \left(x e^x - e^x +C \right)
+&amp;= \underbrace{x e^x + 1 \cdot e^x}_{\text{by product rule}} - e^x + 0\\
+&amp;= x e^x &amp; \text{as required.}
+\end{align*}
+</div>
+</li>
+</ul></article></div>
+<p id="p-1455">The process we have used in the above example is called “integration by parts”. When  our integrand is a product we try to write it as \(u(x) v'(x)\) — we need to choose one  factor to be \(u(x)\) and the other to be \(v'(x)\text{.}\) We then compute \(u'(x)\) and \(v(x)\) and  then apply the following theorem:</p>
+<article class="theorem-like" id="thm_PRTSintbyparts"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.7.2</span> <span class="title">Integration by parts</span>
+</h6>
+<p id="p-1456">Let \(u(x)\) and \(v(x)\) be continuously differentiable. Then</p>
+<div class="displaymath">
+\begin{gather*}
+\int u(x)\,v'(x)\dee{x} = u(x)\,v(x)-\int v(x)\,u'(x)\dee{x}
+\end{gather*}
+</div>
+<p>If we write \(\dee{v}\) for \(v'(x)\dee{x}\) and \(\dee{u}\) for \(u'(x)\dee{x}\) (as the substitution rule  suggests), then the formula becomes</p>
+<div class="displaymath">
+\begin{gather*}
+\int u\dee{v}= u\,v-\int v\dee{u}
+\end{gather*}
+</div>
+<p>The application of this formula is known as integration by parts.</p>
+<p id="p-1457">The corresponding statement for definite integrals is</p>
+<div class="displaymath">
+\begin{gather*}
+\int_a^b u(x)\,v'(x)\dee{x} = u(b)\,v(b)-u(a)\,v(a)-\int_a^b v(x)\,u'(x)\dee{x}
+\end{gather*}
+</div></article><p id="p-1458">Integration by parts is not as easy to apply as the product rule for derivatives. This is  because it relies on us</p>
+<ol class="decimal">
+<li id="li-748">judiciously choosing \(u(x)\) and \(v'(x)\text{,}\) then</li>
+<li id="li-749">computing \(u'(x)\) and \(v(x)\) — which requires us to  antidifferentiate \(v'(x)\text{,}\) and finally</li>
+<li id="li-750">that the integral \(\int u'(x) v(x)\dee{x}\) is easier than the integral we started  with.</li>
+</ol>
+<p id="p-1459">Notice that any antiderivative of \(v'(x)\) will do. All antiderivatives of  \(v'(x)\) are of the form \(v(x)+A\) with \(A\) a constant. Putting this into the  integration by parts formula gives</p>
+<div class="displaymath">
+\begin{align*}
+\int u(x) v'(x)\dee{x} &amp;= u(x) \left( v(x)+A \right) - \int u'(x)\left(  v(x)+A\right) \dee{x}\\
+&amp;= u(x)v(x) + A u(x) - \int u'(x) v(x) \dee{x}- \underbrace{A \int u'(x)  \dee{x}}_{= A u(x) + C}\\
+&amp;= u(x)v(x) - \int u'(x) v(x)\dee{x}  + C
+\end{align*}
+</div>
+<p>So that constant \(A\) will always cancel out.</p>
+<p id="p-1460">In most applications (but not all) our integrand will be a product of two factors so we  have two choices for \(u(x)\) and \(v'(x)\text{.}\) Typically one of these choices will be “good”  (in that it results in a simpler integral) while the other will be “bad” (we cannot  antidifferentiate our choice of \(v'(x)\) or the resulting integral is harder). Let us  illustrate what we mean by returning to our previous example.</p>
+<article class="example-like" id="example-57"><a knowl="" class="id-ref" refid="hk-example-57"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.7.3</span> <span class="title">\(\int xe^x \dee{x}\) — again</span>
+</h6></a></article><div id="hk-example-57" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-1461">Our integrand is the product of two factors</p>
+<div class="displaymath">
+\begin{align*}
+x &amp;&amp; \text{and} &amp;&amp; e^x
+\end{align*}
+</div>
+<p>This gives us two obvious choices of \(u\) and \(v'\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+u(x)&amp;=x &amp; v'(x)&amp;=e^x\\
+\text{ or}\\
+u(x)&amp;=e^x &amp; v'(x)&amp;=x
+\end{align*}
+</div>
+<p>We should explore both choices:</p>
+<ol class="decimal">
+<li id="li-751">If take \(u(x)=x\) and \(v'(x)=e^x\text{.}\) We then quickly compute<div class="displaymath">
+\begin{align*}
+u'(x)&amp;=1 &amp;\text{and} &amp;&amp; v(x)=e^x
+\end{align*}
+</div>which means we will need to integrate (in the right-hand side of the integration by  parts formula)<div class="displaymath">
+\begin{align*}
+\int u'(x) v(x) \dee{x} &amp;= \int 1 \cdot e^x \dee{x}
+\end{align*}
+</div>which looks straightforward. This is a good indication that this is the right choice of \(u(x)\) and \(v'(x)\text{.}\)</li>
+<li id="li-752">But before we do that, we should also explore the other choice, namely \(u(x)=e^x\)  and \(v'(x)=x\text{.}\) This implies that<div class="displaymath">
+\begin{align*}
+u'(x)&amp;= e^x &amp;\text{and}&amp;&amp; v(x)&amp;= \frac{1}{2}x^2
+\end{align*}
+</div>which means we need to integrate<div class="displaymath">
+\begin{align*}
+\int u'(x) v(x) \dee{x} &amp;= \int \frac{1}{2}x^2 \cdot e^x \dee{x}.
+\end{align*}
+</div>This is at least as hard as the integral we started with. Hence we should try the first  choice.</li>
+</ol>
+<p>With our choice made, we integrate by parts to get</p>
+<div class="displaymath">
+\begin{align*}
+\int xe^x \dee{x} &amp;= xe^x - \int e^x \dee{x}\\
+&amp;= xe^x - e^x +C.
+\end{align*}
+</div>
+<p>The above reasoning is a very typical workflow when using integration by  parts.</p></article></div>
+<p id="p-1462">Integration by parts is often used</p>
+<ul class="disc">
+<li id="li-753">to eliminate factors of \(x\) from an integrand like \(xe^x\) by using that  \(\diff{}{x}x=1\) and</li>
+<li id="li-754">to eliminate a \(\log x\) from an integrand by using that \(\diff{}{x}\log x=\frac{1}{x}\) and</li>
+<li id="li-755">to eliminate inverse trig functions, like \(\arctan x\text{,}\) from an integrand by using that, for example, \(\diff{}{x}\arctan x=\frac{1}{1+x^2}\text{.}\)</li>
+</ul>
+<article class="example-like" id="example-58"><a knowl="" class="id-ref" refid="hk-example-58"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.7.4</span> <span class="title">\(\int x\sin x\dee{x}\)</span>
+</h6></a></article><div id="hk-example-58" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-1463"><em class="alert">Solution:</em></p>
+<ul class="disc">
+<li id="li-756">
+<p id="p-1464">Again we have a product of two factors giving us two possible choices.</p>
+<ol class="decimal">
+<li id="li-757">If we choose \(u(x)=x\) and \(v'(x)=\sin x\text{,}\) then we get<div class="displaymath">
+\begin{align*}
+u'(x) &amp;=1 &amp;\text{and} &amp;&amp; v(x) &amp;= -\cos x
+\end{align*}
+</div>which is looking promising.</li>
+<li id="li-758">On the other hand if we choose \(u(x)=\sin x\) and \(v'(x)=x\text{,}\) then we have<div class="displaymath">
+\begin{align*}
+u'(x)&amp;=\cos x &amp;\text{and} &amp;&amp; v(x) &amp;= \frac{1}{2}x^2
+\end{align*}
+</div>which is looking worse — we'd need to integrate \(\int \frac{1}{2}x^2 \cos x \dee{x}\text{.}\)</li>
+</ol>
+</li>
+<li id="li-759">So we stick with the first choice. Plugging \(u(x)=x\text{,}\) \(v(x)=-\cos x\)  into  integration by parts gives us<div class="displaymath">
+\begin{align*}
+\int x \sin x \dee{x} &amp;= -x\cos x  - \int 1 \cdot (-\cos x) \dee{x}\\
+&amp;= -x\cos x + \sin x + C
+\end{align*}
+</div>
+</li>
+<li id="li-760">Again we can check our answer by differentiating:<div class="displaymath">
+\begin{align*}
+\diff{}{x}\left( -x\cos x + \sin x + C \right)
+&amp;= -\cos x + x\sin x + \cos x + 0\\
+&amp;= x \sin x \checkmark
+\end{align*}
+</div>
+</li>
+</ul>
+<p id="p-1465">Once we have practised this a bit we do not really need to write as much. Let us solve it  again, but showing only what we need to.</p>
+<p id="p-1466"><em class="alert">Solution:</em></p>
+<ul class="disc">
+<li id="li-761">We use integration by parts to solve the integral.</li>
+<li id="li-762">Set \(u(x)=x\) and \(v'(x)=\sin x\text{.}\) Then \(u'(x)=1\) and \(v(x)=-\cos x\text{,}\) and<div class="displaymath">
+\begin{align*}
+\int x \sin x \dee{x} &amp;= -x\cos x + \int \cos x \dee{x}\\
+&amp;= -x\cos x + \sin x + C.
+\end{align*}
+</div>
+</li>
+</ul></article></div>
+<p id="p-1467">It is pretty standard practice to reduce the notation even further in these  problems. As noted above, many people write the integration by parts formula as</p>
+<div class="displaymath">
+\begin{align*}
+\int u\dee{v} &amp;= uv - \int v \dee{u}
+\end{align*}
+</div>
+<p>where \(\dee{u}, \dee{v}\) are shorthand for \(u'(x)\dee{x}, v'(x)\dee{x}\text{.}\) Let us  write up the previous example using this notation.</p>
+<article class="example-like" id="eg_PRTSxsinx"><a knowl="" class="id-ref" refid="hk-eg_PRTSxsinx"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.7.5</span> <span class="title">\(\int x\sin x\dee{x}\) yet again</span>
+</h6></a></article><div id="hk-eg_PRTSxsinx" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-1468"><em class="alert">Solution:</em> Using integration by parts, we set \(u=x\) and \(\dee{v}=\sin x\dee{x}\text{.}\) This makes  \(\dee{u}= 1\dee{x}\) and \(v=-\cos x\text{.}\) Consequently</p>
+<div class="displaymath">
+\begin{align*}
+\int x \sin x \dee{x} &amp;= \int u\dee{v}\\
+&amp;= uv - \int v\dee{u}\\
+&amp;= -x\cos x + \int \cos x \dee{x}\\
+&amp;= -x \cos x +\sin x + C
+\end{align*}
+</div>
+<p>You can see that this is a very neat way to write up these problems and we will  continue using this shorthand in the examples that follow below.</p></article></div>
+<p id="p-1469">We can also use integration by parts to eliminate higher powers of \(x\text{.}\) We just  need to apply the method more than once.</p>
+<article class="example-like" id="eg_PRTSxtwoex"><a knowl="" class="id-ref" refid="hk-eg_PRTSxtwoex"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.7.6</span> <span class="title">\(\int x^2 e^x \dee{x}\)</span>
+</h6></a></article><div id="hk-eg_PRTSxtwoex" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-1470"><em class="alert">Solution:</em></p>
+<ul class="disc">
+<li id="li-763">Let \(u=x^2\) and \(\dee{v}=e^x\dee{x}\text{.}\) This then gives  \(\dee{u}=2x\dee{x}\) and \(v=e^x\text{,}\) and<div class="displaymath">
+\begin{align*}
+\int x^2 e^x \dee{x} &amp;= x^2 e^x - \int 2x e^x \dee{x}
+\end{align*}
+</div>
+</li>
+<li id="li-764">So we have reduced the problem of computing the original integral to one of  integrating \(2xe^x\text{.}\) We know how to do this — just integrate by parts again:<div class="displaymath">
+\begin{align*}
+\int x^2 e^x \dee{x} &amp;= x^2 e^x - \int 2x e^x \dee{x}
+&amp; \text{set $u=2x, \dee{v}=e^x\dee{x}$}\\
+&amp;= x^2 e^x - \left( 2xe^x - \int 2 e^x \dee{x} \right)
+&amp; \text{since $\dee{u}=2\dee{x}, v=e^x$}\\
+&amp;= x^2 e^x - 2xe^x + 2e^x + C
+\end{align*}
+</div>
+</li>
+<li id="li-765">We can, if needed, check our answer by differentiating:<div class="displaymath">
+\begin{align*}
+&amp;\diff{}{x} \left( x^2 e^x - 2xe^x + 2e^x + C \right)\\
+&amp;\hskip1in= \left( x^2 e^x + 2xe^x \right) - \left(2x e^x + 2e^x \right) + 2e^x + 0\\
+&amp;\hskip1in= x^2 e^x \checkmark
+\end{align*}
+</div>
+</li>
+</ul>
+<p>A similar iterated application of integration by parts will work for integrals</p>
+<div class="displaymath">
+\begin{gather*}
+\int P(x) \left(Ae^{ax} + B\sin(bx) + C\cos(cx) \right) \dee{x}
+\end{gather*}
+</div>
+<p>where \(P(x)\) is a polynomial and \(A,B,C,a,b,c\) are constants.</p></article></div>
+<p id="p-1471">Now let us look at integrands containing logarithms. We don't know the antiderivative of  \(\log x\text{,}\) but we can eliminate \(\log x\) from an integrand by using integration by parts  with \(u=\log x\text{.}\) Remember \(\log x = \log_e x = \ln x\text{.}\)</p>
+<article class="example-like" id="eg_PRTSxlnx"><a knowl="" class="id-ref" refid="hk-eg_PRTSxlnx"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.7.7</span> <span class="title">\(\int x\log x\dee{x}\)</span>
+</h6></a></article><div id="hk-eg_PRTSxlnx" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-1472"><em class="alert">Solution:</em></p>
+<ul class="disc">
+<li id="li-766">
+<p id="p-1473">We have two choices for \(u\) and \(\dee{v}\text{.}\)</p>
+<ol class="decimal">
+<li id="li-767">Set \(u=x\) and \(\dee{v}=\log x\dee{x}\text{.}\) This gives \(\dee{u}=\dee{x}\) but  \(v\) is hard to compute — we haven't done it yet <a knowl="" class="id-ref" refid="hk-fn-58" id="fn-58"><sup> 1 </sup></a><span id="hk-fn-58" class="hidden-content tex2jax_ignore"><span class="footnote">We will soon.</span></span>. Before we go further along this path, we should look to see what happens with the other choice.</li>
+<li id="li-768">Set \(u=\log x\) and \(\dee{v}=x\dee{x}\text{.}\) This gives  \(\dee{u}=\frac{1}{x}\dee{x}\) and \(v=\frac{1}{2}x^2\text{,}\) and we have to integrate<div class="displaymath">
+\begin{align*}
+\int v\, \dee{u} &amp;= \int \frac{1}{x} \cdot \frac{1}{2}x^2 \dee{x}
+\end{align*}
+</div>which is easy.</li>
+</ol>
+</li>
+<li id="li-769">So we proceed with the second choice.<div class="displaymath">
+\begin{align*}
+\int x \log x \dee{x}
+&amp;= \frac{1}{2}x^2 \log x - \int \frac{1}{2} x \dee{x}\\
+&amp;= \frac{1}{2}x^2 \log x - \frac{1}{4}x^2 +C
+\end{align*}
+</div>
+</li>
+<li id="li-770">We can check our answer quickly:<div class="displaymath">
+\begin{align*}
+\diff{}{x} \Big(\frac{x^2}{2} \ln x -\frac{x^2}{4} +C\Big)
+&amp;= x\,\ln x + \frac{x^2}{2}\,\frac{1}{x} -\frac{x}{2}+0
+=x\,\ln x
+\end{align*}
+</div>
+</li>
+</ul></article></div>
+<article class="example-like" id="eg_PRTSlnx"><a knowl="" class="id-ref" refid="hk-eg_PRTSlnx"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.7.8</span> <span class="title">\(\int \log x\dee{x}\)</span>
+</h6></a></article><div id="hk-eg_PRTSlnx" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-1474">It is not immediately obvious that one should use integration by parts to  compute the integral</p>
+<div class="displaymath">
+\begin{gather*}
+\int \log x \dee{x}
+\end{gather*}
+</div>
+<p>since the integrand is not a product. But we should persevere — indeed this  is a situation where our shorter notation helps to clarify how to proceed.</p>
+<p id="p-1475"><em class="alert">Solution:</em></p>
+<ul class="disc">
+<li id="li-771">In the previous example we saw that we could remove the factor \(\log x\) by  setting \(u=\log x\) and using integration by parts. Let us try repeating  this. When we make this choice, we are then forced to take \(\dee{v}=\dee{x}\)  — that is we choose \(v'(x)=1\text{.}\) Once we have made this sneaky move everything  follows quite directly.</li>
+<li id="li-772">We then have \(\dee{u} = \frac{1}{x}\dee{x}\) and \(v = x\text{,}\) and the  integration by parts formula gives us<div class="displaymath">
+\begin{align*}
+\int \log x \dee{x}
+&amp;= x \log x - \int \frac{1}{x} \cdot x \dee{x}\\
+&amp;= x\log x - \int 1 \dee{x}\\
+&amp;= x \log x - x + C
+\end{align*}
+</div>
+</li>
+<li id="li-773">As always, it is a good idea to check our result by verifying that the derivative of the answer really is the integrand.<div class="displaymath">
+\begin{align*}
+\diff{}{x} \big(x\ln x-x +C\big) &amp;= \ln x + x\,\frac{1}{x} -1+0 =\ln x
+\end{align*}
+</div>
+</li>
+</ul></article></div>
+<p id="p-1476">The same method works almost exactly to compute the antiderivatives of  \(\arcsin(x)\) and \(\arctan(x)\text{:}\)</p>
+<article class="example-like" id="eg_invtan"><a knowl="" class="id-ref" refid="hk-eg_invtan"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.7.9</span> <span class="title">\(\int \arctan(x)\dee{x}\) and \(\int \arcsin(x)\dee{x}\)</span>
+</h6></a></article><div id="hk-eg_invtan" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-1477">Compute the antiderivatives of the inverse sine and inverse tangent functions.</p>
+<p id="p-1478"><em class="alert">Solution:</em></p>
+<ul class="disc">
+<li id="li-774">Again neither of these integrands are products, but that is no  impediment. In both cases we set \(\dee{v}=\dee{x}\) (ie \(v'(x)=1\)) and choose \(v(x)=x\text{.}\)</li>
+<li id="li-775">For inverse tan we choose \(u=\arctan(x)\text{,}\) so  \(\dee{u}=\frac{1}{1+x^2}\dee{x}\text{:}\)<div class="displaymath">
+\begin{align*}
+\int \arctan(x) \dee{x}
+&amp;= x \arctan(x) - \int x \cdot \frac{1}{1+x^2} \dee{x}\\
+\end{align*}
+<p class="intertext">now use substitution rule with \(w(x)=1+x^2, w'(x)=2x\)</p>
+\begin{align*}
+&amp;= x \arctan(x) - \int \frac{w'(x)}{2} \cdot \frac{1}{w} \dee{x}\\
+&amp;= x \arctan(x) - \frac{1}{2} \int \frac{1}{w} \dee{w}\\
+&amp;= x \arctan(x) - \frac{1}{2}\log |w| + C\\
+&amp;= x \arctan(x) - \frac{1}{2} \log|1+x^2| + C \qquad \text{but $1+x^2 \gt 0$, so}\\
+&amp;= x \arctan(x) - \frac{1}{2} \log(1+x^2) + C
+\end{align*}
+</div>
+</li>
+<li id="li-776">Similarly for inverse sine we choose \(u=\arcsin(x)\) so \(\dee{u} =  \frac{1}{\sqrt{1-x^2}}\dee{x}\text{:}\)<div class="displaymath">
+\begin{align*}
+\int \arcsin(x) \dee{x}
+&amp;= x \arcsin(x) - \int \frac{x}{\sqrt{1-x^2}} \dee{x}\\
+\end{align*}
+<p class="intertext">Now use substitution rule with \(w(x)=1-x^2, w'(x)=-2x\)</p>
+\begin{align*}
+&amp;= x \arcsin(x) - \int \frac{-w'(x)}{2} \cdot w^{-1/2} \dee{x}\\
+&amp;= x\arcsin(x) + \frac{1}{2} \int w^{-1/2} \dee{w}\\
+&amp;= x \arcsin(x) + \frac{1}{2} \cdot 2 w^{1/2} + C\\
+&amp;= x\arcsin(x) + \sqrt{1-x^2} + C
+\end{align*}
+</div>
+</li>
+<li id="li-777">Both can be checked quite quickly by differentiating — but we leave  that as an exercise for the reader.</li>
+</ul></article></div>
+<p id="p-1479">There are many other examples we could do, but we'll finish with a tricky one.</p>
+<article class="example-like" id="eg_circularint"><a knowl="" class="id-ref" refid="hk-eg_circularint"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.7.10</span> <span class="title">\(\int e^x \sin x\dee{x}\)</span>
+</h6></a></article><div id="hk-eg_circularint" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-1480"><em class="alert">Solution:</em> Let us attempt this one a little naively and then we'll come back and do  it more carefully (and successfully).</p>
+<ul class="disc">
+<li id="li-778">
+<p id="p-1481">We can choose either \(u=e^x, \dee{v}=\sin x\dee{x}\) or the other way  around.</p>
+<ol class="decimal">
+<li id="li-779">Let \(u=e^x, \dee{v}=\sin x\dee{x}\text{.}\) Then \(\dee{u}=e^x\dee{x}\) and  \(v=-\cos x\text{.}\) This gives<div class="displaymath">
+\begin{align*}
+\int e^x \sin x &amp;= -e^x\cos x + \int e^x \cos x \dee{x}
+\end{align*}
+</div>So we are left with an integrand that is very similar to the one  we started with. What about the other choice?</li>
+<li id="li-780">Let \(u=\sin x, \dee{v}=e^x\dee{x}\text{.}\) Then \(\dee{u}=\cos x\dee{x}\) and  \(v= e^x\text{.}\) This gives<div class="displaymath">
+\begin{align*}
+\int e^x \sin x &amp;= e^x\sin x - \int e^x \cos x \dee{x}
+\end{align*}
+</div>So we are again left with an integrand that is very similar to the one  we started with.</li>
+</ol>
+</li>
+<li id="li-781">How do we proceed? — It turns out to be easier if you do both \(\int  e^x\sin x\dee{x}\) and \(\int e^x \cos x\dee{x}\) simultaneously. We do so in the  next example.</li>
+</ul></article></div>
+<article class="example-like" id="eg_PRTSexsinx"><a knowl="" class="id-ref" refid="hk-eg_PRTSexsinx"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.7.11</span> <span class="title">\(\int_a^b e^x\sin x\dee{x}\) and \(\int_a^b e^x\cos x\dee{x}\)</span>
+</h6></a></article><div id="hk-eg_PRTSexsinx" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-1482">This time we're going to do the two integrals</p>
+<div class="displaymath">
+\begin{align*}
+I_1&amp;=\int_a^b e^x\sin x\dee{x}
+&amp;
+I_2 &amp;=\int_a^b e^x\cos x\dee{x}
+\end{align*}
+</div>
+<p>at more or less the same time.</p>
+<ul id="p-1483" class="disc">
+<li id="li-782">First<div class="displaymath">
+\begin{align*}
+I_1=\int_a^b e^x\sin x\dee{x}
+&amp;=\int_a^b u \dee{v} \qquad\\
+\end{align*}
+<p class="intertext">Choose \(u=e^x, \dee{v} = \sin x\dee{x}\text{,}\) so \(v = -\cos x, \dee{u}= e^x\dee{x}\)</p>
+\begin{align*}
+&amp;=\Big[-e^x\cos x\Big]_a^b +\int_a^b e^x\cos x\dee{x}
+\end{align*}
+</div>We have not found \(I_1\) but we have related it to \(I_2\text{.}\)<div class="displaymath">
+\begin{align*}
+I_1&amp;=\Big[-e^x\cos x\Big]_a^b +I_2
+\end{align*}
+</div>
+</li>
+<li id="li-783">Now start over with \(I_2\text{.}\)<div class="displaymath">
+\begin{align*}
+I_2=\int_a^b e^x\cos x\dee{x}
+&amp;=\int_a^b u\dee{v}\\
+\end{align*}
+<p class="intertext">Choose \(u=e^x, \dee{v} = \cos x\dee{x}\text{,}\) so \(v = \sin x, \dee{u}= e^x\dee{x}\)</p>
+\begin{align*}
+&amp;=\Big[e^x\sin x\Big]_a^b -\int_a^b e^x\sin x\dee{x}
+\end{align*}
+</div>Once again, we have not found \(I_2\) but we have related it back to \(I_1\text{.}\)<div class="displaymath">
+\begin{align*}
+I_2&amp;=\Big[e^x\sin x\Big]_a^b -I_1
+\end{align*}
+</div>
+</li>
+<li id="li-784">So summarising, we have<div class="displaymath">
+\begin{align*}
+I_1&amp;=\Big[-e^x\cos x\Big]_a^b +I_2
+&amp; I_2&amp;=\Big[e^x\sin x\Big]_a^b -I_1
+\end{align*}
+</div>
+</li>
+<li id="li-785">So now, substitute the expression for \(I_2\) from the second equation into the first  equation to get<div class="displaymath">
+\begin{align*}
+I_1 &amp;=\Big[-e^x\cos x +e^x\sin x\Big]_a^b -I_1\\
+&amp;\hskip0.5in \text{which implies}\qquad
+I_1=\frac{1}{2}\Big[e^x\big(\sin x-\cos x\big)\Big]_a^b
+\end{align*}
+</div>If we substitute the other way around we get<div class="displaymath">
+\begin{align*}
+I_2 &amp;=\Big[e^x\sin x +e^x\cos x\Big]_a^b -I_2\\
+&amp;\hskip0.5in \text{which implies}\qquad
+I_2=\frac{1}{2}\Big[e^x\big(\sin x+\cos x\big)\Big]_a^b
+\end{align*}
+</div>That is,<div class="displaymath">
+\begin{align*}
+\int_a^b e^x\sin x\dee{x}&amp;=
+\frac{1}{2}\Big[e^x\big(\sin x-\cos x\big)\Big]_a^b\\
+\int_a^b e^x\cos x\dee{x}&amp;=
+\frac{1}{2}\Big[e^x\big(\sin x+\cos x\big)\Big]_a^b
+\end{align*}
+</div>
+</li>
+<li id="li-786">This also says, for example,  that \(\frac{1}{2}e^x\big(\sin x-\cos x\big)\) is an antiderivative  of \(e^x\sin x\) so that<div class="displaymath">
+\begin{gather*}
+\int e^x\sin x\dee{x}=\frac{1}{2}e^x\big(\sin x-\cos x\big)+C
+\end{gather*}
+</div>
+</li>
+<li id="li-787">Note that we can always check whether or not this is correct. It is  correct if and only if the derivative of the right hand side is \(e^x\sin x\text{.}\)  Here goes. By the product rule<div class="displaymath">
+\begin{align*}
+&amp;=\diff{}{x}\Big[\frac{1}{2}e^x\big(\sin x-\cos x\big)+C\Big]\\
+&amp;=\frac{1}{2}\Big[e^x\big(\sin x-\cos x\big)+e^x\big(\cos x+\sin x\big)\Big]
+=e^x\sin x
+\end{align*}
+</div>which is the desired derivative.</li>
+<li id="li-788">There is another way to find \(\int e^x\sin x\dee{x}\) and \(\int e^x\cos x\dee{x}\) that, in contrast to the above computations,  doesn't involve any trickery. But it does require the use of complex  numbers and so is beyond the scope of this course. The secret is to use that \(\sin x =\frac{e^{ix}-e^{-ix}}{2i}\) and \(\cos x =\frac{e^{ix}+e^{-ix}}{2}\text{,}\) where \(i\) is the square root of \(-1\) of the complex number system. See Example <a knowl="./knowl/eg_complex_calc_A.html" title="Example B.2.6">B.2.6</a>.</li>
+</ul></article></div></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

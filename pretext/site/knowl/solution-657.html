@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:23:08+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">3.4.3.15.1</span>
+</h6>
+<p>The terms of this series are sometimes negative and sometimes positive. But, they are not strictly alternating, so we can't use the alternating series test. Instead, we use a direct comparison test to show the series converges absolutely.</p>
+<p>If \(n\) is prime, then</p>
+<div class="displaymath">
+\begin{equation*}
+\left| \frac{a_n}{e^n}\right|=\left|-\frac{e^{n/2}}{e^n}\right|=\frac{1}{e^{n/2}}=\left(\frac{1}{\sqrt e}\right)^n
+\end{equation*}
+</div>
+<p>If \(n\) is not prime, then</p>
+<div class="displaymath">
+\begin{equation*}
+\left| \frac{a_n}{e^n}\right|=\left|-\frac{n^2}{e^n}\right|=\frac{n^2}{e^n}
+\end{equation*}
+</div>
+<p>For \(n\) sufficiently large, \(n^2 \lt e^{n/2}\text{,}\) so for \(n\) sufficiently large,</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{n^2}{e^n}\le \left(\frac{1}{\sqrt{e}}\right)^n.
+\end{equation*}
+</div>
+<p>Since \(e \gt 1\text{,}\) then \(\sqrt{e} \gt 1\text{,}\) so the geometric series \(\displaystyle\sum \left(\frac{1}{\sqrt{e}}\right)^n\) has \(|r|=r=\frac{1}{\sqrt{e}} \lt 1\text{,}\) so it converges. By the direct comparison test, \(\displaystyle\sum_{n=1}^\infty\left|\dfrac{a_n}{e^n}\right|\) converges as well. Then \(\displaystyle\sum_{n=1}^\infty\dfrac{a_n}{e^n}\) converges absolutely, so it converges.</p>
+</div>
+<span class="incontext"><a href="exercises-21.html#solution-657">in-context</a></span>
+</body>
+</html>

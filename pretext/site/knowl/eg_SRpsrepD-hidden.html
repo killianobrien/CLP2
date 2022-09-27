@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:23:14+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="example-like"><p>Find a power series representation for \(\arctan x\text{.}\)</p>
+<p><em class="alert">Solution:</em> Recall that \(\diff{}{x}\arctan x = \frac{1}{1+x^2}\) so that \(\arctan t\) is an antiderivative of \(\frac{1}{1+t^2}\) and</p>
+<div class="displaymath">
+\begin{align*}
+\arctan x\ &amp;=\ \int_0^x \frac{\dee{t}}{1+t^2}
+\ =\  \int_0^x\Big[\sum_{n=0}^\infty {(-t^2)}^n\Big]\dee{t}
+\ =\  \sum_{n=0}^\infty \int_0^x (-1)^n t^{2n}\dee{t}\\
+&amp;=\ \sum_{n=0}^\infty (-1)^n\frac{x^{2n+1}}{2n+1}\\
+&amp;=x -\frac{x^3}{3} +\frac{x^5}{5}-\cdots
+\end{align*}
+</div>
+<p>Theorem <a knowl="./knowl/thm_SRpsops.html" title="Theorem 3.5.13: Operations on Power Series">3.5.13</a> guarantees that the radius of convergence is exactly one (the radius of convergence of the geometric series  \(\sum_{n=0}^\infty (-t^2)^n\)) and that</p>
+<div class="displaymath">
+\begin{align*}
+\arctan x\ &amp;=\ \sum_{n=0}^\infty (-1)^n\frac{x^{2n+1}}{2n+1}
+\qquad\text{for all $-1 \lt x \lt 1$}
+\end{align*}
+</div>
+<p>When \(x=\pm 1\text{,}\) the series converges by the alternating series test.  So the interval of convergence is \(-1\le x\le 1\text{.}\)  It is possible to prove, though once again we won't do so here,  that when \(x=\pm 1\text{,}\) the series  \(\sum_{n=0}^\infty (-1)^n\frac{x^{2n+1}}{2n+1}\) converges to the value of the left hand side, \(\arctan x\text{,}\) at \(x=\pm 1\text{.}\) That is, to \(\arctan(\pm 1)=\pm \frac{\pi}{4}\text{.}\)</p></article></body>
+</html>

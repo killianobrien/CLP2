@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:27+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>The given sum is of the form</p>
+<div class="displaymath">
+\begin{gather*}
+\lim_{n\rightarrow\infty}\sum_{j=1}^n
+\frac{j}{n^2}\cos\Big(\frac{j^2}{n^2}\Big)
+=\lim_{n\rightarrow\infty}\sum_{j=1}^n f(x_j^*)\De x
+\end{gather*}
+</div>
+<p>with \(\De x=\frac{1}{n}\text{,}\) \(x_j^*=\frac{j}{n}\) and \(f(x)=x\cos(x^2)\text{.}\) Since \(x_0^*=0\) and \(x_n^*=1\text{,}\) the right hand side is the definition (using the right Riemann sum) of</p>
+<div class="displaymath">
+\begin{align*}
+\int_0^1 f(x)\,\dee{x}
+&amp;=\int_0^1 \textcolor{blue}{x}\cos(\textcolor{red}{x^2})\,\textcolor{blue}{\dee{x}}\\
+&amp;=\textcolor{blue}{\frac{1}{2}}\int_0^1 \cos(\textcolor{red}{y})\,\textcolor{blue}{\dee{y} }\qquad\text{with } \textcolor{red}{y=x^2}, \textcolor{blue}{\dee{y}=2x\,\dee{x}}\\
+&amp;=\frac{1}{2}\Big[\sin(y)\Big]_0^1\\
+&amp;=\frac{1}{2}\sin 1
+\end{align*}
+</div>
+</div></body>
+</html>

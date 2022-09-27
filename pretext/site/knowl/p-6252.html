@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:24:47+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Suppose that we wish to generate an approximation to the initial value problem</p>
+<div class="displaymath">
+\begin{equation*}
+y'=f(t,y),\qquad
+y(t_0)=y_0
+\end{equation*}
+</div>
+<p>for some range of \(t\)'s and we want the error introduced per unit increase<a knowl="./knowl/fn-268-hidden.html" title="Footnote D.3.1"><sup> 1 </sup></a> of \(t\) to be no more than about some small fixed number \(\varepsilon\text{.}\) This means that if \(y_n\approx y(t_0+nh)\) and \(y_{n+1}\approx y(t+(n+1)h)\text{,}\) then we want the local truncation error in the step from \(y_n\) to \(y_{n+1}\) to be no more than about \(\varepsilon h\text{.}\) Suppose further that we have already produced the approximate solution as far as \(t_n\text{.}\) The rough strategy is as follows. We do the step from \(t_n\) to \(t_n+h\) twice using two different algorithms, giving two different approximations to \(y(t_{n+1})\text{,}\) that we call \(A_{1,n+1}\) and \(A_{2,n+1}\text{.}\) The two algorithms are chosen so that</p>
+<ol class="decimal">
+<li>we can use \(A_{1,n+1}-A_{2,n+1}\) to compute an approximate local truncation error and</li>
+<li>for efficiency, the two algorithms use almost the same evaluations of \(f\text{.}\) Remember that evaluating the function \(f\) is typically the most time-consuming part of our computation.</li>
+</ol>
+<p>In the event that the local truncation error, divided by \(h\text{,}\) (i.e. the error per unit increase of \(t\)) is smaller than \(\varepsilon\text{,}\) we set \(t_{n+1}=t_n+h\text{,}\) accept \(A_{2,n+1}\) as the approximate value<a knowl="./knowl/fn-269-hidden.html" title="Footnote D.3.2"><sup> 2 </sup></a> for \(y(t_{n+1})\text{,}\) and move on to the next step. Otherwise we pick, using what we have learned from \(A_{1,n+1}-A_{2,n+1}\text{,}\) a new trial step size \(h\) and start over again at \(t_n\text{.}\)</p>
+<span class="incontext"><a href="ap_variable.html#p-6252">in-context</a></span>
+</body>
+</html>

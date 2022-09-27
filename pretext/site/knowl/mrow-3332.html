@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:20:20+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="displaymath">
+\begin{align*}
+\amp\int\dfrac{-2}{3x^2+4x+1}\dee{x}
+=\int\dfrac{-2}{3\left(x+\frac{2}{3}\right)^2-\frac{1}{3}}\dee{x}\\
+&amp;\hskip0.5in=\int\dfrac{-2}{9\left(x+\frac{2}{3}\right)^2-1}3\dee{x}\\
+&amp;\hskip0.5in=\int\dfrac{-2}{\left({\color{red}{3x+2}}\right)^2-1}\textcolor{red}{3\dee{x}}\\
+&amp;\hskip0.5in=\int\dfrac{-2}{\left({\color{blue}{\sec\theta}}\right)^2-1}\color{blue}{\sec\theta\tan\theta \dee{\theta}}\\
+&amp;\hskip0.5in=\int\dfrac{-2}{\tan^2\theta}\sec\theta\tan\theta \dee{\theta}\\
+&amp;=\hskip0.5in\int -2\dfrac{\sec\theta}{\tan\theta}\dee{\theta}\\
+&amp;\hskip0.5in=\int -2\dfrac{1}{\cos\theta}\cdot\dfrac{\cos\theta}{\sin\theta} \dee{\theta}\\
+&amp;\hskip0.5in=\int -2\dfrac{1}{\sin\theta} \dee{\theta}\\
+&amp;\hskip0.5in=\int -2\csc\theta \dee{\theta}\\
+\end{align*}
+<p class="intertext">Using the result of Example <a knowl="./knowl/eg_TRGINToptc.html" title="Example 1.8.21: \(\int \csc x\dee{x}\) — by the \(u=\tan\frac{x}{2}\) substitution">1.8.21</a>, or a table of integrals:</p>
+\begin{align*}
+&amp;=2\log\left|\csc\theta+\cot\theta \right|+C
+\end{align*}
+</div>
+<span class="incontext"><a href="exercises-13.html#mjx-eqn-mrow-3332">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:24:37+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="example-like"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">B.2.10</span> <span class="title">RLC circuit</span>
+</h6>
+<p>As an example of how ODE's arise, we consider the RLC circuit, which is the electrical circuit consisting of a resistor of resistance \(R\text{,}\) a coil (or solenoid) of inductance \(L\text{,}\) a capacitor of capacitance \(C\) and a voltage source arranged in series, as shown below. Here \(R\text{,}\) \(L\) and \(C\) are all nonnegative constants.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/RLC.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p>We're going to think of the voltage \(x(t)\) as an input signal, and the voltage \(y(t)\) as an output signal. The goal is to determine the output signal produced by a given input signal. If \(i(t)\) is the current flowing at time \(t\) in the loop as shown and \(q(t)\) is the charge on the capacitor, then the voltages across \(R\text{,}\) \(L\) and \(C\text{,}\) respectively, at time \(t\) are \(Ri(t)\text{,}\) \(L\diff{i}{t}(t)\) and \(y(t)=\frac{q(t)}{C}\text{.}\) By the Kirchhoff's law<a knowl="./knowl/fn-243-hidden.html" title="Footnote B.2.5"><sup> 5 </sup></a> that says that the voltage between any two points has to be independent of the path used to travel between the two points, these three voltages must add up to \(x(t)\) so that</p>
+<div class="displaymath">
+\begin{equation}
+Ri(t) + L\diff{i}{t}(t) + \frac{q(t)}{C} = x(t)\tag{B.2.3}
+\end{equation}
+</div>
+<p>Assuming that \(R,\ L,\ C\) and \(x(t)\) are known, this is still one differential equation in two unknowns, the current \(i(t)\) and the charge \(q(t)\text{.}\) Fortunately, there is a relationship between the two. Because the current entering the capacitor is the rate of change of the charge on the capacitor</p>
+<div class="displaymath">
+\begin{equation}
+i(t)=\diff{q}{t}(t) = Cy'(t)\tag{B.2.4}
+\end{equation}
+</div>
+<p>This just says that the capacitor cannot create or destroy charge on its own; all charging of the capacitor must come from the current. Substituting <a knowl="./knowl/eqn_RLCiq.html" title="Equation B.2.4">(B.2.4)</a> into <a knowl="./knowl/eqn_RLCrlc.html" title="Equation B.2.3">(B.2.3)</a> gives</p>
+<div class="displaymath">
+\begin{equation*}
+LCy''(t) + RCy'(t) + y(t) = x(t)
+\end{equation*}
+</div>
+<p>which is a second order linear constant coefficient ODE. As a concrete example, we'll take  an ac voltage source and choose the origin of time so that \(x(0)=0\text{,}\) \(x(t)=E_0\sin(\omega t)\text{.}\) Then the differential equation becomes</p>
+<div class="displaymath">
+\begin{equation}
+LCy''(t)+RCy'(t)+y(t)=E_0\sin(\omega t)\tag{B.2.5}
+\end{equation}
+</div></article><span class="incontext"><a href="ssec_complex_de.html#eg_RLC">in-context</a></span>
+</body>
+</html>

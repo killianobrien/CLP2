@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:23:40+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="example-like"><p>Let \(f(x)=\sin x\) and \(a=0\text{.}\) Then</p>
+<div class="displaymath">
+\begin{align*}
+f(x)&amp;=\sin x &amp;
+f'(x)&amp;=\cos x &amp;
+f''(x)&amp;=-\sin x &amp;
+f^{(3)}(x)&amp;=-\cos x &amp;\\
+f(0)&amp;=0 &amp;
+f'(0)&amp;=1 &amp;
+f''(0)&amp;=0 &amp;
+f^{(3)}(0)&amp;=-1 &amp;\\
+f^{(4)}(x)&amp;=\sin x &amp; &amp;\cdots\\
+f^{(4)}(0)&amp;=0 &amp; &amp;\cdots
+\end{align*}
+</div>
+<p>and the pattern repeats. So every derivative is plus or minus either  sine or cosine and, as we saw in previous examples,  this makes analysing the error term for the sine and cosine series quite straightforward. In particular, \(\big|f^{(n+1)}(c)\big|\le 1\) for all real numbers \(c\) and all  natural numbers \(n\text{.}\) So the Taylor polynomial of, for  example, degree 3 and its error term are</p>
+<div class="displaymath">
+\begin{align*}
+\sin x &amp;= x-\tfrac{1}{3!}x^3+\tfrac{\cos c}{5!} x^5\\
+&amp;= x-\tfrac{1}{3!}x^3+O(|x|^5)
+\end{align*}
+</div>
+<p>under Definition <a knowl="./knowl/def_bigoh.html" title="Definition 3.6.24: Big O">3.6.24</a>, with \(C=\tfrac{1}{5!}\) and any \(D \gt 0\text{.}\)  Similarly, for any natural number \(n\text{,}\)</p>
+<article class="theorem-like"><h6 class="heading">
+<span class="type">Equation</span> <span class="codenumber">3.6.26</span>
+</h6>
+<div class="displaymath">
+\begin{align*}
+\sin x&amp;=x-\tfrac{1}{3!}x^3+\tfrac{1}{5!}x^5-\cdots+(-1)^{n}\tfrac{1}{(2n+1)!}
+x^{2n+1} +O\big( |x|^{2n+3}\big)\\
+\cos x&amp;=1-\tfrac{1}{2!}x^2+\tfrac{1}{4!}x^4-\cdots+(-1)^{n}\tfrac{1}{(2n)!}
+x^{2n} +O\big( |x|^{2n+2}\big)
+\end{align*}
+</div></article></article></body>
+</html>

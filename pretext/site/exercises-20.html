@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:16:37+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Exercises</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_2_ic.html"><span class="title">CLP-2 Integral Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_CompProof.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="section-20.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-21.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_CompProof.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="section-20.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-21.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_integral.html" data-scroll="chap_integral"><span class="codenumber">1</span> <span class="title">Integration</span></a></h2>
+<ul>
+<li><a href="sec_intdef.html" data-scroll="sec_intdef">Definition of the Integral</a></li>
+<li><a href="sec_def_int.html" data-scroll="sec_def_int">Basic properties of the definite integral</a></li>
+<li><a href="sec_fundamental.html" data-scroll="sec_fundamental">The Fundamental Theorem of Calculus</a></li>
+<li><a href="sec_subs.html" data-scroll="sec_subs">Substitution</a></li>
+<li><a href="sec_area.html" data-scroll="sec_area">Area between curves</a></li>
+<li><a href="sec_int_volumes.html" data-scroll="sec_int_volumes">Volumes</a></li>
+<li><a href="sec_intbyparts.html" data-scroll="sec_intbyparts">Integration by parts</a></li>
+<li><a href="sec_trigint.html" data-scroll="sec_trigint">Trigonometric Integrals</a></li>
+<li><a href="sec_trigsub.html" data-scroll="sec_trigsub">Trigonometric Substitution</a></li>
+<li><a href="sec_parfrac.html" data-scroll="sec_parfrac">Partial Fractions</a></li>
+<li><a href="sec_numeric_int.html" data-scroll="sec_numeric_int">Numerical Integration</a></li>
+<li><a href="sec_improp_int.html" data-scroll="sec_improp_int">Improper Integrals</a></li>
+<li><a href="section-13.html" data-scroll="section-13">More Integration Examples</a></li>
+</ul>
+<h2 class="link"><a href="chap_int_app.html" data-scroll="chap_int_app"><span class="codenumber">2</span> <span class="title">Applications of Integration</span></a></h2>
+<ul>
+<li><a href="sec_work.html" data-scroll="sec_work">Work</a></li>
+<li><a href="sec_avg.html" data-scroll="sec_avg">Averages</a></li>
+<li><a href="sec_com.html" data-scroll="sec_com">Centre of Mass and Torque</a></li>
+<li><a href="sec_sep_de.html" data-scroll="sec_sep_de">Separable Differential Equations</a></li>
+</ul>
+<h2 class="link"><a href="chap_seq_ser.html" data-scroll="chap_seq_ser"><span class="codenumber">3</span> <span class="title">Sequence and series</span></a></h2>
+<ul>
+<li><a href="section-18.html" data-scroll="section-18">Sequences</a></li>
+<li><a href="section-19.html" data-scroll="section-19">Series</a></li>
+<li><a href="section-20.html" data-scroll="section-20">Convergence Tests</a></li>
+<li><a href="section-21.html" data-scroll="section-21">Absolute and Conditional Convergence</a></li>
+<li><a href="section-22.html" data-scroll="section-22">Power Series</a></li>
+<li><a href="section-23.html" data-scroll="section-23">Taylor Series</a></li>
+<li><a href="sec_RatIrr.html" data-scroll="sec_RatIrr">Optional — Rational and irrational numbers</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="section-26.html" data-scroll="section-26">Pythagoras</a></li>
+<li><a href="section-27.html" data-scroll="section-27">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="section-30.html" data-scroll="section-30">Trigonometry — Special Triangles</a></li>
+<li><a href="section-31.html" data-scroll="section-31">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trigonometric Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">Highschool Material You Should be Able to Derive</a></li>
+<li><a href="section-39.html" data-scroll="section-39">Cartesian Coordinates</a></li>
+<li><a href="ap_roots.html" data-scroll="ap_roots">Roots of Polynomials</a></li>
+</ul>
+<h2 class="link"><a href="ap_complex.html" data-scroll="ap_complex"><span class="codenumber">B</span> <span class="title">Complex Numbers and Exponentials</span></a></h2>
+<ul>
+<li><a href="sec_complex_defn.html" data-scroll="sec_complex_defn">Definition and Basic Operations</a></li>
+<li><a href="sec_complex_exp.html" data-scroll="sec_complex_exp">The Complex Exponential</a></li>
+</ul>
+<h2 class="link"><a href="app_Richardson_Romberg.html" data-scroll="app_Richardson_Romberg"><span class="codenumber">C</span> <span class="title">More About Numerical Integration</span></a></h2>
+<ul>
+<li><a href="ap_Richardson.html" data-scroll="ap_Richardson">Richardson Extrapolation</a></li>
+<li><a href="ap_Romberg.html" data-scroll="ap_Romberg">Romberg Integration</a></li>
+<li><a href="ap_adaptive.html" data-scroll="ap_adaptive">Adaptive Quadrature</a></li>
+</ul>
+<h2 class="link"><a href="app_ODE_numerical.html" data-scroll="app_ODE_numerical"><span class="codenumber">D</span> <span class="title">Numerical Solution of ODE's</span></a></h2>
+<ul>
+<li><a href="ap_derivation.html" data-scroll="ap_derivation">Simple ODE Solvers — Derivation</a></li>
+<li><a href="ap_error_behaviour.html" data-scroll="ap_error_behaviour">Simple ODE Solvers —  Error Behaviour</a></li>
+<li><a href="ap_variable.html" data-scroll="ap_variable">Variable Step Size Methods</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">E</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">F</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">G</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp2-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="exercises" id="exercises-20"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.3.11</span> <span class="title">Exercises</span>
+</h3>
+<div class="exercisegroup" id="exercisegroup-59">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 1</alert></p></span></h6>
+<div class="introduction" id="introduction-115"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like boxed" id="exercise-590"><h6 class="heading">
+<span class="codenumber">1</span> </h6>
+<p id="p-4887">Select the series below that diverge by the divergence test.</p>
+<p id="p-4888">(A)  \(\displaystyle\sum_{n=1}^\infty \frac{1}{n}\)</p>
+<p id="p-4889">(B)  \(\displaystyle\sum_{n=1}^\infty \frac{n^2}{n+1}\)</p>
+<p id="p-4890">(C) \(\displaystyle\sum_{n=1}^\infty \sin n\)</p>
+<p id="p-4891">(D)  \(\displaystyle\sum_{n=1}^\infty \sin (\pi n)\)</p></article><article class="exercise-like boxed" id="exercise-591"><h6 class="heading">
+<span class="codenumber">2</span> </h6>
+<p id="p-4897">Select the series below whose terms satisfy the conditions to apply the integral test.</p>
+<p id="p-4898">(A)  \(\displaystyle\sum_{n=1}^\infty \frac{1}{n}\)</p>
+<p id="p-4899">(B)  \(\displaystyle\sum_{n=1}^\infty \frac{n^2}{n+1}\)</p>
+<p id="p-4900">(C) \(\displaystyle\sum_{n=1}^\infty \sin n\)</p>
+<p id="p-4901">(D)  \(\displaystyle\sum_{n=1}^\infty \frac{\sin n+1}{n^2}\)</p></article><article class="exercise-like" id="prob_s3_3_oldies"><h6 class="heading">
+<span class="codenumber">3</span> </h6>
+<p id="p-4905">Suppose there is some threshold after which a person is considered old, and before which they are young.</p>
+<p id="p-4906">Let Olaf be an old person, and let Yuan be a young person.</p>
+<ol class="lower-alpha">
+<li id="li-2241">Suppose  I am older than Olaf. Am I old?</li>
+<li id="li-2242">Suppose  I am younger than Olaf. Am I old?</li>
+<li id="li-2243">Suppose  I am older than Yuan. Am I young?</li>
+<li id="li-2244">Suppose  I am younger than Yuan. Am I young?</li>
+</ol></article><article class="exercise-like" id="prob_s3_3_compareintuitive"><h6 class="heading">
+<span class="codenumber">4</span> </h6>
+<p id="p-4917">Below are graphs of two sequences with positive terms.  Assume the sequences continue as shown. Fill in the table with conclusions that can be made from the direct comparison test, if any.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-518.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="l m b1 r1 l1 t1 lines"></td>
+<td class="l m b1 r1 l0 t1 lines">if \(\sum a_n\) converges</td>
+<td class="l m b1 r1 l0 t1 lines">if \(\sum a_n\) diverges</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines"><font color="red">and if \(\{a_n\}\) is the red series</font></td>
+<td class="l m b1 r1 l0 t0 lines">
+<font color="blue">then \(\sum b_n\)</font> \(\Rule{2cm}{1pt}{0pt}\)</td>
+<td class="l m b1 r1 l0 t0 lines">
+<font color="blue">then \(\sum b_n\)</font> \(\Rule{2cm}{1pt}{0pt}\)</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines"><font color="blue">and if \(\{a_n\}\) is the blue series</font></td>
+<td class="l m b1 r1 l0 t0 lines">
+<font color="red">then \(\sum b_n\)</font> \(\Rule{2cm}{1pt}{0pt}\)</td>
+<td class="l m b1 r1 l0 t0 lines">
+<font color="red">then \(\sum b_n\)</font> \(\Rule{2cm}{1pt}{0pt}\)</td>
+</tr>
+</table></div></div></div></article><article class="exercise-like boxed" id="exercise-594"><h6 class="heading">
+<span class="codenumber">5</span> </h6>
+<p id="p-4925">For each pair of series below, decide whether the second series is a valid comparison series to determine the convergence of the first series, using the  <em class="emphasis">direct</em> comparison test and/or the <em class="emphasis">limit</em> comparison test.</p>
+<ol class="lower-alpha">
+<li id="li-2245">\(\displaystyle\sum_{n=10}^{\infty} \frac{1}{n-1},\) compared to the divergent series \(\displaystyle\sum_{n=10}^{\infty} \frac{1}{n}.\)</li>
+<li id="li-2246">\(\displaystyle\sum_{n=1}^{\infty} \frac{\sin n}{n^2+1},\) compared to the convergent series \(\displaystyle\sum_{n=1}^{\infty} \frac{1}{n^2}.\)</li>
+<li id="li-2247">\(\displaystyle\sum_{n=5}^{\infty} \frac{n^3+5n+1}{n^6-2},\) compared to the convergent series \(\displaystyle\sum_{n=5}^{\infty} \frac{1}{n^3}.\)</li>
+<li id="li-2248">\(\displaystyle\sum_{n=5}^{\infty} \frac{1}{\sqrt{n}},\) compared to the divergent series \(\displaystyle\sum_{n=5}^{\infty} \frac{1}{\sqrt[4]n}.\)</li>
+</ol></article><article class="exercise-like" id="exercise-595"><h6 class="heading">
+<span class="codenumber">6</span> </h6>
+<p id="p-4942">Suppose \(a_n\) is a sequence with \(\displaystyle\lim_{n \to \infty}a_n = \frac{1}{2}\text{.}\) Does \(\displaystyle\sum_{n=7}^\infty a_n\) converge or diverge, or is it not possible to determine this from the information given? Why?</p></article><article class="exercise-like boxed" id="exercise-596"><h6 class="heading">
+<span class="codenumber">7</span> </h6>
+<p id="p-4946">What flaw renders the following reasoning invalid? <blockquote class="blockquote" id="blockquote-20"><font color="blue"><p id="p-4947">Q: Determine whether \(\displaystyle\sum_{n=1}^\infty \dfrac{\sin n}{n}\) converges or diverges.</p> <p id="p-4948">A: First, we will evaluate \(\displaystyle\lim_{n \to \infty} \dfrac{\sin n}{n}\text{.}\)</p>
+<ul class="disc">
+<li id="li-2249">Note \(\dfrac{-1}{n} \leq \dfrac{\sin n}{n} \leq \dfrac{1}{n}\) for \(n \ge 1\text{.}\)</li>
+<li id="li-2250">Note also that \(\displaystyle\lim_{n \to \infty}\frac{-1}{n}=\displaystyle\lim_{n \to \infty}\frac{1}{n}=0\text{.}\)</li>
+<li id="li-2251">Therefore, by the Squeeze Theorem, \(\displaystyle\lim_{n \to \infty} \dfrac{\sin n}{n}=0\) as well.</li>
+</ul>
+<p>So, by the divergence test, \(\displaystyle\sum_{n=1}^\infty \dfrac{\sin n}{n}\) converges.</p></font></blockquote></p></article><article class="exercise-like" id="exercise-597"><h6 class="heading">
+<span class="codenumber">8</span> </h6>
+<p id="p-4952">What flaw renders the following reasoning invalid? <blockquote class="blockquote" id="blockquote-21"><font color="blue"><p id="p-4953">Q: Determine whether \(\displaystyle\sum_{n=1}^\infty \left(\sin(\pi n)+2\right)\) converges or diverges.</p> <p id="p-4954">A: We use the integral test. Let \(f(x)=\sin(\pi x)+2\text{.}\) Note \(f(x)\) is always positive, since \(\sin(x)+2 \geq -1+2 =1\text{.}\) Also, \(f(x)\) is continuous.</p>
+<div class="displaymath">
+\begin{align*}
+\int_1^\infty [\sin(\pi x)+2] \dee{x} &amp;= \lim_{b \to \infty}\int_1^b [\sin(\pi x)+2 ] \dee{x}\\
+&amp;=\lim_{b \to \infty} \left[\left.-\frac{1}{\pi}\cos(\pi x)+2x \right|_1^b\right]\\
+&amp;=\lim_{b \to \infty}\left[ -\frac{1}{\pi}\cos(\pi b)+2b +\frac{1}{\pi}(-1)-2\right]\\
+&amp;=\infty
+\end{align*}
+</div>
+<p>By the integral test, since the integral diverges, also \(\displaystyle\sum_{n=1}^\infty\left(  \sin(\pi n)+2\right)\) diverges.</p></font></blockquote></p></article><article class="exercise-like" id="exercise-598"><h6 class="heading">
+<span class="codenumber">9</span> </h6>
+<p id="p-4958">What flaw renders the following reasoning invalid? <blockquote class="blockquote" id="blockquote-22"><font color="blue"><p id="p-4959">Q: Determine whether the series \(\displaystyle\sum_{n=1}^\infty \dfrac{2^{n+1}n^2}{e^n+2n}\) converges or diverges.</p> <p id="p-4960">A: We want to compare this series to the series \(\displaystyle\sum_{n=1}^\infty \dfrac{2^{n+1}}{e^n}\text{.}\) Note both this series and the series in the question have positive terms.</p> <p id="p-4961">First, we find that \(\dfrac{2^{n+1}n^2}{e^n+2n}  \gt  \dfrac{2^{n+1}}{e^n}\) when \(n\) is sufficiently large. The justification for this claim is as follows:</p>
+<ul class="disc">
+<li id="li-2252">We note that \(e^n(n^2-1) \gt n^2-1 \gt 2n\) for \(n\) sufficiently large.</li>
+<li id="li-2253">Therefore, \(e^n \cdot n^2  \gt  e^n+2n\)</li>
+<li id="li-2254">Therefore, \(2^{n+1}\cdot e^n \cdot n^2  \gt  2^{n+1}(e^n+2n)\)</li>
+<li id="li-2255">Since \(e^n+2n\) and \(e^n\) are both expressions that work out to be positive for the values of \(n\) under consideration, we can divide both sides of the inequality by these terms without having to flip the inequality. So, \(\dfrac{2^{n+1}n^2}{e^n+2n} \gt \dfrac{2^{n+1}}{e^n}\text{.}\)</li>
+</ul>
+<p>Now, we claim  \(\displaystyle\sum_{n=1}^\infty \dfrac{2^{n+1}}{e^n}\) converges.</p> <p id="p-4962">Note  \(\displaystyle\sum_{n=1}^\infty \dfrac{2^{n+1}}{e^n}= 2\displaystyle\sum_{n=1}^\infty \dfrac{2^{n}}{e^n}= 2\displaystyle\sum_{n=1}^\infty \left(\dfrac{2}{e}\right)^n\text{.}\) This is a geometric series with \(r=\frac{2}{e}\text{.}\) Since \(2/e  \lt 1\text{,}\) the series converges.</p> <p id="p-4963">Now, by the Direct Comparison Test, we conclude that \(\displaystyle\sum_{n=1}^\infty \dfrac{2^{n+1}n^2}{e^n+2n}\) converges.</p></font></blockquote></p></article><article class="exercise-like" id="exercise-599"><h6 class="heading">
+<span class="codenumber">10</span> </h6>
+<p id="p-4967">Which of the series below are alternating?</p>
+<p id="p-4968">(A) \(\displaystyle\sum_{n=1}^\infty \sin n\)</p>
+<p id="p-4969">(B) \(\displaystyle\sum_{n=1}^\infty \frac{\cos(\pi n)}{n^3}\)</p>
+<p id="p-4970">(C) \(\displaystyle\sum_{n=1}^\infty \frac{7}{(-n)^{2n}}\)</p>
+<p id="p-4971">(D) \(\displaystyle\sum_{n=1}^\infty \frac{(-2)^n}{3^{n+1}}\)</p></article><article class="exercise-like boxed" id="exercise-600"><h6 class="heading">
+<span class="codenumber">11</span> </h6>
+<p id="p-4978">Give an example of a convergent series for which the ratio test is inconclusive.</p></article><article class="exercise-like" id="exercise-601"><h6 class="heading">
+<span class="codenumber">12</span> </h6>
+<p id="p-4983">Imagine you're taking an exam, and you momentarily forget exactly how the inequality in the ratio test works. You remember there's a ratio, but you don't remember which term goes on top; you remember there's something about the limit being greater than or less than one, but you don't remember which way implies convergence.</p>
+<p id="p-4984">Explain why</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{n \to \infty}\left|\frac{a_{n+1}}{a_{n}}\right| \gt 1
+\end{equation*}
+</div>
+<p id="p-4985">or, equivalently,</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{n \to \infty}\left|\frac{a_n}{a_{n+1}}\right| \lt 1
+\end{equation*}
+</div>
+<p id="p-4986">should mean that the sum \(\sum\limits_{n=1}^\infty a_n\) <em class="emphasis">diverges</em> (rather than converging).</p></article><article class="exercise-like" id="exercise-602"><h6 class="heading">
+<span class="codenumber">13</span> </h6>
+<p id="p-4990">Give an example of a series \(\displaystyle\sum_{n=a}^\infty a_n\text{,}\) with a function \(f(x)\) such that \(f(n)=a_n\) for all whole numbers \(n\text{,}\) such that:</p>
+<ul class="disc">
+<li id="li-2256">\(\displaystyle\int_a^\infty f(x)\,\dee{x}\) diverges, while</li>
+<li id="li-2257">\(\displaystyle\sum_{n=a}^\infty a_n\) converges.</li>
+</ul></article><article class="exercise-like" id="exercise-603"><h6 class="heading">
+<span class="codenumber">14</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4996">Suppose that you want to use the Limit Comparison Test on the series \(\displaystyle \sum_{n=0}^{\infty} a_n\) where \(\displaystyle a_n = \frac{2^n+n}{3^n+1}\text{.}\)</p>
+<p id="p-4997">Write down a sequence \(\{b_n\}\) such that \(\displaystyle \lim\limits_{n\to\infty} \frac{a_n}{b_n}\) exists and is nonzero. (You don't have to carry out the Limit Comparison Test)</p></article><article class="exercise-like boxed" id="exercise-604"><h6 class="heading">
+<span class="codenumber">15</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-5001">Decide whether each of the following statements is true or false. If false, provide a counterexample. If true provide a brief justification.</p>
+<ol id="p-5002" class="lower-alpha">
+<li id="li-2260">If \(\displaystyle\lim_{n\rightarrow\infty}a_n=0\text{,}\) then \(\sum\limits_{n=1}^{\infty} a_n\) converges.</li>
+<li id="li-2261">If \(\displaystyle\lim_{n\rightarrow\infty}a_n=0\text{,}\) then \(\sum\limits_{n=1}^{\infty} (-1)^{n\mathstrut} a_n\) converges.</li>
+<li id="li-2262">If \(0\le a_n \le b_n\) and \(\sum\limits_{n=1}^{\infty} b_n\) diverges, then \(\sum\limits_{n=1}^{\infty} a_n\) diverges.</li>
+</ol></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-60">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 2</alert></p></span></h6>
+<div class="introduction" id="introduction-116"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like" id="exercise-605"><h6 class="heading">
+<span class="codenumber">16</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-5010">Does the series \(\displaystyle \sum_{n=2}^\infty \frac{n^2}{3n^2+\sqrt n}\) converge?</p></article><article class="exercise-like" id="exercise-606"><h6 class="heading">
+<span class="codenumber">17</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-5014">Determine, with explanation, whether the series \(\displaystyle \sum_{n=1}^\infty \frac{5^k}{4^k+3^k}\) converges or diverges.</p></article><article class="exercise-like boxed" id="exercise-607"><h6 class="heading">
+<span class="codenumber">18</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-5018">Determine whether the series \(\displaystyle\sum_{n=0}^\infty\frac{1}{n+\frac{1}{2}}\) is convergent or divergent. If it is convergent, find its value.</p></article><article class="exercise-like boxed" id="exercise-608"><h6 class="heading">
+<span class="codenumber">19</span> </h6>
+<p id="p-5025">Does the following series converge or diverge? \(\displaystyle\sum_{k=1}^\infty\frac{1}{\sqrt{k}\sqrt{k+1}}\)</p></article><article class="exercise-like" id="exercise-609"><h6 class="heading">
+<span class="codenumber">20</span> </h6>
+<p id="p-5032">Evaluate the following series, or show that it diverges: \(\displaystyle\sum_{k=30}^\infty 3(1.001)^k\text{.}\)</p></article><article class="exercise-like boxed" id="exercise-610"><h6 class="heading">
+<span class="codenumber">21</span> </h6>
+<p id="p-5036">Evaluate the following series, or show that it diverges: \(\displaystyle\sum_{n=3}^\infty \left(\frac{-1}{5}\right)^n\text{.}\)</p></article><article class="exercise-like" id="exercise-611"><h6 class="heading">
+<span class="codenumber">22</span> </h6>
+<p id="p-5041">Does the following series converge or diverge? \(\displaystyle\sum_{n=7}^\infty \sin(\pi n)\)</p></article><article class="exercise-like" id="exercise-612"><h6 class="heading">
+<span class="codenumber">23</span> </h6>
+<p id="p-5045">Does the following series converge or diverge? \(\displaystyle\sum_{n=7}^\infty\cos(\pi n)\)</p></article><article class="exercise-like boxed" id="exercise-613"><h6 class="heading">
+<span class="codenumber">24</span> </h6>
+<p id="p-5049">Does the following series converge or diverge? \(\displaystyle\sum_{k=1}^\infty \frac{e^k}{k!}\text{.}\)</p></article><article class="exercise-like" id="exercise-614"><h6 class="heading">
+<span class="codenumber">25</span> </h6>
+<p id="p-5053">Evaluate the following series, or show that it diverges: \(\displaystyle\sum_{k=0}^\infty\frac{2^k}{3^{k+2}}\text{.}\)</p></article><article class="exercise-like" id="exercise-615"><h6 class="heading">
+<span class="codenumber">26</span> </h6>
+<p id="p-5057">Does the following series converge or diverge? \(\displaystyle\sum_{n=1}^\infty\frac{n!n!}{(2n)!}\text{.}\)</p></article><article class="exercise-like boxed" id="exercise-616"><h6 class="heading">
+<span class="codenumber">27</span> </h6>
+<p id="p-5061">Does the following series converge or diverge? \(\displaystyle\sum_{n=1}^\infty\frac{n^2+1}{2n^4+n}\text{.}\)</p></article><article class="exercise-like boxed" id="exercise-617"><h6 class="heading">
+<span class="codenumber">28</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-5067">Show that the series \(\displaystyle\sum_{n=3}^\infty \frac{5}{n(\log n)^{3/2}}\) converges.</p></article><article class="exercise-like" id="exercise-618"><h6 class="heading">
+<span class="codenumber">29</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-5072">Find the values of \(p\) for which the series \(\displaystyle{\sum_{n=2}^\infty \frac{1}{n(\log n)^p}}\) converges.</p></article><article class="exercise-like boxed" id="exercise-619"><h6 class="heading">
+<span class="codenumber">30</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-5077">Does \({\displaystyle\sum_{n=1}^\infty\frac{e^{-\sqrt{n}}}{\sqrt{n}}}\) converge or diverge?</p></article><article class="exercise-like" id="exercise-620"><h6 class="heading">
+<span class="codenumber">31</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-5083">Use the comparison test (not the limit comparison test) to show whether the series</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{n=2}^{\infty} \frac{\sqrt{3 n^2 - 7}}{n^{3}}
+\end{equation*}
+</div>
+<p>converges or diverges.</p></article><article class="exercise-like" id="exercise-621"><h6 class="heading">
+<span class="codenumber">32</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-5089">Determine whether the series \(\displaystyle\sum_{k=1}^\infty\frac{ \root{3}\of{k^4+1} }
+{\sqrt{k^5+9}}\) converges.</p></article><article class="exercise-like boxed" id="exercise-622"><h6 class="heading">
+<span class="codenumber">33</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-5096">Does \(\displaystyle\sum_{n=1}^\infty\frac{n^4 2^{n/3}}{(2n+7)^4}\) converge or diverge?</p></article><article class="exercise-like" id="exercise-623"><h6 class="heading">
+<span class="codenumber">34</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-5106">Determine, with explanation, whether each of the following series converge or diverge.</p>
+<ol id="p-5107" class="lower-alpha">
+<li id="li-2266">\(\displaystyle\sum_{n=1}^\infty\frac{1}{\sqrt{n^2+1}}\)</li>
+<li id="li-2267">\(\displaystyle\sum_{n=1}^\infty\frac{n\cos(n\pi)}{2^n}\)</li>
+</ol></article><article class="exercise-like" id="exercise-624"><h6 class="heading">
+<span class="codenumber">35</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-5112">Determine whether the series</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{k=1}^\infty\frac{k^4-2k^3+2}{k^5+k^2+k}
+\end{equation*}
+</div>
+<p>converges or diverges.</p></article><article class="exercise-like" id="exercise-625"><h6 class="heading">
+<span class="codenumber">36</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-5117">Determine whether each of the following series converge or diverge.</p>
+<ol id="p-5118" class="lower-alpha">
+<li id="li-2268">\(\displaystyle\sum_{n=2}^\infty\frac{n^2+n+1}{n^5-n}\)</li>
+<li id="li-2269">\(\displaystyle\sum_{m=1}^\infty\frac{3m+\sin\sqrt{m}}{m^2}\)</li>
+</ol></article><article class="exercise-like" id="exercise-626"><h6 class="heading">
+<span class="codenumber">37</span> </h6>
+<p id="p-5125">Evaluate the following series, or show that it diverges: \(\displaystyle\sum_{n=5}^\infty \frac{1}{e^n}\text{.}\)</p></article><article class="exercise-like" id="exercise-627"><h6 class="heading">
+<span class="codenumber">38</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-5129">Determine whether the series \(\displaystyle\sum_{n=2}^\infty\frac{6}{7^n}\) is convergent or divergent. If it is convergent, find its value.</p></article><article class="exercise-like" id="exercise-628"><h6 class="heading">
+<span class="codenumber">39</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-5133">Determine, with explanation, whether each of the following series converge or diverge.</p>
+<ol id="p-5134" class="lower-alpha">
+<li id="li-2270">\(1+\frac{1}{3}+\frac{1}{5}+\frac{1}{7}+\frac{1}{9}+\cdots\text{.}\)</li>
+<li id="li-2271">\({\displaystyle\sum_{n=1}^\infty \frac{2n+1}{2^{2n+1}}}\)</li>
+</ol></article><article class="exercise-like" id="exercise-629"><h6 class="heading">
+<span class="codenumber">40</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-5141">Determine, with explanation, whether each of the following series converges or diverges.</p>
+<ol id="p-5142" class="lower-alpha">
+<li id="li-2274">\({\displaystyle \sum_{k=2}^\infty \frac{\root{3}\of{k}}{k^2-k}}\text{.}\)</li>
+<li id="li-2275">\({\displaystyle \sum_{k=1}^\infty \frac{k^{10}10^k(k!)^2}{(2k)!}}\text{.}\)</li>
+<li id="li-2276">\({\displaystyle \sum_{k=3}^\infty \frac{1}{k(\log k) (\log\log k)}}\text{.}\)</li>
+</ol></article><article class="exercise-like" id="exercise-630"><h6 class="heading">
+<span class="codenumber">41</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-5150">Determine whether the series \(\displaystyle\sum_{n=1}^\infty\frac{n^3-4}{2n^5-6n}\) is convergent or divergent.</p></article><article class="exercise-like" id="exercise-631"><h6 class="heading">
+<span class="codenumber">42</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-5154">What is the smallest value of \(N\) such that the partial sum \(\displaystyle\sum_{n=1}^N\frac{(-1)^n}{n\cdot 10^n}\) approximates \(\displaystyle\sum_{n=1}^\infty\frac{(-1)^n}{n\cdot 10^n}\) within an accuracy of \(10^{-6}\text{?}\)</p></article><article class="exercise-like boxed" id="exercise-632"><h6 class="heading">
+<span class="codenumber">43</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-5158">It is known that \(\displaystyle \sum_{n=1}^\infty \frac{(-1)^{n-1}}{n^2} = \frac{\pi^2}{12}\) (you don't have to show this). Find \(N\) so that \(S_N\text{,}\) the \(N^{\rm th}\) partial sum of the series, satisfies \(| \frac{\pi^2}{12} - S_N | \le 10^{-6}\text{.}\) Be sure to say why your method can be applied to this particular series.</p></article><article class="exercise-like" id="exercise-633"><h6 class="heading">
+<span class="codenumber">44</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-5162">The series \(\displaystyle \sum_{n=1}^\infty \frac{(-1)^{n+1}}{(2n+1)^2}\) converges to some number \(S\) (you don't have to prove this). According to the Alternating Series Estimation Theorem, what is the smallest value of \(N\) for which the \(N^{\rm th}\) partial sum of the series is at most \(\frac1{100}\) away from \(S\text{?}\) For this value of \(N\text{,}\) write out the \(N^{\rm th}\) partial sum of the series.</p></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-61">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 3</alert></p></span></h6>
+<div class="introduction" id="introduction-117"></div>
+<div class="introduction" id="introduction-118"><p id="p-5212">A number of phenomena roughly follow a distribution called Zipf's law. We discuss some of these in Questions <a knowl="./knowl/probs3_2_Zipf1.html" title="Exercise 3.3.11.52">52</a> and <a knowl="./knowl/probs3_2_Zipf2.html" title="Exercise 3.3.11.53">53</a>.</p></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like" id="exercise-634"><h6 class="heading">
+<span class="codenumber">45</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-5166">Determine, with explanation, whether the following series converge or diverge.</p>
+<ol id="p-5167" class="lower-alpha">
+<li id="li-2277">\(\displaystyle\sum_{n=1}^\infty\frac{n^n}{9^n n!}\)</li>
+<li id="li-2278">\(\displaystyle\sum_{n=1}^\infty\frac{1}{n^{\log n}}\)</li>
+</ol></article><article class="exercise-like boxed" id="exercise-635"><h6 class="heading">
+<span class="codenumber">46</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-5171">(a) Prove that \(\displaystyle \int_2^\infty\frac{x+\sin x}{1+x^2}\ \dee{x}\) diverges.</p>
+<p id="p-5172">(b) Explain why you <em class="emphasis">cannot</em> conclude that \(\displaystyle\sum\limits_{n=1}^\infty \frac{n+\sin n}{1+n^2}\) diverges from part (a) and the Integral Test.</p>
+<p id="p-5173">(c) Determine, with explanation, whether \(\displaystyle\sum\limits_{n=1}^\infty \frac{n+\sin n}{1+n^2}\) converges or diverges.</p></article><article class="exercise-like" id="exercise-636"><h6 class="heading">
+<span class="codenumber">47</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-5190">Show that \(\displaystyle\sum\limits_{n=1}^\infty\frac{e^{-\sqrt{n}}}{\sqrt{n}}\) converges and find an interval of length \(0.05\) or less that contains its exact value.</p></article><article class="exercise-like" id="exercise-637"><h6 class="heading">
+<span class="codenumber">48</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-5195">Suppose that the series \(\displaystyle\sum\limits_{n=1}^\infty a_n\) converges and that \(1 \gt a_n\ge 0\) for all \(n\text{.}\) Prove that the series \(\displaystyle\sum\limits_{n=1}^\infty \frac{a_n}{1-a_n}\) also converges.</p></article><article class="exercise-like boxed" id="exercise-638"><h6 class="heading">
+<span class="codenumber">49</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-5200">Suppose that the series \(\sum\limits_{n=0}^{\infty}(1-a_n)\) converges, where \(a_n \gt 0\) for \(n=0,1,2,3,\cdots\text{.}\) Determine whether the series \(\sum\limits_{n=0}^\infty 2^n a_n\) converges or diverges.</p></article><article class="exercise-like" id="exercise-639"><h6 class="heading">
+<span class="codenumber">50</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-5204">Assume that the series \(\displaystyle\sum_{n=1}^\infty\frac{na_n-2n+1}{n+1}\) converges,  where \(a_n  \gt  0\) for \(n = 1, 2, \cdots\text{.}\) Is the following series</p>
+<div class="displaymath">
+\begin{gather*}
+-\log a_1 + \sum_{n=1}^\infty \log\Big(\frac{a_n}{a_{n+1}}\Big)
+\end{gather*}
+</div>
+<p>convergent? If your answer is NO, justify your answer. If your answer is YES, evaluate the sum of the series \(-\log a_1 + \sum\limits_{n=1}^\infty \log\big(\frac{a_n}{a_{n+1}}\big)\text{.}\)</p></article><article class="exercise-like boxed" id="exercise-640"><h6 class="heading">
+<span class="codenumber">51</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-5208">Prove that if \(a_n\ge 0\) for all \(n\) and if the series \(\displaystyle\sum_{n=1}^\infty a_n\) converges, then the series \(\displaystyle\sum_{n=1}^\infty a^2_n\) also converges.</p></article><article class="exercise-like" id="probs3_2_Zipf1"><h6 class="heading">
+<span class="codenumber">52</span> </h6>
+<p id="p-5213">Suppose the frequency of word use in a language has the following pattern: <blockquote class="blockquote" id="blockquote-23"><p id="p-5214"><font color="blue">The \(n\)-th most frequently used word accounts for \(\dfrac{\alpha}{n}\) percent of the total words used.</font></p></blockquote> So, in a text of 100 words, we expect the most frequently used word to appear \(\alpha\) times, while the second-most-frequently used word should appear about \(\frac{\alpha}{2}\) times, and so on.</p>
+<p id="p-5215">If books written in this language use \(20,000\) distinct words, then the most commonly used word accounts for roughly what percentage of total words used?</p></article><article class="exercise-like" id="probs3_2_Zipf2"><h6 class="heading">
+<span class="codenumber">53</span> </h6>
+<p id="p-5226"></p>
+<p id="p-5227">Suppose the sizes of cities in a country adhere to the following pattern: if the largest city has population \(\alpha\text{,}\) then the \(n\)-th largest city has population \(\frac{\alpha}{n}\text{.}\)</p>
+<p id="p-5228">If the largest city in this country has 2 million people and the smallest city has 1 person, then the population of the entire country is \(\sum_{n=1}^{2 \times 10^6}\frac{2\times 10^6}{n}\text{.}\) (For many \(n\)'s in this sum \(\frac{2\times 10^6}{n}\) is not an integer. Ignore that.) Evaluate this sum approximately, with an error of no more than 1 million people.</p></article>
+</div>
+</div></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

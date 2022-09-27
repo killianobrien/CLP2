@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:24:38+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="example-like"><p>We shall now guess one solution (i.e. a particular solution) to the differential equation</p>
+<div class="displaymath">
+\begin{equation*}
+y''(t)+2y'(t)+3y(t)=\cos t
+\tag{ODE1}
+\end{equation*}
+</div>
+<p>Equations like this arise, for example, in the  study of the RLC circuit. We shall simplify the computation by exploiting that \(\cos t=\Re e^{it}\text{.}\) First, we shall guess a function \(Y(t)\) obeying</p>
+<div class="displaymath">
+\begin{equation*}
+Y''+2Y'+3Y=e^{i t}
+\tag{ODE2}
+\end{equation*}
+</div>
+<p>Then, taking complex conjugates gives</p>
+<div class="displaymath">
+\begin{equation*}
+\bar Y''+2\bar Y'+3\bar Y=e^{-i t}
+\end{equation*}
+</div>
+<p>which we shall call (\(\overline{\text{ODE2}}\)). Then, adding \(\frac{1}{2}\)(ODE2) and \(\frac{1}{2}\)(\(\overline{\text{ODE2}}\)) together will give</p>
+<div class="displaymath">
+\begin{equation*}
+(\Re Y)''+2(\Re Y)'+3(\Re Y)=\Re e^{i t}=\cos t
+\end{equation*}
+</div>
+<p>which shows that \(\Re Y(t)\) is a solution to (ODE1). Let's try \(Y(t)=Ae^{i t}\text{,}\) with \(A\) a constant to be determined. This is a solution of (ODE2) if and only if</p>
+<div class="displaymath">
+\begin{align*}
+&amp; &amp; \frac{\mathrm{d^2}}{\mathrm{d}t^2}\big(Ae^{it}\big)
++2\diff{}{t}\big(Ae^{it}\big)
++3Ae^{it}&amp;=e^{it} \\
+&amp;\iff&amp; (i^2+2i+3)Ae^{it}&amp;=e^{it} \\
+&amp;\iff&amp; A&amp;=\frac{1}{2+2i} 
+\end{align*}
+</div>
+<p>So \(\frac{e^{it}}{2+2i}\) is a solution to (ODE2) and \(\Re \frac{e^{it}}{2+2i}\) is a solution to (ODE1). To simplify this, write \(2+2i\) in polar coordinates. From the sketch below we have \(2+2i=2\sqrt{2}e^{i{\pi\over 4}}\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/polar4.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p>So</p>
+<div class="displaymath">
+\begin{align*}
+\frac{e^{it}}{2+2i}&amp;=\frac{e^{it}}{2\sqrt{2}e^{i{\pi\over 4}}}
+=\frac{1}{2\sqrt{2}}e^{i(t-{\pi\over 4})} \\
+\implies \Re\frac{e^{it}}{2+2i}
+&amp;=\frac{1}{2\sqrt{2}}\Re e^{i(t-{\pi\over 4})}
+=\frac{1}{2\sqrt{2}}\cos\left(t-\frac{\pi}{4}\right)
+\end{align*}
+</div></article></body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:23:40+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>How should we parse the big O notation when we see it? Consider  the following</p>
+<div class="displaymath">
+\begin{align*}
+g(x) &amp;= O( |x-3|^2 )
+\end{align*}
+</div>
+<p>First of all, we know from the definition that the notation only tells us something about \(g(x)\) for \(x\) near the  point \(a\text{.}\) The equation above contains “\(O(|x-3|^2)\)” which  tells us something about what the function looks like when \(x\)  is close to \(3\text{.}\) Further, because it is “\(|x-3|\)” squared,  it says that the graph of the function lies below a parabola \(y=C(x-3)^2\) and above a parabola \(y=-C(x-3)^2\) near \(x=3\text{.}\) The notation doesn't  tell us anything more than this — we don't know, for example,  that the graph of \(g(x)\) is concave up or concave down. It also  tells us that Taylor expansion of \(g(x)\) around \(x=3\) does not  contain any constant or linear term — the first nonzero term  in the expansion is of degree at least two.  For example, all of the  following functions are \(O(|x-3|^2)\text{.}\)</p>
+<div class="displaymath">
+\begin{gather*}
+5(x-3)^2 + 6(x-3)^3,\qquad
+-7(x-3)^2 - 8(x-3)^4,\qquad
+(x-3)^3,\qquad
+(x-3)^{\frac{5}{2}}
+\end{gather*}
+</div>
+<span class="incontext"><a href="subsection-60.html#p-5635">in-context</a></span>
+</body>
+</html>

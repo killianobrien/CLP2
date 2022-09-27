@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:22:30+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Once again, fix any two nonzero real numbers \(a\) and \(X\text{.}\) We again start with the geometric series \(\sum_{n=0}^\infty a x^n\) but this time we construct a new series by integrating <a knowl="./knowl/fn-172-hidden.html" title="Footnote 3.3.15"><sup> 15 </sup></a> each term, \(a x^n\text{,}\) from \(x=0\) to \(x=X\) giving \(\frac{a}{n+1} X^{n + 1}\text{.}\) The resulting new series is</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{n=0}^\infty a_n\qquad\text{with }a_n = \frac{a}{n+1} X^{n + 1}
+\end{equation*}
+</div>
+<p>To apply the ratio test we need to compute</p>
+<div class="displaymath">
+\begin{align*}
+\Big|\frac{a_{n+1}}{a_n}\Big|
+&amp;= \bigg|\frac{\frac{a}{n+2} X^{n + 2}}{\frac{a}{n+1} X^{n + 1}}\bigg|
+= \frac{n+1}{n+2} |X|
+= \frac{1+\frac{1}{n}}{1+\frac{2}{n}} |X|
+\rightarrow L=|X|\quad\text{as $n\rightarrow\infty$}
+\end{align*}
+</div>
+<p>The ratio test now tells us that the series  \(\sum_{n=0}^\infty \frac{a}{n+1} X^{n + 1}\) converges if \(|X| \lt 1\) and diverges if \(|X| \gt 1\text{.}\) It says nothing about the cases \(X=\pm 1\text{.}\)</p>
+<span class="incontext"><a href="sec_RatioTest.html#p-4836">in-context</a></span>
+</body>
+</html>

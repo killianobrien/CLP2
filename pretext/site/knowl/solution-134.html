@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:27+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">1.4.2.15.1</span>
+</h6>
+<ul class="disc">
+<li>Solution 1: If we let \(\textcolor{red}{u=\sqrt{\log x}}\text{,}\) then \(\textcolor{blue}{\dee{u}=\dfrac{1}{2x\sqrt{\log x}}\dee{x}}\text{,}\) and:<div class="displaymath">
+\begin{align*}
+\int \dfrac{e^{\textcolor{red}{\sqrt{\log x}}}}{\textcolor{blue}{2x\sqrt{\log x}}}\ \textcolor{blue}{\dee{x}}&amp;=\int  e^{\textcolor{red}u}\ \textcolor{blue}{\dee{u}}=e^u+C=e^{\sqrt{\log x}}+C
+\end{align*}
+</div>
+</li>
+<li>Solution 2: In Solution 1, we made a pretty slick choice. We might have tried to work with something a little less convenient. For example, it's not unnatural to think that \(\textcolor{red}{u=\log x}\text{,}\) \(\textcolor{blue}{\dee{u}=\dfrac{1}{x}\dee{x}}\) would be a good choice. In that case:<div class="displaymath">
+\begin{align*}
+\int \dfrac{e^{\sqrt{\textcolor{red}{\log x}}}}{2\textcolor{blue}{x}\sqrt{\textcolor{red}{\log x}}}\ \textcolor{blue}{\dee{x}}&amp;=
+\int \frac{e^{\sqrt{\textcolor{red}u}}}{2\sqrt{\textcolor{red}u}}\textcolor{blue}{\dee{u}}\\
+\end{align*}
+<p class="intertext">Now, we should be able to see that \(\textcolor{orange!40!black}{w=\sqrt{u}}\text{,}\) \(\textcolor{purple}{\dee{w} = \dfrac{1}{2\sqrt{u}}\dee{u}}\) is a good choice:</p>
+\begin{align*}
+\int\frac{e^{\textcolor{orange!40!black}{\sqrt{u}}}}{\textcolor{purple}{2\sqrt{u}}}\
+\textcolor{purple}{\dee{u}}
+&amp;=\int e^{\textcolor{orange!40!black}{w}}\ \textcolor{purple}{\dee{w}}\\
+&amp;=e^{\sqrt{u}}+C\\
+&amp;=e^{\sqrt{\log x}}+C
+\end{align*}
+</div>
+</li>
+</ul>
+</div>
+<span class="incontext"><a href="exercises-4.html#solution-134">in-context</a></span>
+</body>
+</html>

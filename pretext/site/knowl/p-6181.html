@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:24:39+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Suppose now that we change our minds. We want an accuracy of \(10^{-12}\text{,}\) rather than \(10^{-6}\text{.}\) We have already estimated \(K\text{.}\) So now we want to use a step size \(h\) obeying</p>
+<div class="displaymath">
+\begin{align*}
+|K|h^4\le 10^{-12}
+&amp;\iff 7.99\times 10^{-3} h^4\le 10^{-12}\\
+&amp;\iff h \le\root{4}\of{\frac{1}{7.99\times 10^9}} =\frac{1}{299.0}
+\end{align*}
+</div>
+<p>like, for example, \(h=\tfrac{1}{300}\text{.}\) Applying Simpson's rule with \(h=\tfrac{1}{300}\) gives, to fourteen decimal places,</p>
+<div class="displaymath">
+\begin{equation*}
+A(1/300) = 0.74682413281344
+\end{equation*}
+</div>
+<p>The exact answer, to fourteen decimal places, is \(0.74682413281243\) so the error in \(A(1/300)\) is indeed just over \(10^{-12}\text{.}\)</p>
+<span class="incontext"><a href="ap_Richardson.html#p-6181">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:24+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">1.3.2.36.1</span>
+</h6>
+<p>(a) Write</p>
+<div class="displaymath">
+\begin{gather*}
+F(x)=G(x^2)-H(-x)\quad\hbox{with}\quad G(y)=\int_0^{y} e^{-t}\,\dee{t},\
+H(y)=\int^{y}_0 e^{-t^2}\,\dee{t}
+\end{gather*}
+</div>
+<p>By the Fundamental Theorem of Calculus Part 1,</p>
+<div class="displaymath">
+\begin{gather*}
+G'(y)=e^{-y}\, ,\qquad
+H'(y)= e^{-y^2}
+\end{gather*}
+</div>
+<p>Hence, by the chain rule,</p>
+<div class="displaymath">
+\begin{gather*}
+F'(x)=2x G'(x^2)-(-1)H'(-x)=2x e^{-(x^2)}+e^{-(-x)^2}
+=(2x+1)e^{-x^2}
+\end{gather*}
+</div>
+<p>(b) Observe that \(F'(x) \lt 0\) for \(x \lt -1/2\) and \(F'(x) \gt 0\) for \(x \gt -1/2\text{.}\) Hence \(F(x)\) is decreasing for \(x \lt -1/2\) and increasing for \(x \gt -1/2\text{,}\) and \(F(x)\) must take its minimum value when \(x=-1/2\text{.}\)</p>
+</div>
+<span class="incontext"><a href="exercises-3.html#solution-103">in-context</a></span>
+</body>
+</html>

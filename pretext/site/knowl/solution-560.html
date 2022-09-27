@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:22:09+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">3.2.2.4.1</span>
+</h6>
+<p>As in Question <a knowl="./knowl/prob_s3_2_partsums.html" title="Exercise 3.2.2.3">3</a>,</p>
+<div class="displaymath">
+\begin{align*}
+a_N&amp;=S_N-S_{N-1}=\left[(-1)^N+\dfrac{1}{N}\right]-\left[(-1)^{N-1}+\dfrac{1}{N-1}\right]\\
+&amp;=(-1)^N-(-1)^{N-1} + \frac{1}{N}-\frac{1}{N-1}\\
+&amp;=(-1)^N+(-1)^{N} + \frac{N-1}{N(N-1)}-\frac{N}{N(N-1)}\\
+&amp;=2(-1)^{N}  -\frac{1}{N(N-1)}\\
+\end{align*}
+<p class="intertext">Note, however, that \(a_N\) is only the same as \(S_N-S_{N-1}\) when \(N \geq 2\text{:}\) otherwise, we're trying to calculate \(S_1-S_0\text{,}\) but \(S_0\) is not defined. So, we find \(a_1\) separately:</p>
+\begin{align*}
+a_1&amp;=S_1=(-1)^1+\frac{1}{1}=0\\
+\end{align*}
+<p class="intertext">All together:</p>
+\begin{align*}
+a_n&amp;=\begin{cases}
+0 &amp; \mbox{ if } n=1\\
+2(-1)^{n}  -\frac{1}{n(n-1)} &amp;\mbox{ else}
+\end{cases}
+\end{align*}
+</div>
+</div>
+<span class="incontext"><a href="exercises-19.html#solution-560">in-context</a></span>
+</body>
+</html>

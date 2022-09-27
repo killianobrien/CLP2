@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:23:35+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>As in the proof of Theorem <a knowl="./knowl/thm_TaylorRemainderA.html" title="Theorem 3.6.11: Commonly used formulae for the Taylor remainder">3.6.11</a>, we define</p>
+<div class="displaymath">
+\begin{equation*}
+S(t) = f(x) - f(t) -f'(t)\,(x\!-\!t)-\tfrac{1}{2}f''(t)\,(x\!-\!t)^2
+-\cdots-\tfrac{1}{n!}f^{(n)}(t)\, (x\!-\!t)^n
+\end{equation*}
+</div>
+<p>and observe that \(E_n(a,x) = S(a)\) and \(S(x)=0\) and \(S'(t)= -\tfrac{1}{n!}  f^{(n+1)}(t)\,(x-t)^n\text{.}\)</p>
+<ol class="lower-alpha">
+<li>Recall that the generalised mean-value theorem, which is Theorem 3.4.38 in the CLP-1 text, says that<div class="displaymath">
+\begin{equation*}
+\frac{F(b)-F(a)}{G(b)-G(a)} = \frac{F'(c)}{G'(c)}
+\tag{GMVT}
+\end{equation*}
+</div>for some \(c\) strictly between \(a\) and \(b\text{.}\) We apply this theorem with \(b=x\) and \(F(t)=S(t)\text{.}\) This gives<div class="displaymath">
+\begin{align*}
+E_n(a,x)
+&amp;= -\big[S(x)-S(a)\big] =-\frac{S'(c)}{G'(c)}\big[G(x)-G(a)\big]\\
+&amp;=-\frac{ -\frac{1}{n!}  f^{(n+1)}(c)\,(x-c)^n}{G'(c)}\ \big[G(x)-G(a)\big]\\
+&amp;=\frac{1}{n!} f^{(n+1)}(c)\,\frac{G(x)-G(a)}{G'(c)}\, (x-c)^n
+\end{align*}
+</div>
+</li>
+<li>Apply part (a) with \(G(x)=x\text{.}\) This gives<div class="displaymath">
+\begin{align*}
+E_n(a,x)
+&amp;=\frac{1}{n!} f^{(n+1)}(c)\,\frac{x-a}{1}\, (x-c)^n \\
+&amp;=\frac{1}{n!} f^{(n+1)}(c)\, (x-c)^n(x-a)
+\end{align*}
+</div>for some \(c\) strictly between \(a\) and \(b\text{.}\)</li>
+</ol>
+<span class="incontext"><a href="subsubsection-17.html#p-5605">in-context</a></span>
+</body>
+</html>

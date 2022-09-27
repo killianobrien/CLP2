@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:27+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">1.4.2.11.1</span>
+</h6>
+<p>Setting \(\textcolor{red}{u=1+\sin x}\text{,}\) we have \(\textcolor{blue}{\dee{u} = \cos x\dee{x}}\) and so</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{0}^{\pi/2} \frac{\textcolor{blue}{\cos x}} {\textcolor{red}{1+\sin x}} \textcolor{blue}{\dee{x} }
+= \int_{x=0}^{x=\pi/2} \frac{1}{\textcolor{red}{1+\sin x}}\, \textcolor{blue}{\cos x \dee{x} }
+= \int_{u=1}^{u=2} \frac{\textcolor{blue}{\dee{u}}}{\textcolor{red}u}
+\end{equation*}
+</div>
+<p>since \(u=1+\sin 0=1\) when \(x=0\) and \(u=1+\sin(\pi/2)=2\) when \(x=\pi/2\text{.}\) Then, by the Fundamental Theorem of Calculus Part 2,</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{u=1}^{u=2} \frac{\dee{u}}{u}
+= \Big[\log|u| \Big]_{1}^{2} = \log 2
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a href="exercises-4.html#solution-130">in-context</a></span>
+</body>
+</html>

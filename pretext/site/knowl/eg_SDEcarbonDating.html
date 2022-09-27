@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:21:20+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="example-like"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.4.11</span> <span class="title">The age of a piece of parchment</span>
+</h6>
+<p>A particular piece of parchment contains about \(64\%\) as  much \({}^{14}C\) as plants do today.  Estimate the age of the parchment.</p>
+<p><em class="alert">Solution:</em> Let \(Q(t)\) denote the amount of \({}^{14}C\) in the parchment \(t\) years after it was first created. By equation (<a knowl="./knowl/eq_carbonDating.html" title="Equation 2.4.8: Radioactive decay">2.4.8</a>) and  Example <a knowl="./knowl/eg_carbonDatingHalfLife.html" title="Example 2.4.9: Half life and the constant \(k\)">2.4.9</a></p>
+<div class="displaymath">
+\begin{gather*}
+\diff{Q}{t}(t)=-k Q(t)\qquad\text{with } k=\frac{\log 2}{5730} = 0.000121
+\end{gather*}
+</div>
+<p>By Corollary <a knowl="./knowl/cor_carbonDating.html" title="Corollary 2.4.10">2.4.10</a></p>
+<div class="displaymath">
+\begin{gather*}
+Q(t) = Q(0)\, e^{-kt}
+\end{gather*}
+</div>
+<p>The time at which \(Q(t)\) reaches \(0.64\,Q(0)\) is determined by</p>
+<div class="displaymath">
+\begin{align*}
+Q(t)&amp;=0.64\, Q(0) &amp;\text{but $Q(t) = Q(0)\, e^{-kt}$}\\
+Q(0)\,e^{-kt}&amp;=0.64\, Q(0) &amp;\text{cancel $Q(0)$}\\
+e^{-kt}&amp;=0.64&amp;\text{take logarithms}\\
+-kt&amp;=\log 0.64\\
+t&amp;=\frac{\log 0.64}{-k}
+=\frac{\log 0.64}{-0.000121}
+= 3700 \qquad&amp;\text{to 2 significant digits}
+\end{align*}
+</div>
+<p>That is, the parchment <a knowl="./knowl/fn-135-hidden.html" title="Footnote 2.4.4"><sup> 4 </sup></a> is about 37 centuries old.</p></article><span class="incontext"><a href="subsection-35.html#eg_SDEcarbonDating">in-context</a></span>
+</body>
+</html>

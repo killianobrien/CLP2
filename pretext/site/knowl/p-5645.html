@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:23:41+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>The big O notation has a few properties that are useful in computations and taking limits. All follow immediately from Definition <a knowl="./knowl/def_bigoh.html" title="Definition 3.6.24: Big O">3.6.24</a>.</p>
+<ol class="lower-alpha">
+<li>If \(p \gt 0\text{,}\) then<div class="displaymath">
+\begin{equation*}
+\lim\limits_{x\rightarrow 0} O(|x|^p)=0
+\end{equation*}
+</div>
+</li>
+<li>For any real numbers \(p\) and \(q\text{,}\)<div class="displaymath">
+\begin{equation*}
+O(|x|^p)\  O(|x|^q)=O(|x|^{p+q})
+\end{equation*}
+</div>(This is just because  \(C|x|^p\times C'|x|^q= (CC')|x|^{p+q}\text{.}\))  In particular,<div class="displaymath">
+\begin{equation*}
+ax^m\,O(|x|^p)=O(|x|^{p+m})
+\end{equation*}
+</div>for any constant \(a\) and any integer \(m\text{.}\)</li>
+<li>For any real numbers \(p\) and \(q\text{,}\)<div class="displaymath">
+\begin{equation*}
+O(|x|^p) + O(|x|^q)=O(|x|^{\min\{p,q\}})
+\end{equation*}
+</div>(For example, if \(p=2\) and \(q=5\text{,}\) then \(C|x|^2+C'|x|^5 =\big(C+C'|x|^3\big) |x|^2\le (C+C')|x|^2\) whenever \(|x|\le 1\text{.}\))</li>
+<li>For any real numbers \(p\) and \(q\) with \(p \gt q\text{,}\) any function which is \(O(|x|^p)\) is also \(O(|x|^q)\) because \(C|x|^p= C|x|^{p-q}|x|^q\le C|x|^q\) whenever \(|x|\le 1\text{.}\)</li>
+<li>All of the above observations also hold for more general expressions  with \(|x|\) replaced by \(|x-a|\text{,}\) i.e. for \(O(|x-a|^p)\text{.}\) The only  difference being in (a) where we must take the limit as \(x \to a\)  instead of \(x\to 0\text{.}\)</li>
+</ol>
+<span class="incontext"><a href="subsection-60.html#p-5645">in-context</a></span>
+</body>
+</html>

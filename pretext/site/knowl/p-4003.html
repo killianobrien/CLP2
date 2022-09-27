@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:21:21+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p><em class="alert">Solution:</em> (a)</p>
+<ul class="disc">
+<li>Denote by \(T(t)\) the temperature of the tea \(t\) minutes after it was removed from the fridge, and let \(A=30\) be the ambient temperature.</li>
+<li>By Newton's law of cooling,<div class="displaymath">
+\begin{equation*}
+\diff{T}{t}=K(T-A) = K(T-30)
+\end{equation*}
+</div>for some, as yet unknown, constant of proportionality \(K\text{.}\)</li>
+<li>By Theorem <a knowl="./knowl/thm_linearODE.html" title="Theorem 2.4.4">2.4.4</a> with \(a=K\) and \(b=30\text{,}\)<div class="displaymath">
+\begin{equation*}
+T(t) = [T(0)-30]\,e^{Kt} + 30
+=30-25 e^{Kt}
+\end{equation*}
+</div>since the initial temperature \(T(0)=5\text{.}\)</li>
+<li>This solution is not complete because it still contains an unknown constant, namely \(K\text{.}\) We have not yet used the given data that \(T(5)=10\text{.}\) We can use it to determine \(K\text{.}\) At \(t=5\text{,}\)<div class="displaymath">
+\begin{align*}
+T(5)=30-25 e^{5K}=10
+&amp;\implies e^{5K}=\frac{20}{25}
+\implies 5K=\log\frac{20}{25}\\
+&amp;\implies K=\frac{1}{5}\log\frac{4}{5}=-0.044629
+\end{align*}
+</div>to six decimal places.</li>
+</ul>
+<span class="incontext"><a href="subsection-36.html#p-4003">in-context</a></span>
+</body>
+</html>

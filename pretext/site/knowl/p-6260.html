@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:24:49+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>We are now ready  to use a sneaky bit of arithemtic to supercharge our Euler/Euler-2step method. As in our development of the preliminary version of the method, denote by \(\phi(t)\) the exact solution to \(y'=f(t,y)\) that satisfies the initial condition \(\phi(t_n)=y_n\text{.}\) We have seen, at the beginning of §<a href="ssec_prelim_E_E2.html" class="xref" title="Subsection D.3.1: Euler and Euler-2step (preliminary version)">D.3.1</a>, that applying one step of Euler with step size \(h\text{,}\) gives</p>
+<div class="displaymath">
+\begin{align*}
+A_{1,n+1}&amp;=y_n+hf(t_n,y_n) \notag\\
+&amp;=\phi(t_n+h)+Kh^2+O(h^3)
+\tag{E5}
+\end{align*}
+</div>
+<p>and applying one step of Euler-2step with step size \(h\) (i.e. applying two steps of Euler with step size \(h/2\)) gives</p>
+<div class="displaymath">
+\begin{align*}
+A_{2,n+1} &amp;= y_n+\tfrac{h}{2}f(t_n,y_n)
++\tfrac{h}{2}f\big(t_n+\tfrac{h}{2}\,,\,y_n+\tfrac{h}{2}f(t_n,y_n)\big)\notag\\
+&amp;=\phi(t_n+h)+\tfrac{1}{2} Kh^2+O(h^3)
+\tag{E6}
+\end{align*}
+</div>
+<p>because the local truncation error introduced in the first half-step was \(K(h/2)^2+O(h^3)\) and that introduced in the second half-step was \(K(h/2)^2+O(h^3)\text{.}\) Now here is the sneaky bit. Equations (E5) and (E6) are very similar and we can eliminate all \(Kh^2\)'s by subtracting (E5) from \(2\) times (E6). This gives</p>
+<div class="displaymath">
+\begin{equation*}
+2\text{(E6)} - \text{(E5):}\qquad
+2A_{2,n+1}-A_{1,n+1} = \phi(t_n+h) +O(h^3)
+\end{equation*}
+</div>
+<p>(no more \(h^2\) term!) or</p>
+<div class="displaymath">
+\begin{equation*}
+\phi(t_n+h)= 2A_{2,n+1}-A_{1,n+1}+O(h^3)
+\tag{E7}
+\end{equation*}
+</div>
+<p>which tells us that choosing</p>
+<div class="displaymath">
+\begin{equation*}
+y_{n+1}=2A_{2,n+1}-A_{1,n+1}
+\tag{E8}
+\end{equation*}
+</div>
+<p>would give a local truncation error of order \(h^3\text{,}\) rather than the order \(h^2\) of the preliminary Euler/Euler-2step method. To convert the preliminary version to the final version, we just replace \(y_{n+1}=A_{2,n+1}\) by \(y_{n+1} = 2A_{2,n+1}-A_{1,n+1}\text{:}\)</p>
+<span class="incontext"><a href="ssec_final_E_E2.html#p-6260">in-context</a></span>
+</body>
+</html>

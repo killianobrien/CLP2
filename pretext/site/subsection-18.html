@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:15:05+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Trigonometric Substitution</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_2_ic.html"><span class="title">CLP-2 Integral Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_trigsub.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sec_trigsub.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="exercises-9.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_trigsub.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sec_trigsub.html" title="Up">Up</a><a class="next-button button toolbar-item" href="exercises-9.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_integral.html" data-scroll="chap_integral"><span class="codenumber">1</span> <span class="title">Integration</span></a></h2>
+<ul>
+<li><a href="sec_intdef.html" data-scroll="sec_intdef">Definition of the Integral</a></li>
+<li><a href="sec_def_int.html" data-scroll="sec_def_int">Basic properties of the definite integral</a></li>
+<li><a href="sec_fundamental.html" data-scroll="sec_fundamental">The Fundamental Theorem of Calculus</a></li>
+<li><a href="sec_subs.html" data-scroll="sec_subs">Substitution</a></li>
+<li><a href="sec_area.html" data-scroll="sec_area">Area between curves</a></li>
+<li><a href="sec_int_volumes.html" data-scroll="sec_int_volumes">Volumes</a></li>
+<li><a href="sec_intbyparts.html" data-scroll="sec_intbyparts">Integration by parts</a></li>
+<li><a href="sec_trigint.html" data-scroll="sec_trigint">Trigonometric Integrals</a></li>
+<li><a href="sec_trigsub.html" data-scroll="sec_trigsub">Trigonometric Substitution</a></li>
+<li><a href="sec_parfrac.html" data-scroll="sec_parfrac">Partial Fractions</a></li>
+<li><a href="sec_numeric_int.html" data-scroll="sec_numeric_int">Numerical Integration</a></li>
+<li><a href="sec_improp_int.html" data-scroll="sec_improp_int">Improper Integrals</a></li>
+<li><a href="section-13.html" data-scroll="section-13">More Integration Examples</a></li>
+</ul>
+<h2 class="link"><a href="chap_int_app.html" data-scroll="chap_int_app"><span class="codenumber">2</span> <span class="title">Applications of Integration</span></a></h2>
+<ul>
+<li><a href="sec_work.html" data-scroll="sec_work">Work</a></li>
+<li><a href="sec_avg.html" data-scroll="sec_avg">Averages</a></li>
+<li><a href="sec_com.html" data-scroll="sec_com">Centre of Mass and Torque</a></li>
+<li><a href="sec_sep_de.html" data-scroll="sec_sep_de">Separable Differential Equations</a></li>
+</ul>
+<h2 class="link"><a href="chap_seq_ser.html" data-scroll="chap_seq_ser"><span class="codenumber">3</span> <span class="title">Sequence and series</span></a></h2>
+<ul>
+<li><a href="section-18.html" data-scroll="section-18">Sequences</a></li>
+<li><a href="section-19.html" data-scroll="section-19">Series</a></li>
+<li><a href="section-20.html" data-scroll="section-20">Convergence Tests</a></li>
+<li><a href="section-21.html" data-scroll="section-21">Absolute and Conditional Convergence</a></li>
+<li><a href="section-22.html" data-scroll="section-22">Power Series</a></li>
+<li><a href="section-23.html" data-scroll="section-23">Taylor Series</a></li>
+<li><a href="sec_RatIrr.html" data-scroll="sec_RatIrr">Optional — Rational and irrational numbers</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="section-26.html" data-scroll="section-26">Pythagoras</a></li>
+<li><a href="section-27.html" data-scroll="section-27">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="section-30.html" data-scroll="section-30">Trigonometry — Special Triangles</a></li>
+<li><a href="section-31.html" data-scroll="section-31">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trigonometric Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">Highschool Material You Should be Able to Derive</a></li>
+<li><a href="section-39.html" data-scroll="section-39">Cartesian Coordinates</a></li>
+<li><a href="ap_roots.html" data-scroll="ap_roots">Roots of Polynomials</a></li>
+</ul>
+<h2 class="link"><a href="ap_complex.html" data-scroll="ap_complex"><span class="codenumber">B</span> <span class="title">Complex Numbers and Exponentials</span></a></h2>
+<ul>
+<li><a href="sec_complex_defn.html" data-scroll="sec_complex_defn">Definition and Basic Operations</a></li>
+<li><a href="sec_complex_exp.html" data-scroll="sec_complex_exp">The Complex Exponential</a></li>
+</ul>
+<h2 class="link"><a href="app_Richardson_Romberg.html" data-scroll="app_Richardson_Romberg"><span class="codenumber">C</span> <span class="title">More About Numerical Integration</span></a></h2>
+<ul>
+<li><a href="ap_Richardson.html" data-scroll="ap_Richardson">Richardson Extrapolation</a></li>
+<li><a href="ap_Romberg.html" data-scroll="ap_Romberg">Romberg Integration</a></li>
+<li><a href="ap_adaptive.html" data-scroll="ap_adaptive">Adaptive Quadrature</a></li>
+</ul>
+<h2 class="link"><a href="app_ODE_numerical.html" data-scroll="app_ODE_numerical"><span class="codenumber">D</span> <span class="title">Numerical Solution of ODE's</span></a></h2>
+<ul>
+<li><a href="ap_derivation.html" data-scroll="ap_derivation">Simple ODE Solvers — Derivation</a></li>
+<li><a href="ap_error_behaviour.html" data-scroll="ap_error_behaviour">Simple ODE Solvers —  Error Behaviour</a></li>
+<li><a href="ap_variable.html" data-scroll="ap_variable">Variable Step Size Methods</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">E</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">F</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">G</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp2-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="subsection" id="subsection-18"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.9.1</span> <span class="title">Trigonometric Substitution</span>
+</h3>
+<p id="p-1814">In this section we discuss substitutions that simplify integrals containing  square roots of the form</p>
+<div class="displaymath">
+\begin{align*}
+\sqrt{a^2-x^2} &amp;&amp; \sqrt{a^2+x^2} &amp;&amp; \sqrt{x^2-a^2}.
+\end{align*}
+</div>
+<p>When the integrand contains one of these square roots, then we can use trigonometric substitutions to eliminate them. That is, we substitute</p>
+<div class="displaymath">
+\begin{align*}
+x&amp;=a\sin u&amp;\text{or}&amp;&amp;
+x&amp;=a\tan u&amp;\text{or}&amp;&amp;
+x&amp;=a\sec u
+\end{align*}
+</div>
+<p>and then use trigonometric identities</p>
+<div class="displaymath">
+\begin{gather*}
+\sin^2\theta + \cos^2\theta =1 \quad\text{and}\quad 1+\tan^2\theta= \sec^2\theta
+\end{gather*}
+</div>
+<p>to simplify the result.  To be more precise, we can</p>
+<ul class="disc">
+<li id="li-888">eliminate \(\sqrt{a^2-x^2}\) from an integrand by substituting \(x=a\sin u\) to give<div class="displaymath">
+\begin{gather*}
+\sqrt{a^2-x^2}=\sqrt{a^2-a^2\sin^2 u}
+=\sqrt{a^2\cos^2 u}=|a\cos u|
+\end{gather*}
+</div>
+</li>
+<li id="li-889">eliminate \(\sqrt{a^2+x^2}\) from an integrand by substituting \(x=a\tan u\) to give<div class="displaymath">
+\begin{gather*}
+\sqrt{a^2+x^2}=\sqrt{a^2+a^2\tan^2 u}
+=\sqrt{a^2\sec^2 u}=|a\sec u|
+\end{gather*}
+</div>
+</li>
+<li id="li-890">eliminate \(\sqrt{x^2-a^2}\) from an integrand by substituting \(x=a\sec u\) to give<div class="displaymath">
+\begin{gather*}
+\sqrt{x^2-a^2}=\sqrt{a^2\sec^2u-a^2}
+=\sqrt{a^2\tan^2 u}=|a\tan u|
+\end{gather*}
+</div>Be very careful with signs and absolute values when using this substitution. See Example <a knowl="./knowl/eg_sec_sub.html" title="Example 1.9.6: \(\int \frac{x^2}{\sqrt{x^2-1}} \dee{x}\)">1.9.6</a>.</li>
+</ul>
+<p id="p-1815">When we have used substitutions before, we usually gave the new integration variable, \(u\text{,}\) as a function of the old integration variable \(x\text{.}\) Here we are doing the  reverse — we are giving the old integration variable, \(x\text{,}\) in terms of the new  integration variable \(u\text{.}\) We may do so, as long as we may invert to get \(u\) as a function of \(x\text{.}\) For example, with \(x=a\sin u\text{,}\) we may take \(u=\arcsin\frac{x}{a}\text{.}\) This is a good time for you to review the definitions of \(\arcsin\theta\text{,}\) \(\arctan\theta\) and \(\arcsec\theta\text{.}\) See Section 2.12, “Inverse Functions”,  of the CLP-1 text.</p>
+<p id="p-1816">As a warm-up, consider the area of a quarter of the unit circle.</p>
+<article class="example-like" id="eg_first_trigsub"><a knowl="" class="id-ref" refid="hk-eg_first_trigsub"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.9.1</span> <span class="title">Quarter of the unit circle</span>
+</h6></a></article><div id="hk-eg_first_trigsub" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-1817">Compute the area of the unit circle lying in the first quadrant.</p>
+<p id="p-1818"><em class="alert">Solution:</em> We know that the answer is \(\frac\pi4\text{,}\) but we can also compute this as an  integral — we saw this way back in Example <a knowl="./knowl/eg_quarter_circle.html" title="Example 1.1.16: Evaluating \(\int_0^1 \sqrt{1-x^2}\dee{x}\)">1.1.16</a>:</p>
+<div class="displaymath">
+\begin{align*}
+\text{area} &amp;= \int_0^1 \sqrt{1-x^2} \dee{x}
+\end{align*}
+</div>
+<ul class="disc">
+<li id="li-891">To simplify the integrand we substitute \(x=\sin u\text{.}\) With this choice  \(\diff{x}{u}=\cos u\) and so \(\dee{x}=\cos u \dee{u}\text{.}\)</li>
+<li id="li-892">We also need to translate the limits of integration and it is perhaps  easiest to do this by writing \(u\) as a function of \(x\) — namely \(u(x)=\arcsin  x\text{.}\) Hence \(u(0)=0\) and \(u(1)=\frac{\pi}{2}\text{.}\)</li>
+<li id="li-893">Hence the integral becomes<div class="displaymath">
+\begin{align*}
+\int_0^1 \sqrt{1-x^2}\dee{x}
+&amp;= \int_0^{\frac{\pi}{2}} \sqrt{1-\sin^2u} \cdot \cos u \dee{u}\\
+&amp;= \int_0^{\frac{\pi}{2}} \sqrt{\cos^2u} \cdot \cos u \dee{u}\\
+&amp;= \int_0^{\frac{\pi}{2}} \cos^2 u \dee{u}
+\end{align*}
+</div>Notice that here we have used that the <em class="emphasis">positive</em> square root \(\sqrt{\cos^2  u} = |\cos u|=\cos u\) because  \(\cos(u)\geq 0\) for \(0 \leq u \leq  \frac\pi2\text{.}\)</li>
+<li id="li-894">To go further we use the techniques of Section <a href="sec_trigint.html" class="xref" title="Section 1.8: Trigonometric Integrals">1.8</a>.<div class="displaymath">
+\begin{align*}
+\int_0^1 \sqrt{1-x^2}\dee{x}
+&amp;= \int_0^{\frac{\pi}{2}}\cos^2 u \dee{u} \qquad\qquad \text{and since $\cos^2u=\frac{1+\cos2u}{2}$}\\
+&amp;= \frac{1}{2}\int_0^{\frac{\pi}{2}} (1+\cos(2 u)) \dee{u}\\
+&amp;= \frac{1}{2} \bigg[u + \frac{1}{2}\sin(2u) \bigg]_0^{\frac{\pi}{2}}\\
+&amp;= \frac{1}{2} \left(\frac{\pi}{2}-0 + \frac{\sin\pi}{2}-\frac{\sin 0}{2} \right)\\
+&amp;= \frac{\pi}{4}\checkmark
+\end{align*}
+</div>
+</li>
+</ul></article></div>
+<article class="example-like" id="eg_trigsub2"><a knowl="" class="id-ref" refid="hk-eg_trigsub2"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.9.2</span> <span class="title">\(\int \frac{x^2}{\sqrt{1-x^2}}\dee{x}\)</span>
+</h6></a></article><div id="hk-eg_trigsub2" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-1819"><em class="alert">Solution:</em> We proceed much as we did in the previous example.</p>
+<ul class="disc">
+<li id="li-895">To simplify the integrand we substitute \(x=\sin u\text{.}\) With this choice  \(\diff{x}{u}=\cos u\) and so \(\dee{x}=\cos u \dee{u}\text{.}\) Also note that \(u=\arcsin x\text{.}\)</li>
+<li id="li-896">The integral becomes<div class="displaymath">
+\begin{align*}
+\int \frac{x^2}{\sqrt{1-x^2}}\dee{x}
+&amp;= \int \frac{\sin^2u}{\sqrt{1-\sin^2u}} \cdot \cos u \dee{u}\\
+&amp;= \int \frac{\sin^2u}{\sqrt{\cos^2u}} \cdot \cos u \dee{u}
+\end{align*}
+</div>
+</li>
+<li id="li-897">To proceed further we need to get rid of the square-root. Since \(u=\arcsin x\) has  domain \(-1\leq x \leq 1\) and range \(-\frac\pi2 \leq u \leq \frac\pi2\text{,}\) it follows  that \(\cos u \geq 0\) (since cosine is non-negative on these inputs). Hence<div class="displaymath">
+\begin{align*}
+\sqrt{\cos^2u} &amp;= \cos u &amp; \text{when $-\frac\pi2 \leq u \leq \frac\pi2 $}
+\end{align*}
+</div>
+</li>
+<li id="li-898">So our integral now becomes<div class="displaymath">
+\begin{align*}
+\int \frac{x^2}{\sqrt{1-x^2}}\dee{x}
+&amp;= \int \frac{\sin^2u}{\sqrt{\cos^2u}} \cdot \cos u \dee{u}\\
+&amp;= \int \frac{\sin^2u}{\cos u} \cdot \cos u \dee{u}\\
+&amp;= \int \sin^2u \dee{u}\\
+&amp;= \frac{1}{2} \int (1-\cos 2u) \dee{u} \qquad
+\text{by Equation }\knowl{./knowl/eq_TRGINTtrigidentityF.html}{\text{1.8.4}}\\
+&amp;= \frac{u}{2} - \frac{1}{4}\sin 2u +C\\
+&amp;= \frac{1}{2}\arcsin x - \frac{1}{4} \sin(2\arcsin x) +C
+\end{align*}
+</div>
+</li>
+<li id="li-899">We can simplify this further using a double-angle identity. Recall that \(u =  \arcsin  x\) and that \(x=\sin u\text{.}\) Then<div class="displaymath">
+\begin{align*}
+\sin 2u &amp;= 2 \sin u \cos u\\
+\\
+\end{align*}
+<p class="intertext">We can replace \(\cos u\) using \(\cos^2u = 1 - \sin^2u\text{.}\) Taking a  square-root of this formula gives \(\cos u= \pm \sqrt{1-\sin^2u}\text{.}\) We need the  positive branch here since \(\cos u \geq 0\) when \(-\frac\pi2 \leq u  \leq \frac\pi2\) (which is exactly the range of \(\arcsin x\)). Continuing along:</p>
+\begin{align*}
+\sin2u
+&amp;= 2 \sin u \cdot \sqrt{1-\sin^2 u}\\
+&amp;= 2 x \sqrt{1-x^2}
+\end{align*}
+</div>Thus our solution is<div class="displaymath">
+\begin{align*}
+\int \frac{x^2}{\sqrt{1-x^2}}\dee{x}
+&amp;= \frac{1}{2}\arcsin x - \frac{1}{4} \sin(2\arcsin x) +C\\
+&amp;= \frac{1}{2}\arcsin x - \frac{1}{2} x \sqrt{1-x^2} +C
+\end{align*}
+</div>
+</li>
+</ul></article></div>
+<p id="p-1820">The above two example illustrate the main steps of the approach. The next example is  similar, but with more complicated  limits of integration.</p>
+<article class="example-like" id="eg_INVTRIGa"><a knowl="" class="id-ref" refid="hk-eg_INVTRIGa"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.9.3</span> <span class="title">\(\int_a^r\sqrt{r^2-x^2}\dee{x}\)</span>
+</h6></a></article><div id="hk-eg_INVTRIGa" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-1821">Let's find the area of the shaded region in the sketch below.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:33.5%;margin-right:33.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/diskTip.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-1822">We'll set up the integral using vertical strips. The strip in the figure has width \(\dee{x}\) and height \(\sqrt{r^2-x^2}\text{.}\) So the area is given by the integral</p>
+<div class="displaymath">
+\begin{align*}
+\text{area} &amp;= \int_a^r \sqrt{r^2-x^2}\dee{x}
+\end{align*}
+</div>
+<p>Which is very similar to the previous example.</p>
+<p id="p-1823"><em class="alert">Solution:</em></p>
+<ul class="disc">
+<li id="li-900">To evaluate the integral we substitute<div class="displaymath">
+\begin{align*}
+x&amp;=x(u)=r\sin u &amp; \dee{x} &amp;= \diff{x}{u} \dee{u}  =r\cos u\dee{u}
+\end{align*}
+</div>It is also helpful to write \(u\) as a function of \(x\) — namely \(u  =\arcsin\frac{x}{r}\text{.}\)</li>
+<li id="li-901">The integral runs from \(x=a\) to \(x=r\text{.}\) These correspond to<div class="displaymath">
+\begin{align*}
+u(r) &amp;= \arcsin \frac{r}{r} = \arcsin 1 = \frac{\pi}{2}\\
+u(a) &amp;= \arcsin \frac{a}{r} \quad \text{ which does not simplify further}
+\end{align*}
+</div>
+</li>
+<li id="li-902">The integral then becomes<div class="displaymath">
+\begin{align*}
+\int_a^r \sqrt{r^2-x^2} \dee{x}
+&amp;= \int_{\arcsin(a/r)}^{\frac\pi2} \sqrt{r^2-r^2\sin^2u} \cdot r \cos u \dee{u}\\
+&amp;= \int_{\arcsin(a/r)}^{\frac\pi2} r^2 \sqrt{1-\sin^2u} \cdot \cos u \dee{u}\\
+&amp;= r^2\int_{\arcsin(a/r)}^{\frac\pi2} \sqrt{\cos^2u} \cdot \cos u \dee{u}
+\end{align*}
+</div>To proceed further (as we did in Examples <a knowl="./knowl/eg_first_trigsub.html" title="Example 1.9.1: Quarter of the unit circle">1.9.1</a> and <a knowl="./knowl/eg_trigsub2.html" title="Example 1.9.2: \(\int \frac{x^2}{\sqrt{1-x^2}}\dee{x}\)">1.9.2</a>)  we need to think about whether \(\cos u\) is positive or negative.</li>
+<li id="li-903">Since \(a\) (as shown in the diagram) satisfies \(0 \leq a \leq r\text{,}\) we know that  \(u(a)\) lies between \(\arcsin(0)=0\) and \(\arcsin(1)=\frac\pi2\text{.}\) Hence the variable \(u\)  lies between \(0\) and \(\frac\pi2\text{,}\) and on this range \(\cos u \geq 0\text{.}\) This allows us  get rid of the square-root:<div class="displaymath">
+\begin{gather*}
+\sqrt{\cos^2u} = |\cos u| = \cos u
+\end{gather*}
+</div>
+</li>
+<li id="li-904">Putting this fact into our integral we get<div class="displaymath">
+\begin{align*}
+\int_a^r \sqrt{r^2-x^2} \dee{x}
+&amp;= r^2\int_{\arcsin(a/r)}^{\frac\pi2} \sqrt{\cos^2u} \cdot \cos u \dee{u}\\
+&amp;= r^2 \int_{\arcsin(a/r)}^{\frac\pi2} \cos^2 u \dee{u}\\
+\end{align*}
+<p class="intertext">Recall the identity \(\cos^2u=\frac{1+\cos2u}{2}\) from Section <a href="sec_trigint.html" class="xref" title="Section 1.8: Trigonometric Integrals">1.8</a></p>
+\begin{align*}
+&amp;= \frac{r^2}{2} \int_{\arcsin(a/r)}^{\frac\pi2} (1 +\cos 2u) \dee{u}\\
+&amp;= \frac{r^2}{2} \bigg[u + \frac{1}{2}\sin(2u) \bigg]_{\arcsin(a/r)}^{\frac\pi2}\\
+&amp;= \frac{r^2}{2} \left(\frac{\pi}{2} +\frac{1}{2}\sin\pi - \arcsin(a/r) -
+\frac{1}{2}\sin( 2\arcsin(a/r)) \right)\\
+&amp;= \frac{r^2}{2} \left(\frac{\pi}{2} - \arcsin(a/r) - \frac{1}{2}\sin( 2\arcsin(a/r))
+\right)
+\end{align*}
+</div>Oof! But there is a little further to go before we are done.</li>
+<li id="li-905">
+<p id="p-1824">We can again simplify the term \(\sin( 2\arcsin(a/r))\) using a double angle  identity. Set \(\theta = \arcsin(a/r)\text{.}\) Then \(\theta\) is the angle in the triangle  on the right below. By the double angle formula for \(\sin(2\theta)\)  (Equation <a knowl="./knowl/eq_TRGINTtrigidentityB.html" title="Equation 1.8.2">1.8.2</a>)</p>
+<div class="displaymath">
+\begin{align*}
+\sin(2\theta)&amp;=2\sin\theta\ \cos\theta\\
+&amp;=2\ \frac{a}{r}\ \frac{\sqrt{r^2-a^2}}{r}.
+\end{align*}
+</div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:33.5%;margin-right:33.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/triangleAsin.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+<li id="li-906">So finally the area is<div class="displaymath">
+\begin{align*}
+\text{area} &amp;= \int_a^r \sqrt{r^2-x^2} \dee{x}\\
+&amp;= \frac{r^2}{2} \left(\frac{\pi}{2} - \arcsin(a/r) - \frac{1}{2}\sin( 2\arcsin(a/r))
+\right)\\
+&amp;= \frac{\pi r^2}{4} - \frac{r^2}{2} \arcsin(a/r) - \frac{a}{2} \sqrt{r^2-a^2}
+\end{align*}
+</div>
+</li>
+<li id="li-907">
+<p id="p-1825">This is a relatively complicated formula, but we can make some “reasonableness” checks, by looking at special values of \(a\text{.}\)</p>
+<ul class="circle">
+<li id="li-908">If \(a=0\) the shaded region, in the figure at the beginning of this example,  is exactly one quarter of a disk of radius \(r\) and so has area \(\frac{1}{4}\pi r^2\text{.}\)  Substituting \(a=0\) into our answer does indeed give \(\frac{1}{4}\pi r^2\text{.}\)</li>
+<li id="li-909">At the other extreme, if \(a=r\text{,}\) the shaded region disappears completely and so has  area \(0\text{.}\) Subbing \(a=r\) into our answer does indeed give \(0\text{,}\) since \(\arcsin  1=\frac{\pi}{2}\text{.}\)</li>
+</ul>
+</li>
+</ul></article></div>
+<article class="example-like" id="eg_INVTRIGaa"><a knowl="" class="id-ref" refid="hk-eg_INVTRIGaa"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.9.4</span> <span class="title">\(\int_a^r x\sqrt{r^2-x^2}\dee{x}\)</span>
+</h6></a></article><div id="hk-eg_INVTRIGaa" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-1826">The integral \(\int_a^r x\sqrt{r^2-x^2}\dee{x}\) looks a lot like the integral we just did in the previous 3 examples. It can also be evaluated  using the trigonometric substitution \(x= r\sin u\) — but that is unnecessarily  complicated. Just because you have now learned how to use trigonometric substitution <a knowl="" class="id-ref" refid="hk-fn-64" id="fn-64"><sup> 1 </sup></a><span id="hk-fn-64" class="hidden-content tex2jax_ignore"><span class="footnote">To paraphrase the Law of the Instrument, possibly Mark Twain and  definitely some psychologists, when you have a shiny new hammer, everything looks like a  nail.</span></span> doesn't mean that you should forget everything you learned before.</p>
+<p id="p-1827"><em class="alert">Solution:</em> This integral is <em class="emphasis">much</em> more easily evaluated using the simple substitution \(u=r^2-x^2\text{.}\)</p>
+<ul class="disc"><li id="li-910">Set \(u=r^2-x^2\text{.}\) Then \(\dee{u}=-2x\dee{x}\text{,}\) and so<div class="displaymath">
+\begin{align*}
+\int_a^r x\sqrt{r^2-x^2}\dee{x} &amp;=\int_{r^2-a^2}^0 \sqrt{u}\ \frac{\dee{u}}{-2}\\
+&amp;=-\frac{1}{2}\bigg[\frac{u^{3/2}}{3/2}\bigg]_{r^2-a^2}^0\\
+&amp;=\frac{1}{3}\big[r^2-a^2\big]^{3/2}
+\end{align*}
+</div>
+</li></ul></article></div>
+<p id="p-1828">Enough sines and cosines — let us try a tangent substitution.</p>
+<article class="example-like" id="eg_INVTRIGb"><a knowl="" class="id-ref" refid="hk-eg_INVTRIGb"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.9.5</span> <span class="title">\(\int\frac{\dee{x}}{x^2\sqrt{9+x^2}}\)</span>
+</h6></a></article><div id="hk-eg_INVTRIGb" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-1829"><em class="alert">Solution:</em> As per our guidelines at the start of this section, the presence of the square root  term \(\sqrt{3^2+x^2}\) tells us to substitute \(x=3\tan u\text{.}\)</p>
+<ul class="disc">
+<li id="li-911">Substitute<div class="displaymath">
+\begin{align*}
+x&amp;=3\tan u &amp;
+\dee{x} &amp;= 3\sec^2 u\dee{u}
+\end{align*}
+</div>This allows us to remove the square root:<div class="displaymath">
+\begin{align*}
+\sqrt{9+x^2}
+&amp;=\sqrt{9+9\tan^2u}
+=3\sqrt{1+\tan^2u}
+=3\sqrt{\sec^2 u}
+=3|\sec u|
+\end{align*}
+</div>
+</li>
+<li id="li-912">Hence our integral becomes<div class="displaymath">
+\begin{align*}
+\int \frac{\dee{x}}{x^2\sqrt{9+x^2}}
+&amp;= \int \frac{3\sec^2 u}{9\tan^2u \cdot 3|\sec u|} \dee{u}
+\end{align*}
+</div>
+</li>
+<li id="li-913">To remove the absolute value we must consider the range of values of \(u\) in  the integral. Since \(x=3\tan u\) we have \(u = \arctan(x/3)\text{.}\) The range <a knowl="" class="id-ref" refid="hk-fn-65" id="fn-65"><sup> 2 </sup></a><span id="hk-fn-65" class="hidden-content tex2jax_ignore"><span class="footnote">To be  pedantic, we mean the range of the “standard” arctangent function or its “principle  value”. One can define other arctangent functions with different ranges.</span></span> of arctangent  is \(-\frac{\pi}{2} \leq \arctan  \leq \frac{\pi}{2}\) and so \(u=\arctan(x/3)\)  will always like between \(-\frac{\pi}{2}\) and \(+\frac{\pi}{2}\text{.}\) Hence \(\cos u\)  will always be positive, which in turn implies that \(|\sec u|=\sec u\text{.}\)</li>
+<li id="li-914">Using this fact our integral becomes:<div class="displaymath">
+\begin{align*}
+\int \frac{\dee{x}}{x^2\sqrt{9+x^2}}
+&amp;= \int \frac{3\sec^2 u}{27 \tan^2u |\sec u|} \dee{u}\\
+&amp;= \frac{1}{9}\int \frac{\sec u}{\tan^2u} \dee{u} &amp; \text{since $\sec u  \gt  0$}
+\end{align*}
+</div>
+</li>
+<li id="li-915">Rewrite this in terms of sine and cosine<div class="displaymath">
+\begin{align*}
+\int \frac{\dee{x}}{x^2\sqrt{9+x^2}}
+&amp;= \frac{1}{9}\int \frac{\sec u}{\tan^2u} \dee{u}\\
+&amp;= \frac{1}{9} \int \frac{1}{\cos u}\cdot \frac{\cos^2u}{\sin^2 u}\dee{u}
+= \frac{1}{9} \int \frac{\cos u}{\sin^2 u}\dee{u}\\
+\end{align*}
+<p class="intertext">Now we can use the substitution rule with \(y=\sin u\) and \(\dee{y}=\cos u\dee{u}\)</p>
+\begin{align*}
+&amp;= \frac{1}{9} \int \frac{\dee{y}}{y^2} \\
+&amp;= -\frac{1}{9y} +C \\
+&amp;= -\frac{1}{9\sin u}+C
+\end{align*}
+</div>
+</li>
+<li id="li-916">
+<p id="p-1830">The original integral was a function of \(x\text{,}\) so we still have to rewrite \(\sin u\) in terms of \(x\text{.}\) Remember that \(x=3 \tan u\) or  \(u=\arctan(x/3)\text{.}\) So \(u\) is the angle shown in the triangle below and we can read off the triangle that</p>
+<div class="displaymath">
+\begin{align*}
+\sin u &amp;= \frac{x}{\sqrt{9+x^2}}\\
+\implies \int\frac{\dee{x}}{x^2\sqrt{9+x^2}} &amp;= -\frac{\sqrt{9+x^2}}{9x}  +C
+\end{align*}
+</div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:33.5%;margin-right:33.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/triangleAtan.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+</ul></article></div>
+<article class="example-like" id="eg_sec_sub"><a knowl="" class="id-ref" refid="hk-eg_sec_sub"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.9.6</span> <span class="title">\(\int \frac{x^2}{\sqrt{x^2-1}} \dee{x}\)</span>
+</h6></a></article><div id="hk-eg_sec_sub" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-1831"><em class="alert">Solution:</em> This one requires a secant substitution, but otherwise is very similar to those above.</p>
+<ul class="disc">
+<li id="li-917">Set \(x = \sec u\) and \(\dee{x}=\sec u \tan u \dee{u}\text{.}\) Then<div class="displaymath">
+\begin{align*}
+\int \frac{x^2}{\sqrt{x^2-1}} \dee{x}
+&amp;= \int \frac{\sec^2 u}{\sqrt{\sec^2u-1}} \sec u \tan u \dee{u}\\
+&amp;= \int \sec^3 u \cdot \frac{ \tan u}{\sqrt{\tan^2u}}  \dee{u}
+\qquad \text{since $\tan^2u = \sec^2u-1$}\\
+&amp;= \int \sec^3u \cdot \frac{\tan u}{|\tan u|} \dee{u}
+\end{align*}
+</div>
+</li>
+<li id="li-918">
+<p id="p-1832">As before we need to consider the range of \(u\) values in order to determine the  sign of \(\tan u\text{.}\) Notice that the integrand is only defined when either \(x \lt -1\) or \(x \gt 1\text{;}\)  thus we should treat the cases \(x \lt -1\) and \(x \gt 1\) separately. Let us assume that \(x \gt 1\) and  we will come back to the case \(x \lt -1\) at the end of the example.</p>
+<p id="p-1833">When \(x \gt 1\text{,}\) our \(u=\arcsec x\) takes values in \((0,\frac\pi2)\text{.}\) This follows  since when \(0 \lt u \lt \frac\pi2\text{,}\) we have \(0 \lt \cos u \lt 1\) and so \(\sec u \gt 1\text{.}\) Further, when  \(0 \lt u \lt \frac\pi2\text{,}\) we have \(\tan u \gt 0\text{.}\) Thus \(|\tan u|=\tan u\text{.}\)</p>
+</li>
+<li id="li-919">Back to our integral, when \(x&gt; 1\text{:}\)<div class="displaymath">
+\begin{align*}
+\int \frac{x^2}{\sqrt{x^2-1}} \dee{x}
+&amp;= \int \sec^3u \cdot \frac{\tan u}{|\tan u|} \dee{u}\\
+&amp;= \int \sec^3u \dee{u} &amp; \text{since } \tan u\geq 0\\
+\end{align*}
+<p class="intertext">This is exactly Example <a knowl="./knowl/eg_TRGINToptd.html" title="Example 1.8.22: \(\int \sec^3 x\dee{x}\) — by trickery">1.8.22</a></p>
+\begin{align*}
+&amp;= \frac{1}{2}\sec u \tan u + \frac{1}{2} \log| \sec u + \tan u| +C
+\end{align*}
+</div>
+</li>
+<li id="li-920">Since we started with a function of \(x\) we need to finish with one. We know that  \(\sec u = x\) and then we can use trig identities<div class="displaymath">
+\begin{align*}
+\tan^2 u &amp;= \sec^2 u - 1 = x^2-1 &amp; \text{so }
+\tan u &amp;= \pm \sqrt{x^2-1}\\
+\end{align*}
+<p class="intertext">but we know</p>
+\begin{align*}
+\tan u &amp; \geq 0 &amp; \text{so }
+\tan u &amp;= \sqrt{x^2-1}
+\end{align*}
+</div>Thus<div class="displaymath">
+\begin{align*}
+\int \frac{x^2}{\sqrt{x^2-1}} \dee{x}
+&amp;= \frac{1}{2}x\sqrt{x^2-1} + \frac{1}{2}\log| x +\sqrt{x^2-1}| +C
+\end{align*}
+</div>
+</li>
+<li id="li-921">The above holds when \(x \gt 1\text{.}\) We can confirm that it is also true when \(x \lt -1\) by  showing the right-hand side is a valid antiderivative of the integrand. To do so we must  differentiate our answer. Notice that we do not need to consider the sign of  \(x+\sqrt{x^2-1}\) when we differentiate since we have already seen that<div class="displaymath">
+\begin{align*}
+\diff{}{x} \log|x| &amp;= \frac{1}{x}
+\end{align*}
+</div>when either \(x \lt 0\) or \(x \gt 0\text{.}\) So the following computation applies to both \(x \gt 1\) and  \(x \lt -1\text{.}\) The expressions become quite long so we differentiate each term  separately:<div class="displaymath">
+\begin{align*}
+\diff{}{x} \left[ x\sqrt{x^2-1} \right]
+&amp;=\left[ \sqrt{x^2-1} +  \frac{x^2}{\sqrt{x^2-1}} \right]\\
+&amp;= \frac{1}{\sqrt{x^2-1}} \left[(x^2-1) + x^2 \right]\\
+\diff{}{x} \log\bigg| x +\sqrt{x^2-1} \bigg|
+&amp;= \frac{1}{x+\sqrt{x^2-1}} \cdot \left[ 1+\frac{x}{\sqrt{x^2-1}} \right]\\
+&amp;= \frac{1}{x+\sqrt{x^2-1}} \cdot \frac{x+\sqrt{x^2-1}}{\sqrt{x^2-1}}\\
+&amp;= \frac{1}{\sqrt{x^2-1}}
+\end{align*}
+</div>Putting things together then gives us<div class="displaymath">
+\begin{align*}
+&amp; \diff{}{x} \left[ \frac{1}{2}x\sqrt{x^2-1} + \frac{1}{2}\log| x +\sqrt{x^2-1}| +C  \right]\\
+&amp;= \frac{1}{2\sqrt{x^2-1}} \left[(x^2-1) + x^2 + 1 \right]+0\\
+&amp;= \frac{x^2}{\sqrt{x^2-1}}
+\end{align*}
+</div>This tells us that our answer for \(x \gt 1\) is also valid when \(x \lt -1\) and so<div class="displaymath">
+\begin{align*}
+\int \frac{x^2}{\sqrt{x^2-1}} \dee{x} &amp;= \frac{1}{2}x\sqrt{x^2-1} + \frac{1}{2}\log| x +\sqrt{x^2-1}| +C
+\end{align*}
+</div>when \(x \lt -1\) and when \(x \gt 1\text{.}\)</li>
+</ul>
+<p id="p-1834">In this example, we were lucky. The answer that we derived for \(x&gt;1\) happened to be also valid for \(x&lt;-1\text{.}\) This does not always happen with the \(x=a\,\sec u\) substitution. When it doesn't, we have to apply separate \(x&gt;a\) and \(x&lt;-a\) analyses that are very similar to our \(x&gt;1\) analysis above. Of course that doubles the tedium. So in the CLP-2 problem book, we will not pose questions that require separate \(x&gt;a\) and \(x&lt;-a\) computations.</p></article></div>
+<p id="p-1835">The method, as we have demonstrated it above, works when our integrand contains the  square root of very specific families of quadratic polynomials. In fact, the same  method works for more general quadratic polynomials — all we need to do is complete  the square <a knowl="" class="id-ref" refid="hk-fn-66" id="fn-66"><sup> 3 </sup></a><span id="hk-fn-66" class="hidden-content tex2jax_ignore"><span class="footnote">If you have not heard of “completing the square” don't worry. It  is not a difficult method and it will only take you a few moments to learn. It refers to  rewriting a quadratic polynomial \(P(x) = ax^2 + bx + c\) as \(P(x)= a(x+d)^2 +e\) for new constants \(d,e\text{.}\)</span></span>.</p>
+<article class="example-like" id="eg_INVTRIGc"><a knowl="" class="id-ref" refid="hk-eg_INVTRIGc"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.9.7</span> <span class="title">\(\int_3^5\frac{\sqrt{x^2-2x-3}}{x-1}\dee{x}\)</span>
+</h6></a></article><div id="hk-eg_INVTRIGc" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-1836">This time we have an integral with a square root in the integrand, but the argument of the square root, while a quadratic function of \(x\text{,}\) is not in  one of the standard forms \(\sqrt{a^2-x^2}\text{,}\) \(\sqrt{a^2+x^2}\text{,}\) \(\sqrt{x^2-a^2}\text{.}\) The reason that it is not in one of those forms is that the argument, \(x^2-2x-3\text{,}\) contains a term , namely \(-2x\) that is of degree one in \(x\text{.}\) So we try to manipulate it into one of the standard forms by completing the square.</p>
+<p id="p-1837"><em class="alert">Solution:</em></p>
+<ul class="disc">
+<li id="li-922">We first rewrite the quadratic polynomial \(x^2-2x-3\) in the form \((x-a)^2+b\) for  some constants \(a,b\text{.}\) The easiest way to do this is to expand both expressions and  compare coefficients of \(x\text{:}\)<div class="displaymath">
+\begin{align*}
+x^2-2x-3 &amp;= (x-a)^2+b = (x^2-2ax+a^2)+b
+\end{align*}
+</div>So — if we choose \(-2a=-2\) (so the coefficients of \(x^1\) match) and \(a^2+b=-3\) (so the  coefficients of \(x^0\) match), then both expressions are equal. Hence we set \(a=1\) and  \(b=-4\text{.}\) That is<div class="displaymath">
+\begin{align*}
+x^2-2x-3 &amp;= (x-1)^2-4
+\end{align*}
+</div>Many of you may have seen this method when learning to sketch parabolas.</li>
+<li id="li-923">Once this is done we can convert the square root of the integrand into a standard  form by making the simple substitution \(y=x-1\text{.}\) Here goes<div class="displaymath">
+\begin{align*}
+&amp; \int_3^5\frac{\sqrt{x^2-2x-3}}{x-1}\dee{x}\\
+&amp;=\int_3^5\frac{\sqrt{(x-1)^2-4}}{x-1}\dee{x}\\
+&amp;=\int_2^4\frac{\sqrt{y^2-4}}{y}\dee{y}
+&amp;\text{with } y=x-1, \dee{y} = \dee{x}\\
+&amp;=\int_0^{\pi/3}\frac{\sqrt{4\sec^2u-4}}{2\sec u}\ 2\sec u\tan u\dee{u}
+&amp;\text{with } y=2\sec u\\
+&amp;&amp; \text{and }\dee{y} = 2\sec u\tan u\dee{u}
+\end{align*}
+</div>Notice that we could also do this in fewer steps by setting \((x-1)=2\sec u,  \dee{x}=2\sec u\tan u\dee{u}\text{.}\)</li>
+<li id="li-924">
+<p id="p-1838">To get the limits of integration we used that</p>
+<ul class="circle">
+<li id="li-925">the value of \(u\) that corresponds to \(y=2\) obeys \(2=y=2\sec u=\frac{2}{\cos u}\) or \(\cos u=1\text{,}\) so that \(u=0\) works and</li>
+<li id="li-926">the value of \(u\) that corresponds to \(y=4\) obeys \(4=y=2\sec u=\frac{2}{\cos u}\) or \(\cos u=\half\text{,}\) so that  \(u=\frac{\pi}{3}\) works.</li>
+</ul>
+</li>
+<li id="li-927">Now returning to the evaluation of the integral, we simplify and continue.<div class="displaymath">
+\begin{align*}
+\int_3^5\frac{\sqrt{x^2-2x-3}}{x-1}\dee{x}
+&amp;=\int_0^{\pi/3} 2\sqrt{\sec^2 u -1}\ \tan u\dee{u}\\
+&amp;=2\int_0^{\pi/3} \tan^2 u\dee{u}
+\qquad\text{since } \sec^2u=1+\tan^2u\\
+\end{align*}
+<p class="intertext">In taking the square root of \(\sec^2u-1=\tan^2u\) we used that \(\tan u\ge 0\) on  the range \(0\le u\le \frac{\pi}{3}\text{.}\)</p>
+\begin{align*}
+&amp;=2\int_0^{\pi/3}\big[ \sec^2 u-1\big]\dee{u}
+\qquad\quad\text{since $\sec^2u=1+\tan^2u$, again}\\
+&amp;=2\Big[\tan u - u\Big]_0^{\pi/3}\\
+&amp;=2\big[\sqrt{3}-\frac{\pi}{3}\big]
+\end{align*}
+</div>
+</li>
+</ul></article></div></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

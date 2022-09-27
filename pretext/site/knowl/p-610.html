@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:22+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Fortunately we can use the basic properties of integrals  (Theorem <a knowl="./knowl/thm_Intdomain.html" title="Theorem 1.2.3: Arithmetic for the Domain of Integration">1.2.3</a>(b) and (c)) to split \(\int_x^{x^2} e^{-t^2}\dee{t}\)  into pieces whose derivatives we already know.</p>
+<div class="displaymath">
+\begin{align*}
+\int_x^{x^2} e^{-t^2}\dee{t}
+&amp;=\int_x^0 e^{-t^2}\dee{t}+\int_0^{x^2} e^{-t^2}\dee{t}
+&amp;\text{by Theorem }\knowl{./knowl/thm_Intdomain.html}{\text{1.2.3}}\text{(c)}\\
+&amp;=-\int^x_0 e^{-t^2}\dee{t}+\int_0^{x^2} e^{-t^2}\dee{t}
+&amp;\text{by Theorem }\knowl{./knowl/thm_Intdomain.html}{\text{1.2.3}}\text{(b)}
+\end{align*}
+</div>
+<p>With this pre-processing, both integrals are of the right form. Using what  we have learned in the the previous two examples,</p>
+<div class="displaymath">
+\begin{align*}
+\diff{}{x}\int_x^{x^2} e^{-t^2}\dee{t}
+&amp;=\diff{}{x}\left( -\int_0^{x} e^{-t^2}\dee{t} + \int_0^{x^2} e^{-t^2}\dee{t}  \right)\\
+&amp;=-\diff{}{x}\int^x_0 e^{-t^2}\dee{t} +\diff{}{x}\int_0^{x^2} e^{-t^2}\dee{t}\\
+&amp;=- e^{-x^2} +2x e^{-x^4}
+\end{align*}
+</div>
+<span class="incontext"><a href="subsection-10.html#p-610">in-context</a></span>
+</body>
+</html>

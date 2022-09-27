@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:22:28+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Set \(a_n= \frac{\sqrt{n+1}}{n^2-2n+3}\text{.}\)  We first try to develop some  intuition about the behaviour of \(a_n\) for large \(n\) and then we confirm that our intuition was correct.</p>
+<ul class="disc">
+<li>
+<em class="emphasis">Step 1: Develop intuition.</em>  When \(n\gg 1\text{,}\) the numerator \(\sqrt{n+1}\approx \sqrt{n}\text{,}\) and the denominator \(n^2-2n+3\approx n^2\) so that  \(a_n\approx \frac{\sqrt{n}}{n^2}=\frac{1}{n^{3/2}}\) and it looks like our series should converge by Example <a knowl="./knowl/eg_SRpTest.html" title="Example 3.3.6: The \(p\) test:  \(\sum\limits_{n=1}^\infty\frac{1}{n^p}\)">3.3.6</a> with \(p=\frac{3}{2}\text{.}\)</li>
+<li>
+<em class="emphasis">Step 2: Verify intuition.</em> To confirm our intuition we set \(b_n=\frac{1}{n^{3/2}}\) and compute the limit<div class="displaymath">
+\begin{equation*}
+\lim_{n\rightarrow\infty}\frac{a_n}{b_n}
+=\lim_{n\rightarrow\infty}\frac{\frac{\sqrt{n+1}}{n^2-2n+3}}{\frac{1}{n^{3/2}}}
+=\lim_{n\rightarrow\infty}\frac{n^{3/2}\sqrt{n+1}}{n^2-2n+3}
+\end{equation*}
+</div>Again it is a good idea to factor the dominant term out of the numerator and the dominant term out of the denominator.<div class="displaymath">
+\begin{equation*}
+\lim_{n\rightarrow\infty}\frac{a_n}{b_n}
+=\lim_{n\rightarrow\infty}\frac{n^2\sqrt{1+\frac{1}{n}}}
+{n^2\big(1-\frac{2}{n}+\frac{3}{n^2}\big)}
+=\lim_{n\rightarrow\infty}\frac{\sqrt{1+\frac{1}{n}}}
+{1-\frac{2}{n}+\frac{3}{n^2}}
+=1
+\end{equation*}
+</div>We already know that the series \(\sum_{n=1}^\infty b_n =\sum_{n=1}^\infty\frac{1}{n^{3/2}}\) converges by Example <a knowl="./knowl/eg_SRpTest.html" title="Example 3.3.6: The \(p\) test:  \(\sum\limits_{n=1}^\infty\frac{1}{n^p}\)">3.3.6</a> with \(p=\frac{3}{2}\text{.}\) So our series converges by the limit comparison test, Theorem <a knowl="./knowl/thm_SRlimitComparison.html" title="Theorem 3.3.11: Limit Comparison Theorem">3.3.11</a>.</li>
+</ul>
+<span class="incontext"><a href="subsection-44.html#p-4815">in-context</a></span>
+</body>
+</html>

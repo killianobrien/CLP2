@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:14:42+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Exercises</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_2_ic.html"><span class="title">CLP-2 Integral Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="ssec_careful_defn.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sec_intdef.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_def_int.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="ssec_careful_defn.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sec_intdef.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_def_int.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_integral.html" data-scroll="chap_integral"><span class="codenumber">1</span> <span class="title">Integration</span></a></h2>
+<ul>
+<li><a href="sec_intdef.html" data-scroll="sec_intdef">Definition of the Integral</a></li>
+<li><a href="sec_def_int.html" data-scroll="sec_def_int">Basic properties of the definite integral</a></li>
+<li><a href="sec_fundamental.html" data-scroll="sec_fundamental">The Fundamental Theorem of Calculus</a></li>
+<li><a href="sec_subs.html" data-scroll="sec_subs">Substitution</a></li>
+<li><a href="sec_area.html" data-scroll="sec_area">Area between curves</a></li>
+<li><a href="sec_int_volumes.html" data-scroll="sec_int_volumes">Volumes</a></li>
+<li><a href="sec_intbyparts.html" data-scroll="sec_intbyparts">Integration by parts</a></li>
+<li><a href="sec_trigint.html" data-scroll="sec_trigint">Trigonometric Integrals</a></li>
+<li><a href="sec_trigsub.html" data-scroll="sec_trigsub">Trigonometric Substitution</a></li>
+<li><a href="sec_parfrac.html" data-scroll="sec_parfrac">Partial Fractions</a></li>
+<li><a href="sec_numeric_int.html" data-scroll="sec_numeric_int">Numerical Integration</a></li>
+<li><a href="sec_improp_int.html" data-scroll="sec_improp_int">Improper Integrals</a></li>
+<li><a href="section-13.html" data-scroll="section-13">More Integration Examples</a></li>
+</ul>
+<h2 class="link"><a href="chap_int_app.html" data-scroll="chap_int_app"><span class="codenumber">2</span> <span class="title">Applications of Integration</span></a></h2>
+<ul>
+<li><a href="sec_work.html" data-scroll="sec_work">Work</a></li>
+<li><a href="sec_avg.html" data-scroll="sec_avg">Averages</a></li>
+<li><a href="sec_com.html" data-scroll="sec_com">Centre of Mass and Torque</a></li>
+<li><a href="sec_sep_de.html" data-scroll="sec_sep_de">Separable Differential Equations</a></li>
+</ul>
+<h2 class="link"><a href="chap_seq_ser.html" data-scroll="chap_seq_ser"><span class="codenumber">3</span> <span class="title">Sequence and series</span></a></h2>
+<ul>
+<li><a href="section-18.html" data-scroll="section-18">Sequences</a></li>
+<li><a href="section-19.html" data-scroll="section-19">Series</a></li>
+<li><a href="section-20.html" data-scroll="section-20">Convergence Tests</a></li>
+<li><a href="section-21.html" data-scroll="section-21">Absolute and Conditional Convergence</a></li>
+<li><a href="section-22.html" data-scroll="section-22">Power Series</a></li>
+<li><a href="section-23.html" data-scroll="section-23">Taylor Series</a></li>
+<li><a href="sec_RatIrr.html" data-scroll="sec_RatIrr">Optional — Rational and irrational numbers</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="section-26.html" data-scroll="section-26">Pythagoras</a></li>
+<li><a href="section-27.html" data-scroll="section-27">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="section-30.html" data-scroll="section-30">Trigonometry — Special Triangles</a></li>
+<li><a href="section-31.html" data-scroll="section-31">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trigonometric Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">Highschool Material You Should be Able to Derive</a></li>
+<li><a href="section-39.html" data-scroll="section-39">Cartesian Coordinates</a></li>
+<li><a href="ap_roots.html" data-scroll="ap_roots">Roots of Polynomials</a></li>
+</ul>
+<h2 class="link"><a href="ap_complex.html" data-scroll="ap_complex"><span class="codenumber">B</span> <span class="title">Complex Numbers and Exponentials</span></a></h2>
+<ul>
+<li><a href="sec_complex_defn.html" data-scroll="sec_complex_defn">Definition and Basic Operations</a></li>
+<li><a href="sec_complex_exp.html" data-scroll="sec_complex_exp">The Complex Exponential</a></li>
+</ul>
+<h2 class="link"><a href="app_Richardson_Romberg.html" data-scroll="app_Richardson_Romberg"><span class="codenumber">C</span> <span class="title">More About Numerical Integration</span></a></h2>
+<ul>
+<li><a href="ap_Richardson.html" data-scroll="ap_Richardson">Richardson Extrapolation</a></li>
+<li><a href="ap_Romberg.html" data-scroll="ap_Romberg">Romberg Integration</a></li>
+<li><a href="ap_adaptive.html" data-scroll="ap_adaptive">Adaptive Quadrature</a></li>
+</ul>
+<h2 class="link"><a href="app_ODE_numerical.html" data-scroll="app_ODE_numerical"><span class="codenumber">D</span> <span class="title">Numerical Solution of ODE's</span></a></h2>
+<ul>
+<li><a href="ap_derivation.html" data-scroll="ap_derivation">Simple ODE Solvers — Derivation</a></li>
+<li><a href="ap_error_behaviour.html" data-scroll="ap_error_behaviour">Simple ODE Solvers —  Error Behaviour</a></li>
+<li><a href="ap_variable.html" data-scroll="ap_variable">Variable Step Size Methods</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">E</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">F</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">G</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp2-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="exercises" id="exercises-1"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.8</span> <span class="title">Exercises</span>
+</h3>
+<div class="exercisegroup" id="exercisegroup-1">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 1</alert></p></span></h6>
+<div class="introduction" id="introduction-4"></div>
+<div class="introduction" id="introduction-5"><p id="p-138">For Questions <a knowl="./knowl/concept_int_a.html" title="Exercise 1.1.8.1">1</a> through <a knowl="./knowl/concept_int_b.html" title="Exercise 1.1.8.5">5</a>, we want you to develop an understanding of the model we are using to define an integral: we approximate the area under a curve by bounding it between rectangles. Later, we will learn more sophisticated methods of integration, but they are all based on this simple concept.</p></div>
+<div class="introduction" id="introduction-6"><p id="p-177">In Questions <a knowl="./knowl/p1_1sigmaa.html" title="Exercise 1.1.8.6">6</a> through <a knowl="./knowl/p1_1sigmab.html" title="Exercise 1.1.8.10">10</a>, we practice using sigma notation. There are many ways to write a given sum in sigma notation. You can practice finding several, and deciding which looks the clearest.</p></div>
+<div class="introduction" id="introduction-7"><p id="p-212">Questions <a knowl="./knowl/p1_1Riemanna.html" title="Exercise 1.1.8.11">11</a> through <a knowl="./knowl/p1_1Riemannb.html" title="Exercise 1.1.8.15: (✳)">15</a> are meant to give you practice interpreting the formulas in Definition <a knowl="./knowl/def_INTthreeRiemannSums.html" title="Definition 1.1.11">1.1.11</a>. The formulas might look complicated at first, but if you understand what each piece means, they are easy to learn.</p></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like" id="concept_int_a"><h6 class="heading">
+<span class="codenumber">1</span> </h6>
+<p id="p-139">Give a range of possible values for the shaded area in the picture below.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-28.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><article class="exercise-like boxed" id="exercise-2"><h6 class="heading">
+<span class="codenumber">2</span> </h6>
+<p id="p-146">Give a range of possible values for the shaded area in the picture below.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-31.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><article class="exercise-like" id="exercise-3"><h6 class="heading">
+<span class="codenumber">3</span> </h6>
+<p id="p-155">Using rectangles, find a lower and upper bound for \(\displaystyle\int_1^3 \dfrac{1}{2^x}\dee{x}\) that differ by at most 0.2 square units.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:33.5%;margin-right:33.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-36.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><article class="exercise-like" id="exercise-4"><h6 class="heading">
+<span class="codenumber">4</span> </h6>
+<p id="p-166">Let \(f(x)\) be a function that is <em class="emphasis">decreasing</em> from \(x=0\) to \(x=5\text{.}\) Which Riemann sum approximation of \(\displaystyle\int_0^5 f(x)\dee{x}\) is the largest--left, right, or midpoint?</p></article><article class="exercise-like" id="concept_int_b"><h6 class="heading">
+<span class="codenumber">5</span> </h6>
+<p id="p-171">Give an example of a function \(f(x)\text{,}\) an interval \([a,b]\text{,}\) and a number \(n\) such that the midpoint Riemann sum of \(f(x)\) over \([a,b]\) using \(n\) intervals is <em class="emphasis">larger than</em> both the left and right Riemann sums  of \(f(x)\) over \([a,b]\) using \(n\) intervals.</p></article><article class="exercise-like" id="p1_1sigmaa"><h6 class="heading">
+<span class="codenumber">6</span> </h6>
+<p id="p-178">Express the following sums in sigma notation:</p>
+<ol class="lower-alpha">
+<li id="li-131">\(3+4+5+6+7\)</li>
+<li id="li-132">\(6+8+10+12+14\)</li>
+<li id="li-133">\(7+9+11+13+15\)</li>
+<li id="li-134">\(1+3+5+7+9+11+13+15\)</li>
+</ol></article><article class="exercise-like boxed" id="p1_1powers"><h6 class="heading">
+<span class="codenumber">7</span> </h6>
+<p id="p-186">Express the following sums in sigma notation:</p>
+<ol class="lower-alpha">
+<li id="li-143">\(\frac{1}{3}+\frac{1}{9}+\frac{1}{27}+\frac{1}{81}\)</li>
+<li id="li-144">\(\frac{2}{3}+\frac{2}{9}+\frac{2}{27}+\frac{2}{81}\)</li>
+<li id="li-145">\(-\frac{2}{3}+\frac{2}{9}-\frac{2}{27}+\frac{2}{81}\)</li>
+<li id="li-146">\(\frac{2}{3}-\frac{2}{9}+\frac{2}{27}-\frac{2}{81}\)</li>
+</ol></article><article class="exercise-like" id="exercise-8"><h6 class="heading">
+<span class="codenumber">8</span> </h6>
+<p id="p-192">Express the following sums in sigma notation:</p>
+<ol class="lower-alpha">
+<li id="li-155">\(\frac{1}{3}+\frac{1}{3}+\frac{5}{27}+\frac{7}{81}+\frac{9}{243}\)</li>
+<li id="li-156">\(\frac{1}{5}+\frac{1}{11}+\frac{1}{29}+\frac{1}{83}+\frac{1}{245}\)</li>
+<li id="li-157">\(1000+200+30+4+\frac{1}{2}+\frac{3}{50}+\frac{7}{1000}\)</li>
+</ol></article><article class="exercise-like" id="exercise-9"><h6 class="heading">
+<span class="codenumber">9</span> </h6>
+<p id="p-199">Evaluate the following sums. You might want to use the formulas from Theorems  <a knowl="./knowl/thm_INTsummationArith.html" title="Theorem 1.1.5: Arithmetic of Summation Notation">5</a> and <a knowl="./knowl/thm_INTspecialSums.html" title="Theorem 1.1.6">6</a>.</p>
+<ol class="lower-alpha">
+<li id="li-167">\(\displaystyle\sum_{i=0}^{100} \left(\dfrac{3}{5}\right)^i\)</li>
+<li id="li-168">\(\displaystyle\sum_{i=50}^{100} \left(\dfrac{3}{5}\right)^i\)</li>
+<li id="li-169">\(\displaystyle\sum_{i=1}^{10} \left(i^2-3i+5\right)\)</li>
+<li id="li-170">\(\displaystyle\sum_{n=1}^{b}\left[ \left(\frac{1}{e}\right)^n+en^3\right]\text{,}\) where \(b\) is some integer greater than 1.</li>
+</ol></article><article class="exercise-like" id="p1_1sigmab"><h6 class="heading">
+<span class="codenumber">10</span> </h6>
+<p id="p-206">Evaluate the following sums. You might want to use the formulas from Theorem <a knowl="./knowl/thm_INTspecialSums.html" title="Theorem 1.1.6">1.1.6</a>.</p>
+<ol class="lower-alpha">
+<li id="li-184">\(\displaystyle\sum_{i=50}^{100} (i-50)+\displaystyle\sum_{i=0}^{50} i\)</li>
+<li id="li-185">\(\displaystyle\sum_{i=10}^{100} \left(i-5\right)^3\)</li>
+<li id="li-186">\(\displaystyle\sum_{n=1}^{11} (-1)^n\)</li>
+<li id="li-187">\(\displaystyle\sum_{n=2}^{11} (-1)^{2n+1}\)</li>
+</ol></article><article class="exercise-like boxed" id="p1_1Riemanna"><h6 class="heading">
+<span class="codenumber">11</span> </h6>
+<p id="p-213">In the picture below, draw in the rectangles whose (signed) area is being computed by the midpoint Riemann sum \(\displaystyle\sum_{i=1}^4 \dfrac{b-a}{4}\cdot f\left(a+\left(i-\frac{1}{2}\right)\dfrac{b-a}{4}\right)\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-46.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><article class="exercise-like" id="exercise-12"><h6 class="heading">
+<span class="codenumber">12</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-218">\(\displaystyle \sum_{k=1}^4 f(1+k)\cdot 1\) is a left Riemann sum for a function \(f(x)\) on the interval \([a,b]\) with \(n\) subintervals. Find the values of \(a\text{,}\) \(b\) and \(n\text{.}\)</p></article><article class="exercise-like" id="p1_1RiemannInterp"><h6 class="heading">
+<span class="codenumber">13</span> </h6>
+<p id="p-223">Draw a picture illustrating the area given by the following Riemann sum.</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{i=1}^3 2\cdot\left(5+2i\right)^2 
+\end{equation*}
+</div></article><article class="exercise-like" id="exercise-14"><h6 class="heading">
+<span class="codenumber">14</span> </h6>
+<p id="p-241">Draw a picture illustrating the area given by the following Riemann sum.</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{i=1}^5 \frac{\pi}{20}\cdot \tan\left(\frac{\pi (i-1)}{20}\right)
+\end{equation*}
+</div></article><article class="exercise-like boxed" id="p1_1Riemannb"><h6 class="heading">
+<span class="codenumber">15</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-247">Fill in the blanks with right, left, or midpoint; an interval; and a value of n.</p>
+<ol id="p-248" class="lower-alpha"><li id="li-234">\(\sum\limits_{k=0}^3 f (1.5 + k) \cdot 1\) is a \(\underline{\ \ \ \ \ \ \ \ \ \ \ \ }\) Riemann sum for \(f\) on the interval \([\,\underline{\ \ \ \ \ \ }\ ,\ \underline{\ \ \ \ \ \ }\,]\) with \(n =\underline{\ \ \ \ \ }\text{.}\)</li></ol></article><article class="exercise-like" id="exercise-16"><h6 class="heading">
+<span class="codenumber">16</span> </h6>
+<p id="p-261">Evaluate the following integral by interpreting it as a signed area, and using geometry:</p>
+<div class="displaymath">
+\begin{equation*}
+\int_0^5 x \,\dee{x}
+\end{equation*}
+</div></article><article class="exercise-like boxed" id="exercise-17"><h6 class="heading">
+<span class="codenumber">17</span> </h6>
+<p id="p-265">Evaluate the following integral by interpreting it as a signed area, and using geometry:</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{-2}^5 x \,\dee{x}
+\end{equation*}
+</div></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-2">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 2</alert></p></span></h6>
+<div class="introduction" id="introduction-8"></div>
+<div class="introduction" id="introduction-9"><p id="p-301">Questions <a knowl="./knowl/p1_1geoma.html" title="Exercise 1.1.8.26">26</a> and <a knowl="./knowl/p1_1geomb.html" title="Exercise 1.1.8.27">27</a> use the formula for a geometric sum, Equation <a knowl="./knowl/eq_INTgeomsum.html" title="Equation 1.1.3: Geometric sum">1.1.3</a></p></div>
+<div class="introduction" id="introduction-10"><p id="p-312">Remember that a definite integral is a signed area between a curve and the \(x\)-axis. We'll spend a lot of time learning strategies for evaluating definite integrals, but we already know lots of ways to find area of geometric shapes. In Questions <a knowl="./knowl/p1_1defintgeoma.html" title="Exercise 1.1.8.28: (✳)">28</a> through <a knowl="./knowl/p1_1defintgeomb.html" title="Exercise 1.1.8.33: (✳)">33</a>, use your knowledge of geometry to find the signed areas described by the integrals given.</p></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like" id="exercise-18"><h6 class="heading">
+<span class="codenumber">18</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-269">Use sigma notation to write the midpoint Riemann sum for \(f(x)=x^8\) on \([5,15]\) with \(n=50\text{.}\) Do not evaluate the Riemann sum.</p></article><article class="exercise-like" id="exercise-19"><h6 class="heading">
+<span class="codenumber">19</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-273">Estimate \(\displaystyle\int_{-1}^5 x^3\,\,\dee{x}\) using three approximating rectangles and left hand end points.</p></article><article class="exercise-like boxed" id="exercise-20"><h6 class="heading">
+<span class="codenumber">20</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-276">Let \(f\) be a function on the whole real line.  Express \(\displaystyle\int_{-1}^{7}f(x)\,\,\dee{x}\) as a limit of Riemann sums, using the right endpoints.</p></article><article class="exercise-like" id="exercise-21"><h6 class="heading">
+<span class="codenumber">21</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-280">The value of the following limit is equal to the area below a graph of \(y=f(x)\text{,}\) integrated over the interval \([0,b]\text{:}\)</p>
+<div class="displaymath">
+\begin{gather*}
+\lim_{n \to \infty} \sum_{i=1}^{n} \frac{4}{n}
+\left[ \sin \left( 2 + \frac{4i}{n}\right)\right]^2
+\end{gather*}
+</div>
+<p>Find \(f(x)\) and \(b\text{.}\)</p></article><article class="exercise-like boxed" id="exercise-22"><h6 class="heading">
+<span class="codenumber">22</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-285">For a certain function \(f(x)\text{,}\) the following equation holds:</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{n\rightarrow\infty}\sum\limits_{k=1}^n
+\frac{k}{n^2}\sqrt{1-\frac{k^2}{n^2}}
+=\int_0^1 f(x)\ \,\dee{x}
+\end{equation*}
+</div>
+<p>Find \(f(x)\text{.}\)</p></article><article class="exercise-like" id="exercise-23"><h6 class="heading">
+<span class="codenumber">23</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-289">Express \(\displaystyle\lim_{n\to\infty}\displaystyle\sum_{i=1}^{n}
+\frac{3}{n} e^{-i/n} \cos\left(\frac{3i}{n}\right)\) as a definite integral.</p></article><article class="exercise-like" id="exercise-24"><h6 class="heading">
+<span class="codenumber">24</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-293">Let \(\displaystyle R_n= \sum_{i=1}^{n}
+\frac{i e^{i/n}}{n^2}\text{.}\) Express \(\displaystyle\lim_{n\to\infty}R_n\) as a definite integral. <em class="emphasis">Do not evaluate this integral.</em></p></article><article class="exercise-like boxed" id="exercise-25"><h6 class="heading">
+<span class="codenumber">25</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-297">Express \(\displaystyle\lim_{n\rightarrow\infty} \bigg( \sum_{i=1}^n e^{-1-2i/n}\cdot \frac{2}{n} \bigg)\) as an integral in three different ways.</p></article><article class="exercise-like boxed" id="p1_1geoma"><h6 class="heading">
+<span class="codenumber">26</span> </h6>
+<p id="p-302">Evaluate the sum \(1+r^3+r^6+r^9+\cdots+r^{3n}\text{.}\)</p></article><article class="exercise-like boxed" id="p1_1geomb"><h6 class="heading">
+<span class="codenumber">27</span> </h6>
+<p id="p-308">Evaluate the sum \(r^5+r^6+r^7+\cdots+r^{100}\text{.}\)</p></article><article class="exercise-like" id="p1_1defintgeoma"><h6 class="heading">
+<span class="codenumber">28</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-313">Evaluate \({\displaystyle\int_{-1}^2 |2x|\ \,\dee{x}}\text{.}\)</p></article><article class="exercise-like boxed" id="exercise-29"><h6 class="heading">
+<span class="codenumber">29</span> </h6>
+<p id="p-317">Evaluate the following integral by interpreting it as a signed area, and using geometry:</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{-3}^5 |t-1| \,\dee{t}
+\end{equation*}
+</div></article><article class="exercise-like" id="p1_1trapezoidarea"><h6 class="heading">
+<span class="codenumber">30</span> </h6>
+<p id="p-322">Evaluate the following integral by interpreting it as a signed area, and using geometry:</p>
+<div class="displaymath">
+\begin{equation*}
+\int_a^b x \,\dee{x}
+\end{equation*}
+</div>
+<p id="p-323">where \(0 \leq a \leq b\text{.}\)</p></article><article class="exercise-like" id="exercise-31"><h6 class="heading">
+<span class="codenumber">31</span> </h6>
+<p id="p-328">Evaluate the following integral by interpreting it as a signed area, and using geometry:</p>
+<div class="displaymath">
+\begin{equation*}
+\int_a^b x\, \dee{x}
+\end{equation*}
+</div>
+<p id="p-329">where \(a \leq b \leq 0\text{.}\)</p></article><article class="exercise-like boxed" id="exercise-32"><h6 class="heading">
+<span class="codenumber">32</span> </h6>
+<p id="p-335">Evaluate the following integral by interpreting it as a signed area, and using geometry:</p>
+<div class="displaymath">
+\begin{equation*}
+\int_0^4 \sqrt{16-x^2} \dee{x}
+\end{equation*}
+</div></article><article class="exercise-like boxed" id="p1_1defintgeomb"><h6 class="heading">
+<span class="codenumber">33</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-339">Use elementary geometry to calculate \(\displaystyle \int_0^3 f(x)\,\,\dee{x}\text{,}\) where</p>
+<div class="displaymath">
+\begin{align*}
+f(x) = \begin{cases}
+x, &amp; \text{if } x \le 1,\\
+1, &amp; \text{if } x  \gt  1.
+\end{cases}
+\end{align*}
+</div></article><article class="exercise-like boxed" id="p1_1cartime"><h6 class="heading">
+<span class="codenumber">34</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-344">A car's gas pedal is applied at \(t=0\) seconds and the car accelerates continuously until \(t=2\) seconds. The car's speed at half-second intervals is given in the table below. Find the best possible <em class="alert">upper</em> estimate for the distance that the car traveled during these two seconds.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="l m b1 r1 l1 t1 lines">\(t\) (s)</td>
+<td class="l m b1 r1 l0 t1 lines">\(0\)</td>
+<td class="l m b1 r1 l0 t1 lines">\(0.5\)</td>
+<td class="l m b1 r1 l0 t1 lines">\(1.0\)</td>
+<td class="l m b1 r1 l0 t1 lines">\(1.5\)</td>
+<td class="l m b1 r1 l0 t1 lines">\(2\)</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">\(v\) (m/s)</td>
+<td class="l m b1 r1 l0 t0 lines">0</td>
+<td class="l m b1 r1 l0 t0 lines">14</td>
+<td class="l m b1 r1 l0 t0 lines">22</td>
+<td class="l m b1 r1 l0 t0 lines">30</td>
+<td class="l m b1 r1 l0 t0 lines">40</td>
+</tr>
+</table></div></div></div></article><article class="exercise-like boxed" id="exercise-35"><h6 class="heading">
+<span class="codenumber">35</span> </h6>
+<p id="p-348">True or false: the answer you gave for Question <a knowl="./knowl/p1_1cartime.html" title="Exercise 1.1.8.34: (✳)">34</a> is definitely greater than or equal to the distance the car travelled during the two seconds in question.</p></article><article class="exercise-like" id="p1_1airtime"><h6 class="heading">
+<span class="codenumber">36</span> </h6>
+<p id="p-353">An airplane's speed at one-hour intervals is given in the table below. Approximate the distance travelled by the airplane from noon to 4pm using a midpoint Riemann sum.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="l m b1 r1 l1 t1 lines">time</td>
+<td class="l m b1 r1 l0 t1 lines">12:00 pm</td>
+<td class="l m b1 r1 l0 t1 lines">1:00 pm</td>
+<td class="l m b1 r1 l0 t1 lines">2:00 pm</td>
+<td class="l m b1 r1 l0 t1 lines">3:00 pm</td>
+<td class="l m b1 r1 l0 t1 lines">4:00 pm</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">speed (km/hr)</td>
+<td class="l m b1 r1 l0 t0 lines">800</td>
+<td class="l m b1 r1 l0 t0 lines">700</td>
+<td class="l m b1 r1 l0 t0 lines">850</td>
+<td class="l m b1 r1 l0 t0 lines">900</td>
+<td class="l m b1 r1 l0 t0 lines">750</td>
+</tr>
+</table></div></div></div></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-3">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 3</alert></p></span></h6>
+<div class="introduction" id="introduction-11"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like boxed" id="exercise-37"><h6 class="heading">
+<span class="codenumber">37</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-360">(a) Express</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{n\rightarrow\infty}
+\sum_{i=1}^n\frac{2}{n}\sqrt{4-\left(-2+\frac{2i}{n}\right)^2}
+\end{equation*}
+</div>
+<p>as a definite integal.</p>
+<p id="p-361">(b) Evaluate the integral of part (a).</p></article><article class="exercise-like" id="exercise-38"><h6 class="heading">
+<span class="codenumber">38</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-370">Consider the integral:</p>
+<div class="displaymath">
+\begin{gather*}
+\int_0^3 (7 + x^3) \,\,\dee{x} .\qquad\qquad (*)
+\end{gather*}
+</div>
+<ol class="lower-alpha">
+<li id="li-253">Approximate this integral using the left Riemann sum with \(n=3\) intervals.</li>
+<li id="li-254">Write down the expression for the right Riemann sum with \(n\) intervals and calculate the sum. Now take the limit \(n \to \infty\) in your expression for the Riemann sum, to evaluate the integral (\(*\)) exactly.</li>
+</ol>
+<p>You may use the identity</p>
+<div class="displaymath">
+\begin{gather*}
+\sum_{i=1}^{n} i^3 = \frac{n^4 +2n^3 + n^2}{4}
+\end{gather*}
+</div></article><article class="exercise-like" id="exercise-39"><h6 class="heading">
+<span class="codenumber">39</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-376">Using a limit of right--endpoint Riemann sums, evaluate \(\displaystyle\int_2^4 x^2\ \,\dee{x}\text{.}\) You may use the formulas \(\sum\limits_{i=1}^n i = \frac{n(n + 1)}{2}\) and \(\sum\limits_{i=1}^n i^2 = \frac{n(n + 1)(2n + 1)}{6}\text{.}\)</p></article><article class="exercise-like" id="exercise-40"><h6 class="heading">
+<span class="codenumber">40</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-380">Find \(\displaystyle\int_0^2 (x^3+x)\,\,\dee{x}\) using the definition of the definite integral. You may use the summation formulas \(\sum\limits_{i=1}^{n}i^3 = \frac{n^4+2n^3+n^2}4\) and \(\sum\limits_{i=1}^{n} i = \frac{n^2+n}{2}\text{.}\)</p></article><article class="exercise-like boxed" id="exercise-41"><h6 class="heading">
+<span class="codenumber">41</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-384">Using a limit of right-endpoint Riemann sums, evaluate \(\displaystyle\int_1^4 (2x-1)\,\,\dee{x}\text{.}\) Do not use  anti-differentiation, except to check your answer. <a knowl="" class="id-ref" refid="hk-fn-23" id="fn-23"><sup> 23 </sup></a><span id="hk-fn-23" class="hidden-content tex2jax_ignore"><span class="footnote">You'll learn about this method starting in Section <a href="sec_fundamental.html" class="xref" title="Section 1.3: The Fundamental Theorem of Calculus">1.3</a>. You can also check this answer using geometry.</span></span> You may use the formula \(\sum\limits_{i=1}^{n} i = \frac{n(n+1)}{2}\text{.}\)</p></article><article class="exercise-like" id="exercise-42"><h6 class="heading">
+<span class="codenumber">42</span> </h6>
+<p id="p-388">Give a function \(f(x)\) that has the following expression as a right Riemann sum when \(n=10\text{,}\) \(\Delta(x)=10\) and \(a=-5\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{i=1}^{10} 3(7+2i)^2\sin(4i)\,.
+\end{equation*}
+</div></article><article class="exercise-like" id="p1_1_2x"><h6 class="heading">
+<span class="codenumber">43</span> </h6>
+<p id="p-392">Using the method of Example <a knowl="./knowl/eg_INTexpareaB.html" title="Example 1.1.2: Computing an area exactly">1.1.2</a>, evaluate</p>
+<div class="displaymath">
+\begin{equation*}
+\int_0^1 2^x \dee{x}
+\end{equation*}
+</div></article><article class="exercise-like" id="exercise-44"><h6 class="heading">
+<span class="codenumber">44</span> </h6>
+<ol id="p-396" class="lower-alpha">
+<li id="li-255">Using the method of Example <a knowl="./knowl/eg_INTexpareaB.html" title="Example 1.1.2: Computing an area exactly">1.1.2</a>, evaluate<div class="displaymath">
+\begin{equation*}
+\int_a^b 10^x \dee{x}
+\end{equation*}
+</div>
+</li>
+<li id="li-256">
+</ol>
+<p>Using your answer from above, make a guess for</p>
+<div class="displaymath">
+\begin{equation*}
+\int_a^b c^x \dee{x}
+\end{equation*}
+</div>
+<p id="p-397">where \(c\) is a positive constant. Does this agree with Question <a knowl="./knowl/p1_1_2x.html" title="Exercise 1.1.8.43">43</a>?</p></article><article class="exercise-like boxed" id="p1_1_awkwardcircle"><h6 class="heading">
+<span class="codenumber">45</span> </h6>
+<p id="p-406">Evaluate \(\displaystyle\int_0^a \sqrt{1-x^2}\dee{x}\) using geometry, if \(0 \leq a \leq 1\text{.}\)</p></article><article class="exercise-like" id="p1_1errornotaylor"><h6 class="heading">
+<span class="codenumber">46</span> </h6>
+<p id="p-416">Suppose \(f(x)\) is a positive, decreasing function from \(x=a\) to \(x=b\text{.}\) You give an upper and lower bound on the area under the curve \(y=f(x)\) using \(n\) rectangles and a left and right Riemann sum, respectively, as in the picture below.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
+<div class="sbspanel" style="width:44.4444444444444%;justify-content:flex-start;"><img src="images/image-74.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:44.4444444444444%;justify-content:flex-start;"><img src="images/image-75.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<ol id="p-417" class="lower-alpha">
+<li id="riemannerrorbounda">What is the difference between the lower bound and the upper bound? (That is, if we subtract the smaller estimate from the larger estimate, what do we get?) Give your answer in terms of \(f\text{,}\) \(a\text{,}\)  \(b\text{,}\) and \(n\text{.}\)</li>
+<li id="li-260">If you want to approximate the area under the curve to within 0.01 square units using this method, how many rectangles should you use? That is, what should \(n\) be?</li>
+</ol></article><article class="exercise-like" id="exercise-47"><h6 class="heading">
+<span class="codenumber">47</span> </h6>
+<p id="p-427">Let \(f(x)\) be a linear function,  let \(a \lt b\) be integers, and let \(n\) be a whole number. True or false: if we average the left and right Riemann sums for \(\displaystyle\int_a^b f(x)\dee{x}\) using \(n\) rectangles, we get the same value as the midpoint Riemann sum using \(n\) rectangles.</p></article>
+</div>
+</div></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:14:47+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The Fundamental Theorem of Calculus</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_2_ic.html"><span class="title">CLP-2 Integral Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_fundamental.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sec_fundamental.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="exercises-3.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_fundamental.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sec_fundamental.html" title="Up">Up</a><a class="next-button button toolbar-item" href="exercises-3.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_integral.html" data-scroll="chap_integral"><span class="codenumber">1</span> <span class="title">Integration</span></a></h2>
+<ul>
+<li><a href="sec_intdef.html" data-scroll="sec_intdef">Definition of the Integral</a></li>
+<li><a href="sec_def_int.html" data-scroll="sec_def_int">Basic properties of the definite integral</a></li>
+<li><a href="sec_fundamental.html" data-scroll="sec_fundamental">The Fundamental Theorem of Calculus</a></li>
+<li><a href="sec_subs.html" data-scroll="sec_subs">Substitution</a></li>
+<li><a href="sec_area.html" data-scroll="sec_area">Area between curves</a></li>
+<li><a href="sec_int_volumes.html" data-scroll="sec_int_volumes">Volumes</a></li>
+<li><a href="sec_intbyparts.html" data-scroll="sec_intbyparts">Integration by parts</a></li>
+<li><a href="sec_trigint.html" data-scroll="sec_trigint">Trigonometric Integrals</a></li>
+<li><a href="sec_trigsub.html" data-scroll="sec_trigsub">Trigonometric Substitution</a></li>
+<li><a href="sec_parfrac.html" data-scroll="sec_parfrac">Partial Fractions</a></li>
+<li><a href="sec_numeric_int.html" data-scroll="sec_numeric_int">Numerical Integration</a></li>
+<li><a href="sec_improp_int.html" data-scroll="sec_improp_int">Improper Integrals</a></li>
+<li><a href="section-13.html" data-scroll="section-13">More Integration Examples</a></li>
+</ul>
+<h2 class="link"><a href="chap_int_app.html" data-scroll="chap_int_app"><span class="codenumber">2</span> <span class="title">Applications of Integration</span></a></h2>
+<ul>
+<li><a href="sec_work.html" data-scroll="sec_work">Work</a></li>
+<li><a href="sec_avg.html" data-scroll="sec_avg">Averages</a></li>
+<li><a href="sec_com.html" data-scroll="sec_com">Centre of Mass and Torque</a></li>
+<li><a href="sec_sep_de.html" data-scroll="sec_sep_de">Separable Differential Equations</a></li>
+</ul>
+<h2 class="link"><a href="chap_seq_ser.html" data-scroll="chap_seq_ser"><span class="codenumber">3</span> <span class="title">Sequence and series</span></a></h2>
+<ul>
+<li><a href="section-18.html" data-scroll="section-18">Sequences</a></li>
+<li><a href="section-19.html" data-scroll="section-19">Series</a></li>
+<li><a href="section-20.html" data-scroll="section-20">Convergence Tests</a></li>
+<li><a href="section-21.html" data-scroll="section-21">Absolute and Conditional Convergence</a></li>
+<li><a href="section-22.html" data-scroll="section-22">Power Series</a></li>
+<li><a href="section-23.html" data-scroll="section-23">Taylor Series</a></li>
+<li><a href="sec_RatIrr.html" data-scroll="sec_RatIrr">Optional — Rational and irrational numbers</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="section-26.html" data-scroll="section-26">Pythagoras</a></li>
+<li><a href="section-27.html" data-scroll="section-27">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="section-30.html" data-scroll="section-30">Trigonometry — Special Triangles</a></li>
+<li><a href="section-31.html" data-scroll="section-31">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trigonometric Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">Highschool Material You Should be Able to Derive</a></li>
+<li><a href="section-39.html" data-scroll="section-39">Cartesian Coordinates</a></li>
+<li><a href="ap_roots.html" data-scroll="ap_roots">Roots of Polynomials</a></li>
+</ul>
+<h2 class="link"><a href="ap_complex.html" data-scroll="ap_complex"><span class="codenumber">B</span> <span class="title">Complex Numbers and Exponentials</span></a></h2>
+<ul>
+<li><a href="sec_complex_defn.html" data-scroll="sec_complex_defn">Definition and Basic Operations</a></li>
+<li><a href="sec_complex_exp.html" data-scroll="sec_complex_exp">The Complex Exponential</a></li>
+</ul>
+<h2 class="link"><a href="app_Richardson_Romberg.html" data-scroll="app_Richardson_Romberg"><span class="codenumber">C</span> <span class="title">More About Numerical Integration</span></a></h2>
+<ul>
+<li><a href="ap_Richardson.html" data-scroll="ap_Richardson">Richardson Extrapolation</a></li>
+<li><a href="ap_Romberg.html" data-scroll="ap_Romberg">Romberg Integration</a></li>
+<li><a href="ap_adaptive.html" data-scroll="ap_adaptive">Adaptive Quadrature</a></li>
+</ul>
+<h2 class="link"><a href="app_ODE_numerical.html" data-scroll="app_ODE_numerical"><span class="codenumber">D</span> <span class="title">Numerical Solution of ODE's</span></a></h2>
+<ul>
+<li><a href="ap_derivation.html" data-scroll="ap_derivation">Simple ODE Solvers — Derivation</a></li>
+<li><a href="ap_error_behaviour.html" data-scroll="ap_error_behaviour">Simple ODE Solvers —  Error Behaviour</a></li>
+<li><a href="ap_variable.html" data-scroll="ap_variable">Variable Step Size Methods</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">E</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">F</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">G</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp2-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="subsection" id="subsection-10"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.3.1</span> <span class="title">The Fundamental Theorem of Calculus</span>
+</h3>
+<p id="p-587">We have spent quite a few pages (and lectures) talking about definite  integrals, what they are (Definition <a knowl="./knowl/def_INTintegral.html" title="Definition 1.1.9">1.1.9</a>), when they  exist (Theorem <a knowl="./knowl/thm_integrable.html" title="Theorem 1.1.10">1.1.10</a>), how to compute some special  cases (Section <a href="ssec_knownareas.html" class="xref" title="Subsection 1.1.5: Using Known Areas to Evaluate Integrals">1.1.5</a>), some ways to manipulate them  (Theorem <a knowl="./knowl/thm_Intarith.html" title="Theorem 1.2.1: Arithmetic of Integration">1.2.1</a> and <a knowl="./knowl/thm_Intdomain.html" title="Theorem 1.2.3: Arithmetic for the Domain of Integration">1.2.3</a>) and how to bound them  (Theorem <a knowl="./knowl/thm_INTineq.html" title="Theorem 1.2.13: Inequalities for Integrals">1.2.13</a>). Conspicuously missing from all of this has been a  discussion of how to compute them in general. It is high time we rectified  that.</p>
+<p id="p-588">The single most important tool used to evaluate integrals is called “the fundamental theorem of calculus”. Its grand name is justified — it  links the two branches of calculus by connecting derivatives to integrals. In  so  doing it also tells us how to compute integrals. Very roughly speaking the  derivative of an integral is the original function. This fact allows us to  compute integrals using antiderivatives <a knowl="" class="id-ref" refid="hk-fn-28" id="fn-28"><sup> 1 </sup></a><span id="hk-fn-28" class="hidden-content tex2jax_ignore"><span class="footnote">You learned these near the  end of your differential calculus course. Now is a good time to revise —  but we'll go over them here since they are so important in what follows.</span></span>. Of course “very rough” is not enough — let's be precise.</p>
+<article class="theorem-like" id="thm_INTfundthmofcalc"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.3.1</span> <span class="title">Fundamental Theorem of Calculus</span>
+</h6>
+<p id="p-589">Let \(a \lt b\) and let \(f(x)\) be a function which is defined and continuous on  \([a,b]\text{.}\)</p>
+<ul class="disc">
+<li id="li-345">
+<em class="alert">Part 1</em>. Let \(\ds F(x)=\int_a^x f(t)\dee{t}\) for any \(x  \in[a,b]\text{.}\) Then the function \(F(x)\) is differentiable and further<div class="displaymath">
+\begin{align*}
+F'(x) &amp;=f(x)
+\end{align*}
+</div>
+</li>
+<li id="li-346">
+<em class="alert">Part 2</em>. Let \(G(x)\) be any function which is defined and  continuous on \([a,b]\text{.}\) Further let \(G(x)\) be differentiable with \(G'(x)=f(x)\)  for all \(a \lt x \lt b\text{.}\) Then<div class="displaymath">
+\begin{align*}
+\int_a^b f(x)\dee{x} &amp;=G(b)-G(a) &amp; \text{or equivalently} &amp;&amp;
+\int_a^b G'(x)\dee{x} &amp;=G(b)-G(a)
+\end{align*}
+</div>
+</li>
+</ul></article><p id="p-590">Before we prove this theorem and look at a bunch of examples of its  application, it is important that we recall one definition from differential  calculus — antiderivatives. If \(F'(x) = f(x)\) on some interval, then  \(F(x)\)  is called an antiderivative of \(f(x)\) on that interval. So Part 2 of the the  fundamental theorem of calculus tells us how to evaluate the definite integral  of \(f(x)\) in terms of any of its antiderivatives —  if  \(G(x)\) is any  antiderivative of \(f(x)\) then</p>
+<div class="displaymath">
+\begin{align*}
+\int_a^b f(x) \dee x &amp;= G(b)-G(a)
+\end{align*}
+</div>
+<p>The form \(\int_a^b G'(x)\,\dee{x} = G(b) - G(a)\) of the fundamental theorem relates the  rate of change of \(G(x)\) over the interval \(a\le x\le b\) to the net change of \(G\) between  \(x=a\) and \(x=b\text{.}\) For that reason, it is sometimes called the “net change theorem”.</p>
+<p id="p-591">We'll start with a simple example. Then we'll see why the  fundamental theorem is true and then we'll do many more, and more involved,  examples.</p>
+<article class="example-like" id="eg_first"><a knowl="" class="id-ref" refid="hk-eg_first"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.3.2</span> <span class="title">A first example</span>
+</h6></a></article><div id="hk-eg_first" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-592">Consider the integral \(\int_a^b x \dee{x}\) which we have explored previously  in Example <a knowl="./knowl/eg_INTPROPx.html" title="Example 1.2.6: \(\int_a^b x\dee{x}\)">1.2.6</a>.</p>
+<ul class="disc">
+<li id="li-347">The integrand is \(f(x)=x\text{.}\)</li>
+<li id="li-348">We can readily verify that \(G(x) = \frac{x^2}{2}\) satisfies \(G'(x)=f(x)\)  and so is an antiderivative of the integrand.</li>
+<li id="li-349">Part 2 of Theorem <a knowl="./knowl/thm_INTfundthmofcalc.html" title="Theorem 1.3.1: Fundamental Theorem of Calculus">1.3.1</a> then tells us that<div class="displaymath">
+\begin{align*}
+\int_a^b f(x) \dee{x} &amp;= G(b)-G(a)\\
+\int_a^b x \dee{x} &amp;= \frac{b^2}{2} - \frac{a^2}{2}
+\end{align*}
+</div>which is precisely the result we obtained (with more work) in  Example <a knowl="./knowl/eg_INTPROPx.html" title="Example 1.2.6: \(\int_a^b x\dee{x}\)">1.2.6</a>.</li>
+</ul></article></div>
+<p id="p-593">We do not give completely rigorous proofs of the two parts of the theorem —  that is not really needed for this course. We just give the main ideas of the  proofs so that you can understand why the theorem is true.</p>
+<article class="hiddenproof" id="proof-7"><a knowl="" class="id-ref" refid="hk-proof-7"><h6 class="heading"><span class="title">Part 1</span></h6></a></article><div id="hk-proof-7" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-594">We wish to show that if</p>
+<div class="displaymath">
+\begin{align*}
+F(x) &amp;= \int_a^x f(t) \dee{t} &amp; \text{then}&amp;&amp;
+F'(x) &amp;= f(x)
+\end{align*}
+</div>
+<ul class="disc">
+<li id="li-350">Assume that \(F\) is the above integral and then consider \(F'(x)\text{.}\) By  definition<div class="displaymath">
+\begin{align*}
+F'(x) &amp;=\lim_{h\rightarrow 0} \frac{F(x+h)-F(x)}{h}
+\end{align*}
+</div>
+</li>
+<li id="li-351">To understand this limit, we interpret the terms \(F(x), F(x+h)\) as signed  areas. To simplify this further, let's only consider the case that \(f\) is always nonnegative and that \(h \gt 0\text{.}\) These restrictions are not hard to remove, but the  proof ideas are a bit cleaner if we keep them in place. Then we have<div class="displaymath">
+\begin{align*}
+F(x+h)&amp;=\text{the area of the region $\big\{\ (t,y)\ \big|\ a\le t\le x+h,\
+0\le y\le f(t)\ \big\}$}\\
+F(x)&amp;=\text{the area of the region $\big\{\ (t,y)\ \big|\ a\le t\le x,
+\phantom{+h\ \,}\  0\le y\le f(t)\ \big\}$}
+\end{align*}
+</div>
+</li>
+<li id="li-352">
+<p id="p-595">Then the numerator</p>
+<div class="displaymath">
+\begin{gather*}
+F(x+h)-F(x)=\text{the area of $\big\{\ (t,y)\ \big|\ x\le t\le x+h,\
+0\le y\le f(t)\ \big\} $}
+\end{gather*}
+</div>
+<p>This is just the more darkly shaded region in the figure</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/fundThm.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+<li id="li-353">We will be taking the limit \(h\rightarrow 0\text{.}\) So suppose that \(h\) is  very small. Then, as \(t\) runs from \(x\) to \(x+h\text{,}\) \(f(t)\) runs only over  a very narrow range of values<a knowl="" class="id-ref" refid="hk-fn-29" id="fn-29"><sup> 2 </sup></a><span id="hk-fn-29" class="hidden-content tex2jax_ignore"><span class="footnote">Notice that if \(f\) were discontinuous, then this might be false.</span></span>, all close to \(f(x)\text{.}\)</li>
+<li id="li-354">So the darkly shaded region is almost a rectangle of width \(h\) and height  \(f(x)\) and so has an area which is very close to \(f(x)h\text{.}\) Thus \(\frac{F(x+h)-F(x)}{h}\) is very close to \(f(x)\text{.}\)</li>
+<li id="li-355">In the limit \(h\rightarrow 0\text{,}\) \(\frac{F(x+h)-F(x)}{h}\) becomes exactly \(f(x)\text{,}\) which is precisely what we want.</li>
+</ul></article></div>
+<p id="p-596">We can make the above more rigorous using the Mean Value Theorem <a knowl="" class="id-ref" refid="hk-fn-30" id="fn-30"><sup> 3 </sup></a><span id="hk-fn-30" class="hidden-content tex2jax_ignore"><span class="footnote">The  MVT tells us that there is a number \(c\) between \(x\) and \(x+h\) so that \(F'(c) = \frac{F(x+h)-F(x)}{(x+h)-x} = \frac{F(x+h)-F(x)}{h}
+\text{.}\) But since \(F'(x) = f(x)\text{,}\) this tells us that \(\frac{F(x+h)-F(x)}{h} = f(c)\) where \(c\) is trapped between \(x+h\) and \(x\text{.}\) Now when we take the limit as \(h \to 0\) we have that this number \(c\) is squeezed to \(x\) and the result follows.</span></span>.</p>
+<article class="hiddenproof" id="proof-8"><a knowl="" class="id-ref" refid="hk-proof-8"><h6 class="heading"><span class="title">Part 2</span></h6></a></article><div id="hk-proof-8" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-597">We want to show that \(\int_a^b f(t)\dee{t}=G(b)-G(a)\text{.}\) To do this we exploit  the fact that the derivative of a constant is zero.</p>
+<ul class="disc">
+<li id="li-356">Let<div class="displaymath">
+\begin{align*}
+H(x) &amp;= \int_a^x f(t)\dee{t} -G(x)+G(a)
+\end{align*}
+</div>Then the result we wish to prove is that \(H(b)=0\text{.}\)  We will do this by showing  that \(H(x)=0\) for all \(x\) between \(a\) and \(b\text{.}\)</li>
+<li id="li-357">We first show that \(H(x)\) is constant by computing its derivative:<div class="displaymath">
+\begin{align*}
+H'(x) &amp;= \diff{}{x}\int_a^x f(t)\dee{t} - \diff{}{x}\left( G(x) \right)+  \diff{}{x}\left( G(a) \right)\\
+\end{align*}
+<p class="intertext">Since \(G(a)\) is a constant, its derivative is \(0\) and by assumption  the derivative of \(G(x)\) is just \(f(x)\text{,}\) so</p>
+\begin{align*}
+&amp;= \diff{}{x}\int_a^x f(t)\dee{t} - f(x)\\
+\end{align*}
+<p class="intertext">Now Part 1 of the theorem tells us that this derivative is just \(f(x)\text{,}\) so</p>
+\begin{align*}
+&amp;= f(x) - f(x) = 0
+\end{align*}
+</div>Hence \(H\) is constant.</li>
+<li id="li-358">To determine which constant we just compute \(H(a)\text{:}\)<div class="displaymath">
+\begin{align*}
+H(a) &amp;= \int_a^a f(t)\dee{t} - G(a)+G(a)\\
+&amp;= \int_a^a f(t)\dee{t} &amp; \text{by Theorem }\knowl{./knowl/thm_Intdomain.html}{\text{1.2.3}}\text{(a)}\\
+&amp;=0
+\end{align*}
+</div>as required.</li>
+</ul></article></div>
+<p id="p-598">The simple example we did above (Example <a knowl="./knowl/eg_first.html" title="Example 1.3.2: A first example">1.3.2</a>), demonstrates the  application of part 2 of the fundamental theorem of calculus. Before we do more  examples (and there will be many more over the coming sections) we should do  some examples illustrating the use of part 1 of the fundamental  theorem of calculus. Then we'll move on to part 2.</p>
+<article class="example-like" id="example-19"><a knowl="" class="id-ref" refid="hk-example-19"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.3.3</span> <span class="title">\(\diff{}{x}\int_0^x t \dee{t}\)</span>
+</h6></a></article><div id="hk-example-19" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-599">Consider the integral \(\int_0^x t\,\dee{t}\text{.}\) We know how to evaluate this — it is just  Example <a knowl="./knowl/eg_first.html" title="Example 1.3.2: A first example">1.3.2</a> with \(a = 0\text{,}\) \(b = x\text{.}\) So we have two ways to compute the  derivative. We can evaluate the integral and then take the derivative, or we can apply  Part 1 of the fundamental theorem. We'll do both, and check that the two answers are the same.</p>
+<p id="p-600">First, Example <a knowl="./knowl/eg_first.html" title="Example 1.3.2: A first example">1.3.2</a> gives</p>
+<div class="displaymath">
+\begin{gather*}
+F(x) = \int_0^x  t\,\dee{t} =\frac{x^2}{2}
+\end{gather*}
+</div>
+<p>So of course \(F'(x) = x\text{.}\) Second, Part 1 of the fundamental theorem  of calculus tells us that the derivative of \(F(x)\) is just the integrand.  That is, Part 1 of the fundamental theorem of calculus also gives \(F'(x) = x\text{.}\)</p></article></div>
+<p id="p-601">In the previous example we were able to evaluate the integral explicitly,  so we did not  need the fundamental theorem to determine its derivative. Here is an example that really  does require the use of the fundamental theorem.</p>
+<article class="example-like" id="eg_INTftocA"><a knowl="" class="id-ref" refid="hk-eg_INTftocA"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.3.4</span> <span class="title">\(\diff{}{x}\int_0^x e^{-t^2}\dee{t}\)</span>
+</h6></a></article><div id="hk-eg_INTftocA" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-602">We would like to find \(\diff{}{x}\int_0^x e^{-t^2}\dee{t}\text{.}\) In the previous  example, we were able to compute the corresponding derivative in two ways — we could  explicitly compute the integral and then differentiate the result, or we could apply  part 1 of the fundamental theorem  of calculus. In this example we do not know the integral explicitly. Indeed it  is not possible to express <a knowl="" class="id-ref" refid="hk-fn-31" id="fn-31"><sup> 4 </sup></a><span id="hk-fn-31" class="hidden-content tex2jax_ignore"><span class="footnote">The integral \(\int_0^x e^{-t^2} \dee{t}\) is  closely related to the “error function” which is an extremely important  function in mathematics. While we cannot express this integral (or the error  function) as a <em class="emphasis">finite</em> combination of polynomials, exponentials etc, we  can express it as an infinite series \(\int_0^x e^{-t^2}\dee{t}
+= x - \frac{x^3}{3\cdot 1} + \frac{x^5}{5\cdot 2} - \frac{x^7}{7\cdot 3!} +
+\frac{x^9}{9\cdot 4!} +\cdots + (-1)^k \frac{x^{2k+1}}{(2k+1)\cdot k!} + \cdots\text{.}\) But more on this in Chapter <a href="chap_seq_ser.html" class="xref" title="Chapter 3: Sequence and series">3</a>.</span></span> the integral \(\int_0^x  e^{-t^2}\dee{t}\) as a finite combination of standard functions such as  polynomials, exponentials, trigonometric functions and so on.</p>
+<p id="p-603">Despite this, we can find its derivative by just applying the first part of the fundamental theorem of calculus with \(f(t)=e^{-t^2}\) and \(a=0\text{.}\)  That gives</p>
+<div class="displaymath">
+\begin{align*}
+\diff{}{x}\int_0^x e^{-t^2}\dee{t} &amp;=\diff{}{x}\int_0^x f(t)\dee{t}\\
+&amp;=f(x) = e^{-x^2}
+\end{align*}
+</div></article></div>
+<p id="p-604">Let us ratchet up the complexity of the previous example — we can make the  limits of the integral more complicated functions. So consider the previous  example with the upper limit \(x\) replaced by \(x^2\text{:}\)</p>
+<article class="example-like" id="eg_INTftocB"><a knowl="" class="id-ref" refid="hk-eg_INTftocB"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.3.5</span> <span class="title">\(\diff{}{x}\int_0^{x^2} e^{-t^2}\dee{t}\)</span>
+</h6></a></article><div id="hk-eg_INTftocB" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-605">Consider the integral \(\int_0^{x^2} e^{-t^2}\dee{t}\text{.}\) We would like to  compute its derivative with respect to \(x\) using part 1 of the fundamental  theorem of calculus.</p>
+<p id="p-606">The fundamental theorem tells us how to compute the derivative of  functions of the form \(\int_a^x f(t)\dee{t}\) but the integral at hand is  <em class="emphasis">not</em> of the specified form because the upper limit we have is \(x^2\text{,}\) rather than  \(x\text{,}\) — so more care is required. Thankfully we can deal with this obstacle with only a  little extra work. The trick is to define an auxiliary function by simply  changing the upper limit to \(x\text{.}\) That is, define</p>
+<div class="displaymath">
+\begin{align*}
+E(x) &amp;= \int_0^x e^{-t^2}\dee{t}\\
+\end{align*}
+<p class="intertext">Then the integral we want to work with is</p>
+\begin{align*}
+E(x^2) &amp;= \int_0^{x^2} e^{-t^2}\dee{t}
+\end{align*}
+</div>
+<p>The derivative \(E'(x)\) can be found via part 1 of the fundamental theorem of  calculus (as we did in Example <a knowl="./knowl/eg_INTftocA.html" title="Example 1.3.4: \(\diff{}{x}\int_0^x e^{-t^2}\dee{t}\)">1.3.4</a>) and is \(E'(x)=  e^{-x^2}\text{.}\) We can then use this fact with the chain rule to compute the  derivative we need:</p>
+<div class="displaymath">
+\begin{align*}
+\diff{}{x} \int_0^{x^2} e^{-t^2}\dee{t}  &amp;= \diff{}{x}E(x^2) &amp;\text{use the chain rule}\\
+&amp;= 2x E'(x^2)\\
+&amp;= 2x e^{-x^4}
+\end{align*}
+</div></article></div>
+<p id="p-607">What if both limits of integration are functions of \(x\text{?}\) We can still make this  work, but we have to split the integral using Theorem <a knowl="./knowl/thm_Intdomain.html" title="Theorem 1.2.3: Arithmetic for the Domain of Integration">1.2.3</a>.</p>
+<article class="example-like" id="eg_INTftocC"><a knowl="" class="id-ref" refid="hk-eg_INTftocC"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.3.6</span> <span class="title">\(\diff{}{x}\int_x^{x^2} e^{-t^2}\dee{t}\)</span>
+</h6></a></article><div id="hk-eg_INTftocC" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-608">Consider the integral</p>
+<div class="displaymath">
+\begin{gather*}
+\int_x^{x^2} e^{-t^2}\dee{t}
+\end{gather*}
+</div>
+<p>As was the case in the previous example, we have to do a little pre-processing  before we can apply the fundamental theorem.</p>
+<p id="p-609">This time (by design), not only is the upper limit of integration \(x^2\) rather  than \(x\text{,}\) but the lower limit of integration also depends on \(x\) — this is  different from the integral \(\int_a^x f(t)\dee{t}\) in the fundamental theorem  where the <em class="emphasis">lower</em> limit of integration is a constant.</p>
+<p id="p-610">Fortunately we can use the basic properties of integrals  (Theorem <a knowl="./knowl/thm_Intdomain.html" title="Theorem 1.2.3: Arithmetic for the Domain of Integration">1.2.3</a>(b) and (c)) to split \(\int_x^{x^2} e^{-t^2}\dee{t}\)  into pieces whose derivatives we already know.</p>
+<div class="displaymath">
+\begin{align*}
+\int_x^{x^2} e^{-t^2}\dee{t}
+&amp;=\int_x^0 e^{-t^2}\dee{t}+\int_0^{x^2} e^{-t^2}\dee{t}
+&amp;\text{by Theorem }\knowl{./knowl/thm_Intdomain.html}{\text{1.2.3}}\text{(c)}\\
+&amp;=-\int^x_0 e^{-t^2}\dee{t}+\int_0^{x^2} e^{-t^2}\dee{t}
+&amp;\text{by Theorem }\knowl{./knowl/thm_Intdomain.html}{\text{1.2.3}}\text{(b)}
+\end{align*}
+</div>
+<p>With this pre-processing, both integrals are of the right form. Using what  we have learned in the the previous two examples,</p>
+<div class="displaymath">
+\begin{align*}
+\diff{}{x}\int_x^{x^2} e^{-t^2}\dee{t}
+&amp;=\diff{}{x}\left( -\int_0^{x} e^{-t^2}\dee{t} + \int_0^{x^2} e^{-t^2}\dee{t}  \right)\\
+&amp;=-\diff{}{x}\int^x_0 e^{-t^2}\dee{t} +\diff{}{x}\int_0^{x^2} e^{-t^2}\dee{t}\\
+&amp;=- e^{-x^2} +2x e^{-x^4}
+\end{align*}
+</div></article></div>
+<p id="p-611">Before we start to work with part 2 of the fundamental theorem, we need a little  terminology and notation. First some terminology — you may have seen this  definition in your differential calculus course.</p>
+<article class="definition-like" id="definition-6"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">1.3.7</span> <span class="title">Antiderivatives</span>
+</h6>
+<p id="p-612">Let \(f(x)\) and \(F(x)\) be functions. If \(F'(x)=f(x)\) on an interval, then we  say that \(F(x)\) is an antiderivative of \(f(x)\) on that interval.</p></article><p id="p-613">As we saw above, an antiderivative of \(f(x)=x\) is \(F(x) = x^2/2\) — we can  easily verify this by differentiation. Notice that \(x^2/2 + 3\) is also an  antiderivative of \(x\text{,}\) as is \(x^2/2 + C\) for any constant \(C\text{.}\) This observation  gives us the following simple lemma.</p>
+<article class="theorem-like" id="lemma_C"><h6 class="heading">
+<span class="type">Lemma</span> <span class="codenumber">1.3.8</span>
+</h6>
+<p id="p-614">Let \(f(x)\) be a function and let \(F(x)\) be an antiderivative of \(f(x)\text{.}\) Then  \(F(x)+C\) is also an antiderivative for any constant \(C\text{.}\) Further, every antiderivative of  \(f(x)\) must be of this form.</p></article><article class="hiddenproof" id="proof-9"><a knowl="" class="id-ref" refid="hk-proof-9"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-9" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-615">There are two parts to the lemma and we prove each in turn.</p>
+<ul class="disc">
+<li id="li-359">Let \(F(x)\) be an antiderivative of \(f(x)\) and let \(C\) be some constant. Then<div class="displaymath">
+\begin{align*}
+\diff{}{x}\left( F(x) + C \right)
+&amp;=   \diff{}{x}\left( F(x) \right)  +  \diff{}{x}\left( C \right)\\
+&amp;= f(x) + 0
+\end{align*}
+</div>since the derivative of a constant is zero, and by definition the derivative of \(F(x)\) is  just \(f(x)\text{.}\) Thus \(F(x)+C\) is also an antiderivative of \(f(x)\text{.}\)</li>
+<li id="li-360">Now let \(F(x)\) and \(G(x)\) both be antiderivatives of \(f(x)\) — we will show that \(G(x) = F(x)+C\) for some constant \(C\text{.}\) To do this let \(H(x) = G(x)-F(x)\text{.}\) Then<div class="displaymath">
+\begin{align*}
+\diff{}{x}H(x)
+&amp;= \diff{}{x}\left( G(x)-F(x) \right)
+= \diff{}{x} G(x) - \diff{}{x}F(x)\\
+&amp;= f(x) - f(x) = 0
+\end{align*}
+</div>Since the derivative of \(H(x)\) is zero, \(H(x)\) must be a constant function <a knowl="" class="id-ref" refid="hk-fn-32" id="fn-32"><sup> 5 </sup></a><span id="hk-fn-32" class="hidden-content tex2jax_ignore"><span class="footnote">This follows from the Mean Value Theorem. Say \(H(x)\) were not constant,  then there would be two numbers \(a \lt b\) so that \(H(a)\neq H(b)\text{.}\) Then the MVT tells us that  there is a number \(c\) between \(a\) and \(b\) so that \(H'(c) = \frac{H(b)-H(a)}{b-a}.\) Since both numerator and denominator are nonzero, we know the derivative at \(c\) is  nonzero. But this would contradict the assumption that derivative of \(H\) is zero. Hence  we cannot have \(a \lt b\) with \(H(a)\neq H(b)\) and so \(H(x)\) must be constant.</span></span>. Thus \(H(x)=G(x)-F(x)=C\) for  some constant \(C\) and the result follows.</li>
+</ul></article></div>
+<p id="p-616">Based on the above lemma we have the following definition.</p>
+<article class="definition-like" id="def_INTindefintegral"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">1.3.9</span>
+</h6>
+<p id="p-617">The “indefinite integral of \(f(x)\)” is denoted by \(\int f(x)\dee{x}\)  and should be regarded as the general antiderivative of \(f(x)\text{.}\) In particular, if \(F(x)\)  is an antiderivative of \(f(x)\) then</p>
+<div class="displaymath">
+\begin{align*}
+\int f(x)\dee{x} &amp;= F(x) + C
+\end{align*}
+</div>
+<p>where the \(C\) is an arbitrary constant. In this context, the constant \(C\) is also  often called a “constant of integration”.</p></article><p id="p-618">Now we just need a tiny bit more notation.</p>
+<article class="definition-like" id="definition-8"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">1.3.10</span>
+</h6>
+<p id="p-619">The symbol</p>
+<div class="displaymath">
+\begin{gather*}
+\left.\int f(x)\dee{x} \right|_{a}^{b}
+\end{gather*}
+</div>
+<p>denotes the change in an antiderivative of \(f(x)\) from \(x=a\) to \(x=b\text{.}\) More precisely,  let \(F(x)\) be any antiderivative of \(f(x)\text{.}\) Then</p>
+<div class="displaymath">
+\begin{align*}
+\left.\int f(x)\dee{x} \right|_{a}^{b}
+&amp;= \left.F(x)\right|_a^b = F(b) - F(a)
+\end{align*}
+</div></article><p id="p-620">Notice that this notation allows us to write part 2 of the fundamental theorem as</p>
+<div class="displaymath">
+\begin{align*}
+\int_a^b f(x)\dee{x} &amp;= \left.\int f(x)\dee{x} \right|_{a}^{b}\\
+&amp;= \left.F(x)\right|_a^b = F(b) - F(a)
+\end{align*}
+</div>
+<p>Some texts also use an equivalent notation using square brackets:</p>
+<div class="displaymath">
+\begin{align*}
+\int_a^b f(x)\dee{x} &amp;= \Big[F(x)\Big]_a^b = F(b) - F(a).
+\end{align*}
+</div>
+<p>You should be familiar with both notations.</p>
+<p id="p-621">We'll soon develop some strategies for computing more complicated integrals. But for now, we'll try a few integrals that are simple enough that we can just guess the answer. Of course, any antiderivative that we can guess we can also check  — simply differentiate the guess and verify you get back to the original function:</p>
+<div class="displaymath">
+\begin{align*}
+\diff{}{x} \int f(x)\dee{x} &amp;= f(x).
+\end{align*}
+</div>
+<p>We do these examples in some detail to help us become comfortable finding indefinite  integrals.</p>
+<article class="example-like" id="eg_INTintegralA"><a knowl="" class="id-ref" refid="hk-eg_INTintegralA"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.3.11</span> <span class="title">Compute the definite integral \(\int_1^2 x\dee{x}\)</span>
+</h6></a></article><div id="hk-eg_INTintegralA" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-622">Compute the definite integral \(\int_1^2 x\dee{x}\text{.}\)</p>
+<p id="p-623"><em class="alert">Solution:</em> We have already seen, in Example <a knowl="./knowl/eg_INTPROPx.html" title="Example 1.2.6: \(\int_a^b x\dee{x}\)">1.2.6</a>, that \(\int_1^2 x\dee{x}=\frac{2^2-1^2}{2}=\frac{3}{2}\text{.}\) We shall now rederive that result using the fundamental theorem of calculus.</p>
+<ul class="disc">
+<li id="li-361">The main difficulty in this approach is finding the indefinite integral (an  antiderivative) of \(x\text{.}\) That is, we need to find a function \(F(x)\) whose derivative is  \(x\text{.}\) So think back to all the derivatives you computed last term <a knowl="" class="id-ref" refid="hk-fn-33" id="fn-33"><sup> 6 </sup></a><span id="hk-fn-33" class="hidden-content tex2jax_ignore"><span class="footnote">Of course, this  assumes that you did your differential calculus course last term. If you did that course  at a different time then please think back to that point in time. If it is long enough  ago that you don't quite remember when it was, then you should probably do some revision  of derivatives of simple functions before proceeding further.</span></span> and try to remember a  function whose derivative was something like \(x\text{.}\)</li>
+<li id="li-362">This shouldn't be too hard — we recall that the derivatives of polynomials are  polynomials. More precisely, we know that<div class="displaymath">
+\begin{align*}
+\diff{}{x}x^n &amp;= n x^{n-1}
+\end{align*}
+</div>So if we want to end up with just \(x = x^1\text{,}\) we need to take \(n=2\text{.}\) However this gives us<div class="displaymath">
+\begin{align*}
+\diff{}{x}x^2 &amp;= 2x
+\end{align*}
+</div>
+</li>
+<li id="li-363">This is pretty close to what we want except for the factor of \(2\text{.}\) Since this is a  constant we can just divide both sides by \(2\) to obtain:<div class="displaymath">
+\begin{align*}
+\frac{1}{2}\cdot \diff{}{x}x^2 &amp;= \frac{1}{2}\cdot 2x &amp;\text{which becomes}\\
+\cdot \diff{}{x}\frac{x^2}{2}&amp;= x
+\end{align*}
+</div>which is exactly what we need. It tells us that \(x^2/2\) is an antiderivative of \(x\text{.}\)</li>
+<li id="li-364">Once one has an antiderivative, it is easy to compute the indefinite integral<div class="displaymath">
+\begin{align*}
+\int x\dee{x} &amp;= \frac{1}{2}x^2+C
+\end{align*}
+</div>as well as the definite integral:<div class="displaymath">
+\begin{align*}
+\int_1^2 x\dee{x}
+&amp;= \left.\frac{1}{2}x^2 \right|_1^2 &amp;\text{since $x^2/2$ is an antiderivative of $x$}\\
+&amp;=\frac{1}{2} 2^2- \frac {1}{2}1^2 =\frac{3}{2}
+\end{align*}
+</div>
+</li>
+</ul></article></div>
+<p id="p-624">While the previous example could be computed using signed areas, the following example  would be very difficult to compute without using the fundamental theorem of calculus.</p>
+<article class="example-like" id="eg_INTintegralB"><a knowl="" class="id-ref" refid="hk-eg_INTintegralB"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.3.12</span> <span class="title">Compute \(\int_0^{\frac{\pi}{2}} \sin x\dee{x}\)</span>
+</h6></a></article><div id="hk-eg_INTintegralB" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-625">Compute \(\int_0^{\frac{\pi}{2}} \sin x\dee{x}\text{.}\)</p>
+<p id="p-626"><em class="alert">Solution:</em></p>
+<ul class="disc">
+<li id="li-365">Once again, the crux of the solution is guessing the antiderivative of \(\sin x\)  — that is finding a function whose derivative  is \(\sin x\text{.}\)</li>
+<li id="li-366">The standard derivative that comes closest to \(\sin x\) is<div class="displaymath">
+\begin{gather*}
+\diff{}{x}\cos x = -\sin x
+\end{gather*}
+</div>which is the derivative we want, multiplied by a factor of \(-1\text{.}\)</li>
+<li id="li-367">Just as we did in the previous example, we multiply this equation by a constant to  remove this unwanted factor:<div class="displaymath">
+\begin{align*}
+(-1)\cdot \diff{}{x}\cos x &amp;= (-1)\cdot(-\sin x) &amp;\text{giving us}\\
+\diff{}{x}\big(-\cos x\big) &amp;= \sin x
+\end{align*}
+</div>This tells us that \(-\cos x\) is an antiderivative of \(\sin x\text{.}\)</li>
+<li id="li-368">Now it is straightforward to compute the integral:<div class="displaymath">
+\begin{align*}
+\int_0^{\frac{\pi}{2}} \sin x\dee{x}
+&amp;= \left.-\cos x \right|_0^{\frac{\pi}{2}}
+\qquad\text{since $-\cos x$ is an antiderivative of $\sin x$}\\
+&amp;= -\cos\frac{\pi}{2}+\cos 0\\
+&amp;= 0+1=1
+\end{align*}
+</div>
+</li>
+</ul></article></div>
+<article class="example-like" id="eg_INTintegralC"><a knowl="" class="id-ref" refid="hk-eg_INTintegralC"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.3.13</span> <span class="title">Compute \(\int_1^2 \frac{1}{x}\dee{x}\)</span>
+</h6></a></article><div id="hk-eg_INTintegralC" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-627">Find \(\int_1^2 \frac{1}{x}\dee{x}\text{.}\)</p>
+<p id="p-628"><em class="alert">Solution:</em></p>
+<ul class="disc">
+<li id="li-369">Once again, the crux of the solution is guessing a function whose derivative is \(\frac{1}{x}\text{.}\) Our standard way to differentiate powers of \(x\text{,}\) namely<div class="displaymath">
+\begin{gather*}
+\diff{}{x} x^n= n x^{n-1},
+\end{gather*}
+</div>doesn't work in this case — since it would require us to pick \(n=0\) and this would  give<div class="displaymath">
+\begin{align*}
+\diff{}{x} x^0 &amp;= \diff{}{x} 1 = 0.
+\end{align*}
+</div>
+</li>
+<li id="li-370">Fortunately, we also know <a knowl="" class="id-ref" refid="hk-fn-34" id="fn-34"><sup> 7 </sup></a><span id="hk-fn-34" class="hidden-content tex2jax_ignore"><span class="footnote">Recall that in most mathematics  courses (especially this one) we use \(\log x\) without any indicated base  to denote the natural logarithm — the logarithm base \(e\text{.}\)  Many widely used computer languages, like Java, C, Python, MATLAB, \(\cdots\text{,}\) use \(\log(x)\) to denote the logarithm base \(e\) too. But many texts also use \(\ln x\) to denote the natural logarithm \(\log x = \log_e x = \ln x.\) The reader should be comfortable with all three notations for this function. They should  also be aware that in different contexts — such as in chemistry or physics — it is  common to use \(\log x\) to denote the logarithm base 10, while in computer science often  \(\log x\) denotes the logarithm base 2. Context is key.</span></span> that<div class="displaymath">
+\begin{gather*}
+\diff{}{x}\log x = \frac{1}{x}
+\end{gather*}
+</div>which is exactly the derivative we want.</li>
+<li id="li-371">We're now ready to compute the prescribed integral.<div class="displaymath">
+\begin{align*}
+\int_1^2 \frac{1}{x}\dee{x}
+&amp;= \left. \log x \right|_1^2 &amp; \text{since $\log x$ is an antiderivative of $1/x$}\\
+&amp;= \log 2 - \log 1 &amp; \text{since $\log 1 = 0$}\\
+&amp;= \log 2
+\end{align*}
+</div>
+</li>
+</ul></article></div>
+<article class="example-like" id="eg_INTintegralD"><a knowl="" class="id-ref" refid="hk-eg_INTintegralD"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.3.14</span> <span class="title">\(\int_{-2}^{-1} \frac{1}{x}\dee{x}\)</span>
+</h6></a></article><div id="hk-eg_INTintegralD" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-629">Find \(\int_{-2}^{-1} \frac{1}{x}\dee{x}\text{.}\)</p>
+<p id="p-630"><em class="alert">Solution:</em></p>
+<ul class="disc">
+<li id="li-372">As we saw in the last example,<div class="displaymath">
+\begin{gather*}
+\diff{}{x}\log x = \frac{1}{x}
+\end{gather*}
+</div>and if we naively use this here, then we will obtain<div class="displaymath">
+\begin{align*}
+\int_{-2}^{-1} \frac{1}{x}\dee{x} &amp;= \log(-1)-\log(-2)
+\end{align*}
+</div>which makes no sense since the logarithm is only defined for positive  numbers <a knowl="" class="id-ref" refid="hk-fn-35" id="fn-35"><sup> 8 </sup></a><span id="hk-fn-35" class="hidden-content tex2jax_ignore"><span class="footnote">This is not entirely true — one can extend the definition of the  logarithm to negative numbers, but to do so one needs to understand complex numbers  which is a topic beyond the scope of this course.</span></span>.</li>
+<li id="li-373">
+<p id="p-631">We can work around this problem using a slight variation of the logarithm —  \(\log|x|\text{.}\)</p>
+<ul class="circle">
+<li id="li-374">When \(x \gt 0\text{,}\) we know that \(|x|=x\) and so we have<div class="displaymath">
+\begin{align*}
+\log |x| &amp;= \log x &amp; \text{differentiating gives us}\\
+\diff{}{x}\log|x| &amp;= \diff{}{x} \log x = \frac{1}{x}.
+\end{align*}
+</div>
+</li>
+<li id="li-375">When \(x \lt 0\) we have that \(|x|=-x\) and so<div class="displaymath">
+\begin{align*}
+\log |x| &amp;= \log(-x) \qquad \text{differentiating with the chain rule gives}\\
+\diff{}{x}\log|x| &amp;= \diff{}{x} \log(-x)\\
+&amp;= \frac{1}{(-x)} \cdot (-1) = \frac{1}{x}
+\end{align*}
+</div>
+</li>
+<li id="li-376">Indeed, more generally we should write the indefinite integral of \(1/x\) as<div class="displaymath">
+\begin{align*}
+\int \frac{1}{x} \dee{x} &amp;= \log |x| + C
+\end{align*}
+</div>which is valid for all positive and negative \(x\text{.}\) It is, however, undefined at \(x=0\text{.}\)</li>
+</ul>
+</li>
+<li id="li-377">We're now ready to compute the prescribed integral.<div class="displaymath">
+\begin{align*}
+\int_{-2}^{-1} \frac{1}{x}\dee{x}
+&amp;= \log|x| \bigg|_{-2}^{-1}
+\qquad \text{since $\log|x|$ is an antiderivative of $1/x$}\\
+&amp;= \log|-1| - \log|-2| = \log 1-\log 2\\
+&amp;= -\log 2 = \log\frac12.
+\end{align*}
+</div>
+</li>
+</ul></article></div>
+<p id="p-632">This next example raises a nasty issue that requires a little care. We know that the  function \(1/x\) is not defined at \(x=0\) — so can we integrate over an interval that  contains \(x=0\) and still obtain an answer that makes sense? More generally can we  integrate a function over an interval on which that function has discontinuities?</p>
+<article class="example-like" id="eg_INTintegralE"><a knowl="" class="id-ref" refid="hk-eg_INTintegralE"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.3.15</span> <span class="title">\(\int_{-1}^1\frac{1}{x^2}\dee{x}\)</span>
+</h6></a></article><div id="hk-eg_INTintegralE" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-633">Find \(\int_{-1}^1\frac{1}{x^2}\dee{x}\text{.}\)</p>
+<p id="p-634"><em class="alert">Solution:</em> Beware that this is a particularly nasty example, which illustrates a booby trap hidden in the fundamental theorem of calculus. The booby trap explodes when the theorem is applied sloppily.</p>
+<ul class="disc">
+<li id="li-378">The sloppy solution starts, as our previous examples have, by finding an  antiderivative of the integrand. In this case we know that<div class="displaymath">
+\begin{gather*}
+\diff{}{x}\frac{1}{x} = -\frac{1}{x^2}
+\end{gather*}
+</div>which means that \(-x^{-1}\) is an antiderivative of \(x^{-2}\text{.}\)</li>
+<li id="li-379">This suggests (if we proceed naively) that<div class="displaymath">
+\begin{align*}
+\int_{-1}^1 x^{-2}\dee{x}
+&amp;= \left.-\frac{1}{x}\right|_{-1}^1
+&amp; \text{since $-1/x$ is an antiderivative of $1/x^2$}\\
+&amp;= -\frac{1}{1}-\Big(-\frac{1}{-1}\Big)\\
+&amp;=-2
+\end{align*}
+</div>Unfortunately,</li>
+<li id="li-380">At this point we should really start to be concerned. This answer cannot be  correct.  Our integrand, being a square, is positive everywhere. So our integral represents the  area  of a region above the \(x\)-axis and must be positive.</li>
+<li id="li-381">So what has gone wrong? The flaw in the computation is that the fundamental theorem  of calculus, which says that<div class="displaymath">
+\begin{gather*}
+\text{if } F'(x)=f(x) \text{ then } \int_a^b f(x)\dee{x}=F(b)-F(a),
+\end{gather*}
+</div>is <em class="emphasis">only</em> applicable when \(F'(x)\) exists and equals \(f(x)\) for <em class="emphasis">all</em> \(x\) between \(a\) and \(b\text{.}\)</li>
+<li id="li-382">In this case \(F'(x)=\frac{1}{x^2}\) does not exist for \(x=0\text{.}\) So we cannot apply the  fundamental theorem of calculus as we tried to above.</li>
+</ul>
+<p>An integral, like \(\int_{-1}^1\frac{1}{x^2}\dee{x}\text{,}\) whose integrand  is undefined somewhere in the domain of integration is called improper. We'll give a more thorough treatment of improper integrals later in the text.  For now, we'll just say that the correct way to define (and evaluate) improper integrals  is as a limit of well-defined approximating integrals. We shall later see that, not only  is \(\int_{-1}^1\frac{1}{x^2}\dee{x}\) not negative, it is infinite.</p>
+<article class="remark-like" id="remark-2"><h6 class="heading">
+<span class="type">Remark</span> <span class="codenumber">1.3.16</span>
+</h6>
+<p id="p-635">For completeness we'll show how to evaluate this integral by sneaking up on the point of  discontinuity in the interval of integration. As noted above, we will give a fuller  explanation of such integrals later in the text.</p>
+<ul class="disc">
+<li id="li-383">Rather than evaluating the integral directly, we will approximate the integral  using definite integrals on intervals that avoid the discontinuity. In the current  example, the original domain of integration is \(-1\le x\le 1\text{.}\) The  domains of integration of the approximating integrals exclude from \([-1,1]\) small  intervals around \(x=0\text{.}\)</li>
+<li id="li-384">
+<p id="p-636">The shaded area in the figure below illustrates a typical approximating integral, whose domain of integration consists of the original domain of integration, \([-1,1]\text{,}\) but with the interval \([-t,T]\) excluded.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/boobyTrap.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-637">The full domain of integration is only recovered in the limit  \(t,T\rightarrow 0\text{.}\)</p>
+</li>
+<li id="li-385">For this example, the correct computation is<div class="displaymath">
+\begin{align*}
+&amp;\int_{-1}^1\frac{1}{x^2}\dee{x} =\lim_{t\rightarrow 0^+}\int_{-1}^{-t}\frac{1}{x^2}\dee{x} \ +\ \lim_{T\rightarrow 0^+}\int_{T}^{1}\frac{1}{x^2}\dee{x}\\
+&amp;\hskip0.25in=\lim_{t\rightarrow 0^+}\bigg[-\frac{1}{x}\bigg]_{-1}^{-t} +\lim_{T\rightarrow 0^+}\bigg[-\frac{1}{x}\bigg]_{T}^1\\
+&amp;\hskip0.25in=\lim_{t\rightarrow 0^+} \Big[\Big(-\frac{1}{-t}\Big)-\Big(-\frac{1}{-1}\Big)\Big] +\lim_{T\rightarrow 0^+} \Big[\Big(-\frac{1}{1}\Big)-\Big(-\frac{1}{T}\Big)\Big]\\
+&amp;\hskip0.25in=\lim_{t\rightarrow 0^+}\frac{1}{t} +\lim_{T\rightarrow 0^+}\frac{1}{T}-2\\
+&amp;\hskip0.25in=+\infty
+\end{align*}
+</div>
+</li>
+<li id="li-386">We can interpret this to mean that the signed area under the curve \(x^{-2}\) between  \(x=-1\) and \(x=1\) is infinite.</li>
+</ul></article></article></div>
+<p id="p-638">The above examples have illustrated how we can use the fundamental  theorem of calculus to convert knowledge of derivatives into  knowledge of integrals. We are now in a position to easily build a table of integrals. Here is a short table of the most important derivatives that we know.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="l m b1 r1 l1 t1 lines">\(F(x)\)</td>
+<td class="l m b1 r1 l0 t1 lines">\(1\)</td>
+<td class="l m b1 r1 l0 t1 lines">\(x^n\)</td>
+<td class="l m b1 r1 l0 t1 lines">\(\sin x\)</td>
+<td class="l m b1 r1 l0 t1 lines">\(\cos x\)</td>
+<td class="l m b1 r1 l0 t1 lines">\(\tan x\)</td>
+<td class="l m b1 r1 l0 t1 lines">\(e^x\)</td>
+<td class="l m b1 r1 l0 t1 lines">\(\log_e|x|\)</td>
+<td class="l m b1 r1 l0 t1 lines">\(\arcsin x\)</td>
+<td class="l m b1 r1 l0 t1 lines">\(\arctan x\)</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">\(f(x)=F'(x)\)</td>
+<td class="l m b1 r1 l0 t0 lines">\(0\)</td>
+<td class="l m b1 r1 l0 t0 lines">\(nx^{n-1}\)</td>
+<td class="l m b1 r1 l0 t0 lines">\(\cos x\)</td>
+<td class="l m b1 r1 l0 t0 lines">\(-\sin x\)</td>
+<td class="l m b1 r1 l0 t0 lines">\(\sec^2 x\)</td>
+<td class="l m b1 r1 l0 t0 lines">\(e^x\)</td>
+<td class="l m b1 r1 l0 t0 lines">\(\frac{1}{x}\)</td>
+<td class="l m b1 r1 l0 t0 lines">\(\frac{1}{\sqrt{1-x^2}}\)</td>
+<td class="l m b1 r1 l0 t0 lines">\(\frac{1}{1+x^2}\)</td>
+</tr>
+</table></div></div></div>
+<p id="p-639">Of course we know other derivatives, such as those of \(\sec x\) and \(\cot x\text{,}\) however the ones listed above are arguably the most important ones. From this table (with a very little massaging) we can write down a short table of indefinite integrals.</p>
+<article class="theorem-like" id="thm_imp_indef_int"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.3.17</span> <span class="title">Important indefinite integrals</span>
+</h6>
+<p id="p-640"><table>
+<tr>
+<td class="l m b1 r1 l1 t1 lines">\(f(x)\)</td>
+<td class="l m b1 r1 l0 t1 lines">\(F(x)=\int f(x)\dee{x}\)</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">\(1\)</td>
+<td class="l m b1 r1 l0 t0 lines">\(x+C\)</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">\(x^n\)</td>
+<td class="l m b1 r1 l0 t0 lines">\(\frac{1}{n+1}x^{n+1}+C\text{ provided that }n \ne-1\)</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">\(\dfrac{1}{x}\)</td>
+<td class="l m b1 r1 l0 t0 lines">\(\log_e|x|+C\)</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">\(e^x\)</td>
+<td class="l m b1 r1 l0 t0 lines">\(e^x+C\)</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">\(\sin x\)</td>
+<td class="l m b1 r1 l0 t0 lines">\(-\cos x+C\)</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">\(\cos x\)</td>
+<td class="l m b1 r1 l0 t0 lines">\(\sin x+C\)</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">\(\sec^2 x\)</td>
+<td class="l m b1 r1 l0 t0 lines">\(\tan x+C\)</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">\(\dfrac{1}{\sqrt{1-x^2}}\)</td>
+<td class="l m b1 r1 l0 t0 lines">\(\arcsin x+C\)</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">\(\dfrac{1}{1+x^2}\)</td>
+<td class="l m b1 r1 l0 t0 lines">\(\arctan x+C\)</td>
+</tr>
+</table></p></article><article class="example-like" id="example-28"><a knowl="" class="id-ref" refid="hk-example-28"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.3.18</span> <span class="title">Using Theorem 1.3.17 to compute some integrals</span>
+</h6></a></article><div id="hk-example-28" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-641">Find the following integrals</p>
+<ol class="lower-roman">
+<li id="li-387">\(\int_2^7 e^x \dee{x}\)</li>
+<li id="li-388">\(\int_{-2}^2 \frac{1}{1+x^2} \dee{x}\)</li>
+<li id="li-389">\(\int_0^3 (2x^3+7x-2)\dee{x}\)</li>
+</ol>
+<p id="p-642"><em class="alert">Solution:</em> We can proceed with each of these as before — find the antiderivative and then  apply the fundamental theorem. The third integral is a little more complicated, but we  can split it up into monomials using Theorem <a knowl="./knowl/thm_Intarith.html" title="Theorem 1.2.1: Arithmetic of Integration">1.2.1</a> and do each separately.</p>
+<ol class="lower-roman">
+<li id="li-390">An antiderivative of \(e^x\) is just \(e^x\text{,}\) so<div class="displaymath">
+\begin{align*}
+\int_2^7 e^x \dee{x} &amp;= e^x\bigg|_2^7\\
+&amp;= e^7-e^2 = e^2(e^5-1).
+\end{align*}
+</div>
+</li>
+<li id="li-391">An antiderivative of \(\frac{1}{1+x^2}\) is \(\arctan(x)\text{,}\) so<div class="displaymath">
+\begin{align*}
+\int_{-2}^2 \frac{1}{1+x^2} \dee{x} &amp;= \arctan(x) \bigg|_{-2}^2\\
+&amp;= \arctan(2) - \arctan(-2)\\
+\end{align*}
+<p class="intertext">We can simplify this a little further by noting that \(\arctan(x)\) is an  odd function, so \(\arctan(-2)= -\arctan(2)\) and thus our integral is</p>
+\begin{align*}
+&amp;= 2\arctan(2)
+\end{align*}
+</div>
+</li>
+<li id="li-392">We can proceed by splitting the integral using Theorem <a knowl="./knowl/thm_Intarith.html" title="Theorem 1.2.1: Arithmetic of Integration">1.2.1</a>(d)<div class="displaymath">
+\begin{align*}
+\int_0^3 (2x^3+7x-2)\dee{x} &amp;= \int_0^3 2x^3\dee{x} + \int_0^3 7x\dee{x} - \int_0^3 2\dee{x}\\
+&amp;= 2\int_0^3 x^3\dee{x} + 7\int_0^3 x\dee{x} - 2\int_0^3 \dee{x}\\
+\end{align*}
+<p class="intertext">and because we know that \(x^4/4, x^2/2, x\) are antiderivatives of \(x^3, x, 1\)  respectively, this becomes</p>
+\begin{align*}
+&amp;= \left[\frac{x^4}{2}\right]_0^3 + \left[\frac{7x^2}{2}\right]_0^3 - \left[2x\right]_0^3\\
+&amp;= \frac{81}{2} + \frac{7\cdot 9}{2} -6\\
+&amp;= \frac{81 + 63 - 12}{2} = \frac{132}{2} = 66.
+\end{align*}
+</div>We can also just find the antiderivative of the whole polynomial by finding the  antiderivatives of each term of the polynomial and then recombining them. This is  equivalent to what we have done above, but perhaps a little neater:<div class="displaymath">
+\begin{align*}
+\int_0^3 (2x^3+7x-2)\dee{x} &amp;= \left[ \frac{x^4}{2} + \frac{7x^2}{2} - 2x \right]_0^3\\
+&amp;= \frac{81}{2} + \frac{7\cdot 9}{2} -6 = 66.
+\end{align*}
+</div>
+</li>
+</ol></article></div></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

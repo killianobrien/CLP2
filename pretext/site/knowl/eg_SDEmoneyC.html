@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:21:25+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="example-like"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.4.28</span> <span class="title">Pension planning</span>
+</h6>
+<p>A 25 year old graduate of UBC is given $50,000 which is invested at 5% per year compounded continuously. The graduate also intends to deposit money continuously at the rate of $2000 per year.</p>
+<ol class="lower-alpha">
+<li>Find a differential equation that \(A(t)\) obeys, assuming that the interest rate remains 5%.</li>
+<li>Determine the amount of money in the account when the graduate is 65.</li>
+<li>At age 65, the graduate will start withdrawing money  continuously at the rate of \(W\) dollars per year. If the money  must last until the person is 85, what is the largest possible  value of \(W\text{?}\)</li>
+</ol>
+<p><em class="alert">Solution:</em> (a) Let's consider what happens to \(A\) over a very short time interval from time \(t\) to time \(t + \De t\text{.}\) At time \(t\) the account balance is \(A(t)\text{.}\) During the (really short) specified time interval the balance  remains very close to \(A(t)\) and so earns interest of  \(\frac{5}{100}\times\De t\times A(t)\text{.}\)  During the same time interval, the graduate also deposits an additional \(\$ 2000\De t\text{.}\) So</p>
+<div class="displaymath">
+\begin{align*}
+A(t+\De t)&amp; \approx A(t) + 0.05 A(t)\De t+ 2000\De t\\
+&amp; \implies
+\frac{A(t+\De t)- A(t)}{\De t} \approx 0.05 A(t)  + 2000
+\end{align*}
+</div>
+<p>In the limit \(\De t\rightarrow 0\text{,}\) the approximation becomes exact and we get</p>
+<div class="displaymath">
+\begin{equation*}
+\diff{A}{t}= 0.05 A+2000
+\end{equation*}
+</div>
+<p>(b) The amount of money at time \(t\) obeys</p>
+<div class="displaymath">
+\begin{equation*}
+\diff{A}{t}= 0.05 A(t)+2,\!000=0.05\big(A(t)+40,\!000\big)
+\end{equation*}
+</div>
+<p>So by Theorem <a knowl="./knowl/thm_linearODE.html" title="Theorem 2.4.4">2.4.4</a>  (with \(a=0.05\) and \(b=-40,\!000\)),</p>
+<div class="displaymath">
+\begin{equation*}
+A(t)=\big(A(0)+40,\!000\big)e^{0.05 t} -40,\!000
+\end{equation*}
+</div>
+<p>At time 0 (when the graduate is 25), \(A(0)=50,\!000\text{,}\) so the amount of  money at time \(t\) is</p>
+<div class="displaymath">
+\begin{equation*}
+A(t)=90,\!000\, e^{0.05 t}-40,000
+\end{equation*}
+</div>
+<p>In particular, when the graduate is 65 years old, \(t=40\) and</p>
+<div class="displaymath">
+\begin{equation*}
+A(40)=90,\!000\, e^{0.05 \times 40}-40,000=\text{\$625,015.05 }
+\end{equation*}
+</div>
+<p>(c) When the graduate stops depositing money and instead  starts withdrawing money at a rate \(W\text{,}\) the equation for \(A\) becomes</p>
+<div class="displaymath">
+\begin{equation*}
+\diff{A}{t}= 0.05 A-W= 0.05 (A-20 W)
+\end{equation*}
+</div>
+<p>assuming that the interest rate remains 5%.  This time, Theorem <a knowl="./knowl/thm_linearODE.html" title="Theorem 2.4.4">2.4.4</a> (with \(a=0.05\) and \(b=20W\)) gives</p>
+<div class="displaymath">
+\begin{equation*}
+A(t)=\big(A(0)-20W\big)e^{0.05 t} + 20W
+\end{equation*}
+</div>
+<p>If we now reset our clock so that \(t=0\) when the graduate is 65,   \(A(0)=625,015.05\text{.}\) So the amount of money at time \(t\) is</p>
+<div class="displaymath">
+\begin{equation*}
+A(t)=20W+ e^{0.05 t}(625,015.05-20W)
+\end{equation*}
+</div>
+<p>We want the account to be depleted when the graduate is 85. So, we want \(A(20)=0\text{.}\) This is the case if</p>
+<div class="displaymath">
+\begin{align*}
+20W+ e^{0.05\times 20}(625,015.05-20W) &amp; =0\\
+\implies&amp;
+20W+ e(625,015.05-20W)=0\\
+\implies&amp;
+20(e-1)W= 625,015.05e\\
+\implies&amp;
+W=\frac{625,015.05e}{20(e-1)}=\$49,437.96
+\end{align*}
+</div></article><span class="incontext"><a href="subsection-39.html#eg_SDEmoneyC">in-context</a></span>
+</body>
+</html>

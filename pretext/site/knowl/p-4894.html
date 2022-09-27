@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:22:36+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<ol class="upper-alpha">
+<li>\(\displaystyle\lim_{n \to \infty}\frac{1}{n}=0\text{,}\) so the divergence test is inconclusive. It's true that this series diverges, but we can't show it using the divergence test.</li>
+<li>\(\displaystyle\lim_{n \to \infty}\frac{n^2}{n+1}=\infty\text{,}\) which is not zero, so the divergence test tells us this series diverges.</li>
+<li>
+<p>We'll show below that  \(\displaystyle\lim_{n \to \infty}\sin n\) does not exist. In particular, it is not zero. Therefore, the divergence test tells us this series diverges.</p>
+<p>Now we'll show that \(\displaystyle\lim_{n \to \infty}\sin n\) does not exist. Suppose that it does exist and takes the value \(S\text{.}\) We will now see that this assumption leads to a contradiction. Add together the two trig identities (see Appendix <a href="sec_trig_add.html" class="xref" title="Section A.8: Trigonometry — Add and Subtract Angles">A.8</a>)</p>
+<div class="displaymath">
+\begin{align*}
+\sin(n+1)  &amp;=  \sin(n)\cos(1)+\cos(n)\sin(1) \\
+\sin(n-1)  &amp;=  \sin(n)\cos(1)-\cos(n)\sin(1) 
+\end{align*}
+</div>
+<p>This gives</p>
+<div class="displaymath">
+\begin{equation*}
+\sin(n+1) +\sin (n-1) = 2\sin(n)\cos(1)
+\end{equation*}
+</div>
+<p>Taking the limit \(n\rightarrow\infty\) gives \(2S=2S\cos(1)\text{.}\) Since \(\cos(1)\ne 1\text{,}\) this forces \(S=0\text{.}\) Now the first trig identity above gives</p>
+<div class="displaymath">
+\begin{equation*}
+\cos(n)  =  \frac{\sin(n+1)-\sin(n)\cos(1)}{\sin(1)}
+\end{equation*}
+</div>
+<p>Taking the limit as \(n\rightarrow\infty\) of that gives</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{n\to\infty}\cos(n)  =  \frac{S-S\cos(1)}{\sin(1)}=0
+\end{equation*}
+</div>
+<p>But that provides the contradiction. Because \(\sin^2(n)+\cos^2(n)=1\text{,}\) we can't have both \(\sin(n)\) and \(\cos(n)\) converging to zero. So \(\displaystyle\lim_{n \to \infty}\sin n\) does not exist.</p>
+</li>
+<li>For all whole numbers \(n\text{,}\) \(\sin(\pi n)=0\text{,}\) so \(\displaystyle\lim_{n \to \infty}\sin(\pi n)=0\) and the divergence test is inconclusive.</li>
+</ol>
+<span class="incontext"><a href="exercises-20.html#p-4894">in-context</a></span>
+</body>
+</html>

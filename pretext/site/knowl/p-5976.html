@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:24:15+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>(a) Substituting \(x=-t\) into the known power series \(e^x = 1 + x +\frac{x^2}{2!}+\frac{x^3}{3!} + \frac{x^4}{4!} + \cdots\text{,}\) we see that:</p>
+<div class="displaymath">
+\begin{align*}
+e^{-t}&amp;= 1  - t +\frac{t^2}{2!}-\frac{t^3}{3!} + \frac{t^4}{4!} - \cdots\\
+1-e^{-t}&amp;=  t - \frac{t^2}{2!}+ \frac{t^3}{3!} - \frac{t^4}{4!} + \cdots\\
+\frac{1-e^{-t}}{t}&amp;=  1 - \frac{t}{2!}+ \frac{t^2}{3!} - \frac{t^3}{4!} + \cdots\\
+\int \frac{1-e^{-t}}{t}\ \dee{t}&amp;=  C + x - \frac{x^2}{2\cdot 2!}
++ \frac{x^3}{3\cdot 3!} - \frac{x^4}{4\cdot 4!} + \cdots
+\end{align*}
+</div>
+<p>Finally, \(f(0) = 0\) (since \(f(0)\) is an integral from \(0\) to \(0\)) and so \(C=0\text{.}\) Therefore</p>
+<div class="displaymath">
+\begin{gather*}
+f(x) = \int_0^x\frac{1-e^{-t}}{t}\ \dee{t} =  x - \frac{x^2}{2\cdot 2!} + \frac{x^3}{3\cdot 3!} - \frac{x^4}{4\cdot 4!} + \cdots.
+\end{gather*}
+</div>
+<span class="incontext"><a href="exercises-23.html#p-5976">in-context</a></span>
+</body>
+</html>

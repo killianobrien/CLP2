@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:20:18+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">1.12.4.26.1</span>
+</h6>
+<ol class="lower-alpha">
+<li>Since \(f(x)\) is odd, using the reasoning of Example <a knowl="./knowl/eg_areaunderoddfunction.html" title="Example 1.2.11: Odd functions">1.2.11</a>,<div class="displaymath">
+\begin{align*}
+\int_{-\infty}^{-1} f(x) \dee{x}\amp=\lim_{t \to \infty}\int_{-t}^{-1}f(x) \dee{x}=\lim_{t \to \infty}-\int_{1}^{t} f(x) \dee{x}\\
+\amp=-\lim_{t \to \infty} \int_{1}^{t} f(x) \dee{x}
+\end{align*}
+</div>Since \(\displaystyle\int_1^\infty f(x) \dee{x}\) converges, the last limit above converges. Therefore, \(\displaystyle\int_{-\infty\vphantom{\frac12}}^{-1} f(x) \dee{x}\) converges.</li>
+<li>Since \(f(x)\) is even, using the reasoning of Example <a knowl="./knowl/eg_lefthalfevenfunction.html" title="Example 1.2.10: Even functions">1.2.10</a>,<div class="displaymath">
+\begin{align*}
+\int_{-\infty}^{-1} f(x) \dee{x}\amp=\lim_{t \to \infty}\int_{-t}^{-1}f(x) \dee{x}=\lim_{t \to \infty}\int_{1}^{t} f(x) \dee{x}\\
+\amp=\lim_{t \to \infty} \int_{1}^{t} f(x) \dee{x}\\
+\end{align*}
+<p class="intertext">Since \(\displaystyle\int_1^\infty f(x) \dee{x}\) converges, the last limit above converges.  Since \(f(x)\) is continuous everywhere, by Theorem <a knowl="./knowl/thm_IMPfiniteSHift.html" title="Theorem 1.12.20">1.12.20</a>,  \(\displaystyle\int_{-1}^\infty f(x) \dee{x}\) converges (note the adjusted lower limit). Then, since</p>
+\begin{align*}
+\int_{-\infty}^\infty f(x) \dee{x}&amp; =
+\int_{-\infty}^{-1} f(x) \dee{x} +
+\int_{-1}^\infty f(x) \dee{x}
+\end{align*}
+</div>and both terms converge, our original integral converges as well.</li>
+</ol>
+</div>
+<span class="incontext"><a href="exercises-12.html#solution-358">in-context</a></span>
+</body>
+</html>

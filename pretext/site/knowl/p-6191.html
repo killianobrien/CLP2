@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:24:40+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Let's apply adaptive quadrature using Simpson's rule as above with the goal of computing \(\int _0^1\sqrt{x}\ \dee{x}\) with an error of at most \(\varepsilon=0.0005=5\times 10^{-4}\text{.}\) Observe that \(\diff{}{x}\sqrt{x}=\frac{1}{2\sqrt{x}}\) blows up as \(x\) tends to zero. The integrand changes very quickly when \(x\) is small. So we will probably need to make the step size small near the limit of integration \(x=0\text{.}\)</p>
+<ul class="disc">
+<li>
+<em class="emphasis">Step 1 — the interval \([0,1]\text{.}\)</em> (The notation \([0,1]\) stands for the interval \(0\le x\le 1\text{.}\))<div class="displaymath">
+\begin{align*}
+S(0,1\,;\tfrac{1}{2})&amp;= 0.63807119 \\
+S(0,\tfrac{1}{2}\,;\tfrac{1}{4})&amp;= 0.22559223 \\
+S(\tfrac{1}{2},1\,;\tfrac{1}{4})&amp;= 0.43093403  \\
+\text{error}&amp;=\tfrac{1}{15}\left|S(0,\tfrac{1}{2}\,;\tfrac{1}{4})
++S(\tfrac{1}{2},1\,;\tfrac{1}{4})
+-S(0,1\,;\tfrac{1}{2})\right|
+=0.0012 \\
+&amp;\gt\varepsilon =0.0005
+\end{align*}
+</div>This is unacceptably large, so we subdivide the interval \([0,1]\) into the two halves \(\big[0,\tfrac{1}{2}\big]\) and \(\big[\tfrac{1}{2},1\big]\) and apply the procedure separately to each half.</li>
+<li>
+<em class="emphasis">Step 2a — the interval \([0,\half]\text{.}\)</em><div class="displaymath">
+\begin{align*}
+S(0,\tfrac{1}{2}\,;\tfrac{1}{4})&amp;= 0.22559223 \\
+S(0,\tfrac{1}{4}\,;\tfrac{1}{8})&amp;= 0.07975890 \\
+S(\tfrac{1}{4},\tfrac{1}{2}\,;\tfrac{1}{8})&amp;= 0.15235819 \\
+\text{error}&amp;=\tfrac{1}{15}\left|S(0,\tfrac{1}{4}\,;\tfrac{1}{8})
++S(\tfrac{1}{4},\tfrac{1}{2}\,;\tfrac{1}{8})
+-S(0,\tfrac{1}{2}\,;\tfrac{1}{4})\right|
+= 0.00043 \\
+&amp; \gt\tfrac{\varepsilon}{2} = 0.00025
+\end{align*}
+</div>This error is unacceptably large.</li>
+<li>
+<em class="emphasis">Step 2b — the interval \([\tfrac{1}{2},1]\text{.}\)</em><div class="displaymath">
+\begin{align*}
+S(\tfrac{1}{2},1\,;\tfrac{1}{4})&amp;= 0.43093403 \\
+S(\tfrac{1}{2},\tfrac{3}{4}\,;\tfrac{1}{8})&amp;= 0.19730874 \\
+S(\tfrac{3}{4},1\,;\tfrac{1}{8})&amp;= 0.23365345  \\
+\text{error}&amp;=\tfrac{1}{15}\left|S(\tfrac{1}{2},\tfrac{3}{4}\,;\tfrac{1}{8})
++S(\tfrac{3}{4},1\,;\tfrac{1}{8})
+-S(\tfrac{1}{2},1\,;\tfrac{1}{4})\right|
+= 0.0000019 \\
+&amp;\lt\tfrac{\varepsilon}{2} = 0.00025
+\end{align*}
+</div>This error is acceptable.</li>
+<li>
+<p><em class="emphasis">Step 2 resumé.</em> The error for the interval \([\tfrac{1}{2},1]\) is small enough, so we accept</p>
+<div class="displaymath">
+\begin{equation*}
+S(\tfrac{1}{2},1\,;\tfrac{1}{8})
+= S(\tfrac{1}{2},\tfrac{3}{4}\,;\tfrac{1}{8})
++ S(\tfrac{3}{4},1\,;\tfrac{1}{8})
+= 0.43096219
+\end{equation*}
+</div>
+<p>as the approximate value of \(\int_{1/2}^1\sqrt{x}\,\dee{x}\text{.}\)</p>
+<p>The error for the interval \([0,\tfrac{1}{2}]\) is unacceptably large, so we subdivide the interval \([0,\tfrac{1}{2}]\) into the two halves \([0,\tfrac{1}{4}]\) and \([\tfrac{1}{4},\tfrac{1}{2}]\) and apply the procedure separately to each half.</p>
+</li>
+<li>
+<em class="emphasis">Step 3a — the interval \([0,\tfrac{1}{4}]\text{.}\)</em><div class="displaymath">
+\begin{align*}
+S(0,\tfrac{1}{4}\,;\tfrac{1}{8})&amp;= 0.07975890  \\
+S(0,\tfrac{1}{8}\,;\tfrac{1}{16})&amp;= 0.02819903   \\
+S(\tfrac{1}{8},\tfrac{1}{4}\,;\tfrac{1}{16})&amp;= 0.05386675   \\
+\text{error}&amp;=\tfrac{1}{15}\left|S(0,\tfrac{1}{8}\,;\tfrac{1}{16})
++S(\tfrac{1}{8},\tfrac{1}{4}\,;\tfrac{1}{16})
+-S(0,\tfrac{1}{4}\,;\tfrac{1}{8})\right|\\
+&amp;= 0.000153792 &gt; \tfrac{\varepsilon}{4} = 0.000125
+\end{align*}
+</div>This error is unacceptably large.</li>
+<li>
+<em class="emphasis">Step 3b — the interval \([\tfrac{1}{4},\tfrac{1}{2}]\text{.}\)</em><div class="displaymath">
+\begin{align*}
+S(\tfrac{1}{4},\tfrac{1}{2}\,;\tfrac{1}{8})&amp;= 0.15235819   \\
+S(\tfrac{1}{4},\tfrac{3}{8}\,;\tfrac{1}{16})&amp;= 0.06975918  \\
+S(\tfrac{3}{8},\tfrac{1}{2}\,;\tfrac{1}{16})&amp;= 0.08260897   \\
+\text{error}&amp;=\tfrac{1}{15}\left|S(\tfrac{1}{4},\tfrac{3}{8}\,;\tfrac{1}{16})
++S(\tfrac{3}{8},\tfrac{1}{2}\,;\tfrac{1}{16})
+-S(\tfrac{1}{4},\tfrac{1}{2}\,;\tfrac{1}{8})\right|\\
+&amp; =  0.00000066  \lt\tfrac{\varepsilon}{4} = 0.000125
+\end{align*}
+</div>This error is acceptable.</li>
+<li>
+<p><em class="emphasis">Step 3 resumé.</em> The error for the interval \([\tfrac{1}{4},\tfrac{1}{2}]\) is small enough, so we accept</p>
+<div class="displaymath">
+\begin{equation*}
+S(\tfrac{1}{4},\tfrac{1}{2}\,;\tfrac{1}{16})
+= S(\tfrac{1}{4},\tfrac{3}{8}\,;\tfrac{1}{16})
++ S(\tfrac{3}{8},\tfrac{1}{2}\,;\tfrac{1}{16})
+= 0.15236814
+\end{equation*}
+</div>
+<p>as the approximate value of \(\int_{1/4}^{1/2}\sqrt{x}\,\dee{x}\text{.}\)</p>
+<p>The error for the interval \([0,\tfrac{1}{4}]\) is unacceptably large, so we subdivide the interval \([0,\tfrac{1}{4}]\) into the two halves \([0,\tfrac{1}{8}]\) and \([\tfrac{1}{8},\tfrac{1}{4}]\) and apply the procedure separately to each half.</p>
+</li>
+<li>
+<em class="emphasis">Step 4a — the interval \([0,\tfrac{1}{8}]\text{.}\)</em><div class="displaymath">
+\begin{align*}
+S(0,\tfrac{1}{8}\,;\tfrac{1}{16})&amp;= 0.02819903   \\
+S(0,\tfrac{1}{16}\,;\tfrac{1}{32})&amp;= 0.00996986    \\
+S(\tfrac{1}{16},\tfrac{1}{8}\,;\tfrac{1}{32})&amp;= 0.01904477    \\
+\text{error}&amp;=\tfrac{1}{15}\left|S(0,\tfrac{1}{16}\,;\tfrac{1}{32})
++S(\tfrac{1}{16},\tfrac{1}{8}\,;\tfrac{1}{32})
+-S(0,\tfrac{1}{8}\,;\tfrac{1}{16})\right|\\
+&amp; =  0.000054  \lt \tfrac{\varepsilon}{8} = 0.0000625
+\end{align*}
+</div>This error is acceptable.</li>
+<li>
+<em class="emphasis">Step 4b — the interval \([\tfrac{1}{8},\tfrac{1}{4}]\text{.}\)</em><div class="displaymath">
+\begin{align*}
+S(\tfrac{1}{8},\tfrac{1}{4}\,;\tfrac{1}{16})&amp;= 0.05386675   \\
+S(\tfrac{1}{8},\tfrac{3}{16}\,;\tfrac{1}{32})&amp;= 0.02466359  \\
+S(\tfrac{3}{16},\tfrac{1}{4}\,;\tfrac{1}{32})&amp;= 0.02920668   \\
+\text{error}&amp;=\tfrac{1}{15}\left|S(\tfrac{1}{8},\tfrac{3}{16}\,;\tfrac{1}{32})
++S(\tfrac{3}{6},\tfrac{1}{4}\,;\tfrac{1}{32})
+-S(\tfrac{1}{8},\tfrac{1}{4}\,;\tfrac{1}{16})\right|\\
+&amp; =  0.00000024  \lt \tfrac{\varepsilon}{8} = 0.0000625
+\end{align*}
+</div>This error is acceptable.</li>
+<li>
+<p><em class="emphasis">Step 4 resumé.</em> The error for the interval \([0,\tfrac{1}{8}]\) is small enough, so we accept</p>
+<div class="displaymath">
+\begin{equation*}
+S(0,\tfrac{1}{8}\,;\tfrac{1}{32})
+= S(0,\tfrac{1}{16}\,;\tfrac{1}{32})
++ S(\tfrac{1}{16},\tfrac{1}{8}\,;\tfrac{1}{32})
+=  0.02901464
+\end{equation*}
+</div>
+<p>as the approximate value of \(\int_0^{1/8}\sqrt{x}\,\dee{x}\text{.}\)</p>
+<p>The error for the interval \([\tfrac{1}{8},\tfrac{1}{4}]\) is small enough, so we accept</p>
+<div class="displaymath">
+\begin{equation*}
+S(\tfrac{1}{8},\tfrac{1}{4}\,;\tfrac{1}{32})
+= S(\tfrac{1}{8},\tfrac{3}{16}\,;\tfrac{1}{32})
++ S(\tfrac{3}{16},\tfrac{1}{4}\,;\tfrac{1}{32})
+= 0.05387027
+\end{equation*}
+</div>
+<p>as the approximate value of \(\int_{1/8}^{1/4}\sqrt{x}\,\dee{x}\text{.}\)</p>
+</li>
+<li>
+<em class="emphasis">Conclusion.</em> The approximate value for \(\int_0^1\sqrt{x}\ \dee{x}\) is<div class="displaymath">
+\begin{align*}
+&amp; S(0,\tfrac{1}{8}\,;\tfrac{1}{32})
++S(\tfrac{1}{8},\tfrac{1}{4}\,;\tfrac{1}{32})
++S(\tfrac{1}{4},\tfrac{1}{2}\,;\tfrac{1}{16})
++S(\tfrac{1}{2},1\,;\tfrac{1}{8})\\
+&amp;\hskip1in =0.66621525
+\tag{E8}
+\end{align*}
+</div>
+</li>
+</ul>
+<p>Of course the exact value of \(\int_0^1\sqrt{x}\ \dee{x}=\tfrac{2}{3}\text{,}\) so the actual error in our approximation is</p>
+<div class="displaymath">
+\begin{equation*}
+\tfrac{2}{3}-0.66621525 = 0.00045 \lt \varepsilon = 0.0005
+\end{equation*}
+</div>
+<p>Here is what Simpson's rule gives us when applied with some fixed step sizes.</p>
+<div class="displaymath">
+\begin{align*}
+S(0,1\,;\tfrac{1}{8})  &amp;= 0.66307928 \\
+S(0,1\,;\tfrac{1}{16}) &amp;= 0.66539819 \\
+S(0,1\,;\tfrac{1}{32}) &amp;= 0.66621818 \\
+S(0,1\,;\tfrac{1}{64}) &amp;= 0.66650810
+\end{align*}
+</div>
+<p>So to get an error comparable to that in (E8) from Simpson's rule with a fixed step size, we need to use \(h=\frac{1}{32}\text{.}\) In (E8) the step size \(h=\frac{1}{32}\) was just used on the subinterval \(\big[0,\frac{1}{4}\big]\text{.}\)</p>
+<span class="incontext"><a href="ap_adaptive.html#p-6191">in-context</a></span>
+</body>
+</html>

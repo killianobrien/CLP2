@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:24+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<ul class="disc">
+<li>Solution 1: This might not obviously look like the derivative of anything familiar, but it does look like half of a familiar trig identity: \(2\sin x \cos x = \sin(2x)\text{.}\)<div class="displaymath">
+\begin{align*}
+\int 3 \sin x \cos x \dee{x}&amp;=\int \frac{3}{2}\cdot 2\sin x \cos x \dee{x}\\
+&amp;=\int \frac{3}{2} \sin(2x)\dee{x}\\
+\end{align*}
+<p class="intertext">So, we might guess that the antiderivative is something like \(-\cos(2x)\text{.}\) We only need to figure out the constants.</p>
+\begin{align*}
+\diff{}{x}\{-\cos(2x)\}&amp;=2\sin(2x)\\
+\mbox{So,}\qquad
+\diff{}{x}\left\{-\frac{3}{4}\cos(2x)\right\}&amp;=\frac{3}{2}\sin(2x)\\
+\mbox{Therefore,}\qquad \int 3\sin x \cos x\dee{x}&amp;=-\frac{3}{4}\cos(2x)+C
+\end{align*}
+</div>
+</li>
+<li>Solution 2: You might notice that the integrand looks  like it came from the chain rule, since \(\cos x\) is the derivative of \(\sin x\text{.}\) Using this observation, we can work out the antideriative:<div class="displaymath">
+\begin{align*}
+\diff{}{x}\left\{\sin^2 x\right\}&amp;=2\sin x \cos x\\
+\diff{}{x}\left\{\frac{3}{2}\sin^2 x\right\}&amp;=3\sin x \cos x\\
+\mbox{So,}\qquad \int 3\sin x \cos x \dee{x}&amp;=\frac{3}{2}\sin^2 x+C
+\end{align*}
+</div>
+</li>
+</ul>
+<p>These two answers look different. Using the identity \(\cos(2x)=1 - 2 \sin^2(x)\text{,}\) we reconcile them:</p>
+<div class="displaymath">
+\begin{align*}
+-\frac{3}{4}\cos(2x)+C&amp;= -\frac{3}{4}\left(1-2\sin^2x\right)+C\\
+&amp;=\frac{3}{2}\sin^2 x + \left(C-\frac{3}{4}\right)
+\end{align*}
+</div>
+<p>The \(\frac{3}{4}\) here is not significant. Remember that \(C\) is  used to designate a constant that can take any value between \(-\infty\) and \(+\infty\text{.}\) So \(C-\frac{3}{4}\) is also just a constant that can take any value between \(-\infty\) and \(+\infty\text{.}\) As the two answers we found differ by a constant, they are equivalent.</p>
+</div></body>
+</html>

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:15:25+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Simpson's Rule</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_2_ic.html"><span class="title">CLP-2 Integral Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_trapRule.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sec_numeric_int.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="ssec_num_int_err.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_trapRule.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sec_numeric_int.html" title="Up">Up</a><a class="next-button button toolbar-item" href="ssec_num_int_err.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_integral.html" data-scroll="chap_integral"><span class="codenumber">1</span> <span class="title">Integration</span></a></h2>
+<ul>
+<li><a href="sec_intdef.html" data-scroll="sec_intdef">Definition of the Integral</a></li>
+<li><a href="sec_def_int.html" data-scroll="sec_def_int">Basic properties of the definite integral</a></li>
+<li><a href="sec_fundamental.html" data-scroll="sec_fundamental">The Fundamental Theorem of Calculus</a></li>
+<li><a href="sec_subs.html" data-scroll="sec_subs">Substitution</a></li>
+<li><a href="sec_area.html" data-scroll="sec_area">Area between curves</a></li>
+<li><a href="sec_int_volumes.html" data-scroll="sec_int_volumes">Volumes</a></li>
+<li><a href="sec_intbyparts.html" data-scroll="sec_intbyparts">Integration by parts</a></li>
+<li><a href="sec_trigint.html" data-scroll="sec_trigint">Trigonometric Integrals</a></li>
+<li><a href="sec_trigsub.html" data-scroll="sec_trigsub">Trigonometric Substitution</a></li>
+<li><a href="sec_parfrac.html" data-scroll="sec_parfrac">Partial Fractions</a></li>
+<li><a href="sec_numeric_int.html" data-scroll="sec_numeric_int">Numerical Integration</a></li>
+<li><a href="sec_improp_int.html" data-scroll="sec_improp_int">Improper Integrals</a></li>
+<li><a href="section-13.html" data-scroll="section-13">More Integration Examples</a></li>
+</ul>
+<h2 class="link"><a href="chap_int_app.html" data-scroll="chap_int_app"><span class="codenumber">2</span> <span class="title">Applications of Integration</span></a></h2>
+<ul>
+<li><a href="sec_work.html" data-scroll="sec_work">Work</a></li>
+<li><a href="sec_avg.html" data-scroll="sec_avg">Averages</a></li>
+<li><a href="sec_com.html" data-scroll="sec_com">Centre of Mass and Torque</a></li>
+<li><a href="sec_sep_de.html" data-scroll="sec_sep_de">Separable Differential Equations</a></li>
+</ul>
+<h2 class="link"><a href="chap_seq_ser.html" data-scroll="chap_seq_ser"><span class="codenumber">3</span> <span class="title">Sequence and series</span></a></h2>
+<ul>
+<li><a href="section-18.html" data-scroll="section-18">Sequences</a></li>
+<li><a href="section-19.html" data-scroll="section-19">Series</a></li>
+<li><a href="section-20.html" data-scroll="section-20">Convergence Tests</a></li>
+<li><a href="section-21.html" data-scroll="section-21">Absolute and Conditional Convergence</a></li>
+<li><a href="section-22.html" data-scroll="section-22">Power Series</a></li>
+<li><a href="section-23.html" data-scroll="section-23">Taylor Series</a></li>
+<li><a href="sec_RatIrr.html" data-scroll="sec_RatIrr">Optional — Rational and irrational numbers</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="section-26.html" data-scroll="section-26">Pythagoras</a></li>
+<li><a href="section-27.html" data-scroll="section-27">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="section-30.html" data-scroll="section-30">Trigonometry — Special Triangles</a></li>
+<li><a href="section-31.html" data-scroll="section-31">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trigonometric Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">Highschool Material You Should be Able to Derive</a></li>
+<li><a href="section-39.html" data-scroll="section-39">Cartesian Coordinates</a></li>
+<li><a href="ap_roots.html" data-scroll="ap_roots">Roots of Polynomials</a></li>
+</ul>
+<h2 class="link"><a href="ap_complex.html" data-scroll="ap_complex"><span class="codenumber">B</span> <span class="title">Complex Numbers and Exponentials</span></a></h2>
+<ul>
+<li><a href="sec_complex_defn.html" data-scroll="sec_complex_defn">Definition and Basic Operations</a></li>
+<li><a href="sec_complex_exp.html" data-scroll="sec_complex_exp">The Complex Exponential</a></li>
+</ul>
+<h2 class="link"><a href="app_Richardson_Romberg.html" data-scroll="app_Richardson_Romberg"><span class="codenumber">C</span> <span class="title">More About Numerical Integration</span></a></h2>
+<ul>
+<li><a href="ap_Richardson.html" data-scroll="ap_Richardson">Richardson Extrapolation</a></li>
+<li><a href="ap_Romberg.html" data-scroll="ap_Romberg">Romberg Integration</a></li>
+<li><a href="ap_adaptive.html" data-scroll="ap_adaptive">Adaptive Quadrature</a></li>
+</ul>
+<h2 class="link"><a href="app_ODE_numerical.html" data-scroll="app_ODE_numerical"><span class="codenumber">D</span> <span class="title">Numerical Solution of ODE's</span></a></h2>
+<ul>
+<li><a href="ap_derivation.html" data-scroll="ap_derivation">Simple ODE Solvers — Derivation</a></li>
+<li><a href="ap_error_behaviour.html" data-scroll="ap_error_behaviour">Simple ODE Solvers —  Error Behaviour</a></li>
+<li><a href="ap_variable.html" data-scroll="ap_variable">Variable Step Size Methods</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">E</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">F</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">G</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp2-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="subsection" id="sec_Simpson"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.11.3</span> <span class="title">Simpson's Rule</span>
+</h3>
+<a href="sec_Simpson.html" class="permalink">¶</a><p id="p-2377">When we use the trapezoidal rule we approximate the area  \(\int_{x_{j-1}}^{x_j}f(x)\dee{x}\)  by the area between the \(x\)-axis and a straight line that runs from  \((x_{j-1},f(x_{j-1}))\) to \((x_j, f(x_j))\) — that is, we approximate the function \(f(x)\)  on this interval by a linear function that agrees with the function at each  endpoint. An obvious way to extend this — just as we did when extending linear  approximations to quadratic approximations in our differential calculus course — is to  approximate the function with a quadratic. This is  precisely what Simpson's <a knowl="" class="id-ref" refid="hk-fn-87" id="fn-87"><sup> 5 </sup></a><span id="hk-fn-87" class="hidden-content tex2jax_ignore"><span class="footnote">Simpson's rule is named after the 18th century English  mathematician Thomas Simpson, despite its use a century earlier by the German  mathematician and astronomer Johannes Kepler. In many German texts the rule is often  called Kepler's rule.</span></span> rule does.</p>
+<p id="p-2378">Simpson's rule approximates the integral over two neighbouring subintervals by the area  between a parabola and the \(x\)-axis. In order to describe this parabola we need 3  distinct points (which is why we approximate two subintegrals at a time). That is, we  approximate</p>
+<div class="displaymath">
+\begin{align*}
+\int_{x_0}^{x_1} f(x)\,\dee{x} + \int_{x_1}^{x_2} f(x)\,\dee{x}  &amp;= \int_{x_0}^{x_2} f(x)\,\dee{x}
+\end{align*}
+</div>
+<p>by the area bounded by the parabola that passes through the three points  \(\big(x_0,f(x_0)\big)\text{,}\) \(\big(x_1,f(x_1)\big)\) and \(\big(x_2,f(x_2)\big)\text{,}\) the \(x\)-axis  and the vertical lines \(x=x_0\) and \(x=x_2\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:33.5%;margin-right:33.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/Simpson.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-2379">We repeat this on the next pair of subintervals and approximate \(\int_{x_2}^{x_4} f(x)\,\dee{x}\) by the area between the \(x\)-axis and the part of a parabola with \(x_2\le x\le x_4\text{.}\) This parabola passes  through the three points \(\big(x_2,f(x_2)\big)\text{,}\) \(\big(x_3,f(x_3)\big)\) and \(\big(x_4,f(x_4)\big)\text{.}\) And so on. Because Simpson's rule does the approximation two slices at a time, \(n\) <em class="emphasis">must be even</em>.</p>
+<p id="p-2380">To derive Simpson's rule formula, we first find the equation of the parabola that passes through the three points \(\big(x_0,f(x_0)\big)\text{,}\) \(\big(x_1,f(x_1)\big)\) and \(\big(x_2,f(x_2)\big)\text{.}\) Then we find the area between the \(x\)-axis and the part of that parabola with \(x_0\le x\le x_2\text{.}\) To simplify  this computation consider a parabola passing through the points \((-h,y_{-1}), (0,y_0)\) and  \((h,y_1)\text{.}\)</p>
+<p id="p-2381">Write the equation of the parabola as</p>
+<div class="displaymath">
+\begin{align*}
+y &amp;= Ax^2 + Bx +C
+\end{align*}
+</div>
+<p>Then the area between it and the \(x\)-axis with \(x\) running from \(-h\) to \(h\) is</p>
+<div class="displaymath">
+\begin{align*}
+\int_{-h}^h \big[ Ax^2 + Bx +C \big] \dee{x}
+&amp;= \left[ \frac{A}{3}x^3 + \frac{B}{2}x^2 + Cx \right]_{-h}^h\\
+&amp;= \frac{2A}{3}h^3 + 2Ch &amp; \text{it is helpful to write it as}\\
+&amp;= \frac{h}{3}\left( 2Ah^2 + 6C \right)
+\end{align*}
+</div>
+<p id="p-2382">Now, the the three points \((-h,y_{-1}), (0,y_0)\) and \((h,y_1)\) lie on this parabola if and  only if</p>
+<div class="displaymath">
+\begin{align*}
+A h^2 - Bh + C &amp;= y_{-1} &amp; \text{at $(-h,y_{-1})$}\\
+C &amp;= y_{0} &amp; \text{at $(0,y_{0})$}\\
+A h^2 + Bh + C &amp;= y_{1} &amp; \text{at $(h,y_{1})$}
+\end{align*}
+</div>
+<p>Adding the first and third equations together gives us</p>
+<div class="displaymath">
+\begin{align*}
+2Ah^2 + (B-B)h + 2C &amp;= y_{-1}+y_{1}
+\end{align*}
+</div>
+<p>To this we add four times the middle equation</p>
+<div class="displaymath">
+\begin{align*}
+2Ah^2 + 6C &amp;= y_{-1}+4y_0+y_1.
+\end{align*}
+</div>
+<p>This means that</p>
+<div class="displaymath">
+\begin{align*}
+\text{area} &amp;=  \int_{-h}^h \big[ Ax^2 + Bx +C \big] \dee{x}   = \frac{h}{3}\left( 2Ah^2 + 6C \right)\\
+&amp;= \frac{h}{3}\left(y_{-1}+4y_0+y_1\right)
+\end{align*}
+</div>
+<p>Note that here</p>
+<ul class="disc">
+<li id="li-1205">\(h\) is one half of the length of the \(x\)-interval under consideration</li>
+<li id="li-1206">\(y_{-1}\) is the height of the parabola at the left hand end of the interval under  consideration</li>
+<li id="li-1207">\(y_0\) is the height of the parabola at the middle point of the interval under  consideration</li>
+<li id="li-1208">\(y_{1}\) is the height of the parabola at the right hand end of the interval under  consideration</li>
+</ul>
+<p id="p-2383">So Simpson's rule approximates</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{x_0}^{x_2} f(x)\,\dee{x}
+\approx \tfrac{1}{3}\De x\big[f(x_0)+4f(x_1)+f(x_2)\big]
+\end{equation*}
+</div>
+<p>and</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{x_2}^{x_4} f(x)\,\dee{x}
+\approx \tfrac{1}{3}\De x\big[f(x_2)+4f(x_3)+f(x_4)\big]
+\end{equation*}
+</div>
+<p>and so on. Summing these all together gives:</p>
+<div class="displaymath">
+\begin{align*}
+\int_a^b&amp; f(x)\,\dee{x}
+=\int_{x_0}^{x_2} f(x)\,\dee{x}
++\int_{x_2}^{x_4} f(x)\,\dee{x}
++\int_{x_4}^{x_6} f(x)\,\dee{x}
++\cdots
++\int_{x_{n-2}}^{x_n} f(x)\,\dee{x}\\
+&amp;\approx\,\tfrac{\De x}{3}\big[f(x_0)+4f(x_1)+f(x_2)\big]
++\,\tfrac{\De x}{3}\big[f(x_2)+4f(x_3)+f(x_4)\big] \cr
+&amp;\ \ \ +\,\tfrac{\De x}{3}\big[f(x_4)+4f(x_5)+f(x_6)\big]
++\,\cdots\
++\,\tfrac{\De x}{3}\big[f(x_{n-2})+4f(x_{n-1})+f(x_n)\big]\\
+&amp;=\Big[f(x_0)\!+4f(x_1)\!+2f(x_2)\!+4f(x_3)\!+2f(x_4)\!
++\cdots+ 2f(x_{n-2})\!+4f(x_{n-1})\!+ f(x_n)\Big]\tfrac{\De x}{3}
+\end{align*}
+</div>
+<p id="p-2384">In summary</p>
+<article class="theorem-like" id="eq_SIMPrule"><h6 class="heading">
+<span class="type">Equation</span> <span class="codenumber">1.11.9</span> <span class="title">Simpson's rule</span>
+</h6>
+<p id="p-2385">The Simpson's rule approximation is</p>
+<div class="displaymath">
+\begin{align*}
+\int_a^b f(x)\,\dee{x}
+&amp;\approx\Big[f(x_0)\!+4f(x_1)\!+2f(x_2)\!+4f(x_3)\!+2f(x_4)\!
++\cdots\\
+&amp;\hskip2in \cdots + 2f(x_{n-2})\!+4f(x_{n-1})\!+ f(x_n)\Big]\tfrac{\De x}{3}
+\end{align*}
+</div>
+<p>where \(n\) is even and</p>
+<div class="displaymath">
+\begin{gather*}
+\De x = \tfrac{b-a}{n},\quad
+x_0=a,\quad x_1=a+\De x,\quad
+x_2=a+2\De x,\quad
+\cdots,\quad x_{n-1}=b-\De x,\quad
+x_n=b
+\end{gather*}
+</div></article><p id="p-2386">Notice that Simpson's rule requires essentially no more work than the trapezoidal rule.  In both rules we must evaluate \(f(x)\) at \(x=x_0,x_1,\cdots,x_n\text{,}\) but we add those terms  multiplied by different constants <a knowl="" class="id-ref" refid="hk-fn-88" id="fn-88"><sup> 6 </sup></a><span id="hk-fn-88" class="hidden-content tex2jax_ignore"><span class="footnote">There is an easy generalisation of Simpson's  rule that uses cubics instead of parabolas. It is known as Simpson's second rule and Simpson's  \(\frac38\) rule. While one can push this approach further (using quartics, quintics  etc), it can sometimes lead to larger errors — the interested reader should look up  Runge's phenomenon.</span></span>.</p>
+<p id="p-2387">Let's put it to work on our two running examples.</p>
+<article class="example-like" id="eg_SimpsonB"><a knowl="" class="id-ref" refid="hk-eg_SimpsonB"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.11.10</span> <span class="title">\(\int_0^1 \frac{4}{1+x^2}\,\dee{x}\) — using Simpson's rule</span>
+</h6></a></article><div id="hk-eg_SimpsonB" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-2388"><em class="alert">Solution:</em> We proceed almost identically to Example <a knowl="./knowl/eg_TrapB.html" title="Example 1.11.7: \(\int_0^1 \frac{4}{1+x^2}\,\dee{x}\) — using the trapezoidal rule">1.11.7</a> and again use \(n=8\) steps.</p>
+<ul class="disc">
+<li id="li-1209">We have the same \(\De,a,b,x_0,\cdots, x_n\) as Example <a knowl="./knowl/eg_TrapB.html" title="Example 1.11.7: \(\int_0^1 \frac{4}{1+x^2}\,\dee{x}\) — using the trapezoidal rule">1.11.7</a>.</li>
+<li id="li-1210">Applying Equation <a knowl="./knowl/eq_SIMPrule.html" title="Equation 1.11.9: Simpson's rule">1.11.9</a> gives<div class="displaymath">
+\begin{align*}
+&amp;\int_0^1 \frac{4}{1+x^2}\,\dee{x}\\
+&amp;\approx
+\bigg[\frac{4}{1+0^2}+
+4\frac{4}{1+\tfrac{1}{8^2}}+
+2\frac{4}{1+\tfrac{2^2}{8^2}}+
+4\frac{4}{1+\tfrac{3^2}{8^2}}+
+2\frac{4}{1+\tfrac{4^2}{8^2}}\\
+&amp;\hskip0.5in
++4\frac{4}{1+\tfrac{5^2}{8^2}}+
+2\frac{4}{1+\tfrac{6^2}{8^2}}+
+4\frac{4}{1+\tfrac{7^2}{8^2}}+
+\frac{4}{1+\tfrac{8^2}{8^2}}\bigg]\frac{1}{8\times 3}\\
+&amp;=\Big[         4\!+\!
+4\times 3.938461538 \!+\!
+2\times 3.764705882 \!+\!
+4\times 3.506849315 \!+\!
+2\times 3.2\\
+&amp;\hskip0.5in
++4\times 2.876404494 +
+2\times 2.56 +
+4\times 2.265486726 +
+2\Big]\frac{1}{8\times 3}\\
+&amp;=3.14159250
+\end{align*}
+</div>to eight decimal places.</li>
+<li id="li-1211">This agrees with \(\pi\) (the exact value of the integral) to six decimal places. So the error in the approximation generated by eight steps  of Simpson's  rule is \(|3.14159250-\pi|=1.5\times 10^{-7}\text{,}\) which is  \(100\tfrac{|3.14159250-\pi|}{\pi}\% =5\times 10^{-6}\%\) of the exact answer.</li>
+</ul></article></div>
+<p id="p-2389">It is striking that the absolute error approximating with Simpson's rule is so much  smaller than the error from the midpoint and trapezoidal rules.</p>
+<div class="displaymath">
+\begin{align*}
+&amp;\text{midpoint error}\hskip-0.35in &amp;&amp;= 0.0013\\
+&amp;\text{trapezoid error}\hskip-0.35in &amp;&amp;= 0.0026\\
+&amp;\text{Simpson error}\hskip-0.35in &amp;&amp;= 0.00000015
+\end{align*}
+</div>
+<p id="p-2390">Buoyed by this success, we will also redo Example <a knowl="./knowl/eg_Trap.html" title="Example 1.11.8: \(\int_0^\pi\sin x\,\dee{x}\) — using the trapezoidal rule">1.11.8</a> using Simpson's rule.</p>
+<article class="example-like" id="eg_Simpson"><a knowl="" class="id-ref" refid="hk-eg_Simpson"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.11.11</span> <span class="title">\(\int_0^\pi\sin x\,\dee{x}\) — Simpson's rule</span>
+</h6></a></article><div id="hk-eg_Simpson" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-2391"><em class="alert">Solution:</em> We proceed almost identically to Example <a knowl="./knowl/eg_Trap.html" title="Example 1.11.8: \(\int_0^\pi\sin x\,\dee{x}\) — using the trapezoidal rule">1.11.8</a> and again use \(n=8\) steps.</p>
+<ul class="disc">
+<li id="li-1212">We have the same \(\De,a,b,x_0,\cdots, x_n\) as Example <a knowl="./knowl/eg_TrapB.html" title="Example 1.11.7: \(\int_0^1 \frac{4}{1+x^2}\,\dee{x}\) — using the trapezoidal rule">1.11.7</a>.</li>
+<li id="li-1213">Applying Equation <a knowl="./knowl/eq_SIMPrule.html" title="Equation 1.11.9: Simpson's rule">1.11.9</a> gives<div class="displaymath">
+\begin{align*}
+&amp;\int_0^\pi\sin x\,\dee{x}\\
+&amp;\hskip0.5in\approx
+\Big[\sin(x_0)+4\sin(x_1)+2\sin(x_2)+\cdots+4\sin(x_7)+\sin(x_8)\Big]\tfrac{\De x}{3}\\
+&amp;\hskip0.5in=\Big[\sin(0)+
+4\sin(\tfrac{\pi}{8})+
+2\sin(\tfrac{2\pi}{8})+
+4\sin(\tfrac{3\pi}{8})+
+2\sin(\tfrac{4\pi}{8})\cr
+&amp;\hskip0.5in\phantom{=\Big[\sin(0)\,}
++4\sin(\tfrac{5\pi}{8})+
+2\sin(\tfrac{6\pi}{8})+
+4\sin(\tfrac{7\pi}{8})+
+\sin(\tfrac{8\pi}{8})\Big]\tfrac{\pi}{8\times 3}\cr
+&amp;=\hskip0.5in\Big[ 0+
+4\times 0.382683+
+2\times 0.707107+
+4\times 0.923880+
+2\times 1.0\\
+&amp;\hskip0.5in\phantom{=\Big[ 0\,}+
+4\times 0.923880+
+2\times 0.707107+
+4\times 0.382683+0\Big]\tfrac{\pi}{8\times 3}\\
+&amp;\hskip0.5in=15.280932\times 0.130900\\
+&amp;\hskip0.5in=2.00027
+\end{align*}
+</div>
+</li>
+<li id="li-1214">With only eight steps  of Simpson's rule we  achieved  \(100\tfrac{2.00027-2}{2}=0.014\%\) accuracy.</li>
+</ul></article></div>
+<p id="p-2392">Again we contrast the error we achieved with the other two rules:</p>
+<div class="displaymath">
+\begin{align*}
+&amp;\text{midpoint error}\hskip-0.35in &amp;&amp;= 0.013\\
+&amp;\text{trapezoid error}\hskip-0.35in &amp;&amp;= 0.026\\
+&amp;\text{Simpson error}\hskip-0.35in &amp;&amp;= 0.00027
+\end{align*}
+</div>
+<p id="p-2393">This completes our derivation of the midpoint, trapezoidal and  Simpson's rules for approximating the values of definite integrals.  So far we have not  attempted to see how efficient and how accurate the algorithms are in general. That's our next task.</p></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

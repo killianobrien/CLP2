@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:20:10+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="displaymath">
+\begin{align*}
+\int_e^\infty\frac{\dee{x}}{x(\log x)^p}
+&amp;=\lim_{R\rightarrow \infty} \int_e^R\frac{\dee{x}}{x(\log x)^p}
+\qquad\qquad\qquad \text{use substitution}\\
+&amp;=\lim_{R\rightarrow \infty} \int_1^{\log R}\frac{\dee{u}}{u^p}
+\qquad\qquad\text{with }u=\log x,\dee{u}=\frac{\dee{x}}{x}\\
+&amp;=\lim_{R\rightarrow\infty}
+\begin{cases}
+\frac{1}{1-p}\Big[(\log R)^{1-p}-1\Big] &amp; \text{if } p\ne 1\\
+\log(\log R) &amp; \text{if } p=1
+\end{cases}\\
+&amp;=\begin{cases}
+\text{divergent} &amp; \text {if } p\le 1\\
+\frac{1}{p-1} &amp; \text{if } p \gt 1
+\end{cases}
+\end{align*}
+</div>
+<span class="incontext"><a href="subsection-28.html#mjx-eqn-mrow-3118">in-context</a></span>
+</body>
+</html>

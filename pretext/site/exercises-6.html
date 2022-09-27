@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:14:55+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Exercises</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_2_ic.html"><span class="title">CLP-2 Integral Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="subsection-13.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sec_int_volumes.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_intbyparts.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="subsection-13.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sec_int_volumes.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_intbyparts.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_integral.html" data-scroll="chap_integral"><span class="codenumber">1</span> <span class="title">Integration</span></a></h2>
+<ul>
+<li><a href="sec_intdef.html" data-scroll="sec_intdef">Definition of the Integral</a></li>
+<li><a href="sec_def_int.html" data-scroll="sec_def_int">Basic properties of the definite integral</a></li>
+<li><a href="sec_fundamental.html" data-scroll="sec_fundamental">The Fundamental Theorem of Calculus</a></li>
+<li><a href="sec_subs.html" data-scroll="sec_subs">Substitution</a></li>
+<li><a href="sec_area.html" data-scroll="sec_area">Area between curves</a></li>
+<li><a href="sec_int_volumes.html" data-scroll="sec_int_volumes">Volumes</a></li>
+<li><a href="sec_intbyparts.html" data-scroll="sec_intbyparts">Integration by parts</a></li>
+<li><a href="sec_trigint.html" data-scroll="sec_trigint">Trigonometric Integrals</a></li>
+<li><a href="sec_trigsub.html" data-scroll="sec_trigsub">Trigonometric Substitution</a></li>
+<li><a href="sec_parfrac.html" data-scroll="sec_parfrac">Partial Fractions</a></li>
+<li><a href="sec_numeric_int.html" data-scroll="sec_numeric_int">Numerical Integration</a></li>
+<li><a href="sec_improp_int.html" data-scroll="sec_improp_int">Improper Integrals</a></li>
+<li><a href="section-13.html" data-scroll="section-13">More Integration Examples</a></li>
+</ul>
+<h2 class="link"><a href="chap_int_app.html" data-scroll="chap_int_app"><span class="codenumber">2</span> <span class="title">Applications of Integration</span></a></h2>
+<ul>
+<li><a href="sec_work.html" data-scroll="sec_work">Work</a></li>
+<li><a href="sec_avg.html" data-scroll="sec_avg">Averages</a></li>
+<li><a href="sec_com.html" data-scroll="sec_com">Centre of Mass and Torque</a></li>
+<li><a href="sec_sep_de.html" data-scroll="sec_sep_de">Separable Differential Equations</a></li>
+</ul>
+<h2 class="link"><a href="chap_seq_ser.html" data-scroll="chap_seq_ser"><span class="codenumber">3</span> <span class="title">Sequence and series</span></a></h2>
+<ul>
+<li><a href="section-18.html" data-scroll="section-18">Sequences</a></li>
+<li><a href="section-19.html" data-scroll="section-19">Series</a></li>
+<li><a href="section-20.html" data-scroll="section-20">Convergence Tests</a></li>
+<li><a href="section-21.html" data-scroll="section-21">Absolute and Conditional Convergence</a></li>
+<li><a href="section-22.html" data-scroll="section-22">Power Series</a></li>
+<li><a href="section-23.html" data-scroll="section-23">Taylor Series</a></li>
+<li><a href="sec_RatIrr.html" data-scroll="sec_RatIrr">Optional — Rational and irrational numbers</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="section-26.html" data-scroll="section-26">Pythagoras</a></li>
+<li><a href="section-27.html" data-scroll="section-27">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="section-30.html" data-scroll="section-30">Trigonometry — Special Triangles</a></li>
+<li><a href="section-31.html" data-scroll="section-31">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trigonometric Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">Highschool Material You Should be Able to Derive</a></li>
+<li><a href="section-39.html" data-scroll="section-39">Cartesian Coordinates</a></li>
+<li><a href="ap_roots.html" data-scroll="ap_roots">Roots of Polynomials</a></li>
+</ul>
+<h2 class="link"><a href="ap_complex.html" data-scroll="ap_complex"><span class="codenumber">B</span> <span class="title">Complex Numbers and Exponentials</span></a></h2>
+<ul>
+<li><a href="sec_complex_defn.html" data-scroll="sec_complex_defn">Definition and Basic Operations</a></li>
+<li><a href="sec_complex_exp.html" data-scroll="sec_complex_exp">The Complex Exponential</a></li>
+</ul>
+<h2 class="link"><a href="app_Richardson_Romberg.html" data-scroll="app_Richardson_Romberg"><span class="codenumber">C</span> <span class="title">More About Numerical Integration</span></a></h2>
+<ul>
+<li><a href="ap_Richardson.html" data-scroll="ap_Richardson">Richardson Extrapolation</a></li>
+<li><a href="ap_Romberg.html" data-scroll="ap_Romberg">Romberg Integration</a></li>
+<li><a href="ap_adaptive.html" data-scroll="ap_adaptive">Adaptive Quadrature</a></li>
+</ul>
+<h2 class="link"><a href="app_ODE_numerical.html" data-scroll="app_ODE_numerical"><span class="codenumber">D</span> <span class="title">Numerical Solution of ODE's</span></a></h2>
+<ul>
+<li><a href="ap_derivation.html" data-scroll="ap_derivation">Simple ODE Solvers — Derivation</a></li>
+<li><a href="ap_error_behaviour.html" data-scroll="ap_error_behaviour">Simple ODE Solvers —  Error Behaviour</a></li>
+<li><a href="ap_variable.html" data-scroll="ap_variable">Variable Step Size Methods</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">E</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">F</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">G</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp2-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="exercises" id="exercises-6"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.6.2</span> <span class="title">Exercises</span>
+</h3>
+<div class="exercisegroup" id="exercisegroup-16">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 1</alert></p></span></h6>
+<div class="introduction" id="introduction-33"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like" id="exercise-163"><h6 class="heading">
+<span class="codenumber">1</span> </h6>
+<p id="p-1279">Consider a right circular cone.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:37.5%;margin-right:37.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-178.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-1280">What shape are horizontal cross-sections? Are the vertical cross-sections the same?</p></article><article class="exercise-like boxed" id="exercise-164"><h6 class="heading">
+<span class="codenumber">2</span> </h6>
+<p id="p-1284">Two potters start with a block of clay \(h\) units tall, and identical square cookie cutters. They form columns by pushing the square cookie cutter straight down over the clay, so that its cross-section is the same square as the cookie cutter. Potter A pushes their cookie cutter down while their clay block is sitting motionless on a table; Potter B pushes their cookie cutter down while their clay block is rotating on a potter's wheel, so their column looks twisted. Which column has greater volume?</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;">
+<div class="sbspanel" style="width:28.5714285714286%;justify-content:flex-start;"><img src="images/image-179.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:28.5714285714286%;justify-content:flex-start;"><img src="images/image-180.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div></article><article class="exercise-like" id="exercise-165"><h6 class="heading">
+<span class="codenumber">3</span> </h6>
+<p id="p-1288">Let \(R\) be the region bounded above by the graph of \(y=f(x)\) shown below and bounded below by the \(x\)-axis, from \(x=0\) to \(x=6\text{.}\) Sketch the washers that are formed by rotating \(R\) about the \(y\)-axis. In your sketch, label all the radii in terms of \(y\text{,}\) and label the thickness.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:17%;margin-right:17%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-181.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><article class="exercise-like" id="exercise-166"><h6 class="heading">
+<span class="codenumber">4</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-1298">Write down definite integrals that represent the following quantities. <em class="emphasis">Do not evaluate the integrals explicitly.</em></p>
+<ol class="lower-alpha">
+<li id="li-654">The volume of the solid obtained by rotating  around the \(x\)--axis the region between the \(x\)--axis and \(y=\sqrt{x}\, e^{x^2}\) for \(0\le x\le 3\text{.}\)</li>
+<li id="li-655">The volume of the solid obtained by revolving the region bounded by the curves \(y=x^2\) and \(y=x+2\) about the line \(x=3\text{.}\)</li>
+</ol></article><article class="exercise-like boxed" id="exercise-167"><h6 class="heading">
+<span class="codenumber">5</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-1307">Write down definite integrals that represent the following quantities. <em class="emphasis">Do not evaluate the integrals explicitly.</em></p>
+<ol class="lower-alpha">
+<li id="li-663">The volume of the solid obtained by rotating the finite plane region bounded by the curves \(y=1-x^2\) and \(y=4-4x^2\) about the line \(y=-1\text{.}\)</li>
+<li id="li-664">The volume of the solid obtained by rotating the finite plane region bounded by the curve \(y=x^2-1\) and the line \(y=0\) about the line \(x=5\text{.}\)</li>
+</ol></article><article class="exercise-like" id="exercise-168"><h6 class="heading">
+<span class="codenumber">6</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-1317">Write down a definite integral that represents the volume of the solid obtained by rotating  around the line \(y=-1\) the region between the curves \(y=x^2\) and \(y=8-x^2\text{.}\) <em class="emphasis">Do not evaluate the integrals explicitly.</em></p></article><article class="exercise-like" id="exercise-169"><h6 class="heading">
+<span class="codenumber">7</span> </h6>
+<p id="p-1323">A tetrahedron is a three-dimensional shape with four faces, each of which is an equilateral triangle. (You might have seen this shape as a 4-sided die; think of a pyramid with a triangular base.) Using the methods from this section, calculate the volume of a tetrahedron with side-length \(\ell\text{.}\) You may assume without proof that the height of a tetrahedron with side-length \(\ell\) is \(\sqrt{\frac{2}{3}}\ell\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-192.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-17">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 2</alert></p></span></h6>
+<div class="introduction" id="introduction-34"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like boxed" id="exercise-170"><h6 class="heading">
+<span class="codenumber">8</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-1337">Let \(a \gt 0\) be a constant. Let \(R\) be the finite region bounded by the graph of \(y=1+\sqrt{x}e^{x^2}\text{,}\) the line \(y=1\text{,}\) and the line \(x=a\text{.}\) Using vertical slices, find the volume generated when \(R\) is rotated about the line \(y=1\text{.}\)</p></article><article class="exercise-like" id="exercise-171"><h6 class="heading">
+<span class="codenumber">9</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-1342">Find the volume of the solid generated by rotating the finite region bounded by \(y = 1/x\) and \(3x + 3y = 10\) about the \(x\)--axis.</p></article><article class="exercise-like" id="exercise-172"><h6 class="heading">
+<span class="codenumber">10</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-1347">Let \(R\) be the region inside the circle \(x^2 + (y-2)^2=1\text{.}\) Let \(S\) be the solid obtained by rotating \(R\) about the \(x\)-axis.</p>
+<ol class="lower-alpha">
+<li id="li-682">Write down an integral representing the volume of \(S\text{.}\)</li>
+<li id="li-683">Evaluate the integral you wrote down in part (a).</li>
+</ol></article><article class="exercise-like" id="exercise-173"><h6 class="heading">
+<span class="codenumber">11</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-1354">The region \(R\) is the portion of the first quadrant which is below the parabola \(y^2=8x\) and above the hyperbola \(y^2-x^2=15\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-684">Sketch the region \(R\text{.}\)</li>
+<li id="li-685">Find the volume of the solid obtained by revolving \(R\) about the \(x\) axis.</li>
+</ol></article><article class="exercise-like boxed" id="exercise-174"><h6 class="heading">
+<span class="codenumber">12</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-1360">The region \(R\) is bounded by \(y=\log x\text{,}\) \(y=0\text{,}\) \(x=1\) and \(x=2\text{.}\) (Recall that we are using \(\log x\) to denote the logarithm of \(x\) with base \(e\text{.}\) In other courses it is often denoted \(\ln x\text{.}\))</p>
+<ol class="lower-alpha">
+<li id="li-686">Sketch the region \(R\text{.}\)</li>
+<li id="li-687">Find the volume of the solid obtained by revolving this region  about the \(y\) axis.</li>
+</ol></article><article class="exercise-like" id="exercise-175"><h6 class="heading">
+<span class="codenumber">13</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-1367">The finite region between the curves \(y = \cos(\frac x2)\) and \(y = x^2 - \pi^2\) is rotated about the line \(y=-{\pi^2}\text{.}\) Using vertical slices (disks and/or washers), find the volume of the resulting solid.</p></article><article class="exercise-like boxed" id="exercise-176"><h6 class="heading">
+<span class="codenumber">14</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-1373">The solid \(V\) is 2 meters high and has square horizontal cross sections. The length of the side of the square cross section at height \(x\) meters above the base is \(\frac{2}{1+x}\) m. Find the volume of this solid.</p></article><article class="exercise-like" id="exercise-177"><h6 class="heading">
+<span class="codenumber">15</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-1378">Consider a solid whose base is the finite portion of the \(xy\)--plane bounded by the curves \(y=x^2\) and \(y=8-x^2\text{.}\) The cross--sections perpendicular to the \(x\)--axis are squares with one side in the \(xy\)--plane. Compute the volume of this solid.</p></article><article class="exercise-like boxed" id="exercise-178"><h6 class="heading">
+<span class="codenumber">16</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-1383">A frustrum of a right circular cone (as shown below) has height \(h\text{.}\) Its base is a circular disc with radius \(4\) and its top is a circular disc with radius \(2\text{.}\) Calculate the volume of the frustrum.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:33.5%;margin-right:33.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="problems/figs/OE01D_4b.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-18">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 3</alert></p></span></h6>
+<div class="introduction" id="introduction-35"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like" id="exercise-179"><h6 class="heading">
+<span class="codenumber">17</span> </h6>
+<p id="p-1389">The shape of the earth is often approximated by an oblate spheroid, rather than a sphere. An <em class="emphasis">oblate spheroid</em> is formed by rotating an ellipse about its <em class="emphasis">minor axis</em> (its shortest diameter).</p>
+<ol class="lower-alpha">
+<li id="li-703">Find the volume of the oblate spheroid obtained by rotating the upper (positive) half of the ellipse \((ax)^2+(by)^2=1\) about the \(x\)-axis, where \(a\) and \(b\) are positive constants with \(a \geq b\text{.}\)</li>
+<li id="li-704">Suppose <a knowl="" class="id-ref" refid="hk-fn-56" id="fn-56"><sup> 12 </sup></a><span id="hk-fn-56" class="hidden-content tex2jax_ignore"><span class="footnote"><a class="url" href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html" target="_blank">Earth Fact Sheet</a>, NASA, accessed 2 July 2017</span></span> the earth has radius at the equator of 6378.137  km, and radius at the poles of 6356.752 km. If we model the earth as an oblate spheroid formed by rotating the upper half of the ellipse \((ax)^2+(by)^2=1\) about the \(x\)-axis, what are \(a\) and \(b\text{?}\)</li>
+<li id="li-705">What is the volume of this model of the earth? (Use a calculator.)</li>
+<li id="li-706">Suppose we had calculated the volume of the earth by modelling it as a sphere with radius \(6378.137\) km. What would our absolute and relative errors be, compared to our oblate spheroid calculation?</li>
+</ol></article><article class="exercise-like" id="exercise-180"><h6 class="heading">
+<span class="codenumber">18</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-1404">Let \(R\) be the bounded region that lies between the curve \(y = 4 - (x - 1)^2\) and the line \(y = x + 1\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-711">Sketch \(R\) and find its area.</li>
+<li id="li-712">Write down a definite integral giving the volume of the region obtained by rotating \(R\) about the line \(y = 5\text{.}\) <em class="emphasis">Do not evaluate this integral.</em>
+</li>
+</ol></article><article class="exercise-like" id="exercise-181"><h6 class="heading">
+<span class="codenumber">19</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-1412">Let \(\cR=\big\{(x,y)\ :\ (x-1)^2+y^2\le 1\text{
+and } x^2+(y-1)^2\le 1\ \big\}\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-720">Sketch \(\cR\) and find its area.</li>
+<li id="li-721">If \(\cR\) rotates around the \(y\)--axis, what volume is generated?</li>
+</ol></article><article class="exercise-like boxed" id="exercise-182"><h6 class="heading">
+<span class="codenumber">20</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-1420">Let \(\cR\) be the plane region bounded by \(x=0,\ x=1,\ y=0\) and \(y=c\sqrt{1+x^2}\text{,}\) where \(c\ge 0\) is a constant.</p>
+<ol class="lower-alpha">
+<li id="li-729">Find the volume \(V_1\) of the solid obtained by revolving \(\cR\) about the \(x\)--axis.</li>
+<li id="li-730">Find the volume \(V_2\) of the solid obtained by revolving \(\cR\) about the \(y\)--axis.</li>
+<li id="li-731">If \(V_1=V_2\text{,}\) what is the value of \(c\text{?}\)</li>
+</ol></article><article class="exercise-like" id="exercise-183"><h6 class="heading">
+<span class="codenumber">21</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-1430">The graph below shows the region between \(y = 4 + \pi \sin x\) and \(y = 4 + 2\pi - 2x\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:17%;margin-right:17%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="problems/figs/OE13A_4a.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-1431">The region is rotated about the line \(y = -1\text{.}\) Express in terms of definite integrals the volume of the resulting solid. Do not evaluate the integrals.</p></article><article class="exercise-like boxed" id="prob_s1_6_density"><h6 class="heading">
+<span class="codenumber">22</span> </h6>
+<p id="p-1437">On a particular, highly homogeneous <a knowl="" class="id-ref" refid="hk-fn-57" id="fn-57"><sup> 13 </sup></a><span id="hk-fn-57" class="hidden-content tex2jax_ignore"><span class="footnote">This is clearly a simplified model: air density changes all the time, and depends on lots of complicated factors aside from altitude. However, the equation we're using is not so far off from an idealized model of the earth's atmosphere, taken from <a class="url" href="http://www.indiana.edu/~geog109/topics/10_Forces%26Winds/GasPressWeb/PressGasLaws.html" target="_blank">Pressure and the Gas Laws</a> by H.P. Schmid, accessed 3 July 2017.</span></span> planet, we observe that the density of the atmosphere \(h\) kilometres above the surface is given by the equation \(\rho(h) = c2^{-h/6}\quad \frac{\mathrm{kg}}{\mathrm{m^3}}\text{,}\) where \(c\) is the density on the planet's surface.</p>
+<ol class="lower-alpha">
+<li id="li-741">What is the mass of the atmosphere contained in a vertical column with radius one metre,  sixty kilometres high?</li>
+<li id="li-742">What height should a column be to contain \(\dfrac{3000c\pi}{\log 2}\) kilograms of air?</li>
+</ol></article>
+</div>
+</div></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:50+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p><em class="emphasis">Step 3 — Sneaky Method.</em> The second, sneakier, method for finding \(A\text{,}\) \(B\) and \(C\) exploits the fact that \(3x^2 + 13x + 11 = A(x+2)^2 + B(x+1)(x+2) + C(x+1)\) must be true for all values of \(x\text{.}\) In particular, it must be true for \(x=-1\text{.}\) When \(x=-1\text{,}\) the factor \((x+1)\) multiplying \(B\) and \(C\) is exactly zero. So \(B\) and \(C\) disappear from the equation, leaving us with an easy equation to solve for \(A\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+3x^2+13x+11\Big|_{x=-1} &amp;=\Big[A(x\!+\!2)^2+B(x\!+\!1)(x\!+\!2) +C(x\!+\!1)\Big]_{x=-1}\\
+\Longrightarrow 1&amp;=A
+\end{align*}
+</div>
+<p>Sub this value of \(A\) back in and simplify.</p>
+<div class="displaymath">
+\begin{align*}
+3x^2+13x+11&amp;=(1)(x+2)^2+B(x+1)(x+2)+C(x+1)\\
+2x^2+9x+7&amp;=B(x+1)(x+2)+C(x+1)\\
+&amp;=(xB+2B+C)(x+1)
+\end{align*}
+</div>
+<p>Since \((x+1)\) is a factor on the right hand side, it must also be a factor on the left hand side.</p>
+<div class="displaymath">
+\begin{align*}
+&amp;(2x+7)(x+1)=(xB+2B+C)(x+1)\\
+&amp;\hskip2in\Rightarrow\quad (2x+7)=(xB+2B+C)
+\end{align*}
+</div>
+<p>For the coefficients of \(x\) to match, \(B\) must be \(2\text{.}\) For the constant terms to match, \(2B+C\) must be \(7\text{,}\) so \(C\) must be \(3\text{.}\) Hence we again have</p>
+<div class="displaymath">
+\begin{align*}
+\frac{4x^3+23x^2+45x+27}{x^3+5x^2+8x+4}
+&amp;= 4+ \frac{3x^2+13x+11}{(x+1)(x+2)^2}\\
+&amp; = 4+\frac{1}{x+1}+\frac{2}{x+2}+\frac{3}{(x+2)^2}
+\end{align*}
+</div>
+<span class="incontext"><a href="subsection-19.html#p-2111">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:16:06+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Sequences</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_2_ic.html"><span class="title">CLP-2 Integral Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-18.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="section-18.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="exercises-18.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-18.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="section-18.html" title="Up">Up</a><a class="next-button button toolbar-item" href="exercises-18.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_integral.html" data-scroll="chap_integral"><span class="codenumber">1</span> <span class="title">Integration</span></a></h2>
+<ul>
+<li><a href="sec_intdef.html" data-scroll="sec_intdef">Definition of the Integral</a></li>
+<li><a href="sec_def_int.html" data-scroll="sec_def_int">Basic properties of the definite integral</a></li>
+<li><a href="sec_fundamental.html" data-scroll="sec_fundamental">The Fundamental Theorem of Calculus</a></li>
+<li><a href="sec_subs.html" data-scroll="sec_subs">Substitution</a></li>
+<li><a href="sec_area.html" data-scroll="sec_area">Area between curves</a></li>
+<li><a href="sec_int_volumes.html" data-scroll="sec_int_volumes">Volumes</a></li>
+<li><a href="sec_intbyparts.html" data-scroll="sec_intbyparts">Integration by parts</a></li>
+<li><a href="sec_trigint.html" data-scroll="sec_trigint">Trigonometric Integrals</a></li>
+<li><a href="sec_trigsub.html" data-scroll="sec_trigsub">Trigonometric Substitution</a></li>
+<li><a href="sec_parfrac.html" data-scroll="sec_parfrac">Partial Fractions</a></li>
+<li><a href="sec_numeric_int.html" data-scroll="sec_numeric_int">Numerical Integration</a></li>
+<li><a href="sec_improp_int.html" data-scroll="sec_improp_int">Improper Integrals</a></li>
+<li><a href="section-13.html" data-scroll="section-13">More Integration Examples</a></li>
+</ul>
+<h2 class="link"><a href="chap_int_app.html" data-scroll="chap_int_app"><span class="codenumber">2</span> <span class="title">Applications of Integration</span></a></h2>
+<ul>
+<li><a href="sec_work.html" data-scroll="sec_work">Work</a></li>
+<li><a href="sec_avg.html" data-scroll="sec_avg">Averages</a></li>
+<li><a href="sec_com.html" data-scroll="sec_com">Centre of Mass and Torque</a></li>
+<li><a href="sec_sep_de.html" data-scroll="sec_sep_de">Separable Differential Equations</a></li>
+</ul>
+<h2 class="link"><a href="chap_seq_ser.html" data-scroll="chap_seq_ser"><span class="codenumber">3</span> <span class="title">Sequence and series</span></a></h2>
+<ul>
+<li><a href="section-18.html" data-scroll="section-18">Sequences</a></li>
+<li><a href="section-19.html" data-scroll="section-19">Series</a></li>
+<li><a href="section-20.html" data-scroll="section-20">Convergence Tests</a></li>
+<li><a href="section-21.html" data-scroll="section-21">Absolute and Conditional Convergence</a></li>
+<li><a href="section-22.html" data-scroll="section-22">Power Series</a></li>
+<li><a href="section-23.html" data-scroll="section-23">Taylor Series</a></li>
+<li><a href="sec_RatIrr.html" data-scroll="sec_RatIrr">Optional — Rational and irrational numbers</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="section-26.html" data-scroll="section-26">Pythagoras</a></li>
+<li><a href="section-27.html" data-scroll="section-27">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="section-30.html" data-scroll="section-30">Trigonometry — Special Triangles</a></li>
+<li><a href="section-31.html" data-scroll="section-31">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trigonometric Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">Highschool Material You Should be Able to Derive</a></li>
+<li><a href="section-39.html" data-scroll="section-39">Cartesian Coordinates</a></li>
+<li><a href="ap_roots.html" data-scroll="ap_roots">Roots of Polynomials</a></li>
+</ul>
+<h2 class="link"><a href="ap_complex.html" data-scroll="ap_complex"><span class="codenumber">B</span> <span class="title">Complex Numbers and Exponentials</span></a></h2>
+<ul>
+<li><a href="sec_complex_defn.html" data-scroll="sec_complex_defn">Definition and Basic Operations</a></li>
+<li><a href="sec_complex_exp.html" data-scroll="sec_complex_exp">The Complex Exponential</a></li>
+</ul>
+<h2 class="link"><a href="app_Richardson_Romberg.html" data-scroll="app_Richardson_Romberg"><span class="codenumber">C</span> <span class="title">More About Numerical Integration</span></a></h2>
+<ul>
+<li><a href="ap_Richardson.html" data-scroll="ap_Richardson">Richardson Extrapolation</a></li>
+<li><a href="ap_Romberg.html" data-scroll="ap_Romberg">Romberg Integration</a></li>
+<li><a href="ap_adaptive.html" data-scroll="ap_adaptive">Adaptive Quadrature</a></li>
+</ul>
+<h2 class="link"><a href="app_ODE_numerical.html" data-scroll="app_ODE_numerical"><span class="codenumber">D</span> <span class="title">Numerical Solution of ODE's</span></a></h2>
+<ul>
+<li><a href="ap_derivation.html" data-scroll="ap_derivation">Simple ODE Solvers — Derivation</a></li>
+<li><a href="ap_error_behaviour.html" data-scroll="ap_error_behaviour">Simple ODE Solvers —  Error Behaviour</a></li>
+<li><a href="ap_variable.html" data-scroll="ap_variable">Variable Step Size Methods</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">E</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">F</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">G</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp2-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="subsection" id="subsection-40"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.1.1</span> <span class="title">Sequences</span>
+</h3>
+<p id="p-4303">In the discussion above we used the term “sequence” without giving  it a precise mathematical meaning. Let us rectify this now.</p>
+<article class="definition-like" id="def_SRsequence"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">3.1.1</span>
+</h6>
+<p id="p-4304">A sequence is a list of infinitely <a knowl="" class="id-ref" refid="hk-fn-148" id="fn-148"><sup> 1 </sup></a><span id="hk-fn-148" class="hidden-content tex2jax_ignore"><span class="footnote">For the more pedantic reader,  here we mean a countably infinite list of numbers. The interested (pedantic or otherwise) reader should look up countable and uncountable sets.</span></span> many numbers with a specified order.  It is denoted</p>
+<div class="displaymath">
+\begin{equation*}
+\big\{a_1,\ a_2,\ a_3,\  \cdots,\ a_n,\ \cdots\big\}
+\quad\text{or}\quad
+\big\{a_n\big\}
+\quad\text{or}\quad
+\big\{a_n\big\}_{n=1}^\infty
+\end{equation*}
+</div></article><p id="p-4305">We will often specify a sequence by writing it more explicitly, like</p>
+<div class="displaymath">
+\begin{gather*}
+\Big\{ a_n = f(n) \Big\}_{n=1}^\infty
+\end{gather*}
+</div>
+<p>where \(f(n)\) is some function from the natural numbers to the real numbers.</p>
+<article class="example-like" id="eg_SRsequence"><a knowl="" class="id-ref" refid="hk-eg_SRsequence"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.1.2</span> <span class="title">Three sequences and another one</span>
+</h6></a></article><div id="hk-eg_SRsequence" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-4306">Here are three sequences.</p>
+<div class="displaymath">
+\begin{align*}
+&amp;\Big\{1,\ \frac{1}{2},\ \frac{1}{3},\ \cdots,\ \frac{1}{n},\ \cdots\Big\}
+&amp;&amp;\text{or}
+&amp;&amp;\Big\{a_n=\frac{1}{n}\Big\}_{n=1}^\infty\\
+&amp;\Big\{1,\ 2,\ 3,\ \cdots,\ n,\ \cdots\Big\}
+&amp;&amp;\text{or}
+&amp;&amp;\Big\{a_n=n\Big\}_{n=1}^\infty\\
+&amp;\Big\{1,\ -1,\ 1,\ -1,\ \cdots,\ (-1)^{n-1},\ \cdots\Big\}
+&amp;&amp;\text{or}
+&amp;&amp;\Big\{a_n=(-1)^{n-1}\Big\}_{n=1}^\infty
+\end{align*}
+</div>
+<p>It is not necessary that there be a simple explicit formula for the  \(n^{\rm th}\) term of a sequence. For example the decimal digits of  \(\pi\) is a perfectly good sequence</p>
+<div class="displaymath">
+\begin{equation*}
+\big\{3,\ 1,\ 4,\ 1,\ 5,\ 9,\ 2,\ 6,\ 5,\ 3,\ 5,\ 8,\ 9,\ 7,\ 9,\ 3,\ 2,\ 3,\
+8,\ 4,\ 6,\ 2,\ 6,\ 4,\ \cdots\ \big\}
+\end{equation*}
+</div>
+<p>but there is no simple formula <a knowl="" class="id-ref" refid="hk-fn-149" id="fn-149"><sup> 2 </sup></a><span id="hk-fn-149" class="hidden-content tex2jax_ignore"><span class="footnote">There is, however, a remarkable  result due to Bailey, Borwein and Plouffe that can be used to compute  the \(n^{\rm th}\) binary digit of \(\pi\) (i.e. writing \(\pi\) in base 2 rather than base 10) without having to work out the preceding digits.</span></span> for the \(n^{\rm th}\) digit.</p></article></div>
+<p id="p-4307">Our primary concern with sequences will be the behaviour of \(a_n\) as \(n\) tends to infinity and, in particular, whether or not \(a_n\) “settles down” to some value as \(n\) tends to infinity.</p>
+<article class="definition-like" id="def_SRsequenceLimit"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">3.1.3</span>
+</h6>
+<p id="p-4308">A sequence \(\big\{a_n\big\}_{n=1}^\infty\) is said to converge to the limit \(A\) if \(a_n\) approaches \(A\) as \(n\) tends to infinity. If so, we write</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{n\rightarrow\infty} a_n=A\qquad\hbox{or}\qquad a_n\rightarrow A\text{ as }n\rightarrow\infty
+\end{equation*}
+</div>
+<p>A sequence is said to converge if it converges to some limit. Otherwise it is said to diverge.</p></article><p id="p-4309">The reader should immediately recognise the similarity with limits at infinity</p>
+<div class="displaymath">
+\begin{gather*}
+\lim_{x \to \infty} f(x) = L \qquad\hbox{if}\qquad
+f(x) \to L \text{ as } x \to \infty
+\end{gather*}
+</div>
+<article class="example-like" id="eg_SRsequenceLimA"><a knowl="" class="id-ref" refid="hk-eg_SRsequenceLimA"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.1.4</span> <span class="title">Convergence in Example 3.1.2</span>
+</h6></a></article><div id="hk-eg_SRsequenceLimA" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-4310">Three of the four sequences in Example <a knowl="./knowl/eg_SRsequence.html" title="Example 3.1.2: Three sequences and another one">3.1.2</a> diverge:</p>
+<ul class="disc">
+<li id="li-1962">The sequence \(\big\{a_n=n\big\}_{n=1}^\infty\) diverges because  \(a_n\) grows without bound, rather than approaching some finite value,  as \(n\) tends to infinity.</li>
+<li id="li-1963">The sequence \(\big\{a_n=(-1)^{n-1}\big\}_{n=1}^\infty\) diverges because \(a_n\) oscillates between \(+1\) and \(-1\)  rather than approaching a single value as \(n\) tends to infinity.</li>
+<li id="li-1964">The sequence of the decimal digits of \(\pi\) also diverges, though the proof that this is the case is a  bit beyond us right now <a knowl="" class="id-ref" refid="hk-fn-150" id="fn-150"><sup> 3 </sup></a><span id="hk-fn-150" class="hidden-content tex2jax_ignore"><span class="footnote">If the digits of \(\pi\) were to converge,  then \(\pi\) would have to be a rational number. The irrationality of \(\pi\)  (that it cannot be written as a fraction) was first proved by Lambert in 1761.  Niven's 1947 proof is more accessible and we invite the interested reader  to use their favourite search engine to find step-by-step guides to that proof.</span></span> .</li>
+</ul>
+<p>The other sequence in Example <a knowl="./knowl/eg_SRsequence.html" title="Example 3.1.2: Three sequences and another one">3.1.2</a> has \(a_n=\frac{1}{n}\text{.}\) As \(n\) tends to infinity, \(\frac{1}{n}\) tends  to zero. So</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{n\rightarrow\infty} \frac{1}{n}=0
+\end{equation*}
+</div></article></div>
+<article class="example-like" id="eg_SRsequenceLimB"><a knowl="" class="id-ref" refid="hk-eg_SRsequenceLimB"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.1.5</span> <span class="title">\(\lim\limits_{n\rightarrow\infty}\frac{n}{2n+1}\)</span>
+</h6></a></article><div id="hk-eg_SRsequenceLimB" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-4311">Here is a little less trivial example. To study the behaviour of \(\frac{n}{2n+1}\) as \(n\rightarrow\infty\text{,}\) it is a good  idea to write it as</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{n}{2n+1}=\frac{1}{2+\frac{1}{n}}
+\end{equation*}
+</div>
+<p>As \(n\rightarrow\infty\text{,}\) the \(\frac{1}{n}\) in the denominator tends to zero, so that the denominator \(2+\frac{1}{n}\) tends to \(2\) and  \(\frac{1}{2+\frac{1}{n}}\) tends to \(\frac{1}{2}\text{.}\) So</p>
+<div class="displaymath">
+\begin{gather*}
+\lim_{n\rightarrow\infty}\frac{n}{2n+1}
+=\lim_{n\rightarrow\infty}\frac{1}{2+\frac{1}{n}}
+=\frac{1}{2}
+\end{gather*}
+</div></article></div>
+<p id="p-4312">Notice that in this last example, we are really using techniques that  we used before to study infinite limits like  \(\ds \lim_{x\rightarrow\infty}f(x)\text{.}\)  This experience can be easily transferred to dealing with   \(\lim\limits_{n\rightarrow\infty}a_n\) limits by using the following result.</p>
+<article class="theorem-like" id="thm_SRxlimtoanlim"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">3.1.6</span>
+</h6>
+<p id="p-4313">If</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{x\rightarrow\infty} f(x) = L
+\end{equation*}
+</div>
+<p>and if \(a_n=f(n)\) for all positive integers \(n\text{,}\) then</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{n\rightarrow\infty} a_n = L
+\end{equation*}
+</div></article><article class="example-like" id="eg_SRsequenceLimC"><a knowl="" class="id-ref" refid="hk-eg_SRsequenceLimC"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.1.7</span> <span class="title">\(\lim\limits_{n\rightarrow\infty}e^{-n}\)</span>
+</h6></a></article><div id="hk-eg_SRsequenceLimC" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-4314">Set \(f(x)=e^{-x}\text{.}\) Then \(e^{-n}=f(n)\) and</p>
+<div class="displaymath">
+\begin{align*}
+\text{since }
+\lim_{x\rightarrow\infty}e^{-x}&amp;=0
+&amp;\text{ we know that }&amp;&amp;
+\lim\limits_{n\rightarrow\infty}e^{-n}&amp;=0
+\end{align*}
+</div></article></div>
+<p id="p-4315">The bulk of the rules for the arithmetic of limits of functions  that you already know also apply to the limits of sequences.  That is, the rules you learned to work with limits such as  \(\ds \lim_{x\rightarrow\infty}f(x)\)  also apply to limits like  \(\ds\lim_{n\rightarrow\infty}a_n\text{.}\)</p>
+<article class="theorem-like" id="thm_SRlimarith"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">3.1.8</span> <span class="title">Arithmetic of limits</span>
+</h6>
+<p id="p-4316">Let \(A\text{,}\) \(B\) and \(C\) be real numbers and let the two sequences \(\big\{a_n\big\}_{n=1}^\infty\) and  \(\big\{b_n\big\}_{n=1}^\infty\) converge to \(A\) and \(B\) respectively. That is, assume that</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{n \to \infty} a_n&amp;=A &amp; \lim_{n \to \infty} b_n &amp;=B
+\end{align*}
+</div>
+<p>Then the following limits hold.</p>
+<ol class="lower-alpha">
+<li id="li-1965">
+<p id="p-4317">\(\ds \lim_{n \to \infty} \big[a_n+b_n\big] = A+B\)</p>
+<p id="p-4318">(The limit of the sum is the  sum of the limits.)</p>
+</li>
+<li id="li-1966">
+<p id="p-4319">\(\ds \lim_{n \to \infty} \big[a_n-b_n\big] = A-B\)</p>
+<p id="p-4320">(The limit of the difference is the difference of the limits.)</p>
+</li>
+<li id="li-1967">\(\ds \lim_{n \to \infty} C a_n = C A\text{.}\)</li>
+<li id="li-1968">
+<p id="p-4321">\(\ds \lim_{n \to \infty} a_n\,b_n = A\,B\)</p>
+<p id="p-4322">(The limit of the product is the product of the limits.)</p>
+</li>
+<li id="li-1969">
+<p id="p-4323">If \(B \neq 0\) then \(\ds \lim_{n \to \infty}\frac{a_n}{b_n} = \frac{A}{B}\)</p>
+<p id="p-4324">(The limit of the quotient is the quotient of the limits <em class="emphasis">provided</em> the limit of the denominator is not zero.)</p>
+</li>
+</ol></article><p id="p-4325">We use these rules to evaluate limits of more complicated sequences  in terms of the limits of simpler sequences — just as we did for limits of functions.</p>
+<article class="example-like" id="eg_SRlimarith"><a knowl="" class="id-ref" refid="hk-eg_SRlimarith"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.1.9</span> <span class="title">Arithmetic of limits</span>
+</h6></a></article><div id="hk-eg_SRlimarith" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-4326">Combining Examples <a knowl="./knowl/eg_SRsequenceLimB.html" title="Example 3.1.5: \(\lim\limits_{n\rightarrow\infty}\frac{n}{2n+1}\)">3.1.5</a> and <a knowl="./knowl/eg_SRsequenceLimC.html" title="Example 3.1.7: \(\lim\limits_{n\rightarrow\infty}e^{-n}\)">3.1.7</a>,</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{n\rightarrow\infty}\Big[\frac{n}{2n+1} + 7 e^{-n}\Big]
+&amp;= \lim_{n\rightarrow\infty}\frac{n}{2n+1}
++\lim_{n\rightarrow\infty} 7 e^{-n}
+&amp; \text{by Theorem }\knowl{./knowl/thm_SRlimarith.html}{\text{3.1.8}}\text{(a)}\\
+&amp;= \lim_{n\rightarrow\infty}\frac{n}{2n+1}
++7\lim_{n\rightarrow\infty} e^{-n}
+&amp; \text{by Theorem }\knowl{./knowl/thm_SRlimarith.html}{\text{3.1.8}}\text{(c)}\\
+\end{align*}
+<p class="intertext">and then using Examples <a knowl="./knowl/eg_SRsequenceLimB.html" title="Example 3.1.5: \(\lim\limits_{n\rightarrow\infty}\frac{n}{2n+1}\)">3.1.5</a> and <a knowl="./knowl/eg_SRsequenceLimC.html" title="Example 3.1.7: \(\lim\limits_{n\rightarrow\infty}e^{-n}\)">3.1.7</a></p>
+\begin{align*}
+&amp;=\frac{1}{2} + 7\cdot 0\\
+&amp;=\frac{1}{2}
+\end{align*}
+</div></article></div>
+<p id="p-4327">There is also a squeeze theorem for sequences.</p>
+<article class="theorem-like" id="thm_SRsqueeze"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">3.1.10</span> <span class="title">Squeeze theorem</span>
+</h6>
+<p id="p-4328">If \(a_n\le c_n\le b_n\) for all natural numbers \(n\text{,}\) and if</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{n\rightarrow\infty}a_n=\lim_{n\rightarrow\infty}b_n=L
+\end{equation*}
+</div>
+<p>then</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{n\rightarrow\infty}c_n=L
+\end{equation*}
+</div></article><article class="example-like" id="eg_SRsqueeze"><a knowl="" class="id-ref" refid="hk-eg_SRsqueeze"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.1.11</span> <span class="title">A simple squeeze</span>
+</h6></a></article><div id="hk-eg_SRsqueeze" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-4329">In this example we use the squeeze theorem to evaluate</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{n\rightarrow\infty}\Big[1+\frac{\pi_n}{n}\Big]
+\end{equation*}
+</div>
+<p>where \(\pi_n\) is the \(n^{\mathrm{th}}\) decimal digit of \(\pi\text{.}\) That is,</p>
+<div class="displaymath">
+\begin{equation*}
+\pi_1=3\quad \pi_2=1 \quad \pi_3=4 \quad \pi_4=1 \quad \pi_5=5 \quad\pi_6=9\quad\cdots
+\end{equation*}
+</div>
+<p>We do not have a simple formula for \(\pi_n\text{.}\) But we do know that</p>
+<div class="displaymath">
+\begin{equation*}
+0\le\pi_n\le 9
+\implies 0 \le \frac{\pi_n}{n} \le \frac{9}{n}
+\implies 1 \le 1+\frac{\pi_n}{n} \le 1+\frac{9}{n}
+\end{equation*}
+</div>
+<p>and we also know that</p>
+<div class="displaymath">
+\begin{gather*}
+\lim_{n\rightarrow\infty} 1 = 1\qquad
+\lim_{n\rightarrow\infty} \Big[1+\frac{9}{n}\Big] = 1
+\end{gather*}
+</div>
+<p>So the squeeze theorem with \(a_n=1\text{,}\) \(b_n=1+\frac{\pi_n}{n}\text{,}\) and \(c_n=1+\frac{9}{n}\) gives</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{n\rightarrow\infty}\Big[1+\frac{\pi_n}{n}\Big] = 1
+\end{equation*}
+</div></article></div>
+<p id="p-4330">Finally, recall that we can compute the limit of the composition  of two functions using continuity. In the same  way, we have the following result:</p>
+<article class="theorem-like" id="thm_SRcontfn"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">3.1.12</span> <span class="title">Continuous functions of limits</span>
+</h6>
+<p id="p-4331">If  \(\lim\limits_{n\rightarrow\infty}a_n=L \) and if the function \(g(x)\) is continuous at \(L\text{,}\) then</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{n\rightarrow\infty}g(a_n)=g(L)
+\end{equation*}
+</div></article><article class="example-like" id="eg_SRsequenceLimD"><a knowl="" class="id-ref" refid="hk-eg_SRsequenceLimD"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.1.13</span> <span class="title">\(\lim\limits_{n\rightarrow\infty}\sin\frac{\pi n}{2n+1}\)</span>
+</h6></a></article><div id="hk-eg_SRsequenceLimD" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-4332">Write \(\sin\frac{\pi n}{2n+1}=g\big(\frac{n}{2n+1}\big)\) with  \(g(x)=\sin(\pi x)\text{.}\) We saw, in Example <a knowl="./knowl/eg_SRsequenceLimB.html" title="Example 3.1.5: \(\lim\limits_{n\rightarrow\infty}\frac{n}{2n+1}\)">3.1.5</a> that</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{n\rightarrow\infty}\frac{n}{2n+1} = \frac{1}{2}
+\end{equation*}
+</div>
+<p>Since \(g(x) = \sin (\pi x)\) is continuous at \(x=\frac{1}{2}\text{,}\) which  is the limit of \(\frac{n}{2n+1}\text{,}\) we have</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{n\rightarrow\infty}\sin\frac{\pi n}{2n+1}
+=\lim_{n\rightarrow\infty}g\Big(\frac{n}{2n+1}\Big)
+=g\Big(\frac{1}{2}\Big)
+=\sin\frac{\pi}{2}
+=1
+\end{equation*}
+</div></article></div>
+<p id="p-4333">With this introduction to sequences and some tools to determine their limits,  we can now return to the problem of understanding infinite sums.</p></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:37+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="displaymath">
+\begin{align*}
+\int e^{\cos x}\sin(2x)\dee{x}&amp;=2\int e^{\cos x}\cos x \sin x\,\dee{x}\\
+\end{align*}
+<p class="intertext">Now we can use the substitution \(w=\cos x\text{,}\) \(\dee{w}=-\sin x \dee{x}\text{.}\)</p>
+\begin{align*}
+&amp;=-2\int we^w\dee{w}\\
+\end{align*}
+<p class="intertext">From here the integral should look more familiar. We can use integration by parts with \(u=w\text{,}\) \(\dee{v} = e^w\dee{w}\text{,}\) \(\dee{u}=\dee{w}\text{,}\) and \(v=e^w\text{.}\)</p>
+\begin{align*}
+&amp;=-2\left[\underbrace{we^w}_{uv} - \int \underbrace{e^w\dee{w}}_{v\dee{u}}\right]\\
+&amp;=2e^w\left[1-w\right]+C\\
+&amp;=2e^{\cos x}[1-\cos x]+C
+\end{align*}
+</div>
+<span class="incontext"><a href="exercises-7.html#mjx-eqn-mrow-1448">in-context</a></span>
+</body>
+</html>

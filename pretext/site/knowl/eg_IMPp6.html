@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:20:10+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="example-like"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.12.18</span> <span class="title">\(\int_1^\infty e^{-x^2}\dee{x}\)</span>
+</h6>
+<p>We cannot evaluate the integral \(\int_1^\infty e^{-x^2}\dee{x}\) explicitly <a knowl="./knowl/fn-107-hidden.html" title="Footnote 1.12.7"><sup> 7 </sup></a>, however we would still like to understand if it is finite or not — does it  converge or diverge?</p>
+<p><em class="alert">Solution:</em> We will use Theorem <a knowl="./knowl/thm_IMPcomparison.html" title="Theorem 1.12.17: Comparison">1.12.17</a> to answer the question.</p>
+<ul class="disc">
+<li>So we want to find another integral that we can compute and that we can compare to \(\int_1^\infty e^{-x^2}\dee{x}\text{.}\) To do so we pick an integrand that looks like \(e^{-x^2}\text{,}\) but whose indefinite integral we know — such as \(e^{-x}\text{.}\)</li>
+<li>When \(x\ge 1\text{,}\) we have \(x^2\ge x\) and hence \(e^{-x^2}\le e^{-x}\text{.}\) Thus we  can use Theorem <a knowl="./knowl/thm_IMPcomparison.html" title="Theorem 1.12.17: Comparison">1.12.17</a> to compare<div class="displaymath">
+\begin{gather*}
+\int_1^\infty e^{-x^2}\dee{x} \text{ with }
+\int_1^\infty e^{-x}\dee{x}
+\end{gather*}
+</div>
+</li>
+<li>The integral<div class="displaymath">
+\begin{align*}
+\int_1^\infty e^{-x}\dee{x}
+&amp;=\lim_{R\rightarrow\infty}\int_1^R e^{-x}\dee{x}\\
+&amp;=\lim_{R\rightarrow\infty}\Big[-e^{-x}\Big]_1^{R}\\
+&amp;=\lim_{R\rightarrow\infty}\Big[e^{-1}-e^{-R}\Big]
+=e^{-1}
+\end{align*}
+</div>converges.</li>
+<li>So, by Theorem <a knowl="./knowl/thm_IMPcomparison.html" title="Theorem 1.12.17: Comparison">1.12.17</a>, with \(a=1\text{,}\)  \(f(x)=e^{-x^2}\) and \(g(x)=e^{-x}\text{,}\) the integral \(\int_1^\infty e^{-x^2}\dee{x}\) converges too (it is approximately equal to \(0.1394\)).</li>
+</ul></article><span class="incontext"><a href="subsection-29.html#eg_IMPp6">in-context</a></span>
+</body>
+</html>

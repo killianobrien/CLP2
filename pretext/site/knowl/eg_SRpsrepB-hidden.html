@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:23:14+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="example-like"><p>Find a power series representation for \(\frac{1}{(1-x)^2}\text{.}\)</p>
+<p><em class="alert">Solution:</em> Once again the trick is to express \(\frac{1}{(1-x)^2}\) in terms of  \(\frac{1}{1-x}\text{.}\) Notice that</p>
+<div class="displaymath">
+\begin{align*}
+\frac{1}{(1-x)^2} &amp;= \diff{}{x}\left\{\frac{1}{1-x}\right\}\\
+&amp;= \diff{}{x} \left\{\sum_{n=0}^\infty x^n \right\}\\
+&amp;= \sum_{n=1}^\infty nx^{n-1}
+\qquad\text{by Theorem }\knowl{./knowl/thm_SRpsops.html}{\text{3.5.13}}
+\end{align*}
+</div>
+<p>Note that the \(n=0\) term has disappeared because, for \(n=0\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\diff{}{x} x^n = \diff{}{x} x^0 = \diff{}{x} 1= 0
+\end{equation*}
+</div>
+<p>Also note that the radius of convergence of this series is one. We can  see this via Theorem <a knowl="./knowl/thm_SRpsops.html" title="Theorem 3.5.13: Operations on Power Series">3.5.13</a>. That theorem tells us that  the radius of convergence of a power series is not changed by  differentiation — and since \(\sum_{n=0}^\infty x^n\) has radius  of convergence one, so too does its derivative.</p>
+<p>Without much more work we can determine the interval of convergence  by testing at \(x=\pm 1\text{.}\) When \(x=\pm 1\) the terms of the series do not  go to zero as \(n \to \infty\) and so, by the divergence test, the series  does not converge there. Hence the interval of convergence for the  series is \(-1  \lt  x  \lt  1\text{.}\)</p></article></body>
+</html>

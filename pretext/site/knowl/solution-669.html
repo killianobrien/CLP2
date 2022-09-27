@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:23:20+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">3.5.3.12.1</span>
+</h6>
+<p>We apply the ratio test with \(a_n= \frac{4^n}{n}(x-1)^n\text{.}\) Since</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{n\to\infty} \bigg| \frac{a_{n+1}}{a_n} \bigg|
+&amp;= \lim_{n\to\infty} \bigg| \frac{4^{n+1}(x-1)^{n+1}/(n+1)}{4^n(x-1)^n/n} \bigg|\\
+&amp;= \lim_{n\to\infty} 4|x-1| \frac{n}{n+1}\\
+&amp;= 4|x-1| \lim_{n\to\infty} \frac{n}{n+1} = 4|x-1|\cdot1.
+\end{align*}
+</div>
+<p>the series converges if</p>
+<div class="displaymath">
+\begin{align*}
+4|x-1| \lt 1
+\amp\iff -1 \lt 4(x-1) \lt 1
+\iff -\frac{1}{4} \lt x-1 \lt \frac{1}{4}\\
+\amp\iff \frac{3}{4} \lt x \lt \frac{5}{4}
+\end{align*}
+</div>
+<p>and diverges if \(4|x-1| \gt 1\text{.}\) Checking the right endpoint \(x=\frac{5}{4}\text{,}\) we see that</p>
+<div class="displaymath">
+\begin{gather*}
+\sum_{n=1}^\infty \frac{4^n}{n}\bigg( \frac{5}{4}-1 \bigg)^n
+= \sum_{n=1}^\infty \frac{1}{n}
+\end{gather*}
+</div>
+<p>is the divergent harmonic series. At the left endpoint \(x=\frac{3}{4}\text{,}\)</p>
+<div class="displaymath">
+\begin{gather*}
+\sum_{n=1}^\infty \frac{4^n}{n}\bigg( \frac34-1 \bigg)^n = \sum_{n=1}^\infty \frac{(-1)^n}{n}
+\end{gather*}
+</div>
+<p>converges by the alternating series test. Therefore the interval of convergence of the original series is \(\frac{3}{4}\le x \lt \frac{5}{4}\text{,}\) or \(\big[\frac{3}{4},\frac{5}{4}\big)\text{.}\)</p>
+</div>
+<span class="incontext"><a href="exercises-22.html#solution-669">in-context</a></span>
+</body>
+</html>

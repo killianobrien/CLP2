@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:47+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="displaymath">
+\begin{align*}
+\int \sqrt{1+e^x}\dee{x}&amp;=\int\frac{2\sqrt{1+\tan^2 \theta}}{\tan\theta}\sec^2\theta\dee{\theta}\\
+&amp;=2\int \frac{\sec^3\theta}{\tan\theta}\dee{\theta}\\
+&amp;=2\int \frac{\sec\theta(\tan^2\theta+1)}{\tan\theta}\dee{\theta}\\
+&amp;=2\int \left(\sec\theta \tan\theta + \frac{\sec \theta}{\tan\theta}\right)\dee{\theta}\\
+&amp;=2\int\big( \sec\theta \tan\theta + \csc\theta\big)\dee{\theta}\\
+&amp;=2\sec\theta + 2\log|\cot\theta-\csc\theta|+C\\
+&amp;=2\sqrt{1+e^x}+2\log\left| \frac{1}{e^{x/2}} - \frac{\sqrt{1+e^x}}{e^{x/2}} \right|+C\\
+&amp;=2\sqrt{1+e^x}+2\log\left| 1-\sqrt{1+e^x} \right|-2\log(e^{x/2})+C\\
+&amp;=2\sqrt{1+e^x}+2\log\left| 1-\sqrt{1+e^x} \right|-x+C
+\end{align*}
+</div>
+<span class="incontext"><a href="exercises-9.html#mjx-eqn-mrow-2110">in-context</a></span>
+</body>
+</html>

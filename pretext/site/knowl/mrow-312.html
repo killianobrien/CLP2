@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:20+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="displaymath">
+\begin{align*}
+\int_a^bh(x) \dee{x}
+&amp;= \sum_{i=1}^n h(x_{i,n}^*)\cdot\frac{b-a}{n}\\
+&amp;\hskip0.5in\text{by Definition }\knowl{./knowl/def_INTintegral.html}{\text{1.1.9}}\\
+&amp;= \sum_{i=1}^n \left(Af(x_{i,n}^*)+Bg(x_{i,n}^*) \right)\cdot \frac{b-a}{n}\\
+&amp;= \sum_{i=1}^n \left(Af(x_{i,n}^*)\cdot \frac{b-a}{n} + Bg(x_{i,n}^*)\cdot
+\frac{b-a}{n} \right)\\
+&amp;= \left(\sum_{i=1}^n Af(x_{i,n}^*)\cdot \frac{b-a}{n}\right)
++ \left(\sum_{i=1}^n Bg(x_{i,n}^*)\cdot \frac{b-a}{n}\right)\\
+&amp;\hskip0.5in\text{by Theorem }\knowl{./knowl/thm_INTsummationArith.html}{\text{1.1.5}}\text{(b)}\\
+&amp;= A\left(\sum_{i=1}^n f(x_{i,n}^*)\cdot \frac{b-a}{n}\right)
++ B\left(\sum_{i=1}^n g(x_{i,n}^*)\cdot \frac{b-a}{n}\right)\\
+&amp;\hskip0.5in\text{by Theorem }\knowl{./knowl/thm_INTsummationArith.html}{\text{1.1.5}}\text{(a)}\\
+&amp;= A \int_a^b f(x) \dee{x} + B \int_a^b g(x) \dee{x}\\
+&amp;\hskip0.5in\text{by Definition }\knowl{./knowl/def_INTintegral.html}{\text{1.1.9}}
+\end{align*}
+</div>
+<span class="incontext"><a href="sec_def_int.html#mjx-eqn-mrow-312">in-context</a></span>
+</body>
+</html>

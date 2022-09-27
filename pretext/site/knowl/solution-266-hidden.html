@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:46+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>The half of the ellipse to the right of the \(y\)-axis is given by the equation</p>
+<div class="displaymath">
+\begin{equation*}
+x=f(y)=4\sqrt{1-\left(\frac{y}{2}\right)^2}
+\end{equation*}
+</div>
+<p>The area we want is twice the area between the right-hand side of the curve and the \(y\)-axis, from \(y=-1\) to \(y=1\text{.}\) In other words,</p>
+<div class="displaymath">
+\begin{equation*}
+\mbox{Area}=2\int_{-1}^1 4\sqrt{1-\left(\frac{y}{2}\right)^2}\dee{y}
+=8\int_{-1}^1 \sqrt{1-\left(\frac{y}{2}\right)^2}\dee{y}
+\end{equation*}
+</div>
+<p>Since the integrand \(\sqrt{1-\left(\frac{y}{2}\right)^2}\) is an even function of \(y\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{-1}^1 \sqrt{1-\left(\frac{y}{2}\right)^2}~\dee{y}
+=2\int_0^1 \sqrt{1-\left(\frac{y}{2}\right)^2}~\dee{y}
+\end{equation*}
+</div>
+<p>So</p>
+<div class="displaymath">
+\begin{equation*}
+\mbox{Area}=16\int_{0}^1 \sqrt{1-\left(\frac{y}{2}\right)^2}~\dee{y}
+\end{equation*}
+</div>
+<p>We use the substitution \(\frac{y}{2} = \sin \theta\text{,}\) \(\frac{1}{2}\dee{y}=\cos\theta\dee{\theta}\text{.}\) When \(y=0\text{,}\) \(\sin\theta=0\) so that \(\theta=0\text{,}\) and when \(y=1\text{,}\) \(\sin\theta=\frac{1}{2}\) so that \(\theta= \frac{\pi}{6}\text{.}\) Hence</p>
+<div class="displaymath">
+\begin{align*}
+\mbox{Area}&amp;=16\int_{0}^{\pi/6} \sqrt{1-\left(\sin\theta\right)^2} \cdot 2\cos\theta\ \dee{\theta}\\
+&amp;=32\int_{0}^{\pi/6} \sqrt{\cos^2\theta} \cos\theta\ \dee{\theta}\\
+&amp;=32\int_{0}^{\pi/6}\cos^2\theta\ \dee{\theta}\\
+&amp;=16\int_{0}^{\pi/6}\big(1+\cos(2\theta)\big)\ \dee{\theta}\\
+&amp;=16\left[\theta +\frac{1}{2}\sin(2\theta)\right]_{0}^{\pi/6}\\
+&amp;=16\left(\frac{\pi}{6}+\frac{1}{2}\cdot \frac{\sqrt{3}}{2}
+\right)\\
+&amp;=\frac{8\pi}{3}+4\sqrt{3}
+\end{align*}
+</div>
+<p>Remark: we also investigated areas of ellipses in Question <a knowl="./knowl/prob_s1_2_ellipsearea.html" title="Exercise 1.2.3.16">1.2.3.16</a>, Section <a href="sec_def_int.html" class="xref" title="Section 1.2: Basic properties of the definite integral">1.2</a>.</p>
+</div></body>
+</html>

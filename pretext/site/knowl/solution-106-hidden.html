@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:24+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>Define with \(G(y) = \displaystyle\int_0^y \sqrt{\sin t}\,\dee{t}\text{.}\) Then:</p>
+<div class="displaymath">
+\begin{align*}
+F(x)&amp;=\int_x^{e^x} \sqrt{\sin t}\,\dee{t}\\
+&amp;= \int_0^{e^x} \sqrt{\sin t}\,\dee{t} + \int_x^0 \sqrt{\sin t}\,\dee{t}
+= \int_0^{e^x} \sqrt{\sin t}\,\dee{t} - \int_0^x \sqrt{\sin t}\,\dee{t}\\
+&amp;=G(e^x) - G(x)
+\end{align*}
+</div>
+<p>By the Fundamental Theorem of Calculus Part 1,</p>
+<div class="displaymath">
+\begin{gather*}
+G'(y)=\sqrt{\sin y}\qquad
+\end{gather*}
+</div>
+<p>Hence, by the chain rule,</p>
+<div class="displaymath">
+\begin{align*}
+F'(x) &amp;= G'(e^x)\ \diff{}{x}\big\{e^x\big\} - G'(x)\\
+&amp;=  e^xG'(e^x) - G'(x)\\
+&amp;=e^x\sqrt{\sin(e^x)} -\sqrt{\sin(x)}
+\end{align*}
+</div>
+</div></body>
+</html>

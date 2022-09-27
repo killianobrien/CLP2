@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:23:17+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>We apply the ratio test for the series whose \(k^{\rm th}\) term is \(a_k= \frac{x^k}{ 10^{k+1}(k+1)! }\text{.}\) Then</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{k\to\infty} \bigg| \frac{ a_{k+1} }{ a_k } \bigg|
+&amp;= \lim_{k\to\infty} \bigg| \frac{x^{k+1}}{10^{k+2}(k+2)!} \cdot
+\frac{10^{k+1}(k+1)!}{x^k} \bigg|\\
+&amp;=\lim_{k\to\infty} \left|\frac{10^{k+1}}{10^{k+2}}\right|\cdot\left|\frac{(k+1)!}{(k+2)!}\right|\cdot\left|\frac{x^{k+1}}{x^k}\right|\\
+&amp;= \lim_{k\to\infty}\frac{1}{10(k+2)}|x| = 0  \lt  1
+\end{align*}
+</div>
+<p>for all \(x\text{.}\) Therefore, by the ratio test, the series converges for all \(x\) and the radius of convergence is \(R = \infty\text{.}\)</p>
+<p>Alternatively, one can set \(A_k = \dfrac{1}{10^{k+1}(k+1)!}\) and compute \(A = \displaystyle\lim_{k\to\infty} \left| \frac{A_{k+1}}{A_k}\right| = 0\text{,}\) so that \(R\) is again \(+\infty\text{.}\)</p>
+</div></body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:22:25+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="example-like"><p>Let \(p \gt 0\text{.}\) We'll now use the integral test to determine whether or not the series \(\sum\limits_{n=2}^\infty\frac{1}{n(\log n)^p}\) converges.</p>
+<ul class="disc">
+<li>As in the last example, we start by choosing a function that obeys  \(f(n)=a_n=\frac{1}{n(\log n)^p}\) for all \(n\)  bigger than some \(N_0\text{.}\) Certainly \(f(x)=\frac{1}{x(\log x)^p}\) obeys  \(f(n)=\frac{1}{n(\log n)^p}\) for all \(n\ge 2\text{.}\) So let's use that \(f\) and try \(N_0=2\text{.}\)</li>
+<li>
+<p>Now let's check the other two conditions of  Theorem <a knowl="./knowl/thm_SRintegralTest.html" title="Theorem 3.3.5: The Integral Test">3.3.5</a>:</p>
+<ol class="lower-roman">
+<li>Both \(x\) and \(\log x\) are positive for all \(x \gt 1\text{,}\) so \(f(x) \gt 0\) for all \(x\ge N_0=2\text{.}\)</li>
+<li>As \(x\) increases both \(x\) and \(\log x\) increase and so \(x(\log x)^p\)  increases and \(f(x)\) decreases.</li>
+</ol>
+</li>
+<li>So the integral test tells us that the series   \(\sum\limits_{n=2}^\infty\frac{1}{n(\log n)^p}\) converges if and only if  the integral \(\int_2^\infty\frac{\dee{x}}{x (\log x)^p}\) converges.</li>
+<li>To test the convergence of the integral, we make the substitution \(u=\log x\text{,}\) \(\dee{u}=\frac{\dee{x}}{x}\text{.}\)<div class="displaymath">
+\begin{gather*}
+\int_2^R \frac{\dee{x}}{x (\log x)^p}
+=\int_{\log 2}^{\log R}\frac{\dee{u}}{u^p}
+\end{gather*}
+</div>We already know that the integral \(\int_1^\infty\frac{\dee{u}}{u^p}\text{,}\) and hence the integral \(\int_2^R \frac{\dee{x}}{x (\log x)^p}\text{,}\) converges if and  only if \(p \gt 1\text{.}\)</li>
+</ul>
+<p>So we conclude that  \(\sum\limits_{n=2}^\infty\frac{1}{n(\log n)^p}\)  converges if and only if \(p \gt 1\text{.}\)</p></article></body>
+</html>

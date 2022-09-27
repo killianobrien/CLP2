@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:22:00+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">3.1.2.23.1</span>
+</h6>
+<p>First, although this sequence is not defined for some small values of \(n\text{,}\) it is defined as long as \(n \geq \sqrt{2.5}\text{,}\) so it's not a problem to take the limit as \(n \to \infty\text{.}\) Second, we notice that our limit has the indeterminate form \(\infty-\infty\text{.}\) Since this form is indeterminate, more work is needed to find our limit, if it exists.</p>
+<p>In Question <a knowl="./knowl/prob_s3_1_conj.html" title="Exercise 3.1.2.22">22</a>, we saw a similar limit, and made use of the conjugate. However, in this case, there's an easier path: let's factor out \(n\) from each term.</p>
+<div class="displaymath">
+\begin{align*}
+\sqrt{n^2+5n}-\sqrt{2n^2-5}&amp;=\sqrt{n^2\left(1+\frac5n\right)}-\sqrt{n^2\left(2-\frac{5}{n^2}\right)}\\
+&amp;=n\sqrt{1+\frac{5}{n}} - n\sqrt{2-\frac{5}{n^2}}\\
+&amp;=n\left(\sqrt{1+\frac{5}{n}} - \sqrt{2-\frac{5}{n^2}}\right)\\
+\end{align*}
+<p class="intertext">Now, the limit is clear.</p>
+\begin{align*}
+\lim_{n \to \infty}\left[\sqrt{n^2+5n}-\sqrt{2n^2-5}\right]&amp;=
+\lim_{n \to \infty}\left[n\left(\sqrt{1+\frac{5}{n}} - \sqrt{2-\frac{5}{n^2}}\right)
+\right]\\
+&amp;=\lim_{n \to \infty}\left[n\left(\sqrt{1+0} - \sqrt{2-0}\right)
+\right]\\
+&amp;=\lim_{n \to \infty}\left[n\left(-1\right)
+\right]=-\infty
+\end{align*}
+</div>
+<p>Remark: check Question <a knowl="./knowl/prob_s3_1_conj.html" title="Exercise 3.1.2.22">22</a> to see whether a similar trick would work there. Why or why not?</p>
+</div>
+<span class="incontext"><a href="exercises-18.html#solution-549">in-context</a></span>
+</body>
+</html>

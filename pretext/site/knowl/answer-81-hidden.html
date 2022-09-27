@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:23+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>Using the definition of the derivative,</p>
+<div class="displaymath">
+\begin{align*}
+F'(x) &amp; = \displaystyle\lim_{h \to 0}\dfrac{F(x+h)-F(x)}{h}\\
+&amp;=\lim_{h \to 0}\dfrac{\int_a^{x+h} t\dee{t}-\int_a^x t\dee{t}}{h}\\
+&amp;=\lim_{h \to 0}\dfrac{\int_x^{x+h} t\dee{t}}{h}\\
+\end{align*}
+<p class="intertext">The numerator describes the area of a trapezoid with base \(h\) and heights \(x\) and \(x+h\text{.}\)</p>
+\begin{align*}
+&amp;=\lim_{h \to 0}\dfrac{\frac{1}{2}h(x+x+h)}{h}\\
+&amp;=\lim_{h \to 0}\left(x+\frac{1}{2}h\right)\\
+&amp;=x
+\end{align*}
+</div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-112.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p>So, \(F'(x)=x\text{.}\)</p>
+</div></body>
+</html>

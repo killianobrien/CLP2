@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:22:31+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="listitem"><h6 class="heading"><span class="type">Item</span></h6>When \(x = -\frac{1}{3}\) the series becomes<div class="displaymath">
+\begin{gather*}
+\sum_{n=1}^\infty \frac{\sqrt{n+1}}{2n+3}.
+\end{gather*}
+</div>Notice that when \(n\) is large, the summand is approximately  \(\frac{\sqrt{n}}{2n}\) which suggests that the series will diverge  by comparison with \(\sum n^{-1/2}\text{.}\) To formalise this, we can use the limit comparison theorem:<div class="displaymath">
+\begin{align*}
+\lim_{n \to \infty} \frac{\sqrt{n+1}}{2n+3}\  \frac{1}{ n^{-1/2} }
+&amp;=
+\lim_{n \to \infty} \frac{\sqrt{n} \cdot \sqrt{1+1/n}}{n(2+3/n)} \cdot n^{1/2}\\
+&amp;=
+\lim_{n \to \infty} \frac{n \cdot \sqrt{1+1/n}}{n(2+3/n)}\\
+&amp;= \frac{1}{2}
+\end{align*}
+</div>So since this ratio has a finite limit and the series \(\sum n^{-1/2}\) diverges, we know that our series also diverges.</article><span class="incontext"><a href="sec_RatioTest.html#li-2195">in-context</a></span>
+</body>
+</html>

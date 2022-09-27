@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:20:04+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>Setting \(f(x) = 2 x^4\) and \(b-a = 1-(-2)=3\text{,}\) we compute \(f''(x) = 24x^2\text{.}\) The largest value of \(24x^2\) on the interval \([-2,1]\) occurs at \(x=-2\text{,}\) so we can take \(M = 24\cdot(-2)^2=96\text{.}\) Thus the total error for the midpoint rule with \(n=60\) points is bounded by</p>
+<div class="displaymath">
+\begin{gather*}
+\frac{M (b-a)^3}{24n^2}  = \frac{96 \times 3^3}{24 \times 60 \times 60} = \frac{3}{100}
+\end{gather*}
+</div>
+<p>That is: we are guaranteed our absolute error is certainly no more <a knowl="./knowl/fn-99-hidden.html" title="Footnote 1.11.17"><sup> 17 </sup></a> than \(\frac{3}{100}\text{,}\) and using the bound stated in the problem we cannot give a better guarantee. (The second part of the previous sentence comes from the fact that we used the smallest possible \(M\text{:}\) if we had used a larger value of \(M\text{,}\) we would still have some true statement about the error, for example “the error is no more than \(\frac{5}{100}\text{,}\)” but it would not be the <em class="emphasis">best</em> true statement we could make.)</p>
+</div></body>
+</html>

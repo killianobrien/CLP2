@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:20:37+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<ol class="lower-alpha">
+<li>Since \(\frac{c}{\ell-x}\) is measured in newtons, and \(\ell\) and \(x\) (and therefore \(\ell-x\)) are measured in metres, the units of \(c\) are newton-metres, i.e. joules.</li>
+<li>
+<p>Following Definition <a knowl="./knowl/def_WKwork.html" title="Definition 2.1.1">2.1.1</a>, the work done compressing the air is</p>
+<div class="displaymath">
+\begin{equation*}
+W = \int_1^{1.5}F(x)\,\dee{x}
+\end{equation*}
+</div>
+<p>where \(F(x)\) is the amount of force applied when the plunger is \(x\) metres past its natural position. The amount of force applied is equal in magnitude to the amount of force supplied by the tube: \(\frac{c}{\ell-x}\) N. Note \(\ell\) and \(c\) are constants. We can guess the antiderivative, or use the substitution \(u=\ell-x\text{,}\) \(\dee{u}=-\dee{x}\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+W &amp;=\int_1^{1.5} \frac{c}{\ell-x}\,\dee{x}  = \big[-c\log|\ell-x|\big]_1^{1.5}\\
+&amp;=-c\big[\log|\ell-1.5| - \log|\ell-1|\big]\\
+&amp;=-c\log\left(\frac{\ell-1.5}{\ell-1}\right)\\
+&amp;=c\log\left(\frac{\ell-1}{\ell-1.5}\right)\text{ J}
+\end{align*}
+</div>
+<p>Note that, because \(\ell \gt 1.5\text{,}\) the argument of logarithm is positive, so we don't need the absolute value signs. Furthermore, \(\ell-1  \gt  \ell-1.5\text{,}\) so \(\frac{\ell-1}{\ell-1.5} \gt 1\text{,}\) hence \(\log\left(\frac{\ell-1}{\ell-1.5}\right) \gt 0\text{.}\)</p>
+</li>
+</ol>
+<span class="incontext"><a href="exercises-14.html#p-3240">in-context</a></span>
+</body>
+</html>

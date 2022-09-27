@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:21:56+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">3.1.2.14.1</span>
+</h6>
+<p>The denominator of this sequence grows without bound. The numerator is unpredictable: imagine that \(n\) is large. When \(\sin n\) is close to \(-1\text{,}\) \(n^{\sin n}\) puts a power of \(n\) “in the denominator,” so we can have \(n^{\sin n}\) very close to 0. When \(\sin n\) is close to 1, \(n^{\sin n}\) is close to \(n\text{,}\) which is large.</p>
+<p>To control for these variations, we'll use the squeeze theorem.</p>
+<ul class="disc">
+<li>Since \(-1 \leq \sin n \leq 1\) for all \(n\text{,}\) let \(b_n = \frac{n^{-1}}{n^2} = \frac{1}{n^3}\) and \(c_n = \frac{n}{n^2}=\frac{1}{n}\text{.}\) Then \(b_n \leq a_n \leq c_n\text{.}\)</li>
+<li>Both \(\lim\limits_{n \to \infty}b_n=0\) and \(\lim\limits_{n \to \infty}c_n=0\text{.}\)</li>
+</ul>
+<p>So, by the squeeze theorem, \(\lim\limits_{n \to \infty}\dfrac{n^{\sin n}}{n^2}=0\) as well.</p>
+<p>Remark: we also could have used \(b_n=0\) for our lower bound, since \(a_n \geq 0\) for all \(n\text{.}\)</p>
+</div>
+<span class="incontext"><a href="exercises-18.html#solution-540">in-context</a></span>
+</body>
+</html>

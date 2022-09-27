@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:15:26+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Three Simple Numerical Integrators — Error Behaviour</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_2_ic.html"><span class="title">CLP-2 Integral Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_Simpson.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sec_numeric_int.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="subsection-26.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_Simpson.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sec_numeric_int.html" title="Up">Up</a><a class="next-button button toolbar-item" href="subsection-26.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_integral.html" data-scroll="chap_integral"><span class="codenumber">1</span> <span class="title">Integration</span></a></h2>
+<ul>
+<li><a href="sec_intdef.html" data-scroll="sec_intdef">Definition of the Integral</a></li>
+<li><a href="sec_def_int.html" data-scroll="sec_def_int">Basic properties of the definite integral</a></li>
+<li><a href="sec_fundamental.html" data-scroll="sec_fundamental">The Fundamental Theorem of Calculus</a></li>
+<li><a href="sec_subs.html" data-scroll="sec_subs">Substitution</a></li>
+<li><a href="sec_area.html" data-scroll="sec_area">Area between curves</a></li>
+<li><a href="sec_int_volumes.html" data-scroll="sec_int_volumes">Volumes</a></li>
+<li><a href="sec_intbyparts.html" data-scroll="sec_intbyparts">Integration by parts</a></li>
+<li><a href="sec_trigint.html" data-scroll="sec_trigint">Trigonometric Integrals</a></li>
+<li><a href="sec_trigsub.html" data-scroll="sec_trigsub">Trigonometric Substitution</a></li>
+<li><a href="sec_parfrac.html" data-scroll="sec_parfrac">Partial Fractions</a></li>
+<li><a href="sec_numeric_int.html" data-scroll="sec_numeric_int">Numerical Integration</a></li>
+<li><a href="sec_improp_int.html" data-scroll="sec_improp_int">Improper Integrals</a></li>
+<li><a href="section-13.html" data-scroll="section-13">More Integration Examples</a></li>
+</ul>
+<h2 class="link"><a href="chap_int_app.html" data-scroll="chap_int_app"><span class="codenumber">2</span> <span class="title">Applications of Integration</span></a></h2>
+<ul>
+<li><a href="sec_work.html" data-scroll="sec_work">Work</a></li>
+<li><a href="sec_avg.html" data-scroll="sec_avg">Averages</a></li>
+<li><a href="sec_com.html" data-scroll="sec_com">Centre of Mass and Torque</a></li>
+<li><a href="sec_sep_de.html" data-scroll="sec_sep_de">Separable Differential Equations</a></li>
+</ul>
+<h2 class="link"><a href="chap_seq_ser.html" data-scroll="chap_seq_ser"><span class="codenumber">3</span> <span class="title">Sequence and series</span></a></h2>
+<ul>
+<li><a href="section-18.html" data-scroll="section-18">Sequences</a></li>
+<li><a href="section-19.html" data-scroll="section-19">Series</a></li>
+<li><a href="section-20.html" data-scroll="section-20">Convergence Tests</a></li>
+<li><a href="section-21.html" data-scroll="section-21">Absolute and Conditional Convergence</a></li>
+<li><a href="section-22.html" data-scroll="section-22">Power Series</a></li>
+<li><a href="section-23.html" data-scroll="section-23">Taylor Series</a></li>
+<li><a href="sec_RatIrr.html" data-scroll="sec_RatIrr">Optional — Rational and irrational numbers</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="section-26.html" data-scroll="section-26">Pythagoras</a></li>
+<li><a href="section-27.html" data-scroll="section-27">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="section-30.html" data-scroll="section-30">Trigonometry — Special Triangles</a></li>
+<li><a href="section-31.html" data-scroll="section-31">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trigonometric Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">Highschool Material You Should be Able to Derive</a></li>
+<li><a href="section-39.html" data-scroll="section-39">Cartesian Coordinates</a></li>
+<li><a href="ap_roots.html" data-scroll="ap_roots">Roots of Polynomials</a></li>
+</ul>
+<h2 class="link"><a href="ap_complex.html" data-scroll="ap_complex"><span class="codenumber">B</span> <span class="title">Complex Numbers and Exponentials</span></a></h2>
+<ul>
+<li><a href="sec_complex_defn.html" data-scroll="sec_complex_defn">Definition and Basic Operations</a></li>
+<li><a href="sec_complex_exp.html" data-scroll="sec_complex_exp">The Complex Exponential</a></li>
+</ul>
+<h2 class="link"><a href="app_Richardson_Romberg.html" data-scroll="app_Richardson_Romberg"><span class="codenumber">C</span> <span class="title">More About Numerical Integration</span></a></h2>
+<ul>
+<li><a href="ap_Richardson.html" data-scroll="ap_Richardson">Richardson Extrapolation</a></li>
+<li><a href="ap_Romberg.html" data-scroll="ap_Romberg">Romberg Integration</a></li>
+<li><a href="ap_adaptive.html" data-scroll="ap_adaptive">Adaptive Quadrature</a></li>
+</ul>
+<h2 class="link"><a href="app_ODE_numerical.html" data-scroll="app_ODE_numerical"><span class="codenumber">D</span> <span class="title">Numerical Solution of ODE's</span></a></h2>
+<ul>
+<li><a href="ap_derivation.html" data-scroll="ap_derivation">Simple ODE Solvers — Derivation</a></li>
+<li><a href="ap_error_behaviour.html" data-scroll="ap_error_behaviour">Simple ODE Solvers —  Error Behaviour</a></li>
+<li><a href="ap_variable.html" data-scroll="ap_variable">Variable Step Size Methods</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">E</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">F</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">G</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp2-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="subsection" id="ssec_num_int_err"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.11.4</span> <span class="title">Three Simple Numerical Integrators — Error Behaviour</span>
+</h3>
+<a href="ssec_num_int_err.html" class="permalink">¶</a><p id="p-2394">Now we are armed with our three (relatively simple) methods for numerical integration we  should give thought to how practical they might be in the real world <a knowl="" class="id-ref" refid="hk-fn-89" id="fn-89"><sup> 7 </sup></a><span id="hk-fn-89" class="hidden-content tex2jax_ignore"><span class="footnote">Indeed,  even beyond the “real world” of many applications in first year calculus texts, some of  the methods we have described are used by actual people (such as ship builders, engineers  and surveyors) to estimate areas and volumes of actual objects!</span></span>. Two obvious  considerations when deciding whether or not  a given algorithm is of any practical value are</p>
+<ol class="lower-alpha">
+<li id="li-1215">the amount of computational effort required to execute the algorithm and</li>
+<li id="li-1216">the accuracy that this computational effort yields.</li>
+</ol>
+<p>For algorithms like our simple integrators, the bulk of the computational effort usually  goes into evaluating the function \(f(x)\text{.}\) The number of evaluations of \(f(x)\) required for  \(n\) steps of the midpoint rule is \(n\text{,}\) while the number required for \(n\) steps of the  trapezoidal and Simpson's rules is \(n+1\text{.}\) So all three of our rules require essentially the same amount of effort — one evaluation of \(f(x)\) per step.</p>
+<p id="p-2395">To get a first impression of the error behaviour of these methods, we apply them to a  problem whose answer we know exactly:</p>
+<div class="displaymath">
+\begin{gather*}
+\int_0^\pi\sin x\,\dee{x}=-\cos x\big|_0^\pi = 2.
+\end{gather*}
+</div>
+<p>To be a little more precise, we would like to understand how the errors of the three  methods change as we increase the effort we put in (as measured by the number  of steps \(n\)). The following table lists the error in the approximate value  for this number generated by our three rules applied with three different  choices of \(n\text{.}\) It also lists the number of evaluations of \(f\) required to compute the approximation.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="l m b1 r1 l1 t1 lines"></td>
+<td class="l m b1 r1 l0 t1 lines" colspan="2"><em class="alert">Midpoint</em></td>
+<td class="l m b1 r1 l0 t1 lines" colspan="2"><em class="alert">Trapezoidal</em></td>
+<td class="l m b1 r1 l0 t1 lines" colspan="2"><em class="alert">Simpson's</em></td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">n</td>
+<td class="l m b1 r1 l0 t0 lines">error</td>
+<td class="l m b1 r1 l0 t0 lines">#  evals</td>
+<td class="l m b1 r1 l0 t0 lines">error</td>
+<td class="l m b1 r1 l0 t0 lines">#  evals</td>
+<td class="l m b1 r1 l0 t0 lines">error</td>
+<td class="l m b1 r1 l0 t0 lines"># evals</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">10</td>
+<td class="l m b1 r1 l0 t0 lines">\(8.2\times 10^{-3}\)</td>
+<td class="l m b1 r1 l0 t0 lines">10</td>
+<td class="l m b1 r1 l0 t0 lines">\(1.6\times 10^{-2}\)</td>
+<td class="l m b1 r1 l0 t0 lines">11</td>
+<td class="l m b1 r1 l0 t0 lines">\(1.1\times 10^{-4}\)</td>
+<td class="l m b1 r1 l0 t0 lines">11</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">100</td>
+<td class="l m b1 r1 l0 t0 lines">\(8.2\times 10^{-5}\)</td>
+<td class="l m b1 r1 l0 t0 lines">100</td>
+<td class="l m b1 r1 l0 t0 lines">\(1.6\times 10^{-4}\)</td>
+<td class="l m b1 r1 l0 t0 lines">101</td>
+<td class="l m b1 r1 l0 t0 lines">\(1.1\times 10^{-8}\)</td>
+<td class="l m b1 r1 l0 t0 lines">101</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">1000</td>
+<td class="l m b1 r1 l0 t0 lines">\(8.2\times 10^{-7}\)</td>
+<td class="l m b1 r1 l0 t0 lines">1000</td>
+<td class="l m b1 r1 l0 t0 lines">\(1.6\times 10^{-6}\)</td>
+<td class="l m b1 r1 l0 t0 lines">1001</td>
+<td class="l m b1 r1 l0 t0 lines">\(1.1\times 10^{-12}\)</td>
+<td class="l m b1 r1 l0 t0 lines">1001</td>
+</tr>
+</table></div></div></div>
+<p id="p-2396">Observe that</p>
+<ul class="disc">
+<li id="li-1217">Using 101 evaluations of \(f\) worth of Simpson's rule gives an error 75 times smaller than 1000 evaluations of \(f\) worth of the midpoint rule.</li>
+<li id="li-1218">The trapezoidal rule error with \(n\) steps is about twice the midpoint rule  error with \(n\) steps.</li>
+<li id="li-1219">With the midpoint rule, increasing the number of steps by a factor of 10 appears to reduce the error by about a factor of  \(100=10^2=n^2\text{.}\)</li>
+<li id="li-1220">With the trapezoidal rule, increasing the number of steps by a factor of 10 appears to reduce the error by about a factor of \(10^2=n^2\text{.}\)</li>
+<li id="li-1221">With Simpson's rule, increasing the number of steps by a factor of 10 appears to reduce the error by about a factor of \(10^4=n^4\text{.}\)</li>
+</ul>
+<p id="p-2397">So it looks like</p>
+<div class="displaymath">
+\begin{align*}
+&amp;\hbox{approx value of $\ds\int_a^b f(x)\,\dee{x}$ given by $n$ midpoint steps  }
+\hskip-0.35in&amp;&amp;\approx \int_a^b f(x)\,\dee{x}+K_M\cdot \frac{1}{n^2}\\
+&amp;\hbox{approx value of $\ds\int_a^b f(x)\,\dee{x}$ given by $n$ trapezoidal steps  }
+\hskip-0.35in&amp;&amp;\approx  \int_a^b f(x)\,\dee{x}+K_T\cdot \frac{1}{n^2}\\
+&amp;\hbox{approx value of $\ds\int_a^b f(x)\,\dee{x}$ given by $n$ Simpson's steps  }
+\hskip-0.35in&amp;&amp;\approx  \int_a^b f(x)\,\dee{x}+K_M\cdot \frac{1}{n^4}
+\end{align*}
+</div>
+<p>with some constants \(K_M,\ K_T\) and \(K_S\text{.}\) It also seems that \(K_T\approx 2 K_M\text{.}\)</p>
+<figure class="figure-like" id="fig_INTerror"><div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
+<div class="sbspanel" style="width:44.4444444444444%;justify-content:center;"><img src="text/figs/midPtError.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:44.4444444444444%;justify-content:center;"><img src="text/figs/SimpsonError.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">1.11.12</span> A log-log plot of the error in the \(n\) step approximation to \(\ds \int_0^\pi \sin  x\,\dee{x}\text{.}\)</figcaption></figure><p id="p-2398">To test these conjectures for the behaviour of the errors we apply our three rules with about ten different choices of \(n\) of the form \(n=2^m \) with \(m\) integer.  Figure <a knowl="./knowl/fig_INTerror.html" title="Figure 1.11.12">1.11.12</a> contains two graphs of the results. The left-hand plot  shows the results for the midpoint and trapezoidal rules and the right-hand plot shows the results for Simpson's rule.</p>
+<p id="p-2399">For each rule we are expecting (based on our conjectures above) that the error</p>
+<div class="displaymath">
+\begin{align*}
+e_n &amp;= | \text{exact value } - \text{ approximate value}|
+\end{align*}
+</div>
+<p>with \(n\) steps is (roughly) of the form</p>
+<div class="displaymath">
+\begin{gather*}
+e_n=K\frac{1}{n^k}
+\end{gather*}
+</div>
+<p>for some constants \(K\) and \(k\text{.}\) We would like to test if this is really the case, by  graphing \(Y=e_n\) against \(X=n\) and seeing if the graph “looks right”.  But it is not easy to tell whether or not a given curve really  is \(Y=\frac{K}{X^k}\text{,}\) for some specific \(k\text{,}\) by just looking at it. However, your eye is  pretty good at determining whether or not a graph is a straight line. Fortunately, there  is a little trick that turns the curve \(Y=\tfrac{K}{X^k}\) into a straight line — no  matter what \(k\) is.</p>
+<p id="p-2400">Instead of plotting \(Y\) against \(X\text{,}\) we plot \(\log Y\) against \(\log X\text{.}\) This  transformation <a knowl="" class="id-ref" refid="hk-fn-90" id="fn-90"><sup> 8 </sup></a><span id="hk-fn-90" class="hidden-content tex2jax_ignore"><span class="footnote">There is a variant of this trick that works even when you don't  know the answer to the integral ahead of time. Suppose that you suspect that the  approximation satisfies \(M_n=A+K\tfrac{1}{n^k}\) where \(A\) is the exact value of the integral and suppose that you  don't know the values of \(A\text{,}\) \(K\) and \(k\text{.}\) Then \(M_{n}-M_{2n} =K\tfrac{1}{n^k}-K\tfrac{1}{(2n)^k} =K\big(1-\tfrac{1}{2^k}\big)\tfrac{1}{n^k}\) so plotting \(y=\log(M_{n}-M_{2n})\) against \(x=\log n\) gives the straight  line \(y=\log \big[K\big(1-\frac{1}{2^k}\big)\big] -kx\text{.}\)</span></span> works because when \(Y=\frac{K}{X^k}\)</p>
+<div class="displaymath">
+\begin{align*}
+\log Y &amp;= \log K - k \log X
+\end{align*}
+</div>
+<p>So plotting \(y=\log Y\) against \(x=\log X\) gives the straight line \(y=\log K -kx\text{,}\) which  has slope \(-k\) and \(y\)-intercept \(\log K\text{.}\)</p>
+<p id="p-2401">The three graphs in Figure <a knowl="./knowl/fig_INTerror.html" title="Figure 1.11.12">1.11.12</a> plot \(y=\log_2 e_n\)  against \(x=\log_2 n\) for our three rules. Note that we have chosen to use  logarithms <a knowl="" class="id-ref" refid="hk-fn-91" id="fn-91"><sup> 9 </sup></a><span id="hk-fn-91" class="hidden-content tex2jax_ignore"><span class="footnote">Now is a good time for a quick revision of logarithms — see  “Whirlwind review of logarithms” in Section 2.7 of the CLP-1 text.</span></span> with  this “unusual base” because it makes it very clear how much the error is improved if we  <em class="emphasis">double</em> the number of steps used. To be more precise — one unit step along the  \(x\)-axis represents changing \(n \mapsto 2n\text{.}\) For example, applying Simpson's rule with  \(n=2^4\) steps results in an error of \(0000166\text{,}\) so the point \((x=\log_2 2^4=4, y=\log_2  0000166 = \frac{\log 0000166}{\log 2} = -15.8)\) has been included on the graph. Doubling  the effort used — that is, doubling the number of steps to \(n=2^5\)— results in an  error of \(0.00000103\text{.}\) So, the data point \((x=\log_2 2^5=5\ ,\  y=\log_2 0.00000103 =\frac{\ln 0.00000103}{\ln 2}=-19.9)\) lies on the graph. Note that the \(x\)-coordinates of  these points differ by 1 unit.</p>
+<p id="p-2402">For each of the three sets of data points, a straight line has also been plotted “through” the data points. A procedure called linear  regression <a knowl="" class="id-ref" refid="hk-fn-92" id="fn-92"><sup> 10 </sup></a><span id="hk-fn-92" class="hidden-content tex2jax_ignore"><span class="footnote">Linear regression is not part of  this course as its derivation  requires some multivariable calculus. It is a very standard technique in statistics.</span></span> has  been used to decide precisely which straight line to plot. It provides a formula for the slope and \(y\)-intercept of the straight  line which “best fits” any given set of data points. From the three lines,  it sure looks like \(k=2\) for the midpoint and trapezoidal rules and  \(k=4\) for Simpson's rule. It also looks like the ratio between the value of \(K\) for the trapezoidal rule,  namely \(K=2^{0.7253}\text{,}\) and the value of \(K\) for the midpoint rule,  namely \(K=2^{-0.2706}\text{,}\) is pretty close to 2:  \(2^{0.7253}/2^{-0.2706}=2^{0.9959}\text{.}\)</p>
+<p id="p-2403">The intuition, about the error behaviour, that we have just developed  is in fact correct — provided the integrand \(f(x)\) is reasonably smooth. To be more  precise</p>
+<article class="theorem-like" id="thm_num_int_err"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.11.13</span> <span class="title">Numerical integration errors</span>
+</h6>
+<p id="p-2404">Assume that \(|f''(x)| \leq M\) for all \(a\leq x \leq b\text{.}\) Then</p>
+<div class="displaymath">
+\begin{align*}
+&amp;\text{the total error introduced by the midpoint rule is bounded by } &amp; \frac{M}{24} \frac{(b-a)^3}{n^2}\\
+&amp;\text{and}\\
+&amp;\text{the total error introduced by the trapezoidal rule is bounded by } &amp;
+\frac{M}{12} \frac{(b-a)^3}{n^2}\\
+\end{align*}
+<p class="intertext">when approximating \(\ds \int_a^b f(x)\dee{x}\text{.}\) Further, if \(|f^{(4)}(x)|\leq L\)  for all \(a\leq x \leq b\text{,}\) then</p>
+\begin{align*}
+&amp;\text{the total error introduced by Simpson's rule is bounded by } &amp; \frac{L}{180} \frac{(b-a)^5}{n^4}.
+\end{align*}
+</div></article><p id="p-2405">The first of these error bounds in proven in the following (optional) section. Here are some examples which illustrate how they are used. First let us check that the  above result is consistent with our data in Figure <a knowl="./knowl/fig_INTerror.html" title="Figure 1.11.12">1.11.12</a></p>
+<article class="example-like" id="eg_MidpointErr"><a knowl="" class="id-ref" refid="hk-eg_MidpointErr"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.11.14</span> <span class="title">Midpoint rule error approximating \(\int_0^\pi \sin  x\,\dee{x}\)</span>
+</h6></a></article><div id="hk-eg_MidpointErr" class="hidden-content tex2jax_ignore"><article class="example-like"><ul id="p-2406" class="disc">
+<li id="li-1222">The integral \(\int_0^\pi \sin x\,\dee{x}\)  has \(b-a=\pi\text{.}\)</li>
+<li id="li-1223">The second derivative of the integrand satisfies<div class="displaymath">
+\begin{align*}
+\left|\ddiff{2}{}{x}\sin x\right| &amp;= |-\sin x| \leq 1
+\end{align*}
+</div>So we take \(M=1\text{.}\)</li>
+<li id="li-1224">So the error, \(e_n\text{,}\) introduced when \(n\) steps are used is bounded by<div class="displaymath">
+\begin{align*}
+|e_n|&amp;\le\frac{M}{24}\frac{(b-a)^3}{n^2}\\
+&amp;=\frac{\pi^3}{24}\frac{1}{n^2}\\
+&amp;\approx 1.29\frac{1}{n^2}
+\end{align*}
+</div>
+</li>
+<li id="li-1225">The data in the graph  in Figure <a knowl="./knowl/fig_INTerror.html" title="Figure 1.11.12">1.11.12</a> gives<div class="displaymath">
+\begin{align*}
+|e_n| &amp;\approx 2^{-.2706}\frac{1}{n^2}=0.83\frac{1}{n^2}
+\end{align*}
+</div>which is consistent with the bound \(|e_n|\le \frac{\pi^3}{24}\frac{1}{n^2}\text{.}\)</li>
+</ul></article></div>
+<p id="p-2407">In a typical application we would be asked to evaluate a given integral  to some specified accuracy. For example, if you are manufacturer and your machinery can only cut materials to an accuracy of \({\tfrac{1}{10}}^{\rm th}\) of a millimeter, there is no point in making design specifications more accurate than  \({\tfrac{1}{10}}^{\rm th}\) of a millimeter.</p>
+<article class="example-like" id="eg_MidpointErr2"><a knowl="" class="id-ref" refid="hk-eg_MidpointErr2"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.11.15</span> <span class="title punctuated">How many steps  for a given accuracy?</span>
+</h6></a></article><div id="hk-eg_MidpointErr2" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-2408">Suppose, for example, that we wish to use the midpoint rule to evaluate <a knowl="" class="id-ref" refid="hk-fn-93" id="fn-93"><sup> 11 </sup></a><span id="hk-fn-93" class="hidden-content tex2jax_ignore"><span class="footnote">This is  our favourite running example of an integral that cannot be evaluated algebraically —  we need to use numerical methods.</span></span></p>
+<div class="displaymath">
+\begin{gather*}
+\int_0^1 e^{-x^2}\dee{x}
+\end{gather*}
+</div>
+<p>to within an accuracy of \(10^{-6}\text{.}\)</p>
+<p id="p-2409"><em class="alert">Solution:</em></p>
+<ul class="disc">
+<li id="li-1226">The integral has \(a=0\) and \(b=1\text{.}\)</li>
+<li id="li-1227">The first two derivatives of the integrand are<div class="displaymath">
+\begin{align*}
+\diff{}{x}e^{-x^2}&amp;=-2xe^{-x^2} \hskip2in \text{and}\\
+\ddiff{2}{}{x}e^{-x^2}  &amp;=\diff{}{x}\big(-2xe^{-x^2}\big)  =-2e^{-x^2}+4x^2e^{-x^2}=2(2x^2-1)e^{-x^2}
+\end{align*}
+</div>
+</li>
+<li id="li-1228">As \(x\) runs from 0 to 1, \(2x^2-1\) increases from \(-1\) to \(1\text{,}\) so that<div class="displaymath">
+\begin{gather*}
+0\le x\le 1\implies |2x^2-1|\le 1,\ e^{-x^2}\le 1\implies \big|2(2x^2-1)e^{-x^2}\big|\le 2
+\end{gather*}
+</div>So we take \(M=2\text{.}\)</li>
+<li id="li-1229">The error introduced by the \(n\) step midpoint rule is at most<div class="displaymath">
+\begin{align*}
+e_n &amp; \leq \frac{M}{24}\frac{(b-a)^3}{n^2}\\
+&amp;\leq \frac{2}{24}\frac{(1-0)^3}{n^2} = \frac{1}{12n^2}
+\end{align*}
+</div>
+</li>
+<li id="li-1230">We need this error to be smaller than \(10^{-6}\) so<div class="displaymath">
+\begin{align*}
+e_n &amp; \leq \frac{1}{12n^2} \leq 10^{-6} &amp; \text{and so }\\
+12n^2 &amp;\geq 10^6 &amp; \text{clean up}\\
+n^2 &amp;\geq \frac{10^6}{12} = 83333.3 &amp; \text{square root both sides}\\
+n &amp;\geq 288.7
+\end{align*}
+</div>So \(289\) steps of the midpoint rule will do the job.</li>
+<li id="li-1231">In fact \(n=289\) results in an error of about \(3.7\times 10^{-7}\text{.}\)</li>
+</ul></article></div>
+<p id="p-2410">That seems like far too much work, and the trapezoidal rule will have twice the error. So  we should look at Simpson's rule.</p>
+<article class="example-like" id="eg_SimpsonErr"><a knowl="" class="id-ref" refid="hk-eg_SimpsonErr"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.11.16</span> <span class="title punctuated">How many steps using Simpson's rule?</span>
+</h6></a></article><div id="hk-eg_SimpsonErr" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-2411">Suppose now that we wish evaluate \(\int_0^1 e^{-x^2}\,\dee{x}\) to within an accuracy of  \(10^{-6}\) — but now using Simpson's rule. How many steps should we use?</p>
+<p id="p-2412"><em class="alert">Solution:</em></p>
+<ul class="disc">
+<li id="li-1232">Again we have \(a=0,b=1\text{.}\)</li>
+<li id="li-1233">We then need to bound \(\ddiff{4}{}{x}e^{-x^2}\) on the domain of integration, \(0\leq  x\leq 1\text{.}\)<div class="displaymath">
+\begin{align*}
+\ddiff{3}{}{x}e^{-x^2}
+&amp;=\diff{}{x}\big\{2(2x^2-1)e^{-x^2}\big\}
+=8xe^{-x^2}-4x(2x^2-1)e^{-x^2}\\
+&amp;=4(-2x^3+3x)e^{-x^2}\\
+\ddiff{4}{}{x}e^{-x^2}
+&amp;=\diff{}{x}\big\{4(-2x^3+3x)e^{-x^2}\big\}\\
+&amp;=4(-6x^2+3)e^{-x^2}\hskip-4pt-8x(-2x^3+3x)e^{-x^2}\\
+&amp;=4(4x^4-12x^2+3)e^{-x^2}
+\end{align*}
+</div>
+</li>
+<li id="li-1234">Now, for any \(x\text{,}\)  \(e^{-x^2}\le 1\text{.}\) Also, for \(0\le x\le 1\text{,}\)<div class="displaymath">
+\begin{align*}
+0 &amp; \leq x^2, x^4 \leq 1 &amp; \text{ so}\\
+3 &amp; \leq 4x^4+3 \leq 7 &amp; \text{ and }\\
+-12 &amp; \leq -12x^2 \leq 0 &amp; \text{adding these together gives}\\
+-9 &amp; \leq 4x^4-12x^2 + 3 \leq 7
+\end{align*}
+</div>Consequently, \(|4x^4-12x^2+3|\) is bounded by \(9\) and so<div class="displaymath">
+\begin{gather*}
+\left|\ddiff{4}{}{x}e^{-x^2}\right| \leq 4\times 9=36
+\end{gather*}
+</div>So take \(L=36\text{.}\)</li>
+<li id="li-1235">The error introduced by the \(n\) step Simpson's rule is at most<div class="displaymath">
+\begin{align*}
+e_n &amp; \leq \frac{L}{180}\frac{(b-a)^5}{n^4}\\
+&amp; \leq \frac{36}{180} \frac{(1-0)^5}{n^4} = \frac{1}{5n^4}
+\end{align*}
+</div>
+</li>
+<li id="li-1236">In order for this error to be no more than \(10^{-6}\) we require \(n\) to satisfy<div class="displaymath">
+\begin{align*}
+e_n &amp;\leq \frac{1}{5n^4} \leq 10^{-6} &amp; \text{and so}\\
+5n^4 &amp; \geq 10^6\\
+n^4 &amp;\geq 200000 &amp; \text{take fourth root}\\
+n &amp; \geq 21.15
+\end{align*}
+</div>So \(22\) steps of Simpson's rule will do the job.</li>
+<li id="li-1237">\(n=22\) steps actually results in an error of \(3.5\times 10^{-8}\text{.}\) The reason that  we get an error so much smaller than we need is that we have overestimated the number of  steps required. This, in turn, occurred because we made quite a rough bound of  \(\left|\ddiff{4}{}{x}f(x)\right|\leq 36\text{.}\) If we are more careful then we will get a  slightly smaller \(n\text{.}\) It actually turns out <a knowl="" class="id-ref" refid="hk-fn-94" id="fn-94"><sup> 12 </sup></a><span id="hk-fn-94" class="hidden-content tex2jax_ignore"><span class="footnote">The authors tested this  empirically.</span></span> that you only need \(n=10\) to approximate within \(10^{-6}\text{.}\)</li>
+</ul></article></div></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

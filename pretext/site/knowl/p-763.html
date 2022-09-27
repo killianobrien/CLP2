@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:24+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>The integrand is similar to \(\dfrac{1}{\sqrt{1-x^2}}\text{.}\) In order to formulate a guess for the antiderivative, let's factor out \(\sqrt{2}\) from the denominator:</p>
+<div class="displaymath">
+\begin{align*}
+\displaystyle\int \dfrac{1}{\sqrt{2-x^2}}\dee{x}&amp;=
+\displaystyle\int \dfrac{1}{\sqrt{2\left(1-\frac{x^2}{2}\right)}}\dee{x}\\
+&amp;=\displaystyle\int \dfrac{1}{
+\sqrt{2}\sqrt{1-\frac{x^2}{2}}}\dee{x}\\
+&amp;=
+\int\frac{1}{\sqrt{2}}\cdot \dfrac{1}{
+\sqrt{1-\left(\dfrac{x}{\sqrt2}\right)^2}}\dee{x}\\
+\end{align*}
+<p class="intertext">At this point, we might guess that our antiderivative is something like \(F(x) = \arcsin\left(\dfrac{x}{\sqrt{2}}\right)\text{.}\) To explore this possibility, we can differentiate, and see what we get.</p>
+\begin{align*}
+\diff{}{x}\left\{\arcsin\left(\dfrac{x}{\sqrt{2}}\right)\right\}&amp;=\frac{1}{\sqrt{2}}\cdot\dfrac{1}{\sqrt{1-\left(\dfrac{x}{\sqrt{2}}\right)^2}}\\
+\end{align*}
+<p class="intertext">This is exactly what we want! So,</p>
+\begin{align*}
+\int \dfrac{1}{\sqrt{2-x^2}}\dee{x}&amp;=\arcsin\left(\dfrac{x}{\sqrt2}\right)+C
+\end{align*}
+</div>
+<span class="incontext"><a href="exercises-3.html#p-763">in-context</a></span>
+</body>
+</html>

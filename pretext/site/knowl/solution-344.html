@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:20:13+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">1.12.4.12.1</span>
+</h6>
+<p>First, we check that the integrand has no singularities. The denominator is always positive when \(x \ge 10\text{,}\) so our only “source of impropriety” is the infinite limit of integration.</p>
+<p>We further note that, for large values of \(x\text{,}\) the integrand resembles \(\dfrac{x^4}{x^5} = \dfrac{1}{x\vphantom{\frac12}}\text{.}\) So, we have a two-part hunch: that the integral diverges, and that we can show it diverges by comparing it to \(\displaystyle\int_{10}^\infty \frac{1}{x} \dee{x}\text{.}\)</p>
+<p>In order to use the comparison test, we'd need to show that \(\displaystyle\frac{x^4-5x^3+2x-7}{x^5+3x+8}  \geq \frac{1}{\vphantom{\frac12}x}\text{.}\) If this is true, it will be difficult to prove--and it's not at all clear that it's true. So, we will use the limiting comparison test instead, Theorem <a knowl="./knowl/thm_IMPcomparisonLim.html" title="Theorem 1.12.22: Limiting comparison">1.12.22</a>, with \(g(x)= \dfrac{1}{x}\text{,}\) \(f(x)=\dfrac{x^4-5x^3+2x-7}{x^5+3x+8} \text{,}\) and \(a=10\text{.}\)</p>
+<ul class="disc">
+<li>Both \(f(x)\) and \(g(x)\) are defined and continuous for all \(x  \gt 0\text{,}\) so in particular they are defined and continuous for \(x \geq 10\text{.}\)</li>
+<li>\(g(x) \geq 0\) for all \(x \geq 10\)</li>
+<li>\(\displaystyle\int_{10}^\infty g(x) \dee{x}\) diverges.</li>
+<li>Using  l'Hôpital's rule (5 times!), or simply dividing both the numerator and denominator by \(x^5\) (the common leading term), tells us:<div class="displaymath">
+\begin{align*}
+\lim_{x \to \infty} \frac{f(x)}{g(x)}&amp;=
+\lim_{x \to \infty} \frac{\frac{x^4-5x^3+2x-7}{x^5+3x+8} }{ \frac{1}{x}}=
+\lim_{x \to \infty} x\cdot\frac{x^4-5x^3+2x-7}{x^5+3x+8}\\
+&amp;=\lim_{x \to \infty} \frac{x^5-5x^4+2x^2-7x}{x^5+3x+8} =1
+\end{align*}
+</div>That is, the limit exists and is nonzero.</li>
+</ul>
+<p>By the limiting comparison test, we conclude \(\displaystyle\int_{10}^\infty f(x) \dee{x}\) diverges.</p>
+</div>
+<span class="incontext"><a href="exercises-12.html#solution-344">in-context</a></span>
+</body>
+</html>

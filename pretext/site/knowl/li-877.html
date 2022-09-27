@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:40+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="listitem"><h6 class="heading"><span class="type">Item</span></h6>Solution 1: Since the power of tangent is odd, let's try to use the substitution \(u=\sec x\text{,}\) \(\dee{u} = \sec x \tan x  \dee{x}\text{,}\) and \(\tan^2 x = \sec^2 x -1 = u^2-1\text{,}\) as in Questions <a knowl="./knowl/p1_8_oddtanonesec.html" title="Exercise 1.8.4.14">14</a> and <a knowl="./knowl/p1_8_oddtanonesec2.html" title="Exercise 1.8.4.15">15</a>. In order to make this work, we need to see \(\sec x \tan x \dee{x}\) in the integrand, so we do a little algebraic manipulation.<div class="displaymath">
+\begin{align*}
+\int \tan^3 x \sec^{-0.7}x  \dee{x}&amp;= \int \dfrac{\tan^3 x}{\sec^{0.7 x}} \dee{x}
+= \int \dfrac{\tan^3 x}{\sec^{1.7 x}}\sec x \dee{x}\\
+&amp;=\int \frac{\tan^2x}{\sec^{1.7}x}\cdot \sec x \tan x \dee{x}\\
+&amp;=\int \frac{u^2-1}{u^{1.7}} \dee{u} = \int \left(u^{0.3}-u^{-1.7}\right) \dee{u}\\
+&amp;=\frac{u^{1.3}}{1.3} + \frac{1}{0.7u^{0.7}}+C\\
+&amp;=\frac{1}{1.3}\sec^{1.3}x + \frac{1}{0.7\sec^{0.7}x}+C\\
+&amp;=\frac{1}{1.3}\sec^{1.3}x + \frac{1}{0.7}\cos^{0.7}x+C
+\end{align*}
+</div></article><span class="incontext"><a href="exercises-8.html#li-877">in-context</a></span>
+</body>
+</html>

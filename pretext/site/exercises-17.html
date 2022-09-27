@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:16:03+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Exercises</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_2_ic.html"><span class="title">CLP-2 Integral Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="subsection-39.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sec_sep_de.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="chap_seq_ser.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="subsection-39.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sec_sep_de.html" title="Up">Up</a><a class="next-button button toolbar-item" href="chap_seq_ser.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_integral.html" data-scroll="chap_integral"><span class="codenumber">1</span> <span class="title">Integration</span></a></h2>
+<ul>
+<li><a href="sec_intdef.html" data-scroll="sec_intdef">Definition of the Integral</a></li>
+<li><a href="sec_def_int.html" data-scroll="sec_def_int">Basic properties of the definite integral</a></li>
+<li><a href="sec_fundamental.html" data-scroll="sec_fundamental">The Fundamental Theorem of Calculus</a></li>
+<li><a href="sec_subs.html" data-scroll="sec_subs">Substitution</a></li>
+<li><a href="sec_area.html" data-scroll="sec_area">Area between curves</a></li>
+<li><a href="sec_int_volumes.html" data-scroll="sec_int_volumes">Volumes</a></li>
+<li><a href="sec_intbyparts.html" data-scroll="sec_intbyparts">Integration by parts</a></li>
+<li><a href="sec_trigint.html" data-scroll="sec_trigint">Trigonometric Integrals</a></li>
+<li><a href="sec_trigsub.html" data-scroll="sec_trigsub">Trigonometric Substitution</a></li>
+<li><a href="sec_parfrac.html" data-scroll="sec_parfrac">Partial Fractions</a></li>
+<li><a href="sec_numeric_int.html" data-scroll="sec_numeric_int">Numerical Integration</a></li>
+<li><a href="sec_improp_int.html" data-scroll="sec_improp_int">Improper Integrals</a></li>
+<li><a href="section-13.html" data-scroll="section-13">More Integration Examples</a></li>
+</ul>
+<h2 class="link"><a href="chap_int_app.html" data-scroll="chap_int_app"><span class="codenumber">2</span> <span class="title">Applications of Integration</span></a></h2>
+<ul>
+<li><a href="sec_work.html" data-scroll="sec_work">Work</a></li>
+<li><a href="sec_avg.html" data-scroll="sec_avg">Averages</a></li>
+<li><a href="sec_com.html" data-scroll="sec_com">Centre of Mass and Torque</a></li>
+<li><a href="sec_sep_de.html" data-scroll="sec_sep_de">Separable Differential Equations</a></li>
+</ul>
+<h2 class="link"><a href="chap_seq_ser.html" data-scroll="chap_seq_ser"><span class="codenumber">3</span> <span class="title">Sequence and series</span></a></h2>
+<ul>
+<li><a href="section-18.html" data-scroll="section-18">Sequences</a></li>
+<li><a href="section-19.html" data-scroll="section-19">Series</a></li>
+<li><a href="section-20.html" data-scroll="section-20">Convergence Tests</a></li>
+<li><a href="section-21.html" data-scroll="section-21">Absolute and Conditional Convergence</a></li>
+<li><a href="section-22.html" data-scroll="section-22">Power Series</a></li>
+<li><a href="section-23.html" data-scroll="section-23">Taylor Series</a></li>
+<li><a href="sec_RatIrr.html" data-scroll="sec_RatIrr">Optional — Rational and irrational numbers</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="section-26.html" data-scroll="section-26">Pythagoras</a></li>
+<li><a href="section-27.html" data-scroll="section-27">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="section-30.html" data-scroll="section-30">Trigonometry — Special Triangles</a></li>
+<li><a href="section-31.html" data-scroll="section-31">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trigonometric Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">Highschool Material You Should be Able to Derive</a></li>
+<li><a href="section-39.html" data-scroll="section-39">Cartesian Coordinates</a></li>
+<li><a href="ap_roots.html" data-scroll="ap_roots">Roots of Polynomials</a></li>
+</ul>
+<h2 class="link"><a href="ap_complex.html" data-scroll="ap_complex"><span class="codenumber">B</span> <span class="title">Complex Numbers and Exponentials</span></a></h2>
+<ul>
+<li><a href="sec_complex_defn.html" data-scroll="sec_complex_defn">Definition and Basic Operations</a></li>
+<li><a href="sec_complex_exp.html" data-scroll="sec_complex_exp">The Complex Exponential</a></li>
+</ul>
+<h2 class="link"><a href="app_Richardson_Romberg.html" data-scroll="app_Richardson_Romberg"><span class="codenumber">C</span> <span class="title">More About Numerical Integration</span></a></h2>
+<ul>
+<li><a href="ap_Richardson.html" data-scroll="ap_Richardson">Richardson Extrapolation</a></li>
+<li><a href="ap_Romberg.html" data-scroll="ap_Romberg">Romberg Integration</a></li>
+<li><a href="ap_adaptive.html" data-scroll="ap_adaptive">Adaptive Quadrature</a></li>
+</ul>
+<h2 class="link"><a href="app_ODE_numerical.html" data-scroll="app_ODE_numerical"><span class="codenumber">D</span> <span class="title">Numerical Solution of ODE's</span></a></h2>
+<ul>
+<li><a href="ap_derivation.html" data-scroll="ap_derivation">Simple ODE Solvers — Derivation</a></li>
+<li><a href="ap_error_behaviour.html" data-scroll="ap_error_behaviour">Simple ODE Solvers —  Error Behaviour</a></li>
+<li><a href="ap_variable.html" data-scroll="ap_variable">Variable Step Size Methods</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">E</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">F</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">G</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp2-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="exercises" id="exercises-17"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.4.7</span> <span class="title">Exercises</span>
+</h3>
+<section class="introduction" id="introduction-100"><p id="p-4046">Recall that we are using \(\log x\) to denote the logarithm of \(x\) with base \(e\text{.}\) In other courses it is often denoted \(\ln x\text{.}\)</p></section><div class="exercisegroup" id="exercisegroup-49">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 1</alert></p></span></h6>
+<div class="introduction" id="introduction-101"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like boxed" id="exercise-490"><h6 class="heading">
+<span class="codenumber">1</span> </h6>
+<p id="p-4047">Below are pairs of functions \(y=f(x)\) and differential equations. For each pair, decide whether the function is a solution of the differential equation.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="l m b1 r1 l1 t1 lines"></td>
+<td class="l m b1 r1 l0 t1 lines"><em class="alert">function</em></td>
+<td class="l m b1 r1 l0 t1 lines"><em class="alert">differential equation</em></td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">(a)</td>
+<td class="l m b1 r1 l0 t0 lines">\(y=5(e^x-3x^2-6x-6)\)</td>
+<td class="l m b1 r1 l0 t0 lines">\(\displaystyle \diff{y}{x}=y+15x^2\)</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">(b)</td>
+<td class="l m b1 r1 l0 t0 lines">\(y=\dfrac{-2}{x^2+1}\)</td>
+<td class="l m b1 r1 l0 t0 lines">\(y'(x)=xy^2\)</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0 lines">(c)</td>
+<td class="l m b1 r1 l0 t0 lines">\(y=x^{3/2}+x\)</td>
+<td class="l m b1 r1 l0 t0 lines">\(\displaystyle\left(\diff{y}{x}\right)^2 + \diff{y}{x}=y\)</td>
+</tr>
+</table></div></div></div></article><article class="exercise-like boxed" id="exercise-491"><h6 class="heading">
+<span class="codenumber">2</span> </h6>
+<p id="p-4053">Following Definition <a knowl="./knowl/def_SDEsepdiffeq.html" title="Definition 2.4.1">2.4.1</a>, a separable differential equation has the form</p>
+<div class="displaymath">
+\begin{equation*}
+\diff{y}{x}(x) = f(x)\ g\big(y(x)\big).
+\end{equation*}
+</div>
+<p id="p-4054">Show that each of the following equations can be written in this form, identifying \(f(x)\) and \(g(y)\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-1876">\(3y\diff{y}{x}=x\sin y\)</li>
+<li id="li-1877">\(\diff{y}{x} = e^{x+y}\)</li>
+<li id="li-1878">\(\diff{y}{x}+1=x\)</li>
+<li id="li-1879">\(\left(\diff{y}{x}\right)^2-2x\diff{y}{x}+x^2=0\)</li>
+</ol></article><article class="exercise-like" id="exercise-492"><h6 class="heading">
+<span class="codenumber">3</span> </h6>
+<p id="p-4058">Suppose we have the following functions:</p>
+<ul class="disc">
+<li id="li-1888">\(y\) is a differentiable function of \(x\)</li>
+<li id="li-1889">\(f\) is a function of \(x\text{,}\) with \(\int f(x)\,\dee{x}=F(x)\)</li>
+<li id="li-1890">\(g\) is a nonzero function of \(y\text{,}\) with \(\int \frac{1}{g(y)} \,\dee{y}=G(y)=G(y(x))\text{.}\)</li>
+</ul>
+<p id="p-4059">In the work below, we set up a solution to the separable differential equation</p>
+<div class="displaymath">
+\begin{equation*}
+\diff{y}{x}=f(x)g(y)=f(x)g(y(x)))
+\end{equation*}
+</div>
+<p>without using the mnemonic of Equation <a knowl="./knowl/eq_SDEbasicSln.html" title="Equation">(\(\star\))</a>.</p>
+<p id="p-4060">By deleting some portion of our work, we can create the solution as it would look using the mnemonic. What portion can be deleted?</p>
+<p id="p-4061">Remark: the purpose of this exercise is to illuminate what, exactly, the mnemonic is a shortcut for. Despite its peculiar look, it agrees with what we already know about integration.</p>
+<blockquote class="blockquote" id="blockquote-13"><font color="blue"><div class="displaymath" id="p-4062">
+\begin{align*}
+\diff{y}{x}&amp;=f(x)g(y(x))\\
+\end{align*}
+<p class="intertext">Since \(g(y(x))\) is a nonzero function, we can divide both sides by it.</p>
+\begin{align*}
+\frac{1}{g(y(x))}\cdot\diff{y}{x}&amp;=f(x)\\
+\end{align*}
+<p class="intertext">If these functions of \(x\) are the same, then they have the same antiderivative with respect to \(x\text{.}\)</p>
+\begin{align*}
+\int \frac{1}{g(y(x))}\cdot\diff{y}{x}\,\dee{x}&amp;=\int f(x)\,\dee{x}\\
+\end{align*}
+<p class="intertext">The left integral is in the correct form for a change of variables to \(y\text{.}\) To make this easier to see, we'll use a \(u\)-substitution, since it's a little more familiar than a \(y\)-substitution. If \(u=y\text{,}\) then \(\diff{u}{x}=\diff{y}{x}\text{,}\) so \(\dee{u}=\diff{y}{x}\dee{x}\text{.}\)</p>
+\begin{align*}
+\int\frac{1}{g(u)}\,\dee{u}&amp;=\int f(x)\,\dee{x}\\
+\end{align*}
+<p class="intertext">Since \(u\) was just the same as \(y\text{,}\) again for cosmetic reasons, we can swap it back. (Formally, you could have skipped the step above--we just included it to be extra clear that we're not using any integration techniques we haven't seen before.)</p>
+\begin{align*}
+\int\frac{1}{g(y)}\,\dee{y}&amp;=\int f(x)\,\dee{x}\\
+\end{align*}
+<p class="intertext">We're given the antiderivatives in question.</p>
+\begin{align*}
+G(y)+C_1&amp;=F(x)+C_2\\
+G(y)&amp;=F(x)+(C_2-C_1)\\
+\end{align*}
+<p class="intertext">where \(C_1\) and \(C_2\) are arbitrary constants. Then also \(C_2-C_1\) is an arbitrary constant, so we might as well call it \(C\text{.}\)</p>
+\begin{align*}
+G(y)&amp;=F(x)+C
+\end{align*}
+</div></font></blockquote></article><article class="exercise-like boxed" id="exercise-493"><h6 class="heading">
+<span class="codenumber">4</span> </h6>
+<p id="p-4068">Suppose \(y=f(x)\) is a solution to the differential equation \(\diff{y}{x}=xy\text{.}\)</p>
+<p id="p-4069">True or false: \(f(x)+C\) is also a solution, for any constant \(C\text{.}\)</p></article><article class="exercise-like" id="exercise-494"><h6 class="heading">
+<span class="codenumber">5</span> </h6>
+<p id="p-4074">Suppose a function \(y=f(x)\) satisfies \(|y| = Cx\text{,}\) for some constant \(C \gt 0\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-1891">What is the largest possible domain of \(f(x)\text{,}\) given the information at hand?</li>
+<li id="li-1892">
+<p id="p-4075">Give an example of function \(y=f(x)\)  with the following properties, or show that none exists:</p>
+<ul class="disc">
+<li id="li-1893">\(|y| = Cx\text{,}\)</li>
+<li id="li-1894">\(\diff{y}{x}\) exists for all \(x \gt 0\text{,}\) and</li>
+<li id="li-1895">\(y \gt 0\) for some values of \(x\text{,}\) and \(y \lt 0\) for others.</li>
+</ul>
+</li>
+</ol></article><article class="exercise-like" id="exercise-495"><h6 class="heading">
+<span class="codenumber">6</span> </h6>
+<p id="p-4083">Express the following sentence <a knowl="" class="id-ref" refid="hk-fn-143" id="fn-143"><sup> 12 </sup></a><span id="hk-fn-143" class="hidden-content tex2jax_ignore"><span class="footnote">The sentence is paraphrased from the Pharmakokinetics website of  Université de Lausanne, <a class="url" href="https://sepia.unil.ch/pharmacology/index.php?id=94" target="_blank">Elimination Kinetics</a>. The half-life of morphine is given on <a class="url" href="https://sepia.unil.ch/pharmacology/index.php?id=85" target="_blank">the same website</a>. Accessed 12 August 2017.</span></span> as a differential equation. You don't have to solve the equation.</p>
+<blockquote class="blockquote" id="blockquote-14"><font color="blue"><p id="p-4084">About 0.3 percent of the total quantity of morphine in the bloodstream is eliminated every minute.</p></font></blockquote></article><article class="exercise-like boxed" id="exercise-496"><h6 class="heading">
+<span class="codenumber">7</span> </h6>
+<p id="p-4093">Suppose a particular change is occurring in a language, from an old form to a new form. <a knowl="" class="id-ref" refid="hk-fn-144" id="fn-144"><sup> 13 </sup></a><span id="hk-fn-144" class="hidden-content tex2jax_ignore"><span class="footnote">An example is the change in German from “wollt” to “wollst” for the second-person conjugation of the verb “wollen.” This example is provided by the site Laws in Quantitative Linguistics, <a class="url" href="http://lql.uni-trier.de/index.php/Change_in_language" target="_blank">Change in Language</a>, accessed 18 August 2017.</span></span> Let \(p(t)\) be the proportion (measured as a number between 0, meaning none, and 1, meaning all) of the time that speakers use the new form. Piotrowski's law <a knowl="" class="id-ref" refid="hk-fn-145" id="fn-145"><sup> 14 </sup></a><span id="hk-fn-145" class="hidden-content tex2jax_ignore"><span class="footnote">Piotrowski's law is paraphrased from the page <a class="url" href="http://www.glottopedia.org/index.php/Piotrowski-Gesetz" target="_blank">Piotrowski-Gesetz</a> on Glottopedia, accessed 18 August 2017. According to this source, the law was based on work by the married couple R. G. Piotrowski and A. A. Piotrowskaja, later generalized by G. Altmann.</span></span> predicts the following.</p>
+<blockquote class="blockquote" id="blockquote-15"><font color="blue"><p id="p-4094">Use of the new form over time spreads at a rate that is proportional to the product of the proportion of the new form and the proportion of the old form.</p></font></blockquote>
+<p id="p-4095">Express this as a differential equation. You do not need to solve the differential equation.</p></article><article class="exercise-like boxed" id="prob_s2_4_field"><h6 class="heading">
+<span class="codenumber">8</span> </h6>
+<p id="p-4103">Consider the differential equation \(y'=\frac{y}{2}-1\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-1898">When \(y=0\text{,}\) what is \(y'\text{?}\)</li>
+<li id="li-1899">When \(y=2\text{,}\) what is \(y'\text{?}\)</li>
+<li id="li-1900">When \(y=3\text{,}\) what is \(y'\text{?}\)</li>
+<li id="prob_s2_4_fieldd">On the axes below, interpret the marks we have made, and use them to sketch a possible solution to the differential equation.</li>
+</ol>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-445.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><article class="exercise-like" id="exercise-498"><h6 class="heading">
+<span class="codenumber">9</span> </h6>
+<p id="p-4120">Consider the differential equation \(y'=y-\frac{x}{2}\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-1906">If \(y(1)=0\text{,}\) what is \(y'(1)\text{?}\)</li>
+<li id="li-1907">If \(y(1)=2\text{,}\) what is \(y'(1)\text{?}\)</li>
+<li id="li-1908">If \(y(1)=-2\text{,}\) what is \(y'(1)\text{?}\)</li>
+<li id="li-1909">Draw a sketch similar to that of Question <a knowl="./knowl/prob_s2_4_field.html" title="Exercise 2.4.7.8">8</a>(<a knowl="./knowl/prob_s2_4_fieldd.html" title="Item 2.4.7.8.d">d</a>) showing the derivatives of \(y\) at the points with integer values for \(x\) in \([0,6]\) and \(y\) in \([-3,3]\text{.}\)</li>
+<li id="li-1910">Sketch a possible graph of \(y\text{.}\)</li>
+</ol></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-50">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 2</alert></p></span></h6>
+<div class="introduction" id="introduction-102"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like boxed" id="exercise-499"><h6 class="heading">
+<span class="codenumber">10</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4136">Find the solution to the separable initial value problem:</p>
+<div class="displaymath">
+\begin{align*}
+\diff{y}{x} &amp;= \frac{2x}{e^y},  &amp; y(0) = \log 2
+\end{align*}
+</div>
+<p>Express your solution explicitly as \(y = y(x)\text{.}\)</p></article><article class="exercise-like" id="exercise-500"><h6 class="heading">
+<span class="codenumber">11</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4140">Find the solution \(y(x)\) of \(\displaystyle\diff{y}{x}=\frac{xy}{x^2+1}, \quad y(0)=3\text{.}\)</p></article><article class="exercise-like" id="exercise-501"><h6 class="heading">
+<span class="codenumber">12</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4144">Solve the differential equation \(y'(t)=e^{\frac{y}{3}}\cos t\text{.}\) You should express the solution \(y(t)\) in terms of \(t\) explicitly.</p></article><article class="exercise-like boxed" id="exercise-502"><h6 class="heading">
+<span class="codenumber">13</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4149">Solve the differential equation</p>
+<div class="displaymath">
+\begin{equation*}
+\diff{y}{x} = x e^{x^2-\log(y^2)}
+\end{equation*}
+</div></article><article class="exercise-like" id="exercise-503"><h6 class="heading">
+<span class="codenumber">14</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4153">Let \(y=y(x)\text{.}\) Find the general solution of the differential equation \(y'=xe^y\text{.}\)</p></article><article class="exercise-like" id="exercise-504"><h6 class="heading">
+<span class="codenumber">15</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4159">Find the solution to the differential equation \(\displaystyle\frac{y y'}{e^x -2x} = \frac{1}{y}\) that satisfies \(y(0) = 3\text{.}\) Solve completely for \(y\) as a function of \(x\text{.}\)</p></article><article class="exercise-like" id="exercise-505"><h6 class="heading">
+<span class="codenumber">16</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4163">Find the function \(y=f(x)\) that satisfies</p>
+<div class="displaymath">
+\begin{gather*}
+\diff{y}{x} = -xy^3 \qquad\text{and}\qquad f(0)=-\frac{1}{4}
+\end{gather*}
+</div></article><article class="exercise-like boxed" id="exercise-506"><h6 class="heading">
+<span class="codenumber">17</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4167">Find the function \(y=y(x)\) that satisfies \(y(1)=4\) and</p>
+<div class="displaymath">
+\begin{equation*}
+\diff{y}{x} = \frac{15x^2 + 4x + 3}{y}
+\end{equation*}
+</div></article><article class="exercise-like" id="exercise-507"><h6 class="heading">
+<span class="codenumber">18</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4171">Find the solution \(y(x)\) of \(y'=x^3y\) with \(y(0)=1\text{.}\)</p></article><article class="exercise-like boxed" id="exercise-508"><h6 class="heading">
+<span class="codenumber">19</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4175">Find the solution of the initial value problem</p>
+<div class="displaymath">
+\begin{equation*}
+x\diff{y}{x} + y = y^2\qquad y(1) = -1
+\end{equation*}
+</div></article><article class="exercise-like boxed" id="exercise-509"><h6 class="heading">
+<span class="codenumber">20</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4181">A function \(f(x)\) is always positive, has  \(f(0)=e\) and satisfies \(f'(x) = x\,f(x)\) for all \(x\text{.}\) Find this function.</p></article><article class="exercise-like" id="exercise-510"><h6 class="heading">
+<span class="codenumber">21</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4185">Solve the following initial value problem:</p>
+<div class="displaymath">
+\begin{gather*}
+\diff{y}{x} =\frac{1}{(x^2+x)y}\qquad y(1)=2
+\end{gather*}
+</div></article><article class="exercise-like" id="exercise-511"><h6 class="heading">
+<span class="codenumber">22</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4190">Find the solution of the differential equation \(\displaystyle \frac{1+\sqrt{y^2-4}}{\tan x} y' = \frac{\sec x}y\) that satisfies \(y(0)=2\text{.}\) You don't have to solve for \(y\) in terms of \(x\text{.}\)</p></article><article class="exercise-like boxed" id="exercise-512"><h6 class="heading">
+<span class="codenumber">23</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4194">The fish population in a lake is attacked by a disease at time \(t=0\text{,}\) with the result that the size \(P(t)\) of the population at time \(t\ge 0\) satisfies</p>
+<div class="displaymath">
+\begin{gather*}
+\diff{P}{t}=-k\sqrt{P}
+\end{gather*}
+</div>
+<p>where \(k\) is a positive constant. If there were initially 90,000 fish in the lake and 40,000 were left after 6 weeks, when will the fish population be reduced to 10,000?</p></article><article class="exercise-like" id="exercise-513"><h6 class="heading">
+<span class="codenumber">24</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4198">An object of mass \(m\) is projected straight upward at time \(t=0\) with initial speed \(v_0\text{.}\) While it is going up, the only forces acting on it are gravity (assumed constant) and a drag force proportional to the square of the object's speed \(v(t)\text{.}\) It follows that the differential equation of motion is</p>
+<div class="displaymath">
+\begin{gather*}
+m\diff{v}{t}=-(mg+kv^2)
+\end{gather*}
+</div>
+<p>where \(g\) and \(k\) are positive constants. At what time does the object reach its highest point?</p></article><article class="exercise-like boxed" id="exercise-514"><h6 class="heading">
+<span class="codenumber">25</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4202">A motor boat is traveling with a velocity of 40 ft/sec when its motor shuts off at time \(t=0\text{.}\) Thereafter, its deceleration due to water resistance is given by</p>
+<div class="displaymath">
+\begin{gather*}
+\diff{v}{t}=-k\,v^2
+\end{gather*}
+</div>
+<p>where \(k\) is a positive constant. After 10 seconds, the boat's velocity is 20 ft/sec.</p>
+<ol class="lower-alpha">
+<li id="li-1925">What is the value of \(k\text{?}\)</li>
+<li id="li-1926">When will the boat's velocity be 5 ft/sec?</li>
+</ol></article><article class="exercise-like boxed" id="prob_s2_4_chemical"><h6 class="heading">
+<span class="codenumber">26</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4208">Consider the initial value problem \(\diff{x}{t}= k(3-x)(2-x)\text{,}\) \(x(0)=1\text{,}\) where \(k\) is a positive constant. (This kind of problem occurs in the analysis of certain chemical reactions.)</p>
+<ol id="p-4209" class="lower-alpha">
+<li id="li-1927">Solve the initial value problem. That is, find \(x\) as a function of \(t\text{.}\)</li>
+<li id="li-1928">What value will \(x(t)\) approach as \(t\) approaches \(+\infty\text{.}\)</li>
+</ol></article><article class="exercise-like" id="exercise-516"><h6 class="heading">
+<span class="codenumber">27</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4216">The quantity \(P=P(t)\text{,}\) which is a function of time \(t\text{,}\) satisfies the differential equation</p>
+<div class="displaymath">
+\begin{gather*}
+\diff{P}{t}=4P-P^2
+\end{gather*}
+</div>
+<p>and the initial condition \(P(0)=2\text{.}\)</p>
+<ol id="p-4217" class="lower-alpha">
+<li id="li-1929">Solve this equation for \(P(t)\text{.}\)</li>
+<li id="li-1930">What is \(P\) when \(t=0.5\text{?}\) What is the limiting value of \(P\) as \(t\) becomes large?</li>
+</ol></article><article class="exercise-like" id="exercise-517"><h6 class="heading">
+<span class="codenumber">28</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4225">An object moving in a fluid has an initial velocity \(v\) of 400 m/min. The velocity is decreasing at a rate proportional to the square of the velocity. After 1 minute the velocity is 200 m/min.</p>
+<ol id="p-4226" class="lower-alpha">
+<li id="li-1931">Give a differential equation for the velocity \(v=v(t)\) where \(t\) is time.</li>
+<li id="li-1932">Solve this differential equation.</li>
+<li id="li-1933">When will the object be moving at 50 m/min?</li>
+</ol></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-51">
+<h6 class="heading"><span class="title"><p><alert>Exercises — Stage 3</alert></p></span></h6>
+<div class="introduction" id="introduction-103"></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like" id="exercise-518"><h6 class="heading">
+<span class="codenumber">29</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4232">An investor places some money in a mutual fund where the interest is compounded continuously and where the interest rate fluctuates between \(4\%\) and \(8\%\text{.}\) Assume that the amount of money \(B=B(t)\) in the account in dollars after \(t\) years satisfies the differential equation</p>
+<div class="displaymath">
+\begin{gather*}
+\diff{B}{t}=\big(0.06+0.02\sin t\big)B
+\end{gather*}
+</div>
+<ol id="p-4233" class="lower-alpha">
+<li id="li-1937">Solve this differential equation for \(B\) as a function of \(t\text{.}\)</li>
+<li id="li-1938">If the initial investment is \(\$1000\text{,}\) what will the balance be at the end of two years?</li>
+</ol></article><article class="exercise-like boxed" id="exercise-519"><h6 class="heading">
+<span class="codenumber">30</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4241">An endowment is an investment account in which the balance ideally remains constant and withdrawals are made on the interest earned by the account. Such an account may be modeled by the initial value problem \(B'(t) = aB - m\) for \(t \ge 0\text{,}\) with \(B(0) = B_0\) . The constant \(a\) reflects the annual interest rate, \(m\) is the annual rate of withdrawal, and \(B_0\) is the initial balance in the account.</p>
+<ol id="p-4242" class="lower-alpha">
+<li id="li-1939">Solve the initial value problem with \(a = 0.02\) and \(B(0) = B_0 = \$30,000\text{.}\) Note that your answer depends on the constant \(m\text{.}\)</li>
+<li id="li-1940">If \(a = 0.02\) and \(B(0) = B_0 = \$30,000\text{,}\) what is the annual withdrawal rate \(m\) that ensures a constant balance in the account?</li>
+</ol></article><article class="exercise-like boxed" id="exercise-520"><h6 class="heading">
+<span class="codenumber">31</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4248">A certain continuous function \(y=y(x)\) satisfies the integral equation</p>
+<div class="displaymath">
+\begin{equation*}
+y(x)=3+\int_0^x\big(y(t)^2-3y(t)+2\big)\sin t \dee{t} \tag{$*$}
+\end{equation*}
+</div>
+<p>for all \(x\) in some open interval containing \(0\text{.}\) Find \(y(x)\) and the largest interval for which \((*)\) holds.</p></article><article class="exercise-like boxed" id="exercise-521"><h6 class="heading">
+<span class="codenumber">32</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4257">A cylindrical water tank, of radius 3 meters and height 6 meters, is full of water when its bottom is punctured. Water drains out through a hole of radius 1 centimeter. If</p>
+<ul class="disc">
+<li id="li-1941">\(h(t)\) is the height of the water in the tank at time \(t\) (in meters) and</li>
+<li id="li-1942">\(v(t)\) is the velocity of the escaping water  at time \(t\) (in meters per second) then</li>
+<li id="li-1943">Torricelli's law states that \(v(t)=\sqrt{2gh(t)}\) where \(g=9.8\
+{\rm m/sec^2}\text{.}\) Determine how long it takes for the tank to empty.</li>
+</ul></article><article class="exercise-like" id="exercise-522"><h6 class="heading">
+<span class="codenumber">33</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4263">A spherical tank of radius 6 feet is full of mercury when a circular hole of radius 1 inch is opened in the bottom. How long will it take for all of the mercury to drain from the tank?</p>
+<p id="p-4264">Use the value \(g=32\ {\rm feet}/{\rm sec}^2\text{.}\) Also use Torricelli's law, which states when the height of mercury in the tank is \(h\text{,}\) the speed of the mercury escaping from the tank is \(v=\sqrt{2gh}\text{.}\)</p></article><article class="exercise-like" id="exercise-523"><h6 class="heading">
+<span class="codenumber">34</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4269">Consider the equation</p>
+<div class="displaymath">
+\begin{gather*}
+f(x)=3+\int_0^x\big(f(t)-1\big)\big(f(t)-2\big)\dee{t}
+\end{gather*}
+</div>
+<ol class="lower-alpha">
+<li id="li-1944">What is \(f(0)\text{?}\)</li>
+<li id="li-1945">Find the differential equation satisfied by \(f(x)\text{.}\)</li>
+<li id="li-1946">Solve the initial value problem determined in (a) and (b).</li>
+</ol></article><article class="exercise-like" id="exercise-524"><h6 class="heading">
+<span class="codenumber">35</span> <span class="title">(✳)</span>
+</h6>
+<p id="p-4277">A tank 2 m tall is to be made with circular cross--sections with radius \(r=y^p\text{.}\) Here \(y\) measures the vertical distance from the bottom of the tank and \(p\) is a positive constant to be determined. You may assume that when the tank drains, it obeys Torricelli's law, that is</p>
+<div class="displaymath">
+\begin{gather*}
+A(y)\diff{y}{t}=-c\sqrt{y}
+\end{gather*}
+</div>
+<p>for some constant \(c\) where \(A(y)\) is the cross--sectional area of the tank at height \(y\text{.}\) It is desired that the tank be constructed so that the top half (\(y=2\) to \(y=1\)) takes exactly the same amount of time to drain as the bottom half (\(y=1\) to \(y=0\)). Determine the value of \(p\) so that the tank has this property. <em class="emphasis">Note:</em> it is not possible or necessary to find \(c\) for this question.</p></article><article class="exercise-like" id="exercise-525"><h6 class="heading">
+<span class="codenumber">36</span> </h6>
+<p id="p-4281">Suppose \(f(t)\) is a continuous, differentiable function and the root mean square of \(f(t)\) on \([a,x]\) is equal to the average of \(f(t)\) on \([a,x]\) for all \(x\text{.}\) That is,</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{x-a}\int_a^xf(t)\,\dee(t)=\sqrt{\frac{1}{x-a}\int_a^x f^2(t)\,\dee{t}}\tag{$*$}
+\end{equation*}
+</div>
+<p>You may assume \(x \gt a\text{.}\)</p>
+<ol id="p-4282" class="lower-alpha">
+<li id="li-1947">Guess a function \(f(t)\) for which the average of \(f(t)\) is the same as the root mean square of \(f(t)\) on any interval.</li>
+<li id="li-1948">Differentiate both sides of the given equation.</li>
+<li id="li-1949">Simplify your answer from (b) by using Equation (\(*\)) to replace all terms containing \(\int_a^x f^2(t)\,\dee{t}\) with terms containing \(\int_a^x f(t)\,\dee{t}\text{.}\)</li>
+<li id="li-1950">Let \(Y(x) = \int_a^x f(t)\,\dee{t}\text{,}\) so the equation from (c) becomes a differential equation. Find all functions that satisfy it.</li>
+<li id="li-1951">What is \(f(t)\text{?}\)</li>
+</ol></article><article class="exercise-like boxed" id="exercise-526"><h6 class="heading">
+<span class="codenumber">37</span> </h6>
+<p id="p-4295">Find the function  \(y(x)\) such that</p>
+<div class="displaymath">
+\begin{equation*}
+\ddiff{2}{y}{x}=\frac{2}{y^3}\cdot\diff{y}{x}
+\end{equation*}
+</div>
+<p id="p-4296">and if \(x=-\frac{1}{16}\log 3\text{,}\) then \(y=1\) and \(\diff{y}{x}=3\text{.}\)</p>
+<p id="p-4297">You do not need to solve for \(y\) explicitly.</p></article>
+</div>
+</div></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

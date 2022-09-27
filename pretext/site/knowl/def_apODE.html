@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:24:35+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="definition-like"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">B.2.8</span>
+</h6>
+<ol class="lower-alpha">
+<li>A <dfn class="terminology">differential equation</dfn> is an equation for an unknown function that contains the derivatives of that unknown function. For example \(y''(t)+y(t)=0\) is a differential equation for the unknown function \(y(t)\text{.}\)</li>
+<li>
+<p>In the differential calculus text CLP-1, we treated only derivatives of functions of one variable. Such derivatives are called ordinary derivatives. A differential equation is called an <dfn class="terminology">ordinary differential equation</dfn> (often shortened to “ODE”) if only ordinary derivatives appear. That is, if the unknown function has only a single independent variable.</p>
+<p>In CLP-3 we will treat derivatives of functions of more than one variable. For example, let \(f(x,y)\) be a function of two variables. If you treat \(y\) as a constant and take the derivative of the resulting function of the single variable \(x\text{,}\) the result is called the partial derivative of \(f\) with respect to \(x\text{.}\) A differential equation is called a <dfn class="terminology">partial differential equation</dfn> (often shortened to “PDE”) if partial derivatives appear. That is, if the unknown function has more than one independent variable. For example \(y''(t)+y(t)=0\) is an ODE while \(\frac{\partial^2 u}{\partial\, t^2}(x,t)=c^2
+\frac{\partial^2 u}{\partial\, x^2}(x,t)\) is a PDE.</p>
+</li>
+<li>The <dfn class="terminology">order</dfn> of a differential equation is the order of the highest derivative that appears. For example \(y''(t)+y(t)=0\) is a second order ODE.</li>
+<li>
+<p>An ordinary differential equation that is of the form</p>
+<div class="displaymath">
+\begin{equation}
+a_0(t) y^{(n)}(t) + a_1(t) y^{(n-1)}(t)+\cdots +a_n(t)y(t)
+=F(t)\tag{B.2.1}
+\end{equation}
+</div>
+<p>with given coefficient functions \(a_0(t)\text{,}\) \(\cdots\text{,}\) \(a_n(t)\) and \(F(t)\) is said to be <dfn class="terminology">linear</dfn>. Otherwise, the ODE is said to be <dfn class="terminology">nonlinear</dfn>. For example, \(y'(t)^2+y(t)=0\text{,}\) \(y'(t)y''(t)+y(t)=0\) and \(y'(t)=e^{y(t)}\) are all nonlinear.</p>
+</li>
+<li>The ODE <a knowl="./knowl/eqn_ODEordern.html" title="Equation B.2.1">(B.2.1)</a> is said to have <dfn class="terminology">constant coefficients</dfn> if the coefficients  \(a_0(t)\text{,}\) \(a_1(t)\text{,}\) \(\cdots\text{,}\) \(a_n(t)\) are all constants. Otherwise, it is said to have <dfn class="terminology">variable coefficients</dfn>. For example, the ODE \(y''(t)+7y(t)=\sin t\) is constant coefficient, while \(y''(t)+ty(t)=\sin t\) is variable coefficient.</li>
+<li>The ODE <a knowl="./knowl/eqn_ODEordern.html" title="Equation B.2.1">(B.2.1)</a> is said to be <dfn class="terminology">homogeneous</dfn> if \(F(t)\) is identically zero. Otherwise, it is said to be <dfn class="terminology">inhomogeneous</dfn> or <dfn class="terminology">nonhomogeneous</dfn>. For example, the ODE \(y''(t)+7y(t)=0\) is homogeneous, while  \(y''(t)+7y(t)=\sin t\) is inhomogeneous. A homogeneous ODE always has the trivial solution \(y(t)=0\text{.}\)</li>
+<li>An <dfn class="terminology">initial value problem</dfn>  is a problem in which one is to find an unknown function \(y(t)\) that satisfies both a given ODE and given initial conditions, like \(y(t_0)=1\text{,}\) \(y'(t_0)=0\text{.}\) Note that all of the conditions involve the function \(y(t)\) (or its derivatives) evaluated at a single time \(t=t_0\text{.}\)</li>
+<li>A <dfn class="terminology">boundary value problem</dfn>  is a problem in which one is to find an unknown function \(y(t)\) that satisfies both a given ODE and given boundary conditions, like \(y(t_0)=0\text{,}\) \(y(t_1)=0\text{.}\)  Note that the conditions involve the function \(y(t)\) (or its derivatives) evaluated at two different times.</li>
+</ol></article><span class="incontext"><a href="ssec_complex_de.html#def_apODE">in-context</a></span>
+</body>
+</html>

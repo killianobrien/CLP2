@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:23:04+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Step 2: Now, to prove that the series \(\displaystyle \sum_{n=5}^\infty \frac{\sqrt{n}}{n^2-1}\) converges, we apply the limit comparison test with \(a_n=\frac{\sqrt{n}}{n^2-1}\) and \(b_n = \frac{1}{n^{3/2}}\) (for \(n\ge 5\)). Since</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{n \to \infty}\frac{a_n}{b_n}
+&amp;=\lim_{n \to \infty} \frac{\frac{\sqrt{n}}{n^2-1}}{\frac{1}{n^{3/2}}} 
+= \lim_{n \to \infty}\frac{\sqrt{n}\cdot\sqrt{n}^3}{n^2-1}\\
+&amp;=\lim_{n \to \infty}\frac{n^2}{n^2-1} 
+= \lim_{n \to \infty}\frac{1}{1-1/n^2}\\
+&amp; = 1
+\end{align*}
+</div>
+<p>and since \(\displaystyle \sum_{n=5}^\infty \frac{1}{n^{3/2}}\) converges by the \(p\)-test, the limit comparison test tells us that the series \(\displaystyle\sum_{n=5}^\infty \frac{\sqrt{n}}{n^2-1}\) converges. So, by step 1, \(\displaystyle\sum_{n=5}^\infty \frac{\sqrt{n}\cos(n)}{n^2-1}\) converges absolutely.</p>
+<span class="incontext"><a href="exercises-21.html#p-5280">in-context</a></span>
+</body>
+</html>

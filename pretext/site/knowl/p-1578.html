@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:36+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>In Example <a knowl="./knowl/eg_invtan.html" title="Example 1.7.9: \(\int \arctan(x)\dee{x}\) and \(\int \arcsin(x)\dee{x}\)">1.7.9</a>, we saw that integration by parts was useful when the integrand has a derivative that works nicely when multiplied by \(x\text{.}\) We use the same idea here. Let \(u = \arccos y\) and \(\dee{v} = \dee{y}\text{,}\) so that \(v=y\) and \(\dee{u} = -\frac{\dee{y}}{\sqrt{1-y^2}}\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+\int\arccos  y\,\dee{y}
+&amp;= \underbrace{y \arccos y}_{uv} +\int \underbrace{\frac{y}{\sqrt{1-y^2}}\dee{y}}_{-v\dee{u}}\\
+\end{align*}
+<p class="intertext">Using the substitution \(u=1-y^2\text{,}\) \(\dee{u}=-2y\dee{y}\text{,}\)</p>
+\begin{align*}
+&amp;=y\arccos y -\frac{1}{2} \int u^{-1/2}\dee{u}\\
+&amp;=y\arccos y - u^{1/2} +C\\
+&amp;= y \arccos y - \sqrt{1-y^2} + C
+\end{align*}
+</div>
+<span class="incontext"><a href="exercises-7.html#p-1578">in-context</a></span>
+</body>
+</html>

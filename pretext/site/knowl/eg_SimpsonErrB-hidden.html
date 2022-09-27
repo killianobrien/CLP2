@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:24:39+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="example-like"><p>Suppose again that  we wish to use Simpson's rule (<a knowl="./knowl/eq_SIMPrule.html" title="Equation 1.11.9: Simpson's rule">1.11.9</a>) to evaluate \(\int_0^1 e^{-x^2}\,\dee{x}\) to within an accuracy of \(10^{-6}\text{,}\) but that we do not need the degree of certainty provided by Example <a knowl="./knowl/eg_SimpsonErr.html" title="Example 1.11.16: How many steps using Simpson's rule?">1.11.16</a>. Observe that we need (approximately) that \(|K|h^4 \lt 10^{-6}\text{,}\) so if we can estimate \(K\) (using our Richardson trick) then we can estimate the required \(h\text{.}\) A commonly used strategy, based on this observation, is to</p>
+<ul class="disc">
+<li>first apply Simpson's rule twice with some relatively small number of steps and</li>
+<li>then use (E4a), with \(k=4\text{,}\) to estimate \(K\) and</li>
+<li>then use the condition \(|K| h^k\le 10^{-6}\) to determine, approximately, the number of steps required</li>
+<li>and finally apply Simpson's rule with the number of steps just determined.</li>
+</ul>
+<p>Let's implement this strategy. First we estimate \(K\) by applying Simpson's rule with step sizes \(\tfrac{1}{4}\) and \(\tfrac{1}{8}\text{.}\) Writing \(\tfrac{1}{4}=h'\text{,}\) we get</p>
+<div class="displaymath">
+\begin{equation*}
+A(h')=0.74685538  % 0.746855379790987
+\qquad
+A(h'/2)=0.74682612 %0.746826120527467
+\end{equation*}
+</div>
+<p>so that (E4a), with \(k=4\) and \(h\) replaced by \(h'\text{,}\) yields</p>
+<div class="displaymath">
+\begin{equation*}
+K=\frac{0.74682612 - 0.74685538}{[1-2^{-4}](1/4)^4}
+%=-\frac{0.000031211}{(1/4)^4}
+=-7.990\times 10^{-3}
+\end{equation*}
+</div>
+<p>We want to use a step size \(h\) obeying</p>
+<div class="displaymath">
+\begin{equation*}
+|K|h^4\le 10^{-6}
+\iff 7.990\times 10^{-3} h^4\le 10^{-6}
+\iff h \le\root{4}\of{\frac{1}{7990}} =\frac{1}{9.45}
+\end{equation*}
+</div>
+<p>like, for example, \(h=\tfrac{1}{10}\text{.}\) Applying Simpson's rule with \(h=\tfrac{1}{10}\) gives</p>
+<div class="displaymath">
+\begin{equation*}
+A(1/10) = 0.74682495
+\end{equation*}
+</div>
+<p>The exact answer, to eight decimal places, is \(0.74682413\) so the error in \(A(1/10)\) is indeed just under \(10^{-6}\text{.}\)</p>
+<p>Suppose now that we change our minds. We want an accuracy of \(10^{-12}\text{,}\) rather than \(10^{-6}\text{.}\) We have already estimated \(K\text{.}\) So now we want to use a step size \(h\) obeying</p>
+<div class="displaymath">
+\begin{align*}
+|K|h^4\le 10^{-12}
+&amp;\iff 7.99\times 10^{-3} h^4\le 10^{-12}\\
+&amp;\iff h \le\root{4}\of{\frac{1}{7.99\times 10^9}} =\frac{1}{299.0}
+\end{align*}
+</div>
+<p>like, for example, \(h=\tfrac{1}{300}\text{.}\) Applying Simpson's rule with \(h=\tfrac{1}{300}\) gives, to fourteen decimal places,</p>
+<div class="displaymath">
+\begin{equation*}
+A(1/300) = 0.74682413281344
+\end{equation*}
+</div>
+<p>The exact answer, to fourteen decimal places, is \(0.74682413281243\) so the error in \(A(1/300)\) is indeed just over \(10^{-12}\text{.}\)</p></article></body>
+</html>

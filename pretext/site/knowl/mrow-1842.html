@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:42+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="displaymath">
+\begin{align*}
+\int_a^r \sqrt{r^2-x^2} \dee{x}
+&amp;= r^2\int_{\arcsin(a/r)}^{\frac\pi2} \sqrt{\cos^2u} \cdot \cos u \dee{u}\\
+&amp;= r^2 \int_{\arcsin(a/r)}^{\frac\pi2} \cos^2 u \dee{u}\\
+\end{align*}
+<p class="intertext">Recall the identity \(\cos^2u=\frac{1+\cos2u}{2}\) from Section <a href="sec_trigint.html" class="xref" title="Section 1.8: Trigonometric Integrals">1.8</a></p>
+\begin{align*}
+&amp;= \frac{r^2}{2} \int_{\arcsin(a/r)}^{\frac\pi2} (1 +\cos 2u) \dee{u}\\
+&amp;= \frac{r^2}{2} \bigg[u + \frac{1}{2}\sin(2u) \bigg]_{\arcsin(a/r)}^{\frac\pi2}\\
+&amp;= \frac{r^2}{2} \left(\frac{\pi}{2} +\frac{1}{2}\sin\pi - \arcsin(a/r) -
+\frac{1}{2}\sin( 2\arcsin(a/r)) \right)\\
+&amp;= \frac{r^2}{2} \left(\frac{\pi}{2} - \arcsin(a/r) - \frac{1}{2}\sin( 2\arcsin(a/r))
+\right)
+\end{align*}
+</div>
+<span class="incontext"><a href="subsection-18.html#mjx-eqn-mrow-1842">in-context</a></span>
+</body>
+</html>

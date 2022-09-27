@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:22:34+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>The problem of determining the exact value of the sum of the series</p>
+<div class="displaymath">
+\begin{gather*}
+\sum_{n=1}^\infty \frac{1}{n^2}
+\end{gather*}
+</div>
+<p>is called the Basel problem. The problem is named after the home town of Leonhard Euler, who solved it. One can use telescoping series to show that this series must converge.  Notice that</p>
+<div class="displaymath">
+\begin{align*}
+\frac{1}{n^2} &amp; \lt  \frac{1}{n(n-1)} = \frac{1}{n-1} - \frac{1}{n}
+\end{align*}
+</div>
+<p>Hence we can bound the partial sum:</p>
+<div class="displaymath">
+\begin{align*}
+S_k=\sum_{n=1}^k \frac{1}{n^2}
+&amp;  \lt  1 + \sum_{n=2}^k \frac{1}{n(n-1)} &amp;&amp; \text{avoid dividing by $0$}\\
+&amp;= 1 + \sum_{n=2}^k \left(\frac{1}{n-1} - \frac{1}{n} \right) &amp;&amp;
+\text{which telescopes to}\\
+&amp;= 1 + 1 - \frac{1}{k}
+\end{align*}
+</div>
+<p>Thus, as \(k\) increases, the partial sum \(S_k\) increases  (the series is a sum of positive terms), but is always smaller  than \(2\text{.}\)  So the sequence of partial sums converges.</p>
+<span class="incontext"><a href="sec_HarminicBasel.html#p-4877">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:23:34+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>We'll now use (Ea) (which has the advantage of not containing any unknown free parameter \(c\)) to verify (S2) when \(-1\lt x\lt 0\text{.}\) Rewrite the right hand side of (Ea)</p>
+<div class="displaymath">
+\begin{align*}
+&amp; (-1)^n \int_0^x \frac{(x-t)^n}{(1+t)^{n+1}}\,\dee{t}
+=-\int_x^0 \frac{(t-x)^n}{(1+t)^{n+1}}\,\dee{t} \\
+&amp;=-\int_0^{-x}\frac{s^n}{(1+x+s)^{n+1}}\,\dee{s}
+\  s=t-x,\,\dee{s}=\dee{t} 
+\end{align*}
+</div>
+<p>The exact evaluation of this integral is very messy and not very illuminating. Instead, we bound it. Note that, for \(1+x\gt 0\text{,}\)</p>
+<div class="displaymath">
+\begin{align*}
+\diff{}{s}\left(\frac{s}{1+x+s}\right) 
+&amp;= \diff{}{s}\left(\frac{1+x+s-(1+x)}{1+x+s} \right)\\
+&amp;= \diff{}{s}\left(1- \frac{1+x}{1+x+s}\right) \\
+&amp;=\frac{1+x}{(1+x+s)^2}
+\gt 0
+\end{align*}
+</div>
+<p>so that \(\frac{s}{1+x+s}\) increases as \(s\) increases. Consequently, the biggest value that \(\frac{s}{1+x+s}\) takes on the domain of integration  \(0\le s\le -x=|x|\) is</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{s}{1+x+s}\bigg|_{s=-x} = -x = |x|
+\end{equation*}
+</div>
+<p>and the integrand</p>
+<div class="displaymath">
+\begin{align*}
+0\le \frac{s^n}{[1+x+s]^{n+1}} 
+&amp;=\left(\frac{s}{1+x+s}\right)^n\frac{1}{1+x+s}\\
+&amp;\le \frac{|x|^n}{1+x+s}
+\end{align*}
+</div>
+<p>Consequently,</p>
+<div class="displaymath">
+\begin{align*}
+\left|E_n(0,x)\right| 
+&amp;= \left|(-1)^n \int_0^x \frac{(x-t)^n}{(1+t)^{n+1}}\,\dee{t}\right|\\
+&amp;=\int_0^{-x}\frac{s^n}{[1+x+s]^{n+1}}\,\dee{s} \\
+&amp;\le |x|^n \int_0^{-x}\frac{1}{1+x+s}\,\dee{s}\\
+&amp;=|x|^n\Big[\log(1+x+s)\Big]_{s=0}^{s=-x} \\
+&amp;= |x|^n [-\log(1+x)]
+\end{align*}
+</div>
+<p>converges to zero as \(n\rightarrow\infty\) for each fixed \(-1\lt x\lt 0\text{.}\)</p>
+<span class="incontext"><a href="subsubsection-17.html#p-5602">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:24:49+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Of course, in practice more efficient and more accurate methods<a knowl="./knowl/fn-277-hidden.html" title="Footnote D.3.10"><sup> 10 </sup></a> than Euler and Euler-2step are used. Fehlberg's method<a knowl="./knowl/fn-278-hidden.html" title="Footnote D.3.11"><sup> 11 </sup></a> uses improved Euler and a second more accurate method. Each step involves three calculations of \(f\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+f_{1,n}&amp;=f(t_n,y_n) \\
+f_{2,n}&amp;=f(t_n+h,y_n+hf_{1,n}) \\
+f_{3,n}&amp;=f\left(t_n+\tfrac{h}{2},y_n+\tfrac{h}{4}[f_{1,n}+f_{2,n}]\right)
+\end{align*}
+</div>
+<p>Once these three evaluations have been made, the method generates two approximations for \(y(t_n+h)\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+A_{1,n+1}&amp;=y_n+\tfrac{h}{2}\left[f_{1,n}+f_{2,n}\right] \\
+A_{2,n+1}&amp;=y_n+\tfrac{h}{6}\left[f_{1,n}+f_{2,n}+4f_{3,n}\right]
+\end{align*}
+</div>
+<p>Denote by \(\phi(t)\) the exact solution to \(y'=f(t,y)\) that satisfies the initial condition \(\phi(t_n)=y_n\text{.}\)  Now \(A_{1,n+1}\) is just the \(y_{n+1}\) produced by the improved Euler's method. The local truncation error for the improved Euler's method is of order \(h^3\text{,}\) one power of \(h\) smaller than that for Euler's method. So</p>
+<div class="displaymath">
+\begin{equation*}
+A_{1,n+1} = \phi(t_n+h) + Kh^3+O(h^4) 
+\end{equation*}
+</div>
+<p>and it turns out<a knowl="./knowl/fn-279-hidden.html" title="Footnote D.3.12"><sup> 12 </sup></a>  that</p>
+<div class="displaymath">
+\begin{equation*}
+A_{2,n+1} = \phi(t_n+h) + O(h^4) 
+\end{equation*}
+</div>
+<p>So the  error in \(A_{1,n+1}\) is</p>
+<div class="displaymath">
+\begin{align*}
+E&amp;=\big|Kh^3+O(h^4)\big|
+=\big|A_{1,n+1}-\phi(t_n+h)\big|+O(h^4) \\
+&amp;=\big|A_{1,n+1}-A_{2,n+1}\big|+O(h^4)
+\end{align*}
+</div>
+<p>and our estimate for rate at which error is being introduced into \(A_{1,n+1}\) is</p>
+<div class="displaymath">
+\begin{equation*}
+r=\frac{|A_{1,n+1}-A_{2,n+1}|}{h}\approx |K|h^2
+\end{equation*}
+</div>
+<p>per unit increase of \(t\text{.}\)</p>
+<ul class="disc">
+<li>If \(r&gt;\varepsilon\) we redo this step with a new trial step size chosen so that \(|K|(\text{new }h)^2\lt\varepsilon\text{,}\) i.e. \(\frac{r}{h^2}(\text{new }h)^2\lt\varepsilon\text{.}\) With our traditional safety factor, we take<div class="displaymath">
+\begin{equation*}
+\text{new }h=0.9\sqrt{\frac{\varepsilon}{r}}\,h\qquad
+\text{(the new }h\text{ is smaller)}
+\end{equation*}
+</div>
+</li>
+<li>If \(r\le \varepsilon\) we set \(t_{n+1}=t_n+h\) and \(y_{n+1}=A_{2,n+1}\) (since \(A_{2,n+1}\) should be considerably more accurate than \(A_{1,n+1}\)) and move on to the next step with trial step size<div class="displaymath">
+\begin{equation*}
+\text{new }h=0.9\sqrt{\frac{\varepsilon}{r}}\,h\qquad
+\text{(the new }h\text{ is usually bigger)}
+\end{equation*}
+</div>
+</li>
+</ul>
+<span class="incontext"><a href="ssec_Fehlberg.html#p-6264">in-context</a></span>
+</body>
+</html>

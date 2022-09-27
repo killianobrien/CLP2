@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:17:14+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Optional — Evaluating Limits Using Taylor Expansions — More Examples</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_2_ic.html"><span class="title">CLP-2 Integral Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="subsection-60.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="section-23.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="exercises-23.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="subsection-60.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="section-23.html" title="Up">Up</a><a class="next-button button toolbar-item" href="exercises-23.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_integral.html" data-scroll="chap_integral"><span class="codenumber">1</span> <span class="title">Integration</span></a></h2>
+<ul>
+<li><a href="sec_intdef.html" data-scroll="sec_intdef">Definition of the Integral</a></li>
+<li><a href="sec_def_int.html" data-scroll="sec_def_int">Basic properties of the definite integral</a></li>
+<li><a href="sec_fundamental.html" data-scroll="sec_fundamental">The Fundamental Theorem of Calculus</a></li>
+<li><a href="sec_subs.html" data-scroll="sec_subs">Substitution</a></li>
+<li><a href="sec_area.html" data-scroll="sec_area">Area between curves</a></li>
+<li><a href="sec_int_volumes.html" data-scroll="sec_int_volumes">Volumes</a></li>
+<li><a href="sec_intbyparts.html" data-scroll="sec_intbyparts">Integration by parts</a></li>
+<li><a href="sec_trigint.html" data-scroll="sec_trigint">Trigonometric Integrals</a></li>
+<li><a href="sec_trigsub.html" data-scroll="sec_trigsub">Trigonometric Substitution</a></li>
+<li><a href="sec_parfrac.html" data-scroll="sec_parfrac">Partial Fractions</a></li>
+<li><a href="sec_numeric_int.html" data-scroll="sec_numeric_int">Numerical Integration</a></li>
+<li><a href="sec_improp_int.html" data-scroll="sec_improp_int">Improper Integrals</a></li>
+<li><a href="section-13.html" data-scroll="section-13">More Integration Examples</a></li>
+</ul>
+<h2 class="link"><a href="chap_int_app.html" data-scroll="chap_int_app"><span class="codenumber">2</span> <span class="title">Applications of Integration</span></a></h2>
+<ul>
+<li><a href="sec_work.html" data-scroll="sec_work">Work</a></li>
+<li><a href="sec_avg.html" data-scroll="sec_avg">Averages</a></li>
+<li><a href="sec_com.html" data-scroll="sec_com">Centre of Mass and Torque</a></li>
+<li><a href="sec_sep_de.html" data-scroll="sec_sep_de">Separable Differential Equations</a></li>
+</ul>
+<h2 class="link"><a href="chap_seq_ser.html" data-scroll="chap_seq_ser"><span class="codenumber">3</span> <span class="title">Sequence and series</span></a></h2>
+<ul>
+<li><a href="section-18.html" data-scroll="section-18">Sequences</a></li>
+<li><a href="section-19.html" data-scroll="section-19">Series</a></li>
+<li><a href="section-20.html" data-scroll="section-20">Convergence Tests</a></li>
+<li><a href="section-21.html" data-scroll="section-21">Absolute and Conditional Convergence</a></li>
+<li><a href="section-22.html" data-scroll="section-22">Power Series</a></li>
+<li><a href="section-23.html" data-scroll="section-23">Taylor Series</a></li>
+<li><a href="sec_RatIrr.html" data-scroll="sec_RatIrr">Optional — Rational and irrational numbers</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="section-26.html" data-scroll="section-26">Pythagoras</a></li>
+<li><a href="section-27.html" data-scroll="section-27">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="section-30.html" data-scroll="section-30">Trigonometry — Special Triangles</a></li>
+<li><a href="section-31.html" data-scroll="section-31">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trigonometric Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">Highschool Material You Should be Able to Derive</a></li>
+<li><a href="section-39.html" data-scroll="section-39">Cartesian Coordinates</a></li>
+<li><a href="ap_roots.html" data-scroll="ap_roots">Roots of Polynomials</a></li>
+</ul>
+<h2 class="link"><a href="ap_complex.html" data-scroll="ap_complex"><span class="codenumber">B</span> <span class="title">Complex Numbers and Exponentials</span></a></h2>
+<ul>
+<li><a href="sec_complex_defn.html" data-scroll="sec_complex_defn">Definition and Basic Operations</a></li>
+<li><a href="sec_complex_exp.html" data-scroll="sec_complex_exp">The Complex Exponential</a></li>
+</ul>
+<h2 class="link"><a href="app_Richardson_Romberg.html" data-scroll="app_Richardson_Romberg"><span class="codenumber">C</span> <span class="title">More About Numerical Integration</span></a></h2>
+<ul>
+<li><a href="ap_Richardson.html" data-scroll="ap_Richardson">Richardson Extrapolation</a></li>
+<li><a href="ap_Romberg.html" data-scroll="ap_Romberg">Romberg Integration</a></li>
+<li><a href="ap_adaptive.html" data-scroll="ap_adaptive">Adaptive Quadrature</a></li>
+</ul>
+<h2 class="link"><a href="app_ODE_numerical.html" data-scroll="app_ODE_numerical"><span class="codenumber">D</span> <span class="title">Numerical Solution of ODE's</span></a></h2>
+<ul>
+<li><a href="ap_derivation.html" data-scroll="ap_derivation">Simple ODE Solvers — Derivation</a></li>
+<li><a href="ap_error_behaviour.html" data-scroll="ap_error_behaviour">Simple ODE Solvers —  Error Behaviour</a></li>
+<li><a href="ap_variable.html" data-scroll="ap_variable">Variable Step Size Methods</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">E</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">F</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">G</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp2-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="subsection" id="subsection-61"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.6.6</span> <span class="title">Optional — Evaluating Limits Using Taylor Expansions — More Examples</span>
+</h3>
+<article class="example-like" id="eg_bigohlimitAA"><a knowl="" class="id-ref" refid="hk-eg_bigohlimitAA"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.6.32</span> <span class="title">Example 3.6.22 revisited</span>
+</h6></a></article><div id="hk-eg_bigohlimitAA" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-5646">In this example, we'll return to the limit</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{x\rightarrow 0}\frac{\sin x}{x}
+\end{equation*}
+</div>
+<p>of Example <a knowl="./knowl/eg_TaylorlimitA.html" title="Example 3.6.22: A simple limit from a Taylor expansion">3.6.22</a> and treat it more carefully. By Example <a knowl="./knowl/eg_bigohsincos.html" title="Example 3.6.25: Sine and the big O">3.6.25</a>,</p>
+<div class="displaymath">
+\begin{equation*}
+\sin x = x-\frac{1}{3!}x^3+O(|x|^5)
+\end{equation*}
+</div>
+<p>That is, for small \(x\text{,}\) \(\sin x\) is the same as \(x-\frac{1}{3!}x^3\text{,}\)  up to an error that is bounded by some constant times \(|x|^5\text{.}\) So, dividing by \(x\text{,}\) \(\frac{\sin x}{x}\) is the same as  \(1-\frac{1}{3!}x^2\text{,}\) up to an error that is bounded by some  constant times \(x^4\) — see Remark <a knowl="./knowl/rem_bigohppties.html" title="Remark 3.6.31">3.6.31</a>(b). That is</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{\sin x}{x}=1-\frac{1}{3!}x^2+O(x^4)
+\end{equation*}
+</div>
+<p>But any function that is bounded by some constant times \(x^4\) (for all \(x\) smaller than some constant \(D \gt 0\)) necessarily tends to \(0\) as \(x\rightarrow 0\) — see Remark <a knowl="./knowl/rem_bigohppties.html" title="Remark 3.6.31">3.6.31</a>(a). . Thus</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{x\rightarrow 0}\frac{\sin x}{x}
+=\lim_{x\rightarrow 0}\Big[1-\frac{1}{3!}x^2+O(x^4)\Big]
+=\lim_{x\rightarrow 0}\Big[1-\frac{1}{3!}x^2\Big]
+=1
+\end{equation*}
+</div>
+<p id="p-5647">Reviewing the above computation, we see that we did a little more work than we had to. It wasn't necessary to keep track of the \(-\frac{1}{3!}x^3\) contribution to \(\sin x\) so carefully. We could have just said that</p>
+<div class="displaymath">
+\begin{equation*}
+\sin x = x+O(|x|^3)
+\end{equation*}
+</div>
+<p>so that</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{x\rightarrow 0}\frac{\sin x}{x}
+=\lim_{x\rightarrow 0}\frac{x+O(|x|^3)}{x}
+=\lim_{x\rightarrow 0}\big[1+O(x^2)\big]
+=1
+\end{equation*}
+</div>
+<p>We'll spend a little time in the later, more complicated, examples learning how to choose the number of terms we keep in our Taylor expansions so as to make our computations as efficient as possible.</p></article></div>
+<article class="example-like" id="eg_bigohlimitA"><a knowl="" class="id-ref" refid="hk-eg_bigohlimitA"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.6.33</span> <span class="title">Practicing using Taylor polynomials for limits</span>
+</h6></a></article><div id="hk-eg_bigohlimitA" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-5648">In this example, we'll use the Taylor polynomial of Example <a knowl="./knowl/eg_bigohlog.html" title="Example 3.6.29: Logarithms and the big O">3.6.29</a>  to evaluate \(\lim\limits_{x\rightarrow 0}\tfrac{\log(1+x)}{x}\) and \(\lim\limits_{x\rightarrow 0}(1+x)^{a/x}\text{.}\) The Taylor expansion of equation <a knowl="./knowl/eq_bigohlog.html" title="Equation 3.6.30">3.6.30</a> with \(n=1\) tells us that</p>
+<div class="displaymath">
+\begin{equation*}
+\log(1+x)=x+O(|x|^2)
+\end{equation*}
+</div>
+<p>That is, for small \(x\text{,}\) \(\log(1+x)\) is the same as \(x\text{,}\) up to an error that  is bounded by some constant times \(x^2\text{.}\) So, dividing by \(x\text{,}\) \(\frac{1}{x}\log(1+x)\) is the same as \(1\text{,}\) up to an  error that is bounded by some constant times \(|x|\text{.}\) That is</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{x}\log(1+x)=1+O(|x|)
+\end{equation*}
+</div>
+<p>But any function that is bounded by some constant times \(|x|\text{,}\) for all \(x\) smaller than some constant \(D \gt 0\text{,}\) necessarily tends to \(0\) as \(x\rightarrow 0\text{.}\) Thus</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{x\rightarrow 0}\frac{\log(1+x)}{x}
+=\lim_{x\rightarrow 0}\frac{x+O(|x|^2)}{x}
+=\lim_{x\rightarrow 0}\big[1+O(|x|)\big]
+=1
+\end{equation*}
+</div>
+<p id="p-5649">We can now use this limit to evaluate</p>
+<div class="displaymath">
+\begin{gather*}
+\lim_{x\rightarrow 0}(1+x)^{a/x}.
+\end{gather*}
+</div>
+<p>Now, we could either evaluate the limit of the logarithm of this  expression, or we can carefully rewrite the expression  as \(e^\mathrm{(something)}\text{.}\) Let us do the latter.</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x\rightarrow 0}(1+x)^{a/x}
+&amp;=\lim_{x\rightarrow 0}e^{\frac{a}{x} \log(1+x) }\\
+&amp;=\lim_{x\rightarrow 0}e^{\frac{a}{x}[x+O(|x|^2)]}\\
+&amp;=\lim_{x\rightarrow 0}e^{a+O(|x|)}
+=e^a
+\end{align*}
+</div>
+<p>Here we have used that if \(F(x)=O(|x|^2)\) then \(\frac{a}{x} F(x) = O(x)\) — see Remark <a knowl="./knowl/rem_bigohppties.html" title="Remark 3.6.31">3.6.31</a>(b). We have also used that the exponential is continuous — as \(x\)  tends to zero, the exponent of \(e^{a+O(|x|)}\) tends to \(a\)  so that \(e^{a+O(|x|)}\) tends to \(e^a\) — see Remark <a knowl="./knowl/rem_bigohppties.html" title="Remark 3.6.31">3.6.31</a>(a).</p></article></div>
+<article class="example-like" id="bigohlimitB"><a knowl="" class="id-ref" refid="hk-bigohlimitB"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.6.34</span> <span class="title">A difficult limit</span>
+</h6></a></article><div id="hk-bigohlimitB" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-5650">In this example, we'll evaluate<a knowl="" class="id-ref" refid="hk-fn-220" id="fn-220"><sup> 28 </sup></a><span id="hk-fn-220" class="hidden-content tex2jax_ignore"><span class="footnote">Use of l'Hôpital's rule here could be characterised as a “courageous  decision”. The interested reader should search-engine their way to Sir Humphrey Appleby and “Yes Minister” to better  understand this reference (and the workings of government in the Westminster system). Discretion being the better  part of valour, we'll stop and think a little before limiting (ha) our choices.</span></span> the harder limit</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{x\rightarrow 0}\frac{\cos x -1 + \half x\sin x}{{[\log(1+x)]}^4}
+\end{equation*}
+</div>
+<p>The first thing to notice about this limit is that, as \(x\) tends to zero, the numerator</p>
+<div class="displaymath">
+\begin{align*}
+\cos x -1 + \half x\sin x &amp;\to \cos 0 -1 +\half\cdot 0\cdot\sin 0=0
+\end{align*}
+</div>
+<p>and the denominator</p>
+<div class="displaymath">
+\begin{align*}
+[\log(1+x)]^4 &amp; \to [\log(1+0)]^4=0
+\end{align*}
+</div>
+<p>too. So both the numerator and denominator tend to zero and we may not simply evaluate  the limit of the ratio by taking  the limits of the numerator and denominator and dividing.</p>
+<p id="p-5651">To find the limit, or show that it does not exist, we are going to have to exhibit a cancellation between the numerator  and the denominator. To develop a strategy for evaluating this limit, let's do a “little scratch work”, starting by  taking a closer look at the denominator. By Example <a knowl="./knowl/eg_bigohlog.html" title="Example 3.6.29: Logarithms and the big O">3.6.29</a>,</p>
+<div class="displaymath">
+\begin{gather*}
+\log(1+x) = x+O(x^2)
+\end{gather*}
+</div>
+<p>This tells us that \(\log(1+x)\) looks a lot like \(x\) for very small \(x\text{.}\) So the denominator \([x+O(x^2)]^4\) looks a lot like \(x^4\) for very small \(x\text{.}\) Now, what about the numerator?</p>
+<ul class="disc">
+<li id="li-2411">If the numerator looks like some constant times \(x^p\) with \(p \gt 4\text{,}\)  for very small \(x\text{,}\) then the ratio will look like the constant times  \(\frac{x^p}{x^4}=x^{p-4}\) and, as \(p-4 \gt 0\text{,}\) will tend to \(0\) as \(x\)  tends to zero.</li>
+<li id="li-2412">If the numerator looks like some constant times \(x^p\) with \(p \lt 4\text{,}\)  for very small \(x\text{,}\) then the ratio will look like the constant times  \(\frac{x^p}{x^4}=x^{p-4}\) and will, as \(p-4 \lt 0\text{,}\) tend to infinity,  and in particular diverge, as \(x\) tends to zero.</li>
+<li id="li-2413">If the numerator looks like  \(Cx^4\text{,}\) for very small \(x\text{,}\) then  the ratio will look like \(\frac{Cx^4}{x^4}=C\) and will tend to \(C\) as  \(x\) tends to zero.</li>
+</ul>
+<p>The moral of the above “scratch work” is that we need to know the  behaviour of the numerator, for small \(x\text{,}\) up to order \(x^4\text{.}\) Any  contributions of order \(x^p\) with \(p \gt 4\) may be put into error  terms \(O(|x|^p)\text{.}\)</p>
+<p id="p-5652">Now we are ready to evaluate the limit. Because the expressions  are a little involved, we will simplify the numerator  and denominator separately and then put things together. Using the expansions we developed in Example <a knowl="./knowl/eg_bigohsincos.html" title="Example 3.6.25: Sine and the big O">3.6.25</a>, the numerator,</p>
+<div class="displaymath">
+\begin{align*}
+\cos x -1 + \frac{1}{2} x\sin x
+&amp;=
+\left( 1 - \frac{1}{2!}x^2 + \frac{1}{4!}x^4 + O(|x|^6) \right)\\
+&amp;\phantom{=\ } -1  + \frac{x}{2}\left( x - \frac{1}{3!}x^3 + O(|x|^5) \right)
+&amp; \text{expand}\\
+&amp;=  \left( \frac{1}{24}-\frac{1}{12} \right)x^4 + O(|x|^6) + \frac{x}{2} O(|x|^5)\\
+\end{align*}
+<p class="intertext">Then by Remark <a knowl="./knowl/rem_bigohppties.html" title="Remark 3.6.31">3.6.31</a>(b)</p>
+\begin{align*}
+&amp;=  - \frac{1}{24}x^4 + O(|x|^6) + O(|x|^6)\\
+\end{align*}
+<p class="intertext">and now by Remark<a knowl="./knowl/rem_bigohppties.html" title="Remark 3.6.31">3.6.31</a>(c)</p>
+\begin{align*}
+&amp;= - \frac{1}{24}x^4 + O(|x|^6)
+\end{align*}
+</div>
+<p>Similarly, using the expansion that we developed in Example <a knowl="./knowl/eg_bigohlog.html" title="Example 3.6.29: Logarithms and the big O">3.6.29</a>,</p>
+<div class="displaymath">
+\begin{align*}
+[ \log(1+x) ]^4 &amp;= \big[ x + O(|x|^2) \big]^4\\
+&amp;= \big[x + x O(|x|)\big]^4 &amp; \text{by Remark }\knowl{./knowl/rem_bigohppties.html}{\text{3.6.31}}\text{(b)}\\
+&amp;= x^4 [1 +  O(|x|)]^4
+\end{align*}
+</div>
+<p>Now put these together and take the limit as \(x \to 0\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x \to 0}
+\frac{\cos x -1 + \half x\sin x}{[\log(1+x)]^4}
+&amp;= \lim_{x \to 0}
+\frac{ -\frac{1}{24}x^4 + O(|x|^6)}{x^4 [1+O(|x|)]^4}\\
+&amp;= \lim_{x \to 0}
+\frac{-\frac{1}{24}x^4 + x^4O(|x|^2)}{x^4 [1+O(|x|)]^4}&amp; \text{by Remark }\knowl{./knowl/rem_bigohppties.html}{\text{3.6.31}}\text{(b)}\\
+&amp;= \lim_{x \to 0}
+\frac{-\frac{1}{24} + O(|x|^2)}{[1+O(|x|)]^4}\\
+&amp;= -\frac{1}{24} &amp; \text{by Remark }\knowl{./knowl/rem_bigohppties.html}{\text{3.6.31}}\text{(a)}.
+\end{align*}
+</div></article></div>
+<p id="p-5653">The next two limits have much the same flavour as those above — expand  the numerator and denominator to high enough order, do some cancellations  and then take the limit. We have increased the difficulty a little by  introducing “expansions of expansions”.</p>
+<article class="example-like" id="eg_bigohlimitC"><a knowl="" class="id-ref" refid="hk-eg_bigohlimitC"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.6.35</span> <span class="title">Another difficult limit</span>
+</h6></a></article><div id="hk-eg_bigohlimitC" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-5654">In this example we'll evaluate another harder limit, namely</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{x\rightarrow 0}\frac{\log\big(\frac{\sin x}{x}\big)}{x^2}
+\end{equation*}
+</div>
+<p>The first thing to notice about this limit is that, as \(x\) tends to zero, the denominator \(x^2\) tends to \(0\text{.}\) So, yet again, to find the limit, we are going to have  to show that the numerator also tends to \(0\) and we are going to have  to exhibit a cancellation between the numerator and the denominator.</p>
+<p id="p-5655">Because the denominator is \(x^2\) any terms in the numerator, \(\log\big(\frac{\sin x}{x}\big)\) that are of order \(x^3\) or higher  will contribute terms in the ratio \(\frac{\log(\frac{\sin x}{x})}{x^2}\) that are of order \(x\) or higher. Those terms in the ratio will converge to  zero as \(x\rightarrow 0\text{.}\) The moral of this discussion is that we need to compute \(\log\frac{\sin x}{x}\) to order \(x^2\) with errors of order \(x^3\text{.}\) Now we saw, in Example <a knowl="./knowl/eg_bigohlimitAA.html" title="Example 3.6.32: Example 3.6.22 revisited">3.6.32</a>, that</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{\sin x}{x}=1-\frac{1}{3!}x^2+O(x^4)
+\end{equation*}
+</div>
+<p>We also saw, in equation <a knowl="./knowl/eq_bigohlog.html" title="Equation 3.6.30">3.6.30</a> with \(n=1\text{,}\) that</p>
+<div class="displaymath">
+\begin{equation*}
+\log(1+X) = X +O(X^2)
+\end{equation*}
+</div>
+<p>Substituting<a knowl="" class="id-ref" refid="hk-fn-221" id="fn-221"><sup> 29 </sup></a><span id="hk-fn-221" class="hidden-content tex2jax_ignore"><span class="footnote">In our derivation of \(\log(1+X) = X +O(X^2)\) in Example <a knowl="./knowl/eg_bigohlog.html" title="Example 3.6.29: Logarithms and the big O">3.6.29</a>, we required only that \(|X|\le\frac{1}{2}\text{.}\) So we are free to substitute \(X= -\frac{1}{3!}x^2+O(x^4)\) for any \(x\) that is small enough that \(\big|-\frac{1}{3!}x^2+O(x^4)\big| \lt \frac{1}{2}\text{.}\)</span></span> \(X= -\frac{1}{3!}x^2+O(x^4)\text{,}\) and using that \(X^2=O(x^4)\) (by Remark <a knowl="./knowl/rem_bigohppties.html" title="Remark 3.6.31">3.6.31</a>(b,c)), we have that the numerator</p>
+<div class="displaymath">
+\begin{equation*}
+\log\Big(\frac{\sin x}{x}\Big)
+=\log(1+X)
+= X +O(X^2)
+=-\frac{1}{3!}x^2+O(x^4)
+\end{equation*}
+</div>
+<p>and the limit</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x\rightarrow 0}\frac{\log\big(\frac{\sin x}{x}\big)}{x^2}
+\amp=\lim_{x\rightarrow 0}\frac{-\frac{1}{3!}x^2+O(x^4)}{x^2}
+=\lim_{x\rightarrow 0}\Big[-\frac{1}{3!}+O(x^2)\Big]
+=-\frac{1}{3!}\\
+\amp=-\frac{1}{6}
+\end{align*}
+</div></article></div>
+<article class="example-like" id="eg_bigohlimitD"><a knowl="" class="id-ref" refid="hk-eg_bigohlimitD"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.6.36</span> <span class="title">Yet another difficult limit</span>
+</h6></a></article><div id="hk-eg_bigohlimitD" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-5656">Evaluate</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{x\rightarrow 0}\frac{e^{x^2}-\cos x}{\log(1+x)-\sin x}
+\end{equation*}
+</div>
+<p id="p-5657"><em class="alert">Solution:</em> <em class="emphasis">Step 1</em>: Find the limit of the denominator.</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{x\rightarrow 0}\big[\log(1+x)-\sin x\big]
+=\log(1+0)-\sin 0
+=0
+\end{equation*}
+</div>
+<p>This tells us that we can't evaluate the limit just by  finding the limits of the numerator and denominator separately and then dividing.</p>
+<p id="p-5658"><em class="emphasis">Step 2</em>: Determine the leading order behaviour of the denominator near \(x=0\text{.}\) By equations <a knowl="./knowl/eq_bigohlog.html" title="Equation 3.6.30">3.6.30</a>  and <a knowl="./knowl/eq_SRsincosExp.html" title="Equation 3.6.26">3.6.26</a>,</p>
+<div class="displaymath">
+\begin{align*}
+\log(1+x) &amp; = x-\tfrac{1}{2}x^2+\tfrac{1}{3}x^3-\cdots\\
+\sin x &amp; = x-\tfrac{1}{3!}x^3+\tfrac{1}{5!}x^5-\cdots
+\end{align*}
+</div>
+<p>Taking the difference of these expansions gives</p>
+<div class="displaymath">
+\begin{equation*}
+\log(1+x)-\sin x = -\tfrac{1}{2}x^2+\big(\tfrac{1}{3}
++\tfrac{1}{3!}\big)x^3 +\cdots
+\end{equation*}
+</div>
+<p>This tells us that, for \(x\) near zero, the denominator is  \(-\tfrac{x^2}{2}\) (that's the leading order term) plus contributions that are of order \(x^3\) and smaller. That is</p>
+<div class="displaymath">
+\begin{equation*}
+\log(1+x)-\sin x = -\tfrac{x^2}{2}+ O(|x|^3)
+\end{equation*}
+</div>
+<p id="p-5659"><em class="emphasis">Step 3</em>: Determine the behaviour of the numerator near \(x=0\) to order \(x^2\) with errors of order \(x^3\) and smaller (just like the denominator). By equation <a knowl="./knowl/eq_SRexpExp.html" title="Equation 3.6.28">3.6.28</a></p>
+<div class="displaymath">
+\begin{equation*}
+e^X=1+X+O\big(X^2\big)
+\end{equation*}
+</div>
+<p>Substituting \(X=x^2\)</p>
+<div class="displaymath">
+\begin{align*}
+e^{x^2} &amp; = 1+x^2 +O\big(x^4\big)\\
+\cos x &amp; = 1-\tfrac{1}{2}x^2+O\big(x^4\big)
+\end{align*}
+</div>
+<p>by equation <a knowl="./knowl/eq_SRsincosExp.html" title="Equation 3.6.26">3.6.26</a>. Subtracting, the numerator</p>
+<div class="displaymath">
+\begin{equation*}
+e^{x^2}-\cos x = \tfrac{3}{2}x^2+O\big(x^4\big)
+\end{equation*}
+</div>
+<p id="p-5660"><em class="emphasis">Step 4</em>: Evaluate the limit.</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x\rightarrow 0}\frac{e^{x^2}-\cos x}{\log(1+x)-\sin x}
+&amp; =\lim_{x\rightarrow 0}\frac{\frac{3}{2}x^2+O(x^4)}
+{-\frac{x^2}{2}+ O(|x|^3)}\\
+&amp; =\lim_{x\rightarrow 0}\frac{\frac{3}{2}+O(x^2)}
+{-\frac{1}{2}+ O(|x|)}\\
+&amp;
+=\frac{\frac{3}{2}} {-\frac{1}{2}}
+=-3
+\end{align*}
+</div></article></div></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:20:24+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>(c)</p>
+<ul class="disc">
+<li>Solution 1: Integrate by parts, using \(u=\log(1+x^2)\) and \(\dee{v}=x\,\dee{x}\text{,}\) so that \(\dee{u}=\frac{2x}{1+x^2}\text{,}\) \(v=\frac{x^2}{2}\text{.}\)<div class="displaymath">
+\begin{align*}
+\int_0^1 x\log(1+x^2)\,\dee{x}
+&amp;=\Big[\frac{1}{2} x^2\log(1+x^2)\Big]_0^1-\int_0^1 \frac{x^3}{1+x^2}\,\dee{y}\\
+\amp=\frac{1}{2} \log 2 -\int_0^1\Big[x-\frac{x}{1+x^2}\Big]\,\dee{x}\\
+&amp;=\frac{1}{2} \log 2 -\Big[\frac{x^2}{2}-\frac{1}{2}\log(1+x^2)\Big]_0^1\\
+\amp=\log 2-\frac{1}{2}\approx 0.193
+\end{align*}
+</div>
+</li>
+<li>Solution 2: First substitute \(y=1+x^2\text{,}\) \(\dee{y}=2x\,\dee{x}\text{.}\)<div class="displaymath">
+\begin{gather*}
+\int_0^1 x\log(1+x^2)\,\dee{x}
+=\frac{1}{2}\int_1^2\log y\ \dee{y}
+\end{gather*}
+</div>Then integrate by parts, using \(u=\log y\) and \(\dee{v}=\dee{y}\text{,}\) so that \(\dee{u}=\frac{1}{y}\text{,}\) \(v=y\text{.}\)<div class="displaymath">
+\begin{align*}
+\int_0^1 x\log(1+x^2)\,\dee{x}
+\amp=\frac{1}{2}\int_1^2\log y\ \dee{y}\\
+\amp=\Big[\frac{1}{2} y\log y\Big]_1^2-\frac{1}{2}\int_1^2 y\frac{1}{y}\,\dee{y}
+=\log 2-\frac{1}{2}\\
+\amp\approx 0.193
+\end{align*}
+</div>
+</li>
+</ul>
+<span class="incontext"><a href="exercises-13.html#p-3003">in-context</a></span>
+</body>
+</html>

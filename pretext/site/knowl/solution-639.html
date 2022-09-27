@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:22:58+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">3.3.11.50.1</span>
+</h6>
+<p>By the divergence test, the fact that \(\displaystyle\sum_{n=1}^\infty\frac{na_n-2n+1}{n+1}\) converges guarantees that \(\lim\limits_{n\rightarrow\infty}\dfrac{na_n-2n+1}{n+1}=0\text{,}\) or equivalently, that</p>
+<div class="displaymath">
+\begin{gather*}
+0=\lim_{n\rightarrow\infty}\frac{n}{n+1}a_n
+-\lim_{n\rightarrow\infty}\frac{2n-1}{n+1}
+=\lim_{n\rightarrow\infty}a_n -2
+\iff \lim_{n\rightarrow\infty}a_n = 2
+\end{gather*}
+</div>
+<p>The series of interest can be written \(-\log a_1 + \sum\limits_{n=1}^\infty \big[\log(a_n)-\log(a_{n+1})\big]\) which looks like a telescoping  series. So we'll compute the partial sum</p>
+<div class="displaymath">
+\begin{align*}
+S_N&amp;=-\log a_1 + \sum_{n=1}^N \big[\log(a_n)-\log(a_{n+1})\big]\\
+&amp;=-\log a_1 + \big[\log(a_1)-\log(a_2)\big]
++ \big[\log(a_2)-\log(a_3)\big]
++ \cdots\\
+\amp\hskip1in
++ \big[\log(a_N)-\log(a_{N+1})\big]\\
+&amp;=-\log(a_{N+1})
+\end{align*}
+</div>
+<p>and then take the limit \(N\rightarrow\infty\)</p>
+<div class="displaymath">
+\begin{align*}
+-\log a_1 + \sum_{n=1}^\infty \big[\log(a_n)-\log(a_{n+1})\big]
+\amp=\lim_{N\rightarrow\infty} S_N
+=- \lim_{N\rightarrow\infty} \log(a_{N+1})\\
+\amp=-\log 2 =\log\frac{1}{2}
+\end{align*}
+</div>
+</div>
+<span class="incontext"><a href="exercises-20.html#solution-639">in-context</a></span>
+</body>
+</html>

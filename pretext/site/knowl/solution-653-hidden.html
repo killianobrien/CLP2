@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:23:06+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>The terms of this series are sometimes negative (for odd values of \(n\) where  \(\sin n  \lt \frac{1}{2}\)) and sometimes positive. But, they are not strictly alternating, so we can't use the alternating series test. Instead, we use a direct comparison test to show the series converges absolutely.</p>
+<div class="displaymath">
+\begin{align*}
+-\frac14&amp;\le \frac{\sin n}{4} \le \frac14\\
+\Rightarrow \qquad\left(-\frac{1}{4}-\frac{1}{8}\right)&amp;\le\left( \frac{\sin x}{4} -\frac18\right) \lt  \left(\frac14-\frac18\right)\\
+\Rightarrow \qquad -\frac{3}{8} &amp;\le\left( \frac{\sin x}{4} -\frac18\right) \lt  \frac{1}{8}\\
+\Rightarrow \qquad 0 &amp;\le\left| \frac{\sin x}{4} -\frac18\right| \lt  \frac{3}{8}\\
+\Rightarrow \qquad 0 &amp;\le\left|\left( \frac{\sin x}{4} -\frac18\right)^n\right| \lt  \left(\frac{3}{8}\right)^n
+\end{align*}
+</div>
+<p>Since \(\displaystyle\sum_{n=1}^{\infty} \left(\frac{3}{8}\right)^n\) converges (it's a geometric sum with \(|r| \lt 1\)), by the direct comparison test, \(\displaystyle\sum_{n=1}^{\infty} \left|\left( \frac{\sin x}{4} -\frac18\right)^n\right|\) converges as well.</p>
+<p>Then \(\displaystyle\sum_{n=1}^{\infty} \left( \frac{\sin x}{4} -\frac18\right)^n\) converges absolutely — and so it converges.</p>
+</div></body>
+</html>

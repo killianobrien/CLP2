@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:21:24+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p><em class="alert">Solution:</em> Denote by \(Q(t)\) the amount of salt in the tank at time \(t\text{.}\) In a very short time interval \(\dee{t}\text{,}\) the incoming solution adds \(20\, \dee{t}\) liters of a solution carrying \(0.1\) kg/li. So the incoming solution adds \(0.1\times 20\, \dee{t}=2\, \dee{t}\) kg of salt. In the same time interval \(20\, \dee{t}\) liters is drained from the tank. The concentration of the drained brine is \(\frac{Q(t)}{1500}\text{.}\) So \(\frac{Q(t)}{1500} 20\, \dee{t}\) kg were  removed. All together, the change in the salt content of the tank during  the short time interval is</p>
+<div class="displaymath">
+\begin{equation*}
+dQ=2\, \dee{t}-\frac{Q(t)}{1500} 20\, \dee{t} =\Big(2-\frac{Q(t)}{75}\Big) \dee{t}
+\end{equation*}
+</div>
+<p>The rate of change of salt content per unit time is</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{dQ}{dt}=2-\frac{Q(t)}{75} =-\frac{1}{75}\big(Q(t)-150\big)
+\end{equation*}
+</div>
+<p>The solution of this equation  is</p>
+<div class="displaymath">
+\begin{equation*}
+Q(t)=\big\{Q(0)-150\big\}e^{-t/75} + 150
+\end{equation*}
+</div>
+<p>by Theorem <a knowl="./knowl/thm_linearODE.html" title="Theorem 2.4.4">2.4.4</a>, with \(a=-\frac{1}{75}\) and \(b=150\text{.}\)  At time \(0\text{,}\) \(Q(0)=1500\times 0.3=450\text{.}\) So</p>
+<div class="displaymath">
+\begin{equation*}
+Q(t)=150+300e^{-t/75}
+\end{equation*}
+</div>
+<span class="incontext"><a href="subsection-38.html#p-4030">in-context</a></span>
+</body>
+</html>

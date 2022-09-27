@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:23:04+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>To verify that  our intuition is correct, we apply the limit comparison test with</p>
+<div class="displaymath">
+\begin{gather*}
+a_n= \frac{n^2-\sin n}{n^6+n^2} \quad\text{and}\quad b_n= \frac{1}{n^4}
+\end{gather*}
+</div>
+<p>which is valid since</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{n\rightarrow\infty} \frac{a_n}{b_n}
+\amp=\lim_{n\rightarrow\infty}\left|\frac{(n^2-\sin n)}{n^6+n^2}\right|\cdot\frac{n^4}{1}
+=\lim_{n\rightarrow\infty}\frac{|n^6-n^4\sin n|}{n^6+n^2}\\
+\amp=\lim_{n\rightarrow\infty}\frac{1-n^{-2}\sin n}{1+n^{-4}}
+=1
+\end{align*}
+</div>
+<p>exists and is nonzero. Since the series \(\sum\limits_{n=1}^\infty b_n\) converges, the series \(\sum\limits_{n=1}^\infty\dfrac{|n^2-\sin n|}{n^6+n^2}\) converges too. Therefore, the series \(\sum\limits_{n=1}^\infty\dfrac{n^2-\sin n}{n^6+n^2}\) converges absolutely.</p>
+<span class="incontext"><a href="exercises-21.html#p-5285">in-context</a></span>
+</body>
+</html>

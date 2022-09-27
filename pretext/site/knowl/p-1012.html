@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:27+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Setting \(\textcolor{red}{u=\log x}\text{,}\) we have \(\textcolor{blue}{\dee{u} = \frac{1}{x}\,\dee{x}}\) and so</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{e}^{e^4} \frac{\textcolor{blue}{\dee{x}}}{\textcolor{blue}x\cdot\textcolor{red}{\log x}}
+= \int_{x=e}^{x=e^4} \frac1{\textcolor{red}{\log x}} \cdot \textcolor{blue}{\frac{1}{x}\,\dee{x} }
+= \int_{u=1}^{u=4} \frac{1}{\textcolor{red}u}\,\textcolor{blue}{ \dee{u}},
+\end{equation*}
+</div>
+<p>since \(u=\log(e)=1\) when \(x=e\) and \(u=\log(e^4)=4\) when \(x=e^4\text{.}\) Then, by the Fundamental Theorem of Calculus Part 2,</p>
+<div class="displaymath">
+\begin{equation*}
+\int_{1}^{4} \frac{1}{u}\, \dee{u}
+= \Big[\log |u| \Big]_{1}^{4} = \log 4 - \log 1 = \log 4.
+\end{equation*}
+</div>
+<span class="incontext"><a href="exercises-4.html#p-1012">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:35+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>Suppose we choose \(\dee{v} = f(x)\dee{x}\text{,}\) \(u=1\text{.}\) Then \(v = \displaystyle\int f(x)\dee{x}\text{,}\) and \(\dee{u}=\dee{x}\text{.}\) So, our integral becomes:</p>
+<div class="displaymath">
+\begin{align*}
+\int \underbrace{(1)}_{u}\underbrace{f(x)\dee{x}}_{\dee{v}}&amp;=
+\underbrace{(1)}_{u}\underbrace{\int f(x)\dee{x}}_{v} - \int\underbrace{ \left(\int f(x)\dee{x}\right)}_{v}\underbrace{\dee{x}}_{\dee{u}}
+\end{align*}
+</div>
+<p>In order to figure out the first product (and the second integrand), you need to know the antiderivative of \(f(x)\)--but that's exactly what you're trying to figure out! So, using integration by parts has not eased your pain.</p>
+<p>We note here that in certain cases, such as \(\int\log x \dee{x}\) (Example <a knowl="./knowl/eg_PRTSlnx.html" title="Example 1.7.8: \(\int \log x\dee{x}\)">1.7.8</a> in your text), it is useful to choose \(\dee{v}=1\dee{x}\text{.}\) This is similar to, but crucially different from, the do-nothing method in this problem.</p>
+</div></body>
+</html>

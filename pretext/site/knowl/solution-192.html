@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:35+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">1.7.2.8.1</span>
+</h6>
+<p>To integrate by parts, we need to decide what to use as \(u\text{,}\) and what to use as \(\dee{v}\text{.}\) The salient parts of this integrand are \(x\) and \(\sin x\text{,}\) so we only need to decide which is \(u\) and which \(\dee{v}\text{.}\) Again, this process will soon become familiar, but to help you along we show you both options below.</p>
+<div class="displaymath">
+\begin{equation*}
+\IBP{x}{x}{1}{\dfrac{1}{2}x^2}{\sin x}{\cos x}{-\cos x}
+\end{equation*}
+</div>
+<p>The derivative and antiderivative of sine are almost the same, but \(x\) turns into something simpler when we differentiate it. So, we choose Option 1.</p>
+<p>We integrate by parts, using \(u = x\text{,}\) \(\dee{v} =\sin x \,\dee{x}\) so that \(v=-\cos x\) and \(\dee{u} = \dee{x}\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+\int_0^\pi x\sin x\,\dee{x}
+&amp;= \underbrace{-x\cos x}_{uv} \Big|_0^\pi -\int_0^\pi \underbrace{(-\cos x)}_v\,\underbrace{\dee{x}}_{\dee{u}}\\
+&amp;= \Big[-x\cos x +\sin x\Big]_0^\pi
+=-\pi(-1)
+=\pi
+\end{align*}
+</div>
+</div>
+<span class="incontext"><a href="exercises-7.html#solution-192">in-context</a></span>
+</body>
+</html>

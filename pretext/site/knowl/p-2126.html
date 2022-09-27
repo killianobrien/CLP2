@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:51+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Notice that we could rewrite each line as</p>
+<div class="displaymath">
+\begin{align*}
+\frac{A_{1}}{x-a}+\frac{A_{2}}{(x-a)^2}+\cdots+\frac{A_{m}}{(x-a)^{m}}
+&amp;=\frac{A_{1}(x-a)^{m-1}+A_{2}(x-a)^{m-2}+\cdots+A_{m}}{(x-a)^m}\\
+&amp;=\frac{B_{1}x^{m-1}+B_{2}x^{m-2}+\cdots+B_{m}}{(x-a)^m}
+\end{align*}
+</div>
+<p>which is a polynomial whose degree, \(m-1\text{,}\) is strictly smaller than that of the denominator \((x-a)^m\text{.}\) But the form of Equation <a knowl="./knowl/eq_PFdecompb.html" title="Claim 1.10.8">1.10.8</a> is preferable  because it is easier to integrate.</p>
+<div class="displaymath">
+\begin{align*}
+\int \frac{A}{x-a}\dee{x} &amp;= A \log|x-a| +C\\
+\int \frac{A}{(x-a)^k} \dee{x} &amp;= -\frac{1}{k-1} \cdot \frac{A}{(x-a)^{k-1}} &amp;
+\text{provided }k \gt 1.
+\end{align*}
+</div>
+<span class="incontext"><a href="subsection-20.html#p-2126">in-context</a></span>
+</body>
+</html>

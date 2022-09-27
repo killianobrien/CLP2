@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:24:34+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="hiddenproof"><ol class="lower-alpha">
+<li>For any two complex numbers \(z_1=x_1+iy_1\) and \(z_2=x_2+iy_2\text{,}\) with \(x_1\text{,}\) \(y_1\text{,}\) \(x_2\text{,}\) \(y_2\) real,<div class="displaymath">
+\begin{align*}
+&amp;e^{z_1}e^{z_2}
+= e^{x_1}(\cos y_1+i \sin y_1)e^{x_2}(\cos y_2+i \sin y_2) \\
+&amp;= e^{x_1+x_2}(\cos y_1+i \sin y_1)(\cos y_2+i \sin y_2) \\
+&amp;= e^{x_1+x_2}\left\{(\cos y_1\cos y_2\!-\!\sin y_1\sin y_2)
++i (\cos y_1\sin y_2\!+\!\cos y_2\sin y_1)\right\} \\
+&amp;= e^{x_1+x_2}\left\{\cos(y_1+y_2)+i\sin(y_1+y_2)\right\}
+\end{align*}
+</div>by the trig identities of Appendix <a href="sec_trig_add.html" class="xref" title="Section A.8: Trigonometry — Add and Subtract Angles">A.8</a>. This says exactly that<div class="displaymath">
+\begin{equation*}
+e^{z_1}e^{z_2}= e^{(x_1+x_2)+i(y_1+y_2)} = e^{z_1+z_2}
+\end{equation*}
+</div>and that the familiar multiplication formula also applies to complex exponentials.</li>
+<li>For any real number \(t\) and any complex number \(c=\alpha+i\beta\text{,}\) with \(\alpha\text{,}\) \(\beta\) real,<div class="displaymath">
+\begin{equation*}
+e^{ct}=e^{\alpha t+i\beta t}=e^{\alpha t}[\cos( \beta t)+i\sin(\beta t)]
+\end{equation*}
+</div>so that the derivative with respect to \(t\)<div class="displaymath">
+\begin{align*}
+\diff{}{t} e^{ct}
+&amp;=\alpha e^{\alpha t}[\cos( \beta t)+i\sin(\beta t)]
++e^{\alpha t}[-\beta\sin( \beta t)+i\beta \cos(\beta t)] \\
+&amp;=(\alpha+i\beta) e^{\alpha t}[\cos( \beta t)+i\sin(\beta t)] \\
+&amp;=ce^{ct}
+\end{align*}
+</div>is also the familiar one.</li>
+</ol></article></body>
+</html>

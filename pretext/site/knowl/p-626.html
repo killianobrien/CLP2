@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:22+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p><em class="alert">Solution:</em></p>
+<ul class="disc">
+<li>Once again, the crux of the solution is guessing the antiderivative of \(\sin x\)  — that is finding a function whose derivative  is \(\sin x\text{.}\)</li>
+<li>The standard derivative that comes closest to \(\sin x\) is<div class="displaymath">
+\begin{gather*}
+\diff{}{x}\cos x = -\sin x
+\end{gather*}
+</div>which is the derivative we want, multiplied by a factor of \(-1\text{.}\)</li>
+<li>Just as we did in the previous example, we multiply this equation by a constant to  remove this unwanted factor:<div class="displaymath">
+\begin{align*}
+(-1)\cdot \diff{}{x}\cos x &amp;= (-1)\cdot(-\sin x) &amp;\text{giving us}\\
+\diff{}{x}\big(-\cos x\big) &amp;= \sin x
+\end{align*}
+</div>This tells us that \(-\cos x\) is an antiderivative of \(\sin x\text{.}\)</li>
+<li>Now it is straightforward to compute the integral:<div class="displaymath">
+\begin{align*}
+\int_0^{\frac{\pi}{2}} \sin x\dee{x}
+&amp;= \left.-\cos x \right|_0^{\frac{\pi}{2}}
+\qquad\text{since $-\cos x$ is an antiderivative of $\sin x$}\\
+&amp;= -\cos\frac{\pi}{2}+\cos 0\\
+&amp;= 0+1=1
+\end{align*}
+</div>
+</li>
+</ul>
+<span class="incontext"><a href="subsection-10.html#p-626">in-context</a></span>
+</body>
+</html>

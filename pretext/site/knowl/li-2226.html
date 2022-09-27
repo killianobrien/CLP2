@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:22:34+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="listitem"><h6 class="heading"><span class="type">Item</span></h6>We'll now show that the limit of \(\big(n+1\big)^{\frac{1}{2n}}\) as \(n\to\infty\) is exactly \(1\text{.}\) To do, so we first compute the limit  of the logarithm.<div class="displaymath">
+\begin{align*}
+\lim_{n\to\infty}\log \big(n+1\big)^{\frac{1}{2n}}
+&amp;=\lim_{n\to\infty}\frac{\log \big(n+1\big)}{2n}
+\qquad&amp;\text{now apply Theorem }\knowl{./knowl/thm_SRxlimtoanlim.html}{\text{3.1.6}}\\
+&amp;=\lim_{t\to\infty}\frac{\log \big(t+1\big)}{2t}\\
+&amp;=\lim_{t\to\infty}\frac{\frac{1}{t+1}}{2} \qquad&amp;\text{by l'Hôpital}\\
+&amp;=0
+\end{align*}
+</div>So<div class="displaymath">
+\begin{gather*}
+\lim_{n\to\infty}\big(n+1\big)^{\frac{1}{2n}}
+=\lim_{n\to\infty}\exp\big\{\log \big(n+1\big)^{\frac{1}{2n}}\big\}
+= e^0=1
+\end{gather*}
+</div>An essentially identical computation also gives that  \(\lim_{n\to\infty}\big(2n+3)^{-\frac{1}{n}} = e^0=1\text{.}\)</article><span class="incontext"><a href="sec_RootTest.html#li-2226">in-context</a></span>
+</body>
+</html>

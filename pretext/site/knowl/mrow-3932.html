@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:20:51+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="displaymath">
+\begin{align*}
+&amp;\frac{1}{8760}\int_0^{8760}\left(400+\textcolor{red}{50\cos\left(\frac{t}{12}\pi\right)}+\textcolor{blue}{200\cos\left(\frac{t}{4380}\pi\right)}\right)\,\dee{t}\\
+&amp;=\frac{1}{8760}\int_0^{8760}400\,\dee{t}
++
+\textcolor{red}{\frac{50}{8760}\int_0^{8760}\cos\left(\frac{t}{12}\pi\right)\,\dee{t}}\\
+\amp\hskip2in+
+\textcolor{blue}{\frac{200}{8760}\int_0^{8760}\cos\left(\frac{t}{4380}\pi\right)\,\dee{t}}\\
+&amp;= 400 +\textcolor{red}{ \frac{5}{876}\left[\frac{12}{\pi}\sin\left(\frac{t}{12}\pi\right)\right]_0^{8760}}+
+\textcolor{blue}{\frac{5}{219}\left[\frac{4380}{\pi}\sin\left(\frac{t}{4380}\pi\right)\right]_0^{8760}}\\
+\end{align*}
+<p class="intertext">Since \(\frac{8760}{12} = 730\text{,}\) which is even, \(\sin\left(\frac{8760}{12}\pi\right)=\sin(0)=0\text{.}\) Also, \(\sin\left(\frac{8760}{4380}\pi\right)=\sin(2\pi)=0\text{.}\)</p>
+\begin{align*}
+&amp;=400+\textcolor{red}{\frac{5}{876}(0}) + \textcolor{blue}{\frac{5}{219}(0)}\\
+&amp;=400\quad\text{ ppm}
+\end{align*}
+</div>
+<span class="incontext"><a href="exercises-15.html#mjx-eqn-mrow-3932">in-context</a></span>
+</body>
+</html>

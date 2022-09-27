@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:24:49+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Given \(\varepsilon&gt;0\text{,}\) \(t_n\text{,}\) \(y_n\) and the current step size \(h\)</p>
+<ul class="disc">
+<li>compute<div class="displaymath">
+\begin{align*}
+A_{1,n+1}&amp;=y_n+hf(t_n,y_n) \\
+A_{2,n+1} &amp;= y_n+\tfrac{h}{2}f(t_n,y_n)
++\tfrac{h}{2}f\big(t_n+\tfrac{h}{2}\,,\,y_n+\tfrac{h}{2}f(t_n,y_n)\big)\\
+r&amp;=\frac{|A_{1,n+1}-A_{2,n+1}|}{h}
+\end{align*}
+</div>
+</li>
+<li>If \(r&gt;\varepsilon\text{,}\) repeat the first bullet but with the new step size<div class="displaymath">
+\begin{equation*}
+(\text{new }h)=0.9\,\frac{\varepsilon}{r}\,(\text{old }h)
+\end{equation*}
+</div>
+</li>
+<li>If \(r\lt\varepsilon\) set<div class="displaymath">
+\begin{align*}
+t_{n+1}&amp;=t_n+h \\
+y_{n+1}&amp;=2A_{2,n+1}-A_{1,n+1}\quad\text{and the new trial step size} \\
+(\text{new } h)&amp;=0.9\,\frac{\varepsilon}{r}\,(\text{old }h)
+\end{align*}
+</div>and move on to the next step. Note that since \(r\lt\varepsilon\text{,}\) \(\frac{r}{\varepsilon}h\gt h\) which indicates that the new \(h\) can be larger than the old \(h\text{.}\) We include the \(0.9\) to be careful not to make the error of the next step too big.</li>
+</ul>
+<span class="incontext"><a href="ssec_final_E_E2.html#p-6261">in-context</a></span>
+</body>
+</html>

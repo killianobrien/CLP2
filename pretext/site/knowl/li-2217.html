@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:22:32+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="listitem"><h6 class="heading"><span class="type">Item</span></h6>
+<p>Before considering the general “\(n\)-book tower”, let's now put  books #1, #2 and #3 on the table, with the right hand edge of book #1 at \(x=x_1\text{,}\) the right hand edge of book #2 at  \(x=x_2\text{,}\) and the right  hand edge of book #3 at \(x=x_3\text{,}\) as in the figure below.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/bookStackV3a.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<ul class="circle">
+<li>In order for book #3 to not topple off of book #2, we need the centre of mass of book #3 to lie above book #2. That is, we need the \(x\)-coordinate of the centre mass of \(B_3\text{,}\) which is \(\bar X(B_3)=x_3-\frac{L}{2}\text{,}\) to obey<div class="displaymath">
+\begin{equation*}
+\bar X(B_3) \le x_2
+\iff
+x_3-\frac{L}{2} \le x_2
+\iff
+x_3\le x_2+\frac{L}{2}
+\end{equation*}
+</div>
+</li>
+<li>
+<p>Assuming that book #3 does not topple off of book #2, we still need to arrange that the pair of books, book #2 plus book #3 (the red object in the figure below), does not topple off of book #1.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/bookStackV3b.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p>In order for this combined red object to not topple off of book #1, we need the \(x\)-coordinate of its centre mass, which we denote \(\bar X(B_2\cup B_3)\text{,}\) to obey</p>
+<div class="displaymath">
+\begin{equation*}
+\bar X(B_2\cup B_3) \le x_1
+\end{equation*}
+</div>
+<p>The centre of mass of the combined red object is the weighted average  of the centre of masses of \(B_2\) and \(B_3\text{.}\) As \(B_2\) and \(B_3\) have the same weight,</p>
+<div class="displaymath">
+\begin{align*}
+\bar X(B_2\cup B_3) &amp;= \frac{1}{2}\bar X(B_2) +\frac{1}{2}\bar X(B_3)
+= \frac{1}{2}\Big(x_2-\frac{L}{2}\Big)
++\frac{1}{2}\Big(x_3-\frac{L}{2}\Big)\\
+&amp;= \frac{1}{2}(x_2+x_3) -\frac{L}{2}
+\end{align*}
+</div>
+<p>and the combined red object does not topple off of book #1 if</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{2}(x_2+x_3) -\frac{L}{2} \le x_1
+\iff
+x_2+x_3\le 2x_1+L
+\end{equation*}
+</div>
+</li>
+<li>
+<p>Assuming that book #3 does not topple off of book #2, and also that the combined book #2 plus book #3 does not topple off of book #1, we still need to arrange that the whole tower of books, book #1 plus book #2 plus book #3 (the red object in the figure below), does not topple off of the table.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/bookStackV3c.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p>In order for this combined red object to not topple off of the table, we need the \(x\)-coordinate of its centre mass, which we denote \(\bar X(B_1\cup B_2\cup B_3)\text{,}\) to obey</p>
+<div class="displaymath">
+\begin{equation*}
+\bar X(B_1\cup B_2\cup B_3) \le 0
+\end{equation*}
+</div>
+<p>The centre of mass of the combined red object is the weighted average  of the centre of masses of \(B_1\) and \(B_2\) and \(B_3\text{.}\) As they all have the same weight,</p>
+<div class="displaymath">
+\begin{align*}
+\bar X(B_1\cup B_2\cup B_3) &amp;= \frac{1}{3}\bar X(B_1) +\frac{1}{3}\bar X(B_2)
++\frac{1}{3}\bar X(B_3)\\
+&amp;=  \frac{1}{3}\Big(x_1-\frac{L}{2}\Big)
++\frac{1}{3}\Big(x_2-\frac{L}{2}\Big)
++\frac{1}{3}\Big(x_3-\frac{L}{2}\Big)\\
+&amp;= \frac{1}{3}(x_1+x_2+x_3) -\frac{L}{2}
+\end{align*}
+</div>
+<p>and the combined red object does not topple off of the table if</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{3}(x_1+ x_2+x_3) -\frac{L}{2} \le 0
+\iff
+x_1+ x_2+x_3\le \frac{3L}{2}
+\end{equation*}
+</div>
+</li>
+</ul>
+<p>In conclusion, our three-book tower survives if</p>
+<div class="displaymath">
+\begin{gather*}
+x_3\le x_2+\frac{L}{2}\qquad\text{and}\qquad x_2+x_3\le 2x_1 + L
+\qquad\text{and}\qquad x_1+ x_2+x_3\le \frac{3L}{2}
+\end{gather*}
+</div>
+<p>In particular, we may choose \(x_1\text{,}\) \(x_2\) and \(x_3\) to satisfy</p>
+<div class="displaymath">
+\begin{align*}
+x_1+ x_2+x_3&amp;= \frac{3L}{2}\qquad\text{and}\\
+x_2+x_3&amp;= 2x_1 + L \qquad\text{and}\\
+x_3 &amp;= \frac{L}{2} + x_2
+\end{align*}
+</div>
+<p>Substituting the second equation into the first gives</p>
+<div class="displaymath">
+\begin{gather*}
+3x_1 +L = \frac{3L}{2}
+\implies x_1 = \frac{L}{2}\Big(\frac{1}{3}\Big)
+\end{gather*}
+</div>
+<p>Next substituting the third equation into the second, and then using the formula above for \(x_1\text{,}\) gives</p>
+<div class="displaymath">
+\begin{gather*}
+2x_2 +\frac{L}{2} = 2x_1+L = \frac{L}{3} + L
+\implies x_2 = \frac{L}{2}\Big(\frac{1}{2}+\frac{1}{3}\Big)
+\end{gather*}
+</div>
+<p>and finally</p>
+<div class="displaymath">
+\begin{gather*}
+x_3 = \frac{L}{2} + x_2
+= \frac{L}{2}\Big(1+\frac{1}{2}+\frac{1}{3}\Big)
+\end{gather*}
+</div></article><span class="incontext"><a href="sec_Stack.html#li-2217">in-context</a></span>
+</body>
+</html>

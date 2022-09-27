@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:24:40+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>We'll illustrate the idea using Simpson's rule applied to the integral \(\int_a^b f(x)\ \dee{x}\text{,}\) and assuming that we want the error to be no more than (approximately) some fixed constant  \(\varepsilon\text{.}\) For example, \(\varepsilon\) could be \(10^{-6}\text{.}\) Denote by \(S(a',b'\,;\,h')\text{,}\) the answer given when Simpson's rule is applied to the integral \(\int_{a'}^{b'} f(x)\ \dee{x}\) with step size \(h'\text{.}\)</p>
+<ul class="disc">
+<li>
+<em class="emphasis">Step 1.</em> We start by applying Simpson's rule, combined with Richardson extrapolation so as to get an error estimate, with the largest possible step size \(h\text{.}\) Namely, set \(h=\tfrac{b-a}{2}\) and compute<div class="displaymath">
+\begin{equation*}
+f(a)\quad
+f\big(a+\tfrac{h}{2}\big)\quad
+f(a+h)=f\big(\tfrac{a+b}{2}\big)\quad
+f\big(a+\tfrac{3h}{2}\big)\quad
+f(a+2h)=f(b)
+\end{equation*}
+</div>Then<div class="displaymath">
+\begin{equation*}
+S\big(a,b\,;h\big)
+=\tfrac{h}{3}\big\{f(a)+4 f\big(a+h\big)+f(b)\big\}
+\end{equation*}
+</div>and<div class="displaymath">
+\begin{align*}
+S\big(a,b\,;\tfrac{h}{2}\big)
+&amp;=\tfrac{h}{6}\big\{f(a)+4 f\big(a+\tfrac{h}{2}\big)
++2f\big(\tfrac{a+b}{2}\big)
++4 f\big(a+\tfrac{3h}{2}\big)
++f(b)\big\}\\
+&amp;=S\big(a,\tfrac{a+b}{2}\,;\tfrac{h}{2}\big)
++S\big(\tfrac{a+b}{2},b\,;\tfrac{h}{2}\big)
+\end{align*}
+</div>with<div class="displaymath">
+\begin{align*}
+S\big(a,\tfrac{a+b}{2}\,;\,\tfrac{h}{2}\big)
+&amp;=\tfrac{h}{6}\big\{f(a)+4 f\big(a+\tfrac{h}{2}\big)
++f\big(\tfrac{a+b}{2}\big)\big\} \\
+S\big(\tfrac{a+b}{2},b\,;\,\tfrac{h}{2}\big)
+&amp;=\tfrac{h}{6}\big\{f\big(\tfrac{a+b}{2}\big)+4 f\big(a+\tfrac{3h}{2}\big)
++f(b)\big\}
+\end{align*}
+</div>Using the Richardson extrapolation formula (E4a) with \(k=4\) gives that the error in \(S\big(a,b\,;\,\tfrac{h}{2}\big)\) is (approximately)<div class="displaymath">
+\begin{equation*}
+\big|K\big(\tfrac{h}{2}\big)^4\big|=\tfrac{1}{15}\Big|
+S\big(a,b\,;\,\tfrac{h}{2}\big)
+-S\big(a,b\,;\,h\big)\Big|
+\tag{E7}
+\end{equation*}
+</div>If this is smaller than \(\varepsilon\text{,}\) we have (approximately) the desired accuracy and stop<a knowl="./knowl/fn-252-hidden.html" title="Footnote C.3.1"><sup> 1 </sup></a>.</li>
+<li>
+<p><em class="emphasis">Step 2.</em> If (E7) is larger than \(\varepsilon\text{,}\) we divide the original integral \(I=\int_a^b f(x)\,\dee{x}\) into two “half-sized” integrals, \(I_1=\int_a^{\tfrac{a+b}{2}} f(x)\,\dee{x}\) and \(I_2=\int_{\tfrac{a+b}{2}}^b f(x)\,\dee{x}\) and repeat the procedure of Step 1 on each of them, but with \(h\) replaced by \(\tfrac{h}{2}\) and \(\varepsilon\) replaced by \(\tfrac{\varepsilon}{2}\) — if we can find an approximation, \(\tilde I_1\text{,}\) to \(I_1\) with an error less than \(\tfrac{\varepsilon}{2}\) and an approximation, \(\tilde I_2\text{,}\) to \(I_2\) with an error less than \(\tfrac{\varepsilon}{2}\text{,}\) then \(\tilde I_1+\tilde I_2\) approximates \(I\) with an error less than \(\varepsilon\text{.}\) Here is more detail.</p>
+<ul class="circle">
+<li>If the error in the approximation \(\tilde I_1\) to \(I_1\) and the error in the approximation \(\tilde I_2\) to \(I_2\) are both acceptable, then we use \(\tilde I_1\) as our final approximation to \(I_1\) and we use \(\tilde I_2\) as our final approximation to \(I_2\text{.}\)</li>
+<li>If the error in the approximation \(\tilde I_1\) to \(I_1\) is acceptable but the error in the approximation \(\tilde I_2\) to \(I_2\) is not acceptable, then we use \(\tilde I_1\) as our final approximation to \(I_1\) but we subdivide the integral \(I_2\text{.}\)</li>
+<li>If the error in the approximation \(\tilde I_1\) to \(I_1\) is not acceptable but the error in the approximation \(\tilde I_2\) to \(I_2\) is acceptable, then we use \(\tilde I_2\) as our final approximation to \(I_2\) but we subdivide the integral \(I_1\text{.}\)</li>
+<li>If the error in the approximation \(\tilde I_1\) to \(I_1\) and the error in the approximation \(\tilde I_2\) to \(I_2\) are both not acceptable, then we subdivide both of the integrals \(I_1\) and \(I_2\text{.}\)</li>
+</ul>
+<p>So we <em class="emphasis">adapt</em> the step size as we go.</p>
+</li>
+<li>
+<em class="emphasis">Steps 3, 4, 5, \(\cdots\)</em> Repeat as required.</li>
+</ul>
+<span class="incontext"><a href="ap_adaptive.html#p-6189">in-context</a></span>
+</body>
+</html>

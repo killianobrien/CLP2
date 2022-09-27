@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:24:35+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<div class="displaymath">
+\begin{align*}
+\int e^x\cos x\ \dee{x}&amp;=\frac{1}{2} \int e^x\big[e^{ix}+e^{-ix}\big]\ \dee{x}
+=\frac{1}{2}  \int \big[e^{(1+i)x}+e^{(1-i)x}\big]\ \dee{x} \\
+&amp;=\frac{1}{2}  \left[\frac{1}{1+i}e^{(1+i)x}+\frac{1}{1-i}e^{(1-i)x}\right]+C
+\end{align*}
+</div>
+<p>This form of the indefinite integral looks a little weird because of the \(i\)'s.  While it looks complex because of the \(i\)'s, it is actually purely real (and correct), because \(\frac{1}{1-i}e^{(1-i)x}\) is the complex conjugate of \(\frac{1}{1+i}e^{(1+i)x}\text{.}\) We can convert the indefinite integral into a more familiar form just by subbing back in \(e^{\pm ix}=\cos x\pm i\sin x\text{,}\) \(\frac{1}{1+i}=\frac{1-i}{(1+i)(1-i)}=\frac{1-i}{2}\) and \(\frac{1}{1-i}=\overline{\frac{1}{1+i}}=\frac{1+i}{2}\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+\int e^x\cos x\ \dee{x}
+&amp;=\frac{1}{2}  e^x\left[\frac{1}{1+i}e^{ix}+\frac{1}{1-i}e^{-ix}\right]+C\\
+&amp;=\frac{1}{2}  e^x\left[\frac{1-i}{2}(\cos x+i\sin x)
++\frac{1+i}{2}(\cos x-i\sin x)\right]+C \\
+&amp;=\frac{1}{2}  e^x\cos x+\frac{1}{2} e^x\sin x+C
+\end{align*}
+</div>
+<p>You can quickly verify this by differentiating (or by comparing with Example <a knowl="./knowl/eg_PRTSexsinx.html" title="Example 1.7.11: \(\int_a^b e^x\sin x\dee{x}\) and \(\int_a^b e^x\cos x\dee{x}\)">1.7.11</a>).</p>
+<span class="incontext"><a href="ssec_complex_calculus.html#p-6156">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:24:39+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>The formulae (E4a,b) for \(K\) and \(\cA\) are, of course, only<a knowl="./knowl/fn-248-hidden.html" title="Footnote C.2.1"><sup> 1 </sup></a>  approximate since they are based on (E2), which is an approximation to (E1). Let's repeat the derivation that leads to (E4), but using the full (E1),</p>
+<div class="displaymath">
+\begin{equation*}
+\cA=A(h)+Kh^k+K_1h^{k+1}+K_2h^{k+2}+\cdots
+\end{equation*}
+</div>
+<p>Once again, suppose that we have chosen some \(h\) and that we have evaluated \(A(h)\) and \(A(h/2)\text{.}\) They obey</p>
+<div class="displaymath">
+\begin{align*}
+\cA&amp;=A(h)+Kh^k+K_1h^{k+1}+K_2h^{k+2}+\cdots \tag{E5a}\\
+\cA&amp;=A(h/2)+K\big(\tfrac{h}{2}\big)^k
++K_1\big(\tfrac{h}{2}\big)^{k+1}
++K_2\big(\tfrac{h}{2}\big)^{k+2}+\cdots \tag{E5b}
+\end{align*}
+</div>
+<p>Now, as we did in the derivation of (E4b), multiply (E5b) by \(2^k\) and then subtract (E5a). This gives</p>
+<div class="displaymath">
+\begin{equation*}
+\left(2^k-1\right)\cA=2^kA(h/2)-A(h)-\half K_1 h^{k+1}-\tfrac{3}{4} K_2 h^{k+1}+\cdots
+\end{equation*}
+</div>
+<p>and then, dividing across by \(\left(2^k-1\right)\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\cA=\frac{2^kA(h/2)-A(h)}{2^k-1}-\frac{1/2}{2^k-1} K_1 h^{k+1}-\frac{3/4}{2^k-1} K_2 h^{k+2}+\cdots
+\end{equation*}
+</div>
+<p>Hence if we define our “new improved approximation”</p>
+<div class="displaymath">
+\begin{equation*}
+B(h)=\frac{2^kA(h/2)-A(h)}{2^k-1}\ \text{and}\ 
+\tilde K = -\frac{1/2}{2^k-1}K_1\ \text{and}\ 
+\tilde K_1 = -\frac{3/4}{2^k-1}K_2
+\tag{E6}
+\end{equation*}
+</div>
+<p>we have</p>
+<div class="displaymath">
+\begin{equation*}
+\cA=B(h)+\tilde K h^{k+1}+\tilde K_1 h^{k+2}+\cdots
+\end{equation*}
+</div>
+<p>which says that \(B(h)\) is an approximation to \(\cA\) whose error is of order \(k+1\text{,}\) one better<a knowl="./knowl/fn-249-hidden.html" title="Footnote C.2.2"><sup> 2 </sup></a> than \(A(h)\)'s.</p>
+<span class="incontext"><a href="ap_Romberg.html#p-6182">in-context</a></span>
+</body>
+</html>

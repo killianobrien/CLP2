@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:18+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="displaymath">
+\begin{align*}
+\left| A-\cI(\bbbp)\right|
+&amp;= \left| \sum_{j=1}^n A_j - \sum_{j=1}^n f(x_j^*)[x_j-x_{j-1}] \right|\\
+&amp;= \left| \sum_{j=1}^n \left(A_j - f(x_j^*)[x_j-x_{j-1}] \right) \right|
+&amp;\text{triangle inequality}\\
+&amp;\leq \sum_{j=1}^n\left|A_j - f(x_j^*)[x_j-x_{j-1}]\right|\\
+&amp;\leq \sum_{j=1}^n F\cdot [x_j-x_{j-1}]^2 &amp; \text{from above}\\
+\end{align*}
+<p class="intertext">Now do something a little sneaky. Replace one of these factors of  \([x_j-x_{j-1}]\) (which is just the width of the \(j^\mathrm{th}\) subinterval) by the	maximum width of the subintervals:</p>
+\begin{align*}
+&amp;\leq \sum_{j=1}^n F\cdot M(\bbbp)\cdot [x_j-x_{j-1}]  &amp;\text{$F$ and  $M(\bbbp)$ are  constant}\\
+&amp;\leq F\cdot M(\bbbp)\cdot \sum_{j=1}^n [x_j-x_{j-1}] &amp; \text{sum is total  width}\\
+&amp; = F\cdot M(\bbbp)\cdot (b-a).
+\end{align*}
+</div>
+<span class="incontext"><a href="ssec_careful_defn.html#mjx-eqn-mrow-112">in-context</a></span>
+</body>
+</html>

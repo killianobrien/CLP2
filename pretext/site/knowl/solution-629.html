@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:22:52+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">3.3.11.40.1</span>
+</h6>
+<p>(a) For very large \(k\text{,}\) \(k\ll k^2\) so that</p>
+<div class="displaymath">
+\begin{equation*}
+a_n=\frac{\root{3}\of{k}}{k^2-k}\approx \frac{\root{3}\of{k}}{k^2}
+=\frac{1}{k^{5/3}}.
+\end{equation*}
+</div>
+<p>We apply the limit comparison test with \(b_k=\frac{1}{k^{5/3}}\text{.}\) Since</p>
+<div class="displaymath">
+\begin{gather*}
+\lim_{k\rightarrow\infty}\frac{a_k}{b_k}
+=\lim_{k\rightarrow\infty}\frac{\root{3}\of{k}/(k^2-k)}{1/k^{5/3}}
+=\lim_{k\rightarrow\infty}\frac{k^2}{k^2-k}
+=\lim_{k\rightarrow\infty}\frac{1}{1-1/k}
+=1
+\end{gather*}
+</div>
+<p>exists and is nonzero, and \(\sum\limits_{k=1}^\infty\frac{1}{k^{5/3}}\) converges (by the \(p\)-test with  \(p=\frac{5}{3} \gt 1\)), the given series converges by the limit comparison test.</p>
+<p>(b) The \(k^{\rm th}\) term in this series is \(a_k= \frac{k^{10}10^k(k!)^2}{(2k)!}\text{.}\) Factorials often work well with the ratio test, because they simplify so nicely in quotients.</p>
+<div class="displaymath">
+\begin{align*}
+\frac{a_{k+1}}{a_k}
+&amp;=\frac{(k+1)^{10}10^{k+1}((k+1)!)^2}{(2k+2)!}\cdot\frac{(2k)!}{k^{10}10^k(k!)^2}\\
+\amp=10\Big(\frac{k+1}{k}\Big)^{10}\frac{(k+1)^2}{(2k+2)(2k+1)}\\
+&amp;=10\Big(1+\frac{1}{k}\Big)^{10}\frac{(1+1/k)^2}{(2+2/k)(2+1/k)}
+\end{align*}
+</div>
+<p>As \(k\) tends to \(\infty\text{,}\) this converges to \(10\times 1\times\frac{1}{2\times 2} \gt 1\text{.}\) So the series diverges by the ratio test.</p>
+<p>(c) We'll use the integal test. The \(k^{\rm th}\) term in the series is \(a_k=\frac{1}{k(\log k) (\log\log k)}=f(k)\) with \(f(x)=\frac{1}{x(\log x) (\log\log x)}\text{,}\) which is continuous, positive and decreasing for \(x\ge 3\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+\int_3^\infty f(x)\ \dee{x}
+&amp;= \int_3^\infty \frac{\dee{x}}{x(\log x) (\log\log x)}
+=\lim_{R\rightarrow\infty} \int_3^R \frac{\dee{x}}{x(\log x) (\log\log x)}\\
+&amp;=\lim_{R\rightarrow\infty} \int_{\log 3}^{\log R} \frac{\dee{y}}{y\log y}
+\qquad\text{with }y=\log x,\ \dee{y}=\frac{\dee{x}}{x}\\
+&amp;= \lim_{R\rightarrow\infty}\int_{\log \log 3}^{\log \log R} \frac{\dee{t}}{t}
+\qquad\text{with }t=\log y,\ \dee{t}=\frac{\dee{y}}{y}\\
+&amp;=\lim_{R \to \infty}\Big[\log t\Big]_{\log \log 3}^{\log\log R}=\infty
+\end{align*}
+</div>
+<p>Since the integral is divergent, the series is divergent as well by the integral test.</p>
+</div>
+<span class="incontext"><a href="exercises-20.html#solution-629">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:19:56+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>That leaves us with the final piece, \(\frac{3}{(x^2+2)^2}\text{,}\)  which is the hardest. We saw something similar in  Question <a knowl="./knowl/prob_s1_9_forpartialfractions.html" title="Exercise 1.9.2.20">1.9.2.20</a> in Section <a href="sec_trigsub.html" class="xref" title="Section 1.9: Trigonometric Substitution">1.9</a>: we can use the substitution \(x=\sqrt{2}\tan\theta\text{,}\) \(\dee{x} = \sqrt{2}\sec^2\theta \dee{\theta}\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+\int\frac{3}{(x^2+2)^2} \dee{x}&amp;=\int\frac{3}{(2\tan^2\theta+2)^2}\sqrt{2}\sec^2\theta \dee{\theta}\\
+&amp;=\int\frac{3}{4\sec^4\theta}\sqrt{2}\sec^2\theta \dee{\theta}\\
+&amp;=\frac{3}{2\sqrt{2}}\int\cos^2\theta \dee{\theta}\\
+&amp;=\frac{3}{4\sqrt{2}}\int\big(1+\cos(2\theta)\big) \dee{\theta}\\
+&amp;=\frac{3}{4\sqrt{2}}\left(\theta+\frac{1}{2}\sin(2\theta)\right)+C\\
+&amp;=\frac{3}{4\sqrt{2}}\left(\theta+\sin\theta\cos\theta\right)+C\\
+&amp;=\frac{3}{4\sqrt{2}}\left(\arctan\left(\frac{x}{\sqrt2}\right)+\frac{x\sqrt{2}}{x^2+2}\right)+C
+\end{align*}
+</div>
+<span class="incontext"><a href="exercises-10.html#p-2292">in-context</a></span>
+</body>
+</html>

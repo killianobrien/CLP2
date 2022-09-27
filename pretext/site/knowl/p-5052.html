@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:22:46+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Factorials grow super fast. Like, wow, really fast. Even faster than exponentials. So the terms are going to zero, and the divergence test won't help us. Let's use ratio — it's a good go-to test with factorials.</p>
+<div class="displaymath">
+\begin{align*}
+\frac{a_{k+1}}{a_k}&amp;=\frac{\frac{e^{k+1}}{(k+1)!}}{\frac{e^k}{k!}}=\frac{e^{k+1}}{e^k}\cdot\frac{k!}{(k+1)!}\\
+\amp=
+e\cdot\frac{k(k-1)\cdots(1)}{(k+1)(k)(k-1)\cdots(1)}=e\cdot\frac{1}{k+1}=\frac{e}{k+1}\\
+\end{align*}
+<p class="intertext">Since \(e\) is a constant,</p>
+\begin{align*}
+\lim_{k \rightarrow \infty}\frac{a_{k+1}}{a_k}&amp;=\lim_{k \rightarrow \infty}\frac{e}{k+1}=0
+\end{align*}
+</div>
+<p>Since \(0 \lt 1\text{,}\) by the  ratio test, the series converges.</p>
+<span class="incontext"><a href="exercises-20.html#p-5052">in-context</a></span>
+</body>
+</html>

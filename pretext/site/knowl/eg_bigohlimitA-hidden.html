@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:23:42+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="example-like"><p>In this example, we'll use the Taylor polynomial of Example <a knowl="./knowl/eg_bigohlog.html" title="Example 3.6.29: Logarithms and the big O">3.6.29</a>  to evaluate \(\lim\limits_{x\rightarrow 0}\tfrac{\log(1+x)}{x}\) and \(\lim\limits_{x\rightarrow 0}(1+x)^{a/x}\text{.}\) The Taylor expansion of equation <a knowl="./knowl/eq_bigohlog.html" title="Equation 3.6.30">3.6.30</a> with \(n=1\) tells us that</p>
+<div class="displaymath">
+\begin{equation*}
+\log(1+x)=x+O(|x|^2)
+\end{equation*}
+</div>
+<p>That is, for small \(x\text{,}\) \(\log(1+x)\) is the same as \(x\text{,}\) up to an error that  is bounded by some constant times \(x^2\text{.}\) So, dividing by \(x\text{,}\) \(\frac{1}{x}\log(1+x)\) is the same as \(1\text{,}\) up to an  error that is bounded by some constant times \(|x|\text{.}\) That is</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{x}\log(1+x)=1+O(|x|)
+\end{equation*}
+</div>
+<p>But any function that is bounded by some constant times \(|x|\text{,}\) for all \(x\) smaller than some constant \(D \gt 0\text{,}\) necessarily tends to \(0\) as \(x\rightarrow 0\text{.}\) Thus</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{x\rightarrow 0}\frac{\log(1+x)}{x}
+=\lim_{x\rightarrow 0}\frac{x+O(|x|^2)}{x}
+=\lim_{x\rightarrow 0}\big[1+O(|x|)\big]
+=1
+\end{equation*}
+</div>
+<p>We can now use this limit to evaluate</p>
+<div class="displaymath">
+\begin{gather*}
+\lim_{x\rightarrow 0}(1+x)^{a/x}.
+\end{gather*}
+</div>
+<p>Now, we could either evaluate the limit of the logarithm of this  expression, or we can carefully rewrite the expression  as \(e^\mathrm{(something)}\text{.}\) Let us do the latter.</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{x\rightarrow 0}(1+x)^{a/x}
+&amp;=\lim_{x\rightarrow 0}e^{\frac{a}{x} \log(1+x) }\\
+&amp;=\lim_{x\rightarrow 0}e^{\frac{a}{x}[x+O(|x|^2)]}\\
+&amp;=\lim_{x\rightarrow 0}e^{a+O(|x|)}
+=e^a
+\end{align*}
+</div>
+<p>Here we have used that if \(F(x)=O(|x|^2)\) then \(\frac{a}{x} F(x) = O(x)\) — see Remark <a knowl="./knowl/rem_bigohppties.html" title="Remark 3.6.31">3.6.31</a>(b). We have also used that the exponential is continuous — as \(x\)  tends to zero, the exponent of \(e^{a+O(|x|)}\) tends to \(a\)  so that \(e^{a+O(|x|)}\) tends to \(e^a\) — see Remark <a knowl="./knowl/rem_bigohppties.html" title="Remark 3.6.31">3.6.31</a>(a).</p></article></body>
+</html>

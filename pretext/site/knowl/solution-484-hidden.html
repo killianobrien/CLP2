@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:21:13+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>By symmetry, \(\bar y = 1.5\text{.}\) We can't immediately use Equation <a knowl="./knowl/eq_TRQcentroid.html" title="Equation 2.3.5: Centroid of object with constant density">2.3.5</a> to find \(\bar x\text{,}\) because the density is not constant. Instead, we'll go through the derivation of Equation <a knowl="./knowl/eq_TRQcentroid.html" title="Equation 2.3.5: Centroid of object with constant density">2.3.5</a>, to figure out what to do with a non-constant density. (This is a good time to review Questions <a knowl="./knowl/prob_s2_3_xbar.html" title="Exercise 2.3.3.9">9</a> and <a knowl="./knowl/prob_s2_3_ybar.html" title="Exercise 2.3.3.10">10</a> in this section.)</p>
+<p>Our model is that we're making a rod \(R\) that reaches from \(x=0\) to \(x=4\text{,}\) and the mass of the section of the rod along \([a,b]\) is equal to the mass of the strip of our rectangle along \([a,b]\text{.}\) If we have a formula \(\rho(x)\) for the density of \(R\text{,}\) we can find the centre of mass of \(R\text{,}\) which is also the \(x\)-coordinate of the centre of mass of the rectangle.</p>
+<p>A thin vertical strip of the rectangle with length \(\dee{x}\) at position \(x\) has area \(3\dee{x}\) m\(^2\) and density \(x^2\) kg/m\(^2\text{,}\) so it has mass \(3x^2\,\dee{x}\) kg. Therefore, a short section of \(R\) at position \(x\) with length \(\dee{x}\) ought to have mass \(3x^2\,\dee{x}\) kg as well. Then its density at \(x\) is \(\rho(x) = \frac{3x^2\,\dee{x}\text{ kg}}{\dee{x} \text{ m}} = 3x^2\) kg/m.</p>
+<p>Now, we can use Equation <a knowl="./knowl/eq_TRQvariabledensityrod.html" title="Equation 2.3.4: Centre of mass (continuous mass)">2.3.4</a> to find the centre of mass of the rod, which is also the \(x\)-coordinate of the centre of mass of our rectangle:</p>
+<div class="displaymath">
+\begin{align*}
+\bar x &amp;= \frac{\int_0^4 x\rho(x)\,\dee{x}}{\int_0^4 \rho(x)\,\dee{x}}
+= \frac{\int_0^4 3x^3\,\dee{x}}{\int_0^4 3x^2\,\dee{x}} =
+\frac{\left[\frac{3}{4}x^4\right]_0^4}{\left[\vphantom{\frac34}x^3\right]_0^4}=\frac{3\cdot 4^3}{4^3}=3
+\end{align*}
+</div>
+<p>The centre of mass of our rectangle is \((3,1.5)\text{.}\)</p>
+</div></body>
+</html>

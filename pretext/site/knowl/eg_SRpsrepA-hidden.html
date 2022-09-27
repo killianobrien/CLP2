@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:23:13+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="example-like"><p>Find a power series representation for \(\frac{x}{2+x^2}\text{.}\)</p>
+<p><em class="alert">Solution:</em> This example is just a more algebraically involved variant of the last one. Again, the strategy is to manipulate \(\frac{x}{2+x^2}\)  into a form in which \(\frac{1}{1-y}\) appears.</p>
+<div class="displaymath">
+\begin{align*}
+\frac{x}{2+x^2} &amp;= \frac{x}{2}\ \frac{1}{1+\frac{x^2}{2}}
+=\ \frac{x}{2}\ \frac{1}{1-\big({-}\frac{x^2}{2}\big)}
+\qquad \text{set $-\frac{x^2}{2}=y$}\\
+&amp;= \frac{x}{2}\ \frac{1}{1-y}\bigg|_{y=-\frac{x^2}{2}}
+= \frac{x}{2}\ \bigg[\sum_{n=0}^\infty y^n
+\bigg]_{y=-\frac{x^2}{2}}
+\quad\text{if $|y| \lt 1$}\\
+\end{align*}
+<p class="intertext">Now use Theorem <a knowl="./knowl/thm_SRpsops.html" title="Theorem 3.5.13: Operations on Power Series">3.5.13</a> twice</p>
+\begin{align*}
+&amp;= \frac{x}{2}\ \sum_{n=0}^\infty {\Big(-\frac{x^2}{2}\Big)}^n
+=\ \frac{x}{2}\ \sum_{n=0}^\infty \frac{(-1)^n}{2^n}x^{2n}
+= \sum_{n=0}^\infty \frac{(-1)^n}{2^{n+1}}x^{2n+1}\\
+&amp;= \frac{x}{2} - \frac{x^3}{4} + \frac{x^5}{8}-\frac{x^7}{16}
++\cdots
+\end{align*}
+</div>
+<p>The geometric series that we used in the second line converges when</p>
+<div class="displaymath">
+\begin{align*}
+|y| \lt 1  &amp;\iff  \big|{-}\frac{x^2}{2}\big| \lt 1\\
+&amp; \iff  |x|^2 \lt 2 \iff |x| \lt \sqrt{2}
+\end{align*}
+</div>
+<p>So the given power series has radius of convergence \(\sqrt{2}\) and interval of convergence \(-\sqrt{2} \lt x \lt \sqrt{2}\text{.}\)</p></article></body>
+</html>

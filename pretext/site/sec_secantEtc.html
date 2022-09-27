@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2022-09-27T18:15:02+01:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Optional — Integrating \(\sec x\text{,}\) \(\csc x\text{,}\) \(\sec^3 x\) and \(\csc^3 x\)</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="RQS.css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\dee}[1]{\mathrm{d}#1}
+\newcommand{\half}{ \frac{1}{2} }
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ts}{\textstyle}
+\newcommand{\es}{ {\varnothing}}
+\newcommand{\st}{ {\mbox{ s.t. }} }
+\newcommand{\pow}[1]{ \mathcal{P}\left(#1\right) }
+\newcommand{\set}[1]{ \left\{#1\right\} }
+\newcommand{\lin}{{\text{LIN}}}
+\newcommand{\quot}{{\text{QR}}}
+\newcommand{\simp}{{\text{SMP}}}
+\newcommand{\diff}[2]{ \frac{\mathrm{d}#1}{\mathrm{d}#2}}
+\newcommand{\bdiff}[2]{ \frac{\mathrm{d}}{\mathrm{d}#2} \left( #1 \right)}
+\newcommand{\ddiff}[3]{ \frac{\mathrm{d}^#1#2}{\mathrm{d}{#3}^#1}}
+\renewcommand{\neg}{ {\sim} }
+\newcommand{\limp}{ {\;\Rightarrow\;} }
+\newcommand{\nimp}{ {\;\not\Rightarrow\;} }
+\newcommand{\liff}{ {\;\Leftrightarrow\;} }
+\newcommand{\niff}{ {\;\not\Leftrightarrow\;} }
+\newcommand{\De}{\Delta}
+\newcommand{\bbbn}{\mathbb{N}}
+\newcommand{\bbbr}{\mathbb{R}}
+\newcommand{\bbbp}{\mathbb{P}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Si}{\Sigma}
+
+\newcommand{\arccsc}{\mathop{\mathrm{arccsc}}}
+\newcommand{\arcsec}{\mathop{\mathrm{arcsec}}}
+\newcommand{\arccot}{\mathop{\mathrm{arccot}}}
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+\newcommand{\smsum}{\mathop{{\ts \sum}}}
+\newcommand{\atp}[2]{ \genfrac{}{}{0in}{}{#1}{#2} }
+
+\newcommand{\ave}{\mathrm{ave}}
+\newcommand{\llt}{\left \lt }
+\newcommand{\rgt}{\right \gt }
+
+
+\newcommand{\YEaxis}[2]{\draw[help lines] (-#1,0)--(#1,0) node[right]{$x$};\draw[help lines] (0,-#2)--(0,#2) node[above]{$y$};}
+
+\newcommand{\YEaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$x$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YEtaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$};\draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+\newcommand{\YEtaaxis}[4]{\draw[help lines] (-#1,0)--(#2,0) node[right]{$t$}; \draw[help lines] (0,-#3)--(0,#4) node[above]{$y$};}
+
+\newcommand{\YExcoord}[2]{\draw (#1,.2)--(#1,-.2) node[below]{$#2$};}
+\newcommand{\YEycoord}[2]{\draw (.2,#1)--(-.2,#1) node[left]{$#2$};}
+\newcommand{\YEnxcoord}[2]{\draw (#1,-.2)--(#1,.2) node[above]{$#2$};}
+\newcommand{\YEnycoord}[2]{\draw (-.2,#1)--(.2,#1) node[right]{$#2$};}
+
+\newcommand{\YEstickfig}[3]{
+\draw (#1,#2) arc(-90:270:2mm);
+\draw (#1,#2)--(#1,#2-.5) (#1-.25,#2-.75)--(#1,#2-.5)--(#1+.25,#2-.75) (#1-.2,#2-.2)--(#1+.2,#2-.2);}
+
+
+\newcommand{\IBP}[7]{
+\begin{array}{|c  | l | l |}
+\hline
+\color{red}{\text{Option 1:}}
+&amp; u=#2
+&amp;\color{red}{\dee{u}=#3 ~ \dee{#1}}
+\\
+&amp; \dee{v}=#5~\dee{#1}
+&amp;\color{red}{v=#7}
+\\
+\hline
+\color{blue}{\text{Option 2:}}
+&amp; u=#5
+&amp;\color{blue}{\dee{u}=#6 ~ \dee{#1}}
+\\
+&amp;\dee{v}=#2 \dee{#1}
+&amp;\color{blue}{v=#4}
+\\
+\hline
+\end{array}
+}
+
+
+\renewcommand{\textcolor}[2]{{\color{#1}{#2}}}
+
+
+\newcommand{\trigtri}[4]{
+\begin{tikzpicture}
+\draw (-.5,0)--(2,0)--(2,1.5)--cycle;
+\draw (1.8,0) |- (2,.2);
+\draw[double] (0,0) arc(0:30:.5cm);
+\draw (0,.2) node[right]{$#1$};
+\draw (1,-.5) node{$#2$};
+\draw (2,.75) node[right]{$#3$};
+\draw (.6,1.1) node[rotate=30]{$#4$};
+\end{tikzpicture}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="clp_2_ic.html"><span class="title">CLP-2 Integral Calculus</span></a></h1>
+<p class="byline">Joel Feldman, Andrew Rechnitzer, Elyse Yeager</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_tansec.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sec_trigint.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="exercises-8.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_tansec.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sec_trigint.html" title="Up">Up</a><a class="next-button button toolbar-item" href="exercises-8.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Using the exercises in this book</a></li>
+<li><a href="preface-3.html" data-scroll="preface-3">Feedback about the text</a></li>
+</ul>
+<h2 class="link"><a href="chap_integral.html" data-scroll="chap_integral"><span class="codenumber">1</span> <span class="title">Integration</span></a></h2>
+<ul>
+<li><a href="sec_intdef.html" data-scroll="sec_intdef">Definition of the Integral</a></li>
+<li><a href="sec_def_int.html" data-scroll="sec_def_int">Basic properties of the definite integral</a></li>
+<li><a href="sec_fundamental.html" data-scroll="sec_fundamental">The Fundamental Theorem of Calculus</a></li>
+<li><a href="sec_subs.html" data-scroll="sec_subs">Substitution</a></li>
+<li><a href="sec_area.html" data-scroll="sec_area">Area between curves</a></li>
+<li><a href="sec_int_volumes.html" data-scroll="sec_int_volumes">Volumes</a></li>
+<li><a href="sec_intbyparts.html" data-scroll="sec_intbyparts">Integration by parts</a></li>
+<li><a href="sec_trigint.html" data-scroll="sec_trigint">Trigonometric Integrals</a></li>
+<li><a href="sec_trigsub.html" data-scroll="sec_trigsub">Trigonometric Substitution</a></li>
+<li><a href="sec_parfrac.html" data-scroll="sec_parfrac">Partial Fractions</a></li>
+<li><a href="sec_numeric_int.html" data-scroll="sec_numeric_int">Numerical Integration</a></li>
+<li><a href="sec_improp_int.html" data-scroll="sec_improp_int">Improper Integrals</a></li>
+<li><a href="section-13.html" data-scroll="section-13">More Integration Examples</a></li>
+</ul>
+<h2 class="link"><a href="chap_int_app.html" data-scroll="chap_int_app"><span class="codenumber">2</span> <span class="title">Applications of Integration</span></a></h2>
+<ul>
+<li><a href="sec_work.html" data-scroll="sec_work">Work</a></li>
+<li><a href="sec_avg.html" data-scroll="sec_avg">Averages</a></li>
+<li><a href="sec_com.html" data-scroll="sec_com">Centre of Mass and Torque</a></li>
+<li><a href="sec_sep_de.html" data-scroll="sec_sep_de">Separable Differential Equations</a></li>
+</ul>
+<h2 class="link"><a href="chap_seq_ser.html" data-scroll="chap_seq_ser"><span class="codenumber">3</span> <span class="title">Sequence and series</span></a></h2>
+<ul>
+<li><a href="section-18.html" data-scroll="section-18">Sequences</a></li>
+<li><a href="section-19.html" data-scroll="section-19">Series</a></li>
+<li><a href="section-20.html" data-scroll="section-20">Convergence Tests</a></li>
+<li><a href="section-21.html" data-scroll="section-21">Absolute and Conditional Convergence</a></li>
+<li><a href="section-22.html" data-scroll="section-22">Power Series</a></li>
+<li><a href="section-23.html" data-scroll="section-23">Taylor Series</a></li>
+<li><a href="sec_RatIrr.html" data-scroll="sec_RatIrr">Optional — Rational and irrational numbers</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Appendices</span></a></h2>
+<h2 class="link"><a href="app_highschool.html" data-scroll="app_highschool"><span class="codenumber">A</span> <span class="title">High School Material</span></a></h2>
+<ul>
+<li><a href="sec_simtri.html" data-scroll="sec_simtri">Similar Triangles</a></li>
+<li><a href="section-26.html" data-scroll="section-26">Pythagoras</a></li>
+<li><a href="section-27.html" data-scroll="section-27">Trigonometry — Definitions</a></li>
+<li><a href="app_rad_arc_sec.html" data-scroll="app_rad_arc_sec">Radians, Arcs and Sectors</a></li>
+<li><a href="app_sec_trig_graphs.html" data-scroll="app_sec_trig_graphs">Trigonometry — Graphs</a></li>
+<li><a href="section-30.html" data-scroll="section-30">Trigonometry — Special Triangles</a></li>
+<li><a href="section-31.html" data-scroll="section-31">Trigonometry — Simple Identities</a></li>
+<li><a href="sec_trig_add.html" data-scroll="sec_trig_add">Trigonometry — Add and Subtract Angles</a></li>
+<li><a href="sec_inv_trig.html" data-scroll="sec_inv_trig">Inverse Trigonometric Functions</a></li>
+<li><a href="app_sec_areas.html" data-scroll="app_sec_areas">Areas</a></li>
+<li><a href="sec_volumes.html" data-scroll="sec_volumes">Volumes</a></li>
+<li><a href="sec_powers.html" data-scroll="sec_powers">Powers</a></li>
+<li><a href="sec_logs.html" data-scroll="sec_logs">Logarithms</a></li>
+<li><a href="sec_must_deriv.html" data-scroll="sec_must_deriv">Highschool Material You Should be Able to Derive</a></li>
+<li><a href="section-39.html" data-scroll="section-39">Cartesian Coordinates</a></li>
+<li><a href="ap_roots.html" data-scroll="ap_roots">Roots of Polynomials</a></li>
+</ul>
+<h2 class="link"><a href="ap_complex.html" data-scroll="ap_complex"><span class="codenumber">B</span> <span class="title">Complex Numbers and Exponentials</span></a></h2>
+<ul>
+<li><a href="sec_complex_defn.html" data-scroll="sec_complex_defn">Definition and Basic Operations</a></li>
+<li><a href="sec_complex_exp.html" data-scroll="sec_complex_exp">The Complex Exponential</a></li>
+</ul>
+<h2 class="link"><a href="app_Richardson_Romberg.html" data-scroll="app_Richardson_Romberg"><span class="codenumber">C</span> <span class="title">More About Numerical Integration</span></a></h2>
+<ul>
+<li><a href="ap_Richardson.html" data-scroll="ap_Richardson">Richardson Extrapolation</a></li>
+<li><a href="ap_Romberg.html" data-scroll="ap_Romberg">Romberg Integration</a></li>
+<li><a href="ap_adaptive.html" data-scroll="ap_adaptive">Adaptive Quadrature</a></li>
+</ul>
+<h2 class="link"><a href="app_ODE_numerical.html" data-scroll="app_ODE_numerical"><span class="codenumber">D</span> <span class="title">Numerical Solution of ODE's</span></a></h2>
+<ul>
+<li><a href="ap_derivation.html" data-scroll="ap_derivation">Simple ODE Solvers — Derivation</a></li>
+<li><a href="ap_error_behaviour.html" data-scroll="ap_error_behaviour">Simple ODE Solvers —  Error Behaviour</a></li>
+<li><a href="ap_variable.html" data-scroll="ap_variable">Variable Step Size Methods</a></li>
+</ul>
+<h2 class="link"><a href="app_hint.html" data-scroll="app_hint"><span class="codenumber">E</span> <span class="title">Hints for Exercises</span></a></h2>
+<h2 class="link"><a href="app_answ.html" data-scroll="app_answ"><span class="codenumber">F</span> <span class="title">Answers to Exercises</span></a></h2>
+<h2 class="link"><a href="app_soln.html" data-scroll="app_soln"><span class="codenumber">G</span> <span class="title">Solutions to Exercises</span></a></h2></nav><div class="extras"><nav><a class="feedback-link" href="mailto:clp@ugrad.math.ubc.ca?subject=clp2-pretext" target="_blank">Feedback</a><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="subsection" id="sec_secantEtc"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.8.3</span> <span class="title">Optional — Integrating \(\sec x\text{,}\) \(\csc x\text{,}\) \(\sec^3 x\) and \(\csc^3 x\)</span>
+</h3>
+<a href="sec_secantEtc.html" class="permalink">¶</a><p id="p-1675">As noted above, when \(n\) is odd and \(m\) is even, one can use similar strategies as to the  previous cases. However the computations are often more involved and more tricks  need to be deployed. For this reason we make this section optional — the  computations are definitely non-trivial. Rather than trying to construct a  coherent “method” for this case, we instead give some examples to give the  idea of what to expect.</p>
+<article class="example-like" id="eg_TRGINTopta"><a knowl="" class="id-ref" refid="hk-eg_TRGINTopta"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.8.19</span> <span class="title">\(\int \sec x\dee{x}\) — by trickery</span>
+</h6></a></article><div id="hk-eg_TRGINTopta" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-1676"><em class="alert">Solution:</em> There is a very sneaky trick to compute this integral<a knowl="" class="id-ref" refid="hk-fn-61" id="fn-61"><sup> 3 </sup></a><span id="hk-fn-61" class="hidden-content tex2jax_ignore"><span class="footnote">The integral of secant played an important role in constructing accurate Mercator projection maps of the earth. See <a class="url" href="https://en.wikipedia.org/wiki/Integral_of_the_secant_function" target="_blank">https://en.wikipedia.org/wiki/Integral_of_the_secant_function</a> and <a class="url" href="https://arxiv.org/pdf/2204.11187.pdf" target="_blank">https://arxiv.org/pdf/2204.11187.pdf</a>. The method for evaluating the integral that is being presented in this example was invented by the Scottish mathematician James Gregory in 1668. There are also a number of other methods. See the previous two references.</span></span>.</p>
+<ul class="disc">
+<li id="li-840">The standard trick for this integral is to multiply the integrand by \(1=\frac{\sec x+\tan x}{\sec x+\tan x}\)<div class="displaymath">
+\begin{align*}
+\sec x &amp;= \sec x\ \frac{\sec x+\tan x}{\sec x+\tan x}
+= \frac{\sec^2x + \sec x \tan x}{\sec x+\tan x}
+\end{align*}
+</div>
+</li>
+<li id="li-841">Notice now that the numerator of this expression is exactly the derivative its  denominator. Hence we can substitute \(u=\sec x+\tan x\) and \(\dee{u} = (\sec x\tan x+\sec^2 x)\,\dee{x}\text{.}\)</li>
+<li id="li-842">Hence<div class="displaymath">
+\begin{align*}
+\int \sec x\dee{x}
+&amp;=\int \sec x\ \frac{\sec x+\tan x}{\sec x+\tan x}\dee{x}
+=\int \frac{\sec^2 x+\sec x\tan x}{\sec x+\tan x}\dee{x}\\
+&amp;=\int \frac{1}{u}\dee{u}\\
+&amp;=\log |u|+C\\
+&amp;=\log|\sec x+\tan x|+C
+\end{align*}
+</div>
+</li>
+<li id="li-843">
+<p id="p-1677">The above trick appears both totally unguessable and very hard to remember. Fortunately, there is a simple way<a knowl="" class="id-ref" refid="hk-fn-62" id="fn-62"><sup> 4 </sup></a><span id="hk-fn-62" class="hidden-content tex2jax_ignore"><span class="footnote">We thank Serban Raianu for bringing this to our attention.</span></span> to recover the trick. Here it is.</p>
+<ul class="circle">
+<li id="li-844">The goal is to guess a function whose derivative is \(\sec x\text{.}\)</li>
+<li id="li-845">
+<p id="p-1678">So get out a table of derivatives and look for functions whose derivatives at least contain \(\sec x\text{.}\) There are two:</p>
+<div class="displaymath">
+\begin{align*}
+\diff{}{x}\tan x &amp;= \sec^2 x\\
+\diff{}{x}\sec x &amp;= \tan x\,\sec x
+\end{align*}
+</div>
+</li>
+<li id="li-846">
+<p id="p-1679">Notice that if we add these together we get</p>
+<div class="displaymath">
+\begin{align*}
+\diff{}{x}\big(\sec x+\tan x\big) &amp;=(\sec x+\tan x)\sec x &amp; \implies\\
+\frac{\diff{}{x}\big(\sec x+\tan x\big)}{\sec x+\tan x}&amp;=\sec x
+\end{align*}
+</div>
+</li>
+<li id="li-847">We've done it! The right hand side is \(\sec x\) and the left hand side is the derivative of \(\log|\sec x+\tan x|\text{.}\)</li>
+</ul>
+</li>
+</ul></article></div>
+<p id="p-1680">There is another method for integrating \(\int \sec x\dee{x}\text{,}\) that is more tedious, but more straight forward. In particular, it does not involve a memorized trick. We first use the substitution \(u=\sin x\text{,}\)  \(\dee{u}=\cos x\,\dee{x}\text{,}\) together with \(\cos^2 x = 1-\sin^2x=1-u^2\text{.}\) This converts the integral into</p>
+<div class="displaymath">
+\begin{align*}
+\int \sec x\dee{x}
+&amp;= \int\frac{1}{\cos x}\dee{x} 
+= \int\frac{\cos x\ \dee{x}}{\cos^2 x} \\
+&amp;= \int \frac{\dee{u}}{1-u^2}\bigg|_{u=\sin x}
+\end{align*}
+</div>
+<p>The integrand \(\frac{1}{1-u^2}\) is a rational function, i.e. a ratio of two polynomials. There is a procedure, called  the method of partial fractions, that may be used to integrate any rational function. We shall learn about it in Section <a href="sec_parfrac.html" class="xref" title="Section 1.10: Partial Fractions">1.10</a> “Partial  Fractions”. The detailed evaluation of the integral \(\int \sec x\,\dee{x}=\int\frac{\dee{u}}{1-u^2}\) by the method of partial fractions is presented in Example <a knowl="./knowl/eg_PFe.html" title="Example 1.10.5: \(\int\sec x\dee{x}\)">1.10.5</a> below.</p>
+<p id="p-1681">In addition, there is a standard trick for evaluating \(\int\frac{\dee{u}}{1-u^2}\) that allows us to avoid going through the whole partial fractions algorithm.</p>
+<article class="example-like" id="eg_TRGINToptb"><a knowl="" class="id-ref" refid="hk-eg_TRGINToptb"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.8.20</span> <span class="title">\(\int \sec x\dee{x}\) — by more trickery</span>
+</h6></a></article><div id="hk-eg_TRGINToptb" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-1682"><em class="alert">Solution:</em> We have already seen that</p>
+<div class="displaymath">
+\begin{align*}
+\int \sec x\dee{x}
+&amp;= \int \frac{\dee{u}}{1-u^2}\bigg|_{u=\sin x}
+\end{align*}
+</div>
+<p>The trick uses the obervations that</p>
+<ul class="disc">
+<li id="li-848">\(\frac{1}{1-u^2}=\frac{1+u-u}{1-u^2}=\frac{1}{1-u}-\frac{u}{1-u^2}\)</li>
+<li id="li-849">\(\frac{1}{1-u}\) has antiderivative \(-\log(1-u)\) (for \(u\lt 1\))</li>
+<li id="li-850">The derivative \(\diff{}{u}(1-u^2)=-2u\) of the denominator of \(\frac{u}{1-u^2}\) is the same, up to a factor of \(-2\text{,}\) as the numerator of \(\frac{u}{1-u^2}\text{.}\) So we can easily evaluate the integral of \(\frac{u}{1-u^2}\) by substituting \(v=1-u^2\text{,}\) \(\dee{v}=-2u\,\dee{u}\text{.}\)<div class="displaymath">
+\begin{gather*}
+\int \frac{u\,\dee{u}}{1-u^2} 
+= \int \frac{\frac{\dee{v}}{-2}}{v}\bigg|_{v=1-u^2}
+=-\frac{1}{2}\log(1-u^2)+C
+\end{gather*}
+</div>
+</li>
+</ul>
+<p>Combining these observations gives</p>
+<div class="displaymath">
+\begin{align*}
+\int \sec x\dee{x}
+&amp;=\bigg[\int \frac{\dee{u}}{1-u^2}\bigg]_{u=\sin x}
+=\bigg[\int\frac{1}{1-u}\dee{u}
+-\int\frac{u}{1-u^2}\dee{u}\bigg]_{u=\sin x}\\
+&amp;=\Big[-\log(1-u)+\frac{1}{2}\log(1-u^2)+C\Big]_{u=\sin x}\\
+&amp;=-\log(1-\sin x)+\frac{1}{2}\log(1-\sin^2 x)+C\\
+&amp;=-\log(1-\sin x)+\frac{1}{2}\log(1-\sin x)+\frac{1}{2}\log(1+\sin x)+C\\
+&amp;=\frac{1}{2}\log\frac{1+\sin x}{1-\sin x}+C
+\end{align*}
+</div></article></div>
+<p id="p-1683">Example <a knowl="./knowl/eg_TRGINToptb.html" title="Example 1.8.20: \(\int \sec x\dee{x}\) — by more trickery">1.8.20</a> has given the answer</p>
+<div class="displaymath">
+\begin{gather*}
+\int \sec x\dee{x} =\frac{1}{2}\log\frac{1+\sin x}{1-\sin x}+C
+\end{gather*}
+</div>
+<p>which appears to be different than the answer in Example <a knowl="./knowl/eg_TRGINTopta.html" title="Example 1.8.19: \(\int \sec x\dee{x}\) — by trickery">1.8.19</a>. But they are really the same since</p>
+<div class="displaymath">
+\begin{align*}
+&amp;\frac{1+\sin x}{1-\sin x}
+=\frac{(1+\sin x)^2}{1-\sin^2 x}
+=\frac{(1+\sin x)^2}{\cos^2 x}\\
+\implies\
+&amp;\frac{1}{2}\log \frac{1+\sin x}{1-\sin x}
+=\frac{1}{2}\log\frac{(1+\sin x)^2}{\cos^2 x}
+=\log\Big|\frac{\sin x+1}{\cos x}\Big|
+=\log|\tan x+\sec x|
+\end{align*}
+</div>
+<p>Oof!</p>
+<article class="example-like" id="eg_TRGINToptc"><a knowl="" class="id-ref" refid="hk-eg_TRGINToptc"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.8.21</span> <span class="title">\(\int \csc x\dee{x}\) — by the \(u=\tan\frac{x}{2}\) substitution</span>
+</h6></a></article><div id="hk-eg_TRGINToptc" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-1684"><em class="alert">Solution:</em> The integral \(\int \csc x\dee{x}\) may also be evaluated by both  the methods above. That is either</p>
+<ul class="disc">
+<li id="li-851">by multiplying the integrand by a cleverly chosen \(1=\frac{\cot x-\csc x}{\cot  x-\csc x}\) and  then substituting \(u=\cot x -\csc x\text{,}\)  \(\dee{u} = (-\csc^2 x+\csc x \cot x)\,\dee{x}\text{,}\) or</li>
+<li id="li-852">by substituting \(u=\cos x\text{,}\) \(\dee{u}=-\sin x\,\dee{x}\) to give \(\int \csc x\dee{x}=-\int\frac{\dee{u}}{1-u^2}\) and then using the  method of partial fractions.</li>
+</ul>
+<p>These two methods give the answers</p>
+<div class="displaymath">
+\begin{gather}
+\int \csc x\dee{x}=\log|\cot x-\csc x|+C
+=-\frac{1}{2}\log \frac{1+\cos x}{1-\cos x}+C\label{eq_INTcscInt}\tag{\(\star\)}
+\end{gather}
+</div>
+<p>In this example, we shall evaluate \(\int\csc x\dee{x}\) by yet a third method, which can be used to integrate rational functions <a knowl="" class="id-ref" refid="hk-fn-63" id="fn-63"><sup> 5 </sup></a><span id="hk-fn-63" class="hidden-content tex2jax_ignore"><span class="footnote">A rational function of \(\sin  x\)  and \(\cos x\) is a ratio with both the numerator and denominator being finite sums of  terms of the form \(a\sin^m x\cos^n x\text{,}\) where \(a\) is a constant and \(m\) and \(n\) are  positive integers.</span></span> of \(\sin x\) and \(\cos x\text{.}\)</p>
+<ul class="disc">
+<li id="li-853">This method uses the substitution<div class="displaymath">
+\begin{align*}
+x&amp;=2\arctan u &amp; \text{i.e. } u &amp;=\tan\frac{x}{2} &amp; \text{and }
+\dee{x}&amp;=\frac{2}{1+u^2}\dee{u}
+\end{align*}
+</div>— a half-angle substitution.</li>
+<li id="li-854">To express \(\sin x\) and \(\cos x\) in terms of \(u\text{,}\) we first use the double angle  trig identities (Equations <a knowl="./knowl/eq_TRGINTtrigidentityB.html" title="Equation 1.8.2">1.8.2</a> and <a knowl="./knowl/eq_TRGINTtrigidentityC.html" title="Equation 1.8.3">1.8.3</a>  with \(x \mapsto \frac{x}{2}\)) to express \(\sin x\) and \(\cos x\) in terms of  \(\sin\frac{x}{2}\) and \(\cos\frac{x}{2}\text{:}\)<div class="displaymath">
+\begin{align*}
+\sin x &amp;= 2 \sin\frac{x}{2} \cos\frac{x}{2}\\
+\cos x &amp;= \cos^2 \frac{x}{2} - \sin^2\frac{x}{2}
+\end{align*}
+</div>
+</li>
+<li id="li-855">
+<p id="p-1685">We then use the triangle</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:37.5%;margin-right:37.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="text/figs/triangleTh.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-1686">to express \(\sin\frac{x}{2}\) and \(\cos\frac{x}{2}\) in terms of \(u\text{.}\) The bottom and right  hand sides of the triangle have been chosen so that \(\tan\frac{x}{2}=u\text{.}\) This tells us  that</p>
+<div class="displaymath">
+\begin{align*}
+\sin \frac{x}{2} &amp;= \frac{u}{\sqrt{1+u^2}}
+&amp; \cos \frac{x}{2} &amp;= \frac{1}{\sqrt{1+u^2}}
+\end{align*}
+</div>
+</li>
+<li id="li-856">This in turn implies that:<div class="displaymath">
+\begin{align*}
+\sin x&amp;=2\sin\frac{x}{2}\cos\frac{x}{2}
+=2\frac{u}{\sqrt{1+u^2}}\frac{1}{\sqrt{1+u^2}}
+=\frac{2u}{1+u^2}\\
+\cos x&amp;=\cos^2\frac{x}{2}-\sin^2\frac{x}{2}
+=\frac{1}{1+u^2}-\frac{u^2}{1+u^2}
+=\frac{1-u^2}{1+u^2}
+\end{align*}
+</div>Oof!</li>
+<li id="li-857">Let's use this substitution to evaluate \(\int \csc x\,\dee{x}\text{.}\)<div class="displaymath">
+\begin{align*}
+\int \csc x\dee{x}
+&amp;=\int \frac{1}{\sin x}\dee{x}
+=\int \frac{1+u^2}{2u}\ \frac{2}{1+u^2}\dee{u}
+=\int \frac{1}{u}\dee{u}\\
+&amp;=\log|u|+C
+=\log\Big|\tan\frac{x}{2}\Big|+C
+\end{align*}
+</div>To see that this answer is really the same as that in <a knowl="./knowl/eq_INTcscInt.html" title="Equation">(\(\star\))</a>,  note that<div class="displaymath">
+\begin{gather*}
+\cot x-\csc x
+=\frac{\cos x-1}{\sin x}
+=\frac{-2\sin^2(x/2)}{2\sin(x/2)\cos(x/2)}
+=-\tan\frac{x}{2}
+\end{gather*}
+</div>
+</li>
+</ul></article></div>
+<article class="example-like" id="eg_TRGINToptd"><a knowl="" class="id-ref" refid="hk-eg_TRGINToptd"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.8.22</span> <span class="title">\(\int \sec^3 x\dee{x}\) — by trickery</span>
+</h6></a></article><div id="hk-eg_TRGINToptd" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-1687"><em class="alert">Solution:</em> The standard trick used to evaluate \(\int \sec^3 x\dee{x}\) is integration by parts.</p>
+<ul class="disc">
+<li id="li-858">Set \(u=\sec x\text{,}\) \(\dee{v}=\sec^2 x\dee{x}\text{.}\) Hence \(\dee{u}=\sec x\tan x\dee{x}\text{,}\)  \(v=\tan x\) and<div class="displaymath">
+\begin{align*}
+\int \sec^3 x\dee{x}
+&amp;=\int \underbrace{\sec x}_{u}\ \underbrace{\sec^2 x\dee{x}}_{\dee{v}}\\
+&amp;=\underbrace{\sec x}_{u}\ \underbrace{\tan x}_{v}
+-\int \underbrace{\tan x}_{v}\ \underbrace{\sec x\tan x\dee{x}}_{\dee{u}}
+\end{align*}
+</div>
+</li>
+<li id="li-859">Since \(\tan^2 x+1=\sec^2 x\text{,}\) we have \(\tan^2 x=\sec^2 x-1\) and<div class="displaymath">
+\begin{align*}
+\int \sec^3 x\dee{x} &amp;=\sec x\ \tan x -\int [\sec^3 x-\sec x]\dee{x}\\
+&amp;=\sec x\ \tan x +\log|\sec x+\tan x|+C -\int \sec^3 x\dee{x}
+\end{align*}
+</div>where we used \(\int \sec x\dee{x} = \log|\sec x+\tan x|+C\text{,}\) which we saw in Example <a knowl="./knowl/eg_TRGINTopta.html" title="Example 1.8.19: \(\int \sec x\dee{x}\) — by trickery">1.8.19</a>.</li>
+<li id="li-860">Now moving the \(\int \sec^3 x\dee{x}\) from the right hand side to the left hand side<div class="displaymath">
+\begin{align*}
+2\int \sec^3 x\dee{x} &amp;=\sec x\tan x +\log|\sec x+\tan x|+C &amp; \text{and so}\\
+\int \sec^3 x\dee{x} &amp;=\frac{1}{2} \sec x\tan x +\frac{1}{2}\log|\sec x+\tan x|+C
+\end{align*}
+</div>for a new arbitrary constant \(C\) (which is just one half the old one).</li>
+</ul></article></div>
+<p id="p-1688">The integral \(\int \sec^3\dee{x}\) can also be evaluated by two other methods.</p>
+<ul class="disc">
+<li id="li-861">Substitute \(u=\sin x\text{,}\) \(\dee{u}=\cos x\dee{x}\) to convert  \(\int\sec^3 x\dee{x}\) into \(\int\frac{\dee{u}}{{[1-u^2]}^2}\) and evaluate the latter using the method of partial fractions. This is done in Example <a knowl="./knowl/eg_PFf.html" title="Example 1.10.6: \(\int \sec^3 x\dee{x}\)">1.10.6</a> in  Section <a href="sec_parfrac.html" class="xref" title="Section 1.10: Partial Fractions">1.10</a>.</li>
+<li id="li-862">Use the \(u=\tan\frac{x}{2}\) substitution. We use this method to evaluate \(\int\csc^3 x\dee{x}\) in Example <a knowl="./knowl/eg_TRGINTopte.html" title="Example 1.8.23: \(\int \csc^3 x\dee{x}\) – by the \(u=\tan\frac{x}{2}\)  substitution">1.8.23</a>, below.</li>
+</ul>
+<article class="example-like" id="eg_TRGINTopte"><a knowl="" class="id-ref" refid="hk-eg_TRGINTopte"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.8.23</span> <span class="title">\(\int \csc^3 x\dee{x}\) – by the \(u=\tan\frac{x}{2}\)  substitution</span>
+</h6></a></article><div id="hk-eg_TRGINTopte" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-1689"><em class="alert">Solution:</em> Let us use the half-angle substitution that we introduced in  Example <a knowl="./knowl/eg_TRGINToptc.html" title="Example 1.8.21: \(\int \csc x\dee{x}\) — by the \(u=\tan\frac{x}{2}\) substitution">1.8.21</a>.</p>
+<ul class="disc">
+<li id="li-863">In this method we set<div class="displaymath">
+\begin{align*}
+u&amp;=\tan\frac{x}{2} \quad
+\dee{x}=\frac{2}{1+u^2} \dee{u}\quad
+\sin x=\frac{2u}{1+u^2} \quad
+\cos x=\frac{1-u^2}{1+u^2}
+\end{align*}
+</div>
+</li>
+<li id="li-864">The integral then becomes<div class="displaymath">
+\begin{align*}
+\int \csc^3 x\dee{x}
+&amp;=\int \frac{1}{\sin^3 x}\dee{x}\\
+&amp;=\int {\Big(\frac{1+u^2}{2u}\Big)}^3\ \frac{2}{1+u^2}\dee{u}\\
+&amp;=\frac{1}{4}\int \frac{1+2u^2+u^4}{u^3}\dee{u}\\
+&amp;=\frac{1}{4}\Big\{\frac{u^{-2}}{-2}+2\log|u|+\frac{u^2}{2}\Big\}+C\\
+&amp;=\frac{1}{8}\Big\{-\cot^2\frac{x}{2}+4\log\Big|\tan\frac{x}{2}\Big|
++\tan^2\frac{x}{2}\Big\}+C
+\end{align*}
+</div>Oof!</li>
+<li id="li-865">This is a perfectly acceptable answer. But if you don't like the \(\frac{x}{2}\)'s, they may be eliminated by using<div class="displaymath">
+\begin{align*}
+\tan^2\frac{x}{2}-\cot^2\frac{x}{2}
+&amp;=\frac{\sin^2\frac{x}{2}}{\cos^2\frac{x}{2}}
+-\frac{\cos^2\frac{x}{2}}{\sin^2\frac{x}{2}}\\
+&amp;=\frac{\sin^4\frac{x}{2}-\cos^4\frac{x}{2}} {\sin^2\frac{x}{2}\cos^2\frac{x}{2}}\\
+&amp;=\frac{\big(\sin^2\frac{x}{2}-\cos^2\frac{x}{2}\big)
+\big(\sin^2\frac{x}{2}+\cos^2\frac{x}{2}\big)}
+{\sin^2\frac{x}{2}\cos^2\frac{x}{2}}\\
+&amp;=\frac{\sin^2\frac{x}{2}-\cos^2\frac{x}{2}}
+{\sin^2\frac{x}{2}\cos^2\frac{x}{2}}
+\qquad \text{since $\sin^2\frac{x}{2}+\cos^2\frac{x}{2}=1$}\\
+&amp;=\frac{-\cos x}{\frac{1}{4}\sin^2x}
+\qquad\qquad\quad \text{by }\knowl{./knowl/eq_TRGINTtrigidentityB.html}{\text{1.8.2}}\text{ and }\knowl{./knowl/eq_TRGINTtrigidentityC.html}{\text{1.8.3}}
+\end{align*}
+</div>and<div class="displaymath">
+\begin{align*}
+\tan\frac{x}{2}
+&amp;=\frac{\sin\frac{x}{2}}{\cos\frac{x}{2}}
+=\frac{\sin^2\frac{x}{2}} {\sin\frac{x}{2}\cos\frac{x}{2}}\\
+&amp;=\frac{\frac{1}{2}[1-\cos x]}{\frac{1}{2}\sin x}
+\qquad\qquad\qquad \text{by }\knowl{./knowl/eq_TRGINTtrigidentityB.html}{\text{1.8.2}}\text{ and }\knowl{./knowl/eq_TRGINTtrigidentityC.html}{\text{1.8.3}}
+\end{align*}
+</div>So we may also write<div class="displaymath">
+\begin{gather*}
+\int \csc^3 x\dee{x} =-\frac{1}{2}\cot x\csc x +\frac{1}{2}\log|\csc x-\cot x|+C
+\end{gather*}
+</div>
+</li>
+</ul></article></div>
+<p id="p-1690">That last optional section was a little scary — let's get back to something a little easier.</p></section></div></main>
+</div>
+<!--Start: Google Universal code--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-105798942-1', 'auto');
+ga('send', 'pageview');
+</script><!--End: Google Universal code--><div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>
