@@ -24,3 +24,5 @@ In this repository we give two sets of source files - latex and pretext.
 * Sources written in (reasonably) standard [pretext](https://pretextbook.org/)
 * The hints, answers and solutions are included in appendices.
 * The source files can be compiled into html or a PDF (via a .tex intermediary)
+
+with some minor local additions for use at MMU by Killian O'Brien
