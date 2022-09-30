@@ -1,0 +1,119 @@
+\BOOKMARK [0][-]{chapter.1}{Integration}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Definition of the Integral}{chapter.1}% 2
+\BOOKMARK [2][-]{subsection.1.1.1}{Optional \204 A More Rigorous Area Computation}{section.1.1}% 3
+\BOOKMARK [2][-]{subsection.1.1.2}{Summation Notation}{section.1.1}% 4
+\BOOKMARK [2][-]{subsection.1.1.3}{The Definition of the Definite Integral}{section.1.1}% 5
+\BOOKMARK [2][-]{subsection.1.1.4}{Using Known Areas to Evaluate Integrals}{section.1.1}% 6
+\BOOKMARK [2][-]{subsection.1.1.5}{Another Interpretation for Definite Integrals}{section.1.1}% 7
+\BOOKMARK [2][-]{subsection.1.1.6}{Optional \204 Careful Definition of the Integral}{section.1.1}% 8
+\BOOKMARK [1][-]{section.1.2}{Basic Properties of the Definite Integral}{chapter.1}% 9
+\BOOKMARK [2][-]{subsection.1.2.1}{More Properties of Integration: Even and Odd Functions}{section.1.2}% 10
+\BOOKMARK [2][-]{subsection.1.2.2}{Optional \204 More Properties of Integration: Inequalities for Integrals}{section.1.2}% 11
+\BOOKMARK [1][-]{section.1.3}{The Fundamental Theorem of Calculus}{chapter.1}% 12
+\BOOKMARK [1][-]{section.1.4}{Substitution}{chapter.1}% 13
+\BOOKMARK [1][-]{section.1.5}{Area Between Curves}{chapter.1}% 14
+\BOOKMARK [1][-]{section.1.6}{Volumes}{chapter.1}% 15
+\BOOKMARK [1][-]{section.1.7}{Integration by Parts}{chapter.1}% 16
+\BOOKMARK [1][-]{section.1.8}{Trigonometric Integrals}{chapter.1}% 17
+\BOOKMARK [2][-]{subsection.1.8.1}{Integrating sinm xcosn xdx}{section.1.8}% 18
+\BOOKMARK [2][-]{subsection.1.8.2}{Integrating tanm xsecn xdx}{section.1.8}% 19
+\BOOKMARK [2][-]{subsection.1.8.3}{Optional \204 integrating secx, cscx, sec3 x and csc3 x}{section.1.8}% 20
+\BOOKMARK [1][-]{section.1.9}{Trigonometric Substitution}{chapter.1}% 21
+\BOOKMARK [1][-]{section.1.10}{Partial Fractions}{chapter.1}% 22
+\BOOKMARK [2][-]{subsection.1.10.1}{Partial Fraction Decomposition Examples}{section.1.10}% 23
+\BOOKMARK [2][-]{subsection.1.10.2}{The Form of Partial Fraction Decompositions}{section.1.10}% 24
+\BOOKMARK [2][-]{subsection.1.10.3}{Optional \204 Justification of the Partial Fraction Decompositions}{section.1.10}% 25
+\BOOKMARK [1][-]{section.1.11}{Numerical Integration}{chapter.1}% 26
+\BOOKMARK [2][-]{subsection.1.11.1}{The Midpoint Rule}{section.1.11}% 27
+\BOOKMARK [2][-]{subsection.1.11.2}{The Trapezoidal Rule}{section.1.11}% 28
+\BOOKMARK [2][-]{subsection.1.11.3}{Simpson's Rule}{section.1.11}% 29
+\BOOKMARK [2][-]{subsection.1.11.4}{Three Simple Numerical Integrators \205 Error Behaviour}{section.1.11}% 30
+\BOOKMARK [2][-]{subsection.1.11.5}{Optional \204 An Error Bound for the Midpoint Rule}{section.1.11}% 31
+\BOOKMARK [1][-]{section.1.12}{Improper Integrals}{chapter.1}% 32
+\BOOKMARK [2][-]{subsection.1.12.1}{Definitions}{section.1.12}% 33
+\BOOKMARK [2][-]{subsection.1.12.2}{Examples}{section.1.12}% 34
+\BOOKMARK [2][-]{subsection.1.12.3}{Convergence Tests for Improper Integrals}{section.1.12}% 35
+\BOOKMARK [0][-]{chapter.2}{Applications of Integration}{}% 36
+\BOOKMARK [1][-]{section.2.1}{Work}{chapter.2}% 37
+\BOOKMARK [1][-]{section.2.2}{Averages}{chapter.2}% 38
+\BOOKMARK [1][-]{section.2.3}{Centre of Mass and Torque}{chapter.2}% 39
+\BOOKMARK [2][-]{subsection.2.3.1}{Centre of Mass}{section.2.3}% 40
+\BOOKMARK [2][-]{subsection.2.3.2}{Optional \204 Torque}{section.2.3}% 41
+\BOOKMARK [1][-]{section.2.4}{Separable Differential Equations}{chapter.2}% 42
+\BOOKMARK [2][-]{subsection.2.4.1}{Separate and Integrate}{section.2.4}% 43
+\BOOKMARK [2][-]{subsection.2.4.2}{Optional \204 Carbon Dating}{section.2.4}% 44
+\BOOKMARK [2][-]{subsection.2.4.3}{Optional \204 Newton's Law of Cooling}{section.2.4}% 45
+\BOOKMARK [2][-]{subsection.2.4.4}{Optional \204 Population Growth}{section.2.4}% 46
+\BOOKMARK [2][-]{subsection.2.4.5}{Optional \204 Mixing Problems}{section.2.4}% 47
+\BOOKMARK [2][-]{subsection.2.4.6}{Optional \204 Interest on Investments}{section.2.4}% 48
+\BOOKMARK [0][-]{chapter.3}{Sequence and Series}{}% 49
+\BOOKMARK [1][-]{section.3.1}{Sequences}{chapter.3}% 50
+\BOOKMARK [1][-]{section.3.2}{Series}{chapter.3}% 51
+\BOOKMARK [1][-]{section.3.3}{Convergence Tests}{chapter.3}% 52
+\BOOKMARK [2][-]{subsection.3.3.1}{The Divergence Test}{section.3.3}% 53
+\BOOKMARK [2][-]{subsection.3.3.2}{The Integral Test}{section.3.3}% 54
+\BOOKMARK [2][-]{subsection.3.3.3}{The Comparison Test}{section.3.3}% 55
+\BOOKMARK [2][-]{subsection.3.3.4}{The Alternating Series Test}{section.3.3}% 56
+\BOOKMARK [2][-]{subsection.3.3.5}{The Ratio Test}{section.3.3}% 57
+\BOOKMARK [2][-]{subsection.3.3.6}{Convergence Test List}{section.3.3}% 58
+\BOOKMARK [2][-]{subsection.3.3.7}{Optional \204 The Leaning Tower of Books}{section.3.3}% 59
+\BOOKMARK [2][-]{subsection.3.3.8}{Optional \204 The Root Test}{section.3.3}% 60
+\BOOKMARK [2][-]{subsection.3.3.9}{Optional \204 Harmonic and Basel Series}{section.3.3}% 61
+\BOOKMARK [2][-]{subsection.3.3.10}{Optional \204 Some Proofs}{section.3.3}% 62
+\BOOKMARK [1][-]{section.3.4}{Absolute and Conditional Convergence}{chapter.3}% 63
+\BOOKMARK [2][-]{subsection.3.4.1}{Definitions}{section.3.4}% 64
+\BOOKMARK [2][-]{subsection.3.4.2}{Optional \204 The Delicacy of Conditionally Convergent Series}{section.3.4}% 65
+\BOOKMARK [1][-]{section.3.5}{Power Series}{chapter.3}% 66
+\BOOKMARK [2][-]{subsection.3.5.1}{Definitions}{section.3.5}% 67
+\BOOKMARK [2][-]{subsection.3.5.2}{Working With Power Series}{section.3.5}% 68
+\BOOKMARK [1][-]{section.3.6}{Taylor Series}{chapter.3}% 69
+\BOOKMARK [2][-]{subsection.3.6.1}{Extending Taylor Polynomials}{section.3.6}% 70
+\BOOKMARK [2][-]{subsection.3.6.2}{Computing with Taylor Series}{section.3.6}% 71
+\BOOKMARK [2][-]{subsection.3.6.3}{Optional \204 Linking ex with Trigonometric Functions}{section.3.6}% 72
+\BOOKMARK [2][-]{subsection.3.6.4}{Evaluating Limits using Taylor Expansions}{section.3.6}% 73
+\BOOKMARK [2][-]{subsection.3.6.5}{Optional \204 The Big O Notation}{section.3.6}% 74
+\BOOKMARK [2][-]{subsection.3.6.6}{Optional \204 Evaluating Limits Using Taylor Expansions \204 More Examples}{section.3.6}% 75
+\BOOKMARK [1][-]{section.3.7}{Optional \204 Rational and Irrational Numbers}{chapter.3}% 76
+\BOOKMARK [0][-]{appendix.A}{High school material}{}% 77
+\BOOKMARK [1][-]{section.A.1}{Similar Triangles}{appendix.A}% 78
+\BOOKMARK [1][-]{section.A.2}{Pythagoras}{appendix.A}% 79
+\BOOKMARK [1][-]{section.A.3}{Trigonometry \204 Definitions}{appendix.A}% 80
+\BOOKMARK [1][-]{section.A.4}{Radians, Arcs and Sectors}{appendix.A}% 81
+\BOOKMARK [1][-]{section.A.5}{Trigonometry \204 Graphs}{appendix.A}% 82
+\BOOKMARK [1][-]{section.A.6}{Trigonometry \204 Special Triangles}{appendix.A}% 83
+\BOOKMARK [1][-]{section.A.7}{Trigonometry \204 Simple Identities}{appendix.A}% 84
+\BOOKMARK [1][-]{section.A.8}{Trigonometry \204 Add and Subtract Angles}{appendix.A}% 85
+\BOOKMARK [1][-]{section.A.9}{Inverse Trigonometric Functions}{appendix.A}% 86
+\BOOKMARK [1][-]{section.A.10}{Areas}{appendix.A}% 87
+\BOOKMARK [1][-]{section.A.11}{Volumes}{appendix.A}% 88
+\BOOKMARK [1][-]{section.A.12}{Powers}{appendix.A}% 89
+\BOOKMARK [1][-]{section.A.13}{Logarithms}{appendix.A}% 90
+\BOOKMARK [1][-]{section.A.14}{Highschool Material You Should be Able to Derive}{appendix.A}% 91
+\BOOKMARK [1][-]{section.A.15}{Cartesian Coordinates}{appendix.A}% 92
+\BOOKMARK [1][-]{section.A.16}{Roots of Polynomials}{appendix.A}% 93
+\BOOKMARK [0][-]{appendix.B}{Complex Numbers and Exponentials}{}% 94
+\BOOKMARK [1][-]{section.B.1}{Definition and Basic Operations}{appendix.B}% 95
+\BOOKMARK [1][-]{section.B.2}{The Complex Exponential}{appendix.B}% 96
+\BOOKMARK [2][-]{subsection.B.2.1}{Definition and Basic Properties.}{section.B.2}% 97
+\BOOKMARK [2][-]{subsection.B.2.2}{Relationship with sin and cos.}{section.B.2}% 98
+\BOOKMARK [2][-]{subsection.B.2.3}{Polar Coordinates.}{section.B.2}% 99
+\BOOKMARK [2][-]{subsection.B.2.4}{Exploiting Complex Exponentials in Calculus Computations}{section.B.2}% 100
+\BOOKMARK [2][-]{subsection.B.2.5}{Exploiting Complex Exponentials in Differential Equation Computations}{section.B.2}% 101
+\BOOKMARK [0][-]{appendix.C}{More About Numerical Integration}{}% 102
+\BOOKMARK [1][-]{section.C.1}{Richardson Extrapolation}{appendix.C}% 103
+\BOOKMARK [1][-]{section.C.2}{Romberg Integration}{appendix.C}% 104
+\BOOKMARK [1][-]{section.C.3}{Adaptive Quadrature}{appendix.C}% 105
+\BOOKMARK [0][-]{appendix.D}{Numerical Solution of ODE's}{}% 106
+\BOOKMARK [1][-]{section.D.1}{Simple ODE Solvers \204 Derivation}{appendix.D}% 107
+\BOOKMARK [2][-]{subsection.D.1.1}{Euler's Method}{section.D.1}% 108
+\BOOKMARK [2][-]{subsection.D.1.2}{The Improved Euler's Method}{section.D.1}% 109
+\BOOKMARK [2][-]{subsection.D.1.3}{The Runge-Kutta Method}{section.D.1}% 110
+\BOOKMARK [1][-]{section.D.2}{Simple ODE Solvers \204 Error Behaviour}{appendix.D}% 111
+\BOOKMARK [2][-]{subsection.D.2.1}{Local Truncation Error for Euler's Method}{section.D.2}% 112
+\BOOKMARK [2][-]{subsection.D.2.2}{Global Truncation Error for Euler's Method}{section.D.2}% 113
+\BOOKMARK [1][-]{section.D.3}{Variable Step Size Methods}{appendix.D}% 114
+\BOOKMARK [2][-]{subsection.D.3.1}{Euler and Euler-2step \(preliminary version\)}{section.D.3}% 115
+\BOOKMARK [2][-]{subsection.D.3.2}{Euler and Euler-2step \(final version\)}{section.D.3}% 116
+\BOOKMARK [2][-]{subsection.D.3.3}{Fehlberg's Method}{section.D.3}% 117
+\BOOKMARK [2][-]{subsection.D.3.4}{The Kutta-Merson Process}{section.D.3}% 118
+\BOOKMARK [2][-]{subsection.D.3.5}{The Local Truncation Error for Euler-2step}{section.D.3}% 119
